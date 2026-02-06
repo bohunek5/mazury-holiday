@@ -19,33 +19,33 @@ type Unit = {
 // Update buildings data structure to include images
 const buildings: Record<"A" | "B" | "C", Unit[]> = {
     A: [
-        { id: "A103", image: "/images/apartments/A104k.jpg" }, // Clean high-res image
-        { id: "A104", image: "/images/apartments/A104k.jpg" },
-        { id: "A105", image: "/images/apartments/A104k.jpg" },
-        { id: "A204", image: "/images/apartments/A104k.jpg" },
-        { id: "A205", image: "/images/apartments/A104k.jpg" },
-        { id: "A302", image: "/images/apartments/A104k.jpg" },
-        { id: "A305", image: "/images/apartments/A104k.jpg" },
-        { id: "A306", image: "/images/apartments/A104k.jpg" },
-        { id: "A402", image: "/images/apartments/A104k.jpg" },
-        { id: "A403", image: "/images/apartments/A104k.jpg" },
+        { id: "A103", image: "/mazury-holiday/images/apartments/A104k.jpg" }, // Clean high-res image
+        { id: "A104", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A105", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A204", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A205", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A302", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A305", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A306", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A402", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A403", image: "/mazury-holiday/images/apartments/A104k.jpg" },
     ],
     B: [
-        { id: "B102", image: "/images/apartments/A104k.jpg" },
-        { id: "B106", image: "/images/apartments/A104k.jpg" },
-        { id: "B201", image: "/images/apartments/A104k.jpg" },
-        { id: "B202", image: "/images/apartments/A104k.jpg" },
-        { id: "B304", image: "/images/apartments/A104k.jpg" },
-        { id: "B305", image: "/images/apartments/A104k.jpg" },
-        { id: "B401", image: "/images/apartments/A104k.jpg" },
-        { id: "B402", image: "/images/apartments/A104k.jpg" },
-        { id: "B404", image: "/images/apartments/A104k.jpg" },
+        { id: "B102", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B106", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B201", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B202", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B304", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B305", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B401", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B402", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B404", image: "/mazury-holiday/images/apartments/A104k.jpg" },
     ],
     C: [
-        { id: "C301", image: "/images/apartments/A104k.jpg" },
-        { id: "C304", image: "/images/apartments/A104k.jpg" },
-        { id: "C403", image: "/images/apartments/A104k.jpg" },
-        { id: "C404", image: "/images/apartments/A104k.jpg" },
+        { id: "C301", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "C304", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "C403", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "C404", image: "/mazury-holiday/images/apartments/A104k.jpg" },
     ],
 };
 
@@ -61,7 +61,7 @@ export default function StrandaPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/images/apartments_1.jpg')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_1.jpg')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">Stranda Residence</h1>

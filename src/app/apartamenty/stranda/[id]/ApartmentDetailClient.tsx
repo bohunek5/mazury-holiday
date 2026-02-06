@@ -28,7 +28,7 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
             t("details", "items.parking"),
             t("details", "items.sauna")
         ],
-        mainImage: "/images/apartments/A104k.jpg" // Using the clean image
+        mainImage: "/mazury-holiday/images/apartments/A104k.jpg" // Using the clean image
     };
 
     return (

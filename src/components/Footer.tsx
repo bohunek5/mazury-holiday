@@ -14,7 +14,7 @@ export default function Footer() {
                 <div>
                     <Link href="/" className="relative h-24 w-96 flex items-center mb-8">
                         <Image
-                            src="/images/logo-poziom.svg"
+                            src="/mazury-holiday/images/logo-poziom.svg"
                             alt="Mazury.Holiday"
                             fill
                             className="object-contain object-left filter brightness-0 invert opacity-90"
