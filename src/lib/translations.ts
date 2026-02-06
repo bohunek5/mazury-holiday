@@ -5,8 +5,33 @@ export const translations = {
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur z perspektywy naszych luksusowych apartamentów oraz z pokładu jachtu.", p2: "Niezależnie od tego, czy szukasz spokojnego wypoczynku w Giżycku, czy ekskluzywnego domu we Fuledzie." },
         apartments: { title: "Nasze Apartamenty", description: "Wybierz idealne miejsce na swój wypoczynek.", details: "Szczegóły", pricePrefix: "od", night: "noc", people: "osoby", items: { stranda: { title: "Apartamenty Giżycko \"Stranda\"", location: "Port Stranda, Giżycko", description: "Komfortowe apartamenty położone w sercu portu Stranda." }, kisajno: { title: "Apartamenty Giżycko \"Kisajno\"", location: "Port Neptun, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." }, fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." } } },
         charter: { tag: "Bez patentu", title: "Czarter Jachtu Motorowego", description: "Jacht motorowy Stillo 30 to jednostka, którą możesz prowadzić bez patentu.", model: "Stillo 30 (2020)", cabins: "3 Zamykane Kabiny", checkBtn: "Sprawdź dostępność", premiumFleet: "Flota Premium", feature1: "Bez patentu", feature2: "Rocznik 2020", feature3: "Luksusowe wyposażenie", detailsBtn: "Zobacz szczegóły" },
-        stranda: { subtitle: "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.", building: "Budynek", apartment: "Apartament" },
-        details: { about: "O apartamencie", amenities: "Udogodnienia", booking: "Rezerwacja", checkAvailability: "Sprawdź dostępność i zarezerwuj.", callBtn: "Zadzwoń", lowPrice: "Gwarancja najniższej ceny.", descriptionPart1: "Wszystkie oferowane apartamenty są wykończone luksusowo i zapewniają bardzo duży komfort wypoczynku.", descriptionPart2: "Posiadają salon z TV i aneksem kuchennym, jedną lub dwie sypialnie z TV, łazienkę z prysznicem, dostęp do WiFi, tarasy z meblami wypoczynkowymi z widokiem na jezioro, wygodne łóżka oraz szereg dodatków które ułatwiają i umilają pobyt.", descriptionPart3: "Dodatkowo apartamenty położone najwyżej, mają dostęp z przestronnego tarasu na taras górny z jacuzzi.", items: { view: "Widok na jezioro", ac: "Klimatyzacja", terrace: "Taras z meblami", kitchen: "Aneks kuchenny (płyta, lodówka, zmywarka)", tv: "Smart TV (Salon + Sypialnia)", wifi: "WiFi", parking: "Miejsce parkingowe", sauna: "Dostęp do sauny", iron: "Żelazko i deska", hairDryer: "Suszarka do włosów", coffee: "Zestaw do parzenia kawy/herbaty" } },
+        stranda: {
+            subtitle: "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno",
+            description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.",
+            building: "Budynek",
+            apartment: "Apartament",
+            units: {
+                "C404": {
+                    title: "Apartament C404 typu Studio",
+                    descriptionPart1: "Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.",
+                    descriptionPart2: "Przeznaczone dla maksymalnie 4 osób. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.",
+                    descriptionPart3: "Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp."
+                },
+                "A103": {
+                    title: "Apartament A103 Suite",
+                    descriptionPart1: "Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.",
+                    descriptionPart2: "Zapewnia komfortowy wypoczynek dla rodzin i grup znajomych.",
+                    descriptionPart3: "Bliskość portu i jeziora sprawia, że jest to idealna baza wypadowa."
+                },
+                "A104": {
+                    title: "Apartament A104 Delux z jacuzzi",
+                    descriptionPart1: "Apartament A104 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A.",
+                    descriptionPart2: "Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi.",
+                    descriptionPart3: "Całość z pięknym widokiem na jezioro Kisajno. Apartament położony najwyżej, co zapewnia wyjątkowe widoki."
+                }
+            }
+        },
+        details: { about: "O apartamencie", amenities: "Udogodnienia", booking: "Rezerwacja", checkAvailability: "Sprawdź dostępność i zarezerwuj.", callBtn: "Zadzwoń", lowPrice: "Gwarancja najniższej ceny.", descriptionPart1: "Wszystkie oferowane apartamenty są wykończone luksusowo i zapewniają bardzo duży komfort wypoczynku.", descriptionPart2: "Posiadają salon z TV i aneksem kuchennym, jedną lub dwie sypialnie z TV, łazienkę z prysznicem, dostęp do WiFi, tarasy z meblami wypoczynkowymi z widokiem na jezioro, wygodne łóżka oraz szereg dodatków które ułatwiają i umilają pobyt.", descriptionPart3: "Dodatkowo apartamenty położone najwyżej, mają dostęp z przestronnego tarasu na taras górny z jacuzzi.", items: { view: "Widok na jezioro", ac: "Klimatyzacja", terrace: "Taras z meblami", kitchen: "Aneks kuchenny (płyta, lodówka, zmywarka)", tv: "Smart TV (Salon + Sypialnia)", wifi: "WiFi", parking: "Miejsce parkingowe", sauna: "Dostęp do sauny", iron: "Żelazko i deska", hairDryer: "Suszarka do włosów", coffee: "Zestaw do parzenia kawy/herbaty", roomSalon: "Salon", roomKitchen: "Kuchnia", roomBedroom: "Sypialnia", roomBathroom: "Łazienka", salonFeatures: "TV, sofa 2os., stół, krzesła, klimatyzacja, wifi", kitchenFeatures: "płyta indukcyjna, lodówka, zmywarka, mikrofalówka, komplet naczyń i sztućców", bedroomFeatures: "TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja", bathroomFeatures: "prysznic, suszarka do włosów, szlafroki, balsam do ciała" } },
         footer: { brandDesc: "Jedyne i niepowtarzalne chwile na Mazurach.", navTitle: "Nawigacja", contactTitle: "Kontakt", followTitle: "Obserwuj nas", rights: "Wszelkie prawa zastrzeżone.", linksTitle: "Linki" }
     },
     en: {
