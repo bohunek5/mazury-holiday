@@ -26,7 +26,10 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
             t("details", "items.tv"),
             t("details", "items.wifi"),
             t("details", "items.parking"),
-            t("details", "items.sauna")
+            t("details", "items.sauna"),
+            t("details", "items.hairDryer"),
+            t("details", "items.iron"),
+            t("details", "items.coffee")
         ],
         mainImage: "/mazury-holiday/images/apartments/A104k.jpg" // Using the clean image
     };
@@ -58,6 +61,7 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
 
                     {/* Main Content */}
                     <div className="lg:col-span-2 space-y-12">
+                        {/* Description */}
                         <div>
                             <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "about")}</h2>
                             <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed whitespace-pre-line">
@@ -65,6 +69,24 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                             </p>
                         </div>
 
+                        {/* Gallery - Standard Grid for now */}
+                        <div>
+                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="relative h-64 rounded-xl overflow-hidden">
+                                    <Image src="/mazury-holiday/images/apartments/stranda/104205_8.jpg" alt="Apartment View 1" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="relative h-64 rounded-xl overflow-hidden">
+                                    <Image src="/mazury-holiday/images/apartments/stranda/104432_6.jpg" alt="Apartment View 2" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                {/* Reusing main image as part of gallery for completeness */}
+                                <div className="relative h-64 rounded-xl overflow-hidden md:col-span-2">
+                                    <Image src={apartment.mainImage} alt="Main View" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Amenities */}
                         <div>
                             <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "amenities")}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
