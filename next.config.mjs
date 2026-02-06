@@ -11,10 +11,11 @@ const nextConfig = {
             },
         ],
     },
+    // Ensure trailing slashes for GitHub Pages
+    trailingSlash: true,
     typescript: {
         ignoreBuildErrors: true,
     },
-
 };
 
 export default nextConfig;

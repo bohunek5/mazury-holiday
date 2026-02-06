@@ -58,7 +58,7 @@ export default function Navbar() {
                 {/* Logo - Increased size by another 30% */}
                 <Link href="/" className="relative h-20 w-80 md:h-24 md:w-96 flex items-center">
                     <Image
-                        src="/images/logo-poziom.svg"
+                        src="/mazury-holiday/images/logo-poziom.svg"
                         alt="Mazury.Holiday"
                         fill
                         className="object-contain object-left filter brightness-0 invert"

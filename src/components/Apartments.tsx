@@ -14,7 +14,7 @@ export default function Apartments() {
             title: t("apartments", "items.stranda.title"),
             location: t("apartments", "items.stranda.location"),
             description: t("apartments", "items.stranda.description"),
-            image: "/images/apartments_1.jpg",
+            image: "/mazury-holiday/images/apartments_1.jpg",
             people: "4-6",
             link: "/apartamenty/stranda",
             price: "350 zł"
@@ -24,7 +24,7 @@ export default function Apartments() {
             title: t("apartments", "items.kisajno.title"),
             location: t("apartments", "items.kisajno.location"),
             description: t("apartments", "items.kisajno.description"),
-            image: "/images/apartments_2.jpg",
+            image: "/mazury-holiday/images/apartments_2.jpg",
             people: "2-4",
             link: "/apartamenty/kisajno",
             price: "400 zł"
@@ -34,7 +34,7 @@ export default function Apartments() {
             title: t("apartments", "items.fuleda.title"),
             location: t("apartments", "items.fuleda.location"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/images/apartments_1.jpg",
+            image: "/mazury-holiday/images/apartments_1.jpg",
             people: "6-10",
             link: "/apartamenty/fuleda",
             price: "800 zł"
