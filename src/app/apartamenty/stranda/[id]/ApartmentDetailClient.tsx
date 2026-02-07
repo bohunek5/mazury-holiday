@@ -81,6 +81,41 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
         const script = document.createElement('script');
         script.src = 'https://engine37851.idobooking.com/widget/script/loadScriptsForOwnPage?1712752373';
         script.async = true;
+
+        // Initialize widgets after script loads
+        script.onload = () => {
+            // Initialize booking button
+            const win = window as typeof window & {
+                iai_booking_button?: (config: Record<string, unknown>) => void;
+                iai_calendar_widget?: (config: Record<string, unknown>) => void;
+            };
+
+            if (typeof win.iai_booking_button === 'function') {
+                win.iai_booking_button({
+                    "langNew": "0",
+                    "langIdCodes": { "1": "pl", "pl": 1 },
+                    "literalsInLang": {
+                        "1": {
+                            "label1": "Od",
+                            "label2": "Do",
+                            "label3": "Osoby",
+                            "label4": null,
+                            "label5": "Lokalizacje",
+                            "button": "Zarezerwuj go",
+                            "days": ["Nd", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"],
+                            "months": ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
+                            "trigger": "Rezerwacja online"
+                        }
+                    }
+                });
+            }
+
+            // Initialize calendar widget
+            if (typeof win.iai_calendar_widget === 'function') {
+                win.iai_calendar_widget({});
+            }
+        };
+
         document.body.appendChild(script);
 
         return () => {
@@ -315,7 +350,7 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
 
                             {/* iDoBooking Widget Button - Second (Green) */}
                             <button
-                                className="i_do_sell_booking_widget_start side_button right center float block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
+                                className="i_do_sell_booking_widget_start block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
                                 data-currency="0"
                                 data-client="37851"
                                 data-location=""
@@ -332,9 +367,25 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                                 Rezerwuj
                             </button>
 
-                            <p className="text-xs text-center text-slate-500">
+                            <p className="text-xs text-center text-slate-500 mb-6">
                                 {t("details", "lowPrice")}
                             </p>
+
+                            {/* Availability Calendar */}
+                            <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <h4 className="text-lg font-semibold mb-4 text-slate-900 dark:text-white text-center">
+                                    Dostępność
+                                </h4>
+                                <div
+                                    id="idobooking-calendar"
+                                    className="iai_calendar_widget"
+                                    data-client="37851"
+                                    data-object="1"
+                                    data-show-legend="true"
+                                    data-show-prices="false"
+                                    data-language="0"
+                                />
+                            </div>
                         </div>
                     </div>
 
