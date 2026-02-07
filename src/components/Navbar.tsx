@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -55,7 +55,7 @@ export default function Navbar() {
             )}
         >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
-                {/* Logo - Reduced by 20% from previous size */}
+                {/* Logo */}
                 <Link href="/" className="relative h-16 w-64 md:h-19 md:w-77 flex items-center">
                     <Image
                         src="/mazury-holiday/images/logo-poziom.svg"
@@ -79,9 +79,10 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Right Actions - Centered controls between menu and CTA */}
-                <div className="hidden lg:flex items-center gap-6">
-                    <div className="flex items-center gap-4">
+                {/* Right Actions */}
+                <div className="flex items-center gap-4">
+                    {/* Desktop Controls */}
+                    <div className="hidden lg:flex items-center gap-4">
                         <WeatherWidget className="hidden sm:flex" />
                         <div className={cn("h-6 w-px lg:block hidden", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
                         <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
@@ -89,24 +90,16 @@ export default function Navbar() {
                         <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200 hover:bg-slate-800" : "text-white hover:bg-white/10"} />
                     </div>
 
-                    <a
-                        href="tel:+48607241090"
-                        className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/20 font-medium"
-                    >
-                        <Phone size={20} />
-                        <span className="hidden xl:inline text-lg">+48 607 241 090</span>
-                    </a>
-                </div>
-
-                {/* Mobile Menu Toggle */}
-                <div className="lg:hidden flex items-center gap-4">
-                    <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200" : "text-white hover:bg-white/10"} />
-                    <button
-                        className={isScrolled || !isHomePage ? "text-slate-200 hover:text-amber-500" : "text-white hover:text-amber-400"}
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
-                    </button>
+                    {/* Mobile Menu Toggle */}
+                    <div className="lg:hidden flex items-center gap-4">
+                        <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200" : "text-white hover:bg-white/10"} />
+                        <button
+                            className={isScrolled || !isHomePage ? "text-slate-200 hover:text-amber-500" : "text-white hover:text-amber-400"}
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        >
+                            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -132,13 +125,6 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <a
-                        href="tel:+48607241090"
-                        className="mt-6 flex items-center justify-center gap-2 bg-amber-500 text-white py-4 rounded-full font-bold text-lg shadow-amber-500/20 shadow-lg"
-                    >
-                        <Phone size={20} />
-                        Rezerwuj: +48 607 241 090
-                    </a>
                 </div>
             )}
         </nav>

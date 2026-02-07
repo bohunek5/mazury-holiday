@@ -60,13 +60,26 @@ async function compressDirectory(directory) {
 }
 
 async function main() {
-    const imagesDir = path.join(__dirname, '../public/images');
+    const targetDirs = [
+        path.join(__dirname, '../public/images'),
+        path.join(__dirname, '../public/apartments')
+    ];
 
     console.log('🖼️  Starting image compression...\n');
 
-    const result = await compressDirectory(imagesDir);
+    let totalOriginal = 0;
+    let totalNew = 0;
 
-    const totalSavings = ((result.totalOriginal - result.totalNew) / result.totalOriginal * 100).toFixed(2);
+    for (const dir of targetDirs) {
+        if (fs.existsSync(dir)) {
+            console.log(`📂 Processing: ${path.basename(dir)}`);
+            const result = await compressDirectory(dir);
+            totalOriginal += result.totalOriginal;
+            totalNew += result.totalNew;
+        }
+    }
+
+    const totalSavings = ((totalOriginal - totalNew) / totalOriginal * 100).toFixed(2);
 
     console.log('\n✅ Compression complete!');
     console.log(`📊 Total: ${(result.totalOriginal / 1024 / 1024).toFixed(2)}MB → ${(result.totalNew / 1024 / 1024).toFixed(2)}MB`);
