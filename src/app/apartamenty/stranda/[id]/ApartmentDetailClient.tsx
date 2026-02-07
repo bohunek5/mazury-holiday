@@ -4,34 +4,38 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { strandaApartments } from "@/data/stranda-apartments";
+import ImageLightbox from "@/components/ImageLightbox";
+import { useState } from "react";
 
 export default function ApartmentDetailClient({ id }: { id: string }) {
     const { t } = useLanguage();
+    const data = strandaApartments[id as keyof typeof strandaApartments];
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
 
-    // Mock data - in real app would fetch based on id
-    // This generic content is currently set for "Building C" style as requested, but using translations
+    if (!data) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <p>Apartament nie odnaleziony.</p>
+            </div>
+        );
+    }
+
     const apartment = {
         id: id,
-        title: `Apartament ${id}`,
-        building: id.charAt(0),
-        description: `
-          ${t("details", "descriptionPart1")} ${id.charAt(0)} ${t("details", "descriptionPart2")} 
-          ${t("details", "descriptionPart3")}
-      `,
+        title: `${t("stranda", "apartment")} ${id} ${data.type}`,
+        building: data.building,
+        description: data.description,
         amenities: [
-            t("details", "items.view"),
-            t("details", "items.ac"),
-            t("details", "items.terrace"),
-            t("details", "items.kitchen"),
-            t("details", "items.tv"),
-            t("details", "items.wifi"),
-            t("details", "items.parking"),
-            t("details", "items.sauna"),
-            t("details", "items.hairDryer"),
-            t("details", "items.iron"),
-            t("details", "items.coffee")
+            ...data.amenities.living,
+            ...data.amenities.kitchen,
+            ...data.amenities.bedroom,
+            ...data.amenities.bathroom,
+            ...data.amenities.terrace
         ],
-        mainImage: "/mazury-holiday/images/apartments/A104k.jpg" // Using the clean image
+        mainImage: data.gallery.heroImage,
+        gallery: data.gallery.images
     };
 
     return (
@@ -69,33 +73,121 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                             </p>
                         </div>
 
-                        {/* Gallery - Standard Grid for now */}
-                        <div>
-                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="relative h-64 rounded-xl overflow-hidden">
-                                    <Image src="/mazury-holiday/images/apartments/stranda/104205_8.jpg" alt="Apartment View 1" fill className="object-cover hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                <div className="relative h-64 rounded-xl overflow-hidden">
-                                    <Image src="/mazury-holiday/images/apartments/stranda/104432_6.jpg" alt="Apartment View 2" fill className="object-cover hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                {/* Reusing main image as part of gallery for completeness */}
-                                <div className="relative h-64 rounded-xl overflow-hidden md:col-span-2">
-                                    <Image src={apartment.mainImage} alt="Main View" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                        {/* Gallery */}
+                        {apartment.gallery.length > 0 && (
+                            <div>
+                                <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {apartment.gallery.map((img, idx) => (
+                                        <div
+                                            key={idx}
+                                            className={`relative h-64 rounded-xl overflow-hidden cursor-pointer group ${idx === 0 && apartment.gallery.length % 2 !== 0 ? 'md:col-span-2' : ''}`}
+                                            onClick={() => {
+                                                setLightboxIndex(idx);
+                                                setLightboxOpen(true);
+                                            }}
+                                        >
+                                            <Image
+                                                src={img}
+                                                alt={`${apartment.title} view ${idx + 1}`}
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
-                        </div>
+                        )}
 
                         {/* Amenities */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "amenities")}</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {apartment.amenities.map((item, i) => (
-                                    <div key={i} className="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
-                                        <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                        <span>{item}</span>
+                            <h2 className="text-3xl font-playfair mb-8 text-slate-900 dark:text-white">Udogodnienia</h2>
+
+                            <div className="space-y-8">
+                                {/* Living Room */}
+                                {data.amenities.living.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                            <span>🛋️</span> Salon
+                                        </h3>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            {data.amenities.living.map((item, i) => (
+                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
+                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                                    <span className="text-sm">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                ))}
+                                )}
+
+                                {/* Kitchen */}
+                                {data.amenities.kitchen.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                            <span>🍳</span> Kuchnia
+                                        </h3>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            {data.amenities.kitchen.map((item, i) => (
+                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
+                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                                    <span className="text-sm">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Bedroom */}
+                                {data.amenities.bedroom.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                            <span>🛏️</span> Sypialnia
+                                        </h3>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            {data.amenities.bedroom.map((item, i) => (
+                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
+                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                                    <span className="text-sm">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Bathroom */}
+                                {data.amenities.bathroom.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                            <span>🚿</span> Łazienka
+                                        </h3>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            {data.amenities.bathroom.map((item, i) => (
+                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
+                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                                    <span className="text-sm">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Terrace */}
+                                {data.amenities.terrace.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                            <span>🌿</span> Taras
+                                        </h3>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            {data.amenities.terrace.map((item, i) => (
+                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
+                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                                    <span className="text-sm">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -121,6 +213,15 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
 
                 </div>
             </section>
+
+            {lightboxOpen && (
+                <ImageLightbox
+                    images={apartment.gallery}
+                    currentIndex={lightboxIndex}
+                    onClose={() => setLightboxOpen(false)}
+                    altPrefix={apartment.title}
+                />
+            )}
 
             <Footer />
         </main>

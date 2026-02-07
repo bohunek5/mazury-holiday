@@ -24,7 +24,6 @@ export default function Navbar() {
         { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "cottages"), href: "/domki" },
         { name: t("nav", "charter"), href: "/czarter" },
-        { name: t("nav", "port"), href: "/#port" },
         { name: t("nav", "attractions"), href: "/#attractions" },
         { name: t("nav", "cooperation"), href: "/#cooperation" },
         { name: t("nav", "contact"), href: "/kontakt" },
@@ -55,8 +54,8 @@ export default function Navbar() {
             )}
         >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
-                {/* Logo - Increased size by another 30% */}
-                <Link href="/" className="relative h-20 w-80 md:h-24 md:w-96 flex items-center">
+                {/* Logo - Reduced by 20% from previous size */}
+                <Link href="/" className="relative h-16 w-64 md:h-19 md:w-77 flex items-center">
                     <Image
                         src="/mazury-holiday/images/logo-poziom.svg"
                         alt="Mazury.Holiday"
@@ -79,17 +78,17 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Right Actions */}
-                <div className="hidden lg:flex items-center gap-4">
-                    <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
-
-                    <div className={cn("h-6 w-px", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
-
-                    <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200 hover:bg-slate-800" : "text-white hover:bg-white/10"} />
+                {/* Right Actions - Centered controls between menu and CTA */}
+                <div className="hidden lg:flex items-center gap-6">
+                    <div className="flex items-center gap-4">
+                        <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
+                        <div className={cn("h-6 w-px", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
+                        <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200 hover:bg-slate-800" : "text-white hover:bg-white/10"} />
+                    </div>
 
                     <a
                         href="tel:+48607241090"
-                        className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/20 font-medium ml-4"
+                        className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/20 font-medium"
                     >
                         <Phone size={20} />
                         <span className="hidden xl:inline text-lg">+48 607 241 090</span>

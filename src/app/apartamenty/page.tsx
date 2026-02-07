@@ -14,22 +14,22 @@ export default function ApartmentsHub() {
         {
             id: "stranda",
             title: "Stranda Residence",
-            description: "Luksusowe apartamenty nad samym jeziorem Kisajno. Idealne dla rodzin i żeglarzy.",
-            image: "/mazury-holiday/images/apartments_1.jpg", // update with real image
+            description: t("stranda", "description"),
+            image: "/mazury-holiday/images/stranda/A104/A104k.jpg",
             link: "/apartamenty/stranda",
         },
         {
             id: "kisajno",
-            title: "Apartamenty Kisajno",
-            description: "Nowoczesne apartamenty w Porcie Neptun. Blisko centrum, a jednak na uboczu.",
-            image: "/mazury-holiday/images/apartments_2.jpg", // update with real image
+            title: t("apartments", "items.kisajno.title"),
+            description: t("apartments", "items.kisajno.description"),
+            image: "/mazury-holiday/images/kisajno/kisajno_1.jpg",
             link: "/apartamenty/kisajno",
         },
         {
             id: "fuleda",
-            title: "Fuleda Apartamenty",
-            description: "Spokój i cisza w sercu natury. Odpocznij od zgiełku miasta.",
-            image: "/mazury-holiday/images/hero_bg.jpg", // update with real image
+            title: t("apartments", "items.fuleda.title"),
+            description: t("apartments", "items.fuleda.description"),
+            image: "/mazury-holiday/images/fuleda/fuleda_1.png",
             link: "/apartamenty/fuleda",
         },
     ];
