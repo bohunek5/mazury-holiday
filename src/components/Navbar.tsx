@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { WeatherWidget } from "./WeatherWidget";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 
@@ -83,7 +83,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-4">
                     {/* Desktop Controls */}
                     <div className="hidden lg:flex items-center gap-4">
-                        <WeatherWidget className="hidden sm:flex" />
+
                         <div className={cn("h-6 w-px lg:block hidden", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
                         <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
                         <div className={cn("h-6 w-px", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
@@ -106,10 +106,7 @@ export default function Navbar() {
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
                 <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 p-8 flex flex-col gap-6 shadow-2xl lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto">
-                    <div className="flex justify-between items-center pb-4 border-b border-slate-800/50">
-                        <span className="text-slate-400 text-sm font-medium">Pogoda</span>
-                        <WeatherWidget />
-                    </div>
+
                     <div className="flex justify-between items-center pb-4 border-b border-slate-800/50">
                         <span className="text-slate-400 text-sm font-medium">Język</span>
                         <LanguageSwitcher className="text-white" />
