@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import ImageLightbox from "@/components/ImageLightbox";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Helper function to get unique icon for each amenity
 function getAmenityIcon(amenity: string): string {
@@ -74,6 +74,22 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
+
+    // Load iDoBooking widget script
+    useEffect(() => {
+        // Load main widget script
+        const script = document.createElement('script');
+        script.src = 'https://engine37851.idobooking.com/widget/script/loadScriptsForOwnPage?1712752373';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            // Cleanup script on unmount
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        };
+    }, []);
 
     if (!data) {
         return (
@@ -288,6 +304,28 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                             <p className="text-slate-600 dark:text-slate-400 mb-8">
                                 {t("details", "checkAvailability")}
                             </p>
+
+                            {/* iDoBooking Widget Button */}
+                            <div className="mb-4" id="idobooking-widget-container">
+                                <button
+                                    className="i_do_sell_booking_widget_start side_button right center float w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors"
+                                    data-currency="0"
+                                    data-client="37851"
+                                    data-location=""
+                                    data-object="1"
+                                    data-show-other-objects="true"
+                                    data-language="0"
+                                    onClick={(e) => {
+                                        const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
+                                        if (typeof win.generateWidgetIdoSellBooking === 'function') {
+                                            win.generateWidgetIdoSellBooking(e.currentTarget);
+                                        }
+                                    }}
+                                >
+                                    Rezerwacja online
+                                </button>
+                            </div>
+
                             <a
                                 href="tel:+48607241090"
                                 className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4"
