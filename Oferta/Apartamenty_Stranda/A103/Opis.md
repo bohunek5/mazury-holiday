@@ -69,4 +69,6 @@ Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i pr
 - Galeria: 0T1A8736.jpg, 0T1A8742.jpg, 0T1A8747.jpg, 0T1A8745.jpg, A103 łazienkaa.jpg
 
 ### Rezerwacja
-<!-- Tutaj dodasz kod przycisku iDoBooking -->
+
+<script src="https://engine37851.idobooking.com/widget/script/loadScriptsForOwnPage?1712752373"></script>
+<p><button class="i_do_sell_booking_widget_start side_button right center float " currency="0" data-client="37851" data-location="" data-object="1" data-show-other-objects="true" language="0" onclick="generateWidgetIdoSellBooking(this)" style="transform:rotate(90deg);-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg); z-index: 1050;"></button><script>document.addEventListener("DOMContentLoaded",function(event){iai_booking_button({"langNew":"0","langIdCodes":{"1":"pl","pl":1},"literalsInLang":{"1":{"label1":"Od","label2":"Do","label3":"Osoby","label4":null,"label5":"Lokalizacje","button":"Zarezerwuj go","days":["Nd","Pon","Wt","Śr","Czw","Pt","Sob"],"months":["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"],"trigger":"Rezerwacja online"}}});});</script></p>
