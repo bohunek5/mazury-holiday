@@ -125,7 +125,7 @@ export function readApartmentMarkdown(apartmentId: string): ApartmentMarkdownDat
         if (fs.existsSync(imagesPath)) {
             images = fs.readdirSync(imagesPath)
                 .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file) && !file.startsWith('.'))
-                .map(file => `/mazury-holiday/apartments/A103_images/${file}`);
+                .map(file => `/mazury-holiday/apartments/${apartmentId}_images/${file}`);
         }
 
         return {
