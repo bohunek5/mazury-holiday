@@ -305,33 +305,33 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                                 {t("details", "checkAvailability")}
                             </p>
 
-                            {/* iDoBooking Widget Button */}
-                            <div className="mb-4" id="idobooking-widget-container">
-                                <button
-                                    className="i_do_sell_booking_widget_start side_button right center float w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors"
-                                    data-currency="0"
-                                    data-client="37851"
-                                    data-location=""
-                                    data-object="1"
-                                    data-show-other-objects="true"
-                                    data-language="0"
-                                    onClick={(e) => {
-                                        const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
-                                        if (typeof win.generateWidgetIdoSellBooking === 'function') {
-                                            win.generateWidgetIdoSellBooking(e.currentTarget);
-                                        }
-                                    }}
-                                >
-                                    Rezerwacja online
-                                </button>
-                            </div>
-
+                            {/* Phone Call Button - First */}
                             <a
                                 href="tel:+48607241090"
                                 className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4"
                             >
                                 {t("details", "callBtn")}: +48 607 241 090
                             </a>
+
+                            {/* iDoBooking Widget Button - Second (Green) */}
+                            <button
+                                className="i_do_sell_booking_widget_start side_button right center float block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
+                                data-currency="0"
+                                data-client="37851"
+                                data-location=""
+                                data-object="1"
+                                data-show-other-objects="true"
+                                data-language="0"
+                                onClick={(e) => {
+                                    const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
+                                    if (typeof win.generateWidgetIdoSellBooking === 'function') {
+                                        win.generateWidgetIdoSellBooking(e.currentTarget);
+                                    }
+                                }}
+                            >
+                                Rezerwuj
+                            </button>
+
                             <p className="text-xs text-center text-slate-500">
                                 {t("details", "lowPrice")}
                             </p>
