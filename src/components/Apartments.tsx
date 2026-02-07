@@ -55,7 +55,11 @@ export default function Apartments() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {apartments.map((apt) => (
-                        <div key={apt.id} className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col">
+                        <Link
+                            key={apt.id}
+                            href={apt.link}
+                            className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col"
+                        >
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src={apt.image}
@@ -88,13 +92,13 @@ export default function Apartments() {
                                         {apt.people} {t("apartments", "people")}
                                     </span>
 
-                                    <Link href={apt.link} className="flex items-center gap-2 text-slate-900 dark:text-white font-bold hover:text-amber-500 dark:hover:text-amber-400 transition-colors">
+                                    <span className="flex items-center gap-2 text-slate-900 dark:text-white font-bold group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors">
                                         {t("apartments", "details")}
                                         <ArrowRight size={16} />
-                                    </Link>
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -8,11 +8,72 @@ import { strandaApartments } from "@/data/stranda-apartments";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState } from "react";
 
+// Helper function to get unique icon for each amenity
+function getAmenityIcon(amenity: string): string {
+    const iconMap: Record<string, string> = {
+        // Living room
+        'Klimatyzacja': '❄️',
+        'Sofa 2-osobowa': '🛋️',
+        'Smart TV': '📺',
+        'TV': '📺',
+        'WiFi': '📶',
+        'Salon z aneksem': '🏠',
+        'Duży salon': '🛋️',
+        'Sofa': '🛋️',
+
+        // Kitchen
+        'Zmywarka': '🧼',
+        'Płyta indukcyjna': '🔥',
+        'Lodówka': '🧊',
+        'Kuchenka mikrofalowa': '📟',
+        'Komplet naczyń': '🍽️',
+        'Aneks kuchenny': '🍳',
+        'Ekspres do kawy': '☕',
+        'Pełne wyposażenie AGD': '🏠',
+
+        // Bedroom
+        'Łóżko 180x200': '🛏️',
+        'Łóżko podwójne': '🛏️',
+        'Łóżko małżeńskie': '🛏️',
+        'Szafa': '👔',
+        'Dwie oddzielne sypialnie': '🚪',
+        'Łóżka małżeńskie': '🛏️',
+        'Dwie sypialnie': '🚪',
+        'Komfortowe łóżka': '🛏️',
+
+        // Bathroom
+        'Prysznic': '🚿',
+        'Suszarka do włosów': '💨',
+        'Ręczniki': '🧺',
+        'Pralka': '🧺',
+        'Zestaw kosmetyków': '🧴',
+        'Prywatna sauna': '🧖',
+        'Suszarka': '💨',
+
+        // Terrace
+        'Meble wypoczynkowe': '🪑',
+        'Widok na port Stranda': '⛵',
+        'Prywatne jacuzzi': '🛁',
+        'Meble tarasowe': '🪑',
+        'Widok na jezioro Kisajno': '🌊',
+        'Widok na marinę': '⛵',
+        'Widok na port': '⛵',
+        'Meble balkonowe': '🪑',
+        'Duży taras': '🌿',
+        'Meble ogrodowe': '🌳',
+        'Jacuzzi na tarasie': '🛁',
+        'Widok na zatokę Tracz': '🌊'
+    };
+
+    return iconMap[amenity] || '✨'; // Default icon if not found
+}
+
 export default function ApartmentDetailClient({ id }: { id: string }) {
     const { t } = useLanguage();
     const data = strandaApartments[id as keyof typeof strandaApartments];
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [galleryExpanded, setGalleryExpanded] = useState(false);
 
     if (!data) {
         return (
@@ -77,11 +138,13 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                         {apartment.gallery.length > 0 && (
                             <div>
                                 <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {apartment.gallery.map((img, idx) => (
+
+                                {/* First 3 images - always visible */}
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                    {apartment.gallery.slice(0, 3).map((img, idx) => (
                                         <div
                                             key={idx}
-                                            className={`relative h-64 rounded-xl overflow-hidden cursor-pointer group ${idx === 0 && apartment.gallery.length % 2 !== 0 ? 'md:col-span-2' : ''}`}
+                                            className="relative h-64 rounded-xl overflow-hidden cursor-pointer group"
                                             onClick={() => {
                                                 setLightboxIndex(idx);
                                                 setLightboxOpen(true);
@@ -92,103 +155,129 @@ export default function ApartmentDetailClient({ id }: { id: string }) {
                                                 alt={`${apartment.title} view ${idx + 1}`}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                                loading="eager"
+                                                sizes="(max-width: 768px) 100vw, 33vw"
                                             />
                                         </div>
                                     ))}
                                 </div>
+
+                                {/* Remaining images - collapsible */}
+                                {apartment.gallery.length > 3 && (
+                                    <div className="mt-6">
+                                        <button
+                                            onClick={() => setGalleryExpanded(!galleryExpanded)}
+                                            className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                                        >
+                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć (${apartment.gallery.length - 3})`}
+                                        </button>
+
+                                        {galleryExpanded && (
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeIn">
+                                                {apartment.gallery.slice(3).map((img, idx) => (
+                                                    <div
+                                                        key={idx + 3}
+                                                        className="relative h-64 rounded-xl overflow-hidden cursor-pointer group"
+                                                        onClick={() => {
+                                                            setLightboxIndex(idx + 3);
+                                                            setLightboxOpen(true);
+                                                        }}
+                                                    >
+                                                        <Image
+                                                            src={img}
+                                                            alt={`${apartment.title} view ${idx + 4}`}
+                                                            fill
+                                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                                            loading="lazy"
+                                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         )}
 
                         {/* Amenities */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-8 text-slate-900 dark:text-white">Udogodnienia</h2>
+                            <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Udogodnienia w apartamencie</h3>
 
-                            <div className="space-y-8">
-                                {/* Living Room */}
-                                {data.amenities.living.length > 0 && (
-                                    <div>
-                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                            <span>🛋️</span> Salon
-                                        </h3>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {data.amenities.living.map((item, i) => (
-                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
-                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                                    <span className="text-sm">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                            {/* Living Room */}
+                            {data.amenities.living.length > 0 && (
+                                <div className="mb-12">
+                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Salon</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {data.amenities.living.map((item, idx) => (
+                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
+                                </div>
+                            )}
 
-                                {/* Kitchen */}
-                                {data.amenities.kitchen.length > 0 && (
-                                    <div>
-                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                            <span>🍳</span> Kuchnia
-                                        </h3>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {data.amenities.kitchen.map((item, i) => (
-                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
-                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                                    <span className="text-sm">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                            {/* Kitchen */}
+                            {data.amenities.kitchen.length > 0 && (
+                                <div className="mb-12">
+                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Kuchnia</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {data.amenities.kitchen.map((item, idx) => (
+                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
+                                </div>
+                            )}
 
-                                {/* Bedroom */}
-                                {data.amenities.bedroom.length > 0 && (
-                                    <div>
-                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                            <span>🛏️</span> Sypialnia
-                                        </h3>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {data.amenities.bedroom.map((item, i) => (
-                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
-                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                                    <span className="text-sm">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                            {/* Bedroom */}
+                            {data.amenities.bedroom.length > 0 && (
+                                <div className="mb-12">
+                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Sypialnia</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {data.amenities.bedroom.map((item, idx) => (
+                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
+                                </div>
+                            )}
 
-                                {/* Bathroom */}
-                                {data.amenities.bathroom.length > 0 && (
-                                    <div>
-                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                            <span>🚿</span> Łazienka
-                                        </h3>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {data.amenities.bathroom.map((item, i) => (
-                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
-                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                                    <span className="text-sm">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                            {/* Bathroom */}
+                            {data.amenities.bathroom.length > 0 && (
+                                <div className="mb-12">
+                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Łazienka</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {data.amenities.bathroom.map((item, idx) => (
+                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
+                                </div>
+                            )}
 
-                                {/* Terrace */}
-                                {data.amenities.terrace.length > 0 && (
-                                    <div>
-                                        <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                            <span>🌿</span> Taras
-                                        </h3>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {data.amenities.terrace.map((item, i) => (
-                                                <div key={i} className="flex items-center space-x-2 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 p-3 rounded-lg">
-                                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                                    <span className="text-sm">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                            {/* Terrace */}
+                            {data.amenities.terrace.length > 0 && (
+                                <div className="mb-12">
+                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Taras</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {data.amenities.terrace.map((item, idx) => (
+                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
-                            </div>
+                                </div>
+                            )}
                         </div>
                     </div>
 

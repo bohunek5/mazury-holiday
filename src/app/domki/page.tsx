@@ -9,6 +9,7 @@ import { useState } from "react";
 export default function DomkiPage() {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [galleryExpanded, setGalleryExpanded] = useState(false);
 
     const galleryImages = [4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => `/mazury-holiday/images/skorupki/skorupki_${num}.jpg`);
 
@@ -117,8 +118,10 @@ export default function DomkiPage() {
                 {/* Photo Gallery */}
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Galeria</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[4, 5, 6, 7, 8, 9, 10, 11, 12].map((num, idx) => (
+
+                    {/* First 3 images - always visible */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        {[4, 5, 6].map((num, idx) => (
                             <div
                                 key={num}
                                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
@@ -129,11 +132,42 @@ export default function DomkiPage() {
                                     alt={`Domki Skorupki - widok ${num}`}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                    loading={idx < 3 ? "eager" : "lazy"}
+                                    loading="eager"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                             </div>
                         ))}
+                    </div>
+
+                    {/* Remaining images - collapsible */}
+                    <div>
+                        <button
+                            onClick={() => setGalleryExpanded(!galleryExpanded)}
+                            className="w-full mb-6 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                        >
+                            {galleryExpanded ? '▲ Zwiń galerię' : '▼ Zobacz więcej zdjęć (6)'}
+                        </button>
+
+                        {galleryExpanded && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
+                                {[7, 8, 9, 10, 11, 12].map((num, idx) => (
+                                    <div
+                                        key={num}
+                                        className="relative h-64 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                        onClick={() => openLightbox(idx + 3)}
+                                    >
+                                        <Image
+                                            src={`/mazury-holiday/images/skorupki/skorupki_${num}.jpg`}
+                                            alt={`Domki Skorupki - widok ${num}`}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            loading="lazy"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
 
