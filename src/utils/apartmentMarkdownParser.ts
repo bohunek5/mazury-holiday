@@ -18,6 +18,7 @@ export interface ApartmentMarkdownData {
     extendedDescription?: string;
     amenities: AmenityGroup[];
     images: string[];
+    heroImage?: string;
 }
 
 // Icon mapping for different room types
@@ -123,9 +124,19 @@ export function readApartmentMarkdown(apartmentId: string): ApartmentMarkdownDat
         let images: string[] = [];
 
         if (fs.existsSync(imagesPath)) {
-            images = fs.readdirSync(imagesPath)
-                .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file) && !file.startsWith('.'))
-                .map(file => `/mazury-holiday/apartments/${apartmentId}_images/${file}`);
+            const allFiles = fs.readdirSync(imagesPath)
+                .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file) && !file.startsWith('.'));
+
+            // If hero image is specified, put it first
+            const heroImage = data.heroImage;
+            if (heroImage && allFiles.includes(heroImage)) {
+                images.push(`/mazury-holiday/apartments/${apartmentId}_images/${heroImage}`);
+                allFiles.splice(allFiles.indexOf(heroImage), 1);
+            }
+
+            allFiles.forEach(file => {
+                images.push(`/mazury-holiday/apartments/${apartmentId}_images/${file}`);
+            });
         }
 
         return {
@@ -137,7 +148,8 @@ export function readApartmentMarkdown(apartmentId: string): ApartmentMarkdownDat
             description,
             extendedDescription: extendedDescription || undefined,
             amenities,
-            images
+            images,
+            heroImage: data.heroImage
         };
     } catch (error) {
         console.error(`Error reading apartment markdown for ${apartmentId}:`, error);

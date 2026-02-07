@@ -19,9 +19,9 @@ type Unit = {
 // Update buildings data structure to include images
 const buildings: Record<"A" | "B" | "C", Unit[]> = {
     A: [
-        { id: "A103", image: "/mazury-holiday/images/stranda/A103/0T1A8736.jpg" },
-        { id: "A104", image: "/mazury-holiday/images/stranda/A104/A104k.jpg" },
-        { id: "A105", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A103", image: "/mazury-holiday/apartments/A103_images/A103 salonn.jpg" },
+        { id: "A104", image: "/mazury-holiday/apartments/A104_images/A104j.jpg" },
+        { id: "A105", image: "/mazury-holiday/apartments/A105_images/5S5A0390_02411120613.JPG" },
         { id: "A204", image: "/mazury-holiday/images/apartments/A104k.jpg" },
         { id: "A205", image: "/mazury-holiday/images/apartments/A104k.jpg" },
         { id: "A302", image: "/mazury-holiday/images/apartments/A104k.jpg" },

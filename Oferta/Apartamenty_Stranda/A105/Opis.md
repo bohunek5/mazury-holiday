@@ -4,6 +4,7 @@ building: A
 type: Delux z jacuzzi
 price: 450
 guests: 2+2
+heroImage: 5S5A0390_02411120613.JPG
 ---
 
 # Apartament A105 Delux z jacuzzi

@@ -4,6 +4,7 @@ building: A
 type: Suite
 price: 300
 guests: 2+2
+heroImage: A103 salonn.jpg
 ---
 
 # Apartament A103 Suite
@@ -28,6 +29,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 ## Sekcja środkowa - Udogodnienia
 
 ### Salon::salon::TV, stół, krzesła, sofa dla 2 osób===wyjście na taras===klimatyzacja
+
 Aneks kuchenny::aneks::ekspres do kawy, płyta indukcyjna===lodówka, zmywarka, chłodziarka do wina===komplet naczyń i sztućców
 Sypialnia::lozko::łóżko 180x200, TV, komplet pościeli===suszarka na ubrania===deska do prasowania, żelazko===klimatyzacja
 Łazienka::lazienka::prysznic, pralka===suszarka do włosów, prostownica===ręczniki, żel pod prysznic, balsam

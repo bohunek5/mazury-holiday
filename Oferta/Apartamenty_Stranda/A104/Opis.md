@@ -4,6 +4,7 @@ building: A
 type: Suite
 price: 300
 guests: 2+2
+heroImage: A104j.jpg
 ---
 
 # Apartament A104 Suite
