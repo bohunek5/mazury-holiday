@@ -133,7 +133,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-slate-950 flex flex-col items-center justify-center gap-8 lg:hidden"
+                        className="fixed inset-0 z-40 bg-slate-950 flex flex-col items-center justify-start pt-32 gap-6 lg:hidden overflow-y-auto"
                     >
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-[url('/mazury-holiday/images/pattern.svg')] opacity-5 pointer-events-none" />
@@ -162,7 +162,7 @@ export default function Navbar() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className="flex flex-col items-center gap-6 mt-4"
+                            className="flex flex-col items-center gap-4 mt-0 mb-8"
                         >
                             <div className="w-16 h-px bg-slate-800" />
                             <div className="flex items-center gap-4">

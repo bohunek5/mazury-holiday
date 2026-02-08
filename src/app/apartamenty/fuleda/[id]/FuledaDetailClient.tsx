@@ -104,7 +104,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                     {/* Main Content */}
                     <div className="lg:col-span-2 space-y-12">
                         {/* Description */}
-                        <div>
+                        <div className="text-center md:text-left">
                             <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "about")}</h2>
                             <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed whitespace-pre-line">
                                 {data.description}
@@ -114,7 +114,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                         {/* Gallery */}
                         {data.gallery.images.length > 0 && (
                             <div>
-                                <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
+                                <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white text-center md:text-left">Galeria</h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                     {data.gallery.images.slice(0, 3).map((img, idx) => (
@@ -180,13 +180,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             {/* Living Room */}
                             {data.amenities.living.length > 0 && (
-                                <div className="mb-12">
+                                <div className="mb-12 text-center md:text-left">
                                     <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Salon</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                         {data.amenities.living.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            <div key={idx} className="flex flex-col items-center p-6 md:p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-sm md:text-base text-slate-800 dark:text-slate-200">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -195,13 +195,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             {/* Kitchen */}
                             {data.amenities.kitchen.length > 0 && (
-                                <div className="mb-12">
+                                <div className="mb-12 text-center md:text-left">
                                     <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Kuchnia</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                         {data.amenities.kitchen.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            <div key={idx} className="flex flex-col items-center p-6 md:p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-sm md:text-base text-slate-800 dark:text-slate-200">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -210,13 +210,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             {/* Bedroom */}
                             {data.amenities.bedroom.length > 0 && (
-                                <div className="mb-12">
+                                <div className="mb-12 text-center md:text-left">
                                     <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Sypialnia</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                         {data.amenities.bedroom.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            <div key={idx} className="flex flex-col items-center p-6 md:p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-sm md:text-base text-slate-800 dark:text-slate-200">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -225,13 +225,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             {/* Bathroom */}
                             {data.amenities.bathroom.length > 0 && (
-                                <div className="mb-12">
+                                <div className="mb-12 text-center md:text-left">
                                     <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Łazienka</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                         {data.amenities.bathroom.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            <div key={idx} className="flex flex-col items-center p-6 md:p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-sm md:text-base text-slate-800 dark:text-slate-200">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -240,13 +240,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             {/* Terrace */}
                             {data.amenities.terrace.length > 0 && (
-                                <div className="mb-12">
+                                <div className="mb-12 text-center md:text-left">
                                     <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Taras i otoczenie</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                         {data.amenities.terrace.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
+                                            <div key={idx} className="flex flex-col items-center p-6 md:p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
+                                                <span className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
+                                                <span className="font-medium text-center text-sm md:text-base text-slate-800 dark:text-slate-200">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -271,7 +271,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                             </a>
 
                             <button
-                                className="i_do_sell_booking_widget_start block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
+                                className="hidden lg:block i_do_sell_booking_widget_start w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
                                 data-currency="0"
                                 data-client="37851"
                                 data-location=""
@@ -311,6 +311,33 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                 </div>
             </section>
+
+            {/* Mobile Floating Booking Button */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    href="tel:+48607241090"
+                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 rounded-xl transition-colors text-sm"
+                >
+                    tel. +48...
+                </a>
+                <button
+                    className="flex-[2] i_do_sell_booking_widget_start text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-lg shadow-lg"
+                    data-currency="0"
+                    data-client="37851"
+                    data-location=""
+                    data-object="1"
+                    data-show-other-objects="true"
+                    data-language="0"
+                    onClick={(e) => {
+                        const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
+                        if (typeof win.generateWidgetIdoSellBooking === 'function') {
+                            win.generateWidgetIdoSellBooking(e.currentTarget);
+                        }
+                    }}
+                >
+                    Zarezerwuj
+                </button>
+            </div>
 
             {lightboxOpen && (
                 <ImageLightbox
