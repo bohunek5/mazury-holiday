@@ -134,7 +134,7 @@ export default function CooperationPage() {
             {/* CTA Section */}
             <section className="py-20 bg-amber-500 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Gotowy na partnerstwo?</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Gotowy na współpracę?</h2>
                     <p className="text-xl mb-12 opacity-90">
                         Skontaktuj się z nami, aby porozmawiać o potencjale Twojej nieruchomości na Mazurach.
                     </p>
