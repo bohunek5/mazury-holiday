@@ -1,9 +1,27 @@
 export const translations = {
     pl: {
         nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj" },
-        hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "Czarter Jachtów" },
+        hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur z perspektywy naszych luksusowych apartamentów oraz z pokładu jachtu.", p2: "Niezależnie od tego, czy szukasz spokojnego wypoczynku w Giżycku, czy ekskluzywnego domu we Fuledzie." },
-        apartments: { title: "Nasze Apartamenty", description: "Wybierz idealne miejsce na swój wypoczynek.", details: "Szczegóły", pricePrefix: "od", night: "noc", people: "osoby", items: { stranda: { title: "Apartamenty Giżycko \"Stranda\"", location: "Port Stranda, Giżycko", description: "Komfortowe apartamenty położone w sercu portu Stranda." }, kisajno: { title: "Apartamenty Giżycko \"Kisajno\"", location: "Port Neptun, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." }, fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." } } },
+        apartments: {
+            title: "Nasze Apartamenty",
+            description: "Wybierz idealne miejsce na swój wypoczynek.",
+            details: "Szczegóły",
+            pricePrefix: "od",
+            night: "noc",
+            people: "osoby",
+            items: {
+                stranda: { title: "Stranda Residence", location: "Port Stranda, Giżycko", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
+                kisajno: { title: "Apartamenty Giżycko \"Kisajno\"", location: "Port Neptun, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." },
+                fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
+                domkiSkorupki: { title: "Domki Skorupki", location: "Skorupki, k. Giżycka", description: "Luksusowe domki w sercu mazurskiej natury." },
+                pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." }
+            }
+        },
+        cottagesAndRooms: {
+            title: "Nasze domki i pokoje",
+            description: "Poczuj bliskość natury w komfortowych warunkach."
+        },
         charter: { tag: "Bez patentu", title: "Czarter Jachtu Motorowego", description: "Jacht motorowy Stillo 30 to jednostka, którą możesz prowadzić bez patentu.", model: "Stillo 30 (2020)", cabins: "3 Zamykane Kabiny", checkBtn: "Sprawdź dostępność", premiumFleet: "Flota Premium", feature1: "Bez patentu", feature2: "Rocznik 2020", feature3: "Luksusowe wyposażenie", detailsBtn: "Zobacz szczegóły" },
         stranda: {
             subtitle: "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno",
@@ -122,13 +140,97 @@ export const translations = {
                 washer: "Pralka",
                 pier: "Dostęp do pomostu"
             }
+        },
+        categories: {
+            apartments: "Nasze Apartamenty",
+            cottages: "Nasze Domki",
+            rooms: "Nasze Pokoje",
+            charter: "Czarter"
+        },
+        attractionsPage: {
+            title: "Atrakcje regionu",
+            subtitle: "Giżycko i serce Mazur oferują mnóstwo możliwości",
+            boyen: {
+                title: "Twierdza Boyen",
+                desc: "XIX-wieczna pruska twierdza o kształcie gwiazdy, kluczowy punkt historyczny regionu. Doskonale zachowane mury, bramy i budynki koszarowe stanowią unikalny przykład fortyfikacji."
+            },
+            bridge: {
+                title: "Most Obrotowy",
+                desc: "Unikalny zabytek techniki z XIX wieku, obsługiwany ręcznie przez jednego operatora. Łączy brzegi kanału łuczańskiego i jest jedynym tego typu czynnym mostem w Europie."
+            },
+            port: {
+                title: "Port Giżycko & Ekomarina",
+                desc: "Największy i najnowocześniejszy port na Mazurach. Idealne miejsce na spacer, kolację w porcie lub rozpoczęcie rejsu po Wielkich Jeziorach Mazurskich."
+            },
+            water: {
+                title: "Jezioro Kisajno i Dobskie",
+                desc: "Krystaliczna woda, rezerwaty przyrody i strefy ciszy. Raj dla miłośników natury, kajakarstwa i spokojnego żeglarstwa z dala od motorowodnego zgiełku."
+            }
+        },
+        cooperationPage: {
+            title: "Współpraca",
+            subtitle: "Twój obiekt w najlepszych rękach na Mazurach",
+            services: {
+                title: "Profesjonalne Zarządzanie Najmem",
+                desc: "Szukasz zaufanego partnera do opieki nad Twoją nieruchomością? Mazury.Holiday to zespół ekspertów, który zdejmie z Twoich barków wszelkie obowiązki związane z wynajmem krótkoterminowym. Zwiększamy zyski właścicieli przy jednoczesnym zachowaniu najwyższego standardu obsługi gości."
+            },
+            marketing: {
+                title: "Mocny Marketing Premium",
+                desc: "Twoja posiadłość trafi na czołowe miejsca w portalach takich jak Booking.com, Airbnb oraz naszą autorską platformę Mazury.Holiday. Wykonujemy sesje zdjęciowe i filmy z drona."
+            },
+            guests: {
+                title: "Bezobsługowy Wynajem",
+                desc: "Zajmujemy się pełnym cyklem: od rezerwacji i płatności, przez profesjonalne powitanie gości, aż po wsparcie w trakcie ich pobytu 24/7."
+            },
+            maintenance: {
+                title: "Standard 5-Gwiazdkowy",
+                desc: "Nasz zespół sprzątający i techniczny dba o każdy detal. Twoja nieruchomość zawsze lśni i jest w idealnym stanie technicznym przed przyjazdem każdego gościa."
+            },
+            whyUs: {
+                title: "Dlaczego warto z nami współpracować?",
+                point1: "Lokalne doświadczenie i znajomość rynku mazurskiego",
+                point2: "Transparentny system rozliczeń i panel właściciela",
+                point3: "Stała opieka techniczna i konserwacyjna",
+                point4: "Optymalizacja cen (Revenue Management)"
+            }
+        },
+        contactForm: {
+            title: "Napisz do nas",
+            subtitle: "Masz pytania? Chcesz zarezerwować pobyt? Skorzystaj z formularza poniżej.",
+            name: "Imię i nazwisko",
+            email: "Adres e-mail",
+            phone: "Numer telefonu",
+            subject: "Temat",
+            message: "Treść wiadomości",
+            send: "Wyślij wiadomość",
+            sending: "Wysyłanie...",
+            success: "Wiadomość została wysłana pomyślnie!",
+            error: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
         }
     },
     en: {
         nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now" },
-        hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "Yacht Charter" },
+        hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
-        apartments: { title: "Our Apartments", description: "Choose the perfect place for your rest.", details: "Details", pricePrefix: "from", night: "night", people: "people", items: { stranda: { title: "Stranda Apartments", location: "Giżycko", description: "Comfortable apartments in the heart of Stranda port." }, kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxury on the shores of Lake Kisajno." }, fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "An oasis of peace away from the city." } } },
+        apartments: {
+            title: "Our Apartments",
+            description: "Choose the perfect place for your rest.",
+            details: "Details",
+            pricePrefix: "from",
+            night: "night",
+            people: "people",
+            items: {
+                stranda: { title: "Stranda Apartments", location: "Giżycko", description: "Comfortable apartments in the heart of Stranda port." },
+                kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxury on the shores of Lake Kisajno." },
+                fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "An oasis of peace away from the city." },
+                domkiSkorupki: { title: "Skorupki Cottages", location: "Skorupki, near Giżycko", description: "Luxury cottages in the heart of Masurian nature." },
+                pokojeFuleda: { title: "Fuleda Rooms", location: "Fuleda, Lake Dobskie", description: "Cozy rooms with a lake view in the quiet zone." }
+            }
+        },
+        cottagesAndRooms: {
+            title: "Our cottages and rooms",
+            description: "Feel the closeness of nature in comfortable conditions."
+        },
         charter: { tag: "No license", title: "Motor Yacht Charter", description: "Stillo 30 motor yacht available without a license.", model: "Stillo 30 (2020)", cabins: "3 Cabins", checkBtn: "Check availability", premiumFleet: "Premium Fleet", feature1: "No license", feature2: "Year 2020", feature3: "Luxury equipment", detailsBtn: "Details" },
         stranda: { subtitle: "Luxury by Lake Kisajno", description: "Stranda Residence combines modern design with nature.", building: "Building", apartment: "Apartment" },
         details: { about: "About", amenities: "Amenities", booking: "Booking", checkAvailability: "Check availability and book.", callBtn: "Call", lowPrice: "Best price guarantee.", descriptionPart1: "Luxury apartment in building", descriptionPart2: "at Stranda Residence.", descriptionPart3: "Unforgettable views of Lake Kisajno.", items: { view: "Lake view", ac: "A/C", terrace: "Terrace", kitchen: "Kitchenette", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna access" } },
@@ -222,13 +324,90 @@ export const translations = {
                 washer: "Washing machine",
                 pier: "Pier access"
             }
+        },
+        categories: {
+            apartments: "Our Apartments",
+            cottages: "Our Cottages",
+            rooms: "Our Rooms",
+            charter: "Yacht Charter"
+        },
+        attractionsPage: {
+            title: "Regional Attractions",
+            subtitle: "Giżycko and the heart of Masuria offer plenty of opportunities",
+            boyen: {
+                title: "Boyen Fortress",
+                desc: "A 19th-century star-shaped Prussian fortress, a key historical site in the region."
+            },
+            bridge: {
+                title: "Rotary Bridge",
+                desc: "A unique 19th-century technical monument, hand-operated, connecting the banks of the Łuczański Canal."
+            },
+            port: {
+                title: "Port Giżycko & Cruises",
+                desc: "The largest port in Masuria, the perfect place to start a cruise on the Great Lakes."
+            },
+            water: {
+                title: "Lake Kisajno and Dobskie",
+                desc: "Crystal clear water, silent zones, and countless islands - a paradise for sailors and nature lovers."
+            }
+        },
+        cooperationPage: {
+            title: "Cooperation",
+            subtitle: "Your property in good hands",
+            services: {
+                title: "Comprehensive Management",
+                desc: "We will take care of your apartment, cottage, or facility in Masuria. We offer a full range of services - from marketing to cleaning."
+            },
+            marketing: {
+                title: "Professional Marketing",
+                desc: "We take care of the visibility of your offer on the most popular booking portals."
+            },
+            guests: {
+                title: "Guest Services",
+                desc: "We provide professional check-in, check-out, and support for guests throughout their stay."
+            },
+            maintenance: {
+                title: "Maintenance & Cleaning",
+                desc: "Your property will always be ready to receive guests at the highest standard."
+            }
+        },
+        contactForm: {
+            title: "Write to us",
+            subtitle: "Have questions? Want to book a stay? Use the form below.",
+            name: "Full Name",
+            email: "Email Address",
+            phone: "Phone Number",
+            subject: "Subject",
+            message: "Message",
+            send: "Send Message",
+            sending: "Sending...",
+            success: "Message sent successfully!",
+            error: "An error occurred while sending the message. Please try again."
         }
     },
     de: {
         nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen" },
-        hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "Yachtcharter" },
+        hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Willkommen in", titleHighlight: "Masuren", p1: "Entdecken Sie die Magie Masurens.", p2: "Ob Ruhe in Giżycko oder Luxus in Fuleda." },
-        apartments: { title: "Unsere Apartments", description: "Wählen Sie den perfekten Ort.", details: "Details", pricePrefix: "ab", night: "Nacht", people: "Pers.", items: { stranda: { title: "Stranda Apartments", location: "Giżycko", description: "Komfort im Herzen von Stranda." }, kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxus am Kisajno-See." }, fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "Ruheoase in der Natur." } } },
+        apartments: {
+            title: "Unsere Apartments",
+            description: "Wählen Sie den perfekten Ort.",
+            details: "Details",
+            pricePrefix: "ab",
+            night: "Nacht",
+            people: "Pers.",
+            items: {
+                stranda: { title: "Stranda Apartments", location: "Giżycko", description: "Komfort im Herzen von Stranda." },
+                kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxus am Kisajno-See." },
+                fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "Ruheoase in der Natur." },
+                domkiSkorupki: { title: "Ferienhäuser Skorupki", location: "Skorupki, bei Giżycko", description: "Luxuriöse Ferienhäuser im Herzen der masurischen Natur." },
+                pokojeFuleda: { title: "Fuleda Zimmer", location: "Fuleda, Dobskie-See", description: "Gemütliche Zimmer mit Seeblick in der Stille-Zone." }
+            }
+        },
+        cottagesAndRooms: {
+            title: "Unsere Ferienhäuser und Zimmer",
+            description: "Fühlen Sie die Nähe zur Natur unter komfortablen Bedingungen."
+        },
         charter: { tag: "Führerscheinfrei", title: "Motoryachtcharter", description: "Stillo 30 ohne Führerschein.", model: "Stillo 30 (2020)", cabins: "3 Kabinen", checkBtn: "Verfügbarkeit", premiumFleet: "Premium", feature1: "Kein Schein", feature2: "Baujahr 2020", feature3: "Luxus", detailsBtn: "Details" },
         stranda: { subtitle: "Luxus am Kisajno", description: "Stranda Residence verbindet Design mit Natur.", building: "Gebäude", apartment: "Apartment" },
         details: { about: "Über", amenities: "Ausstattung", booking: "Buchung", checkAvailability: "Verfügbarkeit prüfen.", callBtn: "Anrufen", lowPrice: "Bestpreisgarantie.", descriptionPart1: "Luxusapartment im Gebäude", descriptionPart2: "in Stranda Residence.", descriptionPart3: "Unvergesslicher Seeblick.", items: { view: "Seeblick", ac: "Klimaanlage", terrace: "Terrasse", kitchen: "Küche", tv: "Smart TV", wifi: "WLAN", parking: "Parkplatz", sauna: "Sauna" } },
@@ -322,13 +501,64 @@ export const translations = {
                 washer: "Waschmaschine",
                 pier: "Zugang zum Steg"
             }
+        },
+        categories: {
+            apartments: "Unsere Apartments",
+            cottages: "Unsere Ferienhäuser",
+            rooms: "Unsere Zimmer",
+            charter: "Yachtcharter"
+        },
+        attractionsPage: {
+            title: "Regionale Attraktionen",
+            subtitle: "Giżycko und das Herz Masurens bieten viele Möglichkeiten",
+            boyen: {
+                title: "Festung Boyen",
+                desc: "Eine preußische sternförmige Festung aus dem 19. Jahrhundert, eine wichtige historische Stätte der Region."
+            },
+            bridge: {
+                title: "Drehbrücke",
+                desc: "Ein einzigartiges technisches Denkmal aus dem 19. Jahrhundert, handbetrieben, das die Ufer des Łuczański-Kanals verbindet."
+            },
+            port: {
+                title: "Hafen Giżycko & Kreuzfahrten",
+                desc: "Der größte Hafen Masurens, der perfekte Ort, um eine Kreuzfahrt auf den Großen Seen zu beginnen."
+            },
+            water: {
+                title: "Kisajno- und Dobskie-See",
+                desc: "Kristallklares Wasser, Ruhezonen und unzählige Inseln - ein Paradies für Segler und Naturliebhaber."
+            }
+        },
+        cooperationPage: {
+            title: "Zusammenarbeit",
+            subtitle: "Ihre Immobilie in guten Händen",
+            services: {
+                title: "Umfassendes Management",
+                desc: "Wir kümmern uns um Ihr Apartment, Ferienhaus oder Objekt in Masuren. Wir bieten ein umfassendes Leistungsspektrum - vom Marketing bis zur Reinigung."
+            },
+            marketing: {
+                title: "Professionelles Marketing",
+                desc: "Wir kümmern uns um die Sichtbarkeit Ihres Angebots auf den beliebtesten Buchungsportalen."
+            },
+            guests: {
+                title: "Gästeservice",
+                desc: "Wir bieten professionelle Check-ins, Check-outs und Betreuung der Gäste während des gesamten Aufenthalts."
+            },
+            maintenance: {
+                title: "Wartung & Reinigung",
+                desc: "Ihre Immobilie ist immer bereit, Gäste auf höchstem Standard zu empfangen."
+            }
         }
     },
     es: {
         nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar" },
         hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "Alquiler de Yates" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenido a", titleHighlight: "Grandes Lagos", p1: "Descubra la magia de Masuria.", p2: "Ya sea descanso en Giżycko o lujo en Fuleda." },
-        apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." } } },
+        apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." }, domkiSkorupki: { title: "Cabañas Skorupki", location: "Skorupki, cerca de Giżycko", description: "Cabañas de lujo en el corazón de la naturaleza de Masuria." }, pokojeFuleda: { title: "Habitaciones Fuleda", location: "Fuleda, Lago Dobskie", description: "Habitaciones acogedoras con vista al lago en zona de silencio." } } },
+        cottagesAndRooms: {
+            title: "Nuestras cabañas y habitaciones",
+            description: "Siente la cercanía de la naturaleza en condiciones confortables."
+        },
+        categories: { apartments: "Nuestros Apartamentos", cottages: "Nuestras Cabañas", rooms: "Nuestras Habitaciones", charter: "Chárter" },
         charter: { tag: "Sin licencia", title: "Alquiler de Yates", description: "Yate Stillo 30 sin licencia.", model: "Stillo 30 (2020)", cabins: "3 Cabinas", checkBtn: "Disponibilidad", premiumFleet: "Premium", feature1: "Sin licencia", feature2: "2020", feature3: "Lujo", detailsBtn: "Detalles" },
         stranda: { subtitle: "Lujo en Lago Kisajno", description: "Diseño moderno y naturaleza.", building: "Edificio", apartment: "Apartamento" },
         details: { about: "Sobre", amenities: "Comodidades", booking: "Reserva", checkAvailability: "Verificar disponibilidad.", callBtn: "Llamar", lowPrice: "Mejor precio.", descriptionPart1: "Apartamento de lujo en", descriptionPart2: "Stranda Residence.", descriptionPart3: "Vistas inolvidables.", items: { view: "Vistas al lago", ac: "Aire acond.", terrace: "Terraza", kitchen: "Cocina", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna" } },
@@ -338,7 +568,12 @@ export const translations = {
         nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota" },
         hero: { title: "Vacanze in Masuria", subtitle: "MOMENTI UNICI", apartmentsBtn: "I nostri appartamenti", charterBtn: "Noleggio Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Benvenuti nei", titleHighlight: "Grandi Laghi", p1: "Scopri la magia della Masuria.", p2: "Relax a Giżycko o lusso a Fuleda." },
-        apartments: { title: "Appartamenti", description: "Scegli il posto perfetto.", details: "Dettagli", pricePrefix: "da", night: "notte", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Comfort al porto." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lusso sul lago." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasi di pace." } } },
+        apartments: { title: "Appartamenti", description: "Scegli il posto perfetto.", details: "Dettagli", pricePrefix: "da", night: "notte", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Comfort al porto." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lusso sul lago." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasi di pace." }, domkiSkorupki: { title: "Case Skorupki", location: "Skorupki, vicino a Giżycko", description: "Case di lusso nel cuore della natura masuriana." }, pokojeFuleda: { title: "Camere Fuleda", location: "Fuleda, Lago Dobskie", description: "Camere accoglienti con vista lago in zona di silenzio." } } },
+        cottagesAndRooms: {
+            title: "Le nostre case e camere",
+            description: "Senti la vicinanza della natura in condizioni confortevoli."
+        },
+        categories: { apartments: "I nostri Appartamenti", cottages: "Le nostre Case", rooms: "Le nostre Camere", charter: "Noleggio" },
         charter: { tag: "Senza patente", title: "Noleggio Yacht", description: "Stillo 30 senza patente.", model: "Stillo 30 (2020)", cabins: "3 Cabine", checkBtn: "Disponibilità", premiumFleet: "Premium", feature1: "No patente", feature2: "2020", feature3: "Lusso", detailsBtn: "Dettagli" },
         stranda: { subtitle: "Lusso sul lago", description: "Design moderno e natura.", building: "Edificio", apartment: "Appartamento" },
         details: { about: "Info", amenities: "Servizi", booking: "Prenotazione", checkAvailability: "Controlla disponibilità.", callBtn: "Chiama", lowPrice: "Miglior prezzo.", descriptionPart1: "Appartamento di lusso in", descriptionPart2: "Stranda Residence.", descriptionPart3: "Vista indimenticabile.", items: { view: "Vista lago", ac: "Aria cond.", terrace: "Terrazza", kitchen: "Cucina", tv: "Smart TV", wifi: "WiFi", parking: "Parcheggio", sauna: "Sauna" } },
@@ -348,7 +583,12 @@ export const translations = {
         nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver" },
         hero: { title: "Vacances en Mazurie", subtitle: "MOMENTS UNIQUES", apartmentsBtn: "Nos Appartements", charterBtn: "Location de Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenue aux", titleHighlight: "Grands Lacs", p1: "Découvrez la magie de la Mazurie.", p2: "Repos à Giżycko ou luxe à Fuleda." },
-        apartments: { title: "Nos Appartements", description: "Choisissez l'endroit idéal.", details: "Détails", pricePrefix: "dès", night: "nuit", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Confort au port." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxe sur le lac." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasis de paix." } } },
+        apartments: { title: "Nos Appartements", description: "Choisissez l'endroit idéal.", details: "Détails", pricePrefix: "dès", night: "nuit", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Confort au port." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxe sur le lac." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasis de paix." }, domkiSkorupki: { title: "Chalets Skorupki", location: "Skorupki, près de Giżycko", description: "Chalets de luxe au cœur de la nature masurienne." }, pokojeFuleda: { title: "Chambres Fuleda", location: "Fuleda, Lac Dobskie", description: "Chambres douillettes avec vue sur le lac en zone de silence." } } },
+        cottagesAndRooms: {
+            title: "Nos chalets et chambres",
+            description: "Ressentez la proximité de la nature dans des conditions confortables."
+        },
+        categories: { apartments: "Nos Appartements", cottages: "Nos Chalets", rooms: "Nos Chambres", charter: "Location" },
         charter: { tag: "Sans permis", title: "Location Yacht", description: "Stillo 30 sans permis.", model: "Stillo 30 (2020)", cabins: "3 Cabines", checkBtn: "Disponibilité", premiumFleet: "Premium", feature1: "Sans permis", feature2: "2020", feature3: "Luxe", detailsBtn: "Détails" },
         stranda: { subtitle: "Luxe sur le lac", description: "Design moderne et nature.", building: "Bâtiment", apartment: "Appartement" },
         details: { about: "À propos", amenities: "Équipements", booking: "Réservation", checkAvailability: "Vérifier dispo.", callBtn: "Appeler", lowPrice: "Meilleur prix.", descriptionPart1: "Appartement de luxe", descriptionPart2: "à Stranda.", descriptionPart3: "Vue inoubliable.", items: { view: "Vue lac", ac: "Clim", terrace: "Terrasse", kitchen: "Cuisine", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna" } },
@@ -358,7 +598,12 @@ export const translations = {
         nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat" },
         hero: { title: "Dovolená na Mazurech", subtitle: "JEDINEČNÉ OKAMŽIKY", apartmentsBtn: "Naše Apartmány", charterBtn: "Jachty" },
         intro: { tag: "Mazury.Holiday", title: "Vítejte na", titleHighlight: "Mazurech", p1: "Objevte kouzlo Mazur.", p2: "Odpočinek v Giżycku." },
-        apartments: { title: "Naše Apartmány", description: "Vyberte si místo.", details: "Podrobnosti", pricePrefix: "od", night: "noc", people: "os.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort v přístavu." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxus u jezera." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oáza klidu." } } },
+        apartments: { title: "Naše Apartmány", description: "Vyberte si místo.", details: "Podrobnosti", pricePrefix: "od", night: "noc", people: "os.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort v přístavu." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxus u jezera." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oáza klidu." }, domkiSkorupki: { title: "Domky Skorupki", location: "Skorupki, u Giżycka", description: "Luxusní domky v srdci mazurské přírody." }, pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezero Dobské", description: "Útulné pokoje s výhledem na jezero v klidové zóně." } } },
+        cottagesAndRooms: {
+            title: "Naše domky a pokoje",
+            description: "Pociťte blízkost přírody v komfortních podmínkách."
+        },
+        categories: { apartments: "Naše Apartmány", cottages: "Naše Chaty", rooms: "Naše Pokoje", charter: "Pronájem" },
         charter: { tag: "Bez průkazu", title: "Pronájem Jachty", description: "Stillo 30 bez průkazu.", model: "Stillo 30 (2020)", cabins: "3 Kabiny", checkBtn: "Dostupnost", premiumFleet: "Premium", feature1: "Bez průkazu", feature2: "2020", feature3: "Luxus", detailsBtn: "Detaily" },
         stranda: { subtitle: "Luxus u jezera", description: "Moderní design.", building: "Budova", apartment: "Apartmán" },
         details: { about: "O apartmánu", amenities: "Vybavení", booking: "Rezervace", checkAvailability: "Ovĕřit dostupnost.", callBtn: "Zavolat", lowPrice: "Nejlepší cena.", descriptionPart1: "Luxusní apartmán v", descriptionPart2: "Stranda Residence.", descriptionPart3: "Výhled na jezero.", items: { view: "Výhled", ac: "Klima", terrace: "Terasa", kitchen: "Kuchyně", tv: "TV", wifi: "WiFi", parking: "Parkování", sauna: "Sauna" } },
@@ -368,7 +613,12 @@ export const translations = {
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Namelliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "Jachtų Nuoma" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
-        apartments: { title: "Mūsų Apartamentai", description: "Pasirinkite vietą.", details: "Detalės", pricePrefix: "nuo", night: "naktis", people: "žm.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfortas uoste." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Prabanga." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Ramybės oazė." } } },
+        apartments: { title: "Mūsų Apartamentai", description: "Pasirinkite vietą.", details: "Detalės", pricePrefix: "nuo", night: "naktis", people: "žm.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfortas uoste." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Prabanga." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Ramybės oazė." }, domkiSkorupki: { title: "Skorupki Nameliai", location: "Skorupki, šalia Gižycko", description: "Prabangūs nameliai Mozūrijos gamtoje." }, pokojeFuleda: { title: "Fuleda Kambariai", location: "Fuleda, Dobskie ežeras", description: "Jaukūs kambariai su vaizdu į ežerą tylos zonoje." } } },
+        cottagesAndRooms: {
+            title: "Mūsų nameliai ir kambariai",
+            description: "Pajuskite gamtos artumą patogiomis sąlygomis."
+        },
+        categories: { apartments: "Mūsų Apartamentai", cottages: "Mūsų Nameliai", rooms: "Mūsų Kambariai", charter: "Jachtų Nuoma" },
         charter: { tag: "Be licencijos", title: "Jachtos Nuoma", description: "Stillo 30 be licencijos.", model: "Stillo 30 (2020)", cabins: "3 Kajutės", checkBtn: "Tikrinti", premiumFleet: "Premium", feature1: "Be licencijos", feature2: "2020", feature3: "Prabanga", detailsBtn: "Detalės" },
         stranda: { subtitle: "Prabanga prie ežero", description: "Modernus dizainas.", building: "Pastatas", apartment: "Apartamentas" },
         details: { about: "Apie", amenities: "Patogumai", booking: "Rezervacija", checkAvailability: "Tikrinti.", callBtn: "Skambinti", lowPrice: "Geriausia kaina.", descriptionPart1: "Prabangūs apartamentai", descriptionPart2: "Stranda.", descriptionPart3: "Ežero vaizdas.", items: { view: "Vaizdas", ac: "Kondicionierius", terrace: "Terasa", kitchen: "Virtuvė", tv: "TV", wifi: "WiFi", parking: "Parkingas", sauna: "Pirtis" } },
@@ -468,7 +718,12 @@ export const translations = {
         nav: { about: "Om os", apartments: "Lejligheder", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraktioner", cooperation: "Samarbejde", contact: "Kontakt", rooms: "Værelser", bookBtn: "Book nu" },
         hero: { title: "Ferie i Masurien", subtitle: "UNIKKE ØJEBLIKKE", apartmentsBtn: "Lejligheder", charterBtn: "Yachtcharter" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen til", titleHighlight: "De Store Søer", p1: "Oplev magien.", p2: "Hvile i Giżycko." },
-        apartments: { title: "Lejligheder", description: "Vælg det perfekte sted.", details: "Detaljer", pricePrefix: "fra", night: "nat", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." } } },
+        apartments: { title: "Lejligheder", description: "Vælg det perfekte sted.", details: "Detaljer", pricePrefix: "fra", night: "nat", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksushytter i hjertet af den masuriske natur." }, pokojeFuleda: { title: "Fuleda Værelser", location: "Fuleda, Dobskie Sø", description: "Hyggelige værelser med søudsigt i stilhedszonen." } } },
+        cottagesAndRooms: {
+            title: "Vores hytter og værelser",
+            description: "Mærk naturens nærhed under komfortable forhold."
+        },
+        categories: { apartments: "Lejligheder", cottages: "Hytter", rooms: "Værelser", charter: "Charter" },
         charter: { tag: "Uden certifikat", title: "Leje af Yacht", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Kahytter", checkBtn: "Tjek", premiumFleet: "Premium", feature1: "Ingen licens", feature2: "2020", feature3: "Luksus", detailsBtn: "Se detaljer" },
         stranda: { subtitle: "Luksus ved søen", description: "Moderne design.", building: "Bygning", apartment: "Lejlighed" },
         details: { about: "Om", amenities: "Faciliteter", booking: "Booking", checkAvailability: "Tjek ledighed.", callBtn: "Ring", lowPrice: "Bedste pris.", descriptionPart1: "Luksus lejlighed", descriptionPart2: "i Stranda.", descriptionPart3: "Søudsigt.", items: { view: "Søudsigt", ac: "Aircon", terrace: "Terrasse", kitchen: "Køkken", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Sauna" } },
@@ -479,7 +734,12 @@ export const translations = {
         nav: { about: "Om oss", apartments: "Lägenheter", cottages: "Stugor", charter: "Charter", port: "Hamn", attractions: "Sevärdheter", cooperation: "Samarbete", contact: "Kontakt", rooms: "Rum", bookBtn: "Boka" },
         hero: { title: "Semester i Masurien", subtitle: "UNIKA STUNDER", apartmentsBtn: "Lägenheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Välkommen", titleHighlight: "Sjöarna", p1: "Upptäck magin.", p2: "Avkoppling." },
-        apartments: { title: "Våra Lägenheter", description: "Välj plats.", details: "Detaljer", pricePrefix: "från", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lyx." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oas." } } },
+        apartments: { title: "Våra Lägenheter", description: "Välj plats.", details: "Detaljer", pricePrefix: "från", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lyx." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oas." }, domkiSkorupki: { title: "Skorupki Stugor", location: "Skorupki, nära Giżycko", description: "Lyxiga stugor i hjärtat af den masuriska naturen." }, pokojeFuleda: { title: "Fuleda Rum", location: "Fuleda, Dobskie Sjön", description: "Mysiga rum med sjöutsikt i tystnadzonen." } } },
+        cottagesAndRooms: {
+            title: "Våra stugor och rum",
+            description: "Känn närheten till naturen under bekväma förhållanden."
+        },
+        categories: { apartments: "Våra Lägenheter", cottages: "Stugor", rooms: "Rum", charter: "Charter" },
         charter: { tag: "Utan licens", title: "Båtcharter", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Hytter", checkBtn: "Kolla", premiumFleet: "Premium", feature1: "Ingen licens", feature2: "2020", feature3: "Lyx", detailsBtn: "Detaljer" },
         stranda: { subtitle: "Lyx vid sjön", description: "Modern design.", building: "Byggnad", apartment: "Lägenhet" },
         details: { about: "Om", amenities: "Bekvämligheter", booking: "Bokning", checkAvailability: "Kolla ledighet.", callBtn: "Ring", lowPrice: "Bästa pris.", descriptionPart1: "Lyxlägenhet", descriptionPart2: "Stranda.", descriptionPart3: "Sjöutsikt.", items: { view: "Sjöutsikt", ac: "AC", terrace: "Terrass", kitchen: "Kök", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Bastu" } },
@@ -489,17 +749,27 @@ export const translations = {
         nav: { about: "Om oss", apartments: "Leiligheter", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraksjoner", cooperation: "Samarbeid", contact: "Kontakt", rooms: "Rom", bookBtn: "Bestill" },
         hero: { title: "Ferie i Masuria", subtitle: "UNIKE ØYEBLIKK", apartmentsBtn: "Leiligheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen", titleHighlight: "Innsjøene", p1: "Oppdag magien.", p2: "Avslapning." },
-        apartments: { title: "Våre Leiligheter", description: "Velg sted.", details: "Detaljer", pricePrefix: "fra", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." } } },
+        apartments: { title: "Våre Leiligheter", description: "Velg sted.", details: "Detaljer", pricePrefix: "fra", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksuriøse hytter i hjertet av masurisk natur." }, pokojeFuleda: { title: "Fuleda Rom", location: "Fuleda, Dobskie Innsjø", description: "Koselige rom med utsikt over innsjøen i stillhetssonen." } } },
+        cottagesAndRooms: {
+            title: "Våre hytter og rom",
+            description: "Føl nærheten til naturen under komfortable forhold."
+        },
+        categories: { apartments: "Våre Leiligheter", cottages: "Hytter", rooms: "Rom", charter: "Charter" },
         charter: { tag: "Uten lisens", title: "Båtutleie", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Lugarer", checkBtn: "Sjekk", premiumFleet: "Premium", feature1: "Ingen lisens", feature2: "2020", feature3: "Luksus", detailsBtn: "Detaljer" },
         stranda: { subtitle: "Luksus", description: "Moderne.", building: "Bygning", apartment: "Leilighet" },
-        details: { about: "Om", amenities: "Fasiliteter", booking: "Bestilling", checkAvailability: "Sjekk.", callBtn: "Ring", lowPrice: "Best pris.", descriptionPart1: "Luksus", descriptionPart2: "Stranda.", descriptionPart3: "Utsikt.", items: { view: "Utsikt", ac: "AC", terrace: "Terrasse", kitchen: "Kjøkken", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Badstue" } },
+        details: { about: "Om", amenities: "Fasiliteter", booking: "Bestilling", checkAvailability: "Sjekk.", callBtn: "Ring", lowPrice: "Best pris.", descriptionPart1: "Luksus", descriptionPart2: "Stranda.", descriptionPart3: "Utsikt.", items: { view: "Utsikt", ac: "AC", terrace: "Terresse", kitchen: "Kjøkken", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Badstue" } },
         footer: { brandDesc: "Unike øyeblikk.", navTitle: "Navigasjon", contactTitle: "Kontakt", followTitle: "Følg", rights: "Alle rettigheter.", linksTitle: "Lenker" }
     },
     fi: {
         nav: { about: "Meistä", apartments: "Huoneistot", cottages: "Mökit", charter: "Vuokraus", port: "Satama", attractions: "Nähtävyydet", cooperation: "Yhteistyö", contact: "Yhteystiedot", rooms: "Huoneet", bookBtn: "Varaa" },
         hero: { title: "Loma", subtitle: "AINUTLAATUINEN", apartmentsBtn: "Huoneistot", charterBtn: "Venevuokraus" },
         intro: { tag: "Mazury.Holiday", title: "Tervetuloa", titleHighlight: "Järvet", p1: "Koe taika.", p2: "Lepo." },
-        apartments: { title: "Huoneistot", description: "Valitse.", details: "Tiedot", pricePrefix: "alk.", night: "yö", people: "hlö", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Mukavuus." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Rauha." } } },
+        apartments: { title: "Huoneistot", description: "Valitse.", details: "Tiedot", pricePrefix: "alk.", night: "yö", people: "hlö", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Mukavuus." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Rauha." }, domkiSkorupki: { title: "Skorupki Mökit", location: "Skorupki, lähellä Giżycko", description: "Luksusmökkejä masurialaisen luonnon sydämessä." }, pokojeFuleda: { title: "Fuleda Huoneet", location: "Fuleda, Dobskie Järvi", description: "Viihtyisiä huoneita järvinäköalalla hiljaisella vyöhykkeellä." } } },
+        cottagesAndRooms: {
+            title: "Meidän mökkimme ja huoneemme",
+            description: "Tunne luonnon läheisyys mukavissa olosuhteissa."
+        },
+        categories: { apartments: "Huoneistot", cottages: "Mökit", rooms: "Huoneet", charter: "Vuokraus" },
         charter: { tag: "Ilman lupaa", title: "Venevuokraus", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Hyttiä", checkBtn: "Tarkista", premiumFleet: "Premium", feature1: "Ei lupaa", feature2: "2020", feature3: "Luksus", detailsBtn: "Tiedot" },
         stranda: { subtitle: "Luksus", description: "Moderni.", building: "Rakennus", apartment: "Huoneisto" },
         details: { about: "Tietoa", amenities: "Varusteet", booking: "Varaus", checkAvailability: "Tarkista.", callBtn: "Soita", lowPrice: "Paras hinta.", descriptionPart1: "Luksus", descriptionPart2: "Stranda.", descriptionPart3: "Näkymä.", items: { view: "Näkymä", ac: "Ilmastointi", terrace: "Terassi", kitchen: "Keittiö", tv: "TV", wifi: "WiFi", parking: "Pysäköinti", sauna: "Sauna" } },

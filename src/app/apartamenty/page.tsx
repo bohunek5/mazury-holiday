@@ -39,12 +39,7 @@ export default function ApartmentsHub() {
             <Navbar />
             <section className="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto relative overflow-hidden">
                 <div
-                    className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none bg-fixed -z-10"
-                    style={{
-                        backgroundImage: "url('/mazury-holiday/images/hero_bg.webp')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
+                    className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none bg-fixed -z-10 bg-[url('/mazury-holiday/images/hero_bg.webp')] bg-cover bg-center"
                 />
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -25,8 +25,8 @@ export default function Navbar() {
         { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "cottages"), href: "/domki" },
         { name: t("nav", "charter"), href: "/czarter" },
-        { name: t("nav", "attractions"), href: "/#attractions" },
-        { name: t("nav", "cooperation"), href: "/#cooperation" },
+        { name: t("nav", "attractions"), href: "/atrakcje" },
+        { name: t("nav", "cooperation"), href: "/wspolpraca" },
         { name: t("nav", "contact"), href: "/kontakt" },
     ];
 
@@ -105,23 +105,25 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 p-8 flex flex-col gap-6 shadow-2xl lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto">
+                <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 p-8 flex flex-col gap-6 shadow-2xl lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto pb-24">
 
                     <div className="flex justify-between items-center pb-4 border-b border-slate-800/50">
                         <span className="text-slate-400 text-sm font-medium">Język</span>
                         <LanguageSwitcher className="text-white" />
                     </div>
 
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="text-white/80 hover:text-amber-400 text-xl font-medium py-3 border-b border-slate-800/50"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
+                    <div className="flex flex-col items-center">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="text-white/80 hover:text-amber-400 text-xl font-medium py-4 w-full text-center border-b border-slate-800/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             )}
         </nav>

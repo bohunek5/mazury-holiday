@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
@@ -33,20 +32,16 @@ export default function Hero() {
           {t("hero", "subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="#apartamenty"
-            className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-medium transition-all shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2"
+        <div className="flex justify-center">
+          <a
+            href="tel:+48607241090"
+            className="px-8 py-4 bg-white/10 hover:bg-amber-500 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group"
           >
-            {t("hero", "apartmentsBtn")}
-            <ArrowRight size={18} />
-          </Link>
-          <Link
-            href="#czarter"
-            className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center"
-          >
+            <span className="p-2 bg-amber-500 rounded-full group-hover:bg-white group-hover:text-amber-500 transition-colors">
+              <Phone size={20} className="text-white group-hover:text-amber-500 transition-colors" />
+            </span>
             {t("hero", "charterBtn")}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
