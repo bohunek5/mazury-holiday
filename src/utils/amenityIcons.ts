@@ -1,0 +1,76 @@
+export function getAmenityIcon(amenity: string): string {
+    const iconMap: Record<string, string> = {
+        // Living room
+        'Klimatyzacja': '❄️',
+        'Sofa 2-osobowa': '🛋️',
+        'Smart TV': '📺',
+        'TV': '📺',
+        'WiFi': '📶',
+        'Salon z aneksem': '🏠',
+        'Duży salon': '🛋️',
+        'Sofa': '🛋️',
+        'Stół i krzesła': '🪑',
+        'Kominek': '🔥',
+        'Pościel': '🛏️',
+        'Kondygnacja - parter': '🏢',
+        'Kondygnacja - piętro': '🏢',
+
+        // Kitchen
+        'Zmywarka': '🧼',
+        'Płyta indukcyjna': '🔥',
+        'Lodówka': '🧊',
+        'Kuchenka mikrofalowa': '📟',
+        'Kuchenka': '🍳',
+        'Komplet naczyń': '🍽️',
+        'Aneks kuchenny': '🍳',
+        'Ekspres do kawy': '☕',
+        'Pełne wyposażenie AGD': '🏠',
+        'Chłodziarka do wina': '🍷',
+
+        // Bedroom
+        'Łóżko 180x200': '🛏️',
+        'Łóżko podwójne': '🛏️',
+        'Łóżko małżeńskie': '🛏️',
+        'Szafa': '👔',
+        'Dwie oddzielne sypialnie': '🚪',
+        'Łóżka małżeńskie': '🛏️',
+        'Dwie sypialnie': '🚪',
+        'Komfortowe łóżka': '🛏️',
+        'Komplet pościeli': '🛏️',
+        'Suszarka na ubrania': '🧺',
+        'Deska do prasowania': '💨',
+        'Żelazko': '💨',
+
+        // Bathroom
+        'Prysznic': '🚿',
+        'Suszarka do włosów': '💨',
+        'Ręczniki': '🧺',
+        'Pralka': '🧺',
+        'Zestaw kosmetyków': '🧴',
+        'Prywatna sauna': '🧖',
+        'Suszarka': '💨',
+        'Prostownica': '💇',
+        'Szlafroki': '👘',
+        'Kosmetyki': '🧴',
+
+        // Terrace / Outdoor
+        'Meble wypoczynkowe': '🪑',
+        'Meble tarasowe': '🪑',
+        'Meble ogrodowe': '🌳',
+        'Meble balkonowe': '🪑',
+        'Duży taras': '🌿',
+        'Taras': '🌿',
+        'Prywatne jacuzzi': '🛁',
+        'Jacuzzi na tarasie': '🛁',
+        'Widok na port Stranda': '⛵',
+        'Widok na jezioro Kisajno': '🌊',
+        'Widok na zatokę Tracz': '🌊',
+        'Widok na marinę': '⛵',
+        'Widok na port': '⛵',
+        'Prywatne zejście do jeziora': '🌊',
+        'Miejsce na grilla': '🍖',
+        'Miejsce na ognisko': '🔥'
+    };
+
+    return iconMap[amenity] || '✨';
+}

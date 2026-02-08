@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -16,6 +17,24 @@ export default function FuledaPage() {
         "/mazury-holiday/images/fuleda/fuleda_1.webp",
         "/mazury-holiday/images/fuleda/fuleda_2.webp"
     ];
+
+    const apartments = [
+        {
+            id: 'parter',
+            title: 'Apartament Fuleda Parter',
+            guests: '2+2',
+            image: '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
+            features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
+        },
+        {
+            id: 'pietro',
+            title: 'Apartament Fuleda Piętro',
+            guests: '2+1',
+            image: '/mazury-holiday/images/fuleda/pietro/104014_8.jpg',
+            features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
+        }
+    ];
+
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
             <Navbar />
@@ -80,6 +99,49 @@ export default function FuledaPage() {
                     </div>
                 </div>
 
+                {/* Apartment Cards */}
+                <div className="mb-24">
+                    <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Nasze Apartamenty</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {apartments.map((apartment) => (
+                            <Link
+                                key={apartment.id}
+                                href={`/apartamenty/fuleda/${apartment.id}`}
+                                className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-800"
+                            >
+                                <div className="relative h-64">
+                                    <Image
+                                        src={apartment.image}
+                                        alt={apartment.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold">
+                                        {apartment.guests} osoby
+                                    </div>
+                                </div>
+                                <div className="p-6">
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
+                                        {apartment.title}
+                                    </h4>
+                                    <ul className="space-y-2 mb-6">
+                                        {apartment.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                                                <span className="text-amber-500">✓</span>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="text-amber-500 font-semibold group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                                        Zobacz szczegóły →
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Amenities */}
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t("fuledaPage", "amenitiesTitle")}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
