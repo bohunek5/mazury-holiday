@@ -19,7 +19,7 @@ export type PokojeData = {
 
 export const pokojeFuledaData: PokojeData = {
     id: 'pokoje',
-    title: 'Pokoje Fuleda',
+    title: 'Fuleda Pokoje',
     price: 'od 375 zł/doba',
     guests: '4',
     description: `Oferujemy do wynajęcia dwa pokoje: jeden z łóżkiem podwójnym, drugi z dwoma pojedynczymi, łazienka z prysznicem i wc. Przy pokojach zadaszony taras. W osobnym budynku oddalonym o 10m od pokoi kuchnia z dodatkowym wc. Wszystko znajduje się na półwyspie Fuledzki Róg nad brzegiem jeziora Dobskie ze strefą ciszy na ogrodzonym terenie Folwark Fuleda.
@@ -39,17 +39,17 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         terrace: ['Przestronny taras', 'Prywatne zejście do jeziora', 'Miejsce na grilla i ognisko', 'Łódź wiosłowa', 'Taras widokowy']
     },
     gallery: {
-        heroImage: '/mazury-holiday/images/pokoje_fuleda/104029_8.jpg',
+        heroImage: '/mazury-holiday/images/pokoje_fuleda/104029_8.webp',
         images: [
-            '/mazury-holiday/images/pokoje_fuleda/104029_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104030_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104036_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104037_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104040_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104043_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104044_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104045_8.jpg',
-            '/mazury-holiday/images/pokoje_fuleda/104046_8.jpg'
+            '/mazury-holiday/images/pokoje_fuleda/104029_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104030_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104036_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104037_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104040_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104043_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104044_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104045_8.webp',
+            '/mazury-holiday/images/pokoje_fuleda/104046_8.webp'
         ]
     }
 };

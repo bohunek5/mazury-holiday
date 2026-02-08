@@ -21,7 +21,7 @@ export default function CategoryLinks() {
             id: "cottages",
             title: t("categories", "cottages"),
             href: "/domki",
-            image: "/mazury-holiday/images/skorupki_1.webp",
+            image: "/mazury-holiday/images/skorupki/skorupki_1.webp",
             icon: <Home className="w-6 h-6" />,
         },
         {

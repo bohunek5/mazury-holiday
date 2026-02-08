@@ -23,9 +23,9 @@ export const translations = {
             items: {
                 stranda: { title: "Stranda Residence", location: "Port Stranda, Giżycko", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
                 kisajno: { title: "Apartamenty Giżycko \"Kisajno\"", location: "Port Neptun, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." },
-                fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
+                fuleda: { title: "Fuleda Apartamenty", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
                 domkiSkorupki: { title: "Domki Skorupki", location: "Skorupki, k. Giżycka", description: "Luksusowe domki w sercu mazurskiej natury." },
-                pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." }
+                pokojeFuleda: { title: "Fuleda Pokoje", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." }
             }
         },
         cottagesAndRooms: {
@@ -131,7 +131,7 @@ export const translations = {
             }
         },
         fuledaPage: {
-            title: "Apartamenty Fuleda",
+            title: "Fuleda Apartamenty",
             subtitle: "Cisza, spokój, natura nad jeziorem Dobskim",
             introTitle: "Oaza spokoju w strefie ciszy",
             description: "Lokalizacja Fuleda to propozycja dla tych, którzy pragną całkowitego odcięcia od zgiełku cywilizacji. Położona nad objętym strefą ciszy jeziorem Dobskim, oferuje warunki do prawdziwego relaksu w otoczeniu rezerwatu przyrody.",

@@ -28,7 +28,7 @@ export default function LuxuryBenefits() {
                 className="absolute -inset-[20%] z-0"
             >
                 <Image
-                    src="/mazury-holiday/images/DJI_0017_optimized.jpg"
+                    src="/mazury-holiday/images/DJI_0017_optimized.webp"
                     alt="Luxury background"
                     fill
                     className="object-cover"

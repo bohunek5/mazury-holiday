@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { MobileChatTrigger } from "@/components/MobileChatTrigger";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -98,7 +99,8 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="lg:hidden flex items-center gap-4">
+                    <div className="lg:hidden flex items-center gap-2">
+                        <MobileChatTrigger />
                         {/* Removed ThemeToggle from here to avoid clutter, can be added inside menu if needed, 
                             but typically one toggle is enough or it can stay next to hamburger if desired. 
                             Keeping it consistent with desktop: usually user wants easy access. 
@@ -136,7 +138,7 @@ export default function Navbar() {
                         className="fixed inset-0 z-40 bg-slate-950 flex flex-col items-center justify-start pt-32 gap-6 lg:hidden overflow-y-auto"
                     >
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
-                        <div className="absolute inset-0 bg-[url('/mazury-holiday/images/pattern.svg')] opacity-5 pointer-events-none" />
+                        <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
                         <div className="flex flex-col items-center w-full px-6 gap-6">
                             {navLinks.map((link, index) => (

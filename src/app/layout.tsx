@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description: "Luksusowe apartamenty w Giżycku i Fuledzie oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
 };
 
+import { ChatProvider } from "@/contexts/ChatContext";
+import { AiAssistant } from "@/components/AiAssistant";
+
+// ... imports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,7 +41,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            {children}
+            <ChatProvider>
+              {children}
+              <AiAssistant />
+            </ChatProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

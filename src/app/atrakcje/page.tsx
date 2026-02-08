@@ -15,7 +15,7 @@ export default function AttractionsPage() {
             id: "boyen",
             title: t("attractionsPage", "boyen.title"),
             desc: t("attractionsPage", "boyen.desc"),
-            image: "/mazury-holiday/images/attractions/boyen.png",
+            image: "/mazury-holiday/images/attractions/boyen.webp",
             icon: <Camera className="w-6 h-6" />,
             tags: ["Historia", "Architektura", "Edukacja"]
         },
@@ -23,7 +23,7 @@ export default function AttractionsPage() {
             id: "bridge",
             title: t("attractionsPage", "bridge.title"),
             desc: t("attractionsPage", "bridge.desc"),
-            image: "/mazury-holiday/images/attractions/bridge.png",
+            image: "/mazury-holiday/images/attractions/bridge.webp",
             icon: <Clock className="w-6 h-6" />,
             tags: ["Zabytek", "Technika", "Giżycko"]
         },
@@ -31,7 +31,7 @@ export default function AttractionsPage() {
             id: "port",
             title: t("attractionsPage", "port.title"),
             desc: t("attractionsPage", "port.desc"),
-            image: "/mazury-holiday/images/attractions/port.png",
+            image: "/mazury-holiday/images/attractions/port.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Żeglarstwo", "Rekreacja", "Centrum"]
         },
@@ -53,7 +53,7 @@ export default function AttractionsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/mazury-holiday/images/DJI_0059_1_optimized.jpg"
+                    src="/mazury-holiday/images/DJI_0059_1_optimized.webp"
                     alt="Atrakcje Mazury"
                     fill
                     className="object-cover"

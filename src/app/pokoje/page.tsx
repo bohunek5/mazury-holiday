@@ -13,7 +13,7 @@ export default function RoomsPage() {
             id: "fuleda",
             title: "Pokoje Fuleda",
             description: "Komfortowe pokoje nad jeziorem Dobskim w strefie ciszy. Idealne dla rodzin i miłośników natury.",
-            image: "/mazury-holiday/images/pokoje_fuleda/104029_8.jpg",
+            image: "/mazury-holiday/images/pokoje_fuleda/104029_8.webp",
             link: "/pokoje/fuleda",
             price: "od 375 zł/doba",
             features: ["2 pokoje", "Łazienka", "Kuchnia", "Taras", "Dostęp do jeziora"]
@@ -28,7 +28,7 @@ export default function RoomsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/pokoje_fuleda/104029_8.jpg')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/pokoje_fuleda/104029_8.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>

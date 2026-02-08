@@ -27,14 +27,14 @@ export default function FuledaPage() {
             id: 'parter',
             title: 'Apartament Fuleda Parter',
             guests: '2+2',
-            image: '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
+            image: '/mazury-holiday/images/fuleda/parter/104001_8.webp',
             features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
         },
         {
             id: 'pietro',
             title: 'Apartament Fuleda Piętro',
             guests: '2+1',
-            image: '/mazury-holiday/images/fuleda/pietro/104015_8.jpg',
+            image: '/mazury-holiday/images/fuleda/pietro/104015_8.webp',
             features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
         }
     ];

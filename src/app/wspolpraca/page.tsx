@@ -42,7 +42,7 @@ export default function CooperationPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/mazury-holiday/images/DJI_0109_optimized.jpg"
+                    src="/mazury-holiday/images/DJI_0109_optimized.webp"
                     alt="Współpraca Mazury Holiday"
                     fill
                     className="object-cover"

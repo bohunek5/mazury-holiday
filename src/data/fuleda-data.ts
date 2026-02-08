@@ -30,19 +30,19 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
+            heroImage: '/mazury-holiday/images/fuleda/parter/104001_8.webp',
             images: [
-                '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104002_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104003_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104004_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104005_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104006_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104007_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104008_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104011_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104012_8.jpg',
-                '/mazury-holiday/images/fuleda/parter/104013_8.jpg'
+                '/mazury-holiday/images/fuleda/parter/104001_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104002_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104003_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104004_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104005_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104006_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104007_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104008_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104011_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104012_8.webp',
+                '/mazury-holiday/images/fuleda/parter/104013_8.webp'
             ]
         }
     },
@@ -59,18 +59,18 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/pietro/104019_8.jpg',
+            heroImage: '/mazury-holiday/images/fuleda/pietro/104019_8.webp',
             images: [
-                '/mazury-holiday/images/fuleda/pietro/104014_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104015_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104016_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104018_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104019_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104020_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104021_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104022_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104025_8.jpg',
-                '/mazury-holiday/images/fuleda/pietro/104026_8.jpg'
+                '/mazury-holiday/images/fuleda/pietro/104014_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104015_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104016_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104018_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104019_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104020_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104021_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104022_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104025_8.webp',
+                '/mazury-holiday/images/fuleda/pietro/104026_8.webp'
             ]
         }
     }
