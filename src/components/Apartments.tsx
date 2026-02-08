@@ -51,10 +51,10 @@ export default function Apartments() {
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
-            image: "/mazury-holiday/images/fuleda/fuleda_2.webp",
-            people: "2",
-            link: "/pokoje",
-            price: "200 zł"
+            image: "/mazury-holiday/images/pokoje_fuleda/104029_8.jpg",
+            people: "4",
+            link: "/pokoje/fuleda",
+            price: "375 zł"
         }
     ];
 
