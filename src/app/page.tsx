@@ -30,6 +30,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Luxury Benefits Section */}
+      <section className="relative py-32 overflow-hidden bg-slate-900 text-white">
+        <div className="absolute inset-0 bg-[url('/mazury-holiday/images/DJI_0017_optimized.jpg')] bg-cover bg-fixed bg-center opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/80" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <p className="text-amber-400 font-bold tracking-widest mb-4 uppercase">Zalety naszej oferty</p>
+            <h2 className="text-4xl md:text-5xl font-playfair mb-6">
+              Luksus tkwi w szczegółach
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Benefit 1 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">✨</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Wysoka jakość wykończenia</h3>
+              <p className="text-slate-300 leading-relaxed">
+                W każdym naszym apartamencie zadbaliśmy o wykończenie. Mamy nadzieję, że dostrzeżesz wszystkie ukryte i widoczne szczegóły
+              </p>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">🌅</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Widoki na jezioro</h3>
+              <p className="text-slate-300 leading-relaxed">
+                W piękne słoneczne dni, od wschodu do zachodu słońca - TV i filmy na Netflixie, mogą zastąpić Ci piękne widocki na jezioro Kisajno lub Dobskie
+              </p>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">😴</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Sen w komfortowych warunkach</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Sen jest niezbędny do wypoczynku i wpływa na jakość Państwa pobytu u nas. Wszystkie łóżka są wyposażone w bardzo dobre i wygodne materace
+              </p>
+            </div>
+
+            {/* Benefit 4 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">📶</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Bezpłatne Wi-Fi</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Na terenie naszych apartamentów przygotowaliśmy połączenie Wi-Fi. Nie jest one niezbędne podczas wypoczynku, ale pomaga np. w zdalnej pracy
+              </p>
+            </div>
+
+            {/* Benefit 5 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">🎁</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Zestaw startowy</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Dla każdego z naszych gości przygotowaliśmy niewielki upominek, który jest elementem naszej oferty wypoczynkowej w apartamentach
+              </p>
+            </div>
+
+            {/* Benefit 6 */}
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold mb-3 text-amber-400">Elastyczna rezerwacja</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Rozumiemy, że nie każdy wyjazd można w pełni zaplanować. Dlatego oferujemy elastyczne warunki rezerwacji i odwołania
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Apartments />
 
       {/* Charter Section */}

@@ -49,24 +49,21 @@ export default function AttractionsPage() {
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
             <Navbar />
 
-            {/* Header */}
-            <section className="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-slate-900 dark:text-white">
-                        {t("attractionsPage", "title")}
-                    </h1>
-                    <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        {t("attractionsPage", "subtitle")}
-                    </p>
-                </motion.div>
+            {/* Hero Section */}
+            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-slate-900/50 z-10" />
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/DJI_0059_1_optimized.jpg')]"
+                />
+                <div className="relative z-20 text-center text-white p-4">
+                    <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
+                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{t("attractionsPage", "title")}</h1>
+                    <p className="text-xl md:text-3xl font-light">{t("attractionsPage", "subtitle")}</p>
+                </div>
             </section>
 
             {/* Attractions List */}
-            <section className="pb-24 px-4 md:px-8 max-w-7xl mx-auto">
+            <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {attractions.map((attr, index) => (
                         <motion.div

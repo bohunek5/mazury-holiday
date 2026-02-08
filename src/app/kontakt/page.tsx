@@ -46,10 +46,22 @@ export default function ContactPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="bg-slate-100 dark:bg-slate-900 py-20 pt-32">
-                <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-5xl font-serif mb-6 text-slate-900 dark:text-white">{t("nav", "contact")}</h1>
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-12">
+            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-slate-900/50 z-10" />
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/DJI_0059_optimized.jpg')]"
+                />
+                <div className="relative z-20 text-center text-white p-4">
+                    <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
+                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{t("nav", "contact")}</h1>
+                    <p className="text-xl md:text-3xl font-light">Skontaktuj się z nami</p>
+                </div>
+            </section>
+
+            {/* Contact Info Section */}
+            <section className="bg-slate-100 dark:bg-slate-900 py-12">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                         <a href="tel:+48730067027" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
                             <Phone className="w-6 h-6 text-amber-500" />
                             <span>+48 730 067 027 (Rezerwacje)</span>

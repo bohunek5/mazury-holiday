@@ -59,7 +59,7 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/pietro/104014_8.jpg',
+            heroImage: '/mazury-holiday/images/fuleda/pietro/104019_8.jpg',
             images: [
                 '/mazury-holiday/images/fuleda/pietro/104014_8.jpg',
                 '/mazury-holiday/images/fuleda/pietro/104015_8.jpg',

@@ -20,7 +20,6 @@ export default function Navbar() {
     const isHomePage = pathname === "/";
 
     const navLinks = [
-        { name: t("nav", "about"), href: "/#about" },
         { name: t("nav", "apartments"), href: "/apartamenty" },
         { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "cottages"), href: "/domki" },

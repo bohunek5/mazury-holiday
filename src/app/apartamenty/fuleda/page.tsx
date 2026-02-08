@@ -27,14 +27,14 @@ export default function FuledaPage() {
             id: 'parter',
             title: 'Apartament Fuleda Parter',
             guests: '2+2',
-            image: '/mazury-holiday/images/fuleda/Front Apartamenty.webp',
+            image: '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
             features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
         },
         {
             id: 'pietro',
             title: 'Apartament Fuleda Piętro',
             guests: '2+1',
-            image: '/mazury-holiday/images/fuleda/Front Apartamenty.webp',
+            image: '/mazury-holiday/images/fuleda/pietro/104015_8.jpg',
             features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
         }
     ];
@@ -48,7 +48,7 @@ export default function FuledaPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/hero_bg.webp')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/fuleda/jeziorko.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">{t("fuledaPage", "title")}</h1>
