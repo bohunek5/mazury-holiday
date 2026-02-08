@@ -63,7 +63,7 @@ export function getAmenityIcon(amenity: string): string {
         'Pralka': '🧺',
         'Zestaw kosmetyków': '🧴',
         'Prywatna sauna': '🧖',
-        'Prostownica': '💇',
+        'Prostownica': '⚡',
         'Szlafroki': '👘',
         'Kosmetyki': '🧴',
 
