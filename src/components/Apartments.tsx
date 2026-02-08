@@ -29,7 +29,7 @@ export default function Apartments() {
             id: 3,
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/fuleda_1.webp",
+            image: "/mazury-holiday/images/fuleda/front apartamenty jeziorko.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location")
         }
