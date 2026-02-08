@@ -14,23 +14,38 @@ export function getAmenityIcon(amenity: string): string {
         'Pościel': '🛏️',
         'Kondygnacja - parter': '🏢',
         'Kondygnacja - piętro': '🏢',
+        'Wyjście na taras': '🚪',
+        'Odkurzacz': '🧹',
+        'Suszarka': '💨',
+        'Wiatrak': '🌀',
 
         // Kitchen
         'Zmywarka': '🧼',
         'Płyta indukcyjna': '🔥',
         'Lodówka': '🧊',
         'Kuchenka mikrofalowa': '📟',
+        'Mikrofalówka': '📟',
         'Kuchenka': '🍳',
+        'Kuchnia gazowa': '🔥',
         'Komplet naczyń': '🍽️',
+        'Komplet naczyń i sztućców': '🍽️',
         'Aneks kuchenny': '🍳',
         'Ekspres do kawy': '☕',
         'Pełne wyposażenie AGD': '🏠',
         'Chłodziarka do wina': '🍷',
+        'Toster': '🍞',
+        'Czajnik': '☕',
+        'Garnki': '🍳',
+        'Sztućce': '🍴',
+        'Kubki': '☕',
+        'Naczynia': '🍽️',
 
         // Bedroom
         'Łóżko 180x200': '🛏️',
         'Łóżko podwójne': '🛏️',
         'Łóżko małżeńskie': '🛏️',
+        'Łóżko dla 2 osób': '🛏️',
+        'Dwa łóżka pojedyncze': '🛏️',
         'Szafa': '👔',
         'Dwie oddzielne sypialnie': '🚪',
         'Łóżka małżeńskie': '🛏️',
@@ -48,7 +63,6 @@ export function getAmenityIcon(amenity: string): string {
         'Pralka': '🧺',
         'Zestaw kosmetyków': '🧴',
         'Prywatna sauna': '🧖',
-        'Suszarka': '💨',
         'Prostownica': '💇',
         'Szlafroki': '👘',
         'Kosmetyki': '🧴',
@@ -60,6 +74,7 @@ export function getAmenityIcon(amenity: string): string {
         'Meble balkonowe': '🪑',
         'Duży taras': '🌿',
         'Taras': '🌿',
+        'Przestronny taras': '🌿',
         'Prywatne jacuzzi': '🛁',
         'Jacuzzi na tarasie': '🛁',
         'Widok na port Stranda': '⛵',
@@ -69,7 +84,10 @@ export function getAmenityIcon(amenity: string): string {
         'Widok na port': '⛵',
         'Prywatne zejście do jeziora': '🌊',
         'Miejsce na grilla': '🍖',
-        'Miejsce na ognisko': '🔥'
+        'Miejsce na grilla i ognisko': '🔥',
+        'Miejsce na ognisko': '🔥',
+        'Łódź wiosłowa': '🚣',
+        'Taras widokowy': '🌅'
     };
 
     return iconMap[amenity] || '✨';
