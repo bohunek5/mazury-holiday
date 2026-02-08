@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import { getAmenityIcon } from "@/utils/amenityIcons";
 
 export default function PokojeFuledaPage() {
-    const { t } = useLanguage();
+    useLanguage();
     const data = pokojeFuledaData;
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -255,7 +255,7 @@ export default function PokojeFuledaPage() {
 
                             <a
                                 href="tel:+48607241090"
-                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4"
+                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4 whitespace-nowrap"
                             >
                                 Zadzwoń: +48 607 241 090
                             </a>

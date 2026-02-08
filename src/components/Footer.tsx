@@ -64,7 +64,7 @@ export default function Footer() {
                             <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
                                 <Phone size={18} />
                             </div>
-                            <a href="tel:+48607241090" className="text-slate-400 hover:text-white transition-colors font-medium text-left">
+                            <a href="tel:+48607241090" className="text-slate-400 hover:text-white transition-colors font-medium text-left whitespace-nowrap">
                                 +48 607 241 090
                             </a>
                         </li>

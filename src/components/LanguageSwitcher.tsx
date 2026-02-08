@@ -7,15 +7,19 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Language } from "@/lib/translations";
 
 const languages: { code: Language; name: string; flag: string }[] = [
-    { code: "pl", name: "Polska", flag: "🇵🇱" },
-    { code: "en", name: "Angielska", flag: "🇬🇧" },
-    { code: "de", name: "Niemiecka", flag: "🇩🇪" },
-    { code: "lt", name: "Litewska", flag: "🇱🇹" },
-    { code: "cs", name: "Czechy", flag: "🇨🇿" },
+    { code: "pl", name: "Polski", flag: "🇵🇱" },
+    { code: "en", name: "Angielski", flag: "🇬🇧" },
+    { code: "de", name: "Niemiecki", flag: "🇩🇪" },
+    { code: "lt", name: "Litewski", flag: "🇱🇹" },
+    { code: "cs", name: "Czeski", flag: "🇨🇿" },
 ];
 
+interface LanguageSwitcherProps {
+    className?: string;
+    dropUp?: boolean;
+}
 
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher({ className, dropUp = false }: LanguageSwitcherProps) {
     const [isOpen, setIsOpen] = React.useState(false);
     const { language, setLanguage } = useLanguage();
     const dropdownRef = React.useRef<HTMLDivElement>(null);
@@ -40,13 +44,16 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             >
                 <span className="text-lg leading-none">{selectedLang.flag}</span>
                 <span className="hidden sm:inline-block uppercase text-xs tracking-wider opacity-90">
-                    {selectedLang.code}
+                    {selectedLang.name}
                 </span>
                 <ChevronDown className={cn("h-3 w-3 text-current transition-transform duration-200", isOpen && "rotate-180")} />
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 p-1.5 z-50 animate-in fade-in zoom-in-95 duration-200">
+                <div className={cn(
+                    "absolute right-0 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 p-1.5 z-50 animate-in fade-in zoom-in-95 duration-200",
+                    dropUp ? "bottom-full mb-2" : "top-full mt-2"
+                )}>
                     <div className="grid grid-cols-1 gap-0.5 max-h-[300px] overflow-y-auto">
                         {languages.map((lang) => (
                             <button

@@ -265,7 +265,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
 
                             <a
                                 href="tel:+48607241090"
-                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4"
+                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4 whitespace-nowrap"
                             >
                                 {t("details", "callBtn")}: +48 607 241 090
                             </a>

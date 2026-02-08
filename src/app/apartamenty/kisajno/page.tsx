@@ -114,7 +114,7 @@ export default function KisajnoPage() {
                     </p>
                     <a
                         href="tel:+48607241090"
-                        className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25"
+                        className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
                         {t("kisajnoPage", "callAction")}: +48 607 241 090
                     </a>

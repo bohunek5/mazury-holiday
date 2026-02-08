@@ -62,11 +62,11 @@ export default function ContactPage() {
             <section className="bg-slate-100 dark:bg-slate-900 py-12">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-                        <a href="tel:+48730067027" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
+                        <a href="tel:+48730067027" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
                             <Phone className="w-6 h-6 text-amber-500" />
                             <span>+48 730 067 027 (Rezerwacje)</span>
                         </a>
-                        <a href="tel:+48607241090" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
+                        <a href="tel:+48607241090" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
                             <Phone className="w-6 h-6 text-amber-500" />
                             <span>+48 607 241 090 (Biuro)</span>
                         </a>

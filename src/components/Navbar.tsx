@@ -167,7 +167,7 @@ export default function Navbar() {
                             <div className="w-16 h-px bg-slate-800" />
                             <div className="flex items-center gap-4">
                                 <span className="text-slate-400 text-sm font-medium uppercase tracking-wider">Język</span>
-                                <LanguageSwitcher className="text-white" />
+                                <LanguageSwitcher className="text-white" dropUp={true} />
                             </div>
                         </motion.div>
                     </motion.div>
