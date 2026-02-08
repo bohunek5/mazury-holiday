@@ -6,11 +6,10 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
-
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -59,13 +58,13 @@ export default function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
                 isScrolled || !isHomePage
-                    ? "bg-slate-900/80 backdrop-blur-md shadow-lg py-4 dark:bg-slate-950/80 dark:border-b dark:border-slate-800"
+                    ? "bg-slate-900/95 shadow-lg py-4 border-b border-white/10"
                     : "bg-transparent py-8"
             )}
         >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="relative h-10 w-40 md:h-19 md:w-77 flex items-center">
+                <Link href="/" className="relative h-10 w-40 md:h-19 md:w-77 flex items-center z-50">
                     <Image
                         src="/mazury-holiday/images/logo-poziom.svg"
                         alt="Mazury.Holiday"
@@ -89,10 +88,9 @@ export default function Navbar() {
                 </div>
 
                 {/* Right Actions */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 z-50">
                     {/* Desktop Controls */}
                     <div className="hidden lg:flex items-center gap-4">
-
                         <div className={cn("h-6 w-px lg:block hidden", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
                         <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
                         <div className={cn("h-6 w-px", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
@@ -101,40 +99,80 @@ export default function Navbar() {
 
                     {/* Mobile Menu Toggle */}
                     <div className="lg:hidden flex items-center gap-4">
-                        <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200" : "text-white hover:bg-white/10"} />
+                        {/* Removed ThemeToggle from here to avoid clutter, can be added inside menu if needed, 
+                            but typically one toggle is enough or it can stay next to hamburger if desired. 
+                            Keeping it consistent with desktop: usually user wants easy access. 
+                            Let's keep it next to hamburger for now, but ensure visibility. */}
+                        <ThemeToggle className={isScrolled || !isHomePage || isMobileMenuOpen ? "text-slate-200" : "text-white hover:bg-white/10"} />
+
                         <button
-                            className={isScrolled || !isHomePage ? "text-slate-200 hover:text-amber-500" : "text-white hover:text-amber-400"}
+                            className={cn(
+                                "transition-colors duration-300",
+                                isScrolled || !isHomePage || isMobileMenuOpen
+                                    ? "text-slate-200 hover:text-amber-500"
+                                    : "text-white hover:text-amber-400"
+                            )}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle menu"
                         >
-                            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+                            {isMobileMenuOpen ? (
+                                <X size={32} className="text-amber-500" />
+                            ) : (
+                                <Menu size={32} />
+                            )}
                         </button>
                     </div>
                 </div>
             </div>
 
             {/* Mobile Menu Overlay */}
-            {isMobileMenuOpen && (
-                <div className="fixed inset-0 z-40 bg-slate-900/98 backdrop-blur-xl flex flex-col pt-32 px-8 gap-6 overflow-y-auto lg:hidden">
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 z-40 bg-slate-950 flex flex-col items-center justify-center gap-8 lg:hidden"
+                    >
+                        {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
+                        <div className="absolute inset-0 bg-[url('/mazury-holiday/images/pattern.svg')] opacity-5 pointer-events-none" />
 
-                    <div className="flex justify-between items-center pb-4 border-b border-slate-800/50">
-                        <span className="text-slate-400 text-sm font-medium">Język</span>
-                        <LanguageSwitcher className="text-white" />
-                    </div>
+                        <div className="flex flex-col items-center w-full px-6 gap-6">
+                            {navLinks.map((link, index) => (
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 + 0.1 }}
+                                    className="w-full"
+                                >
+                                    <Link
+                                        href={link.href}
+                                        className="block text-slate-200 hover:text-amber-500 text-2xl font-medium py-2 w-full text-center transition-colors"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
 
-                    <div className="flex flex-col items-center">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-white/80 hover:text-amber-400 text-xl font-medium py-4 w-full text-center border-b border-slate-800/50"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            )}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                            className="flex flex-col items-center gap-6 mt-4"
+                        >
+                            <div className="w-16 h-px bg-slate-800" />
+                            <div className="flex items-center gap-4">
+                                <span className="text-slate-400 text-sm font-medium uppercase tracking-wider">Język</span>
+                                <LanguageSwitcher className="text-white" />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }
