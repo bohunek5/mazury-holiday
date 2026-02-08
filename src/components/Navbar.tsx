@@ -37,6 +37,16 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => { document.body.style.overflow = ""; };
+    }, [isMobileMenuOpen]);
+
     const buttonClass = cn(
         "transition-all duration-300 px-4 py-2 rounded-full border text-sm font-medium uppercase tracking-wide",
         isScrolled || !isHomePage
@@ -104,7 +114,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 p-8 flex flex-col gap-6 shadow-2xl lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto pb-24">
+                <div className="fixed inset-0 z-40 bg-slate-900/98 backdrop-blur-xl flex flex-col pt-32 px-8 gap-6 overflow-y-auto lg:hidden">
 
                     <div className="flex justify-between items-center pb-4 border-b border-slate-800/50">
                         <span className="text-slate-400 text-sm font-medium">Język</span>

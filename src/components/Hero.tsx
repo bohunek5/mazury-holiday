@@ -19,7 +19,7 @@ export default function Hero() {
           fill
           priority
           className="object-cover"
-          quality={100}
+          quality={85}
         />
         <div className="absolute inset-0 bg-slate-900/40" /> {/* Overlay */}
       </div>

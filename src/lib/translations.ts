@@ -3,6 +3,16 @@ export const translations = {
         nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj" },
         hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur z perspektywy naszych luksusowych apartamentów oraz z pokładu jachtu.", p2: "Niezależnie od tego, czy szukasz spokojnego wypoczynku w Giżycku, czy ekskluzywnego domu we Fuledzie." },
+        luxuryBenefits: {
+            tag: "Zalety naszej oferty",
+            title: "Luksus tkwi w szczegółach",
+            quality: { title: "Wysoka jakość wykończenia", desc: "W każdym naszym apartamencie zadbaliśmy o wykończenie. Mamy nadzieję, że dostrzeżesz wszystkie ukryte i widoczne szczegóły" },
+            views: { title: "Widoki na jezioro", desc: "W piękne słoneczne dni, od wschodu do zachodu słońca - TV i filmy na Netflixie, mogą zastąpić Ci piękne widocki na jezioro Kisajno lub Dobskie" },
+            comfort: { title: "Sen w komfortowych warunkach", desc: "Sen jest niezbędny do wypoczynku i wpływa na jakość Państwa pobytu u nas. Wszystkie łóżka są wyposażone w bardzo dobre i wygodne materace" },
+            wifi: { title: "Bezpłatne Wi-Fi", desc: "Na terenie naszych apartamentów przygotowaliśmy połączenie Wi-Fi. Nie jest one niezbędne podczas wypoczynku, ale pomaga np. w zdalnej pracy" },
+            gifts: { title: "Zestaw startowy", desc: "Dla każdego z naszych gości przygotowaliśmy niewielki upominek, który jest elementem naszej oferty wypoczynkowej w apartamentach" },
+            flexible: { title: "Elastyczna rezerwacja", desc: "Rozumiemy, że nie każdy wyjazd można w pełni zaplanować. Dlatego oferujemy elastyczne warunki rezerwacji i odwołania" }
+        },
         apartments: {
             title: "Nasze Apartamenty",
             description: "Wybierz idealne miejsce na swój wypoczynek.",
@@ -22,7 +32,7 @@ export const translations = {
             title: "Nasze domki i pokoje",
             description: "Poczuj bliskość natury w komfortowych warunkach."
         },
-        charter: { tag: "Bez patentu", title: "Czarter Jachtu Motorowego", description: "Jacht motorowy Stillo 30 to jednostka, którą możesz prowadzić bez patentu.", model: "Stillo 30 (2020)", cabins: "3 Zamykane Kabiny", checkBtn: "Sprawdź dostępność", premiumFleet: "Flota Premium", feature1: "Bez patentu", feature2: "Rocznik 2020", feature3: "Luksusowe wyposażenie", detailsBtn: "Zobacz szczegóły" },
+        charter: { tag: "Bez patentu", title: "Czarter Jachtu Motorowego", description: "Jacht motorowy Stillo 30 to jednostka, którą możesz prowadzić bez patentu.", model: "Stillo 30 (2020)", cabins: "3 Zamykane Kabiny", checkBtn: "Sprawdź dostępność", premiumFleet: "Flota Premium", feature1: "Bez patentu", feature2: "Rocznik 2020", feature3: "Luksusowe wyposażenie", detailsBtn: "Zobacz szczegóły", thrusters: "Stery strumieniowe", heating: "Ogrzewanie & Klimatyzacja", modelVip: "Stillo 30 VIP", boatType: "Luksusowy Houseboat bez patentu" },
         stranda: {
             subtitle: "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno",
             description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.",
@@ -212,6 +222,16 @@ export const translations = {
         nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now" },
         hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
+        luxuryBenefits: {
+            tag: "Advantages of our offer",
+            title: "Luxury is in the details",
+            quality: { title: "High quality finish", desc: "We have taken care of the finish in each of our apartments. We hope you will notice all the hidden and visible details" },
+            views: { title: "Lake views", desc: "On beautiful sunny days, from sunrise to sunset - TV and Netflix movies can replace the beautiful views of Lake Kisajno or Dobskie" },
+            comfort: { title: "Sleep in comfortable conditions", desc: "Sleep is essential for rest and affects the quality of your stay with us. All beds are equipped with very good and comfortable mattresses" },
+            wifi: { title: "Free Wi-Fi", desc: "We have prepared a Wi-Fi connection in our apartments. It is not necessary for relaxation, but it helps, for example, for remote work" },
+            gifts: { title: "Starter kit", desc: "For each of our guests, we have prepared a small gift, which is an element of our holiday offer in the apartments" },
+            flexible: { title: "Flexible reservation", desc: "We understand that not every trip can be fully planned. That's why we offer flexible booking and cancellation terms" }
+        },
         apartments: {
             title: "Our Apartments",
             description: "Choose the perfect place for your rest.",
@@ -231,7 +251,7 @@ export const translations = {
             title: "Our cottages and rooms",
             description: "Feel the closeness of nature in comfortable conditions."
         },
-        charter: { tag: "No license", title: "Motor Yacht Charter", description: "Stillo 30 motor yacht available without a license.", model: "Stillo 30 (2020)", cabins: "3 Cabins", checkBtn: "Check availability", premiumFleet: "Premium Fleet", feature1: "No license", feature2: "Year 2020", feature3: "Luxury equipment", detailsBtn: "Details" },
+        charter: { tag: "No license", title: "Motor Yacht Charter", description: "Stillo 30 motor yacht available without a license.", model: "Stillo 30 (2020)", cabins: "3 Cabins", checkBtn: "Check availability", premiumFleet: "Premium Fleet", feature1: "No license", feature2: "Year 2020", feature3: "Luxury equipment", detailsBtn: "Details", thrusters: "Bow thrusters", heating: "Heating & AC", modelVip: "Stillo 30 VIP", boatType: "Luxury Houseboat without license" },
         stranda: { subtitle: "Luxury by Lake Kisajno", description: "Stranda Residence combines modern design with nature.", building: "Building", apartment: "Apartment" },
         details: { about: "About", amenities: "Amenities", booking: "Booking", checkAvailability: "Check availability and book.", callBtn: "Call", lowPrice: "Best price guarantee.", descriptionPart1: "Luxury apartment in building", descriptionPart2: "at Stranda Residence.", descriptionPart3: "Unforgettable views of Lake Kisajno.", items: { view: "Lake view", ac: "A/C", terrace: "Terrace", kitchen: "Kitchenette", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna access" } },
         footer: { brandDesc: "Unique moments in Masuria.", navTitle: "Navigation", contactTitle: "Contact", followTitle: "Follow", rights: "All rights reserved.", linksTitle: "Links" },
@@ -389,6 +409,16 @@ export const translations = {
         nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen" },
         hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "+48 607 241 090" },
         intro: { tag: "Mazury.Holiday", title: "Willkommen in", titleHighlight: "Masuren", p1: "Entdecken Sie die Magie Masurens.", p2: "Ob Ruhe in Giżycko oder Luxus in Fuleda." },
+        luxuryBenefits: {
+            tag: "Vorteile unseres Angebots",
+            title: "Luxus steckt im Detail",
+            quality: { title: "Hochwertige Verarbeitung", desc: "Wir haben auf die Verarbeitung in jedem unserer Apartments geachtet. Wir hoffen, dass Sie alle versteckten und sichtbaren Details bemerken werden" },
+            views: { title: "Seeblick", desc: "An schönen sonnigen Tagen, von Sonnenaufgang bis Sonnenuntergang - TV und Netflix-Filme können die schöne Aussicht auf den Kisajno- oder Dobskie-See ersetzen" },
+            comfort: { title: "Schlaf unter komfortablen Bedingungen", desc: "Schlaf ist für die Erholung unerlässlich und beeinflusst die Qualität Ihres Aufenthalts bei uns. Alle Betten sind mit sehr guten und bequemen Matratzen ausgestattet" },
+            wifi: { title: "Kostenloses Wi-Fi", desc: "Wir haben Wi-Fi in unseren Apartments vorbereitet. Es ist nicht notwendig für die Erholung, hilft aber z.B. bei der Fernarbeit" },
+            gifts: { title: "Starter-Set", desc: "Für jeden unserer Gäste haben wir ein kleines Geschenk vorbereitet, das Teil unseres Urlaubsangebots in den Apartments ist" },
+            flexible: { title: "Flexible Reservierung", desc: "Wir verstehen, dass nicht jede Reise vollständig geplant werden kann. Deshalb bieten wir flexible Buchungs- und Stornierungsbedingungen" }
+        },
         apartments: {
             title: "Unsere Apartments",
             description: "Wählen Sie den perfekten Ort.",
@@ -408,7 +438,7 @@ export const translations = {
             title: "Unsere Ferienhäuser und Zimmer",
             description: "Fühlen Sie die Nähe zur Natur unter komfortablen Bedingungen."
         },
-        charter: { tag: "Führerscheinfrei", title: "Motoryachtcharter", description: "Stillo 30 ohne Führerschein.", model: "Stillo 30 (2020)", cabins: "3 Kabinen", checkBtn: "Verfügbarkeit", premiumFleet: "Premium", feature1: "Kein Schein", feature2: "Baujahr 2020", feature3: "Luxus", detailsBtn: "Details" },
+        charter: { tag: "Führerscheinfrei", title: "Motoryachtcharter", description: "Stillo 30 ohne Führerschein.", model: "Stillo 30 (2020)", cabins: "3 Kabinen", checkBtn: "Verfügbarkeit", premiumFleet: "Premium", feature1: "Kein Schein", feature2: "Baujahr 2020", feature3: "Luxus", detailsBtn: "Details", thrusters: "Bugstrahlruder", heating: "Heizung & Klimaanlage", modelVip: "Stillo 30 VIP", boatType: "Luxus-Hausboot führerscheinfrei" },
         stranda: { subtitle: "Luxus am Kisajno", description: "Stranda Residence verbindet Design mit Natur.", building: "Gebäude", apartment: "Apartment" },
         details: { about: "Über", amenities: "Ausstattung", booking: "Buchung", checkAvailability: "Verfügbarkeit prüfen.", callBtn: "Anrufen", lowPrice: "Bestpreisgarantie.", descriptionPart1: "Luxusapartment im Gebäude", descriptionPart2: "in Stranda Residence.", descriptionPart3: "Unvergesslicher Seeblick.", items: { view: "Seeblick", ac: "Klimaanlage", terrace: "Terrasse", kitchen: "Küche", tv: "Smart TV", wifi: "WLAN", parking: "Parkplatz", sauna: "Sauna" } },
         footer: { brandDesc: "Einzigartige Momente.", navTitle: "Navigation", contactTitle: "Kontakt", followTitle: "Folgen", rights: "Rechte vorbehalten.", linksTitle: "Links" },
@@ -598,28 +628,191 @@ export const translations = {
         nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat" },
         hero: { title: "Dovolená na Mazurech", subtitle: "JEDINEČNÉ OKAMŽIKY", apartmentsBtn: "Naše Apartmány", charterBtn: "Jachty" },
         intro: { tag: "Mazury.Holiday", title: "Vítejte na", titleHighlight: "Mazurech", p1: "Objevte kouzlo Mazur.", p2: "Odpočinek v Giżycku." },
+        luxuryBenefits: {
+            tag: "Výhody naší nabídky",
+            title: "Luxus je v detailech",
+            quality: { title: "Vysoká kvalita povrchových úprav", desc: "V každém našem apartmánu jsme dbali na povrchovou úpravu. Doufáme, že si všimnete všech skrytých i viditelných detailů" },
+            views: { title: "Výhledy na jezero", desc: "V krásných slunečných dnech, od východu do západu slunce - TV a filmy na Netflixu mohou nahradit krásné výhledy na jezero Kisajno nebo Dobské" },
+            comfort: { title: "Spánek v komfortních podmínkách", desc: "Spánek je nezbytný pro odpočinek a ovlivňuje kvalitu vašeho pobytu u nás. Všechny postele jsou vybaveny velmi dobrými a pohodlnými matracemi" },
+            wifi: { title: "Bezplatné Wi-Fi", desc: "V našich apartmánech jsme připravili připojení Wi-Fi. Není nezbytné pro odpočinek, ale pomáhá například při práci na dálku" },
+            gifts: { title: "Startovací balíček", desc: "Pro každého našeho hosta jsme připravili malý dárek, který je součástí naší nabídky dovolené v apartmánech" },
+            flexible: { title: "Flexibilní rezervace", desc: "Chápeme, že ne každý výlet lze plně naplánovat. Proto nabízíme flexibilní podmínky rezervace a zrušení" }
+        },
         apartments: { title: "Naše Apartmány", description: "Vyberte si místo.", details: "Podrobnosti", pricePrefix: "od", night: "noc", people: "os.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort v přístavu." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxus u jezera." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oáza klidu." }, domkiSkorupki: { title: "Domky Skorupki", location: "Skorupki, u Giżycka", description: "Luxusní domky v srdci mazurské přírody." }, pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezero Dobské", description: "Útulné pokoje s výhledem na jezero v klidové zóně." } } },
         cottagesAndRooms: {
             title: "Naše domky a pokoje",
             description: "Pociťte blízkost přírody v komfortních podmínkách."
         },
         categories: { apartments: "Naše Apartmány", cottages: "Naše Chaty", rooms: "Naše Pokoje", charter: "Pronájem" },
-        charter: { tag: "Bez průkazu", title: "Pronájem Jachty", description: "Stillo 30 bez průkazu.", model: "Stillo 30 (2020)", cabins: "3 Kabiny", checkBtn: "Dostupnost", premiumFleet: "Premium", feature1: "Bez průkazu", feature2: "2020", feature3: "Luxus", detailsBtn: "Detaily" },
+        charter: { tag: "Bez průkazu", title: "Pronájem Jachty", description: "Stillo 30 bez průkazu.", model: "Stillo 30 (2020)", cabins: "3 Kabiny", checkBtn: "Dostupnost", premiumFleet: "Premium", feature1: "Bez průkazu", feature2: "2020", feature3: "Luxus", detailsBtn: "Detaily", thrusters: "Příďové motory", heating: "Topení a Klimatizace", modelVip: "Stillo 30 VIP", boatType: "Luxusní hausbót bez průkazu" },
         stranda: { subtitle: "Luxus u jezera", description: "Moderní design.", building: "Budova", apartment: "Apartmán" },
         details: { about: "O apartmánu", amenities: "Vybavení", booking: "Rezervace", checkAvailability: "Ovĕřit dostupnost.", callBtn: "Zavolat", lowPrice: "Nejlepší cena.", descriptionPart1: "Luxusní apartmán v", descriptionPart2: "Stranda Residence.", descriptionPart3: "Výhled na jezero.", items: { view: "Výhled", ac: "Klima", terrace: "Terasa", kitchen: "Kuchyně", tv: "TV", wifi: "WiFi", parking: "Parkování", sauna: "Sauna" } },
-        footer: { brandDesc: "Jedinečné chvíle.", navTitle: "Navigace", contactTitle: "Kontakt", followTitle: "Sledujte", rights: "Všechna práva vyhrazena.", linksTitle: "Odkazy" }
+        footer: { brandDesc: "Jedinečné chvíle.", navTitle: "Navigace", contactTitle: "Kontakt", followTitle: "Sledujte", rights: "Všechna práva vyhrazena.", linksTitle: "Odkazy" },
+        skorupki: {
+            title: "Domky Skorupki",
+            subtitle: "Váš luxusní úkryt v srdci Mazur",
+            introTitle: "Relaxace v pomalém rytmu",
+            descriptionPart1: "Domky ve Skorupkách jsou jedinečným místem na mapě Mazur, vytvořeným pro lidi hledající soukromí, luxus a blízkost přírody.",
+            descriptionPart2: "Každý domek byl navržen s ohledem na pohodlí našich hostů, spojující moderní řešení s tradiční mazurskou atmosférou.",
+            descriptionPart3: "Kouzlo Skorupek spočívá především v autentičnosti a harmonii s okolím.",
+            descriptionPart4: "Blízkost jezera Dobské umožňuje jízdu na kajaku, rybaření a dlouhé procházky.",
+            areaTitle: "Plocha",
+            areaDesc: "Komfortní domky pro rodiny a skupiny",
+            locationTitle: "Lokalita",
+            locationDesc: "Skorupki, poblíž Giżycka a Mikołajek",
+            amenitiesTitle: "Vybavení domků",
+            galleryTitle: "Galerie",
+            expandGallery: "Zobrazit více fotek",
+            collapseGallery: "Sbalit galerii",
+            ctaTitle: "Zažijte kouzlo Skorupek",
+            ctaDesc: "Rezervace domku je prvním krokem k nezapomenutelné dovolené.",
+            amenities: {
+                fullEquip: "Plné vybavení",
+                garden: "Soukromá zahrada",
+                bonfire: "Gril a ohniště",
+                parking: "Parkování",
+                wifi: "WiFi",
+                ac: "Klimatizace",
+                waterAccess: "Přístup k vodě",
+                peace: "Ticho a klid"
+            }
+        },
+        strandaDescriptions: {
+            genericDesc: "Naše apartmány se nacházejí v Giżycku, u přístavu Stranda v komplexu Stranda Residence.",
+            locationDesc: "Blízkost centra Giżycka umožňuje využívat mnoho turistických atrakcí.",
+            A103: "Apartmán A103 Suite se nachází v prvním patře, má prostorný obývací pokoj s kuchyňským koutem.",
+            A104: "Apartmán A104 Delux s soukromou vířivkou na terase se nachází v přízemí budovy A.",
+            A105: "Apartmán A105 je luxusní jednotka s vířivkou.",
+            B102: "Apartmán B102 v přízemí budovy B má prostorný obývací pokoj a vlastní vířivku na terase.",
+            B106: "Luxusní apartmán v přízemí se dvěma ložnicemi.",
+            B202: "Jedinečný apartmán v prvním patře se soukromou saunou a vířivkou.",
+            C404: "Studio apartmány se nacházejí v budově C, jsou to ubytování s jednou manželskou postelí."
+        },
+        kisajnoPage: {
+            title: "Apartmány Kisajno",
+            subtitle: "Přístav Neptun, Giżycko",
+            introTitle: "Výjimečný standard u jezera",
+            description: "Nabízíme moderní apartmán 55 m² v přízemí s přímým přístupem k jezeru Kisajno.",
+            features: [
+                "2 oddělené ložnice s velkými postelemi",
+                "Obývací pokoj s pohodlnou pohovkou a TV",
+                "Plná kuchyně: myčka, mikrovlnná trouba, lednice",
+                "Klimatizace a rychlé WiFi"
+            ],
+            priceLabel: "Cena od",
+            priceValue: "500 PLN",
+            priceUnit: "/ noc",
+            amenitiesTitle: "Vybavení",
+            bookingTitle: "Rezervujte si pobyt",
+            bookingDesc: "Kontaktujte nás přímo pro nejlepší nabídku.",
+            callAction: "Zavolat",
+            amenities: {
+                view: "Výhled na jezero",
+                ac: "Klimatizace",
+                smartTv: "Smart TV",
+                wifi: "WiFi",
+                kitchen: "Plná kuchyně",
+                dishwasher: "Myčka",
+                parking: "Parkování",
+                port: "Přístav Neptun"
+            }
+        },
+        fuledaPage: {
+            title: "Apartmány Fuleda",
+            subtitle: "Ticho, klid, příroda u jezera Dobské",
+            introTitle: "Oáza klidu v tiché zóně",
+            description: "Lokalita Fuleda je návrh pro ty, kteří se chtějí zcela odříznout od shonu civilizace.",
+            groundFloorTitle: "Apartmán Přízemí (od 250 PLN)",
+            groundFloorDesc: "Prostorný obývací pokoj s krbem, klimatizací a velkou terasou.",
+            firstFloorTitle: "Apartmán Patro (od 200 PLN)",
+            firstFloorDesc: "Stylově zařízený apartmán s výhledem na rezervaci.",
+            amenitiesTitle: "Premium Vybavení",
+            amenities: {
+                ac: "Klimatizace",
+                fireplace: "Krb",
+                beach: "Soukromá pláž",
+                bonfire: "Ohniště",
+                wifi: "WiFi",
+                kitchen: "Plná kuchyně",
+                washer: "Pračka",
+                pier: "Přístup k molu"
+            }
+        },
+        attractionsPage: {
+            title: "Regionální atrakce",
+            subtitle: "Giżycko a srdce Mazur nabízí mnoho možností",
+            boyen: {
+                title: "Pevnost Boyen",
+                desc: "Pruská pevnost ve tvaru hvězdy z 19. století."
+            },
+            bridge: {
+                title: "Otočný most",
+                desc: "Unikátní technická památka z 19. století."
+            },
+            port: {
+                title: "Přístav Giżycko & Plavby",
+                desc: "Největší přístav na Mazurech."
+            },
+            water: {
+                title: "Jezero Kisajno a Dobské",
+                desc: "Křišťálově čistá voda, zóny ticha a ostrovy."
+            }
+        },
+        cooperationPage: {
+            title: "Spolupráce",
+            subtitle: "Vaše nemovitost v dobrých rukou",
+            services: {
+                title: "Komplexní správa",
+                desc: "Postaráme se o váš apartmán nebo chatu na Mazurech."
+            },
+            marketing: {
+                title: "Profesionální marketing",
+                desc: "Dbáme o viditelnost vaší nabídky."
+            },
+            guests: {
+                title: "Obsluha hostů",
+                desc: "Zajišťujeme profesionální check-in a asistenci."
+            },
+            maintenance: {
+                title: "Údržba a úklid",
+                desc: "Vaše nemovitost bude vždy připravena na nejvyšší standard."
+            }
+        },
+        contactForm: {
+            title: "Napište nám",
+            subtitle: "Máte dotazy? Chcete rezervovat pobyt?",
+            name: "Jméno a příjmení",
+            email: "E-mailová adresa",
+            phone: "Telefonní číslo",
+            subject: "Předmět",
+            message: "Zpráva",
+            send: "Odeslat zprávu",
+            sending: "Odesílání...",
+            success: "Zpráva byla úspěšně odeslána!",
+            error: "Při odesílání došlo k chybě."
+        }
     },
     lt: {
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Namelliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "Jachtų Nuoma" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
+        luxuryBenefits: {
+            tag: "Mūsų pasiūlymo pranašumai",
+            title: "Prabanga slypi detalėse",
+            quality: { title: "Aukšta apdailos kokybė", desc: "Kiekviename mūsų apartamente pasirūpinome apdaila. Tikimės, kad pastebėsite visas paslėptas ir matomas detales" },
+            views: { title: "Vaizdas į ežerą", desc: "Gražiomis saulėtomis dienomis, nuo saulėtekio iki saulėlydžio - TV ir Netflix filmai gali pakeisti gražius vaizdus į Kisajno arba Dobskie ežerą" },
+            comfort: { title: "Miegas komfortiškomis sąlygomis", desc: "Miegas yra būtinas poilsiui ir turi įtakos jūsų apsilankymo kokybei. Visos lovos aprūpintos labai gerais ir patogiais čiužiniais" },
+            wifi: { title: "Nemokamas Wi-Fi", desc: "Paruošėme Wi-Fi ryšį mūsų apartamentuose. Jis nėra būtinas poilsiui, bet padeda, pavyzdžiui, nuotoliniame darbe" },
+            gifts: { title: "Pradinis rinkinys", desc: "Kiekvienam mūsų svečiui paruošėme nedidelę dovaną, kuri yra mūsų atostogų pasiūlymo apartamentuose dalis" },
+            flexible: { title: "Lanksti rezervacija", desc: "Suprantame, kad ne kiekviena kelionė gali būti visiškai suplanuota. Todėl siūlome lanksčias rezervavimo ir atšaukimo sąlygas" }
+        },
         apartments: { title: "Mūsų Apartamentai", description: "Pasirinkite vietą.", details: "Detalės", pricePrefix: "nuo", night: "naktis", people: "žm.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfortas uoste." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Prabanga." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Ramybės oazė." }, domkiSkorupki: { title: "Skorupki Nameliai", location: "Skorupki, šalia Gižycko", description: "Prabangūs nameliai Mozūrijos gamtoje." }, pokojeFuleda: { title: "Fuleda Kambariai", location: "Fuleda, Dobskie ežeras", description: "Jaukūs kambariai su vaizdu į ežerą tylos zonoje." } } },
         cottagesAndRooms: {
             title: "Mūsų nameliai ir kambariai",
             description: "Pajuskite gamtos artumą patogiomis sąlygomis."
         },
         categories: { apartments: "Mūsų Apartamentai", cottages: "Mūsų Nameliai", rooms: "Mūsų Kambariai", charter: "Jachtų Nuoma" },
-        charter: { tag: "Be licencijos", title: "Jachtos Nuoma", description: "Stillo 30 be licencijos.", model: "Stillo 30 (2020)", cabins: "3 Kajutės", checkBtn: "Tikrinti", premiumFleet: "Premium", feature1: "Be licencijos", feature2: "2020", feature3: "Prabanga", detailsBtn: "Detalės" },
+        charter: { tag: "Be licencijos", title: "Jachtos Nuoma", description: "Stillo 30 be licencijos.", model: "Stillo 30 (2020)", cabins: "3 Kajutės", checkBtn: "Tikrinti", premiumFleet: "Premium", feature1: "Be licencijos", feature2: "2020", feature3: "Prabanga", detailsBtn: "Detalės", thrusters: "Manevravimo varikliai", heating: "Šildymas ir Oro kondicionavimas", modelVip: "Stillo 30 VIP", boatType: "Prabangus namas ant vandens be licencijos" },
         stranda: { subtitle: "Prabanga prie ežero", description: "Modernus dizainas.", building: "Pastatas", apartment: "Apartamentas" },
         details: { about: "Apie", amenities: "Patogumai", booking: "Rezervacija", checkAvailability: "Tikrinti.", callBtn: "Skambinti", lowPrice: "Geriausia kaina.", descriptionPart1: "Prabangūs apartamentai", descriptionPart2: "Stranda.", descriptionPart3: "Ežero vaizdas.", items: { view: "Vaizdas", ac: "Kondicionierius", terrace: "Terasa", kitchen: "Virtuvė", tv: "TV", wifi: "WiFi", parking: "Parkingas", sauna: "Pirtis" } },
         footer: { brandDesc: "Ypatingos akimirkos.", navTitle: "Navigacija", contactTitle: "Kontaktai", followTitle: "Sekite", rights: "Visos teisės saugomos.", linksTitle: "Nuorodos" },
@@ -712,6 +905,59 @@ export const translations = {
                 washer: "Skalbimo mašina",
                 pier: "Priėjimas prie liepto"
             }
+        },
+        attractionsPage: {
+            title: "Regiono lankytinos vietos",
+            subtitle: "Gižyckas ir Mozūrijos širdis siūlo daugybę galimybių",
+            boyen: {
+                title: "Bojeno tvirtovė",
+                desc: "XIX a. žvaigždės formos Prūsijos tvirtovė, svarbus regiono istorinis objektas."
+            },
+            bridge: {
+                title: "Sukamasis tiltas",
+                desc: "Unikalus XIX a. technikos paminklas, valdomas rankiniu būdu, jungiantis Lučanskio kanalo krantus."
+            },
+            port: {
+                title: "Gižycko uostas ir kruizai",
+                desc: "Didžiausias Mozūrijos uostas, puiki vieta pradėti kruizą Didžiaisiais ežerais."
+            },
+            water: {
+                title: "Kisajno ir Dobskie ežerai",
+                desc: "Krištolo skaidrumo vanduo, tylos zonos ir daugybė salų – rojus buriuotojams ir gamtos mylėtojams."
+            }
+        },
+        cooperationPage: {
+            title: "Bendradarbiavimas",
+            subtitle: "Jūsų objektas geriausiose rankose",
+            services: {
+                title: "Visapusiškas valdymas",
+                desc: "Pasirūpinsime Jūsų apartamentais, nameliu ar objektu Mozūrijoje. Siūlome visą paslaugų spektrą – nuo rinkodaros iki valymo."
+            },
+            marketing: {
+                title: "Profesionali rinkodara",
+                desc: "Pasirūpiname Jūsų pasiūlymo matomumu populiariausiuose rezervacijos portaluose."
+            },
+            guests: {
+                title: "Svečių aptarnavimas",
+                desc: "Teikiame profesionalų įregistravimą, išregistravimą ir pagalbą svečiams visos viešnagės metu."
+            },
+            maintenance: {
+                title: "Priežiūra ir valymas",
+                desc: "Jūsų turtas visada bus paruoštas priimti svečius aukščiausiu standartu."
+            }
+        },
+        contactForm: {
+            title: "Parašykite mums",
+            subtitle: "Turite klausimų? Norite rezervuoti viešnagę? Naudokite žemiau esančią formą.",
+            name: "Vardas ir pavardė",
+            email: "El. pašto adresas",
+            phone: "Telefono numeris",
+            subject: "Tema",
+            message: "Žinutė",
+            send: "Siųsti žinutę",
+            sending: "Siunčiama...",
+            success: "Žinutė sėkmingai išsiųsta!",
+            error: "Siunčiant žinutę įvyko klaida. Bandykite dar kartą."
         }
     },
     dk: {

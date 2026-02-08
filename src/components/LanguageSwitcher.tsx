@@ -8,18 +8,12 @@ import { Language } from "@/lib/translations";
 
 const languages: { code: Language; name: string; flag: string }[] = [
     { code: "pl", name: "Polska", flag: "🇵🇱" },
-    { code: "de", name: "Niemiecka", flag: "🇩🇪" },
     { code: "en", name: "Angielska", flag: "🇬🇧" },
+    { code: "de", name: "Niemiecka", flag: "🇩🇪" },
     { code: "lt", name: "Litewska", flag: "🇱🇹" },
     { code: "cs", name: "Czechy", flag: "🇨🇿" },
-    { code: "fr", name: "Francja", flag: "🇫🇷" },
-    { code: "dk", name: "Duńska", flag: "🇩🇰" },
-    { code: "se", name: "Szwecja", flag: "🇸🇪" },
-    { code: "no", name: "Norwegia", flag: "🇳🇴" },
-    { code: "fi", name: "Finlandia", flag: "🇫🇮" },
-    { code: "es", name: "Hiszpania", flag: "🇪🇸" },
-    { code: "it", name: "Włochy", flag: "🇮🇹" },
 ];
+
 
 export function LanguageSwitcher({ className }: { className?: string }) {
     const [isOpen, setIsOpen] = React.useState(false);
