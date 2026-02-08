@@ -14,8 +14,12 @@ export default function FuledaPage() {
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
     const galleryImages = [
-        "/mazury-holiday/images/fuleda/fuleda_1.webp",
-        "/mazury-holiday/images/fuleda/fuleda_2.webp"
+        "/mazury-holiday/images/fuleda/Front Apartamenty.webp",
+        "/mazury-holiday/images/fuleda/front apartamenty jeziorko.webp",
+        "/mazury-holiday/images/fuleda/jeziorko.webp",
+        "/mazury-holiday/images/fuleda/linia plaza.webp",
+        "/mazury-holiday/images/fuleda/plaza cdd.webp",
+        "/mazury-holiday/images/fuleda/Pokoje Tył.webp"
     ];
 
     const apartments = [
@@ -23,17 +27,18 @@ export default function FuledaPage() {
             id: 'parter',
             title: 'Apartament Fuleda Parter',
             guests: '2+2',
-            image: '/mazury-holiday/images/fuleda/parter/104001_8.jpg',
+            image: '/mazury-holiday/images/fuleda/Front Apartamenty.webp',
             features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
         },
         {
             id: 'pietro',
             title: 'Apartament Fuleda Piętro',
             guests: '2+1',
-            image: '/mazury-holiday/images/fuleda/pietro/104014_8.jpg',
+            image: '/mazury-holiday/images/fuleda/Front Apartamenty.webp',
             features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
         }
     ];
+
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -63,16 +68,16 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/mazury-holiday/images/fuleda/fuleda_1.webp" alt="Widok na Fuledę" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src="/mazury-holiday/images/fuleda/Front Apartamenty.webp" alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                             <div
                                 className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mt-12 cursor-pointer group"
                                 onClick={() => {
-                                    setLightboxIndex(1);
+                                    setLightboxIndex(2);
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/mazury-holiday/images/fuleda/fuleda_2.webp" alt="Plaża w Fuledzie" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src="/mazury-holiday/images/fuleda/jeziorko.webp" alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                         </div>
                     </div>
