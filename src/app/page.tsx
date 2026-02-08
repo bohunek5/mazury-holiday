@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Apartments from "@/components/Apartments";
 import Footer from "@/components/Footer";
-import { Ship, Anchor, Sun } from "lucide-react";
+import { Anchor } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Charter Section */}
       <section id="czarter" className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-fixed center" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/mazury-holiday/images/czarter/main.webp')] bg-cover bg-fixed center" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -49,43 +49,43 @@ export default function Home() {
                 {t("charter", "description")}
               </p>
 
-              <ul className="space-y-4 mb-10">
-                {[
-                  t("charter", "feature1"),
-                  t("charter", "feature2"),
-                  t("charter", "feature3")
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="h-6 w-6 rounded-full bg-amber-500 flex items-center justify-center text-slate-900">
-                      <Sun size={14} strokeWidth={3} />
-                    </div>
-                    <span>{item}</span>
-                  </li>
-                ))}
+              <ul className="space-y-4 mb-10 text-slate-300">
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">⚓</span>
+                  <span>Bez patentu</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">🔄</span>
+                  <span>Stery strumieniowe</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">❄️</span>
+                  <span>Ogrzewanie & Klimatyzacja</span>
+                </li>
               </ul>
 
               <a
-                href="#contact"
+                href="/mazury-holiday/czarter"
                 className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-medium transition-all shadow-lg shadow-amber-500/20"
               >
-                {t("charter", "detailsBtn")}
+                SPRAWDŹ SZCZEGÓŁY
               </a>
             </div>
 
             <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src="https://images.unsplash.com/photo-1605281317010-fe5ffe79ba02?q=80&w=2669&auto=format&fit=crop"
-                alt="Jacht motorowy na Mazurach"
+                src="/mazury-holiday/images/czarter/main.webp"
+                alt="Jacht motorowy Stillo 30"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
               <div className="absolute bottom-8 left-8">
                 <div className="flex items-center gap-2 text-amber-400 mb-2 font-medium">
-                  <Ship size={20} />
-                  <span>Merry Fisher 895</span>
+                  <span className="text-2xl">⚓</span>
+                  <span>Stillo 30 VIP</span>
                 </div>
-                <p className="text-white text-2xl font-serif">Twoja przygoda na wodzie</p>
+                <p className="text-white text-2xl font-serif">Luksusowy Houseboat bez patentu</p>
               </div>
             </div>
           </div>

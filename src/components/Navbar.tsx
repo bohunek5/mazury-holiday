@@ -56,7 +56,7 @@ export default function Navbar() {
         >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="relative h-16 w-64 md:h-19 md:w-77 flex items-center">
+                <Link href="/" className="relative h-10 w-40 md:h-19 md:w-77 flex items-center">
                     <Image
                         src="/mazury-holiday/images/logo-poziom.svg"
                         alt="Mazury.Holiday"

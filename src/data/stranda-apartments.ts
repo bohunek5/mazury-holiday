@@ -36,13 +36,13 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Bezpłatne WiFi', 'Miejsce parkingowe w cenie'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A103/0T1A8736.jpg',
+            heroImage: '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
             images: [
-                '/mazury-holiday/images/stranda/A103/0T1A8736.jpg',
-                '/mazury-holiday/images/stranda/A103/0T1A8742.jpg',
-                '/mazury-holiday/images/stranda/A103/0T1A8747.jpg',
-                '/mazury-holiday/images/stranda/A103/0T1A8745.jpg',
-                '/mazury-holiday/images/stranda/A103/A103 łazienkaa.jpg'
+                '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
+                '/mazury-holiday/images/stranda/A103_images/0T1A8742.webp',
+                '/mazury-holiday/images/stranda/A103_images/0T1A8747.webp',
+                '/mazury-holiday/images/stranda/A103_images/0T1A8745.webp',
+                '/mazury-holiday/images/stranda/A103_images/A103 łazienkaa.webp'
             ]
         }
     },
@@ -62,13 +62,13 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Prywatne jacuzzi w cenie', 'Miejsce parkingowe'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A104/A104j.jpg',
+            heroImage: '/mazury-holiday/images/stranda/A104_images/A104j.webp',
             images: [
-                '/mazury-holiday/images/stranda/A104/A104k.jpg',
-                '/mazury-holiday/images/stranda/A104/A104j.jpg',
-                '/mazury-holiday/images/stranda/A104/A104i.jpg',
-                '/mazury-holiday/images/stranda/A104/A104h.jpg',
-                '/mazury-holiday/images/stranda/A104/A104g.jpg'
+                '/mazury-holiday/images/stranda/A104_images/A104k.webp',
+                '/mazury-holiday/images/stranda/A104_images/A104j.webp',
+                '/mazury-holiday/images/stranda/A104_images/A104i.webp',
+                '/mazury-holiday/images/stranda/A104_images/A104h.webp',
+                '/mazury-holiday/images/stranda/A104_images/A104g.webp'
             ]
         }
     },
@@ -88,8 +88,17 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Dostęp do WiFi', 'Gwarancja jakości'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A105/hero.jpg',
-            images: []
+            heroImage: '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
+            images: [
+                '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0387_023740.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0388_02391019628.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0389_02394119878.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0392_024142.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0393_02431221600.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0394_02434221848.webp',
+                '/mazury-holiday/images/stranda/A105_images/5S5A0395_02451022567.webp'
+            ]
         }
     },
     'C404': {
@@ -108,7 +117,7 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Top Floor', 'Panoramiczny widok'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/C404/hero.jpg',
+            heroImage: '/mazury-holiday/images/stranda/C404_images/hero.webp',
             images: []
         }
     },
@@ -128,7 +137,7 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Parter', 'Prywatne jacuzzi'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B102/hero.jpg',
+            heroImage: '/mazury-holiday/images/stranda/B102_images/hero.webp',
             images: []
         }
     },
@@ -148,7 +157,7 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Idealny dla rodzin', '2 Sypialnie'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B106/hero.jpg',
+            heroImage: '/mazury-holiday/images/stranda/B106_images/hero.webp',
             images: []
         }
     },
@@ -168,7 +177,7 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Prywatna sauna', 'Jacuzzi', 'Widok na jezioro'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B202/hero.jpg',
+            heroImage: '/mazury-holiday/images/stranda/B202_images/hero.webp',
             images: []
         }
     }

@@ -7,8 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState, useEffect } from "react";
-import type { ApartmentMarkdownData } from "@/utils/apartmentMarkdownParser";
-import ApartmentMarkdownView from "./ApartmentMarkdownView";
+
 
 // Helper function to get unique icon for each amenity
 function getAmenityIcon(amenity: string): string {
@@ -72,11 +71,9 @@ function getAmenityIcon(amenity: string): string {
 
 interface ApartmentDetailClientProps {
     id?: string;
-    apartmentData?: ApartmentMarkdownData;
-    isMarkdown?: boolean;
 }
 
-export default function ApartmentDetailClient({ id, apartmentData, isMarkdown = false }: ApartmentDetailClientProps) {
+export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps) {
     const { t } = useLanguage();
     const data = strandaApartments[id as keyof typeof strandaApartments];
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -134,10 +131,6 @@ export default function ApartmentDetailClient({ id, apartmentData, isMarkdown = 
         };
     }, []);
 
-    // If Markdown data is available, use the new view
-    if (isMarkdown && apartmentData) {
-        return <ApartmentMarkdownView data={apartmentData} />;
-    }
 
     if (!data) {
         return (
@@ -151,7 +144,7 @@ export default function ApartmentDetailClient({ id, apartmentData, isMarkdown = 
         id: id,
         title: `${t("stranda", "apartment")} ${id} ${data.type}`,
         building: data.building,
-        description: data.description,
+        description: `${t("strandaDescriptions", id as string)}\n\n${t("strandaDescriptions", "genericDesc")}\n\n${t("strandaDescriptions", "locationDesc")}`,
         amenities: [
             ...data.amenities.living,
             ...data.amenities.kitchen,

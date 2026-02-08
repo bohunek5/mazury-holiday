@@ -15,7 +15,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/mazury-holiday/images/apartments_2.jpg"
+          src="/mazury-holiday/images/apartments_2.webp"
           alt="Mazury Landscape"
           fill
           priority

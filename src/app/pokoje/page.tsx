@@ -13,7 +13,7 @@ export default function RoomsPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/hero_bg.jpg')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/hero_bg.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">Pokoje Fuleda</h1>

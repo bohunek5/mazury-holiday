@@ -1,5 +1,5 @@
 import ApartmentDetailClient from "./ApartmentDetailClient";
-import { readApartmentMarkdown } from "@/utils/apartmentMarkdownParser";
+// import { readApartmentMarkdown } from "@/utils/apartmentMarkdownParser"; // Removed usage
 
 // Define known keys to generate static params
 const buildings = {
@@ -22,8 +22,8 @@ export async function generateStaticParams() {
 export default async function ApartmentDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
-    // Try to load Markdown data first
-    const apartmentData = readApartmentMarkdown(id);
+    // Try to load Markdown data first - DISABLED
+    // const apartmentData = readApartmentMarkdown(id);
 
-    return <ApartmentDetailClient id={id} apartmentData={apartmentData || undefined} isMarkdown={!!apartmentData} />;
+    return <ApartmentDetailClient id={id} />;
 }

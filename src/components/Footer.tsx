@@ -10,9 +10,9 @@ export default function Footer() {
 
     return (
         <footer className="bg-slate-900 border-t border-slate-800 text-slate-300 py-16">
-            <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
+            <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12 text-center md:text-left">
                 <div>
-                    <Link href="/" className="relative h-24 w-96 flex items-center mb-8">
+                    <Link href="/" className="relative h-24 w-96 flex items-center mb-8 mx-auto md:mx-0 justify-center md:justify-start">
                         <Image
                             src="/mazury-holiday/images/logo-poziom.svg"
                             alt="Mazury.Holiday"
@@ -23,7 +23,7 @@ export default function Footer() {
                     <p className="text-base leading-relaxed max-w-sm mb-8 opacity-80 text-slate-400">
                         {t("footer", "brandDesc")}
                     </p>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 justify-center md:justify-start">
                         <a
                             href="https://facebook.com"
                             target="_blank"
@@ -47,11 +47,11 @@ export default function Footer() {
 
                 <div>
                     <h3 className="text-white font-serif font-bold text-xl mb-6 relative inline-block">
-                        {t("footer", "contact")}
-                        <span className="absolute -bottom-2 left-0 w-12 h-1 bg-amber-500 rounded-full"></span>
+                        {t("footer", "contactTitle")}
+                        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-1 bg-amber-500 rounded-full"></span>
                     </h3>
                     <ul className="space-y-6">
-                        <li className="flex items-start gap-4 group cursor-pointer">
+                        <li className="flex items-start gap-4 group cursor-pointer justify-center md:justify-start">
                             <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all">
                                 <MapPin size={20} />
                             </div>
@@ -60,7 +60,7 @@ export default function Footer() {
                                 11-500 Giżycko
                             </span>
                         </li>
-                        <li className="flex items-center gap-4 group">
+                        <li className="flex items-center gap-4 group justify-center md:justify-start">
                             <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all">
                                 <Phone size={20} />
                             </div>
@@ -68,7 +68,7 @@ export default function Footer() {
                                 +48 607 241 090
                             </a>
                         </li>
-                        <li className="flex items-center gap-4 group">
+                        <li className="flex items-center gap-4 group justify-center md:justify-start">
                             <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all">
                                 <Mail size={20} />
                             </div>
@@ -82,17 +82,24 @@ export default function Footer() {
                 <div>
                     <h3 className="text-white font-serif font-bold text-xl mb-6 relative inline-block">
                         {t("footer", "linksTitle")}
-                        <span className="absolute -bottom-2 left-0 w-12 h-1 bg-amber-500 rounded-full"></span>
+                        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-1 bg-amber-500 rounded-full"></span>
                     </h3>
                     <ul className="space-y-3">
-                        {["about", "apartments", "charter", "contact"].map((item) => (
-                            <li key={item}>
+                        {[
+                            { id: "about", href: "/#about" },
+                            { id: "apartments", href: "/apartamenty" },
+                            { id: "rooms", href: "/pokoje" },
+                            { id: "cottages", href: "/domki" },
+                            { id: "charter", href: "/czarter" },
+                            { id: "contact", href: "/kontakt" }
+                        ].map((link) => (
+                            <li key={link.id}>
                                 <Link
-                                    href={`#${item}`}
-                                    className="flex items-center gap-2 text-slate-400 hover:text-amber-500 transition-all hover:translate-x-1 group"
+                                    href={link.href}
+                                    className="flex items-center gap-2 text-slate-400 hover:text-amber-500 transition-all hover:translate-x-1 group justify-center md:justify-start"
                                 >
                                     <span className="h-1.5 w-1.5 rounded-full bg-amber-500/50 group-hover:bg-amber-500 transition-colors"></span>
-                                    {t("nav", item)}
+                                    {t("nav", link.id)}
                                 </Link>
                             </li>
                         ))}

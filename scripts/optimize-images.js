@@ -16,7 +16,7 @@ const path = require('path');
 const CONFIG = {
     // Foldery do skanowania
     imageDirs: [
-        'public/mazury-holiday/images',
+        'public/images',
         'Oferta'
     ],
     // Formaty do optymalizacji
@@ -26,7 +26,7 @@ const CONFIG = {
     // Czy tworzyć backup?
     createBackup: true,
     // Folder na backup
-    backupDir: 'public/mazury-holiday/images/originals',
+    backupDir: 'public/images/originals',
     // Maksymalna szerokość (dla bardzo dużych zdjęć)
     maxWidth: 1920,
     maxHeight: 1920
@@ -65,8 +65,19 @@ function formatBytes(bytes) {
  * Sprawdza czy plik już jest zoptymalizowany
  */
 function isAlreadyOptimized(filePath) {
+    const ext = path.extname(filePath).toLowerCase();
     const backupPath = path.join(CONFIG.backupDir, path.basename(filePath));
-    return fs.existsSync(backupPath);
+
+    // Jeśli nie ma backupu, na pewno nie jest zoptymalizowany
+    if (!fs.existsSync(backupPath)) return false;
+
+    // Jeśli to JPG/PNG, sprawdź czy istnieje już WebP
+    if (ext === '.jpg' || ext === '.jpeg' || ext === '.png') {
+        const webpPath = filePath.replace(/\.[^.]+$/, '.webp');
+        return fs.existsSync(webpPath);
+    }
+
+    return true;
 }
 
 /**
@@ -112,24 +123,23 @@ async function optimizeImage(filePath) {
         }
 
         // Optymalizuj w zależności od formatu
-        if (ext === '.png') {
-            // PNG - kompresja bez straty + optymalizacja
-            await image
-                .png({ quality: CONFIG.quality, compressionLevel: 9 })
-                .toFile(filePath + '.tmp');
-        } else if (ext === '.webp') {
+        if (ext === '.webp') {
             // WebP - już dobry format, tylko lekka rekompreska
             await image
                 .webp({ quality: CONFIG.quality })
                 .toFile(filePath + '.tmp');
+
+            // Zastąp oryginalny plik zoptymalizowanym
+            fs.unlinkSync(filePath);
+            fs.renameSync(filePath + '.tmp', filePath);
         } else {
-            // JPG - konwertuj do WebP (lepszy format)
-            const webpPath = filePath.replace(/\.(jpg|jpeg)$/i, '.webp');
+            // Inne formaty (JPG, PNG) - konwertuj do WebP (lepszy format)
+            const webpPath = filePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
             await image
                 .webp({ quality: CONFIG.quality })
                 .toFile(webpPath);
 
-            // Usuń stary JPG, zostaw WebP
+            // Usuń stary plik, zostaw WebP
             fs.unlinkSync(filePath);
 
             const newSize = fs.statSync(webpPath).size;
@@ -143,10 +153,6 @@ async function optimizeImage(filePath) {
             console.log(`   ${formatBytes(originalSize)} → ${formatBytes(newSize)} (oszczędność: ${percent}%)`);
             return;
         }
-
-        // Zastąp oryginalny plik zoptymalizowanym
-        fs.unlinkSync(filePath);
-        fs.renameSync(filePath + '.tmp', filePath);
 
         const newSize = fs.statSync(filePath).size;
         const saved = originalSize - newSize;

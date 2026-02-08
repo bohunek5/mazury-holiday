@@ -15,21 +15,21 @@ export default function ApartmentsHub() {
             id: "stranda",
             title: "Stranda Residence",
             description: t("stranda", "description"),
-            image: "/mazury-holiday/apartments/A103_images/A103 salonn.jpg",
+            image: "/mazury-holiday/images/stranda/A103_images/A103 salonn.webp",
             link: "/apartamenty/stranda",
         },
         {
             id: "kisajno",
             title: t("apartments", "items.kisajno.title"),
             description: t("apartments", "items.kisajno.description"),
-            image: "/mazury-holiday/images/kisajno/kisajno_1.jpg",
+            image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
         },
         {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/fuleda_1.png",
+            image: "/mazury-holiday/images/fuleda/fuleda_1.webp",
             link: "/apartamenty/fuleda",
         },
     ];
@@ -37,7 +37,15 @@ export default function ApartmentsHub() {
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
             <Navbar />
-            <section className="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+            <section className="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto relative overflow-hidden">
+                <div
+                    className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none bg-fixed -z-10"
+                    style={{
+                        backgroundImage: "url('/mazury-holiday/images/hero_bg.webp')",
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                />
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

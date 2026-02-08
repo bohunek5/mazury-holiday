@@ -19,33 +19,33 @@ type Unit = {
 // Update buildings data structure to include images
 const buildings: Record<"A" | "B" | "C", Unit[]> = {
     A: [
-        { id: "A103", image: "/mazury-holiday/apartments/A103_images/A103 salonn.jpg" },
-        { id: "A104", image: "/mazury-holiday/apartments/A104_images/A104j.jpg" },
-        { id: "A105", image: "/mazury-holiday/apartments/A105_images/5S5A0390_02411120613.JPG" },
-        { id: "A204", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A205", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A302", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A305", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A306", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A402", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "A403", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "A103", image: "/mazury-holiday/images/stranda/A103_images/A103 salonn.webp" },
+        { id: "A104", image: "/mazury-holiday/images/stranda/A104_images/A104j.webp" },
+        { id: "A105", image: "/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp" },
+        { id: "A204", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A205", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A302", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A305", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A306", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A402", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "A403", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
     ],
     B: [
-        { id: "B102", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B106", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B201", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B202", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B304", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B305", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B401", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B402", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "B404", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "B102", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B106", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B201", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B202", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B304", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B305", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B401", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B402", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "B404", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
     ],
     C: [
-        { id: "C301", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "C304", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "C403", image: "/mazury-holiday/images/apartments/A104k.jpg" },
-        { id: "C404", image: "/mazury-holiday/images/apartments/A104k.jpg" },
+        { id: "C301", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "C304", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "C403", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
+        { id: "C404", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
     ],
 };
 
@@ -61,7 +61,7 @@ export default function StrandaPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_1.jpg')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_1.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">Stranda Residence</h1>
