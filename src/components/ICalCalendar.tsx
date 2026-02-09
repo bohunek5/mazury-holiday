@@ -7,7 +7,7 @@ interface CalendarEvent {
     summary?: string;
 }
 
-const ICalCalendar = ({ icalUrl }: { icalUrl: string }) => {
+const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apartmentId?: string }) => {
     const [events, setEvents] = useState<CalendarEvent[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -180,7 +180,7 @@ const ICalCalendar = ({ icalUrl }: { icalUrl: string }) => {
             <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <CalendarIcon className="w-5 h-5 text-amber-500" />
-                    <h3 className="font-bold text-slate-800 dark:text-white">Dostępność A103</h3>
+                    <h3 className="font-bold text-slate-800 dark:text-white">Dostępność {apartmentId}</h3>
                 </div>
                 {loading && <Loader2 className="w-4 h-4 text-amber-500 animate-spin" />}
             </div>

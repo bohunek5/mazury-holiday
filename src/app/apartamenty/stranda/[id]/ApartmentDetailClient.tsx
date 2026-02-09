@@ -320,8 +320,15 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 {t("details", "lowPrice")}
                             </p>
 
-                            {/* Availability Calendar */}
-                            <div className="pt-6">
+                            {/* Availability Calendar (iCal) */}
+                            {data.icalUrl && (
+                                <div className="mb-8">
+                                    <ICalCalendar icalUrl={data.icalUrl} apartmentId={id} />
+                                </div>
+                            )}
+
+                            {/* iDoBooking Calendar widget as fallback/additional info */}
+                            <div className="pt-2">
                                 <div
                                     id="idobooking-calendar"
                                     className="iai_calendar_widget"
@@ -332,15 +339,6 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                     data-show-prices="false"
                                     data-language="0"
                                 />
-
-                                {data.icalUrl && (
-                                    <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
-                                        <h4 className="text-sm font-bold mb-4 text-slate-500 uppercase tracking-widest text-center">
-                                            Kalendarz Obłożenia (iCal)
-                                        </h4>
-                                        <ICalCalendar icalUrl={data.icalUrl} />
-                                    </div>
-                                )}
                             </div>
                         </div>
                     </div>
