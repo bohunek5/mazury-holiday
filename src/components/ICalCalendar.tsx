@@ -60,34 +60,52 @@ const ICalCalendar = ({ icalUrl }: { icalUrl: string }) => {
     }, [parseDate]);
 
     useEffect(() => {
-        const fetchCalendar = async () => {
+        const fetchCalendarWithFallback = async () => {
             setLoading(true);
-            try {
-                // Używamy proxy, aby obejść blokadę CORS na stronie statycznej
-                const proxyUrl = `https://corsproxy.io/?url=${encodeURIComponent(icalUrl)}`;
-                const response = await fetch(proxyUrl);
-                if (!response.ok) {
-                    throw new Error(`Błąd pobierania (${response.status})`);
-                }
 
-                const text = await response.text();
-                if (!text || text.trim().length === 0) {
-                    setEvents([]);
-                    return;
-                }
+            const proxies = [
+                (url: string) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+                (url: string) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+                (url: string) => `https://api.codetabs.com/v1/proxy?url=${encodeURIComponent(url)}`
+            ];
 
-                const parsedEvents = parseICal(text);
-                setEvents(parsedEvents);
-                setError(null);
-            } catch (err: unknown) {
-                console.error("iCal fetch error:", err);
-                setError("Nie udało się pobrać danych (CORS). Link jest poprawny, ale serwer blokuje dostęp bezpośredni.");
-            } finally {
-                setLoading(false);
+            let lastError = null;
+
+            for (const getProxyUrl of proxies) {
+                try {
+                    const proxyUrl = getProxyUrl(icalUrl);
+                    console.log(`Próba pobrania iCal przez: ${proxyUrl}`);
+
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) {
+                        throw new Error(`Błąd HTTP ${response.status}`);
+                    }
+
+                    const text = await response.text();
+                    if (!text || !text.includes('BEGIN:VCALENDAR')) {
+                        throw new Error("Nieprawidłowy format iCal");
+                    }
+
+                    const parsedEvents = parseICal(text);
+                    setEvents(parsedEvents);
+                    setError(null);
+                    setLoading(false);
+                    return; // Sukces - wychodzimy z pętli i funkcji
+                } catch (err: unknown) {
+                    const msg = err instanceof Error ? err.message : String(err);
+                    console.warn(`Nieudana próba przez proxy:`, msg);
+                    lastError = err;
+                    // Kontynuujemy pętlę do kolejnego proxy
+                }
             }
+
+            // Jeśli wszystkie próby zawiodły
+            console.error("Wszystkie metody pobierania iCal zawiodły:", lastError);
+            setError("Nie udało się pobrać danych kalendarza. Serwer rezerwacji blokuje dostęp bezpośredni, a serwery proxy są obecnie niedostępne.");
+            setLoading(false);
         };
 
-        fetchCalendar();
+        fetchCalendarWithFallback();
     }, [icalUrl, parseICal]);
 
     const daysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
