@@ -63,50 +63,77 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
         const fetchCalendarWithFallback = async () => {
             setLoading(true);
 
+            // 1. Spróbuj najpierw załadować z cache'u (localStorage)
+            const cacheKey = `ical_cache_${apartmentId}`;
+            const cachedData = localStorage.getItem(cacheKey);
+            if (cachedData) {
+                try {
+                    const { text, timestamp } = JSON.parse(cachedData);
+                    // Jeśli cache ma mniej niż 1 godzinę, używamy go jako "szybkiego" podglądu
+                    const isNewEnough = Date.now() - timestamp < 3600000;
+                    const parsed = parseICal(text);
+                    setEvents(parsed);
+                    if (isNewEnough) {
+                        setLoading(false);
+                        // Nawet jeśli mamy świeży cache, spróbujemy go odświeżyć w tle
+                    }
+                } catch (e) {
+                    console.warn("Błąd odczytu cache iCal:", e);
+                }
+            }
+
             const proxies = [
                 (url: string) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
                 (url: string) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
                 (url: string) => `https://api.codetabs.com/v1/proxy?url=${encodeURIComponent(url)}`
             ];
 
-            let lastError = null;
+            const fetchWithRetry = async (proxyFn: (url: string) => string, retries = 2) => {
+                for (let i = 0; i < retries; i++) {
+                    try {
+                        const response = await fetch(proxyFn(icalUrl));
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        const text = await response.text();
+                        if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
+                        return text;
+                    } catch (e) {
+                        if (i === retries - 1) throw e;
+                        await new Promise(r => setTimeout(r, 1000)); // Czekaj 1s przed ponowieniem
+                    }
+                }
+                return null;
+            };
 
+            let lastError = null;
             for (const getProxyUrl of proxies) {
                 try {
-                    const proxyUrl = getProxyUrl(icalUrl);
-                    console.log(`Próba pobrania iCal przez: ${proxyUrl}`);
-
-                    const response = await fetch(proxyUrl);
-                    if (!response.ok) {
-                        throw new Error(`Błąd HTTP ${response.status}`);
+                    const text = await fetchWithRetry(getProxyUrl);
+                    if (text) {
+                        const parsedEvents = parseICal(text);
+                        setEvents(parsedEvents);
+                        setError(null);
+                        setLoading(false);
+                        // Zapisz do cache'u
+                        localStorage.setItem(cacheKey, JSON.stringify({
+                            text,
+                            timestamp: Date.now()
+                        }));
+                        return;
                     }
-
-                    const text = await response.text();
-                    if (!text || !text.includes('BEGIN:VCALENDAR')) {
-                        throw new Error("Nieprawidłowy format iCal");
-                    }
-
-                    const parsedEvents = parseICal(text);
-                    setEvents(parsedEvents);
-                    setError(null);
-                    setLoading(false);
-                    return; // Sukces - wychodzimy z pętli i funkcji
                 } catch (err: unknown) {
-                    const msg = err instanceof Error ? err.message : String(err);
-                    console.warn(`Nieudana próba przez proxy:`, msg);
                     lastError = err;
-                    // Kontynuujemy pętlę do kolejnego proxy
                 }
             }
 
-            // Jeśli wszystkie próby zawiodły
-            console.error("Wszystkie metody pobierania iCal zawiodły:", lastError);
-            setError("Nie udało się pobrać danych kalendarza. Serwer rezerwacji blokuje dostęp bezpośredni, a serwery proxy są obecnie niedostępne.");
+            // Jeśli wszystkie próby zawiodły i NIE mamy nic w cache'u
+            if (events.length === 0) {
+                setError("Nie udało się pobrać aktualnych danych. Spróbujemy ponownie za chwilę.");
+            }
             setLoading(false);
         };
 
         fetchCalendarWithFallback();
-    }, [icalUrl, parseICal]);
+    }, [icalUrl, parseICal, apartmentId]);
 
     const daysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     const firstDayOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
