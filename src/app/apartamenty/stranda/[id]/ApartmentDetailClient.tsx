@@ -8,6 +8,7 @@ import { strandaApartments } from "@/data/stranda-apartments";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState, useEffect } from "react";
 import { getAmenityIcon } from "@/utils/amenityIcons";
+import ICalCalendar from "@/components/ICalCalendar";
 
 
 
@@ -320,19 +321,26 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                             </p>
 
                             {/* Availability Calendar */}
-                            <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
-                                <h4 className="text-lg font-semibold mb-4 text-slate-900 dark:text-white text-center">
-                                    Dostępność
-                                </h4>
+                            <div className="pt-6">
                                 <div
                                     id="idobooking-calendar"
                                     className="iai_calendar_widget"
                                     data-client="37851"
-                                    data-object="1"
+                                    data-object={data.idoBookingId || "1"}
+                                    data-item={data.idoBookingId || ""}
                                     data-show-legend="true"
                                     data-show-prices="false"
                                     data-language="0"
                                 />
+
+                                {data.icalUrl && (
+                                    <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
+                                        <h4 className="text-sm font-bold mb-4 text-slate-500 uppercase tracking-widest text-center">
+                                            Kalendarz Obłożenia (iCal)
+                                        </h4>
+                                        <ICalCalendar icalUrl={data.icalUrl} />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

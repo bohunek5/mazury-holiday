@@ -17,6 +17,8 @@ export type Apartment = {
         heroImage: string;
         images: string[];
     };
+    idoBookingId?: string;
+    icalUrl?: string;
 };
 
 export const strandaApartments: Record<string, Apartment> = {
@@ -26,6 +28,8 @@ export const strandaApartments: Record<string, Apartment> = {
         type: 'Suite',
         price: 300,
         guests: '2+2',
+        idoBookingId: '49',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/49/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         description: 'Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.',
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV', 'WiFi'],
