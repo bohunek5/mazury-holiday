@@ -7,67 +7,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState, useEffect } from "react";
+import { getAmenityIcon } from "@/utils/amenityIcons";
 
 
-// Helper function to get unique icon for each amenity
-function getAmenityIcon(amenity: string): string {
-    const iconMap: Record<string, string> = {
-        // Living room
-        'Klimatyzacja': '❄️',
-        'Sofa 2-osobowa': '🛋️',
-        'Smart TV': '📺',
-        'TV': '📺',
-        'WiFi': '📶',
-        'Salon z aneksem': '🏠',
-        'Duży salon': '🛋️',
-        'Sofa': '🛋️',
-
-        // Kitchen
-        'Zmywarka': '🧼',
-        'Płyta indukcyjna': '🔥',
-        'Lodówka': '🧊',
-        'Kuchenka mikrofalowa': '📟',
-        'Komplet naczyń': '🍽️',
-        'Aneks kuchenny': '🍳',
-        'Ekspres do kawy': '☕',
-        'Pełne wyposażenie AGD': '🏠',
-
-        // Bedroom
-        'Łóżko 180x200': '🛏️',
-        'Łóżko podwójne': '🛏️',
-        'Łóżko małżeńskie': '🛏️',
-        'Szafa': '👔',
-        'Dwie oddzielne sypialnie': '🚪',
-        'Łóżka małżeńskie': '🛏️',
-        'Dwie sypialnie': '🚪',
-        'Komfortowe łóżka': '🛏️',
-
-        // Bathroom
-        'Prysznic': '🚿',
-        'Suszarka do włosów': '💨',
-        'Ręczniki': '🧺',
-        'Pralka': '🧺',
-        'Zestaw kosmetyków': '🧴',
-        'Prywatna sauna': '🧖',
-        'Suszarka': '💨',
-
-        // Terrace
-        'Meble wypoczynkowe': '🪑',
-        'Widok na port Stranda': '⛵',
-        'Prywatne jacuzzi': '🛁',
-        'Meble tarasowe': '🪑',
-        'Widok na jezioro Kisajno': '🌊',
-        'Widok na marinę': '⛵',
-        'Widok na port': '⛵',
-        'Meble balkonowe': '🪑',
-        'Duży taras': '🌿',
-        'Meble ogrodowe': '🌳',
-        'Jacuzzi na tarasie': '🛁',
-        'Widok na zatokę Tracz': '🌊'
-    };
-
-    return iconMap[amenity] || '✨'; // Default icon if not found
-}
 
 interface ApartmentDetailClientProps {
     id?: string;

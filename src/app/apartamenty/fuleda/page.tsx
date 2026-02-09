@@ -151,13 +151,13 @@ export default function FuledaPage() {
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t("fuledaPage", "amenitiesTitle")}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { key: "ac", icon: "❄️" },
+                            { key: "ac", icon: "🌡️" },
                             { key: "fireplace", icon: "🔥" },
                             { key: "beach", icon: "🏖️" },
-                            { key: "bonfire", icon: "🔥" },
+                            { key: "bonfire", icon: "🏮" },
                             { key: "wifi", icon: "📶" },
                             { key: "kitchen", icon: "🍳" },
-                            { key: "washer", icon: "🧺" },
+                            { key: "washer", icon: "🫧" },
                             { key: "pier", icon: "🚤" }
                         ].map((item, idx) => (
                             <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-emerald-50 dark:hover:bg-emerald-950/20 transition-colors group">

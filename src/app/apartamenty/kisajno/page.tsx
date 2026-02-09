@@ -91,12 +91,12 @@ export default function KisajnoPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
                             { key: "view", icon: "🌊" },
-                            { key: "ac", icon: "❄️" },
-                            { key: "smartTv", icon: "📺" },
+                            { key: "ac", icon: "🌡️" },
+                            { key: "smartTv", icon: "🖥️" },
                             { key: "wifi", icon: "📶" },
-                            { key: "kitchen", icon: "🍳" },
+                            { key: "kitchen", icon: "🥘" },
                             { key: "dishwasher", icon: "🧼" },
-                            { key: "parking", icon: "🚗" },
+                            { key: "parking", icon: "🅿️" },
                             { key: "port", icon: "⛵" }
                         ].map((item, idx) => (
                             <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">

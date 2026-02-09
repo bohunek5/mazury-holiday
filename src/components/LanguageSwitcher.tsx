@@ -6,12 +6,66 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Language } from "@/lib/translations";
 
-const languages: { code: Language; name: string; flag: string }[] = [
-    { code: "pl", name: "Polski", flag: "🇵🇱" },
-    { code: "en", name: "Angielski", flag: "🇬🇧" },
-    { code: "de", name: "Niemiecki", flag: "🇩🇪" },
-    { code: "lt", name: "Litewski", flag: "🇱🇹" },
-    { code: "cs", name: "Czeski", flag: "🇨🇿" },
+const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
+    {
+        code: "pl",
+        name: "Polski",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="16" height="10" fill="#fff" />
+                <rect width="16" height="5" y="5" fill="#dc143c" />
+            </svg>
+        )
+    },
+    {
+        code: "en",
+        name: "Angielski",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <clipPath id="s">
+                    <path d="M0,0 v30 h50 v-30 z" />
+                </clipPath>
+                <path d="M0,0 v30 h50 v-30 z" fill="#012169" />
+                <path d="M0,0 L50,30 M50,0 L0,30" stroke="#fff" strokeWidth="6" />
+                <path d="M0,0 L50,30 M50,0 L0,30" stroke="#C8102E" strokeWidth="4" />
+                <path d="M25,0 v30 M0,15 h50" stroke="#fff" strokeWidth="10" />
+                <path d="M25,0 v30 M0,15 h50" stroke="#C8102E" strokeWidth="6" />
+            </svg>
+        )
+    },
+    {
+        code: "de",
+        name: "Niemiecki",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="5" height="3" y="0" fill="#000" />
+                <rect width="5" height="2" y="1" fill="#D00" />
+                <rect width="5" height="1" y="2" fill="#FFCE00" />
+            </svg>
+        )
+    },
+    {
+        code: "lt",
+        name: "Litewski",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="5" height="3" fill="#006A44" />
+                <rect width="5" height="2" fill="#C1272D" />
+                <rect width="5" height="1" fill="#FDB913" />
+            </svg>
+        )
+    },
+    {
+        code: "cs",
+        name: "Czeski",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="3" height="2" fill="#fff" />
+                <rect width="3" height="1" y="1" fill="#D7141A" />
+                <path d="M0,0 L1.5,1 L0,2 Z" fill="#11457E" />
+            </svg>
+        )
+    },
 ];
 
 interface LanguageSwitcherProps {

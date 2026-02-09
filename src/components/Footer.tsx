@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -51,15 +51,6 @@ export default function Footer() {
                         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-1 bg-amber-500 rounded-full"></span>
                     </h3>
                     <ul className="space-y-4 md:space-y-6 w-full flex flex-col items-center md:items-start">
-                        <li className="flex items-start gap-4 group cursor-pointer">
-                            <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
-                                <MapPin size={18} />
-                            </div>
-                            <span className="text-slate-400 text-left leading-relaxed group-hover:text-white transition-colors">
-                                ul. Portowa 12<br />
-                                11-500 Giżycko
-                            </span>
-                        </li>
                         <li className="flex items-center gap-4 group">
                             <div className="p-2 rounded-full bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
                                 <Phone size={18} />
@@ -110,6 +101,6 @@ export default function Footer() {
             <div className="container mx-auto px-4 mt-12 md:mt-16 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
                 &copy; {new Date().getFullYear()} mazury.holiday. {t("footer", "rights")}.
             </div>
-        </footer>
+        </footer >
     );
 }
