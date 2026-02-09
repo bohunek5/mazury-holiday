@@ -128,17 +128,18 @@ const ICalCalendar = ({ icalUrl }: { icalUrl: string }) => {
     const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
 
     const getDayStyle = (status: string) => {
+        const baseStyle = 'border border-slate-300 dark:border-slate-600';
         switch (status) {
             case 'full':
-                return 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium';
+                return `bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium ${baseStyle}`;
             case 'check-in':
-                return 'text-red-600 dark:text-red-400 font-medium'; // Style via inline for gradient
+                return `text-red-600 dark:text-red-400 font-medium ${baseStyle}`; // Style via inline for gradient
             case 'check-out':
-                return 'text-red-600 dark:text-red-400 font-medium'; // Style via inline for gradient
+                return `text-red-600 dark:text-red-400 font-medium ${baseStyle}`; // Style via inline for gradient
             case 'transition':
-                return 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium';
+                return `bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium ${baseStyle}`;
             default:
-                return 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800';
+                return `text-slate-700 dark:text-slate-300 ${baseStyle} hover:bg-slate-100 dark:hover:bg-slate-800`;
         }
     };
 
@@ -229,26 +230,26 @@ const ICalCalendar = ({ icalUrl }: { icalUrl: string }) => {
 
                 <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 text-[10px] md:text-xs">
                     <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-900/50" />
+                        <div className="w-3 h-3 rounded bg-red-100 dark:bg-red-900/30 border border-slate-300 dark:border-slate-600" />
                         <span className="text-slate-500">Zajęte</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div
-                            className="w-3 h-3 rounded border border-red-200 dark:border-red-900/50"
+                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600"
                             style={{ background: 'linear-gradient(to bottom right, rgba(239, 68, 68, 0.2) 50%, transparent 50%)' }}
                         />
-                        <span className="text-slate-500">Wyjazd</span>
+                        <span className="text-slate-500">Możliwy przyjazd</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div
-                            className="w-3 h-3 rounded border border-red-200 dark:border-red-900/50"
+                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600"
                             style={{ background: 'linear-gradient(to bottom right, transparent 50%, rgba(239, 68, 68, 0.2) 50%)' }}
                         />
-                        <span className="text-slate-500">Przyjazd</span>
+                        <span className="text-slate-500">Możliwy wyjazd</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700" />
-                        <span className="text-slate-500">Wolne</span>
+                        <div className="w-3 h-3 rounded bg-transparent border border-slate-300 dark:border-slate-600" />
+                        <span className="text-slate-500">Dostępne</span>
                     </div>
                 </div>
             </div>
