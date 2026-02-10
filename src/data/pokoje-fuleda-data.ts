@@ -15,6 +15,8 @@ export type PokojeData = {
         heroImage: string;
         images: string[];
     };
+    idoBookingId?: string;
+    icalUrl?: string;
 };
 
 export const pokojeFuledaData: PokojeData = {
@@ -22,6 +24,8 @@ export const pokojeFuledaData: PokojeData = {
     title: 'Fuleda Pokoje',
     price: 'od 375 zł/doba',
     guests: '4',
+    idoBookingId: '28',
+    icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/28/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
     description: `Oferujemy do wynajęcia dwa pokoje: jeden z łóżkiem podwójnym, drugi z dwoma pojedynczymi, łazienka z prysznicem i wc. Przy pokojach zadaszony taras. W osobnym budynku oddalonym o 10m od pokoi kuchnia z dodatkowym wc. Wszystko znajduje się na półwyspie Fuledzki Róg nad brzegiem jeziora Dobskie ze strefą ciszy na ogrodzonym terenie Folwark Fuleda.
 
 Wspaniałe miejsce dla osób ceniących sobie dziką naturę, ciszę i spokój. Z dala od miasta.

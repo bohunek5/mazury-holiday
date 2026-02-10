@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
+import ICalCalendar from "@/components/ICalCalendar";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -118,6 +119,12 @@ export default function KisajnoPage() {
                     >
                         {t("kisajnoPage", "callAction")}: +48 607 241 090
                     </a>
+                    <div className="mt-8 max-w-4xl mx-auto">
+                        <ICalCalendar
+                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/56/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                            apartmentId="Kisajno"
+                        />
+                    </div>
                 </div>
             </section>
 

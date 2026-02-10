@@ -2,10 +2,11 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Anchor, LifeBuoy, Sun } from "lucide-react";
+import { Anchor, LifeBuoy } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
+import ICalCalendar from "@/components/ICalCalendar";
 
 export default function CharterPage() {
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -183,10 +184,12 @@ export default function CharterPage() {
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
                                     Sprawdź dostępność w naszym kalendarzu online i zarezerwuj swoje wakacje marzeń już dziś.
                                 </p>
-                                <button className="w-full py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-amber-500/40 transform hover:-translate-y-1 relative z-10 flex items-center justify-center gap-2">
-                                    <Sun size={20} />
-                                    SPRAWDŹ DOSTĘPNOŚĆ
-                                </button>
+                                <div className="mt-6">
+                                    <ICalCalendar
+                                        icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/31/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                                        apartmentId="Stillo 30 VIP"
+                                    />
+                                </div>
                             </div>
 
                             {/* Technical Specs & Equipment */}

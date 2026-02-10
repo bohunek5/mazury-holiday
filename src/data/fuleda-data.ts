@@ -14,6 +14,8 @@ export type FuledaApartment = {
         heroImage: string;
         images: string[];
     };
+    idoBookingId?: string;
+    icalUrl?: string;
 };
 
 export const fuledaApartments: Record<string, FuledaApartment> = {
@@ -21,6 +23,8 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
         id: 'parter',
         type: 'Parter',
         guests: '2+2',
+        idoBookingId: '26',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/26/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         description: 'Apartamenty na Fuledzie to pięknie i stylowo wykończony obiekt. Lokalizacja nad samym jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.\n\nApartament na parterze posiada prywatne dojście do jeziora z miejscem na ognisko i grilla. Wyposażony jest w klimatyzację oraz kominek, co zapewnia komfort o każdej porze roku.',
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'TV', 'Stół i krzesła', 'Kominek', 'WiFi'],
@@ -50,6 +54,8 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
         id: 'pietro',
         type: 'Piętro',
         guests: '2+1',
+        idoBookingId: '27',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/27/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         description: 'Apartamenty na Fuledzie to pięknie i stylowo wykończony obiekt. Lokalizacja nad samym jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.\n\nApartament Fuleda z jedną sypialnią położony na piętrze jest kompleksowo wyposażony, ogrzewany i zapewnia komfortowy wypoczynek przez cały rok. Posiada klimatyzację oraz przytulny kominek.',
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'TV', 'Stół i krzesła', 'Kominek', 'WiFi'],

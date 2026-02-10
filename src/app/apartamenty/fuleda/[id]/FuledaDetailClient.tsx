@@ -1,5 +1,7 @@
 "use client";
 
+import ICalCalendar from "@/components/ICalCalendar";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -293,18 +295,12 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                             </p>
 
                             <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
-                                <h4 className="text-lg font-semibold mb-4 text-slate-900 dark:text-white text-center">
-                                    Dostępność
-                                </h4>
-                                <div
-                                    id="idobooking-calendar"
-                                    className="iai_calendar_widget"
-                                    data-client="37851"
-                                    data-object="1"
-                                    data-show-legend="true"
-                                    data-show-prices="false"
-                                    data-language="0"
-                                />
+                                {data.icalUrl && (
+                                    <ICalCalendar
+                                        icalUrl={data.icalUrl}
+                                        apartmentId={`Apartament ${id === 'parter' ? 'Parter' : 'Piętro'}`}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>
@@ -339,16 +335,18 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                 </button>
             </div>
 
-            {lightboxOpen && (
-                <ImageLightbox
-                    images={data.gallery.images}
-                    currentIndex={lightboxIndex}
-                    onClose={() => setLightboxOpen(false)}
-                    altPrefix={title}
-                />
-            )}
+            {
+                lightboxOpen && (
+                    <ImageLightbox
+                        images={data.gallery.images}
+                        currentIndex={lightboxIndex}
+                        onClose={() => setLightboxOpen(false)}
+                        altPrefix={title}
+                    />
+                )
+            }
 
             <Footer />
-        </main>
+        </main >
     );
 }

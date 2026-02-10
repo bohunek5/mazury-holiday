@@ -178,9 +178,9 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             case 'full':
                 return `bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium ${baseStyle}`;
             case 'check-in':
-                return `text-red-600 dark:text-red-400 font-medium ${baseStyle}`; // Style via inline for gradient
+                return `text-red-600 dark:text-red-400 font-medium ${baseStyle} bg-[linear-gradient(to_bottom_right,transparent_50%,rgba(239,68,68,0.2)_50%)]`;
             case 'check-out':
-                return `text-red-600 dark:text-red-400 font-medium ${baseStyle}`; // Style via inline for gradient
+                return `text-red-600 dark:text-red-400 font-medium ${baseStyle} bg-[linear-gradient(to_bottom_right,rgba(239,68,68,0.2)_50%,transparent_50%)]`;
             case 'transition':
                 return `bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium ${baseStyle}`;
             default:
@@ -188,19 +188,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
         }
     };
 
-    const getGradientStyle = (status: string) => {
-        if (status === 'check-in') {
-            return {
-                background: 'linear-gradient(to bottom right, transparent 50%, rgba(239, 68, 68, 0.2) 50%)'
-            };
-        }
-        if (status === 'check-out') {
-            return {
-                background: 'linear-gradient(to bottom right, rgba(239, 68, 68, 0.2) 50%, transparent 50%)'
-            };
-        }
-        return {};
-    };
+
 
     return (
         <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800">
@@ -262,7 +250,6 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                                     p-2 text-center text-sm rounded-lg transition-all relative
                                     ${getDayStyle(status)}
                                 `}
-                                style={getGradientStyle(status)}
                             >
                                 {day}
                                 {(status === 'full' || status === 'transition') && (
@@ -280,15 +267,13 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                     </div>
                     <div className="flex items-center gap-2">
                         <div
-                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600"
-                            style={{ background: 'linear-gradient(to bottom right, rgba(239, 68, 68, 0.2) 50%, transparent 50%)' }}
+                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600 bg-[linear-gradient(to_bottom_right,rgba(239,68,68,0.2)_50%,transparent_50%)]"
                         />
                         <span className="text-slate-500">Możliwy przyjazd</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div
-                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600"
-                            style={{ background: 'linear-gradient(to bottom right, transparent 50%, rgba(239, 68, 68, 0.2) 50%)' }}
+                            className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600 bg-[linear-gradient(to_bottom_right,transparent_50%,rgba(239,68,68,0.2)_50%)]"
                         />
                         <span className="text-slate-500">Możliwy wyjazd</span>
                     </div>
