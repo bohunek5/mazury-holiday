@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fuledaApartments } from "@/data/fuleda-data";
 import ImageLightbox from "@/components/ImageLightbox";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getAmenityIcon } from "@/utils/amenityIcons";
 
 interface FuledaDetailClientProps {
@@ -22,51 +22,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
-    // Load iDoBooking widget script
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://engine37851.idobooking.com/widget/script/loadScriptsForOwnPage?1712752373';
-        script.async = true;
 
-        script.onload = () => {
-            const win = window as typeof window & {
-                iai_booking_button?: (config: Record<string, unknown>) => void;
-                iai_calendar_widget?: (config: Record<string, unknown>) => void;
-            };
-
-            if (typeof win.iai_booking_button === 'function') {
-                win.iai_booking_button({
-                    "langNew": "0",
-                    "langIdCodes": { "1": "pl", "pl": 1 },
-                    "literalsInLang": {
-                        "1": {
-                            "label1": "Od",
-                            "label2": "Do",
-                            "label3": "Osoby",
-                            "label4": null,
-                            "label5": "Lokalizacje",
-                            "button": "Zarezerwuj go",
-                            "days": ["Nd", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"],
-                            "months": ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
-                            "trigger": "Rezerwacja online"
-                        }
-                    }
-                });
-            }
-
-            if (typeof win.iai_calendar_widget === 'function') {
-                win.iai_calendar_widget({});
-            }
-        };
-
-        document.body.appendChild(script);
-
-        return () => {
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
-            }
-        };
-    }, []);
 
     if (!data) {
         return (
@@ -272,23 +228,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {t("details", "callBtn")}: +48 607 241 090
                             </a>
 
-                            <button
-                                className="hidden lg:block i_do_sell_booking_widget_start w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-colors mb-4"
-                                data-currency="0"
-                                data-client="37851"
-                                data-location=""
-                                data-object="1"
-                                data-show-other-objects="true"
-                                data-language="0"
-                                onClick={(e) => {
-                                    const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
-                                    if (typeof win.generateWidgetIdoSellBooking === 'function') {
-                                        win.generateWidgetIdoSellBooking(e.currentTarget);
-                                    }
-                                }}
-                            >
-                                Rezerwuj
-                            </button>
+
 
                             <p className="text-xs text-center text-slate-500 mb-6">
                                 {t("details", "lowPrice")}
@@ -316,23 +256,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                 >
                     tel. +48...
                 </a>
-                <button
-                    className="flex-[2] i_do_sell_booking_widget_start text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-lg shadow-lg"
-                    data-currency="0"
-                    data-client="37851"
-                    data-location=""
-                    data-object="1"
-                    data-show-other-objects="true"
-                    data-language="0"
-                    onClick={(e) => {
-                        const win = window as typeof window & { generateWidgetIdoSellBooking?: (el: HTMLElement) => void };
-                        if (typeof win.generateWidgetIdoSellBooking === 'function') {
-                            win.generateWidgetIdoSellBooking(e.currentTarget);
-                        }
-                    }}
-                >
-                    Zarezerwuj
-                </button>
+
             </div>
 
             {

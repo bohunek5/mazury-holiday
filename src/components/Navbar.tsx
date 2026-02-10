@@ -11,6 +11,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MobileChatTrigger } from "@/components/MobileChatTrigger";
+import logoPoziom from "@/assets/images/logo-poziom.svg";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -50,27 +51,37 @@ export default function Navbar() {
     const buttonClass = cn(
         "transition-all duration-300 px-4 py-2 rounded-full border text-sm font-medium uppercase tracking-wide",
         isScrolled || !isHomePage
-            ? "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white"
+            ? "border-amber-500 text-slate-900 dark:text-white hover:bg-amber-500 hover:text-white"
             : "border-white/50 text-white hover:border-white hover:bg-white/10"
     );
+
+    const textColorClass = isScrolled || !isHomePage ? "text-slate-900 dark:text-white" : "text-white";
+    const dividerColorClass = isScrolled || !isHomePage ? "bg-slate-900 dark:bg-white/20" : "bg-white/20";
+    const mobileMenuBgClass = "bg-white dark:bg-slate-950";
+    const mobileLinkClass = "text-slate-900 dark:text-slate-200 hover:text-amber-500";
 
     return (
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,border-color,box-shadow] duration-300 ease-in-out",
                 isScrolled || !isHomePage
-                    ? "bg-slate-900/95 shadow-lg py-4 border-b border-white/10"
+                    ? "bg-white dark:bg-slate-900/95 shadow-lg py-4 border-b border-slate-200 dark:border-slate-800"
                     : "bg-transparent py-8"
             )}
         >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="relative h-10 w-40 md:h-19 md:w-77 flex items-center z-50">
+                <Link href="/" className="relative h-10 w-40 md:h-20 md:w-80 flex items-center z-50">
                     <Image
-                        src="/mazury-holiday/images/logo-poziom.svg"
+                        src={logoPoziom}
                         alt="Mazury.Holiday"
                         fill
-                        className="object-contain object-left filter brightness-0 invert"
+                        className={cn(
+                            "object-contain object-left transition-all duration-300",
+                            isScrolled || !isHomePage
+                                ? "dark:filter dark:brightness-0 dark:invert"
+                                : "filter brightness-0 invert"
+                        )}
                         priority
                     />
                 </Link>
@@ -91,28 +102,27 @@ export default function Navbar() {
                 {/* Right Actions */}
                 <div className="flex items-center gap-4 z-50">
                     {/* Desktop Controls */}
-                    <div className="hidden lg:flex items-center gap-4">
-                        <div className={cn("h-6 w-px lg:block hidden", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
-                        <LanguageSwitcher className={isScrolled || !isHomePage ? "text-slate-200" : "text-white"} />
-                        <div className={cn("h-6 w-px", isScrolled || !isHomePage ? "bg-slate-700" : "bg-white/20")} />
-                        <ThemeToggle className={isScrolled || !isHomePage ? "text-slate-200 hover:bg-slate-800" : "text-white hover:bg-white/10"} />
+                    <div className="hidden xl:flex items-center gap-4">
+                        <div className={cn("h-6 w-px xl:block hidden", dividerColorClass)} />
+                        <LanguageSwitcher className={textColorClass} />
+                        <div className={cn("h-6 w-px", dividerColorClass)} />
+                        <ThemeToggle className={cn(textColorClass, "hover:bg-white/10")} />
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="lg:hidden flex items-center gap-2">
+                    <div className="xl:hidden flex items-center gap-2">
                         <MobileChatTrigger />
-                        {/* Removed ThemeToggle from here to avoid clutter, can be added inside menu if needed, 
-                            but typically one toggle is enough or it can stay next to hamburger if desired. 
-                            Keeping it consistent with desktop: usually user wants easy access. 
-                            Let's keep it next to hamburger for now, but ensure visibility. */}
-                        <ThemeToggle className={isScrolled || !isHomePage || isMobileMenuOpen ? "text-slate-200" : "text-white hover:bg-white/10"} />
+                        <ThemeToggle className={cn(
+                            isMobileMenuOpen ? "text-slate-900 dark:text-white" : textColorClass,
+                            "hover:bg-white/10"
+                        )} />
 
                         <button
                             className={cn(
                                 "transition-colors duration-300",
-                                isScrolled || !isHomePage || isMobileMenuOpen
-                                    ? "text-slate-200 hover:text-amber-500"
-                                    : "text-white hover:text-amber-400"
+                                isMobileMenuOpen
+                                    ? "text-slate-900 dark:text-white hover:text-amber-500"
+                                    : cn(textColorClass, "hover:text-amber-400")
                             )}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-label="Toggle menu"
@@ -135,7 +145,10 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-slate-950 flex flex-col items-center justify-start pt-32 gap-6 lg:hidden overflow-y-auto"
+                        className={cn(
+                            "fixed inset-0 z-40 flex flex-col items-center justify-start pt-32 gap-6 lg:hidden overflow-y-auto",
+                            mobileMenuBgClass
+                        )}
                     >
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
@@ -151,7 +164,10 @@ export default function Navbar() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className="block text-slate-200 hover:text-amber-500 text-2xl font-medium py-2 w-full text-center transition-colors"
+                                        className={cn(
+                                            "block text-2xl font-medium py-2 w-full text-center transition-colors",
+                                            mobileLinkClass
+                                        )}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.name}
@@ -166,10 +182,10 @@ export default function Navbar() {
                             transition={{ delay: 0.5 }}
                             className="flex flex-col items-center gap-4 mt-0 mb-8"
                         >
-                            <div className="w-16 h-px bg-slate-800" />
+                            <div className={cn("w-16 h-px", "bg-slate-200 dark:bg-slate-800")} />
                             <div className="flex items-center gap-4">
-                                <span className="text-slate-400 text-sm font-medium uppercase tracking-wider">Język</span>
-                                <LanguageSwitcher className="text-white" dropUp={true} />
+                                <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Język</span>
+                                <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} />
                             </div>
                         </motion.div>
                     </motion.div>
