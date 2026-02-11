@@ -1,25 +1,4 @@
-export type Apartment = {
-    id: string;
-    building: 'A' | 'B' | 'C';
-    type: string;
-    price: number;
-    guests: string;
-    description: string;
-    amenities: {
-        living: string[];
-        kitchen: string[];
-        bedroom: string[];
-        bathroom: string[];
-        terrace: string[];
-    };
-    additionalInfo: string[];
-    gallery: {
-        heroImage: string;
-        images: string[];
-    };
-    idoBookingId?: string;
-    icalUrl?: string;
-};
+import { Apartment } from '@/types/apartment';
 
 export const strandaApartments: Record<string, Apartment> = {
     'A103': {
@@ -28,25 +7,73 @@ export const strandaApartments: Record<string, Apartment> = {
         type: 'Suite',
         price: 300,
         guests: '2+2',
+        description: `Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "wyjście na taras",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców",
+                "zestaw startowy (woda, kawa, herbata)"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "ręczniki",
+                "żel pod prysznic",
+                "balsam"
+            ],
+            "terrace": [
+                "przestronny taras",
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '2',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/2/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.',
-        amenities: {
-            living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV', 'WiFi'],
-            kitchen: ['Zmywarka', 'Płyta indukcyjna', 'Lodówka', 'Kuchenka mikrofalowa', 'Komplet naczyń'],
-            bedroom: ['Łóżko 180x200', 'TV', 'Szafa'],
-            bathroom: ['Prysznic', 'Suszarka do włosów', 'Ręczniki', 'Pralka'],
-            terrace: ['Meble wypoczynkowe', 'Widok na port Stranda']
-        },
-        additionalInfo: ['Bezpłatne WiFi', 'Miejsce parkingowe w cenie'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
-            images: [
-                '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
-                '/mazury-holiday/images/stranda/A103_images/0T1A8742.webp',
-                '/mazury-holiday/images/stranda/A103_images/0T1A8747.webp',
-                '/mazury-holiday/images/stranda/A103_images/0T1A8745.webp',
-                '/mazury-holiday/images/stranda/A103_images/A103 łazienkaa.webp'
+            "heroImage": "/mazury-holiday/images/stranda/A103/A103_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A103/A103_1.webp",
+                "/mazury-holiday/images/stranda/A103/A103_2.webp",
+                "/mazury-holiday/images/stranda/A103/A103_3.webp",
+                "/mazury-holiday/images/stranda/A103/A103_4.webp",
+                "/mazury-holiday/images/stranda/A103/A103_5.webp",
+                "/mazury-holiday/images/stranda/A103/A103_6.webp",
+                "/mazury-holiday/images/stranda/A103/A103_7.webp",
+                "/mazury-holiday/images/stranda/A103/A103_8.webp",
+                "/mazury-holiday/images/stranda/A103/A103_9.webp",
+                "/mazury-holiday/images/stranda/A103/A103_10.webp",
+                "/mazury-holiday/images/stranda/A103/A103_11.webp",
+                "/mazury-holiday/images/stranda/A103/A103_12.webp"
             ]
         }
     },
@@ -55,26 +82,74 @@ export const strandaApartments: Record<string, Apartment> = {
         building: 'A',
         type: 'Delux z jacuzzi',
         price: 450,
-        guests: '2+2',
+        guests: '2+1',
+        description: `Apartament A104 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienkę z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda v apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 1os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców",
+                "zestaw startowy (woda, kawa, herbata)"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała",
+                "komplet ręczników"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '3',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/3/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A104 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi.',
-        amenities: {
-            living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV'],
-            kitchen: ['Aneks kuchenny', 'Zmywarka', 'Płyta indukcyjna'],
-            bedroom: ['Łóżko podwójne', 'TV'],
-            bathroom: ['Prysznic', 'Suszarka do włosów'],
-            terrace: ['Prywatne jacuzzi', 'Meble tarasowe', 'Widok na jezioro Kisajno']
-        },
-        additionalInfo: ['Prywatne jacuzzi w cenie', 'Miejsce parkingowe'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A104_images/A104j.webp',
-            images: [
-                '/mazury-holiday/images/stranda/A104_images/A104k.webp',
-                '/mazury-holiday/images/stranda/A104_images/A104j.webp',
-                '/mazury-holiday/images/stranda/A104_images/A104i.webp',
-                '/mazury-holiday/images/stranda/A104_images/A104h.webp',
-                '/mazury-holiday/images/stranda/A104_images/A104g.webp'
+            "heroImage": "/mazury-holiday/images/stranda/A104/A104_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A104/A104_1.webp",
+                "/mazury-holiday/images/stranda/A104/A104_2.webp",
+                "/mazury-holiday/images/stranda/A104/A104_3.webp",
+                "/mazury-holiday/images/stranda/A104/A104_4.webp",
+                "/mazury-holiday/images/stranda/A104/A104_5.webp",
+                "/mazury-holiday/images/stranda/A104/A104_6.webp",
+                "/mazury-holiday/images/stranda/A104/A104_7.webp",
+                "/mazury-holiday/images/stranda/A104/A104_8.webp",
+                "/mazury-holiday/images/stranda/A104/A104_9.webp",
+                "/mazury-holiday/images/stranda/A104/A104_10.webp",
+                "/mazury-holiday/images/stranda/A104/A104_11.webp",
+                "/mazury-holiday/images/stranda/A104/A104_12.webp",
+                "/mazury-holiday/images/stranda/A104/A104_13.webp",
+                "/mazury-holiday/images/stranda/A104/A104_14.webp"
             ]
         }
     },
@@ -84,203 +159,674 @@ export const strandaApartments: Record<string, Apartment> = {
         type: 'Delux z jacuzzi',
         price: 450,
         guests: '2+2',
+        description: `Apartament A105 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda v apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców",
+                "zestaw startowy (woda, kawa, herbata)"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała",
+                "komplet ręczników"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '10',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/10/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A105 to luksusowa jednostka z jacuzzi, oferująca komfortowy wypoczynek w nowoczesnym wnętrzu.',
-        amenities: {
-            living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV'],
-            kitchen: ['Aneks kuchenny', 'Zmywarka', 'Ekspres do kawy'],
-            bedroom: ['Łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Zestaw kosmetyków'],
-            terrace: ['Prywatne jacuzzi', 'Widok na marinę']
-        },
-        additionalInfo: ['Dostęp do WiFi', 'Gwarancja jakości'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
-            images: [
-                '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0387_023740.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0388_02391019628.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0389_02394119878.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0392_024142.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0393_02431221600.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0394_02434221848.webp',
-                '/mazury-holiday/images/stranda/A105_images/5S5A0395_02451022567.webp'
+            "heroImage": "/mazury-holiday/images/stranda/A105/A105_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A105/A105_1.webp",
+                "/mazury-holiday/images/stranda/A105/A105_2.webp",
+                "/mazury-holiday/images/stranda/A105/A105_3.webp",
+                "/mazury-holiday/images/stranda/A105/A105_4.webp",
+                "/mazury-holiday/images/stranda/A105/A105_5.webp",
+                "/mazury-holiday/images/stranda/A105/A105_6.webp",
+                "/mazury-holiday/images/stranda/A105/A105_7.webp",
+                "/mazury-holiday/images/stranda/A105/A105_8.webp",
+                "/mazury-holiday/images/stranda/A105/A105_9.webp",
+                "/mazury-holiday/images/stranda/A105/A105_10.webp",
+                "/mazury-holiday/images/stranda/A105/A105_11.webp"
             ]
         }
     },
     'A204': {
         id: 'A204',
         building: 'A',
-        type: 'Delux z jacuzzi',
-        price: 450,
+        type: 'Suite',
+        price: 300,
         guests: '2+2',
+        description: `Apartament A204 Suite leży na pierwszym piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym, rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "ręczniki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '12',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/12/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A204 to luksusowa jednostka z jacuzzi na wyższej kondygnacji, oferująca niezapomniane widoki i komfort.',
-        amenities: {
-            living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV'],
-            kitchen: ['Aneks kuchenny', 'Zmywarka', 'Ekspres do kawy'],
-            bedroom: ['Łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Suszarka'],
-            terrace: ['Prywatne jacuzzi', 'Meble tarasowe']
-        },
-        additionalInfo: ['WiFi', 'Miejsce postojowe'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A104_images/A104j.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A204/A204_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A204/A204_1.webp",
+                "/mazury-holiday/images/stranda/A204/A204_2.webp",
+                "/mazury-holiday/images/stranda/A204/A204_3.webp",
+                "/mazury-holiday/images/stranda/A204/A204_4.webp",
+                "/mazury-holiday/images/stranda/A204/A204_5.webp",
+                "/mazury-holiday/images/stranda/A204/A204_6.webp",
+                "/mazury-holiday/images/stranda/A204/A204_7.webp",
+                "/mazury-holiday/images/stranda/A204/A204_8.webp",
+                "/mazury-holiday/images/stranda/A204/A204_9.webp",
+                "/mazury-holiday/images/stranda/A204/A204_10.webp",
+                "/mazury-holiday/images/stranda/A204/A204_11.webp"
+            ]
         }
     },
     'A205': {
         id: 'A205',
         building: 'A',
-        type: 'Delux z jacuzzi',
-        price: 450,
+        type: 'Suite',
+        price: 300,
         guests: '2+2',
+        description: `Apartament A205 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami. Znajduje się na drugiej kondygnacji budynku.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "meble tarasowe",
+                "leżak",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '13',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/13/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A205 łączy luksus z nowoczesnością, zapewniając relaks w prywatnym jacuzzi z widokiem na okolicę.',
-        amenities: {
-            living: ['Klimatyzacja', 'Smart TV', 'Sofa'],
-            kitchen: ['Zmywarka', 'Płyta indukcyjna', 'Lodówka'],
-            bedroom: ['Łóżko podwójne'],
-            bathroom: ['Prysznic', 'Ręczniki'],
-            terrace: ['Prywatne jacuzzi', 'Widok na jezioro']
-        },
-        additionalInfo: ['Bezpłatne WiFi', 'Parking'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A205/A205_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A205/A205_1.webp",
+                "/mazury-holiday/images/stranda/A205/A205_2.webp",
+                "/mazury-holiday/images/stranda/A205/A205_3.webp",
+                "/mazury-holiday/images/stranda/A205/A205_4.webp",
+                "/mazury-holiday/images/stranda/A205/A205_5.webp",
+                "/mazury-holiday/images/stranda/A205/A205_6.webp",
+                "/mazury-holiday/images/stranda/A205/A205_7.webp",
+                "/mazury-holiday/images/stranda/A205/A205_8.webp",
+                "/mazury-holiday/images/stranda/A205/A205_9.webp",
+                "/mazury-holiday/images/stranda/A205/A205_10.webp",
+                "/mazury-holiday/images/stranda/A205/A205_11.webp",
+                "/mazury-holiday/images/stranda/A205/A205_12.webp",
+                "/mazury-holiday/images/stranda/A205/A205_13.webp",
+                "/mazury-holiday/images/stranda/A205/A205_14.webp",
+                "/mazury-holiday/images/stranda/A205/A205_15.webp",
+                "/mazury-holiday/images/stranda/A205/A205_16.webp"
+            ]
         }
     },
     'A302': {
         id: 'A302',
         building: 'A',
         type: 'Suite',
-        price: 350,
+        price: 500,
         guests: '2+2',
-        idoBookingId: '50',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/50/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A302 typu Suite oferuje przestronne wnętrza i wysoki standard wykończenia dla wymagających gości.',
+        description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
-            living: ['Klimatyzacja', 'Sofa 2-osobowa', 'Smart TV'],
-            kitchen: ['Pełne wyposażenie kuchni', 'Zmywarka'],
-            bedroom: ['Duże łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Pralka'],
-            terrace: ['Balkon', 'Meble wypoczynkowe']
+            "living": [
+                "TV",
+                "sofa 1os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
         },
-        additionalInfo: ['WiFi', 'Winda w budynku'],
+        additionalInfo: [],
+        idoBookingId: '42',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/42/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A302/A302_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A302/A302_1.webp",
+                "/mazury-holiday/images/stranda/A302/A302_2.webp",
+                "/mazury-holiday/images/stranda/A302/A302_3.webp",
+                "/mazury-holiday/images/stranda/A302/A302_4.webp",
+                "/mazury-holiday/images/stranda/A302/A302_5.webp",
+                "/mazury-holiday/images/stranda/A302/A302_6.webp",
+                "/mazury-holiday/images/stranda/A302/A302_7.webp",
+                "/mazury-holiday/images/stranda/A302/A302_8.webp",
+                "/mazury-holiday/images/stranda/A302/A302_9.webp",
+                "/mazury-holiday/images/stranda/A302/A302_10.webp",
+                "/mazury-holiday/images/stranda/A302/A302_11.webp",
+                "/mazury-holiday/images/stranda/A302/A302_12.webp",
+                "/mazury-holiday/images/stranda/A302/A302_13.webp",
+                "/mazury-holiday/images/stranda/A302/A302_14.webp",
+                "/mazury-holiday/images/stranda/A302/A302_15.webp"
+            ]
         }
     },
     'A305': {
         id: 'A305',
         building: 'A',
-        type: 'Delux z jacuzzi',
-        price: 450,
+        type: 'Suite',
+        price: 300,
         guests: '2+2',
+        description: `Apartament A305 Suite leży na trzeciej kondygnacji budynku, z której rozpościera się piękny widok na jezioro Kisajno. Posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "żel pod prysznic",
+                "mydło",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "meble tarasowe",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '14',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/14/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A305 to elegancja i relaks w jednym - prywatne jacuzzi na tarasie to idealny sposób na odpoczynek.',
-        amenities: {
-            living: ['Klimatyzacja', 'Smart TV', 'Sofa'],
-            kitchen: ['Zmywarka', 'Ekspres do kawy'],
-            bedroom: ['Łóżko 180x200'],
-            bathroom: ['Prysznic', 'Suszarka'],
-            terrace: ['Prywatne jacuzzi', 'Panoramiczny widok']
-        },
-        additionalInfo: ['Premium Service', 'WiFi'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A305/A305_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A305/A305_1.webp",
+                "/mazury-holiday/images/stranda/A305/A305_2.webp",
+                "/mazury-holiday/images/stranda/A305/A305_3.webp",
+                "/mazury-holiday/images/stranda/A305/A305_4.webp",
+                "/mazury-holiday/images/stranda/A305/A305_5.webp",
+                "/mazury-holiday/images/stranda/A305/A305_6.webp",
+                "/mazury-holiday/images/stranda/A305/A305_7.webp",
+                "/mazury-holiday/images/stranda/A305/A305_8.webp",
+                "/mazury-holiday/images/stranda/A305/A305_9.webp",
+                "/mazury-holiday/images/stranda/A305/A305_10.webp",
+                "/mazury-holiday/images/stranda/A305/A305_11.webp",
+                "/mazury-holiday/images/stranda/A305/A305_12.webp",
+                "/mazury-holiday/images/stranda/A305/A305_13.webp"
+            ]
         }
     },
     'A306': {
         id: 'A306',
         building: 'A',
-        type: 'Delux z jacuzzi',
-        price: 450,
-        guests: '2+2',
+        type: 'Suite',
+        price: 500,
+        guests: '4+2',
+        description: `Apartament A306 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży zadaszony taras z meblami. Leży na trzeciej kondygnacji budynku.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras",
+                "sauna"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "żel pod prysznic",
+                "mydło",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "meble tarasowe",
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro",
+                "jacuzzi"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '15',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/15/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament A306 oferuje luksusowy standard oraz najwyższej jakości udogodnienia, w tym prywatne jacuzzi.',
-        amenities: {
-            living: ['Klimatyzacja', 'Sofa', 'TV'],
-            kitchen: ['Zmywarka', 'Aneks kuchenny'],
-            bedroom: ['Łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Zestaw ręczników'],
-            terrace: ['Prywatne jacuzzi', 'Widok na marinę']
-        },
-        additionalInfo: ['Bezpłatny parking', 'WiFi'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A104_images/A104j.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A306/A306_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A306/A306_1.webp",
+                "/mazury-holiday/images/stranda/A306/A306_2.webp",
+                "/mazury-holiday/images/stranda/A306/A306_3.webp",
+                "/mazury-holiday/images/stranda/A306/A306_4.webp",
+                "/mazury-holiday/images/stranda/A306/A306_5.webp",
+                "/mazury-holiday/images/stranda/A306/A306_6.webp",
+                "/mazury-holiday/images/stranda/A306/A306_7.webp",
+                "/mazury-holiday/images/stranda/A306/A306_8.webp",
+                "/mazury-holiday/images/stranda/A306/A306_9.webp",
+                "/mazury-holiday/images/stranda/A306/A306_10.webp",
+                "/mazury-holiday/images/stranda/A306/A306_11.webp",
+                "/mazury-holiday/images/stranda/A306/A306_12.webp",
+                "/mazury-holiday/images/stranda/A306/A306_13.webp",
+                "/mazury-holiday/images/stranda/A306/A306_14.webp",
+                "/mazury-holiday/images/stranda/A306/A306_15.webp",
+                "/mazury-holiday/images/stranda/A306/A306_16.webp",
+                "/mazury-holiday/images/stranda/A306/A306_17.webp"
+            ]
+        }
+    },
+    'A402': {
+        id: 'A402',
+        building: 'A',
+        type: 'Delux z jacuzzi',
+        price: 550,
+        guests: '2+2',
+        description: `Apartament A402 Delux leży na ostatniej kondygnacji budynku i posiada prywatne jacuzzi na tarasie na dachu. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni, łazienki z prysznicem, balkonu oraz dużego tarasu na dachu na którym znajduje się komplet mebli wypoczynkowych oraz prywatne jacuzzi.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "szlafroki",
+                "kosmetyki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro",
+                "dwa fotele",
+                "jacuzzi",
+                "pergola"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '16',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/16/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/A402/A402_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A402/A402_1.webp",
+                "/mazury-holiday/images/stranda/A402/A402_2.webp",
+                "/mazury-holiday/images/stranda/A402/A402_3.webp",
+                "/mazury-holiday/images/stranda/A402/A402_4.webp",
+                "/mazury-holiday/images/stranda/A402/A402_5.webp",
+                "/mazury-holiday/images/stranda/A402/A402_6.webp",
+                "/mazury-holiday/images/stranda/A402/A402_7.webp",
+                "/mazury-holiday/images/stranda/A402/A402_8.webp",
+                "/mazury-holiday/images/stranda/A402/A402_9.webp",
+                "/mazury-holiday/images/stranda/A402/A402_10.webp",
+                "/mazury-holiday/images/stranda/A402/A402_11.webp",
+                "/mazury-holiday/images/stranda/A402/A402_12.webp",
+                "/mazury-holiday/images/stranda/A402/A402_13.webp",
+                "/mazury-holiday/images/stranda/A402/A402_14.webp",
+                "/mazury-holiday/images/stranda/A402/A402_15.webp",
+                "/mazury-holiday/images/stranda/A402/A402_16.webp",
+                "/mazury-holiday/images/stranda/A402/A402_17.webp",
+                "/mazury-holiday/images/stranda/A402/A402_18.webp",
+                "/mazury-holiday/images/stranda/A402/A402_19.webp",
+                "/mazury-holiday/images/stranda/A402/A402_20.webp",
+                "/mazury-holiday/images/stranda/A402/A402_21.webp",
+                "/mazury-holiday/images/stranda/A402/A402_22.webp"
+            ]
         }
     },
     'A403': {
         id: 'A403',
         building: 'A',
-        type: 'Premium Suite',
-        price: 500,
+        type: 'Delux z jacuzzi',
+        price: 550,
         guests: '2+2',
+        description: `Apartament A403 Delux leży na ostatniej kondygnacji budynku i posiada prywatne jacuzzi na tarasie na dachu. Składa się z przestronnego salonu z aneksem kuchennym i rozkładaną sofą, sypialni, łazienki z prysznicem, balkonu oraz dużego tarasu na dachu na którym znajduje się komplet mebli wypoczynkowych oraz prywatne jacuzzi.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "szlafroki",
+                "kosmetyki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro",
+                "dwa fotele",
+                "jacuzzi"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '17',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/17/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Najwyżej położony apartament A403 Premium Suite to gwarancja prywatności i najlepszych widoków w całym kompleksie.',
-        amenities: {
-            living: ['Klimatyzacja', 'Designerskie wnętrze', 'Smart TV'],
-            kitchen: ['Wysoki standard AGD', 'Zmywarka'],
-            bedroom: ['Łóżko King Size'],
-            bathroom: ['Luksusowy prysznic', 'Pralka'],
-            terrace: ['Duży taras', 'Widok panoramiczny']
-        },
-        additionalInfo: ['Top Floor', 'VIP Access', 'WiFi'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/A103_images/0T1A8736.webp',
-            images: []
-        }
-    },
-    'C404': {
-        id: 'C404',
-        building: 'C',
-        type: 'Studio',
-        price: 500,
-        guests: '2+2',
-        description: 'Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.',
-        amenities: {
-            living: ['Salon z aneksem', 'Sofa 2-osobowa', 'TV'],
-            kitchen: ['Płyta indukcyjna', 'Lodówka'],
-            bedroom: ['Łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Ręczniki'],
-            terrace: ['Widok na port', 'Meble balkonowe']
-        },
-        additionalInfo: ['Top Floor', 'Panoramiczny widok'],
-        gallery: {
-            heroImage: '/mazury-holiday/images/stranda/C404_images/hero.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/A403/A403_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/A403/A403_1.webp",
+                "/mazury-holiday/images/stranda/A403/A403_2.webp",
+                "/mazury-holiday/images/stranda/A403/A403_3.webp",
+                "/mazury-holiday/images/stranda/A403/A403_4.webp",
+                "/mazury-holiday/images/stranda/A403/A403_5.webp",
+                "/mazury-holiday/images/stranda/A403/A403_6.webp",
+                "/mazury-holiday/images/stranda/A403/A403_7.webp",
+                "/mazury-holiday/images/stranda/A403/A403_8.webp",
+                "/mazury-holiday/images/stranda/A403/A403_9.webp",
+                "/mazury-holiday/images/stranda/A403/A403_10.webp",
+                "/mazury-holiday/images/stranda/A403/A403_11.webp",
+                "/mazury-holiday/images/stranda/A403/A403_12.webp",
+                "/mazury-holiday/images/stranda/A403/A403_13.webp",
+                "/mazury-holiday/images/stranda/A403/A403_14.webp",
+                "/mazury-holiday/images/stranda/A403/A403_15.webp"
+            ]
         }
     },
     'B102': {
         id: 'B102',
         building: 'B',
         type: 'Delux z jacuzzi',
-        price: 500,
-        guests: '2+2',
+        price: 450,
+        guests: '2+1',
+        description: `Apartament B102 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku B. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno, zatokę Tracz i port Stranda.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '18',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/18/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B102 położony na parterze budynku B posiada przestronny salon z aneksem kuchennym oraz własne jacuzzi na tarasie.',
-        amenities: {
-            living: ['Salon z aneksem', 'Sofa 2-osobowa', 'TV'],
-            kitchen: ['Płyta indukcyjna', 'Lodówka', 'Zmywarka'],
-            bedroom: ['Łóżko małżeńskie'],
-            bathroom: ['Prysznic', 'Ręczniki'],
-            terrace: ['Prywatne jacuzzi', 'Meble tarasowe']
-        },
-        additionalInfo: ['Parter', 'Prywatne jacuzzi'],
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B102_images/hero.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/B102/B102_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B102/B102_1.webp",
+                "/mazury-holiday/images/stranda/B102/B102_2.webp",
+                "/mazury-holiday/images/stranda/B102/B102_3.webp",
+                "/mazury-holiday/images/stranda/B102/B102_4.webp",
+                "/mazury-holiday/images/stranda/B102/B102_5.webp",
+                "/mazury-holiday/images/stranda/B102/B102_6.webp",
+                "/mazury-holiday/images/stranda/B102/B102_7.webp",
+                "/mazury-holiday/images/stranda/B102/B102_8.webp",
+                "/mazury-holiday/images/stranda/B102/B102_9.webp",
+                "/mazury-holiday/images/stranda/B102/B102_10.webp",
+                "/mazury-holiday/images/stranda/B102/B102_11.webp",
+                "/mazury-holiday/images/stranda/B102/B102_12.webp",
+                "/mazury-holiday/images/stranda/B102/B102_13.webp",
+                "/mazury-holiday/images/stranda/B102/B102_14.webp",
+                "/mazury-holiday/images/stranda/B102/B102_15.webp",
+                "/mazury-holiday/images/stranda/B102/B102_16.webp"
+            ]
         }
     },
     'B106': {
@@ -288,19 +834,170 @@ export const strandaApartments: Record<string, Apartment> = {
         building: 'B',
         type: 'Suite',
         price: 500,
-        guests: '4+2',
-        description: 'Luksusowy apartament na parterze z dwiema sypialniami i dużym salonem.',
+        guests: '2',
+        description: `Apartament B106 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z meblami. Leży na parterze budynku B.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
-            living: ['Duży salon', 'Sofa 2-osobowa', 'TV'],
-            kitchen: ['Pełne wyposażenie AGD', 'Zmywarka'],
-            bedroom: ['Dwie oddzielne sypialnie', 'Łóżka małżeńskie'],
-            bathroom: ['Prysznic', 'Suszarka'],
-            terrace: ['Duży taras', 'Meble ogrodowe']
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "ręczniki",
+                "szlafroki",
+                "kosmetyki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro",
+                "Apartament B106 Suite z dwoma sypialniami i rozkładaną sofą w salonie",
+                "Wyposażenie kuchnia: ekspres do kawy na kapsułki",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "komplet naczyń i sztućców",
+                "Wyposażenie salon: TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "Wyposażenie sypialnia 1: TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "Wyposażenie sypialnia 2: TV",
+                "deska do prasowania",
+                "żelazko",
+                "Wyposażenie łazienka: prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "ręczniki",
+                "Wyposażenie taras: komplet mebli wypoczynkowych"
+            ]
         },
-        additionalInfo: ['Idealny dla rodzin', '2 Sypialnie'],
+        additionalInfo: [],
+        idoBookingId: '22',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/22/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B106_images/hero.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/B106/B106_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B106/B106_1.webp",
+                "/mazury-holiday/images/stranda/B106/B106_2.webp",
+                "/mazury-holiday/images/stranda/B106/B106_3.webp",
+                "/mazury-holiday/images/stranda/B106/B106_4.webp",
+                "/mazury-holiday/images/stranda/B106/B106_5.webp",
+                "/mazury-holiday/images/stranda/B106/B106_6.webp",
+                "/mazury-holiday/images/stranda/B106/B106_7.webp",
+                "/mazury-holiday/images/stranda/B106/B106_8.webp",
+                "/mazury-holiday/images/stranda/B106/B106_9.webp",
+                "/mazury-holiday/images/stranda/B106/B106_10.webp",
+                "/mazury-holiday/images/stranda/B106/B106_11.webp"
+            ]
+        }
+    },
+    'B201': {
+        id: 'B201',
+        building: 'B',
+        type: 'Delux z jacuzzi',
+        price: 500,
+        guests: '2+2',
+        description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 1os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '39',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/39/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B201/B201_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B201/B201_1.webp",
+                "/mazury-holiday/images/stranda/B201/B201_2.webp",
+                "/mazury-holiday/images/stranda/B201/B201_3.webp",
+                "/mazury-holiday/images/stranda/B201/B201_4.webp",
+                "/mazury-holiday/images/stranda/B201/B201_5.webp",
+                "/mazury-holiday/images/stranda/B201/B201_6.webp",
+                "/mazury-holiday/images/stranda/B201/B201_7.webp",
+                "/mazury-holiday/images/stranda/B201/B201_8.webp",
+                "/mazury-holiday/images/stranda/B201/B201_9.webp",
+                "/mazury-holiday/images/stranda/B201/B201_10.webp",
+                "/mazury-holiday/images/stranda/B201/B201_11.webp",
+                "/mazury-holiday/images/stranda/B201/B201_12.webp",
+                "/mazury-holiday/images/stranda/B201/B201_13.webp",
+                "/mazury-holiday/images/stranda/B201/B201_14.webp",
+                "/mazury-holiday/images/stranda/B201/B201_15.webp",
+                "/mazury-holiday/images/stranda/B201/B201_16.webp",
+                "/mazury-holiday/images/stranda/B201/B201_17.webp",
+                "/mazury-holiday/images/stranda/B201/B201_18.webp",
+                "/mazury-holiday/images/stranda/B201/B201_19.webp",
+                "/mazury-holiday/images/stranda/B201/B201_20.webp"
+            ]
         }
     },
     'B202': {
@@ -309,276 +1006,828 @@ export const strandaApartments: Record<string, Apartment> = {
         type: 'Delux z sauną i jacuzzi',
         price: 500,
         guests: '2+2',
-        idoBookingId: '46',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/46/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Wyjątkowy apartament na pierwszym piętrze z prywatną sauną i jacuzzi na tarasie.',
+        description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
-            living: ['Klimatyzacja', 'Smart TV', 'Sofa'],
-            kitchen: ['Zmywarka', 'Ekspres do kawy', 'Płyta indukcyjna'],
-            bedroom: ['Dwie sypialnie', 'Komfortowe łóżka'],
-            bathroom: ['Prywatna sauna', 'Prysznic', 'Pralka'],
-            terrace: ['Jacuzzi na tarasie', 'Widok na zatokę Tracz']
+            "living": [
+                "TV",
+                "sofa 1os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
         },
-        additionalInfo: ['Prywatna sauna', 'Jacuzzi', 'Widok na jezioro'],
+        additionalInfo: [],
+        idoBookingId: '38',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/38/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
-            heroImage: '/mazury-holiday/images/stranda/B202_images/hero.webp',
-            images: []
+            "heroImage": "/mazury-holiday/images/stranda/B202/B202_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B202/B202_1.webp",
+                "/mazury-holiday/images/stranda/B202/B202_2.webp",
+                "/mazury-holiday/images/stranda/B202/B202_3.webp",
+                "/mazury-holiday/images/stranda/B202/B202_4.webp",
+                "/mazury-holiday/images/stranda/B202/B202_5.webp",
+                "/mazury-holiday/images/stranda/B202/B202_6.webp",
+                "/mazury-holiday/images/stranda/B202/B202_7.webp",
+                "/mazury-holiday/images/stranda/B202/B202_8.webp",
+                "/mazury-holiday/images/stranda/B202/B202_9.webp",
+                "/mazury-holiday/images/stranda/B202/B202_10.webp",
+                "/mazury-holiday/images/stranda/B202/B202_11.webp",
+                "/mazury-holiday/images/stranda/B202/B202_12.webp",
+                "/mazury-holiday/images/stranda/B202/B202_13.webp",
+                "/mazury-holiday/images/stranda/B202/B202_14.webp",
+                "/mazury-holiday/images/stranda/B202/B202_15.webp",
+                "/mazury-holiday/images/stranda/B202/B202_16.webp"
+            ]
         }
-    },
-    'C304': {
-        id: 'C304',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '30',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C304',
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        additionalInfo: [],
-        gallery: {
-            heroImage: '',
-            images: []
-        }
-    },
-    'B103': {
-        id: 'B103',
-        building: 'B',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '19',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/19/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B103',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'B201': {
-        id: 'B201',
-        building: 'B',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '47',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/47/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B201',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
     },
     'B304': {
         id: 'B304',
         building: 'B',
         type: 'Apartament',
-        price: 0,
+        price: 300,
         guests: '2+2',
-        idoBookingId: '54',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/54/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B304',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
+        description: `Apartamenty B304 z 1 sypialnią znajdują się w budynku B w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "wyjście na taras",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "ręczniki",
+                "żel pod prysznic",
+                "balsam"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
         additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
+        idoBookingId: '44',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B402/B402_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B402/B402_1.webp",
+                "/mazury-holiday/images/stranda/B402/B402_2.webp",
+                "/mazury-holiday/images/stranda/B402/B402_3.webp",
+                "/mazury-holiday/images/stranda/B402/B402_4.webp",
+                "/mazury-holiday/images/stranda/B402/B402_5.webp",
+                "/mazury-holiday/images/stranda/B402/B402_6.webp",
+                "/mazury-holiday/images/stranda/B402/B402_7.webp",
+                "/mazury-holiday/images/stranda/B402/B402_8.webp",
+                "/mazury-holiday/images/stranda/B402/B402_9.webp",
+                "/mazury-holiday/images/stranda/B402/B402_10.webp",
+                "/mazury-holiday/images/stranda/B402/B402_11.webp",
+                "/mazury-holiday/images/stranda/B402/B402_12.webp",
+                "/mazury-holiday/images/stranda/B402/B402_13.webp",
+                "/mazury-holiday/images/stranda/B402/B402_14.webp",
+                "/mazury-holiday/images/stranda/B402/B402_15.webp",
+                "/mazury-holiday/images/stranda/B402/B402_16.webp"
+            ]
+        }
     },
     'B305': {
         id: 'B305',
         building: 'B',
         type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '55',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/55/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B305',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
+        price: 300,
+        guests: '4+2',
+        description: `Apartamenty B305 z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "żel pod prysznic",
+                "mydło",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "meble tarasowe",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
         additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
+        idoBookingId: '44',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B402/B402_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B402/B402_1.webp",
+                "/mazury-holiday/images/stranda/B402/B402_2.webp",
+                "/mazury-holiday/images/stranda/B402/B402_3.webp",
+                "/mazury-holiday/images/stranda/B402/B402_4.webp",
+                "/mazury-holiday/images/stranda/B402/B402_5.webp",
+                "/mazury-holiday/images/stranda/B402/B402_6.webp",
+                "/mazury-holiday/images/stranda/B402/B402_7.webp",
+                "/mazury-holiday/images/stranda/B402/B402_8.webp",
+                "/mazury-holiday/images/stranda/B402/B402_9.webp",
+                "/mazury-holiday/images/stranda/B402/B402_10.webp",
+                "/mazury-holiday/images/stranda/B402/B402_11.webp",
+                "/mazury-holiday/images/stranda/B402/B402_12.webp",
+                "/mazury-holiday/images/stranda/B402/B402_13.webp",
+                "/mazury-holiday/images/stranda/B402/B402_14.webp",
+                "/mazury-holiday/images/stranda/B402/B402_15.webp",
+                "/mazury-holiday/images/stranda/B402/B402_16.webp"
+            ]
+        }
     },
     'B401': {
         id: 'B401',
         building: 'B',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
+        type: 'Suite',
+        price: 500,
+        guests: '4+2',
+        description: `Apartament B401 Delux położony jest na 3 najwyższym piętrze budynku. Składa się z przestronnego salonu z aneksem kuchennym i rozkładaną sofą, sypialni, łazienki z prysznicem, balkonu i dużego tarasu na dachu budynku. Całość z pięknym widokiem na jezioro.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 160x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "dwa krzesełka",
+                "sofa i stolik",
+                "leżaki",
+                "stolik"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '23',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/23/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B401',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B401/B401_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B401/B401_1.webp",
+                "/mazury-holiday/images/stranda/B401/B401_2.webp",
+                "/mazury-holiday/images/stranda/B401/B401_3.webp",
+                "/mazury-holiday/images/stranda/B401/B401_4.webp",
+                "/mazury-holiday/images/stranda/B401/B401_5.webp",
+                "/mazury-holiday/images/stranda/B401/B401_6.webp",
+                "/mazury-holiday/images/stranda/B401/B401_7.webp",
+                "/mazury-holiday/images/stranda/B401/B401_8.webp",
+                "/mazury-holiday/images/stranda/B401/B401_9.webp",
+                "/mazury-holiday/images/stranda/B401/B401_10.webp",
+                "/mazury-holiday/images/stranda/B401/B401_11.webp",
+                "/mazury-holiday/images/stranda/B401/B401_12.webp",
+                "/mazury-holiday/images/stranda/B401/B401_13.webp",
+                "/mazury-holiday/images/stranda/B401/B401_14.webp",
+                "/mazury-holiday/images/stranda/B401/B401_15.webp",
+                "/mazury-holiday/images/stranda/B401/B401_16.webp",
+                "/mazury-holiday/images/stranda/B401/B401_17.webp"
+            ]
+        }
     },
     'B402': {
         id: 'B402',
         building: 'B',
-        type: 'Apartament',
-        price: 0,
+        type: 'Suite',
+        price: 350,
         guests: '2+2',
+        description: `Apartament B402 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "internet",
+                "wifi"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "piekarnik",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 160x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "ręczniki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "stół",
+                "leżaki",
+                "stolik"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '24',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B402',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B402/B402_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B402/B402_1.webp",
+                "/mazury-holiday/images/stranda/B402/B402_2.webp",
+                "/mazury-holiday/images/stranda/B402/B402_3.webp",
+                "/mazury-holiday/images/stranda/B402/B402_4.webp",
+                "/mazury-holiday/images/stranda/B402/B402_5.webp",
+                "/mazury-holiday/images/stranda/B402/B402_6.webp",
+                "/mazury-holiday/images/stranda/B402/B402_7.webp",
+                "/mazury-holiday/images/stranda/B402/B402_8.webp",
+                "/mazury-holiday/images/stranda/B402/B402_9.webp",
+                "/mazury-holiday/images/stranda/B402/B402_10.webp",
+                "/mazury-holiday/images/stranda/B402/B402_11.webp",
+                "/mazury-holiday/images/stranda/B402/B402_12.webp",
+                "/mazury-holiday/images/stranda/B402/B402_13.webp",
+                "/mazury-holiday/images/stranda/B402/B402_14.webp",
+                "/mazury-holiday/images/stranda/B402/B402_15.webp",
+                "/mazury-holiday/images/stranda/B402/B402_16.webp"
+            ]
+        }
     },
     'B404': {
         id: 'B404',
         building: 'B',
-        type: 'Apartament',
-        price: 0,
+        type: 'Suite',
+        price: 350,
         guests: '2+2',
+        description: `Apartament B404 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "odkurzacz",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "ekspres do kawy",
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "piekarnik",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 160x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "ręczniki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "stół",
+                "leżaki",
+                "stolik"
+            ]
+        },
+        additionalInfo: [],
         idoBookingId: '25',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament B404',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C101': {
-        id: 'C101',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '51',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/51/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C101',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C102': {
-        id: 'C102',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '38',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/38/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C102',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C103': {
-        id: 'C103',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '34',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/34/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C103',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C104': {
-        id: 'C104',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '35',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/35/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C104',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C105': {
-        id: 'C105',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '36',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/36/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C105',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C201': {
-        id: 'C201',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '52',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/52/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C201',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C202': {
-        id: 'C202',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '40',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C202',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C203': {
-        id: 'C203',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '39',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/39/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C203',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C204': {
-        id: 'C204',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '37',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/37/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C204',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    },
-    'C205': {
-        id: 'C205',
-        building: 'C',
-        type: 'Apartament',
-        price: 0,
-        guests: '2+2',
-        idoBookingId: '53',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/53/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C205',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
-        additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/B404/B404_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/B404/B404_1.webp",
+                "/mazury-holiday/images/stranda/B404/B404_2.webp",
+                "/mazury-holiday/images/stranda/B404/B404_3.webp",
+                "/mazury-holiday/images/stranda/B404/B404_4.webp",
+                "/mazury-holiday/images/stranda/B404/B404_5.webp",
+                "/mazury-holiday/images/stranda/B404/B404_6.webp",
+                "/mazury-holiday/images/stranda/B404/B404_7.webp",
+                "/mazury-holiday/images/stranda/B404/B404_8.webp",
+                "/mazury-holiday/images/stranda/B404/B404_9.webp",
+                "/mazury-holiday/images/stranda/B404/B404_10.webp",
+                "/mazury-holiday/images/stranda/B404/B404_11.webp",
+                "/mazury-holiday/images/stranda/B404/B404_12.webp",
+                "/mazury-holiday/images/stranda/B404/B404_13.webp",
+                "/mazury-holiday/images/stranda/B404/B404_14.webp",
+                "/mazury-holiday/images/stranda/B404/B404_15.webp",
+                "/mazury-holiday/images/stranda/B404/B404_16.webp"
+            ]
+        }
     },
     'C301': {
         id: 'C301',
         building: 'C',
-        type: 'Apartament',
-        price: 0,
+        type: 'Suite',
+        price: 500,
         guests: '2+2',
-        idoBookingId: '48',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/48/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament C301',
-        amenities: { living: [], kitchen: [], bedroom: [], bathroom: [], terrace: [] },
+        description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 1os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja",
+                "łóżko piętrowe komplet pościel"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "mydło",
+                "żel pod prysznic",
+                "balsam do ciała"
+            ],
+            "terrace": [
+
+            ]
+        },
         additionalInfo: [],
-        gallery: { heroImage: '', images: [] }
-    }
+        idoBookingId: '40',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/C301/C301_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/C301/C301_1.webp",
+                "/mazury-holiday/images/stranda/C301/C301_2.webp",
+                "/mazury-holiday/images/stranda/C301/C301_3.webp",
+                "/mazury-holiday/images/stranda/C301/C301_4.webp",
+                "/mazury-holiday/images/stranda/C301/C301_5.webp",
+                "/mazury-holiday/images/stranda/C301/C301_6.webp",
+                "/mazury-holiday/images/stranda/C301/C301_7.webp",
+                "/mazury-holiday/images/stranda/C301/C301_8.webp",
+                "/mazury-holiday/images/stranda/C301/C301_9.webp",
+                "/mazury-holiday/images/stranda/C301/C301_10.webp",
+                "/mazury-holiday/images/stranda/C301/C301_11.webp",
+                "/mazury-holiday/images/stranda/C301/C301_12.webp",
+                "/mazury-holiday/images/stranda/C301/C301_13.webp",
+                "/mazury-holiday/images/stranda/C301/C301_14.webp",
+                "/mazury-holiday/images/stranda/C301/C301_15.webp"
+            ]
+        }
+    },
+    'C304': {
+        id: 'C304',
+        building: 'C',
+        type: 'typu Studio',
+        price: 250,
+        guests: '2+2',
+        description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda. C304 Studio (maksymalna ilość osób 4).
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców",
+                "ekspres kapsułkowy do kawy Tchibo"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '30',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/C304/C304_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/C304/C304_1.webp",
+                "/mazury-holiday/images/stranda/C304/C304_2.webp",
+                "/mazury-holiday/images/stranda/C304/C304_3.webp",
+                "/mazury-holiday/images/stranda/C304/C304_4.webp",
+                "/mazury-holiday/images/stranda/C304/C304_5.webp",
+                "/mazury-holiday/images/stranda/C304/C304_6.webp",
+                "/mazury-holiday/images/stranda/C304/C304_7.webp",
+                "/mazury-holiday/images/stranda/C304/C304_8.webp",
+                "/mazury-holiday/images/stranda/C304/C304_9.webp",
+                "/mazury-holiday/images/stranda/C304/C304_10.webp",
+                "/mazury-holiday/images/stranda/C304/C304_11.webp",
+                "/mazury-holiday/images/stranda/C304/C304_12.webp"
+            ]
+        }
+    },
+    'C403': {
+        id: 'C403',
+        building: 'C',
+        type: 'Delux z jacuzzi',
+        price: 450,
+        guests: '2+2',
+        description: `Apartament C403 typu Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.
+
+        Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno(zatoka Tracz).Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich.Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów.Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym.Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców",
+                "czajnik",
+                "ekspres kapsułkowy do kawy Tchibo"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "kosmetyki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '29',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/29/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/C403/C403_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/C403/C403_1.webp",
+                "/mazury-holiday/images/stranda/C403/C403_2.webp",
+                "/mazury-holiday/images/stranda/C403/C403_3.webp",
+                "/mazury-holiday/images/stranda/C403/C403_4.webp",
+                "/mazury-holiday/images/stranda/C403/C403_5.webp",
+                "/mazury-holiday/images/stranda/C403/C403_6.webp",
+                "/mazury-holiday/images/stranda/C403/C403_7.webp",
+                "/mazury-holiday/images/stranda/C403/C403_8.webp",
+                "/mazury-holiday/images/stranda/C403/C403_9.webp",
+                "/mazury-holiday/images/stranda/C403/C403_10.webp",
+                "/mazury-holiday/images/stranda/C403/C403_11.webp",
+                "/mazury-holiday/images/stranda/C403/C403_12.webp",
+                "/mazury-holiday/images/stranda/C403/C403_13.webp"
+            ]
+        }
+    },
+    'C404': {
+        id: 'C404',
+        building: 'C',
+        type: 'Delux z jacuzzi',
+        price: 500,
+        guests: '2+2',
+        description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem.Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno(zatoka Tracz).Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich.Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów.Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym.Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi",
+                "fotele i stolik"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '41',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/41/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/C404/C404_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/C404/C404_1.webp",
+                "/mazury-holiday/images/stranda/C404/C404_2.webp",
+                "/mazury-holiday/images/stranda/C404/C404_3.webp",
+                "/mazury-holiday/images/stranda/C404/C404_4.webp",
+                "/mazury-holiday/images/stranda/C404/C404_5.webp",
+                "/mazury-holiday/images/stranda/C404/C404_6.webp",
+                "/mazury-holiday/images/stranda/C404/C404_7.webp",
+                "/mazury-holiday/images/stranda/C404/C404_8.webp",
+                "/mazury-holiday/images/stranda/C404/C404_9.webp",
+                "/mazury-holiday/images/stranda/C404/C404_10.webp",
+                "/mazury-holiday/images/stranda/C404/C404_11.webp",
+                "/mazury-holiday/images/stranda/C404/C404_12.webp",
+                "/mazury-holiday/images/stranda/C404/C404_13.webp",
+                "/mazury-holiday/images/stranda/C404/C404_14.webp",
+                "/mazury-holiday/images/stranda/C404/C404_15.webp",
+                "/mazury-holiday/images/stranda/C404/C404_16.webp",
+                "/mazury-holiday/images/stranda/C404/C404_17.webp",
+                "/mazury-holiday/images/stranda/C404/C404_18.webp",
+                "/mazury-holiday/images/stranda/C404/C404_19.webp",
+                "/mazury-holiday/images/stranda/C404/C404_20.webp",
+                "/mazury-holiday/images/stranda/C404/C404_21.webp"
+            ]
+        }
+    },
+    'C402': {
+        id: 'C402',
+        building: 'C',
+        type: 'Delux z jacuzzi',
+        price: 450,
+        guests: '2+2',
+        description: `Apartament C402 typu Delux z prywatnym jacuzzi znajduje się w budynku C. Posiada przestronny salon z aneksem kuchennym, sypialnię, łazienkę z prysznicem oraz taras z jacuzzi i widokiem na jezioro.
+
+        Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno(zatoka Tracz).Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich.Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+        Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów.Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym.Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "stół",
+                "krzesła",
+                "sofa dla 2 osób",
+                "klimatyzacja",
+                "wyjście na taras"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "chłodziarka do wina",
+                "komplet naczyń i sztućców",
+                "czajnik",
+                "ekspres kapsułkowy do kawy Tchibo"
+            ],
+            "bedroom": [
+                "łóżko 180x200",
+                "TV",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "pralka",
+                "suszarka do włosów",
+                "prostownica",
+                "kosmetyki"
+            ],
+            "terrace": [
+                "dwa leżaki",
+                "stolik",
+                "widok na jezioro",
+                "prywatne jacuzzi"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '46',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/46/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": "/mazury-holiday/images/stranda/C403/C403_1.webp",
+            "images": [
+                "/mazury-holiday/images/stranda/C403/C403_1.webp",
+                "/mazury-holiday/images/stranda/C403/C403_2.webp",
+                "/mazury-holiday/images/stranda/C403/C403_3.webp",
+                "/mazury-holiday/images/stranda/C403/C403_4.webp",
+                "/mazury-holiday/images/stranda/C403/C403_5.webp",
+                "/mazury-holiday/images/stranda/C403/C403_6.webp",
+                "/mazury-holiday/images/stranda/C403/C403_7.webp",
+                "/mazury-holiday/images/stranda/C403/C403_8.webp",
+                "/mazury-holiday/images/stranda/C403/C403_9.webp",
+                "/mazury-holiday/images/stranda/C403/C403_10.webp",
+                "/mazury-holiday/images/stranda/C403/C403_11.webp",
+                "/mazury-holiday/images/stranda/C403/C403_12.webp",
+                "/mazury-holiday/images/stranda/C403/C403_13.webp"
+            ]
+        }
+    },
 };

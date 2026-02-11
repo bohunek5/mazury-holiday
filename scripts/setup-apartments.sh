@@ -6,7 +6,7 @@ echo "🏠 Setup apartamentów z Markdown..."
 
 # Ścieżki
 OFERTA_DIR="Oferta/Apartamenty_Stranda"
-PUBLIC_DIR="public/apartments"
+PUBLIC_DIR="public/images/stranda"
 
 # Utwórz katalog docelowy jeśli nie istnieje
 mkdir -p "$PUBLIC_DIR"

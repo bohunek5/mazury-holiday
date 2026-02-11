@@ -13,7 +13,8 @@ export default function DomkiPage() {
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
-    const galleryImages = [4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => `/mazury-holiday/images/skorupki/skorupki_${num}.webp`);
+    const galleryIndices = Array.from({ length: 43 }, (_, i) => i + 4); // 4 to 46
+    const galleryImages = galleryIndices.map(num => `/mazury-holiday/images/skorupki/skorupki_${num}.webp`);
 
     const openLightbox = (index: number) => {
         setLightboxIndex(index);
@@ -83,22 +84,36 @@ export default function DomkiPage() {
                 {/* Amenities Grid */}
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t('skorupki', 'amenitiesTitle')}</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {[
-                            { key: "fullEquip", icon: "🏠" },
-                            { key: "garden", icon: "🌳" },
-                            { key: "bonfire", icon: "🔥" },
-                            { key: "parking", icon: "🚗" },
-                            { key: "wifi", icon: "📶" },
-                            { key: "ac", icon: "❄️" },
-                            { key: "waterAccess", icon: "🌊" },
-                            { key: "peace", icon: "🧘" }
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</span>
-                                <span className="font-medium text-slate-800 dark:text-slate-200 text-center">{t('skorupki', `amenities.${item.key}`)}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/ROOM.svg" alt="Domki" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                        ))}
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Wyposażenie</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.fullEquip')}, {t('skorupki', 'amenities.ac')}, {t('skorupki', 'amenities.wifi')}
+                            </p>
+                        </div>
+
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/LOCATION.svg" alt="Teren" fill className="object-contain dark:invert opacity-80" />
+                            </div>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Teren i Relaks</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.garden')}, {t('skorupki', 'amenities.bonfire')}, {t('skorupki', 'amenities.peace')}
+                            </p>
+                        </div>
+
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/PARKING.svg" alt="Udogodnienia" fill className="object-contain dark:invert opacity-80" />
+                            </div>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Dostępność</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.parking')}, {t('skorupki', 'amenities.waterAccess')}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -106,9 +121,8 @@ export default function DomkiPage() {
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t('skorupki', 'galleryTitle')}</h3>
 
-                    {/* First 3 images - always visible */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                        {[4, 5, 6].map((num, idx) => (
+                        {galleryIndices.slice(0, 3).map((num, idx) => (
                             <div
                                 key={num}
                                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
@@ -132,12 +146,12 @@ export default function DomkiPage() {
                             onClick={() => setGalleryExpanded(!galleryExpanded)}
                             className="w-full mb-6 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                         >
-                            {galleryExpanded ? `▲ ${t('skorupki', 'collapseGallery')}` : `▼ ${t('skorupki', 'expandGallery')} (6)`}
+                            {galleryExpanded ? `▲ ${t('skorupki', 'collapseGallery')}` : `▼ ${t('skorupki', 'expandGallery')}`}
                         </button>
 
                         {galleryExpanded && (
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
-                                {[7, 8, 9, 10, 11, 12].map((num, idx) => (
+                                {galleryIndices.slice(3).map((num, idx) => (
                                     <div
                                         key={num}
                                         className="relative h-64 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
@@ -174,6 +188,18 @@ export default function DomkiPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Mobile Floating Booking Button */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    href="https://engine37851.idobooking.com/index.php?ob[18]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                >
+                    ZAREZERWUJ GO
+                </a>
+            </div>
 
             {lightboxOpen && (
                 <ImageLightbox

@@ -48,18 +48,24 @@ export default function CharterSection() {
                             {t("charter", "description")}
                         </p>
 
-                        <ul className="space-y-4 mb-10 text-slate-300">
-                            <li className="flex items-center gap-3">
-                                <span className="text-2xl">⚓</span>
-                                <span>{t("charter", "feature1") || "Bez patentu"}</span>
+                        <ul className="space-y-6 mb-10 text-slate-300">
+                            <li className="flex items-center gap-4">
+                                <div className="relative w-8 h-8 shrink-0">
+                                    <Image src="/mazury-holiday/icons/PLACEHOLDER.svg" alt="Bez patentu" fill className="object-contain invert" />
+                                </div>
+                                <span className="text-lg">{t("charter", "feature1") || "Bez patentu"}</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <span className="text-2xl">🔄</span>
-                                <span>Stery strumieniowe</span>
+                            <li className="flex items-center gap-4">
+                                <div className="relative w-8 h-8 shrink-0">
+                                    <Image src="/mazury-holiday/icons/THRUSTERS.svg" alt="Stery strumieniowe" fill className="object-contain invert" />
+                                </div>
+                                <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <span className="text-2xl">❄️</span>
-                                <span>Ogrzewanie & Klimatyzacja</span>
+                            <li className="flex items-center gap-4">
+                                <div className="relative w-8 h-8 shrink-0">
+                                    <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Ogrzewanie & Klimatyzacja" fill className="object-contain invert" />
+                                </div>
+                                <span className="text-lg">Ogrzewanie & Klimatyzacja</span>
                             </li>
                         </ul>
 

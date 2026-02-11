@@ -1,94 +1,63 @@
 export function getAmenityIcon(amenity: string): string {
-    const iconMap: Record<string, string> = {
-        // Living room
-        'Klimatyzacja': '🌡️',
-        'Sofa 2-osobowa': '🛋️',
-        'Smart TV': '🖥️',
-        'TV': '📺',
-        'WiFi': '📶',
-        'Salon z aneksem': '🏠',
-        'Duży salon': '🏢',
-        'Sofa': '🪑',
-        'Stół i krzesła': '🍱',
-        'Kominek': '🔥',
-        'Pościel': '🛌',
-        'Kondygnacja - parter': '🖼️',
-        'Kondygnacja - piętro': '🪜',
-        'Wyjście na taras': '🚪',
-        'Odkurzacz': '🧹',
-        'Suszarka': '🌬️',
-        'Wiatrak': '🌀',
+    const normalized = amenity.toLowerCase();
 
-        // Kitchen
-        'Zmywarka': '🧼',
-        'Płyta indukcyjna': '🍳',
-        'Lodówka': '🧊',
-        'Kuchenka mikrofalowa': '📟',
-        'Mikrofalówka': '⏲️',
-        'Kuchenka': '🔥',
-        'Kuchnia gazowa': '♨️',
-        'Komplet naczyń': '🍽️',
-        'Komplet naczyń i sztućców': '🍴',
-        'Aneks kuchenny': '🥘',
-        'Ekspres do kawy': '☕',
-        'Pełne wyposażenie AGD': '⚙️',
-        'Chłodziarka do wina': '🍷',
-        'Toster': '🍞',
-        'Czajnik': '🫖',
-        'Garnki': '🥘',
-        'Sztućce': '🍴',
-        'Kubki': '🥤',
-        'Naczynia': '🥣',
+    // Default icon
+    let icon = 'ROOM.svg';
 
-        // Bedroom
-        'Łóżko 180x200': '🛏️',
-        'Łóżko podwójne': '🛌',
-        'Łóżko małżeńskie': '💕',
-        'Łóżko dla 2 osób': '👨‍👩‍👦',
-        'Dwa łóżka pojedyncze': '🧍🧍',
-        'Szafa': '👗',
-        'Dwie oddzielne sypialnie': '🗝️',
-        'Łóżka małżeńskie': '💑',
-        'Dwie sypialnie': '🏠',
-        'Komfortowe łóżka': '☁️',
-        'Komplet pościeli': '✨',
-        'Suszarka na ubrania': '🧺',
-        'Deska do prasowania': '👔',
-        'Żelazko': '💨',
+    // Kitchen
+    if (normalized.includes('lodów') || normalized.includes('lodowk') || normalized.includes('chłodziarka')) icon = 'FRIDGE.svg';
+    else if (normalized.includes('zmywark')) icon = 'WASHING_MACHINE.svg';
+    else if (normalized.includes('mikrofal') || normalized.includes('kuchenka mikrofal')) icon = 'TOASTER.svg';
+    else if (normalized.includes('płyta induk') || normalized.includes('plyta induk') || normalized.includes('kuchenka')) icon = 'CUTLERY.svg';
+    else if (normalized.includes('ekspres') && normalized.includes('kaw')) icon = 'COFFEE.svg';
+    else if (normalized.includes('czajnik')) icon = 'HOT_TEA.svg';
+    else if (normalized.includes('toster')) icon = 'TOASTER.svg';
+    else if (normalized.includes('naczynia') || normalized.includes('sztućce') || normalized.includes('sztucce')) icon = 'CUTLERY.svg';
+    else if (normalized.includes('kuchnia') || normalized.includes('aneks')) icon = 'CUTLERY.svg';
 
-        // Bathroom
-        'Prysznic': '🚿',
-        'Suszarka do włosów': '💇',
-        'Ręczniki': '🧣',
-        'Pralka': '🫧',
-        'Zestaw kosmetyków': '🧼',
-        'Prywatna sauna': '🧖',
-        'Prostownica': '🎀',
-        'Szlafroki': '👘',
-        'Kosmetyki': '🧴',
+    // Living Room
+    else if (normalized.includes('klimatyzac')) icon = 'AIR_CONDITIONER.svg';
+    else if (normalized.includes('sofa') || normalized.includes('kanapa')) icon = 'SOFA.svg';
+    else if (normalized.includes('tv') || normalized.includes('telewizor')) icon = 'TV.svg';
+    else if (normalized.includes('wi-fi') || normalized.includes('wifi')) icon = 'WIFI.svg';
+    else if (normalized.includes('stół') || normalized.includes('stol')) icon = 'ROOM.svg'; // Better than lamp
+    else if (normalized.includes('kominek')) icon = 'FIRE_EXTINGUISHER.svg';
+    else if (normalized.includes('odkurzacz')) icon = 'CLEANING_STAFF.svg';
+    else if (normalized.includes('żelazko') || normalized.includes('zelazko')) icon = 'IRON.svg';
+    else if (normalized.includes('prasowan')) icon = 'IRON.svg';
 
-        // Terrace / Outdoor
-        'Meble wypoczynkowe': '🪴',
-        'Meble tarasowe': '⛱️',
-        'Meble ogrodowe': '🌳',
-        'Meble balkonowe': '🪑',
-        'Duży taras': '🌿',
-        'Taras': '🪵',
-        'Przestronny taras': '🌄',
-        'Prywatne jacuzzi': '🛁',
-        'Jacuzzi na tarasie': '🫧',
-        'Widok na port Stranda': '⛵',
-        'Widok na jezioro Kisajno': '🌊',
-        'Widok na zatokę Tracz': '⚓',
-        'Widok na marinę': '🛥️',
-        'Widok na port': '⛴️',
-        'Prywatne zejście do jeziora': '🌅',
-        'Miejsce na grilla': '🍖',
-        'Miejsce na grilla i ognisko': '🏮',
-        'Miejsce na ognisko': '🪵',
-        'Łódź wiosłowa': '🚣',
-        'Taras widokowy': '🔭'
-    };
+    // Bedroom
+    else if (normalized.includes('łóżko') || normalized.includes('lozko')) icon = 'BED.svg';
+    else if (normalized.includes('pościel') || normalized.includes('posciel')) icon = 'PILLOWS.svg';
+    else if (normalized.includes('szafa')) icon = 'LUGGAGE.svg';
+    else if (normalized.includes('sypialnia')) icon = 'ROOM.svg';
+    else if (normalized.includes('suszarka na ubrania')) icon = 'HANGER.svg';
 
-    return iconMap[amenity] || '✨';
+    // Bathroom
+    else if (normalized.includes('prysznic') || normalized.includes('prysnic')) icon = 'SHOWER.svg';
+    else if (normalized.includes('wanna')) icon = 'BATHTUB.svg';
+    else if (normalized.includes('pralka')) icon = 'WASHING_MACHINE.svg';
+    else if (normalized.includes('suszarka do włos')) icon = 'HAIR_DRYER.svg';
+    else if (normalized.includes('ręcznik') || normalized.includes('recznik')) icon = 'TOWEL.svg';
+    else if (normalized.includes('mydło') || normalized.includes('szampon') || normalized.includes('kosmetyk')) icon = 'SOAP.svg';
+    else if (normalized.includes('prostownica')) icon = 'HAIR_DRYER.svg';
+    else if (normalized.includes('szlafrok')) icon = 'BATHROBE.svg';
+
+    // Terrace / Outdoor
+    else if (normalized.includes('jacuzzi')) icon = 'SPA.svg';
+    else if (normalized.includes('sauna')) icon = 'SPA.svg';
+    else if (normalized.includes('taras') || normalized.includes('balkon')) icon = 'TERRACE.svg';
+    else if (normalized.includes('wyjście') || normalized.includes('wyjscie')) icon = 'DOOR_HANDLE.svg';
+    else if (normalized.includes('meble') || normalized.includes('leżak')) icon = 'SUNBED.svg';
+    else if (normalized.includes('widok')) icon = 'LOCATION.svg';
+    else if (normalized.includes('grill')) icon = 'BAR.svg';
+    else if (normalized.includes('ognisko')) icon = 'BAR.svg'; // Fallback
+
+    // General
+    else if (normalized.includes('parking')) icon = 'PARKING.svg';
+    else if (normalized.includes('ogrzewanie')) icon = 'AIR_CONDITIONER.svg';
+    else if (normalized.includes('osób') || normalized.includes('osob')) icon = 'BED.svg';
+    else if (normalized.includes('stery') || normalized.includes('strumieniow')) icon = 'THRUSTERS.svg';
+
+    return `/mazury-holiday/icons/${icon}`;
 }

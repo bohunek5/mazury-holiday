@@ -5,6 +5,8 @@ import { useChat } from "@/contexts/ChatContext";
 import { X, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Markdown from "react-markdown";
+import Link from "next/link";
 
 export function AiAssistant() {
     const { isOpen, closeChat, toggleChat } = useChat();
@@ -31,21 +33,14 @@ export function AiAssistant() {
         setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
         setIsTyping(true);
 
-        // TODO: Connect to OpenAI API here
-        // For now, simple mock response
+        const { getAssistantResponse } = await import("@/utils/aiAssistantEngine");
+
+        // Simulate a slight delay for realistic feel
         setTimeout(() => {
-            let response = "Dziękuję za wiadomość! Pracuję nad moją inteligencją. Wkrótce będę potrafił odpowiedzieć na to pytanie.";
-
-            const lowerInput = userMessage.toLowerCase();
-            if (lowerInput.includes("cena") || lowerInput.includes("koszt")) {
-                response = "Ceny zależą od sezonu i wybranego apartamentu. Sprawdź sekcję rezerwacji lub zadzwoń do nas!";
-            } else if (lowerInput.includes("kontakt") || lowerInput.includes("telefon")) {
-                response = "Możesz się z nami skontaktować pod numerem: +48 607 241 090.";
-            }
-
+            const response = getAssistantResponse(userMessage);
             setMessages((prev) => [...prev, { role: "assistant", content: response }]);
             setIsTyping(false);
-        }, 1500);
+        }, 1000);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -126,13 +121,39 @@ export function AiAssistant() {
                                 >
                                     <div
                                         className={cn(
-                                            "max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm",
+                                            "max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm prose prose-slate dark:prose-invert prose-p:leading-relaxed prose-a:text-white prose-a:underline hover:prose-a:text-slate-100",
                                             msg.role === "user"
                                                 ? "bg-amber-500 text-white rounded-tr-none"
                                                 : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-tl-none border border-slate-100 dark:border-slate-700"
                                         )}
                                     >
-                                        {msg.content}
+                                        {msg.role === "assistant" ? (
+                                            <React.Suspense fallback={<div className="animate-pulse h-4 w-24 bg-slate-200 rounded" />}>
+                                                <div className="assistant-markdown">
+                                                    <Markdown
+                                                        components={{
+                                                            a: ({ ...props }) => (
+                                                                <Link
+                                                                    href={props.href || "#"}
+                                                                    className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 transition-opacity"
+                                                                    onClick={() => {
+                                                                        if (props.href?.startsWith('/')) {
+                                                                            // Optional: closeChat(); 
+                                                                        }
+                                                                    }}
+                                                                >
+                                                                    {props.children}
+                                                                </Link>
+                                                            ),
+                                                        }}
+                                                    >
+                                                        {msg.content}
+                                                    </Markdown>
+                                                </div>
+                                            </React.Suspense>
+                                        ) : (
+                                            msg.content
+                                        )}
                                     </div>
                                 </div>
                             ))}

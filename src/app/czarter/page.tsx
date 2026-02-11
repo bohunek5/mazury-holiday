@@ -14,11 +14,27 @@ export default function CharterPage() {
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
     const galleryImages = [
-        "/mazury-holiday/images/czarter/s1.webp",
-        "/mazury-holiday/images/czarter/s6.webp",
-        "/mazury-holiday/images/czarter/s13.webp",
-        "/mazury-holiday/images/czarter/s17.webp",
-        "/mazury-holiday/images/czarter/main.webp"
+        "/mazury-holiday/images/czarter/gallery/stillo_1.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_2.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_3.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_4.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_5.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_6.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_7.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_8.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_9.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_10.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_11.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_12.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_13.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_14.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_15.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_16.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_17.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_18.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_19.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_20.webp",
+        "/mazury-holiday/images/czarter/gallery/stillo_21.webp"
     ];
 
     const openLightbox = (index: number) => {
@@ -26,16 +42,7 @@ export default function CharterPage() {
         setLightboxOpen(true);
     };
 
-    const amenities = [
-        { icon: "❄️", label: "Klimatyzacja & Ogrzewanie" },
-        { icon: "⚓", label: "Stery strumieniowe (Dziób/Rufa)" },
-        { icon: "📶", label: "WiFi bez limitu" },
-        { icon: "📺", label: "Netflix & HBO Max" },
-        { icon: "☕", label: "Ekspres Nespresso" },
-        { icon: "⚡", label: "230V Non-Stop" },
-        { icon: "🛟", label: "Pełne Wyposażenie Ratunkowe" },
-        { icon: "🗺️", label: "Tablet z Mapami" }
-    ];
+
 
     const specs = [
         { label: "Długość", value: "9.10 m" },
@@ -69,8 +76,13 @@ export default function CharterPage() {
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/40 z-10" />
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/czarter/main.webp')]"
+                <Image
+                    src="/mazury-holiday/images/czarter/gallery/stillo_1.webp"
+                    alt="Stillo 30 VIP"
+                    fill
+                    className="object-cover"
+                    priority
+                    quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-5xl md:text-7xl font-playfair mb-4">Stillo 30 VIP</h1>
@@ -101,15 +113,40 @@ export default function CharterPage() {
                             </p>
                         </div>
 
-                        {/* Amenities Grid (Skorupki Style - Emojis) */}
-                        <h3 className="text-2xl font-playfair mb-8 text-slate-900 dark:text-white">Udogodnienia VIP</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-                            {amenities.map((item, idx) => (
-                                <div key={idx} className="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-all group border border-slate-100 dark:border-slate-800 h-full text-center shadow-sm hover:shadow-md">
-                                    <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</span>
-                                    <span className="font-medium text-slate-800 dark:text-slate-200 text-sm">{item.label}</span>
+                        {/* Amenities Grid (Clean Cards) */}
+                        <div className="mb-16">
+                            <h3 className="text-2xl font-playfair mb-8 text-slate-900 dark:text-white">Udogodnienia VIP</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="relative w-14 h-14 mx-auto mb-6">
+                                        <Image src="/mazury-holiday/icons/LOCATION.svg" alt="Technika" fill className="object-contain dark:invert opacity-80" />
+                                    </div>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Nawigacja i Napęd</h4>
+                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        Stery strumieniowe (Dziób/Rufa), Tablet z mapami jezior, Silnik 52KM
+                                    </p>
                                 </div>
-                            ))}
+
+                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="relative w-14 h-14 mx-auto mb-6">
+                                        <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                                    </div>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Standard VIP</h4>
+                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        Klimatyzacja & Ogrzewanie, WiFi bez limitu, Netflix & HBO Max, Ekspres Nespresso
+                                    </p>
+                                </div>
+
+                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="relative w-14 h-14 mx-auto mb-6">
+                                        <Image src="/mazury-holiday/icons/FIRE_EXTINGUISHER.svg" alt="Bezpieczeństwo" fill className="object-contain dark:invert opacity-80" />
+                                    </div>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Bezpieczeństwo</h4>
+                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        Pełne wyposażenie ratunkowe, Instalacja 230V Non-Stop, Elektryczna winda kotwiczna
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Gallery Section */}
@@ -145,7 +182,7 @@ export default function CharterPage() {
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
                                             className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
-                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć (${galleryImages.length - 3})`}
+                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
                                         </button>
 
                                         {galleryExpanded && (
@@ -184,6 +221,14 @@ export default function CharterPage() {
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
                                     Sprawdź dostępność w naszym kalendarzu online i zarezerwuj swoje wakacje marzeń już dziś.
                                 </p>
+                                <a
+                                    href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full text-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-500/25 active:scale-95"
+                                >
+                                    ZAREZERWUJ GO
+                                </a>
                                 <div className="mt-6">
                                     <ICalCalendar
                                         icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/31/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
@@ -224,6 +269,18 @@ export default function CharterPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Mobile Floating Booking Button */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                >
+                    ZAREZERWUJ GO
+                </a>
+            </div>
 
             {lightboxOpen && (
                 <ImageLightbox

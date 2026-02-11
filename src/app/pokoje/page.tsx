@@ -13,7 +13,7 @@ export default function RoomsPage() {
             id: "fuleda",
             title: "Pokoje Fuleda",
             description: "Komfortowe pokoje nad jeziorem Dobskim w strefie ciszy. Idealne dla rodzin i miłośników natury.",
-            image: "/mazury-holiday/images/pokoje_fuleda/104029_8.webp",
+            image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
             link: "/pokoje/fuleda",
             price: "od 375 zł/doba",
             features: ["2 pokoje", "Łazienka", "Kuchnia", "Taras", "Dostęp do jeziora"]
@@ -26,9 +26,14 @@ export default function RoomsPage() {
 
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/50 z-10" />
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/pokoje_fuleda/104029_8.webp')]"
+                {/* Removed overlay to fix foggy look */}
+                <Image
+                    src="/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp"
+                    alt="Pokoje na Mazurach"
+                    fill
+                    className="object-cover"
+                    priority
+                    quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
@@ -47,47 +52,55 @@ export default function RoomsPage() {
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                             className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            <Link href={room.link} className="block h-full">
-                                <div className="grid md:grid-cols-2 gap-0">
-                                    {/* Image */}
-                                    <div className="relative h-64 md:h-auto w-full overflow-hidden">
-                                        <Image
-                                            src={room.image}
-                                            alt={room.title}
-                                            fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                        />
+                            <div className="grid md:grid-cols-2 gap-0">
+                                {/* Image */}
+                                <Link href={room.link} className="relative h-64 md:h-auto w-full overflow-hidden block">
+                                    <Image
+                                        src={room.image}
+                                        alt={room.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                </Link>
+
+                                {/* Content */}
+                                <div className="p-8 bg-white dark:bg-slate-900 flex flex-col">
+                                    <h3 className="text-2xl font-playfair font-bold text-slate-900 dark:text-white mb-2">{room.title}</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">{room.description}</p>
+
+                                    <div className="space-y-3 mb-8">
+                                        {room.features.map((feature, i) => (
+                                            <div key={i} className="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                                                <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2" />
+                                                {feature}
+                                            </div>
+                                        ))}
                                     </div>
 
-                                    {/* Content */}
-                                    <div className="bg-white dark:bg-slate-900 p-8 flex flex-col justify-center">
-                                        <div className="inline-block self-start px-4 py-1 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold text-sm mb-4">
-                                            {room.price}
+                                    <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                        <div>
+                                            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Cena</p>
+                                            <p className="text-lg font-bold text-slate-900 dark:text-white">{room.price}</p>
                                         </div>
-
-                                        <h3 className="text-3xl font-playfair mb-4 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
-                                            {room.title}
-                                        </h3>
-
-                                        <p className="text-slate-600 dark:text-slate-400 mb-6">
-                                            {room.description}
-                                        </p>
-
-                                        <ul className="space-y-2 mb-6">
-                                            {room.features.map((feature, idx) => (
-                                                <li key={idx} className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                                                    <span className="text-amber-500">✓</span>
-                                                    {feature}
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                        <div className="text-amber-500 font-semibold group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
-                                            Zobacz szczegóły →
+                                        <div className="flex gap-2">
+                                            <Link
+                                                href={room.link}
+                                                className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors uppercase"
+                                            >
+                                                Szczegóły
+                                            </Link>
+                                            <a
+                                                href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-[#50B848] hover:bg-[#45a041] text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
+                                            >
+                                                ZAREZERWUJ
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

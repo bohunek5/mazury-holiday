@@ -29,7 +29,7 @@ export default function Apartments() {
             id: 3,
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/front apartamenty jeziorko.webp",
+            image: "/mazury-holiday/images/fuleda/parter/parter_1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location")
         }
@@ -51,7 +51,7 @@ export default function Apartments() {
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
-            image: "/mazury-holiday/images/pokoje_fuleda/104029_8.webp",
+            image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
             people: "4",
             link: "/pokoje/fuleda",
             price: "375 zł"
@@ -93,9 +93,27 @@ export default function Apartments() {
                                     <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-4">
                                         {apt.description}
                                     </p>
-                                    <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        {t("apartments", "details")} &rarr;
-                                    </span>
+                                    <div className="flex items-center gap-4 mt-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                            {t("apartments", "details")} &rarr;
+                                        </span>
+                                        <div
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                const idoMap: Record<string, string> = {
+                                                    'stranda': '1', // Default or specific
+                                                    'kisajno': '45',
+                                                    'fuleda': '26'
+                                                };
+                                                const id = apt.link.split('/').pop() || 'stranda';
+                                                window.open(`https://engine37851.idobooking.com/index.php?ob[${idoMap[id] || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`, '_blank');
+                                            }}
+                                            className="bg-[#50B848] hover:bg-[#45a041] text-white text-[10px] font-bold py-2 px-3 rounded-lg uppercase tracking-wider transition-all transform active:scale-95 shadow-lg"
+                                        >
+                                            ZAREZERWUJ GO
+                                        </div>
+                                    </div>
                                 </div>
                             </Link>
                         ))}

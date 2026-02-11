@@ -89,22 +89,36 @@ export default function KisajnoPage() {
 
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t("kisajnoPage", "amenitiesTitle")}</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {[
-                            { key: "view", icon: "🌊" },
-                            { key: "ac", icon: "🌡️" },
-                            { key: "smartTv", icon: "🖥️" },
-                            { key: "wifi", icon: "📶" },
-                            { key: "kitchen", icon: "🥘" },
-                            { key: "dishwasher", icon: "🧼" },
-                            { key: "parking", icon: "🅿️" },
-                            { key: "port", icon: "⛵" }
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</span>
-                                <span className="font-medium text-slate-800 dark:text-slate-200 text-center">{t("kisajnoPage", `amenities.${item.key}`)}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/ROOM.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                        ))}
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Komfort i Multimedia</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t("kisajnoPage", "amenities.ac")}, {t("kisajnoPage", "amenities.wifi")}, {t("kisajnoPage", "amenities.smartTv")}
+                            </p>
+                        </div>
+
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/CUTLERY.svg" alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                            </div>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia i Wyposażenie</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t("kisajnoPage", "amenities.kitchen")}, {t("kisajnoPage", "amenities.dishwasher")}
+                            </p>
+                        </div>
+
+                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-14 h-14 mx-auto mb-6">
+                                <Image src="/mazury-holiday/icons/LOCATION.svg" alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
+                            </div>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Otoczenie</h4>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t("kisajnoPage", "amenities.view")}, {t("kisajnoPage", "amenities.parking")}, {t("kisajnoPage", "amenities.port")}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -114,6 +128,14 @@ export default function KisajnoPage() {
                         {t("kisajnoPage", "bookingDesc")}
                     </p>
                     <a
+                        href="https://engine37851.idobooking.com/index.php?ob[45]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#50B848] hover:bg-[#45a041] text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-500/25 whitespace-nowrap uppercase tracking-wider mb-4 md:mb-0 md:mr-4 active:scale-95"
+                    >
+                        ZAREZERWUJ GO
+                    </a>
+                    <a
                         href="tel:+48607241090"
                         className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
@@ -121,12 +143,24 @@ export default function KisajnoPage() {
                     </a>
                     <div className="mt-8 max-w-4xl mx-auto">
                         <ICalCalendar
-                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/56/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
                             apartmentId="Kisajno"
                         />
                     </div>
                 </div>
             </section>
+
+            {/* Mobile Floating Booking Button */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    href="https://engine37851.idobooking.com/index.php?ob[45]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                >
+                    ZAREZERWUJ GO
+                </a>
+            </div>
 
             {lightboxOpen && (
                 <ImageLightbox

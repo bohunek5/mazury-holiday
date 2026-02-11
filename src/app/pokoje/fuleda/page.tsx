@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { pokojeFuledaData } from "@/data/pokoje-fuleda-data";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState } from "react";
-import { getAmenityIcon } from "@/utils/amenityIcons";
+
 
 export default function PokojeFuledaPage() {
     useLanguage();
@@ -32,8 +32,9 @@ export default function PokojeFuledaPage() {
                     fill
                     className="object-cover"
                     priority
+                    quality={100}
                 />
-                <div className="absolute inset-0 bg-black/40" />
+                {/* Removed overlay to fix foggy look */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white p-4">
                         <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Fuleda Residence</span>
@@ -62,7 +63,7 @@ export default function PokojeFuledaPage() {
                                 <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria</h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                                    {data.gallery.images.slice(0, 3).map((img, idx) => (
+                                    {data.gallery.images.slice(0, 3).map((img: string, idx: number) => (
                                         <div
                                             key={idx}
                                             className="relative h-64 rounded-xl overflow-hidden cursor-pointer group"
@@ -75,6 +76,7 @@ export default function PokojeFuledaPage() {
                                                 src={img}
                                                 alt={`${data.title} view ${idx + 1}`}
                                                 fill
+                                                quality={90}
                                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                 sizes="(max-width: 768px) 100vw, 33vw"
                                             />
@@ -88,12 +90,12 @@ export default function PokojeFuledaPage() {
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
                                             className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
-                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć (${data.gallery.images.length - 3})`}
+                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
                                         </button>
 
                                         {galleryExpanded && (
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeIn">
-                                                {data.gallery.images.slice(3).map((img, idx) => (
+                                                {data.gallery.images.slice(3).map((img: string, idx: number) => (
                                                     <div
                                                         key={idx + 3}
                                                         className="relative h-64 rounded-xl overflow-hidden cursor-pointer group"
@@ -119,84 +121,77 @@ export default function PokojeFuledaPage() {
                             </div>
                         )}
 
-                        {/* Amenities */}
-                        <div>
-                            <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Wyposażenie</h3>
+                        {/* Amenities - Grouped like other apartments */}
+                        <div className="space-y-12">
+                            <h3 className="text-3xl font-playfair mb-12 text-slate-900 dark:text-white">Wyposażenie</h3>
 
-                            {/* Room 1 */}
-                            {data.amenities.room1.length > 0 && (
-                                <div className="mb-12">
-                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Pokój 1 (dla 2 osób)</h4>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        {data.amenities.room1.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
-                                            </div>
-                                        ))}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* Room 1 */}
+                                {data.amenities.room1.length > 0 && (
+                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                            <Image src="/mazury-holiday/icons/BED.svg" alt="Pokój 1" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Pokój 1 (2-osobowy)</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.room1.join(", ")}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Room 2 */}
-                            {data.amenities.room2.length > 0 && (
-                                <div className="mb-12">
-                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Pokój 2 (2 łóżka pojedyncze)</h4>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        {data.amenities.room2.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
-                                            </div>
-                                        ))}
+                                {/* Room 2 */}
+                                {data.amenities.room2.length > 0 && (
+                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                            <Image src="/mazury-holiday/icons/BED.svg" alt="Pokój 2" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Pokój 2 (2 łóżka)</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.room2.join(", ")}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Bathroom */}
-                            {data.amenities.bathroom.length > 0 && (
-                                <div className="mb-12">
-                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Łazienka</h4>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        {data.amenities.bathroom.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
-                                            </div>
-                                        ))}
+                                {/* Kitchen */}
+                                {data.amenities.kitchen.length > 0 && (
+                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                            <Image src="/mazury-holiday/icons/CUTLERY.svg" alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                                            <span className="block italic mb-2 text-amber-500 font-medium">(oddzielny budynek 10m)</span>
+                                            {data.amenities.kitchen.join(", ")}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Kitchen */}
-                            {data.amenities.kitchen.length > 0 && (
-                                <div className="mb-12">
-                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Kuchnia (oddzielny budynek 10m)</h4>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        {data.amenities.kitchen.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
-                                            </div>
-                                        ))}
+                                {/* Bathroom */}
+                                {data.amenities.bathroom.length > 0 && (
+                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                            <Image src="/mazury-holiday/icons/SHOWER.svg" alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Łazienka</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.bathroom.join(", ")}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Terrace */}
-                            {data.amenities.terrace.length > 0 && (
-                                <div className="mb-12">
-                                    <h4 className="text-xl font-semibold mb-6 text-slate-800 dark:text-slate-200">Taras i otoczenie</h4>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        {data.amenities.terrace.map((item, idx) => (
-                                            <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-colors group">
-                                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{getAmenityIcon(item)}</span>
-                                                <span className="font-medium text-center text-slate-800 dark:text-slate-200">{item}</span>
-                                            </div>
-                                        ))}
+                                {/* Terrace */}
+                                {data.amenities.terrace.length > 0 && (
+                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                            <Image src="/mazury-holiday/icons/TERRACE.svg" alt="Taras i otoczenie" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Taras i otoczenie</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.terrace.join(", ")}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
+                                )}
+                            </div>
                         </div>
                     </div>
 
@@ -210,6 +205,15 @@ export default function PokojeFuledaPage() {
                                     Sprawdź dostępność i zarezerwuj swój pobyt
                                 </p>
                             </div>
+
+                            <a
+                                href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '28'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 rounded-xl transition-all mb-4 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-500/25 active:scale-95"
+                            >
+                                ZAREZERWUJ GO
+                            </a>
 
                             <a
                                 href="tel:+48607241090"
@@ -237,6 +241,18 @@ export default function PokojeFuledaPage() {
 
                 </div>
             </section>
+
+            {/* Mobile Floating Booking Button */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6_px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '28'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                >
+                    ZAREZERWUJ GO
+                </a>
+            </div>
 
             {lightboxOpen && (
                 <ImageLightbox

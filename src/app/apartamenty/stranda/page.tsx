@@ -4,54 +4,53 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { clsx } from "clsx";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { strandaApartments } from "@/data/stranda-apartments";
 
+// Update buildings data structure to include images from strandaApartments data
+const getBuildingsData = () => {
+    const buildings: Record<"A" | "B" | "C", { id: string, image: string }[]> = {
+        A: [],
+        B: [],
+        C: []
+    };
 
-// Define the type for an apartment unit
-type Unit = {
-    id: string;
-    image: string;
-};
+    Object.values(strandaApartments).forEach(apt => {
+        const b = apt.building as "A" | "B" | "C";
+        if (buildings[b]) {
+            buildings[b].push({
+                id: apt.id,
+                image: apt.gallery.heroImage || apt.gallery.images[0] || "/mazury-holiday/images/placeholder.webp"
+            });
+        }
+    });
 
-// Update buildings data structure to include images
-const buildings: Record<"A" | "B" | "C", Unit[]> = {
-    A: [
-        { id: "A103", image: "/mazury-holiday/images/stranda/A103_images/A103 salonn.webp" },
-        { id: "A104", image: "/mazury-holiday/images/stranda/A104_images/A104j.webp" },
-        { id: "A105", image: "/mazury-holiday/images/stranda/A105_images/5S5A0390_02411120613.webp" },
-        { id: "A204", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A205", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A302", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A305", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A306", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A402", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "A403", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-    ],
-    B: [
-        { id: "B102", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B106", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B201", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B202", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B304", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B305", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B401", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B402", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "B404", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-    ],
-    C: [
-        { id: "C301", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "C304", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "C403", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-        { id: "C404", image: "/mazury-holiday/images/stranda/A104_images/A104k.webp" },
-    ],
-};
+    // Ensure they are sorted by ID
+    buildings.A.sort((a, b) => a.id.localeCompare(b.id));
+    buildings.B.sort((a, b) => a.id.localeCompare(b.id));
+    buildings.C.sort((a, b) => a.id.localeCompare(b.id));
+
+    return buildings;
+}
 
 export default function StrandaPage() {
     const { t } = useLanguage();
-    const [activeBuilding, setActiveBuilding] = useState<"A" | "B" | "C">("A");
+    const buildings = useMemo(() => getBuildingsData(), []);
+    const [activeBuilding, setActiveBuilding] = useState<"A" | "B" | "C">(() => {
+        if (typeof window !== "undefined") {
+            const saved = localStorage.getItem("activeStrandaBuilding");
+            if (saved && ["A", "B", "C"].includes(saved)) return saved as "A" | "B" | "C";
+        }
+        return "A";
+    });
+
+    const handleBuildingChange = (building: "A" | "B" | "C") => {
+        setActiveBuilding(building);
+        localStorage.setItem("activeStrandaBuilding", building);
+    };
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -78,13 +77,13 @@ export default function StrandaPage() {
                 </div>
 
                 {/* Building Tabs */}
-                <div className="flex justify-center mb-12 space-x-4">
+                <div className="flex flex-col sm:flex-row justify-center items-center mb-12 space-y-4 sm:space-y-0 sm:space-x-4">
                     {(Object.keys(buildings) as Array<keyof typeof buildings>).map((building) => (
                         <button
                             key={building}
-                            onClick={() => setActiveBuilding(building)}
+                            onClick={() => handleBuildingChange(building)}
                             className={clsx(
-                                "px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 border-2",
+                                "w-full sm:w-auto px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 border-2",
                                 activeBuilding === building
                                     ? "bg-amber-500 border-amber-500 text-white shadow-lg scale-105"
                                     : "bg-transparent border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-amber-400 hover:text-amber-500"
@@ -103,27 +102,40 @@ export default function StrandaPage() {
                     transition={{ duration: 0.4 }}
                     className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                 >
-                    {buildings[activeBuilding].map((unit) => (
-                        <Link href={`/apartamenty/stranda/${unit.id}`} key={unit.id} className="block group">
-                            <div
-                                className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl hover:border-amber-500/50 transition-all duration-300 cursor-pointer flex flex-col h-full"
-                            >
-                                <div className="relative h-48 w-full overflow-hidden">
-                                    <Image
-                                        src={unit.image}
-                                        alt={`Apartament ${unit.id}`}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                    <div className="absolute bottom-3 left-4 text-white">
-                                        <span className="text-xs uppercase tracking-widest opacity-80">{t("stranda", "apartment")}</span>
-                                        <h3 className="text-xl font-bold font-playfair">{unit.id}</h3>
+                    {buildings[activeBuilding].map((unit) => {
+                        const aptData = strandaApartments[unit.id as keyof typeof strandaApartments];
+                        return (
+                            <div key={unit.id} className="group flex flex-col h-full space-y-3">
+                                <Link href={`/apartamenty/stranda/${unit.id}`} className="block flex-grow">
+                                    <div
+                                        className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl hover:border-amber-500/50 transition-all duration-300 cursor-pointer flex flex-col h-full"
+                                    >
+                                        <div className="relative h-48 w-full overflow-hidden">
+                                            <Image
+                                                src={unit.image}
+                                                alt={`Apartament ${unit.id}`}
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                                            <div className="absolute bottom-3 left-4 text-white">
+                                                <span className="text-xs uppercase tracking-widest opacity-80">{t("stranda", "apartment")}</span>
+                                                <h3 className="text-xl font-bold font-playfair">{unit.id}</h3>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
+                                <a
+                                    href={`https://engine37851.idobooking.com/index.php?ob[${aptData?.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-green-500/20 active:scale-95 uppercase tracking-wide"
+                                >
+                                    Zarezerwuj Go
+                                </a>
                             </div>
-                        </Link>
-                    ))}
+                        );
+                    })}
                 </motion.div>
             </section>
 
