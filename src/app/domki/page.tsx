@@ -189,17 +189,7 @@ export default function DomkiPage() {
                 </div>
             </section>
 
-            {/* Mobile Floating Booking Button */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
-                <a
-                    href="https://engine37851.idobooking.com/index.php?ob[18]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
-                >
-                    ZAREZERWUJ GO
-                </a>
-            </div>
+
 
             {lightboxOpen && (
                 <ImageLightbox

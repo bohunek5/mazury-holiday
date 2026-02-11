@@ -158,7 +158,7 @@ export default function KisajnoPage() {
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
-                    ZAREZERWUJ GO
+                    {t("nav", "bookBtn")}
                 </a>
             </div>
 
