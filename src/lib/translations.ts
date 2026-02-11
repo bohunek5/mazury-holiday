@@ -206,6 +206,22 @@ export const translations = {
             water: {
                 title: "Jezioro Kisajno i Dobskie",
                 desc: "Krystaliczna woda, rezerwaty przyrody i strefy ciszy. Raj dla miłośników natury, kajakarstwa i spokojnego żeglarstwa z dala od motorowodnego zgiełku."
+            },
+            wolfsLair: {
+                title: "Wilczy Szaniec",
+                desc: "Kwatera Główna Hitlera w Gierłoży. Kompleks bunkrów ukryty w lesie, będący świadkiem historii II wojny światowej."
+            },
+            waterTower: {
+                title: "Wieża Ciśnień",
+                desc: "Zabytkowa wieża z tarasem widokowym, z którego rozpościera się panorama Giżycka i okolicznych jezior. W środku muzeum i kawiarnia."
+            },
+            castle: {
+                title: "Zamek Krzyżacki",
+                desc: "Odrestaurowany zamek w Giżycku, obecnie luksusowy hotel St. Bruno. Połączenie historii z nowoczesnością."
+            },
+            bison: {
+                title: "Zagroda Żubrów",
+                desc: "Pokazowa zagroda żubrów w Wolisku. Możliwość obserwacji 'królów puszczy' z platformy widokowej w ich naturalnym środowisku."
             }
         },
         cooperationPage: {

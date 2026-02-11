@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
-import { Clock, Camera, Waves } from "lucide-react";
+import { Clock, Camera, Waves, Trees, Landmark, Eye, MapPin } from "lucide-react";
 
 export default function AttractionsPage() {
     const { t } = useLanguage();
@@ -42,6 +42,38 @@ export default function AttractionsPage() {
             image: "/mazury-holiday/images/hero_bg.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Natura", "Cisza", "Krajobraz"]
+        },
+        {
+            id: "wolfsLair",
+            title: t("attractionsPage", "wolfsLair.title"),
+            desc: t("attractionsPage", "wolfsLair.desc"),
+            image: "/mazury-holiday/images/attractions/wolfs_lair.webp",
+            icon: <MapPin className="w-6 h-6" />,
+            tags: ["Historia", "II Wojna Światowa", "Muzeum"]
+        },
+        {
+            id: "waterTower",
+            title: t("attractionsPage", "waterTower.title"),
+            desc: t("attractionsPage", "waterTower.desc"),
+            image: "/mazury-holiday/images/attractions/water_tower.webp",
+            icon: <Eye className="w-6 h-6" />,
+            tags: ["Widok", "Kawiarnia", "Zabytek"]
+        },
+        {
+            id: "castle",
+            title: t("attractionsPage", "castle.title"),
+            desc: t("attractionsPage", "castle.desc"),
+            image: "/mazury-holiday/images/attractions/castle.webp",
+            icon: <Landmark className="w-6 h-6" />,
+            tags: ["Historia", "Architektura", "Hotel"]
+        },
+        {
+            id: "bison",
+            title: t("attractionsPage", "bison.title"),
+            desc: t("attractionsPage", "bison.desc"),
+            image: "/mazury-holiday/images/attractions/bison.webp",
+            icon: <Trees className="w-6 h-6" />,
+            tags: ["Natura", "Zwierzęta", "Edukacja"]
         }
     ];
 
