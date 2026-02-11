@@ -1,5 +1,9 @@
+"use client";
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Loader2, AlertCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/lib/translations';
 
 interface CalendarEvent {
     start: Date;
@@ -7,11 +11,27 @@ interface CalendarEvent {
     summary?: string;
 }
 
+const localeMap: Record<string, string> = {
+    pl: 'pl-PL',
+    en: 'en-US',
+    de: 'de-DE',
+    cs: 'cs-CZ',
+    lt: 'lt-LT',
+    es: 'es-ES'
+};
+
 const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apartmentId?: string }) => {
+    const { language } = useLanguage();
     const [events, setEvents] = useState<CalendarEvent[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [currentDate, setCurrentDate] = useState(new Date());
+
+    const getTrans = (lang: string) => {
+        // @ts-expect-error - key access
+        return translations[lang]?.calendar || translations['en'].calendar || translations['pl'].calendar;
+    }
+    const t = getTrans(language);
 
     const parseDate = useCallback((v: string): Date => {
         // Handle format like 20240315T120000Z or 20240315
@@ -60,22 +80,26 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
     }, [parseDate]);
 
     useEffect(() => {
+        let isMounted = true;
+
         const fetchCalendarWithFallback = async () => {
             setLoading(true);
+            let hasData = false;
 
-            // 1. Spróbuj najpierw załadować z cache'u (localStorage)
+            // 1. Try cache
             const cacheKey = `ical_cache_${apartmentId}`;
             const cachedData = localStorage.getItem(cacheKey);
             if (cachedData) {
                 try {
                     const { text, timestamp } = JSON.parse(cachedData);
-                    // Jeśli cache ma mniej niż 1 godzinę, używamy go jako "szybkiego" podglądu
                     const isNewEnough = Date.now() - timestamp < 3600000;
                     const parsed = parseICal(text);
-                    setEvents(parsed);
-                    if (isNewEnough) {
-                        setLoading(false);
-                        // Nawet jeśli mamy świeży cache, spróbujemy go odświeżyć w tle
+                    if (isMounted) {
+                        setEvents(parsed);
+                        hasData = true;
+                        if (isNewEnough) {
+                            setLoading(false);
+                        }
                     }
                 } catch (e) {
                     console.warn("Błąd odczytu cache iCal:", e);
@@ -98,42 +122,43 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                         return text;
                     } catch (e) {
                         if (i === retries - 1) throw e;
-                        await new Promise(r => setTimeout(r, 1000)); // Czekaj 1s przed ponowieniem
+                        await new Promise(r => setTimeout(r, 1000));
                     }
                 }
                 return null;
             };
 
-            let lastError = null;
             for (const getProxyUrl of proxies) {
                 try {
                     const text = await fetchWithRetry(getProxyUrl);
-                    if (text) {
+                    if (text && isMounted) {
                         const parsedEvents = parseICal(text);
                         setEvents(parsedEvents);
                         setError(null);
                         setLoading(false);
-                        // Zapisz do cache'u
                         localStorage.setItem(cacheKey, JSON.stringify({
                             text,
                             timestamp: Date.now()
                         }));
                         return;
                     }
-                } catch (err: unknown) {
-                    lastError = err;
+                } catch {
+                    // Ignore error, try next proxy
                 }
             }
 
-            // Jeśli wszystkie próby zawiodły i NIE mamy nic w cache'u
-            if (events.length === 0) {
-                setError("Nie udało się pobrać aktualnych danych. Spróbujemy ponownie za chwilę.");
+            if (isMounted && !hasData) {
+                setError(t.error);
             }
-            setLoading(false);
+            if (isMounted) setLoading(false);
         };
 
         fetchCalendarWithFallback();
-    }, [icalUrl, parseICal, apartmentId]);
+
+        return () => {
+            isMounted = false;
+        };
+    }, [icalUrl, parseICal, apartmentId, t.error]);
 
     const daysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     const firstDayOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
@@ -169,7 +194,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
         return 'free';
     };
 
-    const monthName = currentDate.toLocaleString('pl-PL', { month: 'long', year: 'numeric' });
+    const monthName = currentDate.toLocaleString(localeMap[language] || 'pl-PL', { month: 'long', year: 'numeric' });
     const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
 
     const getDayStyle = (status: string) => {
@@ -195,7 +220,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <CalendarIcon className="w-5 h-5 text-amber-500" />
-                    <h3 className="font-bold text-slate-800 dark:text-white">Dostępność {apartmentId}</h3>
+                    <h3 className="font-bold text-slate-800 dark:text-white">{t.title} {apartmentId}</h3>
                 </div>
                 {loading && <Loader2 className="w-4 h-4 text-amber-500 animate-spin" />}
             </div>
@@ -214,14 +239,14 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                         <button
                             onClick={() => changeMonth(-1)}
                             className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors"
-                            title="Poprzedni miesiąc"
+                            title={t.prevMonth}
                         >
                             <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
                             onClick={() => changeMonth(1)}
                             className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors"
-                            title="Następny miesiąc"
+                            title={t.nextMonth}
                         >
                             <ChevronRight className="w-5 h-5" />
                         </button>
@@ -229,7 +254,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 </div>
 
                 <div className="grid grid-cols-7 gap-1 mb-2">
-                    {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'].map(day => (
+                    {t.days.map((day: string) => (
                         <div key={day} className="text-center text-xs font-bold text-slate-400 py-1 uppercase tracking-wider">
                             {day}
                         </div>
@@ -263,23 +288,23 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-4 text-[10px] md:text-xs">
                     <div className="flex items-center gap-2">
                         <div className="w-3 h-3 rounded bg-red-100 dark:bg-red-900/30 border border-slate-300 dark:border-slate-600" />
-                        <span className="text-slate-500">Zajęte</span>
+                        <span className="text-slate-500">{t.legend.busy}</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div
                             className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600 bg-[linear-gradient(to_bottom_right,rgba(239,68,68,0.2)_50%,transparent_50%)]"
                         />
-                        <span className="text-slate-500">Możliwy przyjazd</span>
+                        <span className="text-slate-500">{t.legend.checkIn}</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div
                             className="w-3 h-3 rounded border border-slate-300 dark:border-slate-600 bg-[linear-gradient(to_bottom_right,transparent_50%,rgba(239,68,68,0.2)_50%)]"
                         />
-                        <span className="text-slate-500">Możliwy wyjazd</span>
+                        <span className="text-slate-500">{t.legend.checkOut}</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="w-3 h-3 rounded bg-transparent border border-slate-300 dark:border-slate-600" />
-                        <span className="text-slate-500">Dostępne</span>
+                        <span className="text-slate-500">{t.legend.available}</span>
                     </div>
                 </div>
             </div>

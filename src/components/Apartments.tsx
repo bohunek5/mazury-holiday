@@ -97,22 +97,6 @@ export default function Apartments() {
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
                                             {t("apartments", "details")} &rarr;
                                         </span>
-                                        <div
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                e.stopPropagation();
-                                                const idoMap: Record<string, string> = {
-                                                    'stranda': '1', // Default or specific
-                                                    'kisajno': '45',
-                                                    'fuleda': '26'
-                                                };
-                                                const id = apt.link.split('/').pop() || 'stranda';
-                                                window.open(`https://engine37851.idobooking.com/index.php?ob[${idoMap[id] || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`, '_blank');
-                                            }}
-                                            className="bg-[#50B848] hover:bg-[#45a041] text-white text-[10px] font-bold py-2 px-3 rounded-lg uppercase tracking-wider transition-all transform active:scale-95 shadow-lg"
-                                        >
-                                            ZAREZERWUJ GO
-                                        </div>
                                     </div>
                                 </div>
                             </Link>

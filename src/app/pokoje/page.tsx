@@ -4,19 +4,36 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 
 export default function RoomsPage() {
 
+    const { language } = useLanguage();
+
+    const getForLang = (lang: string) => {
+        // @ts-expect-error - key access
+        return translations[lang]?.roomsPage || translations['en'].roomsPage || translations['pl'].roomsPage;
+    }
+
+    const trans = getForLang(language);
+
+    // Fallback for items if missing in current lang
+    const fuledaTrans = trans.items?.fuleda || translations['en'].roomsPage.items.fuleda;
+
     const rooms = [
         {
             id: "fuleda",
-            title: "Pokoje Fuleda",
-            description: "Komfortowe pokoje nad jeziorem Dobskim w strefie ciszy. Idealne dla rodzin i miłośników natury.",
+            title: fuledaTrans.title,
+            description: fuledaTrans.description,
             image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
             link: "/pokoje/fuleda",
-            price: "od 375 zł/doba",
-            features: ["2 pokoje", "Łazienka", "Kuchnia", "Taras", "Dostęp do jeziora"]
+            price: fuledaTrans.priceValue,
+            features: fuledaTrans.features,
+            priceLabel: fuledaTrans.priceLabel,
+            detailsBtn: fuledaTrans.detailsBtn,
+            bookBtn: fuledaTrans.bookBtn
         }
     ];
 
@@ -29,7 +46,7 @@ export default function RoomsPage() {
                 {/* Removed overlay to fix foggy look */}
                 <Image
                     src="/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp"
-                    alt="Pokoje na Mazurach"
+                    alt={trans.heroTitle}
                     fill
                     className="object-cover"
                     priority
@@ -37,8 +54,8 @@ export default function RoomsPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">Pokoje na Mazurach</h1>
-                    <p className="text-xl md:text-3xl font-light">Komfortowe pokoje w spokojnej okolicy</p>
+                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{trans.heroTitle}</h1>
+                    <p className="text-xl md:text-3xl font-light">{trans.heroSubtitle}</p>
                 </div>
             </section>
 
@@ -69,7 +86,7 @@ export default function RoomsPage() {
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">{room.description}</p>
 
                                     <div className="space-y-3 mb-8">
-                                        {room.features.map((feature, i) => (
+                                        {room.features.map((feature: string, i: number) => (
                                             <div key={i} className="flex items-center text-xs text-slate-500 dark:text-slate-400">
                                                 <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2" />
                                                 {feature}
@@ -79,7 +96,7 @@ export default function RoomsPage() {
 
                                     <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                                         <div>
-                                            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Cena</p>
+                                            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">{room.priceLabel}</p>
                                             <p className="text-lg font-bold text-slate-900 dark:text-white">{room.price}</p>
                                         </div>
                                         <div className="flex gap-2">
@@ -87,7 +104,7 @@ export default function RoomsPage() {
                                                 href={room.link}
                                                 className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors uppercase"
                                             >
-                                                Szczegóły
+                                                {room.detailsBtn}
                                             </Link>
                                             <a
                                                 href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
@@ -95,7 +112,7 @@ export default function RoomsPage() {
                                                 rel="noopener noreferrer"
                                                 className="bg-[#50B848] hover:bg-[#45a041] text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
                                             >
-                                                ZAREZERWUJ
+                                                {room.bookBtn}
                                             </a>
                                         </div>
                                     </div>
@@ -108,9 +125,9 @@ export default function RoomsPage() {
                 {/* Info Section */}
                 <div className="mt-16 text-center max-w-2xl mx-auto">
                     <p className="text-slate-600 dark:text-slate-400">
-                        Szukasz większych apartamentów? Sprawdź nasze{" "}
+                        {trans.ctaText}{" "}
                         <Link href="/apartamenty/fuleda" className="text-amber-500 hover:text-amber-600 font-semibold">
-                            Apartamenty Fuleda
+                            {trans.ctaLink}
                         </Link>
                     </p>
                 </div>

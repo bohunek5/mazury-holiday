@@ -90,6 +90,37 @@ export const translations = {
                 peace: "Cisza i spokój"
             }
         },
+        roomsPage: {
+            heroTitle: "Pokoje na Mazurach",
+            heroSubtitle: "Komfortowe pokoje w spokojnej okolicy",
+            ctaText: "Szukasz większych apartamentów? Sprawdź nasze",
+            ctaLink: "Apartamenty Fuleda",
+            items: {
+                fuleda: {
+                    title: "Pokoje Fuleda",
+                    description: "Komfortowe pokoje nad jeziorem Dobskim w strefie ciszy. Idealne dla rodzin i miłośników natury.",
+                    features: ["2 pokoje", "Łazienka", "Kuchnia", "Taras", "Dostęp do jeziora"],
+                    priceLabel: "Cena",
+                    priceValue: "od 375 zł/doba",
+                    detailsBtn: "SZCZEGÓŁY",
+                    bookBtn: "ZAREZERWUJ"
+                }
+            }
+        },
+        calendar: {
+            title: "Dostępność",
+            loading: "Ładowanie...",
+            error: "Nie udało się pobrać aktualnych danych. Spróbujemy ponownie za chwilę.",
+            prevMonth: "Poprzedni miesiąc",
+            nextMonth: "Następny miesiąc",
+            days: ['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'],
+            legend: {
+                busy: "Zajęte",
+                checkIn: "Możliwy przyjazd",
+                checkOut: "Możliwy wyjazd",
+                available: "Dostępne"
+            }
+        },
         strandaDescriptions: {
             genericDesc: "Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.",
             locationDesc: "Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.",
@@ -362,6 +393,37 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 peace: "Peace and quiet"
             }
         },
+        roomsPage: {
+            heroTitle: "Rooms in Masuria",
+            heroSubtitle: "Comfortable rooms in a quiet area",
+            ctaText: "Looking for larger apartments? Check out our",
+            ctaLink: "Fuleda Apartments",
+            items: {
+                fuleda: {
+                    title: "Fuleda Rooms",
+                    description: "Comfortable rooms by Lake Dobskie in a silent zone. Perfect for families and nature lovers.",
+                    features: ["2 rooms", "Bathroom", "Kitchen", "Terrace", "Lake access"],
+                    priceLabel: "Price",
+                    priceValue: "from 375 PLN/night",
+                    detailsBtn: "DETAILS",
+                    bookBtn: "BOOK NOW"
+                }
+            }
+        },
+        calendar: {
+            title: "Availability",
+            loading: "Loading...",
+            error: "Failed to fetch current data. Retrying...",
+            prevMonth: "Previous month",
+            nextMonth: "Next month",
+            days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            legend: {
+                busy: "Busy",
+                checkIn: "Check-in",
+                checkOut: "Check-out",
+                available: "Available"
+            }
+        },
         strandaDescriptions: {
             genericDesc: "Our apartments are located in Giżycko, by the Stranda port in Stranda Residence apartment buildings, on the shore of Lake Kisajno (Tracz Bay). It offers a beautiful panoramic view of Lake Kisajno and the Great Masurian Lakes trail. The apartment is luxuriously finished and ensures high comfort of rest. On site, you can use the port's resources such as: tavern, concerts in the summer season, marina, water equipment rental, etc.",
             locationDesc: "The proximity to the center of Giżycko allows you to enjoy many tourist attractions, offers of many restaurants and pubs. The location of the facility also facilitates exploring Masuria in terms of nature, history and entertainment. Included parking space.",
@@ -621,6 +683,37 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 peace: "Ruhe und Frieden"
             }
         },
+        roomsPage: {
+            heroTitle: "Zimmer in Masuren",
+            heroSubtitle: "Komfortable Zimmer in ruhiger Lage",
+            ctaText: "Suchen Sie größere Apartments? Prüfen Sie unsere",
+            ctaLink: "Fuleda Apartments",
+            items: {
+                fuleda: {
+                    title: "Fuleda Zimmer",
+                    description: "Komfortable Zimmer am Dobskie-See in einer Ruhezone. Perfekt für Familien und Naturliebhaber.",
+                    features: ["2 Zimmer", "Badezimmer", "Küche", "Terrasse", "See-Zugang"],
+                    priceLabel: "Preis",
+                    priceValue: "ab 375 PLN/Nacht",
+                    detailsBtn: "DETAILS",
+                    bookBtn: "BUCHEN"
+                }
+            }
+        },
+        calendar: {
+            title: "Verfügbarkeit",
+            loading: "Laden...",
+            error: "Aktuelle Daten konnten nicht geladen werden. Wir versuchen es gleich noch einmal.",
+            prevMonth: "Vorheriger Monat",
+            nextMonth: "Nächster Monat",
+            days: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+            legend: {
+                busy: "Belegt",
+                checkIn: "Anreise möglich",
+                checkOut: "Abreise möglich",
+                available: "Verfügbar"
+            }
+        },
         strandaDescriptions: {
             genericDesc: "Unsere Apartments befinden sich in Giżycko, am Hafen Stranda in den Apartmenthäusern Stranda Residence, am Ufer des Kisajno-Sees (Bucht Tracz). Es bietet einen schönen Panoramablick auf den Kisajno-See und die Route der Großen Masurischen Seen. Die Wohnung ist luxuriös ausgestattet und sorgt für hohen Erholungskomfort. Vor Ort können Sie die Ressourcen des Hafens nutzen, wie z.B.: Taverne, Konzerte in der Sommersaison, Yachthafen, Verleih von Wassersportgeräten usw.",
             locationDesc: "Die Nähe zum Zentrum von Giżycko ermöglicht es Ihnen, viele touristische Attraktionen, Angebote vieler Restaurants und Pubs zu nutzen. Die Lage der Anlage erleichtert auch die Erkundung Masurens in Bezug auf Natur, Geschichte und Unterhaltung.",
@@ -815,6 +908,37 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         stranda: { subtitle: "Lujo en Lago Kisajno", description: "Diseño moderno y naturaleza.", building: "Edificio", apartment: "Apartamento" },
         details: { about: "Sobre", amenities: "Comodidades", booking: "Reserva", checkAvailability: "Verificar disponibilidad.", callBtn: "Llamar", lowPrice: "Mejor precio.", descriptionPart1: "Apartamento de lujo en", descriptionPart2: "Stranda Residence.", descriptionPart3: "Vistas inolvidables.", items: { view: "Vistas al lago", ac: "Aire acond.", terrace: "Terraza", kitchen: "Cocina", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna" } },
         footer: { brandDesc: "Momentos únicos.", navTitle: "Navegación", contactTitle: "Contacto", followTitle: "Síguenos", rights: "Reservados todos los derechos.", linksTitle: "Enlaces" },
+        roomsPage: {
+            heroTitle: "Habitaciones en Masuria",
+            heroSubtitle: "Habitaciones cómodas en zona tranquila",
+            ctaText: "¿Buscas apartamentos más grandes? Mira nuestros",
+            ctaLink: "Apartamentos Fuleda",
+            items: {
+                fuleda: {
+                    title: "Habitaciones Fuleda",
+                    description: "Habitaciones cómodas junto al lago Dobskie en zona de silencio. Ideal para familias y amantes de la naturaleza.",
+                    features: ["2 habitaciones", "Baño", "Cocina", "Terraza", "Acceso al lago"],
+                    priceLabel: "Precio",
+                    priceValue: "desde 375 PLN/noche",
+                    detailsBtn: "DETALLES",
+                    bookBtn: "RESERVAR"
+                }
+            }
+        },
+        calendar: {
+            title: "Disponibilidad",
+            loading: "Cargando...",
+            error: "Error al cargar datos. Reintentando...",
+            prevMonth: "Mes anterior",
+            nextMonth: "Mes siguiente",
+            days: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+            legend: {
+                busy: "Ocupado",
+                checkIn: "Entrada posible",
+                checkOut: "Salida posible",
+                available: "Disponible"
+            }
+        },
         kisajnoPage: {
             title: "Apartamentos Kisajno",
             subtitle: "Lujo junto al lago",
@@ -1016,6 +1140,37 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Klimatizace",
                 waterAccess: "Přístup k vodě",
                 peace: "Ticho a klid"
+            }
+        },
+        roomsPage: {
+            heroTitle: "Pokoje na Mazurách",
+            heroSubtitle: "Komfortní pokoje v klidné oblasti",
+            ctaText: "Hledáte větší apartmány? Podívejte se na naše",
+            ctaLink: "Apartmány Fuleda",
+            items: {
+                fuleda: {
+                    title: "Pokoje Fuleda",
+                    description: "Komfortní pokoje u jezera Dobskie v tiché zóně. Ideální pro rodiny a milovníky přírody.",
+                    features: ["2 pokoje", "Koupelna", "Kuchyně", "Terasa", "Přístup k jezeru"],
+                    priceLabel: "Cena",
+                    priceValue: "od 375 PLN/noc",
+                    detailsBtn: "PODROBNOSTI",
+                    bookBtn: "REZERVUJTE"
+                }
+            }
+        },
+        calendar: {
+            title: "Dostupnost",
+            loading: "Načítání...",
+            error: "Nepodařilo se načíst aktuální data. Zkuste to prosím za chvíli.",
+            prevMonth: "Předchozí měsíc",
+            nextMonth: "Příští měsíc",
+            days: ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'],
+            legend: {
+                busy: "Obsazeno",
+                checkIn: "Možný příjezd",
+                checkOut: "Možný odjezd",
+                available: "Dostupné"
             }
         },
         strandaDescriptions: {
@@ -1256,6 +1411,37 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Kondicionierius",
                 waterAccess: "Prieiga prie vandens",
                 peace: "Tyla ir ramybė"
+            }
+        },
+        roomsPage: {
+            heroTitle: "Kambariai Mozūrijoje",
+            heroSubtitle: "Patogūs kambariai ramioje vietoje",
+            ctaText: "Ieškote didesnių apartamentų? Patikrinkite mūsų",
+            ctaLink: "Fuleda Apartamentus",
+            items: {
+                fuleda: {
+                    title: "Fuleda Kambariai",
+                    description: "Patogūs kambariai prie Dobskie ežero tylos zonoje. Idealiai tinka šeimoms ir gamtos mylėtojams.",
+                    features: ["2 kambariai", "Vonia", "Virtuvė", "Terasa", "Prieiga prie ežero"],
+                    priceLabel: "Kaina",
+                    priceValue: "nuo 375 PLN/naktį",
+                    detailsBtn: "DETALĖS",
+                    bookBtn: "REZERVUOTI"
+                }
+            }
+        },
+        calendar: {
+            title: "Užimtumas",
+            loading: "Kraunama...",
+            error: "Nepavyko gauti duomenų. Bandome dar kartą...",
+            prevMonth: "Ankstesnis mėnuo",
+            nextMonth: "Kitas mėnuo",
+            days: ['Pr', 'An', 'Tr', 'Kt', 'Pn', 'Št', 'Sk'],
+            legend: {
+                busy: "Užimta",
+                checkIn: "Galimas atvykimas",
+                checkOut: "Galimas išvykimas",
+                available: "Laisva"
             }
         },
         strandaDescriptions: {
