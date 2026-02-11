@@ -29,7 +29,7 @@ export function ThemeToggle({ className }: { className?: string }) {
             )}
             aria-label="Toggle theme"
         >
-            <div className="relative w-6 h-6">
+            <div className="relative w-6 h-6 animate-spin-slow-pause">
                 <Sun
                     className="absolute inset-0 h-full w-full rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 text-amber-500"
                 />

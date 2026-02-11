@@ -1,7 +1,7 @@
 export const translations = {
     pl: {
         nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj" },
-        hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "+48 607 241 090" },
+        hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "+48 607 241 090", scrollDown: "Przewiń w dół" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur z perspektywy naszych luksusowych apartamentów oraz z pokładu jachtu.", p2: "Niezależnie od tego, czy szukasz spokojnego wypoczynku w Giżycku, czy ekskluzywnego domu we Fuledzie." },
         luxuryBenefits: {
             tag: "Zalety naszej oferty",
@@ -345,7 +345,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
     },
     en: {
         nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now" },
-        hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "+48 607 241 090" },
+        hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "+48 607 241 090", scrollDown: "Scroll down" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
         luxuryBenefits: {
             tag: "Advantages of our offer",
@@ -1378,7 +1378,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
     },
     lt: {
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Namelliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti" },
-        hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "Jachtų Nuoma" },
+        hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "Jachtų Nuoma", scrollDown: "Slinkite žemyn" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
         luxuryBenefits: {
             tag: "Mūsų pasiūlymo pranašumai",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { Phone, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
@@ -32,7 +32,7 @@ export default function Hero() {
           {t("hero", "subtitle")}
         </p>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-16">
           <a
             href="tel:+48607241090"
             className="px-8 py-4 bg-white/10 hover:bg-amber-500 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group"
@@ -43,8 +43,17 @@ export default function Hero() {
             {t("hero", "charterBtn")}
           </a>
         </div>
+
+      </div>
+
+      <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2">
+        <div className="flex flex-col items-center gap-3 animate-bounce-slow">
+          <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause" />
+          <span className="text-white/80 text-xs font-light tracking-[0.2em] uppercase whitespace-nowrap">
+            {t("hero", "scrollDown")}
+          </span>
+        </div>
       </div>
     </section>
   );
 }
-
