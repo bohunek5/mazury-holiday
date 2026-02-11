@@ -49,8 +49,8 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
         name: "Litewski",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
-                <rect width="5" height="3" fill="#006A44" />
-                <rect width="5" height="2" fill="#C1272D" />
+                <rect width="5" height="3" fill="#C1272D" />
+                <rect width="5" height="2" fill="#006A44" />
                 <rect width="5" height="1" fill="#FDB913" />
             </svg>
         )
@@ -63,6 +63,16 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
                 <rect width="3" height="2" fill="#fff" />
                 <rect width="3" height="1" y="1" fill="#D7141A" />
                 <path d="M0,0 L1.5,1 L0,2 Z" fill="#11457E" />
+            </svg>
+        )
+    },
+    {
+        code: "es",
+        name: "Hiszpański",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="3" height="2" fill="#C60B1E" />
+                <rect width="3" height="1" y="0.5" fill="#FFC400" />
             </svg>
         )
     },

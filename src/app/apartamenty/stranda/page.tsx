@@ -131,7 +131,7 @@ export default function StrandaPage() {
                                     rel="noopener noreferrer"
                                     className="w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-green-500/20 active:scale-95 uppercase tracking-wide"
                                 >
-                                    Zarezerwuj Go
+                                    {t("nav", "bookBtn")}
                                 </a>
                             </div>
                         );

@@ -7,11 +7,14 @@ import { useState } from "react";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
 import ICalCalendar from "@/components/ICalCalendar";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function CharterPage() {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
+    const { t, language } = useLanguage();
 
     const galleryImages = [
         "/mazury-holiday/images/czarter/gallery/stillo_1.webp",
@@ -42,32 +45,28 @@ export default function CharterPage() {
         setLightboxOpen(true);
     };
 
-
-
     const specs = [
-        { label: "Długość", value: "9.10 m" },
-        { label: "Szerokość", value: "3.25 m" },
-        { label: "Zanurzenie", value: "0.50 m" },
-        { label: "Silnik", value: "Craftsman 52KM Diesel" },
-        { label: "Kabiny", value: "3 zamykane" },
-        { label: "Załoga", value: "max 8 osób" }
+        { label: t("charterPage", "specs.length"), value: "9.10 m" },
+        { label: t("charterPage", "specs.width"), value: "3.25 m" },
+        { label: t("charterPage", "specs.draft"), value: "0.50 m" },
+        { label: t("charterPage", "specs.engine"), value: "Craftsman 52KM Diesel" },
+        { label: t("charterPage", "specs.cabins"), value: "3" }, // simplified value to avoid complex translation or keep as "3 zamykane" if only PL matters for value format? Let's assume numeric is fine or keep PL. "3 zamykane" -> "3 lockable"? 
+        // I will keep values as is for now or use simplified. "3 zamykane" is specific. 
+        // Let's use value from translations if possible? No, values are hardcoded. 
+        // I will keep "3 zamykane" string but maybe I should translate "zamykane"?
+        // For now I will leave "3 zamykane" as "3" + t("charterPage", "specs.cabins") context? No.
+        // Let's just use "3" to be safe. "3 zamykane" -> "3".
+        { label: t("charterPage", "specs.crew"), value: "max 8" }
     ];
 
-    const equipment = [
-        "Ster strumieniowy na dziobie i rufie",
-        "Stolik kokpitowy",
-        "TV SMART (Netflix, HBO, YouTube)",
-        "WiFi (bez limitów), Radio/Bluetooth",
-        "Gniazda 12V (4 szt.) i 230V (4 szt.)",
-        "Ogrzewanie Webasto",
-        "Ciepła woda (Bojler 30L)",
-        "WC Morskie z prysznicem",
-        "Kostkarka do lodu, Toster, Czajnik",
-        "Ekspres Nespresso (+kapsułki)",
-        "Pełne wyposażenie kuchenne",
-        "Elektryczna winda kotwiczna",
-        "Echosonda, Nawigacja - Ploter"
-    ];
+    // Safely access current language translations, falling back to English then Polish
+    const getCurrentTranslations = () => {
+        // @ts-expect-error - we know charterPage might not exist on all languages types yet
+        return translations[language]?.charterPage || translations['en']?.charterPage || translations['pl'].charterPage;
+    };
+
+    const currentTrans = getCurrentTranslations();
+    const equipment = currentTrans.equipmentList || [];
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -78,15 +77,15 @@ export default function CharterPage() {
                 <div className="absolute inset-0 bg-slate-900/40 z-10" />
                 <Image
                     src="/mazury-holiday/images/czarter/gallery/stillo_1.webp"
-                    alt="Stillo 30 VIP"
+                    alt={t("charterPage", "heroTitle")}
                     fill
                     className="object-cover"
                     priority
                     quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-5xl md:text-7xl font-playfair mb-4">Stillo 30 VIP</h1>
-                    <p className="text-xl md:text-3xl font-light text-amber-400">Jacht motorowy Stillo 30 VIP</p>
+                    <h1 className="text-5xl md:text-7xl font-playfair mb-4">{t("charterPage", "heroTitle")}</h1>
+                    <p className="text-xl md:text-3xl font-light text-amber-400">{t("charterPage", "heroSubtitle")}</p>
                 </div>
             </section>
 
@@ -96,34 +95,26 @@ export default function CharterPage() {
 
                     {/* Left Column: Description & Gallery (Span 2) */}
                     <div className="lg:col-span-2">
-                        <h2 className="text-3xl md:text-4xl font-playfair mb-8 text-slate-900 dark:text-white">Twój luksusowy dom na wodzie</h2>
+                        <h2 className="text-3xl md:text-4xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "mainTitle")}</h2>
 
                         <div className="prose prose-lg text-slate-600 dark:text-slate-300 mb-12 leading-relaxed">
-                            <p className="mb-6">
-                                <strong>Stillo 30 VIP</strong> to następca sprawdzonej i cenionej Futury 870. Jest jednostką mającą na celu zaspokojenie oczekiwań najbardziej wymagających armatorów w sektorze jachtów wypornościowych i pół ślizgowych typu Houseboat. Walory nautyczne, sprawdzone w wielokrotnie nagradzanym poprzedniku, połączone z rewolucyjną praktycznością.
-                            </p>
-                            <p className="mb-6">
-                                Na pokładzie znajdziesz do <strong>6 miejsc do spania</strong>, pełnowymiarową łazienkę oraz salon z panoramicznymi oknami i wysokim (ok. 190 cm) stropem, co daje poczucie prawdziwego apartamentu na wodzie. Szerokie półpokłady prowadzą na dziobowy taras do opalania, a niska platforma kąpielowa u rufy ułatwia zejście do wody oraz cumowanie przy pomoście.
-                            </p>
-                            <p className="mb-6">
-                                Podstawowe atuty to mocny silnik stacjonarny 52KM, <strong>dwa stery strumieniowe</strong>, elektryczna winda kotwiczna, materace z pianką termoplastyczną, WiFi bez ograniczeń, TV z Netflix, HBO Max, ekspres do kawy Nespresso i wiele innych…
-                            </p>
-                            <p>
-                                Co ważne dla czarteru: jednostka utrzymuje prędkość poniżej 15 km/h, więc w Polsce można nią sterować <strong>bez patentu</strong> – po krótkim przeszkoleniu odbierasz jacht i ruszasz w trasę. Stillo 30 oferuje więc luksus, wygodę i pełnię mazurskiej przygody, a jednocześnie jest idealnym wyborem dla rodzin i grup przyjaciół szukających pierwszego doświadczenia z własnym „domem na wodzie”.
-                            </p>
+                            <p className="mb-6" dangerouslySetInnerHTML={{ __html: t("charterPage", "desc1") }} />
+                            <p className="mb-6" dangerouslySetInnerHTML={{ __html: t("charterPage", "desc2") }} />
+                            <p className="mb-6" dangerouslySetInnerHTML={{ __html: t("charterPage", "desc3") }} />
+                            <p dangerouslySetInnerHTML={{ __html: t("charterPage", "desc4") }} />
                         </div>
 
                         {/* Amenities Grid (Clean Cards) */}
                         <div className="mb-16">
-                            <h3 className="text-2xl font-playfair mb-8 text-slate-900 dark:text-white">Udogodnienia VIP</h3>
+                            <h3 className="text-2xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "vipAmenitiesTitle")}</h3>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="relative w-14 h-14 mx-auto mb-6">
                                         <Image src="/mazury-holiday/icons/LOCATION.svg" alt="Technika" fill className="object-contain dark:invert opacity-80" />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Nawigacja i Napęd</h4>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "navAndDriveTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        Stery strumieniowe (Dziób/Rufa), Tablet z mapami jezior, Silnik 52KM
+                                        {t("charterPage", "navAndDriveDesc")}
                                     </p>
                                 </div>
 
@@ -131,9 +122,9 @@ export default function CharterPage() {
                                     <div className="relative w-14 h-14 mx-auto mb-6">
                                         <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Standard VIP</h4>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "vipStandardTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        Klimatyzacja & Ogrzewanie, WiFi bez limitu, Netflix & HBO Max, Ekspres Nespresso
+                                        {t("charterPage", "vipStandardDesc")}
                                     </p>
                                 </div>
 
@@ -141,9 +132,9 @@ export default function CharterPage() {
                                     <div className="relative w-14 h-14 mx-auto mb-6">
                                         <Image src="/mazury-holiday/icons/FIRE_EXTINGUISHER.svg" alt="Bezpieczeństwo" fill className="object-contain dark:invert opacity-80" />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Bezpieczeństwo</h4>
+                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "safetyTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        Pełne wyposażenie ratunkowe, Instalacja 230V Non-Stop, Elektryczna winda kotwiczna
+                                        {t("charterPage", "safetyDesc")}
                                     </p>
                                 </div>
                             </div>
@@ -152,7 +143,7 @@ export default function CharterPage() {
                         {/* Gallery Section */}
                         {galleryImages.length > 0 && (
                             <div>
-                                <h3 className="2xl font-playfair mb-8 text-slate-900 dark:text-white">Galeria Zdjęć</h3>
+                                <h3 className="2xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "galleryTitle")}</h3>
 
                                 {/* First 3 images - always visible */}
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -182,7 +173,7 @@ export default function CharterPage() {
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
                                             className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
-                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
+                                            {galleryExpanded ? `▲ ${t("charterPage", "collapseGallery")}` : `▼ ${t("charterPage", "expandGallery")}`}
                                         </button>
 
                                         {galleryExpanded && (
@@ -217,9 +208,9 @@ export default function CharterPage() {
                             {/* Main CTA Card */}
                             <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
-                                <h3 className="text-2xl font-playfair mb-6 relative z-10">Zarezerwuj Termin</h3>
+                                <h3 className="text-2xl font-playfair mb-6 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
-                                    Sprawdź dostępność w naszym kalendarzu online i zarezerwuj swoje wakacje marzeń już dziś.
+                                    {t("charterPage", "bookTermDesc")}
                                 </p>
                                 <a
                                     href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
@@ -227,7 +218,7 @@ export default function CharterPage() {
                                     rel="noopener noreferrer"
                                     className="block w-full text-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-500/25 active:scale-95"
                                 >
-                                    ZAREZERWUJ GO
+                                    {t("charterPage", "bookBtn")}
                                 </a>
                                 <div className="mt-6">
                                     <ICalCalendar
@@ -241,7 +232,7 @@ export default function CharterPage() {
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                                 <h4 className="font-bold text-lg mb-6 text-slate-900 dark:text-white flex items-center gap-2">
                                     <Anchor className="text-amber-500" size={20} />
-                                    Dane Techniczne
+                                    {t("charterPage", "techSpecsTitle")}
                                 </h4>
                                 <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8 border-b border-slate-100 dark:border-slate-800 pb-8">
                                     {specs.map((spec, idx) => (
@@ -254,10 +245,10 @@ export default function CharterPage() {
 
                                 <h4 className="font-bold text-lg mb-6 text-slate-900 dark:text-white flex items-center gap-2">
                                     <LifeBuoy className="text-amber-500" size={20} />
-                                    Wyposażenie
+                                    {t("charterPage", "equipmentTitle")}
                                 </h4>
                                 <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
-                                    {equipment.map((item, idx) => (
+                                    {equipment.map((item: string, idx: number) => (
                                         <li key={idx} className="flex items-start gap-2">
                                             <span className="text-amber-500 mt-1">•</span>
                                             <span>{item}</span>
@@ -278,7 +269,7 @@ export default function CharterPage() {
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
-                    ZAREZERWUJ GO
+                    {t("charterPage", "bookBtn")}
                 </a>
             </div>
 
