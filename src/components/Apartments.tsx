@@ -13,7 +13,7 @@ export default function Apartments() {
             id: 1,
             title: t("apartments", "items.stranda.title"),
             description: t("apartments", "items.stranda.description"),
-            image: "/mazury-holiday/images/stranda/A103_images/A103 salonn.webp",
+            image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location")
         },
@@ -29,7 +29,7 @@ export default function Apartments() {
             id: 3,
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/parter/parter_1.webp",
+            image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location")
         }

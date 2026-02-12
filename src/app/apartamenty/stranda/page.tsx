@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { clsx } from "clsx";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -12,18 +12,18 @@ import { strandaApartments } from "@/data/stranda-apartments";
 
 // Update buildings data structure to include images from strandaApartments data
 const getBuildingsData = () => {
-    const buildings: Record<"A" | "B" | "C", { id: string, image: string }[]> = {
+    const buildings: Record<"A" | "B" | "C", { id: string; image: string }[]> = {
         A: [],
         B: [],
-        C: []
+        C: [],
     };
 
-    Object.values(strandaApartments).forEach(apt => {
+    Object.values(strandaApartments).forEach((apt) => {
         const b = apt.building as "A" | "B" | "C";
         if (buildings[b]) {
             buildings[b].push({
                 id: apt.id,
-                image: apt.gallery.heroImage || apt.gallery.images[0] || "/mazury-holiday/images/placeholder.webp"
+                image: apt.gallery.heroImage || apt.gallery.images[0] || "/mazury-holiday/images/placeholder.webp",
             });
         }
     });
@@ -34,22 +34,21 @@ const getBuildingsData = () => {
     buildings.C.sort((a, b) => a.id.localeCompare(b.id));
 
     return buildings;
-}
+};
 
 export default function StrandaPage() {
     const { t } = useLanguage();
     const buildings = useMemo(() => getBuildingsData(), []);
-    const [activeBuilding, setActiveBuilding] = useState<"A" | "B" | "C">(() => {
-        if (typeof window !== "undefined") {
-            const saved = localStorage.getItem("activeStrandaBuilding");
-            if (saved && ["A", "B", "C"].includes(saved)) return saved as "A" | "B" | "C";
-        }
-        return "A";
-    });
+    // Default to building "A"
+    const [activeBuilding, setActiveBuilding] = useState<"A" | "B" | "C">("A");
+
+    // Clear saved building preference on component mount to ensure fresh start
+    useEffect(() => {
+        localStorage.removeItem("activeStrandaBuilding");
+    }, []);
 
     const handleBuildingChange = (building: "A" | "B" | "C") => {
         setActiveBuilding(building);
-        localStorage.setItem("activeStrandaBuilding", building);
     };
 
     return (

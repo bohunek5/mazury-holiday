@@ -12,21 +12,43 @@ export default function KisajnoPage() {
     const { t } = useLanguage();
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [galleryExpanded, setGalleryExpanded] = useState(false);
 
     const galleryImages = [
         "/mazury-holiday/images/kisajno/kisajno_1.webp",
-        "/mazury-holiday/images/kisajno/kisajno_2.webp"
+        "/mazury-holiday/images/kisajno/kisajno_2.webp",
+        "/mazury-holiday/images/kisajno/kisajno_3.webp",
+        "/mazury-holiday/images/kisajno/kisajno_4.webp",
+        "/mazury-holiday/images/kisajno/kisajno_5.webp",
+        "/mazury-holiday/images/kisajno/kisajno_6.webp",
+        "/mazury-holiday/images/kisajno/kisajno_7.webp",
+        "/mazury-holiday/images/kisajno/kisajno_8.webp",
+        "/mazury-holiday/images/kisajno/kisajno_9.webp",
+        "/mazury-holiday/images/kisajno/kisajno_10.webp",
+        "/mazury-holiday/images/kisajno/kisajno_11.webp"
     ];
+
+    const openLightbox = (index: number) => {
+        setLightboxIndex(index);
+        setLightboxOpen(true);
+    };
+
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
             <Navbar />
 
             {/* Hero Section */}
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/mazury-holiday/images/DJI_0017_optimized.webp"
+                        alt="Kisajno Hero"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_2.webp')]"
-                />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">{t("kisajnoPage", "title")}</h1>
                     <p className="text-xl md:text-2xl font-light">{t("kisajnoPage", "subtitle")}</p>
@@ -35,7 +57,8 @@ export default function KisajnoPage() {
 
             {/* Content Section */}
             <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+                    {/* Left Column: Description & Features */}
                     <div>
                         <h2 className="text-4xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "introTitle")}</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
@@ -65,24 +88,79 @@ export default function KisajnoPage() {
                             <span className="text-slate-500">{t("kisajnoPage", "priceUnit")}</span>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+
+                    {/* Right Column: Teaser Images & Gallery Button */}
+                    <div className="space-y-4">
                         <div
-                            className="relative h-64 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
-                            onClick={() => {
-                                setLightboxIndex(0);
-                                setLightboxOpen(true);
-                            }}
+                            className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer group"
+                            onClick={() => openLightbox(0)}
                         >
-                            <Image src="/mazury-holiday/images/kisajno/kisajno_1.webp" alt="Kisajno wnętrze 1" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                            <Image
+                                src={galleryImages[0]}
+                                alt="Kisajno wnętrze 1"
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                loading="eager"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                         </div>
                         <div
-                            className="relative h-64 rounded-2xl overflow-hidden shadow-lg mt-8 cursor-pointer group"
-                            onClick={() => {
-                                setLightboxIndex(1);
-                                setLightboxOpen(true);
-                            }}
+                            className="relative h-64 rounded-2xl overflow-hidden shadow-xl cursor-pointer group"
+                            onClick={() => openLightbox(1)}
                         >
-                            <Image src="/mazury-holiday/images/kisajno/kisajno_2.webp" alt="Kisajno wnętrze 2" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                            <Image
+                                src={galleryImages[1]}
+                                alt="Kisajno wnętrze 2"
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                loading="eager"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                        </div>
+
+                        {/* Gallery Button and Collapsible Grid */}
+                        <div className="pt-4">
+                            <button
+                                onClick={() => setGalleryExpanded(!galleryExpanded)}
+                                className="w-full px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 uppercase tracking-wide flex items-center justify-center gap-2"
+                            >
+                                {galleryExpanded ? (
+                                    <>
+                                        <span>Zwiń galerię</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span>Zobacz więcej zdjęć</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </>
+                                )}
+                            </button>
+
+                            {galleryExpanded && (
+                                <div className="grid grid-cols-2 gap-4 mt-4">
+                                    {galleryImages.slice(2).map((img, idx) => (
+                                        <div
+                                            key={idx + 2}
+                                            className="relative h-48 rounded-xl overflow-hidden shadow-md cursor-pointer group"
+                                            onClick={() => openLightbox(idx + 2)}
+                                        >
+                                            <Image
+                                                src={img}
+                                                alt={`Kisajno widok ${idx + 3}`}
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 50vw, 25vw"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

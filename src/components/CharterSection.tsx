@@ -51,7 +51,7 @@ export default function CharterSection() {
                         <ul className="space-y-6 mb-10 text-slate-300">
                             <li className="flex items-center gap-4">
                                 <div className="relative w-8 h-8 shrink-0">
-                                    <Image src="/mazury-holiday/icons/PLACEHOLDER.svg" alt="Bez patentu" fill className="object-contain invert" />
+                                    <span className="text-3xl">⚓</span>
                                 </div>
                                 <span className="text-lg">{t("charter", "feature1") || "Bez patentu"}</span>
                             </li>

@@ -545,6 +545,13 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             maintenance: {
                 title: "Maintenance & Cleaning",
                 desc: "Your property will always be ready to receive guests at the highest standard."
+            },
+            whyUs: {
+                title: "Why cooperate with us?",
+                point1: "Local experience and knowledge of the Masurian market",
+                point2: "Transparent settlement system and owner panel",
+                point3: "Constant technical care and maintenance",
+                point4: "Price optimization (Revenue Management)"
             }
         },
         contactForm: {
@@ -835,6 +842,13 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             maintenance: {
                 title: "Wartung & Reinigung",
                 desc: "Ihre Immobilie ist immer bereit, Gäste auf höchstem Standard zu empfangen."
+            },
+            whyUs: {
+                title: "Warum mit uns zusammenarbeiten?",
+                point1: "Lokale Erfahrung und Marktkenntnis",
+                point2: "Transparentes Abrechnungssystem und Eigentümerbereich",
+                point3: "Ständige technische Betreuung und Wartung",
+                point4: "Preisoptimierung (Revenue Management)"
             }
         },
         pokojeFuledaPage: {
@@ -924,6 +938,46 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         stranda: { subtitle: "Lujo en Lago Kisajno", description: "Diseño moderno y naturaleza.", building: "Edificio", apartment: "Apartamento" },
         details: { about: "Sobre", amenities: "Comodidades", booking: "Reserva", checkAvailability: "Verificar disponibilidad.", callBtn: "Llamar", lowPrice: "Mejor precio.", descriptionPart1: "Apartamento de lujo en", descriptionPart2: "Stranda Residence.", descriptionPart3: "Vistas inolvidables.", items: { view: "Vistas al lago", ac: "Aire acond.", terrace: "Terraza", kitchen: "Cocina", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna" } },
         footer: { brandDesc: "Momentos únicos.", navTitle: "Navegación", contactTitle: "Contacto", followTitle: "Síguenos", rights: "Reservados todos los derechos.", linksTitle: "Enlaces" },
+        cooperationPage: {
+            title: "Cooperación",
+            subtitle: "Tu propiedad en las mejores manos",
+            services: {
+                title: "Gestión Integral",
+                desc: "Nos encargaremos de tu apartamento, cabaña o propiedad en Masuria. Ofrecemos una gama completa de servicios, desde marketing hasta limpieza."
+            },
+            marketing: {
+                title: "Marketing Profesional",
+                desc: "Nos ocupamos de la visibilidad de tu oferta en los portales de reserva más populares."
+            },
+            guests: {
+                title: "Servicio al Cliente",
+                desc: "Proporcionamos check-in, check-out profesionales y soporte a los huéspedes durante toda su estancia."
+            },
+            maintenance: {
+                title: "Mantenimiento y Limpieza",
+                desc: "Tu propiedad siempre estará lista para recibir huéspedes con los más altos estándares."
+            },
+            whyUs: {
+                title: "¿Por qué colaborar con nosotros?",
+                point1: "Experiencia local y conocimiento del mercado de Masuria",
+                point2: "Sistema de liquidación transparente y panel del propietario",
+                point3: "Cuidado técnico y mantenimiento constante",
+                point4: "Optimización de precios (Revenue Management)"
+            }
+        },
+        contactForm: {
+            title: "Escríbenos",
+            subtitle: "¿Tienes preguntas? ¿Quieres reservar una estancia? Usa el formulario a continuación.",
+            name: "Nombre y apellido",
+            email: "Correo electrónico",
+            phone: "Número de teléfono",
+            subject: "Asunto",
+            message: "Mensaje",
+            send: "Enviar mensaje",
+            sending: "Enviando...",
+            success: "¡Mensaje enviado con éxito!",
+            error: "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        },
         roomsPage: {
             heroTitle: "Habitaciones en Masuria",
             heroSubtitle: "Habitaciones cómodas en zona tranquila",
@@ -1088,7 +1142,47 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Senza patente", title: "Noleggio Yacht", description: "Stillo 30 senza patente.", model: "Stillo 30 (2020)", cabins: "3 Cabine", checkBtn: "Disponibilità", premiumFleet: "Premium", feature1: "No patente", feature2: "2020", feature3: "Lusso", detailsBtn: "Dettagli" },
         stranda: { subtitle: "Lusso sul lago", description: "Design moderno e natura.", building: "Edificio", apartment: "Appartamento" },
         details: { about: "Info", amenities: "Servizi", booking: "Prenotazione", checkAvailability: "Controlla disponibilità.", callBtn: "Chiama", lowPrice: "Miglior prezzo.", descriptionPart1: "Appartamento di lusso in", descriptionPart2: "Stranda Residence.", descriptionPart3: "Vista indimenticabile.", items: { view: "Vista lago", ac: "Aria cond.", terrace: "Terrazza", kitchen: "Cucina", tv: "Smart TV", wifi: "WiFi", parking: "Parcheggio", sauna: "Sauna" } },
-        footer: { brandDesc: "Momenti unici.", navTitle: "Navigazione", contactTitle: "Contatti", followTitle: "Seguici", rights: "Tutti i diritti riservati.", linksTitle: "Link" }
+        footer: { brandDesc: "Momenti unici.", navTitle: "Navigazione", contactTitle: "Contatti", followTitle: "Seguici", rights: "Tutti i diritti riservati.", linksTitle: "Link" },
+        cooperationPage: {
+            title: "Cooperazione",
+            subtitle: "La tua proprietà in buone mani",
+            services: {
+                title: "Gestione Completa",
+                desc: "Ci prenderemo cura del tuo appartamento, casa o struttura in Masuria. Offriamo una gamma completa di servizi, dal marketing alla pulizia."
+            },
+            marketing: {
+                title: "Marketing Professionale",
+                desc: "Ci occupiamo della visibilità della tua offerta sui portali di prenotazione più popolari."
+            },
+            guests: {
+                title: "Servizio Ospiti",
+                desc: "Forniamo check-in, check-out professionali e supporto agli ospiti durante tutto il soggiorno."
+            },
+            maintenance: {
+                title: "Manutenzione e Pulizia",
+                desc: "La tua proprietà sarà sempre pronta ad accogliere gli ospiti secondo i più alti standard."
+            },
+            whyUs: {
+                title: "Perché collaborare con noi?",
+                point1: "Esperienza locale e conoscenza del mercato masuriano",
+                point2: "Sistema di liquidazione trasparente e pannello proprietario",
+                point3: "Cura tecnica costante e manutenzione",
+                point4: "Ottimizzazione dei prezzi (Revenue Management)"
+            }
+        },
+        contactForm: {
+            title: "Scrivici",
+            subtitle: "Hai domande? Vuoi prenotare un soggiorno? Usa il modulo qui sotto.",
+            name: "Nome e cognome",
+            email: "Indirizzo email",
+            phone: "Numero di telefono",
+            subject: "Oggetto",
+            message: "Messaggio",
+            send: "Invia messaggio",
+            sending: "Invio in corso...",
+            success: "Messaggio inviato con successo!",
+            error: "Si è verificato un errore durante l'invio del messaggio. Riprova."
+        }
     },
     fr: {
         nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver" },
@@ -1103,7 +1197,47 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Sans permis", title: "Location Yacht", description: "Stillo 30 sans permis.", model: "Stillo 30 (2020)", cabins: "3 Cabines", checkBtn: "Disponibilité", premiumFleet: "Premium", feature1: "Sans permis", feature2: "2020", feature3: "Luxe", detailsBtn: "Détails" },
         stranda: { subtitle: "Luxe sur le lac", description: "Design moderne et nature.", building: "Bâtiment", apartment: "Appartement" },
         details: { about: "À propos", amenities: "Équipements", booking: "Réservation", checkAvailability: "Vérifier dispo.", callBtn: "Appeler", lowPrice: "Meilleur prix.", descriptionPart1: "Appartement de luxe", descriptionPart2: "à Stranda.", descriptionPart3: "Vue inoubliable.", items: { view: "Vue lac", ac: "Clim", terrace: "Terrasse", kitchen: "Cuisine", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna" } },
-        footer: { brandDesc: "Moments uniques.", navTitle: "Navigation", contactTitle: "Contact", followTitle: "Suivez-nous", rights: "Tous droits réservés.", linksTitle: "Liens" }
+        footer: { brandDesc: "Moments uniques.", navTitle: "Navigation", contactTitle: "Contact", followTitle: "Suivez-nous", rights: "Tous droits réservés.", linksTitle: "Liens" },
+        cooperationPage: {
+            title: "Coopération",
+            subtitle: "Votre propriété entre de bonnes mains",
+            services: {
+                title: "Gestion Complète",
+                desc: "Nous nous occuperons de votre appartement, chalet ou propriété en Mazurie. Nous offrons une gamme complète de services, du marketing au nettoyage."
+            },
+            marketing: {
+                title: "Marketing Professionnel",
+                desc: "Nous nous occupons de la visibilité de votre offre sur les portails de réservation les plus populaires."
+            },
+            guests: {
+                title: "Service Clients",
+                desc: "Nous assurons des check-in, check-out professionnels et un soutien aux clients tout au long de leur séjour."
+            },
+            maintenance: {
+                title: "Entretien et Nettoyage",
+                desc: "Votre propriété sera toujours prête à accueillir des clients selon les normes les plus élevées."
+            },
+            whyUs: {
+                title: "Pourquoi collaborer avec nous?",
+                point1: "Expérience locale et connaissance du marché masurien",
+                point2: "Système de règlement transparent et panneau propriétaire",
+                point3: "Entretien technique constant et maintenance",
+                point4: "Optimisation des prix (Revenue Management)"
+            }
+        },
+        contactForm: {
+            title: "Écrivez-nous",
+            subtitle: "Vous avez des questions ? Vous souhaitez réserver un séjour ? Utilisez le formulaire ci-dessous.",
+            name: "Nom et prénom",
+            email: "Adresse e-mail",
+            phone: "Numéro de téléphone",
+            subject: "Sujet",
+            message: "Message",
+            send: "Envoyer le message",
+            sending: "Envoi en cours...",
+            success: "Message envoyé avec succès !",
+            error: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer."
+        }
     },
     cs: {
         nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat" },
@@ -1288,6 +1422,13 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             maintenance: {
                 title: "Údržba a úklid",
                 desc: "Vaše nemovitost bude vždy připravena na nejvyšší standard."
+            },
+            whyUs: {
+                title: "Proč spolupracovat s námi?",
+                point1: "Místní zkušenosti a znalost mazurského trhu",
+                point2: "Transparentní systém vyúčtování a panel majitele",
+                point3: "Stálá technická péče a údržba",
+                point4: "Optimalizace cen (Revenue Management)"
             }
         },
         contactForm: {
@@ -1559,6 +1700,13 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             maintenance: {
                 title: "Priežiūra ir valymas",
                 desc: "Jūsų turtas visada bus paruoštas priimti svečius aukščiausiu standartu."
+            },
+            whyUs: {
+                title: "Kodėl verta bendradarbiauti su mumis?",
+                point1: "Vietinė patirtis ir rinkos išmanymas",
+                point2: "Skaidri atsiskaitymo sistema ir savininko skydelis",
+                point3: "Nuolatinė techninė priežiūra",
+                point4: "Kainų optimizavimas (Revenue Management)"
             }
         },
         contactForm: {

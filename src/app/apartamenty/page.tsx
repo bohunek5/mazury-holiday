@@ -15,7 +15,7 @@ export default function ApartmentsHub() {
             id: "stranda",
             title: "Stranda Residence",
             description: t("stranda", "description"),
-            image: "/mazury-holiday/images/stranda/A103_images/A103 salonn.webp",
+            image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
         },
         {
