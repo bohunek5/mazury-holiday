@@ -1,9 +1,85 @@
 import { strandaApartments } from '@/data/stranda-apartments';
 import { fuledaApartments } from '@/data/fuleda-data';
 import { pokojeFuledaData } from '@/data/pokoje-fuleda-data';
+import { kisajnoData } from '@/data/kisajno-data';
+import { skorupkiData } from '@/data/skorupki-data';
 
 export function getAssistantResponse(message: string): string {
     const msg = message.toLowerCase();
+
+    // 0. Specific Q&A Knowledge Base
+    // Category 1: Location and differences
+    if ((msg.includes('różni') || msg.includes('rozn')) && (msg.includes('giżyck') || msg.includes('gizyck')) && (msg.includes('fuled'))) {
+        return "Oferujemy dwa różne style wypoczynku. Apartamenty w Giżycku (Stranda i Kisajno) to propozycja dla osób lubiących tętniące życiem otoczenie portowe, bliskość tawerny, koncertów i atrakcji miejskich. Z kolei Fuleda, położona nad jeziorem Dobskim, to strefa ciszy na terenie rezerwatu przyrody – idealna dla osób szukających absolutnego spokoju, kontaktu z naturą i \"slow tourism\".";
+    }
+    if ((msg.includes('daleko') || msg.includes('odległość') || msg.includes('odleglosc')) && msg.includes('fuled') && (msg.includes('giżyck') || msg.includes('gizyck'))) {
+        return "Fuleda znajduje się około 18 km od Giżycka, co zapewnia ciszę z dala od miasta, ale pozwala na dojazd w około 15-35 minut samochodem.";
+    }
+    if ((msg.includes('gdzie') || msg.includes('lokalizacja')) && (msg.includes('giżyck') || msg.includes('gizyck'))) {
+        return "Posiadamy dwie lokalizacje w Giżycku. Apartamenty \"Stranda\" znajdują się przy porcie Stranda (ul. Pierkunowo), natomiast apartamenty \"Kisajno\" zlokalizowane są przy porcie Neptun. Obie lokalizacje leżą nad brzegiem jeziora Kisajno.";
+    }
+
+    // Category 2: Equipment and standard
+    if (msg.includes('jacuzzi') && (msg.includes('który') || msg.includes('ktory') || msg.includes('wybrać') || msg.includes('szukam'))) {
+        return "Mamy szeroki wybór apartamentów z prywatnym jacuzzi. W budynku A są to apartamenty Delux na parterze (np. A104, A105) oraz luksusowe apartamenty na dachu z tarasami widokowymi (A402, A403). W budynku B jacuzzi posiadają m.in. B102, B201 oraz B202.";
+    }
+    if (msg.includes('saun')) {
+        return "Tak, polecamy wyjątkowy Apartament B202 Delux, który posiada zarówno prywatną saunę, jak i jacuzzi, a do tego dwie sypialnie i widok na zatokę Tracz.";
+    }
+    if ((msg.includes('kuchni') || msg.includes('aneks')) && (msg.includes('gotowa') || msg.includes('wyposaż') || msg.includes('co jest'))) {
+        return "Tak, nasze aneksy kuchenne są kompleksowo wyposażone. Znajdą Państwo w nich płytę indukcyjną, lodówkę, zmywarkę, ekspres do kawy oraz komplet naczyń i sztućców. W niektórych apartamentach premium (np. A403) dostępna jest także chłodziarka do wina.";
+    }
+    if (msg.includes('klimatyzacj') || msg.includes('klima')) {
+        return "Tak, większość naszych apartamentów, w tym te w budynku A i B oraz w Fuledzie, jest wyposażona w klimatyzację, co zapewnia komfort w upalne dni.";
+    }
+    if (msg.includes('internet') || msg.includes('wifi') || msg.includes('wi-fi')) {
+        return "Oczywiście, zapewniamy bezpłatne Wi-Fi we wszystkich apartamentach. Jest ono wystarczające nawet do pracy zdalnej.";
+    }
+
+    // Category 3: Yacht Charter
+    if ((msg.includes('jacht') || msg.includes('stillo')) && (msg.includes('patent') || msg.includes('uprawnienia') || msg.includes('bez patentu'))) {
+        return "Nie, jacht motorowy Stillo 30 można prowadzić bez patentu. Zapewniamy pełne przeszkolenie przed rejsem.";
+    }
+    if ((msg.includes('jacht') || msg.includes('stillo')) && (msg.includes('ile osób') || msg.includes('ile osob') || msg.includes('spać') || msg.includes('spac'))) {
+        return "Jacht posiada 3 zamykane kabiny (jedną dziobową i dwie rufowe) oraz miejsce w mesie, co pozwala na komfortowy nocleg dla 8 osób.";
+    }
+    if ((msg.includes('jacht') || msg.includes('stillo')) && (msg.includes('zimno') || msg.includes('ogrzewanie') || msg.includes('webasto'))) {
+        return "Jacht jest przygotowany na każdą pogodę. Posiada ogrzewanie Webasto, a materace w sypialniach wykonane są z pianki termoaktywnej dla najwyższego komfortu.";
+    }
+    if ((msg.includes('jacht') || msg.includes('stillo')) && msg.includes('wyposaż')) {
+        return "Jacht jest wyposażony w standardzie VIP. Posiada m.in. ster strumieniowy (dziobowy i rufowy), ciepłą wodę, TV ze Smart TV (Netflix, HBO), Wi-Fi bez limitu, kostkarkę do lodu oraz ekspres Nespresso.";
+    }
+
+    // Category 4: Booking, Prices, Policy
+    if (msg.includes('zameldowani') || msg.includes('wymeldowani') || msg.includes('doba') || msg.includes('godzin') || msg.includes('przyjazd') || msg.includes('wyjazd')) {
+        return "Zameldowanie odbywa się w godzinach od 15:00 do 23:00, natomiast wymeldowanie możliwe jest od 01:00 do 11:00.";
+    }
+    if (msg.includes('zwierz') || msg.includes('psa') || msg.includes('pies') || msg.includes('kot') || msg.includes('pupil')) {
+        return "W apartamentach Kisajno zwierzęta nie są akceptowane. W przypadku innych lokalizacji prosimy o bezpośredni kontakt w celu potwierdzenia zasad.";
+    }
+    if (msg.includes('ręcznik') || msg.includes('recznik') || msg.includes('pościel') || msg.includes('posciel')) {
+        return "Nie, zapewniamy komplet pościeli i ręczników dla każdego gościa. Dodatkowo w łazienkach znajdują się szlafroki, suszarka do włosów, a nawet prostownica.";
+    }
+    // Specific price check happens in generic block below or handle here if strictly asking "ceny za dobę"
+    if (msg.includes('ceny za dobę') || msg.includes('ceny za dobe') || msg.includes('cena za dobę')) {
+        return "Ceny są dynamiczne i zależą od terminu oraz standardu. Ceny startują od 200 zł za dobę (np. studia lub pokoje w Fuledzie), przez 300-450 zł za apartamenty Suite, aż do 550 zł za apartamenty Delux z jacuzzi na dachu. Dokładną wycenę dla wybranego terminu można sprawdzić w naszym systemie rezerwacji online.";
+    }
+
+    // Category 5: Surroundings and Attractions
+    if ((msg.includes('robić') || msg.includes('robic') || msg.includes('atrakcj')) && msg.includes('okolic')) {
+        return "Giżycko oferuje mnóstwo atrakcji. W pobliżu znajduje się Twierdza Boyen, zabytkowy Most Obrotowy oraz Wieża Ciśnień. Dla rodzin polecamy Park Linowy Wiewióra, Park Wodny Boyen lub odwiedziny w Papugarni. Zimą zapraszamy na kryte lodowisko.";
+    }
+    if (msg.includes('widok') && msg.includes('jezior')) {
+        return "Tak, większość naszych apartamentów posiada tarasy z widokiem na jezioro Kisajno (w Giżycku) lub jezioro Dobskie (w Fuledzie). Możesz nawet sprawdzić aktualny widok dzięki naszym kamerom online dostępnym na stronie.";
+    }
+    if (msg.includes('parking') || msg.includes('parkować') || msg.includes('samochód') || msg.includes('auto')) {
+        return "Na terenie obiektów zapewniamy prywatny parking dla naszych gości.";
+    }
+
+    // Category 6: Contact
+    if (msg.includes('kontakt') || msg.includes('telefon') || msg.includes('mail') || msg.includes('numer')) {
+        return "Możesz dzwonić pod numer rezerwacyjny +48 730 067 027 lub do biura +48 607 241 090. Jesteśmy też dostępni pod mailem: rezerwacje@mazury.holiday";
+    }
 
     // 1. General Offer / "Where are you?" Questions
     if (msg.includes('oferta') || msg.includes('gdzie') || msg.includes('miejsce') || msg.includes('nocleg') || msg.includes('obiekty')) {
@@ -70,7 +146,7 @@ export function getAssistantResponse(message: string): string {
                 const someAmenities = [
                     ...apartment.amenities.living.slice(0, 3),
                     ...apartment.amenities.kitchen.slice(0, 3),
-                    ...apartment.amenities.bathroom.slice(0, 3)
+                    ...(apartment.amenities.bathroom || []).slice(0, 3)
                 ];
                 response += `Wyposażenie obejmuje m.in.: ${someAmenities.join(', ')}...`;
             } else {
@@ -115,34 +191,31 @@ export function getAssistantResponse(message: string): string {
 
     // 6. Kisajno
     if (msg.includes('kisajn')) {
-        return "Apartament **Kisajno** (2+2 os.) to luksusowa opcja w Giżycku z pięknym widokiem. [Zobacz i zarezerwuj Kisajno](/apartamenty/kisajno)";
+        return `**${kisajnoData.title || 'Apartament Kisajno'}** to wyjątkowa lokalizacja w Giżycku.\n\n${kisajnoData.description}\n\n[Zobacz i zarezerwuj Kisajno](/apartamenty/kisajno)`;
     }
 
     // 7. Skorupki
     if (msg.includes('domek') || msg.includes('skorupk')) {
-        return "Nasz kompleks **Domki Skorupki** to idealne miejsce na rodzinne wakacje. [Zobacz nasze domki](/domki)";
+        // Fallback description
+        const desc = skorupkiData?.description?.length > 50 ? skorupkiData.description : "Nasz kompleks **Domki Skorupki** to idealne miejsce na rodzinne wakacje w otoczeniu starych drzew.";
+        return `${desc}\n\n[Zobacz nasze domki](/domki)`;
+    }
+
+    // Category 3b: Yacht Specs (Stillo 30)
+    if ((msg.includes('jacht') || msg.includes('stillo')) && (msg.includes('metr') || msg.includes('długość') || msg.includes('dlugosc') || msg.includes('szerokość') || msg.includes('szerokosc') || msg.includes('zanurzeni') || msg.includes('silnik'))) {
+        return "Nasz jacht Stillo 30 VIP ma następujące parametry:\n\n" +
+            "📏 **Długość:** 9.10 m\n" +
+            "↔️ **Szerokość:** 3.25 m\n" +
+            "🌊 **Zanurzenie:** 0.50 m\n" +
+            "⚙️ **Silnik:** Craftsman 52KM Diesel\n\n" +
+            "Jest to jednostka spacerowa, bardzo stabilna i bezpieczna. [Zobacz pełną specyfikację](/czarter)";
     }
 
     // 8. Czarter
-    if (msg.includes('jacht') || msg.includes('stillo') || msg.includes('łódź') || msg.includes('lodz') || msg.includes('czarter')) {
+    if (msg.includes('czarter')) {
         return "Marzysz o rejsie? Czarterujemy luksusowy jacht motorowy **Stillo 30 VIP**! 🚤\n\n" +
             "Co ważne: do jego prowadzenia **nie jest wymagany patent motorowodny** – po krótkim przeszkoleniu możesz samodzielnie sterować tym luksusowym 'domem na wodzie'.\n\n" +
             "[Zobacz szczegóły czarteru](/czarter)";
-    }
-
-    // 9. Attractions & Location
-    if (msg.includes('atrakcj') || msg.includes('co robić') || msg.includes('zwiedz') || msg.includes('okolicy')) {
-        return "Okolica naszych obiektów (Giżycko, Fuleda, Skorupki) obfituje w atrakcje!\n\n" +
-            "🏰 **Twierdza Boyen** w Giżycku\n" +
-            "🌉 **Most Obrotowy** w Giżycku\n" +
-            "🌳 **Park wodny i marina Stranda**\n" +
-            "👣 **Strefa ciszy nad jeziorem Dobskim** (przy apartamentach Fuleda)\n" +
-            "🚲 **Liczne ścieżki rowerowe**\n\n" +
-            "Jeśli szukasz konkretnych rekomendacji restauracji lub chcesz wiedzieć, jak do nas trafić, zapraszamy do [kontaktu bezpośredniego](/kontakt) – chętnie podpowiemy!";
-    }
-
-    if (msg.includes('lokalizacj') || msg.includes('dojazd') || msg.includes('gdzie jescze') || msg.includes('trafi')) {
-        return "Nasze obiekty znajdują się w sercu Mazur (Giżycko i okolice). Dokładne mapy dojazdu oraz numery telefonów znajdziesz na naszej stronie [Kontakt](/kontakt). Zapraszamy!";
     }
 
     // Standard items
@@ -154,7 +227,7 @@ export function getAssistantResponse(message: string): string {
         return "Mamy opcje dla każdego! Od par (2 os.), przez rodziny (2+2, 4+2) aż po większe apartamenty. Dla ilu osób szukasz noclegu?";
     }
 
-    if (msg.includes('cześć') || msg.includes('czesc') || msg.includes('hej') || msg.includes('dzień dobry')) {
+    if (msg.includes('cześć') || msg.includes('czesc') || msg.includes('hej') || msg.includes('dzień dobry') || msg.includes('witam')) {
         return "Dzień dobry! Chętnie pomogę Ci znaleźć idealne miejsce na Mazurach. Szukasz apartamentu z jacuzzi, domku dla rodziny, czy może chcesz wynająć jacht?";
     }
 

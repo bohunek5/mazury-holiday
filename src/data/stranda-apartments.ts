@@ -874,32 +874,11 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "kosmetyki"
             ],
             "terrace": [
+                "przestronny taras",
                 "dwa leżaki",
                 "stolik",
                 "widok na jezioro",
-                "Apartament B106 Suite z dwoma sypialniami i rozkładaną sofą w salonie",
-                "Wyposażenie kuchnia: ekspres do kawy na kapsułki",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "komplet naczyń i sztućców",
-                "Wyposażenie salon: TV",
-                "sofa 2os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja",
-                "Wyposażenie sypialnia 1: TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "Wyposażenie sypialnia 2: TV",
-                "deska do prasowania",
-                "żelazko",
-                "Wyposażenie łazienka: prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "ręczniki",
-                "Wyposażenie taras: komplet mebli wypoczynkowych"
+                "komplet mebli wypoczynkowych"
             ]
         },
         additionalInfo: [],
@@ -963,7 +942,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "szlafroki",
                 "mydło",
                 "żel pod prysznic",
-                "balsam do ciała"
+                "balsam do ciała",
+                "wanna"
             ],
             "terrace": [
                 "komplet mebli wypoczynkowych",
@@ -1017,7 +997,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "sofa 1os.",
                 "stół",
                 "krzesła",
-                "klimatyzacja"
+                "klimatyzacja",
+                "sauna"
             ],
             "kitchen": [
                 "płyta indukcyjna",
@@ -1124,7 +1105,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             "terrace": [
                 "dwa leżaki",
                 "stolik",
-                "widok na jezioro"
+                "widok na jezioro",
+                "przestronny taras"
             ]
         },
         additionalInfo: [],
@@ -1201,7 +1183,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "dwa leżaki",
                 "meble tarasowe",
                 "stolik",
-                "widok na jezioro"
+                "widok na jezioro",
+                "przestronny taras"
             ]
         },
         additionalInfo: [],
@@ -1506,7 +1489,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "balsam do ciała"
             ],
             "terrace": [
-
+                "widok na zatokę Tracz i port Stranda"
             ]
         },
         additionalInfo: [],
@@ -1579,7 +1562,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             "terrace": [
                 "dwa leżaki",
                 "stolik",
-                "widok na jezioro"
+                "widok na jezioro",
+                "przestronny taras"
             ]
         },
         additionalInfo: [],
@@ -1651,7 +1635,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             "terrace": [
                 "dwa leżaki",
                 "stolik",
-                "widok na jezioro"
+                "widok na jezioro",
+                "przestronny taras"
             ]
         },
         additionalInfo: [],

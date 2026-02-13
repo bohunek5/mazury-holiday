@@ -15,8 +15,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Mazury.Holiday | Apartamenty i Czarter Jachtów",
-  description: "Luksusowe apartamenty w Giżycku i Fuledzie oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
+  title: "Mazury.Holiday - Apartamenty - Domki - Pokoje i Czarter na Mazurach",
+  description: "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
+  openGraph: {
+    title: "Mazury.Holiday - Apartamenty - Domki - Pokoje i Czarter na Mazurach",
+    description: "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
+    url: "https://mazury.holiday",
+    siteName: "Mazury.Holiday",
+    locale: "pl_PL",
+    type: "website",
+  },
 };
 
 import { ChatProvider } from "@/contexts/ChatContext";

@@ -29,7 +29,7 @@ export default function ApartmentsHub() {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/parter/parter_1.webp",
+            image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
             link: "/apartamenty/fuleda",
         },
     ];
