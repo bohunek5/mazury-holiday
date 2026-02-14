@@ -65,10 +65,11 @@ export const translations = {
             title: "Domki Skorupki",
             subtitle: "Twoja luksusowa przystań w sercu Mazur",
             introTitle: "Relaks w rytmie slow",
-            descriptionPart1: "Domki w Skorupkach to unikalne miejsce na mapie Mazur, stworzone dla osób szukających intymności, luksusu i bliskości z naturą. Nasza posiadłość w malowniczej wiosce Skorupki to synonim spokoju i wysokiego standardu.",
-            descriptionPart2: "Każdy domek został zaprojektowany z myślą o komforcie naszych gości, łącząc nowoczesne rozwiązania z tradycyjnym mazurskim klimatem. Przestronne wnętrza, designerskie meble i dbałość o każdy szczegół sprawiają, że pobyt u nas zamienia się w niezapomniane przeżycie.",
-            descriptionPart3: "Urok Skorupek to przede wszystkim autentyczność i harmonia z otoczeniem. Otoczone lasami i łąkami, nasze domki oferują całkowite odcięcie od codziennego zgiełku. Poranki witają Cię śpiewem ptaków, a wieczory zapachem ogniska i gwiazdami rozsypanymi po bezchmurnym niebie.",
-            descriptionPart4: "Bliskość jeziora Dobskiego pozwala na pływanie kajakiem, wędkowanie i długie spacery brzegiem, podczas których można odkrywać piękno mazurskiej przyrody. Dla aktywnych gości przygotowaliśmy trasy rowerowe, a zimą zapraszamy na narciarstwo biegowe po okolicznych polach.",
+            descriptionPart1: "Wyobraź sobie miejsce, gdzie budzisz się, wychodzisz na taras i Twoim oczom ukazuje się kojący widok jeziora. Zapraszamy do naszej oazy spokoju, w której poczujesz się swobodnie jak u siebie.",
+            descriptionPart2: "Domki w Skorupkach to unikalne miejsce na mapie Mazur, stworzone dla osób szukających intymności, luksusu i bliskości z naturą. Nasza posiadłość w malowniczej wiosce Skorupki to synonim spokoju i wysokiego standardu.",
+            descriptionPart3: "Każdy domek został zaprojektowany z myślą o komforcie naszych gości, łącząc nowoczesne rozwiązania z tradycyjnym mazurskim klimatem.",
+            descriptionPart4: "Wystrój wnętrz nawiązuje do naturalnego otoczenia – dominują tu drewno, jasne barwy i marynistyczne akcenty. Duże okna wpuszczają do środka mnóstwo światła dziennego, a wieczorami tworzą przytulną atmosferę, idealną do relaksu z książką lub planszówkami.",
+            externalAmenities: "Każdy domek posiada prywatną strefę zieleni oraz przestronny, zadaszony taras chroniący przed słońcem i deszczem. Na terenie obiektu Goście mogą korzystać z bezpośredniego dostępu do linii brzegowej, pomostu wędkarskiego, boiska do siatkówki oraz bezpiecznego placu zabaw dla dzieci. Do dyspozycji jest również miejsce na ognisko i zadaszone altany biesiadne.",
             areaTitle: "Powierzchnia",
             areaDesc: "Komfortowe domki dla rodzin i grup",
             locationTitle: "Lokalizacja",
@@ -79,6 +80,49 @@ export const translations = {
             collapseGallery: "Zwiń galerię",
             ctaTitle: "Poczuj magię Skorupek",
             ctaDesc: "Rezerwacja domku to pierwszy krok do niezapomnianych wakacji. Zadzwoń do nas i zapytaj o wolne terminy.",
+            details: {
+                interiorTitle: "Wnętrze pełne oddechu",
+                interiorDesc: "Na parterze czeka na Ciebie przestronna strefa dzienna – serce domu, gdzie na wygodnej, rozkładanej kanapie możecie wspólnie spędzać wieczory. Piętro to strefa snu: znajdziesz tu sypialnię małżeńską oraz drugi pokój z łóżkami pojedynczymi (z opcją ich złączenia), co daje elastyczność niezależnie od tego, czy przyjeżdżasz z rodziną, czy z paczką znajomych.",
+                terraceTitle: "Taras i natura",
+                terraceDesc: "Wiemy, że pogoda bywa kapryśna, dlatego Twój dom posiada duży, zadaszony taras. To dodatkowy \"pokój na świeżym powietrzu\" – idealny na poranną kawę lub wieczorną lekturę, bez względu na deszcz czy słońce. Przed domkiem masz też swój kawałek trawnika.",
+                activityTitle: "Aktywność i relaks",
+                activityDesc: "Zaledwie kilka kroków dzieli Cię od brzegu jeziora. Możesz wędkować z naszego pomostu, rozegrać mecz siatkówki lub po prostu patrzeć na wodę, podczas gdy dzieci szaleją na placu zabaw. Wieczorem zapraszamy do wspólnej strefy z altanami na ognisko pod gwiazdami. A jeśli masz czworonożnego przyjaciela – zabierz go ze sobą, wszysyc kochają zwierzęta!",
+                locationTitle: "A co z lokalizacją?",
+                locationDesc: "Jesteś w samym sercu atrakcji, ale z dala od zgiełku. Wskakuj w auto i w 10 minut jesteś w Parku Wodnym Tropikana lub Wiosce Żeglarskiej. Masz ochotę na historię? Twierdza Boyen to niecałe pół godziny drogi. Samochód zaparkujesz u nas bezpiecznie i za darmo, a dzięki szybkiemu Wi-Fi od razu podzielisz się zdjęciami z urlopu.",
+                amenitiesBlockTitle: "WYPOSAŻENIE I SZCZEGÓŁY",
+                bedroomTitle: "Sypialnia i sen",
+                bedroomItems: [
+                    "Maksymalna liczba gości: 6",
+                    "Sypialnia 1: Łóżko podwójne",
+                    "Sypialnia 2: Dwa łóżka pojedyncze (możliwość zsuwania)",
+                    "Salon: Rozkładana sofa (spanie dla 2 osób)",
+                    "Pościel w cenie"
+                ],
+                cottageAmenitiesTitle: "Udogodnienia w domku",
+                cottageAmenitiesItems: [
+                    "Przestronny, zadaszony taras",
+                    "Prywatna strefa zieleni przed wejściem",
+                    "W pełni wyposażony aneks kuchenny",
+                    "Część jadalniana"
+                ],
+                commonAreasTitle: "Części wspólne i rekreacja",
+                commonAreasItems: [
+                    "Bezpośredni dostęp do jeziora (linia brzegowa)",
+                    "Pomost (możliwość wędkowania)",
+                    "Wyznaczone miejsce na ognisko",
+                    "Zadaszone altany ogrodowe",
+                    "Plac zabaw dla dzieci",
+                    "Boisko do siatkówki"
+                ],
+                additionalTitle: "Dodatkowe informacje",
+                additionalItems: [
+                    "Obiekt przyjazny zwierzętom (Pet-friendly)",
+                    "Bezpłatny parking na terenie posesji",
+                    "Okolica: Lasy (grzybobranie), cisza, natura"
+                ],
+                price: "od 350 zł / doba",
+                bookBtn: "Zarezerwuj"
+            },
             amenities: {
                 fullEquip: "Pełne wyposażenie",
                 garden: "Prywatny ogród",

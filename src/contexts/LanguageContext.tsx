@@ -6,7 +6,7 @@ import { translations, Language } from "@/lib/translations";
 type LanguageContextType = {
     language: Language;
     setLanguage: (lang: Language) => void;
-    t: (section: keyof typeof translations.pl, key: string) => string;
+    t: (section: keyof typeof translations.pl, key: string) => any;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
     const [language, setLanguage] = useState<Language>("pl");
 
-    const t = (section: keyof typeof translations.pl, key: string): string => {
+    const t = (section: keyof typeof translations.pl, key: string): any => {
         const getVal = (lang: Language, sec: keyof typeof translations.pl, k: string) => {
             const keys = k.split('.');
             // Force cast to PL structure since we ensure fallback at runtime
@@ -26,14 +26,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
                     return undefined;
                 }
             }
-            return result as string;
+            return result;
         };
 
         const value = getVal(language, section, key);
-        if (value && typeof value === 'string') return value;
+        if (value !== undefined) return value;
 
         const fallback = getVal("en", section, key); // Fallback to English
-        return (typeof fallback === 'string' ? fallback : key);
+        return (fallback !== undefined ? fallback : key);
     };
 
     return (

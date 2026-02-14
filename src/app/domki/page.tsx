@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
+import Link from "next/link";
+import { Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 
@@ -47,6 +49,7 @@ export default function DomkiPage() {
                             <p>{t('skorupki', 'descriptionPart2')}</p>
                             <p>{t('skorupki', 'descriptionPart3')}</p>
                             <p>{t('skorupki', 'descriptionPart4')}</p>
+                            <p className="mt-6 font-semibold text-slate-800 dark:text-slate-200">{t('skorupki', 'externalAmenities')}</p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-6 mt-12">
@@ -78,6 +81,44 @@ export default function DomkiPage() {
                                 className="object-cover"
                             />
                         </div>
+                    </div>
+                </div>
+
+                {/* Cottages Grid */}
+                <div className="mb-24">
+                    <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Wybierz swój domek</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+                            <Link href={`/domki/${num}`} key={num} className="group block">
+                                <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800 h-full flex flex-col">
+                                    <div className="relative h-64 overflow-hidden">
+                                        <Image
+                                            src={`/mazury-holiday/images/skorupki/skorupki_${(num % 5) + 1}.webp`}
+                                            alt={`Domek ${num}`}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                        <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-slate-900 dark:text-white shadow-sm">
+                                            {t('skorupki', 'details.price')}
+                                        </div>
+                                    </div>
+                                    <div className="p-6 flex flex-col flex-grow">
+                                        <h4 className="text-2xl font-playfair font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-500 transition-colors">Domek {num}</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                                            {t('skorupki', 'details.interiorDesc')}
+                                        </p>
+                                        <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+                                            <span className="text-sm text-slate-500 flex items-center gap-1">
+                                                <Users size={16} /> 6 osób
+                                            </span>
+                                            <span className="text-amber-500 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                                Szczegóły &rarr;
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
 
