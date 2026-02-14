@@ -21,7 +21,7 @@ export const translations = {
             night: "noc",
             people: "osoby",
             items: {
-                stranda: { title: "Stranda Residence", location: "Port Stranda, Giżycko", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
+                stranda: { title: "Stranda Residence Apartments", location: "Port Stranda, Giżycko", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
                 kisajno: { title: "Apartamenty Giżycko \"Kisajno\"", location: "Port Neptun, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." },
                 fuleda: { title: "Fuleda Apartamenty", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
                 domkiSkorupki: { title: "Domki Skorupki", location: "Skorupki, k. Giżycka", description: "Luksusowe domki w sercu mazurskiej natury." },
