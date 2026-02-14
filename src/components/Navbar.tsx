@@ -110,7 +110,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="xl:hidden flex items-center gap-2">
+                    <div className="xl:hidden flex items-center gap-4 mr-2">
                         <MobileChatTrigger />
                         <ThemeToggle className={cn(
                             isMobileMenuOpen ? "text-slate-900 dark:text-white" : textColorClass,
