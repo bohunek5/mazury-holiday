@@ -137,7 +137,7 @@ export const translations = {
         roomsPage: {
             heroTitle: "Pokoje na Mazurach",
             heroSubtitle: "Komfortowe pokoje w spokojnej okolicy",
-            ctaText: "Szukasz większych apartamentów? Sprawdź nasze",
+            ctaText: "Szukasz więcej przestrzeni na Fuledzie? Sprawdź nasze",
             ctaLink: "Apartamenty Fuleda",
             items: {
                 fuleda: {
@@ -499,7 +499,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         roomsPage: {
             heroTitle: "Rooms in Masuria",
             heroSubtitle: "Comfortable rooms in a quiet area",
-            ctaText: "Looking for larger apartments? Check out our",
+            ctaText: "Looking for more space at Fuleda? Check out our",
             ctaLink: "Fuleda Apartments",
             items: {
                 fuleda: {
