@@ -99,7 +99,7 @@ export default function DomkiPage() {
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                         <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-slate-900 dark:text-white shadow-sm">
-                                            {t('skorupki', 'details.price')}
+                                            od 600 zł/doba
                                         </div>
                                     </div>
                                     <div className="p-6 flex flex-col flex-grow">

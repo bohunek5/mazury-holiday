@@ -37,7 +37,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-500 font-bold tracking-widest mb-2 uppercase bg-white/10 backdrop-blur-sm inline-block px-4 py-1 rounded-full">{t('skorupki', 'title')}</span>
                     <h1 className="text-4xl md:text-7xl font-playfair mb-4">Domek {id}</h1>
-                    <p className="text-xl md:text-3xl font-light">{t('skorupki', 'details.price')}</p>
+                    <p className="text-xl md:text-3xl font-light">od 600 zł/doba</p>
                 </div>
             </section>
 

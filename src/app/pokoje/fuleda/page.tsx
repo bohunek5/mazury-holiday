@@ -44,7 +44,7 @@ export default function PokojeFuledaPage() {
                     <div className="text-center text-white p-4">
                         <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">{trans.heroTitle}</span>
                         <h1 className="text-5xl md:text-7xl font-playfair mb-4">{trans.heroTitle}</h1>
-                        <p className="text-xl md:text-2xl opacity-90">{trans.price}</p>
+                        <p className="text-xl md:text-2xl opacity-90">od 375 zł/doba</p>
                     </div>
                 </div>
             </section>
@@ -205,7 +205,7 @@ export default function PokojeFuledaPage() {
                         <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 sticky top-32 shadow-xl">
                             <h3 className="text-2xl font-playfair mb-6 text-slate-900 dark:text-white">{trans.bookingTitle}</h3>
                             <div className="mb-6">
-                                <p className="text-3xl font-bold text-amber-500 mb-2">{trans.price}</p>
+                                <p className="text-3xl font-bold text-amber-500 mb-2">od 375 zł/doba</p>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm">
                                     {trans.bookingDesc}
                                 </p>

@@ -1,6 +1,7 @@
 export type FuledaApartment = {
     id: string;
     type: string;
+    price: number;
     guests: string;
     description: string;
     amenities: {
@@ -22,6 +23,7 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
     'parter': {
         id: 'parter',
         type: 'Parter',
+        price: 250,
         guests: '2+2',
         idoBookingId: '26',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/26/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
@@ -65,6 +67,7 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
     'pietro': {
         id: 'pietro',
         type: 'Piętro',
+        price: 200,
         guests: '2+1',
         idoBookingId: '27',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/27/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',

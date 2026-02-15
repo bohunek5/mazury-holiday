@@ -83,9 +83,9 @@ export default function KisajnoPage() {
                             </li>
                         </ul>
                         <div className="flex items-baseline space-x-2">
-                            <span className="text-slate-500 uppercase text-sm tracking-widest">{t("kisajnoPage", "priceLabel")}</span>
-                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{t("kisajnoPage", "priceValue")}</span>
-                            <span className="text-slate-500">{t("kisajnoPage", "priceUnit")}</span>
+                            <span className="text-slate-500 uppercase text-sm tracking-widest">Cena od</span>
+                            <span className="text-3xl font-bold text-slate-900 dark:text-white">500</span>
+                            <span className="text-slate-500">zł / doba</span>
                         </div>
                     </div>
 
@@ -204,6 +204,7 @@ export default function KisajnoPage() {
                     <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "bookingTitle")}</h3>
                     <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                         {t("kisajnoPage", "bookingDesc")}
+                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">od 500 zł / doba</p>
                     </p>
                     <a
                         href="https://engine37851.idobooking.com/index.php?ob[45]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"

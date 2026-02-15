@@ -85,7 +85,7 @@ export default function CharterPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-5xl md:text-7xl font-playfair mb-4">{t("charterPage", "heroTitle")}</h1>
-                    <p className="text-xl md:text-3xl font-light text-amber-400">{t("charterPage", "heroSubtitle")}</p>
+                    <p className="text-xl md:text-3xl font-light text-amber-400">od 800 zł / doba</p>
                 </div>
             </section>
 
@@ -208,7 +208,8 @@ export default function CharterPage() {
                             {/* Main CTA Card */}
                             <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
-                                <h3 className="text-2xl font-playfair mb-6 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
+                                <h3 className="text-2xl font-playfair mb-2 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
+                                <p className="text-3xl font-bold text-amber-500 mb-4 relative z-10">od 800 zł / doba</p>
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
                                     {t("charterPage", "bookTermDesc")}
                                 </p>

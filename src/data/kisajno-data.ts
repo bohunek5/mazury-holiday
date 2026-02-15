@@ -1,5 +1,6 @@
 export const kisajnoData = {
     id: 'kisajno',
+    price: 500,
     title: 'Apartamenty Kisajno',
     description: `Nowoczesne apartamenty nad jeziorem Kisajno.
 

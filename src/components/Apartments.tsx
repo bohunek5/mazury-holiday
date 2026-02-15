@@ -16,7 +16,7 @@ export default function Apartments() {
             image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
-            price: "450 zł"
+            price: "250 zł"
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ export default function Apartments() {
             image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
-            price: "400 zł"
+            price: "500 zł"
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ export default function Apartments() {
             image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
-            price: "1200 zł"
+            price: "200 zł"
         }
     ];
 

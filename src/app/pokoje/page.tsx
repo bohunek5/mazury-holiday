@@ -29,7 +29,7 @@ export default function RoomsPage() {
             description: fuledaTrans.description,
             image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
             link: "/pokoje/fuleda",
-            price: fuledaTrans.priceValue,
+            price: "od 375 zł/doba",
             features: fuledaTrans.features,
             priceLabel: fuledaTrans.priceLabel,
             detailsBtn: fuledaTrans.detailsBtn,

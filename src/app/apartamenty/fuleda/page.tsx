@@ -7,6 +7,7 @@ import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { fuledaApartments } from "@/data/fuleda-data";
 
 export default function FuledaPage() {
     const { t } = useLanguage();
@@ -124,6 +125,11 @@ export default function FuledaPage() {
                                     <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold">
                                         {apartment.guests} osoby
                                     </div>
+                                    {fuledaApartments[apartment.id as keyof typeof fuledaApartments]?.price && (
+                                        <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm text-slate-900 dark:text-white px-4 py-2 rounded-full font-bold shadow-lg">
+                                            od {fuledaApartments[apartment.id as keyof typeof fuledaApartments].price} zł/noc
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="p-6">
                                     <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
