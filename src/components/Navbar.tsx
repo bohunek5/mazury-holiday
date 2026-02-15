@@ -76,12 +76,7 @@ export default function Navbar() {
                         src={logoPoziom}
                         alt="Mazury.Holiday"
                         fill
-                        className={cn(
-                            "object-contain object-left transition-all duration-300",
-                            isScrolled || !isHomePage
-                                ? "dark:filter dark:brightness-0 dark:invert"
-                                : "filter brightness-0 invert"
-                        )}
+                        className="object-contain object-left transition-all duration-300"
                         priority
                     />
                 </Link>
