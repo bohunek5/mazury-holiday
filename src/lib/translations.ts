@@ -1640,7 +1640,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
     },
     cs: {
         nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat" },
-        hero: { title: "Dovolená na Mazurech", subtitle: "JEDINEČNÉ OKAMŽIKY", apartmentsBtn: "Naše Apartmány", charterBtn: "Jachty" },
+        hero: { title: "Dovolená na Mazurách", subtitle: "JEDINEČNÉ OKAMŽIKY", apartmentsBtn: "Naše Apartmány", charterBtn: "+48 730 067 027", scrollDown: "Dolů" },
         intro: { tag: "Mazury.Holiday", title: "Vítejte na", titleHighlight: "Mazurech", p1: "Objevte kouzlo Mazur.", p2: "Odpočinek v Giżycku." },
         luxuryBenefits: {
             tag: "Výhody naší nabídky",
