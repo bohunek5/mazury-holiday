@@ -17,7 +17,7 @@ export default function Footer() {
                             src="/mazury-holiday/images/logo-poziom.svg"
                             alt="Mazury.Holiday"
                             fill
-                            className="object-contain object-center md:object-left opacity-90 transition-all duration-300"
+                            className="object-contain object-center md:object-left opacity-90 transition-all duration-300 dark:brightness-0 dark:invert"
                         />
                     </Link>
                     <p className="leading-relaxed max-w-xs md:max-w-sm mb-8 opacity-80 text-slate-500 dark:text-slate-400 mx-auto md:mx-0">
