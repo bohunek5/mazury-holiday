@@ -451,6 +451,49 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Air conditioning",
                 waterAccess: "Water access",
                 peace: "Peace and quiet"
+            },
+            details: {
+                interiorTitle: "A Spacious Interior",
+                interiorDesc: "On the ground floor awaits a spacious living area – the heart of the house, where you can spend evenings together on a comfortable sofa bed. The upper floor is a sleeping zone: you will find a master bedroom and a second room with single beds (option to join them), giving flexibility whether you come with family or a group of friends.",
+                terraceTitle: "Terrace and Nature",
+                terraceDesc: "We know the weather can be capricious, which is why your house has a large, covered terrace. It's an additional \"outdoor room\" – perfect for morning coffee or evening reading/relaxing, regardless of rain or sun. You also have your own piece of lawn in front of the cottage.",
+                activityTitle: "Activity and Relaxation",
+                activityDesc: "Just a few steps separate you from the lake shore. You can fish from our pier, play a volleyball match, or simply look at the water while the children play on the playground. In the evening, we invite you to the common area with gazebos for a bonfire under the stars. And if you have a four-legged friend – take them with you, everyone loves animals!",
+                locationTitle: "What about the location?",
+                locationDesc: "You are in the very heart of attractions, yet away from the hustle. Jump in the car and in 10 minutes you are at the Tropikana Water Park or the Sailing Village. Fancy some history? The Boyen Fortress is less than half an hour away. You can park your car safely and for free with us, and thanks to fast Wi-Fi, you can immediately share your holiday photos.",
+                amenitiesBlockTitle: "EQUIPMENT AND DETAILS",
+                bedroomTitle: "Bedroom and Sleep",
+                bedroomItems: [
+                    "Max guests: 6",
+                    "Bedroom 1: Double bed",
+                    "Bedroom 2: Two single beds (can be joined)",
+                    "Living room: Sofa bed (sleeps 2)",
+                    "Bed linen included"
+                ],
+                cottageAmenitiesTitle: "Cottage Amenities",
+                cottageAmenitiesItems: [
+                    "Spacious, covered terrace",
+                    "Private green area in front",
+                    "Fully equipped kitchenette",
+                    "Dining area"
+                ],
+                commonAreasTitle: "Common Areas and Recreation",
+                commonAreasItems: [
+                    "Direct lake access (shoreline)",
+                    "Pier (fishing allowed)",
+                    "Designated bonfire place",
+                    "Covered garden gazebos",
+                    "Children's playground",
+                    "Volleyball court"
+                ],
+                additionalTitle: "Additional Information",
+                additionalItems: [
+                    "Pet-friendly property",
+                    "Free parking on premises",
+                    "Surroundings: Forests (mushroom picking), silence, nature"
+                ],
+                price: "from 350 PLN / night",
+                bookBtn: "Book Now"
             }
         },
         roomsPage: {
@@ -748,6 +791,49 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Klimaanlage",
                 waterAccess: "Zugang zum Wasser",
                 peace: "Ruhe und Frieden"
+            },
+            details: {
+                interiorTitle: "Ein geräumiges Interieur",
+                interiorDesc: "Im Erdgeschoss erwartet Sie ein geräumiger Wohnbereich – das Herz des Hauses, wo Sie auf einem bequemen Schlafsofa gemeinsam Abende verbringen können. Das Obergeschoss ist der Schlafbereich: Hier finden Sie ein Hauptschlafzimmer und ein zweites Zimmer mit Einzelbetten (die zusammengeschoben werden können). Flexibilität für Familien oder Freundesgruppen.",
+                terraceTitle: "Terrasse und Natur",
+                terraceDesc: "Wir wissen, dass das Wetter launisch sein kann, deshalb hat Ihr Haus eine große, überdachte Terrasse. Ein zusätzliches \"Zimmer im Freien\" – perfekt für den Morgenkaffee oder die Abendlektüre, egal ob Sonne oder Regen. Vor dem Haus haben Sie auch Ihr eigenes Stück Rasen.",
+                activityTitle: "Aktivität und Entspannung",
+                activityDesc: "Nur wenige Schritte trennen Sie vom Seeufer. Sie können von unserem Steg aus angeln, Volleyball spielen oder einfach aufs Wasser schauen, während die Kinder auf dem Spielplatz toben. Abends laden wir Sie in den gemeinsamen Bereich mit Pavillons zum Lagerfeuer unter den Sternen ein. Und wenn Sie einen vierbeinigen Freund haben – nehmen Sie ihn mit!",
+                locationTitle: "Und die Lage?",
+                locationDesc: "Sie sind im Herzen der Attraktionen, aber abseits des Trubels. In 10 Minuten sind Sie mit dem Auto im Tropikana Wasserpark oder im Seglerdorf. Lust auf Geschichte? Die Festung Boyen ist weniger als eine halbe Stunde entfernt. Ihr Auto parken Sie bei uns sicher und kostenlos, und dank schnellem WLAN können Sie Ihre Urlaubsfotos sofort teilen.",
+                amenitiesBlockTitle: "AUSSTATTUNG UND DETAILS",
+                bedroomTitle: "Schlafzimmer und Schlaf",
+                bedroomItems: [
+                    "Max. Gäste: 6",
+                    "Schlafzimmer 1: Doppelbett",
+                    "Schlafzimmer 2: Zwei Einzelbetten (können verbunden werden)",
+                    "Wohnzimmer: Schlafsofa (für 2 Personen)",
+                    "Bettwäsche inklusive"
+                ],
+                cottageAmenitiesTitle: "Ausstattung des Hauses",
+                cottageAmenitiesItems: [
+                    "Geräumige, überdachte Terrasse",
+                    "Privater Grünbereich vor dem Eingang",
+                    "Voll ausgestattete Kochnische",
+                    "Essbereich"
+                ],
+                commonAreasTitle: "Gemeinschaftsbereiche und Erholung",
+                commonAreasItems: [
+                    "Direkter Zugang zum See (Uferlinie)",
+                    "Steg (Angeln möglich)",
+                    "Ausgewiesener Lagerfeuerplatz",
+                    "Überdachte Gartenpavillons",
+                    "Kinderspielplatz",
+                    "Volleyballplatz"
+                ],
+                additionalTitle: "Zusätzliche Informationen",
+                additionalItems: [
+                    "Haustierfreundlich (Pet-friendly)",
+                    "Kostenloser Parkplatz auf dem Gelände",
+                    "Umgebung: Wälder (Pilzesammeln), Ruhe, Natur"
+                ],
+                price: "ab 350 PLN / Nacht",
+                bookBtn: "Buchen"
             }
         },
         roomsPage: {
@@ -1074,6 +1160,27 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 smartTv: "Smart TV 55\""
             }
         },
+        fuledaPage: {
+            title: "Apartamentos Fuleda",
+            subtitle: "Silencio, paz, naturaleza en el lago Dobskie",
+            introTitle: "Oasis de paz en zona de silencio",
+            description: "La ubicación de Fuleda es una propuesta para aquellos que quieren desconectarse completamente del bullicio de la civilización. Ubicado junto al lago Dobskie, cubierto por la zona de silencio, ofrece condiciones para una verdadera relajación rodeado de una reserva natural.",
+            groundFloorTitle: "Apartamento Planta Baja (desde 250 PLN)",
+            groundFloorDesc: "Amplio salón con chimenea, aire acondicionado, dormitorio y enorme terraza con acceso directo al lago.",
+            firstFloorTitle: "Apartamento Primer Piso (desde 200 PLN)",
+            firstFloorDesc: "Apartamento con acabados elegantes y vistas a la reserva, equipado con aire acondicionado y todas las comodidades.",
+            amenitiesTitle: "Comodidades Premium",
+            amenities: {
+                ac: "Aire Acondicionado",
+                fireplace: "Chimenea",
+                beach: "Playa privada",
+                bonfire: "Lugar para hogueras",
+                wifi: "WiFi",
+                kitchen: "Cocina completa",
+                washer: "Lavadora",
+                pier: "Acceso al muelle"
+            }
+        },
         skorupki: {
             title: "Cabañas Skorupki",
             subtitle: "Lujo en la naturaleza",
@@ -1096,6 +1203,49 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Aire Acondicionado",
                 waterAccess: "Acceso al agua",
                 peace: "Silencio y paz"
+            },
+            details: {
+                interiorTitle: "Un interior espacioso",
+                interiorDesc: "En la planta baja le espera una amplia zona de estar: el corazón de la casa, donde podrá pasar las tardes juntos en un cómodo sofá cama. La planta superior es la zona de dormitorio: encontrará un dormitorio principal y una segunda habitación con camas individuales (con opción de unirlas), ofreciendo flexibilidad ya sea que venga con familia o amigos.",
+                terraceTitle: "Terraza y naturaleza",
+                terraceDesc: "Sabemos que el clima puede ser caprichoso, por eso su casa tiene una gran terraza cubierta. Es una \"habitación al aire libre\" adicional, perfecta para el café de la mañana o la lectura nocturna, sin importar la lluvia o el sol. También tiene su propio trozo de césped frente a la cabaña.",
+                activityTitle: "Actividad y relajación",
+                activityDesc: "Solo unos pasos lo separan de la orilla del lago. Puede pescar desde nuestro muelle, jugar un partido de voleibol o simplemente mirar el agua mientras los niños juegan en el parque infantil. Por la noche, lo invitamos a la zona común con glorietas para una hoguera bajo las estrellas. ¡Y si tiene un amigo de cuatro patas, tráigalo con usted!",
+                locationTitle: "¿Qué hay de la ubicación?",
+                locationDesc: "Estás en el corazón de las atracciones, pero lejos del bullicio. Sube al coche y en 10 minutos estarás en el Parque Acuático Tropikana o en el Pueblo de la Vela. ¿Te apetece historia? La Fortaleza Boyen está a menos de media hora. Puede aparcar su coche de forma segura y gratuita con nosotros, y gracias al WiFi rápido, podrá compartir sus fotos de vacaciones de inmediato.",
+                amenitiesBlockTitle: "EQUIPAMIENTO Y DETALLES",
+                bedroomTitle: "Dormitorio y sueño",
+                bedroomItems: [
+                    "Máx. huéspedes: 6",
+                    "Dormitorio 1: Cama doble",
+                    "Dormitorio 2: Dos camas individuales (se pueden unir)",
+                    "Salón: Sofá cama (para 2 personas)",
+                    "Ropa de cama incluida"
+                ],
+                cottageAmenitiesTitle: "Comodidades de la cabaña",
+                cottageAmenitiesItems: [
+                    "Amplia terraza cubierta",
+                    "Zona verde privada frente a la entrada",
+                    "Cocina americana totalmente equipada",
+                    "Zona de comedor"
+                ],
+                commonAreasTitle: "Áreas comunes y recreación",
+                commonAreasItems: [
+                    "Acceso directo al lago (línea de costa)",
+                    "Muelle (pesca posible)",
+                    "Lugar designado para hogueras",
+                    "Glorietas de jardín cubiertas",
+                    "Parque infantil",
+                    "Cancha de voleibol"
+                ],
+                additionalTitle: "Información adicional",
+                additionalItems: [
+                    "Se admiten mascotas (Pet-friendly)",
+                    "Aparcamiento gratuito en las instalaciones",
+                    "Alrededores: Bosques (recogida de setas), silencio, naturaleza"
+                ],
+                price: "desde 350 PLN / noche",
+                bookBtn: "Reservar"
             },
             ctaTitle: "Experimenta la magia de Skorupki",
             ctaDesc: "Reservar una cabaña es el primer paso para unas vacaciones inolvidables."
@@ -1171,6 +1321,17 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 "Molinete de ancla eléctrico",
                 "Ecosonda, Navegación - Plotter"
             ]
+        },
+        strandaDescriptions: {
+            genericDesc: "Nuestros apartamentos están ubicados en Giżycko, junto al puerto Stranda en los edificios residenciales Stranda Residence, a orillas del lago Kisajno (bahía Tracz). Ofrece una hermosa vista panorámica del lago Kisajno y la ruta de los Grandes Lagos de Masuria. El apartamento está lujosamente equipado y garantiza un alto confort de descanso. En el lugar, puede utilizar los recursos del puerto como: taberna, conciertos en la temporada de verano, marina, alquiler de equipos acuáticos, etc.",
+            locationDesc: "La proximidad al centro de Giżycko le permite disfrutar de muchas atracciones turísticas, ofertas de muchos restaurantes y pubs. La ubicación de la instalación también facilita la exploración de Masuria en términos de naturaleza, historia y entretenimiento. Plaza de garaje incluida.",
+            A103: "El apartamento A103 Suite está situado en la primera planta del edificio, tiene un gran salón amplio con cocina americana y sofá cama, un dormitorio, un baño con ducha y una gran terraza con muebles.",
+            A104: "El apartamento A104 Delux con jacuzzi privado en la terraza se encuentra en la planta baja del edificio A. Consta de un amplio salón con cocina americana y sofá, un dormitorio con cama doble, un baño con ducha, una terraza donde hay un jacuzzi privado.",
+            A105: "El apartamento A105 es una unidad de lujo con jacuzzi, que ofrece una relajación cómoda en un interior moderno.",
+            B102: "El apartamento B102 ubicado en la planta baja del edificio B tiene un amplio salón con cocina americana y su propio jacuzzi en la terraza.",
+            B106: "Apartamento de lujo en la planta baja con dos dormitorios y amplio salón.",
+            B202: "Apartamento único en el primer piso con sauna privada y jacuzzi en la terraza.",
+            C404: "Los apartamentos estudio están ubicados en el edificio C, son alojamientos con una cama doble, un sofá cama para 2 personas, un salón con cocina americana, un baño con ducha y una terraza con vistas a la bahía Tracz y el puerto Stranda."
         }
     },
     it: {
@@ -1226,6 +1387,139 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             sending: "Invio in corso...",
             success: "Messaggio inviato con successo!",
             error: "Si è verificato un errore durante l'invio del messaggio. Riprova."
+        },
+        skorupki: {
+            title: "Case Skorupki",
+            subtitle: "La tua oasi di lusso nel cuore della Masuria",
+            introTitle: "Relax a ritmo lento",
+            descriptionPart1: "Le case a Skorupki sono un luogo unico sulla mappa della Masuria, creato per persone che cercano intimità, lusso e vicinanza alla natura.",
+            descriptionPart2: "Ogni casa è stata progettata pensando al comfort dei nostri ospiti, combinando soluzioni moderne con l'atmosfera tradizionale masuriana.",
+            descriptionPart3: "Il fascino di Skorupki risiede soprattutto nell'autenticità e nell'armonia con l'ambiente.",
+            descriptionPart4: "La vicinanza del Lago Dobskie permette di fare kayak, pescare e lunghe passeggiate.",
+            areaTitle: "Area",
+            areaDesc: "Case confortevoli per famiglie e gruppi",
+            locationTitle: "Posizione",
+            locationDesc: "Skorupki, vicino a Giżycko e Mikołajki",
+            amenitiesTitle: "Servizi della casa",
+            galleryTitle: "Galleria",
+            expandGallery: "Guarda più foto",
+            collapseGallery: "Comprimi galleria",
+            ctaTitle: "Senti la magia di Skorupki",
+            ctaDesc: "Prenotare una casa è il primo passo per una vacanza indimenticabile.",
+            amenities: {
+                fullEquip: "Attrezzatura completa",
+                garden: "Giardino privato",
+                bonfire: "Griglia e falò",
+                parking: "Parcheggio",
+                wifi: "WiFi",
+                ac: "Aria condizionata",
+                waterAccess: "Accesso all'acqua",
+                peace: "Pace e tranquillità"
+            },
+            details: {
+                interiorTitle: "Interni spaziosi",
+                interiorDesc: "Al piano terra vi aspetta una spaziosa zona giorno...",
+                terraceTitle: "Terrazza e natura",
+                terraceDesc: "Sappiamo che il tempo può essere capriccioso...",
+                activityTitle: "Attività e relax",
+                activityDesc: "Pochi passi vi separano dalla riva del lago...",
+                locationTitle: "E la posizione?",
+                locationDesc: "Siete nel cuore delle attrazioni, ma lontani dal trambusto...",
+                amenitiesBlockTitle: "ATTREZZATURE E DETTAGLI",
+                bedroomTitle: "Camera da letto e sonno",
+                bedroomItems: [
+                    "Max ospiti: 6",
+                    "Camera 1: Letto matrimoniale",
+                    "Camera 2: Due letti singoli",
+                    "Soggiorno: Divano letto",
+                    "Biancheria inclusa"
+                ],
+                cottageAmenitiesTitle: "Servizi della casa",
+                cottageAmenitiesItems: [
+                    "Terrazza coperta",
+                    "Area verde privata",
+                    "Angolo cottura attrezzato",
+                    "Zona pranzo"
+                ],
+                commonAreasTitle: "Aree comuni",
+                commonAreasItems: [
+                    "Accesso al lago",
+                    "Molo",
+                    "Area falò",
+                    "Gazebo",
+                    "Parco giochi",
+                    "Campo da pallavolo"
+                ],
+                additionalTitle: "Info aggiuntive",
+                additionalItems: [
+                    "Pet-friendly",
+                    "Parcheggio gratuito",
+                    "Dintorni: Foreste, natura"
+                ],
+                price: "da 350 PLN / notte",
+                bookBtn: "Prenota"
+            }
+        },
+        strandaDescriptions: {
+            genericDesc: "I nostri appartamenti si trovano a Giżycko, vicino al porto Stranda negli edifici residenziali Stranda Residence, sulla riva del lago Kisajno (baia Tracz). Offre una bellissima vista panoramica sul lago Kisajno e sulla rotta dei Grandi Laghi Masuri. L'appartamento è lussuosamente rifinito e garantisce un elevato comfort di riposo. In loco, è possibile utilizzare le risorse del porto come: taverna, concerti nella stagione estiva, porto turistico, noleggio di attrezzature acquatiche, ecc.",
+            locationDesc: "La vicinanza al centro di Giżycko permette di godere di molte attrazioni turistiche, offerte di molti ristoranti e bar. La posizione della struttura facilita anche l'esplorazione della Masuria in termini di natura, storia e divertimento. Posto auto incluso.",
+            A103: "L'appartamento A103 Suite si trova al primo piano dell'edificio, dispone di un ampio soggiorno con angolo cottura e divano letto, una camera da letto, un bagno con doccia e una grande terrazza con mobili.",
+            A104: "L'appartamento A104 Delux con jacuzzi privata sulla terrazza si trova al piano terra dell'edificio A. È composto da un ampio soggiorno con angolo cottura e divano, una camera con un letto matrimoniale, un bagno con doccia, una terrazza dove si trova una jacuzzi privata.",
+            A105: "L'appartamento A105 è un'unità di lusso con jacuzzi, offrendo un relax confortevole in interni moderni.",
+            B102: "L'appartamento B102 situato al piano terra dell'edificio B dispone di un ampio soggiorno con angolo cottura e la propria jacuzzi sulla terrazza.",
+            B106: "Appartamento di lusso al piano terra con due camere da letto e ampio soggiorno.",
+            B202: "Appartamento unico al primo piano con sauna privata e jacuzzi sulla terrazza.",
+            C404: "Gli appartamenti monolocali si trovano nell'edificio C, sono alloggi con un letto matrimoniale, un divano letto per 2 persone, un soggiorno con angolo cottura, un bagno con doccia e una terrazza con vista sulla baia Tracz e sul porto Stranda."
+        },
+        kisajnoPage: {
+            title: "Appartamenti Kisajno",
+            subtitle: "Porto Neptun, Giżycko",
+            introTitle: "Standard unico sul lago",
+            description: "Offriamo un moderno appartamento di 55 m², situato al piano terra con accesso diretto al fascino del lago Kisajno. Ideale per famiglie o gruppi di amici, garantisce un riposo confortevole in standard premium.",
+            features: [
+                "2 camere da letto separate con grandi letti",
+                "Soggiorno con comodo divano e TV",
+                "Cucina completa: lavastoviglie, microonde, frigorifero",
+                "Aria condizionata e WiFi veloce"
+            ],
+            priceLabel: "Prezzo da",
+            priceValue: "500 PLN",
+            priceUnit: "/ notte",
+            amenitiesTitle: "Servizi",
+            bookingTitle: "Prenota il tuo soggiorno",
+            bookingDesc: "Contattaci direttamente per ottenere la migliore offerta e controllare la disponibilità nelle date selezionate.",
+            callAction: "Chiama",
+            amenities: {
+                view: "Vista lago",
+                ac: "Aria condizionata",
+                smartTv: "Smart TV",
+                wifi: "WiFi",
+                kitchen: "Cucina completa",
+                dishwasher: "Lavastoviglie",
+                parking: "Parcheggio",
+                port: "Porto Neptun"
+            }
+        },
+        fuledaPage: {
+            title: "Appartamenti Fuleda",
+            subtitle: "Silenzio, pace, natura sul lago Dobskie",
+            introTitle: "Oasis di pace nella zona del silenzio",
+            description: "La posizione di Fuleda è una proposta per coloro che vogliono staccare completamente dal trambusto della civiltà. Situato sul lago Dobskie, coperto dalla zona del silenzio, offre condizioni per un vero relax circondato da una riserva naturale.",
+            groundFloorTitle: "Appartamento Piano Terra (da 250 PLN)",
+            groundFloorDesc: "Ampio soggiorno con camino, aria condizionata, camera da letto e enorme terrazza con accesso diretto al lago.",
+            firstFloorTitle: "Appartamento Primo Piano (da 200 PLN)",
+            firstFloorDesc: "Appartamento rifinito con stile con vista sulla riserva, dotato di aria condizionata e tutti i comfort.",
+            amenitiesTitle: "Servizi Premium",
+            amenities: {
+                ac: "Aria condizionata",
+                fireplace: "Camino",
+                beach: "Spiaggia privata",
+                bonfire: "Luogo per falò",
+                wifi: "WiFi",
+                kitchen: "Cucina completa",
+                washer: "Lavatrice",
+                pier: "Accesso al molo"
+            }
         }
     },
     fr: {
@@ -1281,6 +1575,67 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             sending: "Envoi en cours...",
             success: "Message envoyé avec succès !",
             error: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer."
+        },
+        strandaDescriptions: {
+            genericDesc: "Nos appartements sont situés à Giżycko, près du port Stranda dans les immeubles résidentiels Stranda Residence, sur la rive du lac Kisajno (baie Tracz). Il offre une belle vue panoramique sur le lac Kisajno et la route des Grands Lacs de Mazurie. L'appartement est luxueusement fini et assure un grand confort de repos. Sur place, vous pouvez utiliser les ressources du port telles que : taverne, concerts en saison estivale, marina, location d'équipements nautiques, etc.",
+            locationDesc: "La proximité du centre de Giżycko vous permet de profiter de nombreuses attractions touristiques, des offres de nombreux restaurants et pubs. L'emplacement de l'établissement facilite également l'exploration de la Mazurie en termes de nature, d'histoire et de divertissement. Place de parking incluse.",
+            A103: "L'appartement A103 Suite est situé au premier étage du bâtiment, dispose d'un grand et spacieux salon avec kitchenette et canapé-lit, une chambre, une salle de bain avec douche et une grande terrasse avec mobilier.",
+            A104: "L'appartement A104 Delux avec jacuzzi privé sur la terrasse est situé au rez-de-chaussée du bâtiment A. Il se compose d'un salon spacieux avec kitchenette et canapé, une chambre avec un lit double, une salle de bain avec douche, une terrasse où se trouve un jacuzzi privé.",
+            A105: "L'appartement A105 est une unité de luxe avec jacuzzi, offrant une détente confortable dans un intérieur moderne.",
+            B102: "L'appartement B102 situé au rez-de-chaussée du bâtiment B dispose d'un salon spacieux avec kitchenette et son propre jacuzzi sur la terrasse.",
+            B106: "Appartement de luxe au rez-de-chaussée avec deux chambres et grand salon.",
+            B202: "Appartement unique au premier étage avec sauna privé et jacuzzi sur la terrasse.",
+            C404: "Les studios sont situés dans le bâtiment C, ce sont des hébergements avec un lit double, un canapé-lit pour 2 personnes, un salon avec kitchenette, une salle de bain avec douche et une terrasse donnant sur la baie Tracz et le port Stranda."
+        },
+        kisajnoPage: {
+            title: "Appartements Kisajno",
+            subtitle: "Port Neptun, Giżycko",
+            introTitle: "Standard unique au bord du lac",
+            description: "Nous proposons un appartement moderne de 55 m², situé au rez-de-chaussée avec accès direct aux charmes du lac Kisajno. Idéal pour les familles ou les groupes d'amis, il assure un repos confortable dans un standard premium.",
+            features: [
+                "2 chambres séparées avec grands lits",
+                "Salon avec canapé confortable et TV",
+                "Cuisine complète : lave-vaisselle, micro-ondes, réfrigérateur",
+                "Climatisation et WiFi rapide"
+            ],
+            priceLabel: "Prix à partir de",
+            priceValue: "500 PLN",
+            priceUnit: "/ nuit",
+            amenitiesTitle: "Équipements",
+            bookingTitle: "Réservez votre séjour",
+            bookingDesc: "Contactez-nous directement pour obtenir la meilleure offre et vérifier la disponibilité aux dates sélectionnées.",
+            callAction: "Appeler",
+            amenities: {
+                view: "Vue lac",
+                ac: "Clim",
+                smartTv: "Smart TV",
+                wifi: "WiFi",
+                kitchen: "Cuisine complète",
+                dishwasher: "Lave-vaisselle",
+                parking: "Parking",
+                port: "Port Neptun"
+            }
+        },
+        fuledaPage: {
+            title: "Appartements Fuleda",
+            subtitle: "Silence, paix, nature sur le lac Dobskie",
+            introTitle: "Oasis de paix en zone de silence",
+            description: "L'emplacement de Fuleda est une proposition pour ceux qui veulent se couper complètement de l'agitation de la civilisation. Situé au bord du lac Dobskie, couvert par la zone de silence, il offre des conditions pour une véritable détente entourée d'une réserve naturelle.",
+            groundFloorTitle: "Appartement Rez-de- chaussée (dès 250 PLN)",
+            groundFloorDesc: "Grand salon avec cheminée, climatisation, chambre et immense terrasse avec accès direct au lac.",
+            firstFloorTitle: "Appartement Premier Étage (dès 200 PLN)",
+            firstFloorDesc: "Appartement élégamment fini avec vue sur la réserve, équipé de la climatisation et de tous les équipements.",
+            amenitiesTitle: "Équipements Premium",
+            amenities: {
+                ac: "Clim",
+                fireplace: "Cheminée",
+                beach: "Plage privée",
+                bonfire: "Lieu de feu de camp",
+                wifi: "WiFi",
+                kitchen: "Cuisine complète",
+                washer: "Machine à laver",
+                pier: "Accès à la jetée"
+            }
         }
     },
     cs: {
@@ -1334,6 +1689,49 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 ac: "Klimatizace",
                 waterAccess: "Přístup k vodě",
                 peace: "Ticho a klid"
+            },
+            details: {
+                interiorTitle: "Prostorný interiér",
+                interiorDesc: "V přízemí na vás čeká prostorný obývací prostor – srdce domu, kde můžete trávit večery společně na pohodlné rozkládací pohovce. Horní patro je spací zóna: najdete zde hlavní ložnici a druhý pokoj se samostatnými lůžky (možnost spojení), což dává flexibilitu, ať už přijedete s rodinou nebo skupinou přátel.",
+                terraceTitle: "Terasa a příroda",
+                terraceDesc: "Víme, že počasí může být rozmarné, proto má váš dům velkou zastřešenou terasu. Je to další \"venkovní pokoj\" – ideální pro ranní kávu nebo večerní čtení/odpočinek, bez ohledu na déšť nebo slunce. Před domem máte také svůj vlastní kousek trávníku.",
+                activityTitle: "Aktivity a relaxace",
+                activityDesc: "Jen pár kroků vás dělí od břehu jezera. Můžete rybařit z našeho mola, zahrát si volejbal nebo se jen dívat na vodu, zatímco si děti hrají na hřišti. Večer vás zveme do společného prostoru s altány na táborák pod hvězdami. A pokud máte čtyřnohého přítele – vezměte ho s sebou, všichni milují zvířata!",
+                locationTitle: "A co lokalita?",
+                locationDesc: "Jste v samém srdci atrakcí, přesto daleko od shonu. Naskočte do auta a za 10 minut jste v aquaparku Tropikana nebo v Sailing Village. Máte chuť na historii? Pevnost Boyen je vzdálena méně než půl hodiny. Auto zaparkujete bezpečně a zdarma u nás a díky rychlé Wi-Fi můžete okamžitě sdílet své fotografie z dovolené.",
+                amenitiesBlockTitle: "VYBAVENÍ A DETAILY",
+                bedroomTitle: "Ložnice a spánek",
+                bedroomItems: [
+                    "Max. hostů: 6",
+                    "Ložnice 1: Manželská postel",
+                    "Ložnice 2: Dvě samostatná lůžka (lze spojit)",
+                    "Obývací pokoj: Rozkládací pohovka (pro 2 osoby)",
+                    "Ložní prádlo v ceně"
+                ],
+                cottageAmenitiesTitle: "Vybavení chaty",
+                cottageAmenitiesItems: [
+                    "Prostorná, zastřešená terasa",
+                    "Soukromá zelená plocha před vchodem",
+                    "Plně vybavený kuchyňský kout",
+                    "Jídelní kout"
+                ],
+                commonAreasTitle: "Společné prostory a rekreace",
+                commonAreasItems: [
+                    "Přímý přístup k jezeru (pobřeží)",
+                    "Molo (možnost rybaření)",
+                    "Vyhrazené místo na táborák",
+                    "Zastřešené zahradní altány",
+                    "Dětské hřiště",
+                    "Volejbalové hřiště"
+                ],
+                additionalTitle: "Další informace",
+                additionalItems: [
+                    "Domácí mazlíčci vítáni (Pet-friendly)",
+                    "Parkování zdarma v areálu",
+                    "Okolí: Lesy (houbaření), ticho, příroda"
+                ],
+                price: "od 350 PLN / noc",
+                bookBtn: "Rezervovat"
             }
         },
         roomsPage: {

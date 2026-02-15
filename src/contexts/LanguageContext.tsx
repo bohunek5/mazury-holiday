@@ -32,8 +32,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         const value = getVal(language, section, key);
         if (value !== undefined) return value;
 
-        const fallback = getVal("en", section, key); // Fallback to English
-        return (fallback !== undefined ? fallback : key);
+        const fallbackEn = getVal("en", section, key); // Fallback to English
+        if (fallbackEn !== undefined) return fallbackEn;
+
+        const fallbackPl = getVal("pl", section, key); // Final fallback to Polish
+        return (fallbackPl !== undefined ? fallbackPl : key);
     };
 
     return (
