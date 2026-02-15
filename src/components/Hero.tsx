@@ -34,7 +34,7 @@ export default function Hero() {
 
         <div className="flex justify-center mb-16">
           <a
-            href="tel:+48607241090"
+            href="tel:+48730067027"
             className="px-8 py-4 bg-white/10 hover:bg-amber-500 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group"
           >
             <span className="p-2 bg-amber-500 rounded-full group-hover:bg-white group-hover:text-amber-500 transition-colors">

@@ -181,7 +181,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                 </div>
                             </div>
 
-                            <a href="tel:+48607241090" className="block w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg hover:shadow-green-500/30 uppercase tracking-widest">
+                            <a href="tel:+48730067027" className="block w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg hover:shadow-green-500/30 uppercase tracking-widest">
                                 {t('skorupki', 'details.bookBtn')}
                             </a>
                         </div>

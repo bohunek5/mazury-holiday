@@ -13,10 +13,12 @@ export default function ApartmentsHub() {
     const apartments = [
         {
             id: "stranda",
-            title: "Stranda Residence",
-            description: t("stranda", "description"),
+            title: t("apartments", "items.stranda.title"),
+            description: t("apartments", "items.stranda.description"),
             image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
+            location: t("apartments", "items.stranda.location"),
+            price: "450 zł"
         },
         {
             id: "kisajno",
@@ -24,6 +26,8 @@ export default function ApartmentsHub() {
             description: t("apartments", "items.kisajno.description"),
             image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
+            location: t("apartments", "items.kisajno.location"),
+            price: "400 zł"
         },
         {
             id: "fuleda",
@@ -31,6 +35,8 @@ export default function ApartmentsHub() {
             description: t("apartments", "items.fuleda.description"),
             image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
             link: "/apartamenty/fuleda",
+            location: t("apartments", "items.fuleda.location"),
+            price: "1200 zł"
         },
     ];
 
@@ -46,12 +52,12 @@ export default function ApartmentsHub() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{t("apartments", "title")}</h1>
+                    <h1 className="text-4xl md:text-7xl font-serif mb-4">{t("apartments", "title")}</h1>
                     <p className="text-xl md:text-3xl font-light">{t("apartments", "description")}</p>
                 </div>
             </section>
 
-            <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+            <section className="py-24 px-4 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {apartments.map((apt, index) => (
                         <motion.div
@@ -59,24 +65,36 @@ export default function ApartmentsHub() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            <Link href={apt.link} className="block h-full">
-                                <div className="relative h-64 md:h-80 w-full overflow-hidden">
-                                    <Image
-                                        src={apt.image}
-                                        alt={apt.title}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                                    <div className="absolute bottom-0 left-0 p-6 text-white transform group-hover:translate-y-[-10px] transition-transform duration-300">
-                                        <h3 className="text-2xl font-playfair mb-2">{apt.title}</h3>
-                                        <p className="text-sm text-slate-200 line-clamp-2">
-                                            {apt.description} {/* Translations needed ideally */}
-                                        </p>
-                                        <span className="inline-block mt-4 text-amber-400 text-sm font-semibold tracking-wider font-sans opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                            ZOBACZ SZCZEGÓŁY &rarr;
+                            <Link
+                                href={apt.link}
+                                className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                            >
+                                <Image
+                                    src={apt.image}
+                                    alt={apt.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    {apt.location}
+                                </div>
+
+                                <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
+                                    <div className="text-amber-400 text-sm font-bold mb-2">
+                                        {t("apartments", "pricePrefix")} {apt.price} / {t("apartments", "night")}
+                                    </div>
+                                    <h3 className="text-2xl font-serif font-bold text-amber-400 mb-2 group-hover:text-amber-300 transition-colors">
+                                        {apt.title}
+                                    </h3>
+                                    <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-4">
+                                        {apt.description}
+                                    </p>
+                                    <div className="flex items-center gap-4 mt-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                            {t("apartments", "details")} &rarr;
                                         </span>
                                     </div>
                                 </div>

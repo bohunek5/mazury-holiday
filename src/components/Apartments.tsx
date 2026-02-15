@@ -15,7 +15,8 @@ export default function Apartments() {
             description: t("apartments", "items.stranda.description"),
             image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
-            location: t("apartments", "items.stranda.location")
+            location: t("apartments", "items.stranda.location"),
+            price: "450 zł"
         },
         {
             id: 2,
@@ -23,7 +24,8 @@ export default function Apartments() {
             description: t("apartments", "items.kisajno.description"),
             image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
-            location: t("apartments", "items.kisajno.location")
+            location: t("apartments", "items.kisajno.location"),
+            price: "400 zł"
         },
         {
             id: 3,
@@ -31,7 +33,8 @@ export default function Apartments() {
             description: t("apartments", "items.fuleda.description"),
             image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
             link: "/apartamenty/fuleda",
-            location: t("apartments", "items.fuleda.location")
+            location: t("apartments", "items.fuleda.location"),
+            price: "1200 zł"
         }
     ];
 
@@ -42,7 +45,7 @@ export default function Apartments() {
             location: t("apartments", "items.domkiSkorupki.location"),
             description: t("apartments", "items.domkiSkorupki.description"),
             image: "/mazury-holiday/images/skorupki/skorupki_1.webp",
-            people: "6-8",
+            people: "6",
             link: "/domki",
             price: "600 zł"
         },
@@ -77,7 +80,7 @@ export default function Apartments() {
                             <Link
                                 key={apt.id}
                                 href={apt.link}
-                                className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                                className="group relative h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
                                     src={apt.image}
@@ -86,7 +89,15 @@ export default function Apartments() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    {apt.location}
+                                </div>
+
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
+                                    <div className="text-amber-400 text-sm font-bold mb-2">
+                                        {t("apartments", "pricePrefix")} {apt.price} / {t("apartments", "night")}
+                                    </div>
                                     <h3 className="text-2xl font-serif font-bold text-white mb-2 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
                                     </h3>
@@ -167,6 +178,7 @@ export default function Apartments() {
                     </div>
                 </div>
             </section>
+
         </>
     );
 }

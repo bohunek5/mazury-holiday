@@ -221,7 +221,7 @@ export default function PokojeFuledaPage() {
                             </a>
 
                             <a
-                                href="tel:+48607241090"
+                                href="tel:+48730067027"
                                 className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4 whitespace-nowrap"
                             >
                                 {trans.callBtn}

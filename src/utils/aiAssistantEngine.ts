@@ -78,7 +78,7 @@ export function getAssistantResponse(message: string): string {
 
     // Category 6: Contact
     if (msg.includes('kontakt') || msg.includes('telefon') || msg.includes('mail') || msg.includes('numer')) {
-        return "Możesz dzwonić pod numer rezerwacyjny +48 730 067 027 lub do biura +48 607 241 090. Jesteśmy też dostępni pod mailem: rezerwacje@mazury.holiday";
+        return "Możesz dzwonić pod numer rezerwacyjny +48 730 067 027 lub do biura +48 730 067 027. Jesteśmy też dostępni pod mailem: rezerwacje@mazury.holiday";
     }
 
     // 1. General Offer / "Where are you?" Questions

@@ -11,22 +11,22 @@ const locations = [
     {
         title: "Apartamenty Stranda Residence & Czarter",
         address: "Pierkunowo 36, 11-500 Giżycko",
-        mapQuery: "Stranda+Residence+Pierkunowo+36",
+        mapQuery: "Apartamenty+Stranda+Residence+Gizycko",
     },
     {
         title: "Apartamenty Kisajno",
-        address: "Port Neptun, Giżycko",
-        mapQuery: "Port+Neptun+Gizycko",
+        address: "Aleja Wojska Polskiego 35, 11-500 Giżycko (Port Neptun)",
+        mapQuery: "Port+Neptun+Gizycko+Aleja+Wojska+Polskiego+35",
     },
     {
         title: "Apartamenty i Pokoje Fuleda",
         address: "Fuleda 5, 11-500 Fuleda",
-        mapQuery: "Fuleda+5+11-500",
+        mapQuery: "Apartamenty+Fuleda",
     },
     {
         title: "Domki Skorupki",
         address: "Skorupki, Mazury",
-        mapQuery: "Skorupki+Mazury",
+        mapQuery: "Domki+Skorupki",
     },
 ];
 
@@ -61,17 +61,13 @@ export default function ContactPage() {
             {/* Contact Info Section */}
             <section className="bg-slate-100 dark:bg-slate-900 py-12">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-                        <a href="tel:+48730067027" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
-                            <Phone className="w-6 h-6 text-amber-500" />
-                            <span>+48 730 067 027 (Rezerwacje)</span>
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-12">
+                        <a href="tel:+48730067027" className="flex items-center space-x-3 text-2xl font-bold text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
+                            <Phone className="w-8 h-8 text-amber-500" />
+                            <span>+48 730 067 027</span>
                         </a>
-                        <a href="tel:+48607241090" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
-                            <Phone className="w-6 h-6 text-amber-500" />
-                            <span>+48 607 241 090 (Biuro)</span>
-                        </a>
-                        <a href="mailto:rezerwacje@mazury.holiday" className="flex items-center space-x-3 text-xl text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
-                            <Mail className="w-6 h-6 text-amber-500" />
+                        <a href="mailto:rezerwacje@mazury.holiday" className="flex items-center space-x-3 text-2xl font-bold text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
+                            <Mail className="w-8 h-8 text-amber-500" />
                             <span>rezerwacje@mazury.holiday</span>
                         </a>
                     </div>
