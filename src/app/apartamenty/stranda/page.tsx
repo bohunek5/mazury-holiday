@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
-import { clsx } from "clsx";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
+
 
 // Update buildings data structure to include images from strandaApartments data
 const getBuildingsData = () => {
@@ -38,17 +38,42 @@ const getBuildingsData = () => {
 
 export default function StrandaPage() {
     const { t } = useLanguage();
+    const [selectedView, setSelectedView] = useState<string | null>(null);
     const buildings = useMemo(() => getBuildingsData(), []);
-    // Default to building "A"
-    const [activeBuilding, setActiveBuilding] = useState<"A" | "B" | "C">("A");
+    const buildingKeys: Array<"A" | "B" | "C"> = ["A", "B", "C"];
 
-    // Clear saved building preference on component mount to ensure fresh start
     useEffect(() => {
-        localStorage.removeItem("activeStrandaBuilding");
-    }, []);
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setSelectedView(null);
+        };
 
-    const handleBuildingChange = (building: "A" | "B" | "C") => {
-        setActiveBuilding(building);
+        if (selectedView) {
+            window.addEventListener("keydown", handleKeyDown);
+            document.body.style.overflow = "hidden";
+        }
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+            document.body.style.overflow = "unset";
+        };
+    }, [selectedView]);
+
+    const getBuildingLakeView = (key: string) => {
+        switch (key) {
+            case "A": return "/mazury-holiday/images/stranda/A205/A205_15.webp";
+            case "B": return "/mazury-holiday/images/stranda/B401/B401_1.webp";
+            case "C": return "/mazury-holiday/images/stranda/C404/C404_17.webp";
+            default: return "/mazury-holiday/images/hero_bg.webp";
+        }
+    };
+
+    const getBuildingVisuals = (key: string) => {
+        switch (key) {
+            case "A": return "/mazury-holiday/images/stranda/A205/A205_15.webp";
+            case "B": return "/mazury-holiday/images/stranda/B401/B401_1.webp";
+            case "C": return "/mazury-holiday/images/stranda/C404/C404_17.webp";
+            default: return "/mazury-holiday/images/hero_bg.webp";
+        }
     };
 
     return (
@@ -70,77 +95,142 @@ export default function StrandaPage() {
 
             {/* Content Section */}
             <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
-                <div className="mb-12 text-center max-w-3xl mx-auto">
+                <div className="mb-20 text-center max-w-3xl mx-auto">
                     <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
                         {t("stranda", "description")}
                     </p>
                 </div>
 
-                {/* Building Tabs */}
-                <div className="flex flex-col sm:flex-row justify-center items-center mb-12 space-y-4 sm:space-y-0 sm:space-x-4">
-                    {(Object.keys(buildings) as Array<keyof typeof buildings>).map((building) => (
-                        <button
-                            key={building}
-                            onClick={() => handleBuildingChange(building)}
-                            className={clsx(
-                                "w-full sm:w-auto px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 border-2",
-                                activeBuilding === building
-                                    ? "bg-amber-500 border-amber-500 text-white shadow-lg scale-105"
-                                    : "bg-transparent border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-amber-400 hover:text-amber-500"
-                            )}
-                        >
-                            {t("stranda", "building")} {building}
-                        </button>
-                    ))}
-                </div>
+                {/* Building Sections */}
+                {buildingKeys.map((buildingKey) => {
+                    const lakeViewPhoto = getBuildingLakeView(buildingKey);
+                    const buttonBgImage = getBuildingVisuals(buildingKey);
 
-                {/* Units Grid */}
-                <motion.div
-                    key={activeBuilding}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-                >
-                    {buildings[activeBuilding].map((unit) => {
-                        const aptData = strandaApartments[unit.id as keyof typeof strandaApartments];
-                        return (
-                            <div key={unit.id} className="group flex flex-col h-full space-y-3">
-                                <Link href={`/apartamenty/stranda/${unit.id}`} className="block flex-grow">
-                                    <div
-                                        className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl hover:border-amber-500/50 transition-all duration-300 cursor-pointer flex flex-col h-full"
-                                    >
-                                        <div className="relative h-48 w-full overflow-hidden">
-                                            <Image
-                                                src={unit.image}
-                                                alt={`Apartament ${unit.id}`}
-                                                fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                            <div className="absolute bottom-3 left-4 text-white">
-                                                <span className="text-xs uppercase tracking-widest opacity-80">{t("stranda", "apartment")}</span>
-                                                <h3 className="text-xl font-bold font-playfair">{unit.id}</h3>
-                                                {aptData?.price && (
-                                                    <p className="text-sm mt-1 text-amber-300 font-semibold">od {aptData.price} zł/noc</p>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <a
-                                    href={`https://engine37851.idobooking.com/index.php?ob[${aptData?.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-green-500/20 active:scale-95 uppercase tracking-wide"
+                    return (
+                        <div key={buildingKey} className="mb-24 last:mb-0">
+                            {/* Section Header with Two Large Buttons */}
+                            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12">
+                                {/* Left Button: Building Label */}
+                                <div className="w-full sm:w-auto px-12 py-5 bg-amber-500 text-white rounded-full font-bold text-xl md:text-2xl shadow-xl shadow-amber-500/20 text-center tracking-widest uppercase">
+                                    {t("stranda", "building")} {buildingKey}
+                                </div>
+
+                                {/* Right Button: Interactive Lake View */}
+                                <button
+                                    onClick={() => setSelectedView(lakeViewPhoto)}
+                                    className="group relative w-full sm:w-auto px-10 py-5 rounded-full overflow-hidden shadow-xl transition-all active:scale-95 flex items-center justify-center"
                                 >
-                                    {t("nav", "bookBtn")}
-                                </a>
+                                    <div className="absolute inset-0 z-0">
+                                        <Image
+                                            src={buttonBgImage}
+                                            alt="Widok tło"
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+                                    </div>
+                                    <span className="relative z-10 text-white font-bold text-lg md:text-xl tracking-wide uppercase flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-400"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg>
+                                        widok z budynku
+                                    </span>
+                                </button>
+
+                                <div className="hidden lg:flex flex-col ml-4">
+                                    <p className="text-slate-400 font-light text-sm tracking-widest uppercase italic border-l-2 border-amber-500 pl-4 py-1">
+                                        {buildingKey === "A" && "Port i zatoka"}
+                                        {buildingKey === "B" && "Główny basen Kisajna"}
+                                        {buildingKey === "C" && "Zachody słońca i marina"}
+                                    </p>
+                                </div>
                             </div>
-                        );
-                    })}
-                </motion.div>
+
+                            {/* Units Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                                {buildings[buildingKey].map((unit) => {
+                                    const aptData = strandaApartments[unit.id as keyof typeof strandaApartments];
+                                    return (
+                                        <div key={unit.id} className="group flex flex-col h-full space-y-4">
+                                            <Link href={`/apartamenty/stranda/${unit.id}`} className="block flex-grow">
+                                                <div
+                                                    className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-amber-500/50 transition-all duration-300 cursor-pointer flex flex-col h-full relative"
+                                                >
+                                                    <div className="relative h-64 w-full overflow-hidden">
+                                                        <Image
+                                                            src={unit.image}
+                                                            alt={`Apartament ${unit.id}`}
+                                                            fill
+                                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                                                        <div className="absolute bottom-4 left-5 text-white">
+                                                            <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
+                                                            <h3 className="text-2xl font-bold font-playfair">{unit.id}</h3>
+                                                            {aptData?.price && (
+                                                                <p className="text-amber-400 font-bold mt-1">od {aptData.price} zł/noc</p>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                            <a
+                                                href={`https://engine37851.idobooking.com/index.php?ob[${aptData?.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center py-4 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-green-500/30 active:scale-95 uppercase tracking-widest"
+                                            >
+                                                {t("nav", "bookBtn")}
+                                            </a>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    );
+                })}
             </section>
+
+            {/* View Modal */}
+            <AnimatePresence>
+                {selectedView && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedView(null)}
+                            className="absolute inset-0 bg-black/95 backdrop-blur-xl"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="relative z-10 w-full max-w-6xl aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+                        >
+                            <Image
+                                src={selectedView}
+                                alt="Building View"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+
+                            <button
+                                onClick={() => setSelectedView(null)}
+                                title="Zamknij"
+                                className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all z-20 group"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-90 transition-transform duration-300"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                            </button>
+
+                            <div className="absolute bottom-8 left-8 text-white z-20">
+                                <h3 className="text-3xl font-playfair font-bold mb-2">Bezpośredni widok na jezioro</h3>
+                                <p className="text-white/70 font-light tracking-widest uppercase text-sm">Doświadcz luksusu w Stranda Residence</p>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
 
             <Footer />
         </main>

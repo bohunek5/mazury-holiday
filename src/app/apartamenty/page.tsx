@@ -33,7 +33,7 @@ export default function ApartmentsHub() {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
+            image: "/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: "200 zł"
@@ -47,9 +47,15 @@ export default function ApartmentsHub() {
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_2.webp')]"
-                />
+                <div className="absolute inset-0">
+                    <Image
+                        src="/mazury-holiday/images/apartments_2.webp"
+                        alt="Apartamenty"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
                     <h1 className="text-4xl md:text-7xl font-serif mb-4">{t("apartments", "title")}</h1>

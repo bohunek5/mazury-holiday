@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 import { ChatProvider } from "@/contexts/ChatContext";
 import { AiAssistant } from "@/components/AiAssistant";
 
+
 // ... imports
 
 export default function RootLayout({
@@ -53,6 +54,7 @@ export default function RootLayout({
               {children}
               <AiAssistant />
             </ChatProvider>
+
           </LanguageProvider>
         </ThemeProvider>
       </body>

@@ -25,9 +25,10 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 px-4 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 animate-fade-in-up">
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
           {t("hero", "title")}
         </h1>
+
         <p className="text-lg md:text-xl font-light tracking-wide mb-10 text-white/90 max-w-3xl mx-auto uppercase">
           {t("hero", "subtitle")}
         </p>
@@ -57,3 +58,4 @@ export default function Hero() {
     </section>
   );
 }
+

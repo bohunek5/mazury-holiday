@@ -40,27 +40,19 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/parter/parter_1.webp',
+            heroImage: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
             images: [
-                '/mazury-holiday/images/fuleda/parter/parter_1.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_2.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_3.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_4.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_5.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_6.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_7.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_8.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_9.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_10.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_11.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_12.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_13.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_14.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_15.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_16.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_17.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_18.webp',
-                '/mazury-holiday/images/fuleda/parter/parter_19.webp'
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter3.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter4.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter5.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter6.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter7.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter8.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter9.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter10.webp',
+                '/mazury-holiday/images/fuleda/parter/Fuleda parter11.webp'
             ]
         }
     },
@@ -71,7 +63,7 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
         guests: '2+1',
         idoBookingId: '27',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/27/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartamenty na Fuledzie to pięknie i stylowo wykończony obiekt. Lokalizacja nad samym jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.\n\nApartament Fuleda z jedną sypialnią położony na piętrze jest kompleksowo wyposażony, ogrzewany i zapewnia komfortowy wypoczynek przez cały rok. Posiada klimatyzację oraz przytulny kominek.',
+        description: 'Apartament Fuleda z jedną sypialnią położony na piętrze jest kompleksowo wyposażony, ogrzewany i zapewnia komfortowy wypoczynek przez cały rok. Posiada klimatyzację oraz przytulny kominek.',
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'TV', 'Stół i krzesła', 'Kominek', 'WiFi'],
             kitchen: ['Ekspres do kawy', 'Kuchenka', 'Lodówka', 'Zmywarka', 'Chłodziarka do wina', 'Komplet naczyń'],
@@ -80,33 +72,21 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/pietro/pietro_1.webp',
+            heroImage: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
             images: [
-                '/mazury-holiday/images/fuleda/pietro/pietro_1.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_2.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_3.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_4.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_5.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_6.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_7.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_8.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_9.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_10.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_11.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_12.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_13.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_14.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_15.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_16.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_17.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_18.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_19.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_20.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_21.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_22.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_23.webp',
-                '/mazury-holiday/images/fuleda/pietro/pietro_24.webp'
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro2.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro3.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro4.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro5.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro6.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro7.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro8.webp',
+                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro9.webp'
             ]
         }
     }
 };
+
+

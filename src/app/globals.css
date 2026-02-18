@@ -66,3 +66,17 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 3s infinite;
 }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  50% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}

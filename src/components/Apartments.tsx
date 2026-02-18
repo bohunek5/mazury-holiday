@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Apartments() {
     const { t } = useLanguage();
+
+
 
     const mainApartments = [
         {
@@ -31,7 +33,7 @@ export default function Apartments() {
             id: 3,
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/pietro/pietro_20.webp",
+            image: "/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: "200 zł"
@@ -54,7 +56,7 @@ export default function Apartments() {
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
-            image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
+            image: "/mazury-holiday/images/pokoje_fuleda/334.webp",
             people: "4",
             link: "/pokoje/fuleda",
             price: "375 zł"
@@ -133,43 +135,40 @@ export default function Apartments() {
                             <Link
                                 key={apt.id}
                                 href={apt.link}
-                                className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col"
+                                className="group relative h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
-                                <div className="relative h-64 overflow-hidden">
-                                    <Image
-                                        src={apt.image}
-                                        alt={apt.title}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-slate-900 dark:text-white shadow-sm">
-                                        {t("apartments", "pricePrefix")} {apt.price}/{t("apartments", "night")}
-                                    </div>
+                                <Image
+                                    src={apt.image}
+                                    alt={apt.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    {apt.location}
                                 </div>
 
-                                <div className="p-8 flex flex-col flex-grow">
-                                    <div className="flex items-center gap-2 text-amber-500 text-sm font-medium mb-3">
-                                        <MapPin size={16} />
-                                        {apt.location}
+                                <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <div className="text-amber-400 text-sm font-bold">
+                                            {t("apartments", "pricePrefix")} {apt.price}/{t("apartments", "night")}
+                                        </div>
+                                        <div className="text-slate-300 text-xs font-medium flex items-center gap-1">
+                                            <Users size={14} className="text-amber-500" />
+                                            {apt.people} {t("apartments", "people")}
+                                        </div>
                                     </div>
 
-                                    <h3 className="text-2xl font-serif font-bold text-slate-900 dark:text-white mb-3 group-hover:text-amber-500 transition-colors">
+                                    <h3 className="text-2xl font-serif font-bold text-white mb-2 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
                                     </h3>
-
-                                    <p className="text-slate-600 dark:text-slate-400 mb-6 flex-grow line-clamp-2">
+                                    <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-4">
                                         {apt.description}
                                     </p>
-
-                                    <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 dark:border-slate-700">
-                                        <span className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
-                                            <Users size={16} />
-                                            {apt.people} {t("apartments", "people")}
-                                        </span>
-
-                                        <span className="flex items-center gap-2 text-slate-900 dark:text-white font-bold group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors">
-                                            {t("apartments", "details")}
-                                            <ArrowRight size={16} />
+                                    <div className="flex items-center gap-4 mt-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                            {t("apartments", "details")} &rarr;
                                         </span>
                                     </div>
                                 </div>

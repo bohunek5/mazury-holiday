@@ -1056,7 +1056,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
     },
     es: {
         nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar" },
-        hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "Alquiler de Yates" },
+        hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "+48 730 067 027" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenido a", titleHighlight: "Grandes Lagos", p1: "Descubra la magia de Masuria.", p2: "Ya sea descanso en Giżycko o lujo en Fuleda." },
         apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." }, domkiSkorupki: { title: "Cabañas Skorupki", location: "Skorupki, cerca de Giżycko", description: "Cabañas de lujo en el corazón de la naturaleza de Masuria." }, pokojeFuleda: { title: "Habitaciones Fuleda", location: "Fuleda, Lago Dobskie", description: "Habitaciones acogedoras con vista al lago en zona de silencio." } } },
         cottagesAndRooms: {
@@ -1961,7 +1961,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
     },
     lt: {
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Namelliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti" },
-        hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "Jachtų Nuoma", scrollDown: "Slinkite žemyn" },
+        hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "+48 730 067 027", scrollDown: "Slinkite žemyn" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
         luxuryBenefits: {
             tag: "Mūsų pasiūlymo pranašumai",

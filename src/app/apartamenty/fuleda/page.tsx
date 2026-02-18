@@ -20,7 +20,7 @@ export default function FuledaPage() {
         "/mazury-holiday/images/fuleda/jeziorko.webp",
         "/mazury-holiday/images/fuleda/linia plaza.webp",
         "/mazury-holiday/images/fuleda/plaza cdd.webp",
-        "/mazury-holiday/images/fuleda/Pokoje Tył.webp"
+        "/mazury-holiday/images/fuleda/fuleda_1.webp"
     ];
 
     const apartments = [
@@ -28,14 +28,14 @@ export default function FuledaPage() {
             id: 'parter',
             title: 'Apartament Fuleda Parter',
             guests: '2+2',
-            image: '/mazury-holiday/images/fuleda/parter/parter_2.webp',
+            image: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
             features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
         },
         {
             id: 'pietro',
             title: 'Apartament Fuleda Piętro',
             guests: '2+1',
-            image: '/mazury-holiday/images/fuleda/pietro/pietro_20.webp',
+            image: '/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp',
             features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
         }
     ];
@@ -48,9 +48,15 @@ export default function FuledaPage() {
             {/* Hero Section */}
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/fuleda/jeziorko.webp')]"
-                />
+                <div className="absolute inset-0">
+                    <Image
+                        src="/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp"
+                        alt="Fuleda"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 <div className="relative z-20 text-center text-white p-4">
                     <h1 className="text-4xl md:text-6xl font-playfair mb-4">{t("fuledaPage", "title")}</h1>
                     <p className="text-xl md:text-2xl font-light">{t("fuledaPage", "subtitle")}</p>

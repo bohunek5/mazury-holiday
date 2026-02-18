@@ -29,8 +29,8 @@ export default function ImageLightbox({ images, currentIndex, onClose, altPrefix
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "Escape") onClose();
-            if (e.key === "ArrowLeft") handlePrev();
-            if (e.key === "ArrowRight") handleNext();
+            if (e.key === "ArrowLeft") setIndex((prev) => (prev - 1 + images.length) % images.length);
+            if (e.key === "ArrowRight") setIndex((prev) => (prev + 1) % images.length);
         };
 
         window.addEventListener("keydown", handleKeyDown);
@@ -40,7 +40,7 @@ export default function ImageLightbox({ images, currentIndex, onClose, altPrefix
             window.removeEventListener("keydown", handleKeyDown);
             document.body.style.overflow = "unset";
         };
-    }, [index, handleNext, handlePrev, onClose]);
+    }, [images.length, onClose]);
 
     return (
         <div
