@@ -15,7 +15,7 @@ export default function AttractionsPage() {
             id: "boyen",
             title: t("attractionsPage", "boyen.title"),
             desc: t("attractionsPage", "boyen.desc"),
-            image: "/mazury-holiday/images/attractions/boyen.webp",
+            image: "/mazury-holiday/images/attractions/twierdza-boyen.webp",
             icon: <Camera className="w-6 h-6" />,
             tags: ["Historia", "Architektura", "Edukacja"]
         },
@@ -23,7 +23,7 @@ export default function AttractionsPage() {
             id: "bridge",
             title: t("attractionsPage", "bridge.title"),
             desc: t("attractionsPage", "bridge.desc"),
-            image: "/mazury-holiday/images/attractions/bridge.webp",
+            image: "/mazury-holiday/images/attractions/most-obrotowy.webp",
             icon: <Clock className="w-6 h-6" />,
             tags: ["Zabytek", "Technika", "Giżycko"]
         },
@@ -31,7 +31,7 @@ export default function AttractionsPage() {
             id: "port",
             title: t("attractionsPage", "port.title"),
             desc: t("attractionsPage", "port.desc"),
-            image: "/mazury-holiday/images/attractions/port.webp",
+            image: "/mazury-holiday/images/attractions/eko-marina.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Żeglarstwo", "Rekreacja", "Centrum"]
         },
@@ -39,7 +39,7 @@ export default function AttractionsPage() {
             id: "water",
             title: t("attractionsPage", "water.title"),
             desc: t("attractionsPage", "water.desc"),
-            image: "/mazury-holiday/images/hero_bg.webp",
+            image: "/mazury-holiday/images/attractions/kisajno-dobskie.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Natura", "Cisza", "Krajobraz"]
         },
@@ -47,7 +47,7 @@ export default function AttractionsPage() {
             id: "wolfsLair",
             title: t("attractionsPage", "wolfsLair.title"),
             desc: t("attractionsPage", "wolfsLair.desc"),
-            image: "/mazury-holiday/images/attractions/wolfs_lair.webp",
+            image: "/mazury-holiday/images/attractions/wilczy-szaniec.webp",
             icon: <MapPin className="w-6 h-6" />,
             tags: ["Historia", "II Wojna Światowa", "Muzeum"]
         },
@@ -55,7 +55,7 @@ export default function AttractionsPage() {
             id: "waterTower",
             title: t("attractionsPage", "waterTower.title"),
             desc: t("attractionsPage", "waterTower.desc"),
-            image: "/mazury-holiday/images/attractions/water_tower.webp",
+            image: "/mazury-holiday/images/attractions/wieza-cisnien.webp",
             icon: <Eye className="w-6 h-6" />,
             tags: ["Widok", "Kawiarnia", "Zabytek"]
         },
@@ -63,7 +63,7 @@ export default function AttractionsPage() {
             id: "castle",
             title: t("attractionsPage", "castle.title"),
             desc: t("attractionsPage", "castle.desc"),
-            image: "/mazury-holiday/images/attractions/castle.webp",
+            image: "/mazury-holiday/images/attractions/krzyzacki-zamek.webp",
             icon: <Landmark className="w-6 h-6" />,
             tags: ["Historia", "Architektura", "Hotel"]
         },
@@ -71,7 +71,7 @@ export default function AttractionsPage() {
             id: "bison",
             title: t("attractionsPage", "bison.title"),
             desc: t("attractionsPage", "bison.desc"),
-            image: "/mazury-holiday/images/attractions/bison.webp",
+            image: "/mazury-holiday/images/attractions/zagroda-zubrow.webp",
             icon: <Trees className="w-6 h-6" />,
             tags: ["Natura", "Zwierzęta", "Edukacja"]
         }
@@ -85,7 +85,7 @@ export default function AttractionsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/mazury-holiday/images/DJI_0059_1_optimized.webp"
+                    src="/mazury-holiday/images/attractions/gizycko-hero.webp"
                     alt="Atrakcje Mazury"
                     fill
                     className="object-cover"

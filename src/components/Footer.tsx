@@ -25,7 +25,7 @@ export default function Footer() {
                     </p>
                     <div className="flex gap-4 justify-center md:justify-start">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/search/top?q=mazury.holiday"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-amber-500 hover:text-white transition-all text-slate-400 border border-slate-200 dark:border-slate-700 hover:border-amber-500"
@@ -34,7 +34,7 @@ export default function Footer() {
                             <Facebook size={20} />
                         </a>
                         <a
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/mazury.holiday/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-amber-500 hover:text-white transition-all text-slate-400 border border-slate-200 dark:border-slate-700 hover:border-amber-500"

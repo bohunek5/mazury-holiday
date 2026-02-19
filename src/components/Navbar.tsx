@@ -12,6 +12,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MobileChatTrigger } from "@/components/MobileChatTrigger";
 import logoPoziom from "@/assets/images/logo-poziom.svg";
+import Lottie from "lottie-react";
+import euFlagData from "../../eu-flag.json";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -98,7 +100,15 @@ export default function Navbar() {
                 <div className="flex items-center gap-4 z-50">
                     {/* Desktop Controls */}
                     <div className="hidden xl:flex items-center gap-4">
+                        {/* EU Flag */}
+                        <Link href="/projekty-unijne">
+                            <div className="w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                                <Lottie animationData={euFlagData} loop={true} />
+                            </div>
+                        </Link>
+
                         <div className={cn("h-6 w-px xl:block hidden", dividerColorClass)} />
+
                         <LanguageSwitcher className={textColorClass} />
                         <div className={cn("h-6 w-px", dividerColorClass)} />
                         <ThemeToggle className={cn(textColorClass, "hover:bg-white/10")} />
