@@ -99,7 +99,13 @@ export default function Footer() {
             </div>
 
             <div className="container mx-auto px-4 mt-12 md:mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400 dark:text-slate-500">
-                &copy; {new Date().getFullYear()} mazury.holiday. {t("footer", "rights")}.
+                <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <span>&copy; {new Date().getFullYear()} mazury.holiday. {t("footer", "rights")}.</span>
+                    <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
+                    <Link href="/polityka-prywatnosci" className="hover:text-amber-500 transition-colors">
+                        Polityka Prywatności
+                    </Link>
+                </div>
             </div>
         </footer>
     );

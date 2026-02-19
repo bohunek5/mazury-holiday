@@ -37,8 +37,33 @@ export default function ContactPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("sending");
-        // Simulate API call
-        setTimeout(() => setStatus("success"), 2000);
+
+        const formData = new FormData(e.target as HTMLFormElement);
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+        };
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+            } else {
+                setStatus("error");
+                console.error("Failed to send message");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            setStatus("error");
+        }
     };
 
     return (
@@ -148,6 +173,7 @@ export default function ContactPage() {
                                         <input
                                             required
                                             type="text"
+                                            name="name"
                                             className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-amber-500 transition-all text-slate-900 dark:text-white"
                                             placeholder="..."
                                         />
@@ -159,6 +185,7 @@ export default function ContactPage() {
                                         <input
                                             required
                                             type="email"
+                                            name="email"
                                             className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-amber-500 transition-all text-slate-900 dark:text-white"
                                             placeholder="jan@kowalski.pl"
                                         />
@@ -172,6 +199,7 @@ export default function ContactPage() {
                                         </label>
                                         <input
                                             type="tel"
+                                            name="phone"
                                             className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-amber-500 transition-all text-slate-900 dark:text-white"
                                             placeholder="+48 ..."
                                         />
@@ -183,6 +211,7 @@ export default function ContactPage() {
                                         <input
                                             required
                                             type="text"
+                                            name="subject"
                                             className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-amber-500 transition-all text-slate-900 dark:text-white"
                                             placeholder="..."
                                         />
@@ -196,6 +225,7 @@ export default function ContactPage() {
                                     <textarea
                                         required
                                         rows={5}
+                                        name="message"
                                         className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-amber-500 transition-all text-slate-900 dark:text-white resize-none"
                                         placeholder="..."
                                     ></textarea>

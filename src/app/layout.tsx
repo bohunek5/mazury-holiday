@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 
 import { ChatProvider } from "@/contexts/ChatContext";
 import { AiAssistant } from "@/components/AiAssistant";
+import { CookieConsent } from "@/components/CookieConsent";
 
 
 // ... imports
@@ -53,6 +54,7 @@ export default function RootLayout({
             <ChatProvider>
               {children}
               <AiAssistant />
+              <CookieConsent />
             </ChatProvider>
 
           </LanguageProvider>

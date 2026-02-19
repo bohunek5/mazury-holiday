@@ -306,6 +306,28 @@ export const translations = {
             success: "Wiadomość została wysłana pomyślnie!",
             error: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
         },
+        cookieConsent: {
+            title: "Ciasteczka i Prywatność 🍪",
+            description: "Dbamy o Twoją prywatność. Możesz zaakceptować wszystkie pliki cookie lub dostosować swoje zgody. Więcej w",
+            privacyLink: "Polityce Prywatności",
+            acceptAll: "Akceptuj wszystkie",
+            customize: "Dostosuj",
+            decline: "Odrzuć",
+            settingsTitle: "Ustawienia plików cookie",
+            back: "Wróć",
+            necessary: "Niezbędne",
+            necessaryDesc: "Wymagane do działania strony.",
+            analytics: "Analityczne",
+            analyticsDesc: "Pomagają nam ulepszać stronę.",
+            marketing: "Marketingowe",
+            marketingDesc: "Dopasowanie reklam do Ciebie.",
+            save: "Zapisz ustawienia"
+        },
+        privacyPolicy: {
+            title: "Polityka Prywatności i Plików Cookie",
+            intro: "Cenimy Twoją prywatność, zapoznaj się z naszą polityką prywatności.",
+            content: "Pełna treść polityki prywatności znajduje się w przygotowaniu w Twoim języku. Prosimy o kontakt w celu uzyskania szczegółów."
+        },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residence",
             price: "od 375 zł/doba",
@@ -651,6 +673,28 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             success: "Message sent successfully!",
             error: "An error occurred while sending the message. Please try again."
         },
+        cookieConsent: {
+            title: "Cookies & Privacy 🍪",
+            description: "We care about your privacy. You can accept all cookies or customize your preferences. Read more in our",
+            privacyLink: "Privacy Policy",
+            acceptAll: "Accept All",
+            customize: "Customize",
+            decline: "Decline",
+            settingsTitle: "Cookie Settings",
+            back: "Back",
+            necessary: "Necessary",
+            necessaryDesc: "Required for the website to function.",
+            analytics: "Analytics",
+            analyticsDesc: "Help us improve the website.",
+            marketing: "Marketing",
+            marketingDesc: "Personalized advertisements.",
+            save: "Save Settings"
+        },
+        privacyPolicy: {
+            title: "Privacy and Cookie Policy",
+            intro: "We value your privacy, please read our privacy policy.",
+            content: "The full privacy policy is currently being prepared in your language. Please contact us for details."
+        },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residence",
             price: "from 375 PLN/night",
@@ -976,6 +1020,28 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 point3: "Ständige technische Betreuung und Wartung",
                 point4: "Preisoptimierung (Revenue Management)"
             }
+        },
+        cookieConsent: {
+            title: "Cookies & Datenschutz 🍪",
+            description: "Wir kümmern uns um Ihre Privatsphäre. Sie können alle Cookies akzeptieren oder Ihre Einstellungen anpassen. Mehr in der",
+            privacyLink: "Datenschutzerklärung",
+            acceptAll: "Alle akzeptieren",
+            customize: "Anpassen",
+            decline: "Ablehnen",
+            settingsTitle: "Cookie-Einstellungen",
+            back: "Zurück",
+            necessary: "Notwendig",
+            necessaryDesc: "Erforderlich für die Funktion der Website.",
+            analytics: "Analytik",
+            analyticsDesc: "Helfen uns, die Website zu verbessern.",
+            marketing: "Marketing",
+            marketingDesc: "Personalisierte Werbung.",
+            save: "Einstellungen speichern"
+        },
+        privacyPolicy: {
+            title: "Datenschutz- und Cookie-Richtlinie",
+            intro: "Wir schätzen Ihre Privatsphäre, bitte lesen Sie unsere Datenschutzrichtlinie.",
+            content: "Der vollständige Text der Datenschutzrichtlinie wird derzeit in Ihrer Sprache vorbereitet. Bitte kontaktieren Sie uns für Details."
         },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residenz",
@@ -1880,6 +1946,28 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             sending: "Odesílání...",
             success: "Zpráva byla úspěšně odeslána!",
             error: "Při odesílání došlo k chybě."
+        },
+        cookieConsent: {
+            title: "Cookies a Soukromí 🍪",
+            description: "Dbáme na vaše soukromí. Můžete přijmout všechna cookies nebo upravit své preference. Více v",
+            privacyLink: "Zásadách ochrany osobních údajů",
+            acceptAll: "Přijmout vše",
+            customize: "Upravit",
+            decline: "Odmítnout",
+            settingsTitle: "Nastavení cookies",
+            back: "Zpět",
+            necessary: "Nezbytné",
+            necessaryDesc: "Vyžadováno pro fungování webu.",
+            analytics: "Analytické",
+            analyticsDesc: "Pomáhají nám vylepšovat web.",
+            marketing: "Marketingové",
+            marketingDesc: "Personalizované reklamy.",
+            save: "Uložit nastavení"
+        },
+        privacyPolicy: {
+            title: "Zásady ochrany osobních údajů a souborů cookie",
+            intro: "Vážíme si vašeho soukromí, přečtěte si prosím naše zásady ochrany osobních údajů.",
+            content: "Úplné znění zásad ochrany osobních údajů se připravuje ve vašem jazyce. Pro podrobnosti nás prosím kontaktujte."
         },
         pokojeFuledaPage: {
             heroTitle: "Rezidence Fuleda",
