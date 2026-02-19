@@ -189,7 +189,7 @@ export default function Navbar() {
                         >
                             <div className={cn("w-16 h-px", "bg-slate-200 dark:bg-slate-800")} />
                             <div className="flex items-center gap-4">
-                                <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Język</span>
+                                <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">{t("nav", "language")}</span>
                                 <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} />
                             </div>
                         </motion.div>

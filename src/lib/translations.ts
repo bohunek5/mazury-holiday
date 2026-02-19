@@ -1,6 +1,6 @@
 export const translations = {
     pl: {
-        nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj" },
+        nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj", language: "Język", back: "Powrót" },
         hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "+48 730 067 027", scrollDown: "Przewiń w dół" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur w naszych luksusowych apartamentach, klimatycznych domkach oraz na pokładzie jachtu.", p2: "Ciesz się spokojem w Giżycku, dziką naturą we Fuledzie lub relaksem w Skorupkach. Twój wymarzony wypoczynek zaczyna się tutaj." },
         luxuryBenefits: {
@@ -326,7 +326,41 @@ export const translations = {
         privacyPolicy: {
             title: "Polityka Prywatności i Plików Cookie",
             intro: "Cenimy Twoją prywatność, zapoznaj się z naszą polityką prywatności.",
-            content: "Pełna treść polityki prywatności znajduje się w przygotowaniu w Twoim języku. Prosimy o kontakt w celu uzyskania szczegółów."
+            content: "Niniejsza Polityka Cookies dotyczy wszystkich serwisów internetowych mazury.holiday. Korzystając z naszych stron, wyrażasz zgodę na używanie plików cookies zgodnie z tą polityką. Używamy plików cookies, aby nasze strony działały szybciej, były łatwiejsze w obsłudze oraz aby dopasować treści i reklamy do Twoich potrzeb. W każdej chwili możesz zarządzać ustawieniami plików cookies w swojej przeglądarce.",
+            sections: [
+                {
+                    title: "Co to są ciasteczka?",
+                    content: "Ciasteczka (ang. <em>cookies</em>) – niewielkie informacje tekstowe, wysyłane przez serwer WWW i zapisywane po stronie użytkownika (zazwyczaj na twardym dysku). Domyślne parametry ciasteczek pozwalają na odczytanie informacji w nich zawartych jedynie serwerowi, który je utworzył. Ciasteczka są stosowane najczęściej w przypadku liczników, sond, sklepów internetowych, stron wymagających logowania, reklam i do monitorowania aktywności odwiedzających."
+                },
+                {
+                    title: "Do czego używamy ciasteczek?",
+                    content: "Strony mazury.holiday używają ciasteczek w różnych celach:",
+                    list: [
+                        "by strony mazury.holiday działały szybciej i były łatwiejsze w użyciu",
+                        "aby lepiej dopasować treści i reklamy dostępne na Stronach mazury.holiday do Twoich oczekiwań i zainteresowań",
+                        "do zbierania anonimowych, zagregowanych statystyk, które pozwalają nam zrozumieć jak ludzie używają naszych stron i pomagają w poprawianiu ich funkcjonalności i zawartości"
+                    ]
+                },
+                {
+                    content: "Używając ciasteczek w wyżej opisany sposób nigdy nie identyfikujemy tożsamości użytkowników na podstawie informacji przechowywanych w ciasteczkach."
+                },
+                {
+                    title: "Czas przechowywania danych w „cookies”",
+                    content: "Używamy dwa rodzaje ciasteczek – <strong>sesyjne</strong> oraz <strong>stałe</strong>. Te pierwsze pozostają na Twoim urządzeniu jedynie podczas korzystania ze Stron mazury.holiday. Ciasteczka stałe pozostają na Twoim urządzeniu tak długo jak długo mają ustawiony czas funkcjonowania lub do momentu kiedy użytkownik je usunie."
+                },
+                {
+                    title: "Cookies podmiotów trzecich",
+                    content: "Podczas korzystania ze Stron mazury.holiday możesz otrzymywać ciasteczka pochodzące od współpracujących z nami podmiotów trzecich takich jak np. Facebook, Google, a także od firm realizujących kampanie reklamowe. Więcej informacji na temat tych ciasteczek możesz znaleźć na stronach internetowych poszczególnych podmiotów trzecich."
+                },
+                {
+                    title: "Jak usunąć lub zmienić ustawienia „cookies”?",
+                    content: "Większość przeglądarek internetowych jest początkowo ustawionych na automatyczne przyjmowanie ciasteczek. Możesz jednak zmienić ustawienia przeglądarki tak, aby ciasteczka były blokowane – w całości lub w jakiejś części, np. tylko od stron trzecich, albo aby każdorazowo otrzymywać komunikat w momencie kiedy ciasteczka są wysyłane na Twoje urządzenie.<br/><br/>Pamiętaj jednak, że jeżeli zablokujesz używane przez nas ciasteczka, może to negatywnie wpłynąć na wygodę korzystania ze Stron mazury.holiday, na przykład możesz nie być w stanie odwiedzić pewnych obszarów Stron mazury.holiday bądź nie otrzymywać spersonalizowanych informacji podczas ich przeglądania. Uniemożliwisz nam także zbieranie anonimowych informacji nt. używania naszych stron w celu stałego poprawiania zawartości Stron i usług mazury.holiday."
+                }
+            ],
+            usefulLinks: "Przydatne linki",
+            linksDescription: "Użytkownicy powinni przeczytać politykę ochrony prywatności tych firm, aby poznać ich zasady korzystania z plików cookie:",
+            manageCookies: "W celu zarządzania ustawienia cookies wybierz z listy poniżej przeglądarkę internetową, której używasz i postępuj zgodnie z instrukcjami:",
+            mobileDevices: "Urządzenia mobilne:"
         },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residence",
@@ -408,7 +442,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     en: {
-        nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now" },
+        nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now", language: "Language", back: "Back" },
         hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "+48 730 067 027", scrollDown: "Scroll down" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
         luxuryBenefits: {
@@ -693,7 +727,41 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         privacyPolicy: {
             title: "Privacy and Cookie Policy",
             intro: "We value your privacy, please read our privacy policy.",
-            content: "The full privacy policy is currently being prepared in your language. Please contact us for details."
+            content: "This Cookie Policy applies to all mazury.holiday websites. By using our sites, you agree to the use of cookies in accordance with this policy. We use cookies to make our sites work faster, easier to use, and to personalize content and ads. You can manage your cookie settings in your browser at any time.",
+            sections: [
+                {
+                    title: "What are cookies?",
+                    content: "Cookies are small text information sent by a web server and saved on the user's side (usually on the hard drive). Default cookie parameters allow only the server that created them to read the information contained in them. Cookies are most often used for counters, polls, online stores, pages requiring login, advertisements, and to monitor visitor activity."
+                },
+                {
+                    title: "What do we use cookies for?",
+                    content: "mazury.holiday websites use cookies for various purposes:",
+                    list: [
+                        "to make our websites work faster and be easier to use",
+                        "to better match the content and advertisements to your expectations and interests",
+                        "to collect anonymous, aggregated statistics to help us understand how people use our websites"
+                    ]
+                },
+                {
+                    content: "Using cookies in the way described above, we never identify the identity of users based on the information stored in cookies."
+                },
+                {
+                    title: "Retention period",
+                    content: "We use two types of cookies – <strong>session</strong> and <strong>permanent</strong>. The former remain on your device only while using our websites. Permanent cookies remain on your device as long as they have a set lifetime or until you delete them."
+                },
+                {
+                    title: "Third-party cookies",
+                    content: "While using our websites, you may receive cookies from participating third parties such as Facebook, Google, and from companies conducting advertising campaigns. More information about these cookies can be found on the websites of individual third parties."
+                },
+                {
+                    title: "How to delete or change cookie settings?",
+                    content: "Most web browsers are initially set to automatically accept cookies. However, you can change your browser settings so that cookies are blocked – in whole or in part, e.g. only from third parties, or to receive a message each time cookies are sent to your device.<br/><br/>Remember, however, that if you block the cookies we use, it may negatively affect the comfort of using mazury.holiday Pages, for example you may not be able to visit certain areas of mazury.holiday Pages or not receive personalized information while browsing them. You will also prevent us from collecting anonymous information about the use of our pages for the purpose of constant improvement of the content of mazury.holiday Pages and services."
+                }
+            ],
+            usefulLinks: "Useful links",
+            linksDescription: "Users should read the privacy policy of these companies to learn about their cookie policies:",
+            manageCookies: "To manage cookie settings, select the web browser you use from the list below and follow the instructions:",
+            mobileDevices: "Mobile devices:"
         },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residence",
@@ -769,7 +837,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     de: {
-        nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen" },
+        nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen", language: "Sprache", back: "Zurück" },
         hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "+48 730 067 027" },
         intro: { tag: "Mazury.Holiday", title: "Willkommen in", titleHighlight: "Masuren", p1: "Entdecken Sie die Magie Masurens.", p2: "Ob Ruhe in Giżycko oder Luxus in Fuleda." },
         luxuryBenefits: {
@@ -1041,7 +1109,9 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         privacyPolicy: {
             title: "Datenschutz- und Cookie-Richtlinie",
             intro: "Wir schätzen Ihre Privatsphäre, bitte lesen Sie unsere Datenschutzrichtlinie.",
-            content: "Der vollständige Text der Datenschutzrichtlinie wird derzeit in Ihrer Sprache vorbereitet. Bitte kontaktieren Sie uns für Details."
+            content: "Diese Cookie-Richtlinie gilt für alle Websites von mazury.holiday. Durch die Nutzung unserer Websites stimmen Sie der Verwendung von Cookies gemäß dieser Richtlinie zu. Wir verwenden Cookies, damit unsere Websites schneller funktionieren, einfacher zu bedienen sind und um Inhalte und Anzeigen zu personalisieren. Sie können Ihre Cookie-Einstellungen jederzeit in Ihrem Browser verwalten.",
+            usefulLinks: "Nützliche Links",
+            mobileDevices: "Mobile Geräte:"
         },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Residenz",
@@ -1117,7 +1187,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     es: {
-        nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar" },
+        nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar", language: "Idioma", back: "Volver" },
         hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "+48 730 067 027" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenido a", titleHighlight: "Grandes Lagos", p1: "Descubra la magia de Masuria.", p2: "Ya sea descanso en Giżycko o lujo en Fuleda." },
         apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." }, domkiSkorupki: { title: "Cabañas Skorupki", location: "Skorupki, cerca de Giżycko", description: "Cabañas de lujo en el corazón de la naturaleza de Masuria." }, pokojeFuleda: { title: "Habitaciones Fuleda", location: "Fuleda, Lago Dobskie", description: "Habitaciones acogedoras con vista al lago en zona de silencio." } } },
@@ -1169,6 +1239,30 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             sending: "Enviando...",
             success: "¡Mensaje enviado con éxito!",
             error: "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        },
+        cookieConsent: {
+            title: "Cookies y Privacidad 🍪",
+            description: "Nos importa su privacidad. Puede aceptar todas las cookies o personalizar sus consentimientos. Más en la",
+            privacyLink: "Política de Privacidad",
+            acceptAll: "Aceptar todas",
+            customize: "Personalizar",
+            decline: "Rechazar",
+            settingsTitle: "Configuración de cookies",
+            back: "Volver",
+            necessary: "Necesarias",
+            necessaryDesc: "Requeridas para el funcionamiento del sitio.",
+            analytics: "Analíticas",
+            analyticsDesc: "Nos ayudan a mejorar el sitio.",
+            marketing: "Marketing",
+            marketingDesc: "Personalización de anuncios para usted.",
+            save: "Guardar configuración"
+        },
+        privacyPolicy: {
+            title: "Política de Privacidad y Cookies",
+            intro: "Valoramos su privacidad, por favor lea nuestra política de privacidad.",
+            content: "Esta Política de Cookies se aplica a todos los sitios web de mazury.holiday. Al utilizar nuestros sitios, usted acepta el uso de cookies de acuerdo con esta política. Utilizamos cookies para que nuestros sitios funcionen más rápido, sean más fáciles de usar y para personalizar el contenido y los anuncios. Puede gestionar la configuración de las cookies en su navegador en any time.",
+            usefulLinks: "Enlaces útiles",
+            mobileDevices: "Dispositivos móviles:"
         },
         roomsPage: {
             heroTitle: "Habitaciones en Masuria",
@@ -1247,7 +1341,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             title: "Cabañas Skorupki",
             subtitle: "Lujo en la naturaleza",
             introTitle: "Asentamiento íntimo en Masuria",
-            descriptionPart1: "Cabañas Skorupki es un asentamiento íntimo de 10 elegantse cabañas de vacaciones, ubicado en el pueblo de Skorupki, en una de las partes más tranquilas y verdes de Masuria.",
+            descriptionPart1: "Cabañas Skorupki es un asentamiento íntimo de 10 elegantes cabañas de vacaciones, ubicado en el pueblo de Skorupki, en una de las partes más tranquilas y verdes de Masuria.",
             descriptionPart2: "Esta es una propuesta para huéspedes que aprecian el espacio, la privacidad y un alto estándar, y al mismo tiempo quieren estar cerca de la naturaleza. Las cabañas están ubicadas a unos 350 metros del lago, y los huéspedes tienen a su disposición un área recreativa privada separada junto al agua.",
             descriptionPart3: "🏡 Confort y elegancia para hasta 6 personas. Cada cabaña fue diseñada para asegurar el máximo confort de descanso: dos dormitorios independientes en el primer piso, una sala de estar con sofá cama en la planta baja, una cocina moderna totalmente equipada, un baño elegante con ducha, una terraza cubierta: el lugar perfecto para el café de la mañana o una copa de vino por la noche. Materiales cuidadosamente seleccionados, interiores luminosos y una distribución funcional favorecen tanto estancias cortas como descansos más largos.",
             descriptionPart4: "🌊 Zona privada junto al lago. Los huéspedes de nuestras cabañas tienen acceso a un área recreativa dedicada junto al lago, donde espera: un lugar atmosférico para una hoguera, un parque infantil para niños, discretamente inscrito en el entorno natural, un espacio para la relajación, el descanso y pasar tiempo tranquilamente junto al agua. Es el espacio perfecto para las noches de verano y momentos de silencio lejos de la prisa diaria.",
@@ -1396,7 +1490,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     it: {
-        nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota" },
+        nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota", language: "Lingua", back: "Indietro" },
         hero: { title: "Vacanze in Masuria", subtitle: "MOMENTI UNICI", apartmentsBtn: "I nostri appartamenti", charterBtn: "Noleggio Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Benvenuti nei", titleHighlight: "Grandi Laghi", p1: "Scopri la magia della Masuria.", p2: "Relax a Giżycko o lusso a Fuleda." },
         apartments: { title: "Appartamenti", description: "Scegli il posto perfetto.", details: "Dettagli", pricePrefix: "da", night: "notte", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Comfort al porto." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lusso sul lago." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasi di pace." }, domkiSkorupki: { title: "Case Skorupki", location: "Skorupki, vicino a Giżycko", description: "Case di lusso nel cuore della natura masuriana." }, pokojeFuleda: { title: "Camere Fuleda", location: "Fuleda, Lago Dobskie", description: "Camere accoglienti con vista lago in zona di silenzio." } } },
@@ -1581,10 +1675,34 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 washer: "Lavatrice",
                 pier: "Accesso al molo"
             }
-        }
+        },
+        cookieConsent: {
+            title: "Cookie e Privacy 🍪",
+            description: "Teniamo alla tua privacy. Puoi accettare tutti i cookie o personalizzare i tuoi consensi. Maggiori informazioni nella",
+            privacyLink: "Informativa sulla Privacy",
+            acceptAll: "Accetta tutti",
+            customize: "Personalizza",
+            decline: "Rifiuta",
+            settingsTitle: "Impostazioni dei cookie",
+            back: "Indietro",
+            necessary: "Necessari",
+            necessaryDesc: "Richiesti per il funzionamento del sito.",
+            analytics: "Analitici",
+            analyticsDesc: "Ci aiutano a migliorare il sito.",
+            marketing: "Marketing",
+            marketingDesc: "Personalizzazione degli annunci per te.",
+            save: "Salva impostazioni"
+        },
+        privacyPolicy: {
+            title: "Informativa sulla Privacy e sui Cookie",
+            intro: "Diamo valore alla tua privacy, ti preghiamo di leggere la nostra informativa sulla privacy.",
+            content: "La presente Informativa sui Cookie si applica a tutti i siti web di mazury.holiday. Utilizzando i nostri siti, l'utente acconsente all'uso dei cookie in conformità con la presente informativa. Utilizziamo i cookie per far funzionare i nostri siti in modo più rapido e semplice, e per personalizzare contenuti e annunci. È possibile gestire le impostazioni dei cookie nel proprio browser in qualsiasi momento.",
+            usefulLinks: "Link utili",
+            mobileDevices: "Dispositivi mobili:"
+        },
     },
     fr: {
-        nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver" },
+        nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver", language: "Langue", back: "Retour" },
         hero: { title: "Vacances en Mazurie", subtitle: "MOMENTS UNIQUES", apartmentsBtn: "Nos Appartements", charterBtn: "Location de Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenue aux", titleHighlight: "Grands Lacs", p1: "Découvrez la magie de la Mazurie.", p2: "Repos à Giżycko ou luxe à Fuleda." },
         apartments: { title: "Nos Appartements", description: "Choisissez l'endroit idéal.", details: "Détails", pricePrefix: "dès", night: "nuit", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Confort au port." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxe sur le lac." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasis de paix." }, domkiSkorupki: { title: "Chalets Skorupki", location: "Skorupki, près de Giżycko", description: "Chalets de luxe au cœur de la nature masurienne." }, pokojeFuleda: { title: "Chambres Fuleda", location: "Fuleda, Lac Dobskie", description: "Chambres douillettes avec vue sur le lac en zone de silence." } } },
@@ -1697,10 +1815,34 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 washer: "Machine à laver",
                 pier: "Accès à la jetée"
             }
+        },
+        cookieConsent: {
+            title: "Cookies et Confidentialité 🍪",
+            description: "Nous attachons de l'importance à votre vie privée. Vous pouvez accepter tous les cookies ou personnaliser vos consentements. Plus d'infos dans la",
+            privacyLink: "Politique de Confidentialité",
+            acceptAll: "Tout accepter",
+            customize: "Personnaliser",
+            decline: "Refuser",
+            settingsTitle: "Paramètres des cookies",
+            back: "Retour",
+            necessary: "Nécessaires",
+            necessaryDesc: "Requis pour le fonctionnement du site.",
+            analytics: "Analytiques",
+            analyticsDesc: "Nous aident à améliorer le site.",
+            marketing: "Marketing",
+            marketingDesc: "Personnalisation des publicités pour vous.",
+            save: "Enregistrer les paramètres"
+        },
+        privacyPolicy: {
+            title: "Politique de Confidentialité et Cookies",
+            intro: "Nous apprécions votre vie privée, veuillez lire notre politique de confidentialité.",
+            content: "Cette politique en matière de cookies s'applique à tous les sites Web de mazury.holiday. En utilisant nos sites, vous acceptez l'utilisation de cookies conformément à cette politique. Nous utilisons des cookies pour rendre nos sites plus rapides, plus faciles à utiliser et pour personnaliser le contenu et les publicités. Vous pouvez gérer vos paramètres de cookies dans votre navigateur à tout moment.",
+            usefulLinks: "Liens utiles",
+            mobileDevices: "Appareils mobiles :"
         }
     },
     cs: {
-        nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat" },
+        nav: { about: "O nás", apartments: "Apartmány", cottages: "Chaty", charter: "Pronájem", port: "Přístav", attractions: "Atrakce", cooperation: "Spolupráce", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezervovat", language: "Jazyk", back: "Zpět" },
         hero: { title: "Dovolená na Mazurách", subtitle: "JEDINEČNÉ OKAMŽIKY", apartmentsBtn: "Naše Apartmány", charterBtn: "+48 730 067 027", scrollDown: "Dolů" },
         intro: { tag: "Mazury.Holiday", title: "Vítejte na", titleHighlight: "Mazurech", p1: "Objevte kouzlo Mazur.", p2: "Odpočinek v Giżycku." },
         luxuryBenefits: {
@@ -1967,7 +2109,9 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         privacyPolicy: {
             title: "Zásady ochrany osobních údajů a souborů cookie",
             intro: "Vážíme si vašeho soukromí, přečtěte si prosím naše zásady ochrany osobních údajů.",
-            content: "Úplné znění zásad ochrany osobních údajů se připravuje ve vašem jazyce. Pro podrobnosti nás prosím kontaktujte."
+            content: "Tyto Zásady používání souborů cookie se vztahují na všechny webové stránky mazury.holiday. Používáním našich stránek souhlasíte s používáním souborů cookie v souladu s těmito zásadami. Soubory cookie používáme k tomu, aby naše stránky fungovaly rychleji, snadněji se používaly a abychom přizpůsobili obsah a reklamy. Nastavení souborů cookie můžete kdykoli spravovat ve svém prohlížeči.",
+            usefulLinks: "Užitečné odkazy",
+            mobileDevices: "Mobilní zařízení:"
         },
         pokojeFuledaPage: {
             heroTitle: "Rezidence Fuleda",
@@ -2043,7 +2187,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     lt: {
-        nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Namelliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti" },
+        nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Nameliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti", language: "Kalba", back: "Grįžti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "+48 730 067 027", scrollDown: "Slinkite žemyn" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
         luxuryBenefits: {
@@ -2069,9 +2213,9 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         skorupki: {
             title: "Skorupki Nameliai",
             subtitle: "Jūsų prabangus prieglobstis Mozūrijos širdyje",
-            introTitle: "Komorní osada na Mazurách",
-            descriptionPart1: "Domky Skorupki je komorní osada 10 elegantních rekreačních domků, která se nachází v obci Skorupki, v jedné z nejklidnějších a nejzelenějších částí Mazur.",
-            descriptionPart2: "Je to nabídka pro hosty, kteří oceňují prostor, soukromí a vysoký standard, a zároveň chtějí zůstat blízko přírody. Domky se nacházejí cca 350 metrų nuo ežero, o svečiai turi prieigą prie specialiai jiems skirtos, privačios poilsio zonos prie vandens.",
+            introTitle: "Jauki gyvenvietė Mozūrijoje",
+            descriptionPart1: "Skorupki nameliai - tai jauki 10 elegantiškų poilsio namelių gyvenvietė, esanti Skorupki kaimelyje, vienoje ramiausių ir žaliausių Mozūrijos dalių.",
+            descriptionPart2: "Tai pasiūlymas svečiams, vertinantiems erdvę, privatumą ir aukštą standartą, bei norintiems būti arti gamtos. Nameliai yra maždaug 350 metrų nuo ežero, o svečiai turi galimybę naudotis specialiai jiems skirta privačia poilsio zona prie vandens.",
             descriptionPart3: "🏡 Komfortas ir elegancija iki 6 asmenų. Kiekvienas namelis buvo suprojektuotas taip, kad užtikrintų maksimalų poilsio komfortą: du nepriklausomi miegamieji aukšte, svetainė su išskleidžiama sofa pirmame aukšte, moderni, pilnai įrengta virtuvėlė, elegantiškas vonios kambarys su dušu, dengta terasa – ideali vieta rytinei kavai ar vakariniam vyno taurei. Kruopščiai atrinktos medžiagos, šviesūs interjerai ir funkcionalus išdėstymas tinka tiek trumpoms viešnagėms, tiek ilgesniam poilsiui.",
             descriptionPart4: "🌊 Privati zona prie ežero. Mūsų namelių svečiai turi prieigą prie specialiai jiems skirtos poilsio zonos prie ežero, kur laukia: atmosferinė laužavietės vieta, vaikų žaidimų aikštelė, diskretiškai įkomponuota į natūralią aplinką, erdvė atsipalaiduoti, pailsėti ir ramiai praleisti laiką prie vandens. Tai ideali vieta vasaros vakarams ir tylos akimirkoms toli nuo kasdienio šurmulio.",
             externalAmenities: "🌲 Ramybė, erdvė ir gamta. Gyvenvietės vieta užtikrina: kamerinę atmosferą ir tylą, ežerų ir Mozūrijos miškų artumą, puikias sąlygas pasivaikščiojimams, dviračių sportui ir poilsiui gryname ore.",
@@ -2246,6 +2390,30 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             success: "Žinutė sėkmingai išsiųsta!",
             error: "Siunčiant žinutę įvyko klaida. Bandykite dar kartą."
         },
+        cookieConsent: {
+            title: "Slapukai ir Privatumas 🍪",
+            description: "Mums rūpi jūsų privatumas. Galite sutikti su visais slapukais arba pritaikyti savo sutikimus. Daugiau",
+            privacyLink: "Privatumo Politikoje",
+            acceptAll: "Sutikti su visais",
+            customize: "Tinkinti",
+            decline: "Atmesti",
+            settingsTitle: "Slapukų nustatymai",
+            back: "Grįžti",
+            necessary: "Būtini",
+            necessaryDesc: "Reikalingi svetainės veikimui.",
+            analytics: "Analitiniai",
+            analyticsDesc: "Padeda mums tobulinti svetainę.",
+            marketing: "Rinkodaros",
+            marketingDesc: "Skelbimų pritaikymas jums.",
+            save: "Išsaugoti nustatymus"
+        },
+        privacyPolicy: {
+            title: "Privatumo ir slapukų politika",
+            intro: "Mes vertiname jūsų privatumą, prašome perskaityti mūsų privatumo politiką.",
+            content: "Ši slapukų politika taikoma visoms mazury.holiday svetainėms. Naudodamiesi mūsų svetainėmis sutinkate su slapukų naudojimu pagal šią politiką. Slapukus naudojame tam, kad svetainės veiktų greičiau, būtų lengviau jomis naudotis, taip pat turiniui ir reklamoms pritaikyti. Slapukų nustatymus savo naršyklėje galite valdyti bet kuriuo metu.",
+            usefulLinks: "Naudingos nuorodos",
+            mobileDevices: "Mobilieji įrenginiai:"
+        },
         pokojeFuledaPage: {
             heroTitle: "Fuleda Rezidencija",
             price: "nuo 375 PLN/naktis",
@@ -2320,7 +2488,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     dk: {
-        nav: { about: "Om os", apartments: "Lejligheder", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraktioner", cooperation: "Samarbejde", contact: "Kontakt", rooms: "Værelser", bookBtn: "Book nu" },
+        nav: { about: "Om os", apartments: "Lejligheder", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraktioner", cooperation: "Samarbejde", contact: "Kontakt", rooms: "Værelser", bookBtn: "Book nu", language: "Sprog", back: "Tilbage" },
         hero: { title: "Ferie i Masurien", subtitle: "UNIKKE ØJEBLIKKE", apartmentsBtn: "Lejligheder", charterBtn: "Yachtcharter" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen til", titleHighlight: "De Store Søer", p1: "Oplev magien.", p2: "Hvile i Giżycko." },
         apartments: { title: "Lejligheder", description: "Vælg det perfekte sted.", details: "Detaljer", pricePrefix: "fra", night: "nat", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksushytter i hjertet af den masuriske natur." }, pokojeFuleda: { title: "Fuleda Værelser", location: "Fuleda, Dobskie Sø", description: "Hyggelige værelser med søudsigt i stilhedszonen." } } },
@@ -2332,11 +2500,35 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Uden certifikat", title: "Leje af Yacht", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Kahytter", checkBtn: "Tjek", premiumFleet: "Premium", feature1: "Ingen licens", feature2: "2020", feature3: "Luksus", detailsBtn: "Se detaljer" },
         stranda: { subtitle: "Luksus ved søen", description: "Moderne design.", building: "Bygning", apartment: "Lejlighed" },
         details: { about: "Om", amenities: "Faciliteter", booking: "Booking", checkAvailability: "Tjek ledighed.", callBtn: "Ring", lowPrice: "Bedste pris.", descriptionPart1: "Luksus lejlighed", descriptionPart2: "i Stranda.", descriptionPart3: "Søudsigt.", items: { view: "Søudsigt", ac: "Aircon", terrace: "Terrasse", kitchen: "Køkken", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Sauna" } },
-        footer: { brandDesc: "Unikke øjeblikke.", navTitle: "Navigation", contactTitle: "Kontakt", followTitle: "Følg os", rights: "Alle rettigheder forbeholdes.", linksTitle: "Links" }
+        footer: { brandDesc: "Unikke øjeblikke.", navTitle: "Navigation", contactTitle: "Kontakt", followTitle: "Følg os", rights: "Alle rettigheder forbeholdes.", linksTitle: "Links" },
+        cookieConsent: {
+            title: "Cookies & Privatliv 🍪",
+            description: "Vi går op i dit privatliv. Du kan acceptere alle cookies eller tilpasse dine præferencer. Læs mere i vores",
+            privacyLink: "Privatlivspolitik",
+            acceptAll: "Accepter alle",
+            customize: "Tilpas",
+            decline: "Afvis",
+            settingsTitle: "Cookie-indstillinger",
+            back: "Tilbage",
+            necessary: "Nødvendige",
+            necessaryDesc: "Kræves for at hjemmesiden kan fungere.",
+            analytics: "Analyse",
+            analyticsDesc: "Hjælper os med at forbedre hjemmesiden.",
+            marketing: "Marketing",
+            marketingDesc: "Personlig annoncering.",
+            save: "Gem indstillinger"
+        },
+        privacyPolicy: {
+            title: "Privatlivs- og Cookiepolitik",
+            intro: "Vi værdsætter dit privatliv, læs venligst vores privatlivspolitik.",
+            content: "Denne cookiepolitik gælder for alle mazury.holiday-websteder. Ved at bruge vores sider accepterer du brugen af cookies i overensstemmelse med denne politik. Vi bruger cookies til at få vores sider til at fungere hurtigere, være nemmere at bruge og til at tilpasse indhold og annoncer. Du kan til enhver tid administrere dine cookie-indstillinger i din browser.",
+            usefulLinks: "Nyttige links",
+            mobileDevices: "Mobil enheder:"
+        }
     },
     // Minimal placeholders for others to ensure structure (programmatic copy would be safer but user wants specific)
     se: {
-        nav: { about: "Om oss", apartments: "Lägenheter", cottages: "Stugor", charter: "Charter", port: "Hamn", attractions: "Sevärdheter", cooperation: "Samarbete", contact: "Kontakt", rooms: "Rum", bookBtn: "Boka" },
+        nav: { about: "Om oss", apartments: "Lägenheter", cottages: "Stugor", charter: "Charter", port: "Hamn", attractions: "Sevärdheter", cooperation: "Samarbete", contact: "Kontakt", rooms: "Rum", bookBtn: "Boka", language: "Språk", back: "Tillbaka" },
         hero: { title: "Semester i Masurien", subtitle: "UNIKA STUNDER", apartmentsBtn: "Lägenheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Välkommen", titleHighlight: "Sjöarna", p1: "Upptäck magin.", p2: "Avkoppling." },
         apartments: { title: "Våra Lägenheter", description: "Välj plats.", details: "Detaljer", pricePrefix: "från", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lyx." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oas." }, domkiSkorupki: { title: "Skorupki Stugor", location: "Skorupki, nära Giżycko", description: "Lyxiga stugor i hjärtat af den masuriska naturen." }, pokojeFuleda: { title: "Fuleda Rum", location: "Fuleda, Dobskie Sjön", description: "Mysiga rum med sjöutsikt i tystnadzonen." } } },
@@ -2348,10 +2540,34 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Utan licens", title: "Båtcharter", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Hytter", checkBtn: "Kolla", premiumFleet: "Premium", feature1: "Ingen licens", feature2: "2020", feature3: "Lyx", detailsBtn: "Detaljer" },
         stranda: { subtitle: "Lyx vid sjön", description: "Modern design.", building: "Byggnad", apartment: "Lägenhet" },
         details: { about: "Om", amenities: "Bekvämligheter", booking: "Bokning", checkAvailability: "Kolla ledighet.", callBtn: "Ring", lowPrice: "Bästa pris.", descriptionPart1: "Lyxlägenhet", descriptionPart2: "Stranda.", descriptionPart3: "Sjöutsikt.", items: { view: "Sjöutsikt", ac: "AC", terrace: "Terrass", kitchen: "Kök", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Bastu" } },
-        footer: { brandDesc: "Unika stunder.", navTitle: "Navigering", contactTitle: "Kontakt", followTitle: "Följ", rights: "Alla rättigheter.", linksTitle: "Länkar" }
+        footer: { brandDesc: "Unika stunder.", navTitle: "Navigering", contactTitle: "Kontakt", followTitle: "Följ", rights: "Alla rättigheter.", linksTitle: "Länkar" },
+        cookieConsent: {
+            title: "Cookies & Integritet 🍪",
+            description: "Vi bryr oss om din integritet. Du kan acceptera alla cookies eller anpassa dina inställningar. Läs mer i vår",
+            privacyLink: "Integritetspolicy",
+            acceptAll: "Acceptera alla",
+            customize: "Anpassa",
+            decline: "Neka",
+            settingsTitle: "Cookie-inställningar",
+            back: "Tillbaka",
+            necessary: "Nödvändiga",
+            necessaryDesc: "Krävs för att webbplatsen ska fungera.",
+            analytics: "Analys",
+            analyticsDesc: "Hjälper oss att förbättra webbplatsen.",
+            marketing: "Marknadsföring",
+            marketingDesc: "Personlig annonsering.",
+            save: "Spara inställningar"
+        },
+        privacyPolicy: {
+            title: "Integritets- och Cookiepolicy",
+            intro: "Vi värdesätter din integritet, vänligen läs vår integritetspolicy.",
+            content: "Denna cookiepolicy gäller för alla mazury.holiday-webbplatser. Genom att använda våra sidor samtycker du till användningen av cookies i enlighet med denna policy. Vi använder cookies för att få våra sidor att fungere snabbare, vara enklare att använda och för att anpassa innehåll och annonser. Du kan när som helst hantera dina cookie-inställningar i din webbläsare.",
+            usefulLinks: "Användbara länkar",
+            mobileDevices: "Mobila enheter:"
+        }
     },
     no: {
-        nav: { about: "Om oss", apartments: "Leiligheter", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraksjoner", cooperation: "Samarbeid", contact: "Kontakt", rooms: "Rom", bookBtn: "Bestill" },
+        nav: { about: "Om oss", apartments: "Leiligheter", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraksjoner", cooperation: "Samarbeid", contact: "Kontakt", rooms: "Rom", bookBtn: "Bestill", language: "Språk", back: "Tilbake" },
         hero: { title: "Ferie i Masuria", subtitle: "UNIKE ØYEBLIKK", apartmentsBtn: "Leiligheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen", titleHighlight: "Innsjøene", p1: "Oppdag magien.", p2: "Avslapning." },
         apartments: { title: "Våre Leiligheter", description: "Velg sted.", details: "Detaljer", pricePrefix: "fra", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksuriøse hytter i hjertet av masurisk natur." }, pokojeFuleda: { title: "Fuleda Rom", location: "Fuleda, Dobskie Innsjø", description: "Koselige rom med utsikt over innsjøen i stillhetssonen." } } },
@@ -2363,10 +2579,34 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Uten lisens", title: "Båtutleie", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Lugarer", checkBtn: "Sjekk", premiumFleet: "Premium", feature1: "Ingen lisens", feature2: "2020", feature3: "Luksus", detailsBtn: "Detaljer" },
         stranda: { subtitle: "Luksus", description: "Moderne.", building: "Bygning", apartment: "Leilighet" },
         details: { about: "Om", amenities: "Fasiliteter", booking: "Bestilling", checkAvailability: "Sjekk.", callBtn: "Ring", lowPrice: "Best pris.", descriptionPart1: "Luksus", descriptionPart2: "Stranda.", descriptionPart3: "Utsikt.", items: { view: "Utsikt", ac: "AC", terrace: "Terresse", kitchen: "Kjøkken", tv: "TV", wifi: "WiFi", parking: "Parkering", sauna: "Badstue" } },
-        footer: { brandDesc: "Unike øyeblikk.", navTitle: "Navigasjon", contactTitle: "Kontakt", followTitle: "Følg", rights: "Alle rettigheter.", linksTitle: "Lenker" }
+        footer: { brandDesc: "Unike øyeblikk.", navTitle: "Navigasjon", contactTitle: "Kontakt", followTitle: "Følg", rights: "Alle rettigheter.", linksTitle: "Lenker" },
+        cookieConsent: {
+            title: "Cookies & Personvern 🍪",
+            description: "Vi bryr oss om ditt personvern. Du kan godta alle informasjsonskapsler eller tilpasse dine valg. Les mer i vår",
+            privacyLink: "Personvernerklæring",
+            acceptAll: "Godta alle",
+            customize: "Tilpass",
+            decline: "Avvis",
+            settingsTitle: "Innstillinger for informasjonskapsler",
+            back: "Tilbake",
+            necessary: "Nødvendige",
+            necessaryDesc: "Påkrevd for at nettstedet skal fungere.",
+            analytics: "Analyse",
+            analyticsDesc: "Hjelper oss med å forbedre nettstedet.",
+            marketing: "Markedsføring",
+            marketingDesc: "Personlisert annonsering.",
+            save: "Lagre innstillinger"
+        },
+        privacyPolicy: {
+            title: "Personvern- og informasjonskapselpolicy",
+            intro: "Vi verdsetter ditt personvern, vennligst les vår personvernerklæring.",
+            content: "Denne policyen for informasjonskapsler gjelder for alle mazury.holiday-nettsteder. Ved å bruke våre sider samtykker du til bruk av informasjonskapsler i samsvar med denne policyen. Vi bruker informasjonskapsler for å få sidene våre til å fungere raskere, være enklere å bruke og for å tilpasse innhold og annonser. Du kan når som helst administrere innstillingene for informasjonskapsler i nettleseren din.",
+            usefulLinks: "Nyttige lenker",
+            mobileDevices: "Mobile enheter:"
+        }
     },
     fi: {
-        nav: { about: "Meistä", apartments: "Huoneistot", cottages: "Mökit", charter: "Vuokraus", port: "Satama", attractions: "Nähtävyydet", cooperation: "Yhteistyö", contact: "Yhteystiedot", rooms: "Huoneet", bookBtn: "Varaa" },
+        nav: { about: "Meistä", apartments: "Huoneistot", cottages: "Mökit", charter: "Vuokraus", port: "Satama", attractions: "Nähtävyydet", cooperation: "Yhteistyö", contact: "Yhteystiedot", rooms: "Huoneet", bookBtn: "Varaa", language: "Kieli", back: "Takaisin" },
         hero: { title: "Loma", subtitle: "AINUTLAATUINEN", apartmentsBtn: "Huoneistot", charterBtn: "Venevuokraus" },
         intro: { tag: "Mazury.Holiday", title: "Tervetuloa", titleHighlight: "Järvet", p1: "Koe taika.", p2: "Lepo." },
         apartments: { title: "Huoneistot", description: "Valitse.", details: "Tiedot", pricePrefix: "alk.", night: "yö", people: "hlö", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Mukavuus." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Rauha." }, domkiSkorupki: { title: "Skorupki Mökit", location: "Skorupki, lähellä Giżycko", description: "Luksusmökkejä masurialaisen luonnon sydämessä." }, pokojeFuleda: { title: "Fuleda Huoneet", location: "Fuleda, Dobskie Järvi", description: "Viihtyisiä huoneita järvinäköalalla hiljaisella vyöhykkeellä." } } },
@@ -2378,7 +2618,31 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         charter: { tag: "Ilman lupaa", title: "Venevuokraus", description: "Stillo 30.", model: "Stillo 30", cabins: "3 Hyttiä", checkBtn: "Tarkista", premiumFleet: "Premium", feature1: "Ei lupaa", feature2: "2020", feature3: "Luksus", detailsBtn: "Tiedot" },
         stranda: { subtitle: "Luksus", description: "Moderni.", building: "Rakennus", apartment: "Huoneisto" },
         details: { about: "Tietoa", amenities: "Varusteet", booking: "Varaus", checkAvailability: "Tarkista.", callBtn: "Soita", lowPrice: "Paras hinta.", descriptionPart1: "Luksus", descriptionPart2: "Stranda.", descriptionPart3: "Näkymä.", items: { view: "Näkymä", ac: "Ilmastointi", terrace: "Terassi", kitchen: "Keittiö", tv: "TV", wifi: "WiFi", parking: "Pysäköinti", sauna: "Sauna" } },
-        footer: { brandDesc: "Ainutlaatuista.", navTitle: "Navigaatio", contactTitle: "Yhteystiedot", followTitle: "Seuraa", rights: "Kaikki oikeudet.", linksTitle: "Linkit" }
+        footer: { brandDesc: "Ainutlaatuista.", navTitle: "Navigaatio", contactTitle: "Yhteystiedot", followTitle: "Seuraa", rights: "Kaikki oikeudet.", linksTitle: "Linkit" },
+        cookieConsent: {
+            title: "Evästeet ja Yksityisyys 🍪",
+            description: "Välitämme yksityisyydestäsi. Voit hyväksyä kaikki evästeet tai muokata asetuksiasi. Lue lisää",
+            privacyLink: "Tietosuojaselosteestamme",
+            acceptAll: "Hyväksy kaikki",
+            customize: "Mukauta",
+            decline: "Hylkää",
+            settingsTitle: "Evästeasetukset",
+            back: "Takaisin",
+            necessary: "Välttämättömät",
+            necessaryDesc: "Vaaditaan sivuston toimintaan.",
+            analytics: "Analytiikka",
+            analyticsDesc: "Auttaa meitä parantamaan sivustoa.",
+            marketing: "Markkinointi",
+            marketingDesc: "Personoitu mainonta.",
+            save: "Tallenna asetukset"
+        },
+        privacyPolicy: {
+            title: "Tietosuoja- ja evästekäytäntö",
+            intro: "Arvostamme yksityisyyttäsi, lue tietosuojakäytäntömme.",
+            content: "Tämä evästekäytäntö koskee kaikkia mazury.holiday-verkkosivustoja. Käyttämällä sivustojamme hyväksyt evästeiden käytön tämän käytännön mukaisesti. Käytämme evästeitä saadaksemme sivumme toimimaan nopeammin, olemaan helpompi käyttää ja personoidaksemme sisältöä ja mainoksia. Voit hallita evästeasetuksiasi selaimessasi milloin tahansa.",
+            usefulLinks: "Hyödyllisiä linkkejä",
+            mobileDevices: "Mobiililaitteet:"
+        }
     }
 };
 

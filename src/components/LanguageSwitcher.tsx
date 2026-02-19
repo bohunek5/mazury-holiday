@@ -19,7 +19,7 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
     },
     {
         code: "en",
-        name: "Angielski",
+        name: "English",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
                 <clipPath id="s">
@@ -35,7 +35,7 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
     },
     {
         code: "de",
-        name: "Niemiecki",
+        name: "Deutsch",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
                 <rect width="5" height="3" y="0" fill="#000" />
@@ -46,18 +46,18 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
     },
     {
         code: "lt",
-        name: "Litewski",
+        name: "Lietuvių",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
-                <rect width="5" height="3" fill="#C1272D" />
-                <rect width="5" height="2" fill="#006A44" />
                 <rect width="5" height="1" fill="#FDB913" />
+                <rect width="5" height="1" y="1" fill="#006A44" />
+                <rect width="5" height="1" y="2" fill="#C1272D" />
             </svg>
         )
     },
     {
         code: "cs",
-        name: "Czeski",
+        name: "Čeština",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
                 <rect width="3" height="2" fill="#fff" />
@@ -68,11 +68,77 @@ const languages: { code: Language; name: string; flag: React.ReactNode }[] = [
     },
     {
         code: "es",
-        name: "Hiszpański",
+        name: "Español",
         flag: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
                 <rect width="3" height="2" fill="#C60B1E" />
                 <rect width="3" height="1" y="0.5" fill="#FFC400" />
+            </svg>
+        )
+    },
+    {
+        code: "it",
+        name: "Italiano",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="1" height="2" fill="#009246" />
+                <rect width="1" height="2" x="1" fill="#fff" />
+                <rect width="1" height="2" x="2" fill="#ce2b37" />
+            </svg>
+        )
+    },
+    {
+        code: "fr",
+        name: "Français",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="1" height="2" fill="#0055A4" />
+                <rect width="1" height="2" x="1" fill="#fff" />
+                <rect width="1" height="2" x="2" fill="#EF4135" />
+            </svg>
+        )
+    },
+    {
+        code: "dk",
+        name: "Dansk",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 28" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="37" height="28" fill="#C8102E" />
+                <rect width="4" height="28" x="12" fill="#fff" />
+                <rect width="37" height="4" y="12" fill="#fff" />
+            </svg>
+        )
+    },
+    {
+        code: "se",
+        name: "Svenska",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="16" height="10" fill="#006aa7" />
+                <rect width="2" height="10" x="5" fill="#fecc00" />
+                <rect width="16" height="2" y="4" fill="#fecc00" />
+            </svg>
+        )
+    },
+    {
+        code: "no",
+        name: "Norsk",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="22" height="16" fill="#ba0c2f" />
+                <path d="M0,8h22M8,0v16" stroke="#fff" strokeWidth="4" />
+                <path d="M0,8h22M8,0v16" stroke="#00205b" strokeWidth="2" />
+            </svg>
+        )
+    },
+    {
+        code: "fi",
+        name: "Suomi",
+        flag: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" className="w-5 h-auto rounded-sm shadow-sm border border-slate-200/20">
+                <rect width="18" height="11" fill="#fff" />
+                <rect width="18" height="3" y="4" fill="#003580" />
+                <rect width="3" height="11" x="5" fill="#003580" />
             </svg>
         )
     },

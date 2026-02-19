@@ -103,7 +103,7 @@ export default function Footer() {
                     <span>&copy; {new Date().getFullYear()} mazury.holiday. {t("footer", "rights")}.</span>
                     <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
                     <Link href="/polityka-prywatnosci" className="hover:text-amber-500 transition-colors">
-                        Polityka Prywatności
+                        {t("privacyPolicy", "title")}
                     </Link>
                 </div>
             </div>
