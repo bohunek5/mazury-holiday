@@ -17,7 +17,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "boyen.desc"),
             image: "/mazury-holiday/images/attractions/twierdza-boyen.webp",
             icon: <Camera className="w-6 h-6" />,
-            tags: ["Historia", "Architektura", "Edukacja"]
+            tags: ["Historia", "Architektura", "Edukacja"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Twierdza+Boyen+Giżycko"
         },
         {
             id: "bridge",
@@ -25,7 +26,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "bridge.desc"),
             image: "/mazury-holiday/images/attractions/most-obrotowy.webp",
             icon: <Clock className="w-6 h-6" />,
-            tags: ["Zabytek", "Technika", "Giżycko"]
+            tags: ["Zabytek", "Technika", "Giżycko"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Most+Obrotowy+Giżycko"
         },
         {
             id: "port",
@@ -33,7 +35,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "port.desc"),
             image: "/mazury-holiday/images/attractions/eko-marina.webp",
             icon: <Waves className="w-6 h-6" />,
-            tags: ["Żeglarstwo", "Rekreacja", "Centrum"]
+            tags: ["Żeglarstwo", "Rekreacja", "Centrum"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Ekomarina+Giżycko"
         },
         {
             id: "water",
@@ -41,7 +44,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "water.desc"),
             image: "/mazury-holiday/images/attractions/kisajno-dobskie.webp",
             icon: <Waves className="w-6 h-6" />,
-            tags: ["Natura", "Cisza", "Krajobraz"]
+            tags: ["Natura", "Cisza", "Krajobraz"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Jezioro+Kisajno"
         },
         {
             id: "wolfsLair",
@@ -49,7 +53,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "wolfsLair.desc"),
             image: "/mazury-holiday/images/attractions/wilczy-szaniec.webp",
             icon: <MapPin className="w-6 h-6" />,
-            tags: ["Historia", "II Wojna Światowa", "Muzeum"]
+            tags: ["Historia", "II Wojna Światowa", "Muzeum"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Wilczy+Szaniec+Gierłoż"
         },
         {
             id: "waterTower",
@@ -57,7 +62,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "waterTower.desc"),
             image: "/mazury-holiday/images/attractions/wieza-cisnien.webp",
             icon: <Eye className="w-6 h-6" />,
-            tags: ["Widok", "Kawiarnia", "Zabytek"]
+            tags: ["Widok", "Kawiarnia", "Zabytek"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Wieża+Ciśnień+Giżycko"
         },
         {
             id: "castle",
@@ -65,7 +71,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "castle.desc"),
             image: "/mazury-holiday/images/attractions/krzyzacki-zamek.webp",
             icon: <Landmark className="w-6 h-6" />,
-            tags: ["Historia", "Architektura", "Hotel"]
+            tags: ["Historia", "Architektura", "Hotel"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Hotel+St.+Bruno+Giżycko"
         },
         {
             id: "bison",
@@ -73,7 +80,8 @@ export default function AttractionsPage() {
             desc: t("attractionsPage", "bison.desc"),
             image: "/mazury-holiday/images/attractions/zagroda-zubrow.webp",
             icon: <Trees className="w-6 h-6" />,
-            tags: ["Natura", "Zwierzęta", "Edukacja"]
+            tags: ["Natura", "Zwierzęta", "Edukacja"],
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Zagroda+Żubrów+Wolisko"
         }
     ];
 
@@ -137,6 +145,17 @@ export default function AttractionsPage() {
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                                     {attr.desc}
                                 </p>
+                                <div className="mt-auto">
+                                    <a
+                                        href={attr.mapLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-500 hover:text-amber-700 dark:hover:text-amber-400 font-medium transition-colors group/link"
+                                    >
+                                        <MapPin className="w-5 h-5 transition-transform group-hover/link:-translate-y-1" />
+                                        <span>Pokaż na mapie</span>
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
