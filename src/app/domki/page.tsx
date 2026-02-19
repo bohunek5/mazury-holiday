@@ -52,14 +52,14 @@ export default function DomkiPage() {
                             <p className="mt-6 font-semibold text-slate-800 dark:text-slate-200">{t('skorupki', 'externalAmenities')}</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6 mt-12">
+                        <div className="mt-12">
                             <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
                                 <h4 className="font-bold text-amber-500 mb-2">{t('skorupki', 'areaTitle')}</h4>
-                                <p>{t('skorupki', 'areaDesc')}</p>
-                            </div>
-                            <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
-                                <h4 className="font-bold text-amber-500 mb-2">{t('skorupki', 'locationTitle')}</h4>
-                                <p>{t('skorupki', 'locationDesc')}</p>
+                                <div className="space-y-1">
+                                    {t('skorupki', 'areaDesc').split('\n').map((line: string, index: number) => (
+                                        <p key={index}>{line}</p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
