@@ -9,7 +9,7 @@ export default function Hero() {
   const { t, language } = useLanguage();
 
   const phrases = language === 'pl'
-    ? ["Wakacje na Mazurach ?", "Sprawdź naszą ofertę już dziś"]
+    ? ["Wakacje na Mazurach", "Sprawdź naszą ofertę"]
     : [t("hero", "title")];
 
   return (
