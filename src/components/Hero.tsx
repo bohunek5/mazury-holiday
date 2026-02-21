@@ -3,9 +3,14 @@
 import Image from "next/image";
 import { Phone, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import TypewriterTitle from "./TypewriterTitle";
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const phrases = language === 'pl'
+    ? ["Wakacje na Mazurach ?", "Sprawdź naszą ofertę już dziś"]
+    : [t("hero", "title")];
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -25,8 +30,8 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 px-4 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-          {t("hero", "title")}
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 min-h-[1.2em]">
+          <TypewriterTitle phrases={phrases} speed={40} />
         </h1>
 
         <p className="text-lg md:text-xl font-light tracking-wide mb-10 text-white/90 max-w-3xl mx-auto uppercase">
