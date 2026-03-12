@@ -15,7 +15,7 @@ export default function DomkiPage() {
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
-    const galleryIndices = Array.from({ length: 43 }, (_, i) => i + 4); // 4 to 46
+    const galleryIndices = Array.from({ length: 55 }, (_, i) => i + 4); // 4 to 58
     const galleryImages = galleryIndices.map(num => `/mazury-holiday/images/skorupki/skorupki_${num}.webp`);
 
     const openLightbox = (index: number) => {
