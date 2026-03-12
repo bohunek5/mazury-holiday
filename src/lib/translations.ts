@@ -80,43 +80,42 @@ export const translations = {
             ctaDesc: "Rezerwacja domku to pierwszy krok do niezapomnianych wakacji. Zadzwoń do nas i zapytaj o wolne terminy.",
             details: {
                 interiorTitle: "Wnętrze pełne oddechu",
-                interiorDesc: "Na parterze czeka na Ciebie przestronna strefa dzienna – serce domu, gdzie na wygodnej, rozkładanej kanapie możecie wspólnie spędzać wieczory. Piętro to strefa snu: znajdziesz tu sypialnię małżeńską oraz drugi pokój z łóżkami pojedynczymi (z opcją ich złączenia), co daje elastyczność niezależnie od tego, czy przyjeżdżasz z rodziną, czy z paczką znajomych.",
+                interiorDesc: "Na parterze czeka na Ciebie przestronna strefa dzienna z klimatyzacją, dużym telewizorem i sofą z funkcją spania dla 2 osób. Piętro to strefa snu: sypialnia z łóżkiem małżeńskim (180x200) oraz drugi pokój z dwoma łóżkami pojedynczymi (90x200), które można połączyć.",
                 terraceTitle: "Taras i natura",
-                terraceDesc: "Wiemy, że pogoda bywa kapryśna, dlatego Twój dom posiada duży, zadaszony taras. To dodatkowy \"pokój na świeżym powietrzu\" – idealny na poranną kawę lub wieczorną lekturę, bez względu na deszcz czy słońce. Przed domkiem masz też swój kawałek trawnika.",
+                terraceDesc: "Każdy domek posiada duży, zadaszony taras z meblami ogrodowymi, leżakami oraz własnym grillem. To idealne miejsce na wspólną biesiadę bez względu na pogodę. Przed domkiem znajduje się prywatny kawałek trawnika.",
                 activityTitle: "Aktywność i relaks",
-                activityDesc: "Zaledwie kilka kroków dzieli Cię od brzegu jeziora. Możesz wędkować z naszego pomostu, rozegrać mecz siatkówki lub po prostu patrzeć na wodę, podczas gdy dzieci szaleją na placu zabaw. Wieczorem zapraszamy do wspólnej strefy z altanami na ognisko pod gwiazdami. A jeśli masz czworonożnego przyjaciela – zabierz go ze sobą, wszysyc kochają zwierzęta!",
-                locationTitle: "A co z lokalizacją?",
-                locationDesc: "Jesteś w samym sercu atrakcji, ale z dala od zgiełku. Wskakuj w auto i w 10 minut jesteś w Parku Wodnym Tropikana lub Wiosce Żeglarskiej. Masz ochotę na historię? Twierdza Boyen to niecałe pół godziny drogi. Samochód zaparkujesz u nas bezpiecznie i za darmo, a dzięki szybkiemu Wi-Fi od razu podzielisz się zdjęciami z urlopu.",
+                activityDesc: "Zaledwie 350m dzieli Cię od prywatnego terenu nad jeziorem z pomostem do wędkowania, boiskiem do siatkówki plażowej i placem zabaw. Wieczorem zapraszamy do wspólnej strefy z altanami na ognisko. Akceptujemy zwierzęta – zabierz swojego pupila ze sobą!",
+                locationTitle: "Lokalizacja i udogodnienia",
+                locationDesc: "Jesteś 10 minut od Mikołajek i Parku Wodnego Tropikana. Na miejscu masz bezpłatny parking, szybkie WiFi oraz zestaw startowy (kawa, herbata, woda). W domku znajdziesz też żelazko, deskę do prasowania i suszarkę na ubrania.",
                 amenitiesBlockTitle: "WYPOSAŻENIE I SZCZEGÓŁY",
-                bedroomTitle: "Sypialnia i sen",
+                bedroomTitle: "Sypialnie i Salon",
                 bedroomItems: [
-                    "Maksymalna liczba gości: 6",
-                    "Sypialnia 1: Łóżko podwójne",
-                    "Sypialnia 2: Dwa łóżka pojedyncze (możliwość zsuwania)",
-                    "Salon: Rozkładana sofa (spanie dla 2 osób)",
-                    "Pościel w cenie"
+                    "Maksymalnie 6 osób (ok. 55 m²)",
+                    "Sypialnia 1: Łóżko podwójne 180x200",
+                    "Sypialnia 2: Dwa łóżka 90x200 (możliwość złączenia)",
+                    "Salon: Klimatyzacja, Smart TV, sofa 2-osobowa",
+                    "Pościel i ręczniki w cenie"
                 ],
-                cottageAmenitiesTitle: "Udogodnienia w domku",
+                cottageAmenitiesTitle: "Kuchnia i Taras",
                 cottageAmenitiesItems: [
-                    "Przestronny, zadaszony taras",
-                    "Prywatna strefa zieleni przed wejściem",
-                    "W pełni wyposażony aneks kuchenny",
-                    "Część jadalniana"
+                    "Zmywarka i płyta indukcyjna",
+                    "Ekspres do kawy i lodówka",
+                    "Pełna zastawa, garnki i sztućce",
+                    "Zadaszony taras, leżaki, prywatny grill"
                 ],
-                commonAreasTitle: "Części wspólne i rekreacja",
+                commonAreasTitle: "Prywatna linia brzegowa (350m)",
                 commonAreasItems: [
-                    "Bezpośredni dostęp do jeziora (linia brzegowa)",
-                    "Pomost (możliwość wędkowania)",
-                    "Wyznaczone miejsce na ognisko",
-                    "Zadaszone altany ogrodowe",
+                    "Pomost wędkarski i widok na jezioro",
+                    "Miejsce na ognisko i zadaszone altany",
                     "Plac zabaw dla dzieci",
-                    "Boisko do siatkówki"
+                    "Boisko do siatkówki plażowej"
                 ],
                 additionalTitle: "Dodatkowe informacje",
                 additionalItems: [
-                    "Obiekt przyjazny zwierzętom (Pet-friendly)",
-                    "Bezpłatny parking na terenie posesji",
-                    "Okolica: Lasy (grzybobranie), cisza, natura"
+                    "Zestaw startowy: woda, kawa, herbata",
+                    "Bezpłatny parking i szybkie WiFi",
+                    "Obiekt przyjazny zwierzętom",
+                    "Żelazko, deska i suszarka w każdym domku"
                 ],
                 price: "od 350 zł / doba",
                 bookBtn: "Zarezerwuj"
@@ -507,43 +506,42 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             },
             details: {
                 interiorTitle: "A Spacious Interior",
-                interiorDesc: "On the ground floor awaits a spacious living area – the heart of the house, where you can spend evenings together on a comfortable sofa bed. The upper floor is a sleeping zone: you will find a master bedroom and a second room with single beds (option to join them), giving flexibility whether you come with family or a group of friends.",
+                interiorDesc: "On the ground floor, a spacious living area awaits you with air conditioning, a large TV, and a sofa bed for 2 people. The upper floor is a sleeping zone: a bedroom with a double bed (180x200) and a second room with two single beds (90x200) that can be joined.",
                 terraceTitle: "Terrace and Nature",
-                terraceDesc: "We know the weather can be capricious, which is why your house has a large, covered terrace. It's an additional \"outdoor room\" – perfect for morning coffee or evening reading/relaxing, regardless of rain or sun. You also have your own piece of lawn in front of the cottage.",
+                terraceDesc: "Each cottage has a large, covered terrace with garden furniture, sun loungers, and its own grill. It's the perfect place for a common feast regardless of the weather. There is a private piece of lawn in front of the cottage.",
                 activityTitle: "Activity and Relaxation",
-                activityDesc: "Just a few steps separate you from the lake shore. You can fish from our pier, play a volleyball match, or simply look at the water while the children play on the playground. In the evening, we invite you to the common area with gazebos for a bonfire under the stars. And if you have a four-legged friend – take them with you, everyone loves animals!",
-                locationTitle: "What about the location?",
-                locationDesc: "You are in the very heart of attractions, yet away from the hustle. Jump in the car and in 10 minutes you are at the Tropikana Water Park or the Sailing Village. Fancy some history? The Boyen Fortress is less than half an hour away. You can park your car safely and for free with us, and thanks to fast Wi-Fi, you can immediately share your holiday photos.",
+                activityDesc: "Just 350m separates you from the private lakeside area with a fishing pier, beach volleyball court, and playground. In the evening, we invite you to the common area with gazebos for a bonfire. We accept pets – take your pet with you!",
+                locationTitle: "Location and Amenities",
+                locationDesc: "You are 10 minutes from Mikołajki and the Tropikana Water Park. On-site you have free parking, fast WiFi, and a starter kit (coffee, tea, water). In the cottage, you will also find an iron, ironing board, and clothes dryer.",
                 amenitiesBlockTitle: "EQUIPMENT AND DETAILS",
-                bedroomTitle: "Bedroom and Sleep",
+                bedroomTitle: "Bedrooms and Living Room",
                 bedroomItems: [
-                    "Max guests: 6",
-                    "Bedroom 1: Double bed",
-                    "Bedroom 2: Two single beds (can be joined)",
-                    "Living room: Sofa bed (sleeps 2)",
-                    "Bed linen included"
+                    "Maximum 6 guests (approx. 55 m²)",
+                    "Bedroom 1: Double bed 180x200",
+                    "Bedroom 2: Two 90x200 beds (can be joined)",
+                    "Living room: A/C, Smart TV, 2-person sofa",
+                    "Bed linen and towels included"
                 ],
-                cottageAmenitiesTitle: "Cottage Amenities",
+                cottageAmenitiesTitle: "Kitchen and Terrace",
                 cottageAmenitiesItems: [
-                    "Spacious, covered terrace",
-                    "Private green area in front",
-                    "Fully equipped kitchenette",
-                    "Dining area"
+                    "Dishwasher and induction hob",
+                    "Coffee machine and refrigerator",
+                    "Full set of dishes, pots and cutlery",
+                    "Covered terrace, loungers, private grill"
                 ],
-                commonAreasTitle: "Common Areas and Recreation",
+                commonAreasTitle: "Private Shoreline (350m)",
                 commonAreasItems: [
-                    "Direct lake access (shoreline)",
-                    "Pier (fishing allowed)",
-                    "Designated bonfire place",
-                    "Covered garden gazebos",
+                    "Fishing pier and lake view",
+                    "Bonfire place and covered gazebos",
                     "Children's playground",
-                    "Volleyball court"
+                    "Beach volleyball court"
                 ],
                 additionalTitle: "Additional Information",
                 additionalItems: [
+                    "Starter kit: water, coffee, tea",
+                    "Free parking and fast WiFi",
                     "Pet-friendly property",
-                    "Free parking on premises",
-                    "Surroundings: Forests (mushroom picking), silence, nature"
+                    "Iron, board and dryer in each cottage"
                 ],
                 price: "from 350 PLN / night",
                 bookBtn: "Book Now"
