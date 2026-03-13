@@ -93,7 +93,7 @@ export default function DomkiPage() {
                                 <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800 h-full flex flex-col">
                                     <div className="relative h-64 overflow-hidden">
                                         <Image
-                                            src={`/mazury-holiday/images/skorupki/skorupki_${(num % 5) + 1}.webp`}
+                                            src={`/mazury-holiday/images/skorupki/skorupki_${((num % 5) + 1) === 3 ? (num === 2 ? 1 : 6) : (num % 5) + 1}.webp`}
                                             alt={`Domek ${num}`}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
