@@ -87,9 +87,9 @@ export default function ContactPage() {
             <section className="bg-slate-100 dark:bg-slate-900 py-12">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-center items-center gap-12">
-                        <a href="tel:+48730067027" className="flex items-center space-x-3 text-2xl font-bold text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
+                        <a href="tel:666666666" className="flex items-center space-x-3 text-2xl font-bold text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors whitespace-nowrap">
                             <Phone className="w-8 h-8 text-amber-500" />
-                            <span>+48 730 067 027</span>
+                            <span>666 666 666</span>
                         </a>
                         <a href="mailto:rezerwacje@mazury.holiday" className="flex items-center space-x-3 text-2xl font-bold text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors">
                             <Mail className="w-8 h-8 text-amber-500" />

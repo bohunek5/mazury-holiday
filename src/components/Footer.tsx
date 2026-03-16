@@ -55,8 +55,8 @@ export default function Footer() {
                             <div className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0 border border-slate-200 dark:border-slate-700">
                                 <Phone size={18} />
                             </div>
-                            <a href="tel:+48730067027" className="text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-white transition-colors font-medium text-left whitespace-nowrap">
-                                +48 730 067 027
+                            <a href="tel:666666666" className="text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-white transition-colors font-medium text-left whitespace-nowrap">
+                                666 666 666
                             </a>
                         </li>
                         <li className="flex items-center gap-4 group">

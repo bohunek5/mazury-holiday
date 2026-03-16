@@ -215,10 +215,10 @@ export default function KisajnoPage() {
                         ZAREZERWUJ GO
                     </a>
                     <a
-                        href="tel:+48730067027"
+                        href="tel:666666666"
                         className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
-                        {t("kisajnoPage", "callAction")}: +48 730 067 027
+                        {t("kisajnoPage", "callAction")}: 666 666 666
                     </a>
                     <div className="mt-8 max-w-4xl mx-auto">
                         <ICalCalendar
