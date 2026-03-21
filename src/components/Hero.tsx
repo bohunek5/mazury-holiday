@@ -30,14 +30,12 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 px-4 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 drop-shadow-lg">
-          {language === 'pl' ? "Wakacje na Mazurach" : t("hero", "title")}
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 min-h-[1.2em]">
+          <TypewriterTitle phrases={phrases} speed={40} />
         </h1>
 
-        <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 rounded-full shadow-lg" />
-
-        <p className="text-xl md:text-2xl font-light tracking-[0.15em] mb-12 text-white/95 max-w-3xl mx-auto uppercase drop-shadow-md">
-          {language === 'pl' ? "Sprawdź naszą ofertę" : t("hero", "subtitle")}
+        <p className="text-lg md:text-xl font-light tracking-wide mb-10 text-white/90 max-w-3xl mx-auto uppercase">
+          {t("hero", "subtitle")}
         </p>
 
         <div className="flex justify-center mb-16">

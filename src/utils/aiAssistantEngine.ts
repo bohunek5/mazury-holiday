@@ -52,16 +52,10 @@ export function getAssistantResponse(message: string): string {
 
     // Category 4: Booking, Prices, Policy
     if (msg.includes('zameldowani') || msg.includes('wymeldowani') || msg.includes('doba') || msg.includes('godzin') || msg.includes('przyjazd') || msg.includes('wyjazd')) {
-        return "Standardowo zameldowanie odbywa się od **15:00**, a wymeldowanie do **11:00**. W miarę możliwości oferujemy elastyczność (szczególnie w Fuledzie i Skorupkach). Czy chciałbyś, abym sprawdził dostępność w konkretnym terminie?";
+        return "Zameldowanie odbywa się w godzinach od 15:00 do 23:00, natomiast wymeldowanie możliwe jest od 01:00 do 11:00.";
     }
-
-    // Category 4b: Booking Capture (Lead Generation)
-    if (msg.includes('rezerwow') || msg.includes('rezerwacj') || msg.includes('wolny termin') || msg.includes('dostępność') || msg.includes('wynajm')) {
-        return "Oczywiście, chętnie pomogę Ci zarezerwować idealne miejsce! Aby przygotować dla Ciebie ofertę, podaj proszę:\n\n1. **Termin** (od kiedy do kiedy)\n2. **Liczbę osób**\n3. **Lokalizację** (Stranda, Fuleda, Kisajno, Skorupki lub 'dowolna')\n\nMożesz też zostawić swój numer telefonu, a nasz konsultant oddzwoni w ciągu 15 minut! 📞";
-    }
-
     if (msg.includes('zwierz') || msg.includes('psa') || msg.includes('pies') || msg.includes('kot') || msg.includes('pupil')) {
-        return "Zasady dotyczące zwierząt:\n\n🐾 **Stranda & Fuleda**: Akceptujemy zwierzęta za dodatkową opłatą (prosimy o uprzednie zgłoszenie).\n🚫 **Kisajno**: Niestety, w tym apartamencie nie przyjmujemy zwierząt.\n\nCzy szukasz noclegu z Twoim pupilem?";
+        return "W apartamentach Kisajno zwierzęta nie są akceptowane. W przypadku innych lokalizacji prosimy o bezpośredni kontakt w celu potwierdzenia zasad.";
     }
     if (msg.includes('ręcznik') || msg.includes('recznik') || msg.includes('pościel') || msg.includes('posciel')) {
         return "Nie, zapewniamy komplet pościeli i ręczników dla każdego gościa. Dodatkowo w łazienkach znajdują się szlafroki, suszarka do włosów, a nawet prostownica.";
@@ -115,7 +109,7 @@ export function getAssistantResponse(message: string): string {
         });
 
         // Check Fuleda
-        Object.entries(fuledaApartments).forEach(([_id, apt]) => {
+        Object.entries(fuledaApartments).forEach(([id, apt]) => {
             const parts = apt.guests.includes('+') ? apt.guests.split('+').map((n: string) => parseInt(n)) : [parseInt(apt.guests)];
             const total = parts.reduce((a: number, b: number) => a + b, 0);
             if (total >= count && count > 0) {
