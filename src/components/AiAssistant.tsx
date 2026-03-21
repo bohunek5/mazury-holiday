@@ -160,10 +160,13 @@ export function AiAssistant() {
                             {isTyping && (
                                 <div className="flex justify-start">
                                     <div className="bg-white dark:bg-slate-800 rounded-2xl rounded-tl-none border border-slate-100 dark:border-slate-700 px-4 py-3 shadow-sm">
-                                        <div className="flex gap-1">
-                                            <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                                            <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                                            <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></span>
+                                        <div className="flex items-center gap-2">
+                                            <div className="flex gap-1">
+                                                <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                                                <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                                                <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"></span>
+                                            </div>
+                                            <span className="text-[10px] uppercase tracking-widest text-amber-600 font-bold animate-pulse">Thinking...</span>
                                         </div>
                                     </div>
                                 </div>
