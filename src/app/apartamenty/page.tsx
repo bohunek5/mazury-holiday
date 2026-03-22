@@ -21,7 +21,7 @@ export default function ApartmentsHub() {
             id: "stranda",
             title: t("apartments", "items.stranda.title"),
             description: t("apartments", "items.stranda.description"),
-            image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
+            image: "/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
             price: `${lowestStrandaPrice} zł`
@@ -30,7 +30,7 @@ export default function ApartmentsHub() {
             id: "kisajno",
             title: t("apartments", "items.kisajno.title"),
             description: t("apartments", "items.kisajno.description"),
-            image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
+            image: "/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
             price: `${kisajnoData.price} zł`
@@ -39,7 +39,7 @@ export default function ApartmentsHub() {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp",
+            image: "/images/fuleda/pietro/Fuleda pietro1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: `${lowestFuledaPrice} zł`
@@ -55,7 +55,7 @@ export default function ApartmentsHub() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src="/mazury-holiday/images/apartments_2.webp"
+                        src="/images/apartments_2.webp"
                         alt="Apartamenty"
                         fill
                         className="object-cover"

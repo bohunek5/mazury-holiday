@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center md:items-start">
                     <Link href="/" className="relative h-20 w-64 md:h-24 md:w-80 mb-6 md:mb-8 block">
                         <Image
-                            src="/mazury-holiday/images/logo-poziom.svg"
+                            src="/images/logo-poziom.svg"
                             alt="Mazury.Holiday"
                             fill
                             className="object-contain object-center md:object-left opacity-90 transition-all duration-300 dark:brightness-0 dark:invert"

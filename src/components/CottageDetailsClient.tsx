@@ -17,7 +17,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
 
     // Using the same images as the main gallery for now
     const galleryIndices = Array.from({ length: 55 }, (_, i) => i + 4); // 4 to 58
-    const galleryImages = galleryIndices.map(num => `/mazury-holiday/images/skorupki/skorupki_${num}.webp`);
+    const galleryImages = galleryIndices.map(num => `/images/skorupki/skorupki_${num}.webp`);
 
     const openLightbox = (index: number) => {
         setLightboxIndex(index);
@@ -32,7 +32,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/skorupki/skorupki_1.webp')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/images/skorupki/skorupki_1.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-500 font-bold tracking-widest mb-2 uppercase bg-white/10 backdrop-blur-sm inline-block px-4 py-1 rounded-full">{t('skorupki', 'title')}</span>
@@ -90,7 +90,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                         onClick={() => openLightbox(idx)}
                                     >
                                         <Image
-                                            src={`/mazury-holiday/images/skorupki/skorupki_${num}.webp`}
+                                            src={`/images/skorupki/skorupki_${num}.webp`}
                                             alt="Galeria"
                                             fill
                                             className="object-cover"

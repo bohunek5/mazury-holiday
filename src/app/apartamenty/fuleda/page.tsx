@@ -15,12 +15,12 @@ export default function FuledaPage() {
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
     const galleryImages = [
-        "/mazury-holiday/images/fuleda/Front Apartamenty.webp",
-        "/mazury-holiday/images/fuleda/front apartamenty jeziorko.webp",
-        "/mazury-holiday/images/fuleda/jeziorko.webp",
-        "/mazury-holiday/images/fuleda/linia plaza.webp",
-        "/mazury-holiday/images/fuleda/plaza cdd.webp",
-        "/mazury-holiday/images/fuleda/fuleda_1.webp"
+        "/images/fuleda/Front Apartamenty.webp",
+        "/images/fuleda/front apartamenty jeziorko.webp",
+        "/images/fuleda/jeziorko.webp",
+        "/images/fuleda/linia plaza.webp",
+        "/images/fuleda/plaza cdd.webp",
+        "/images/fuleda/fuleda_1.webp"
     ];
 
     const apartments = [
@@ -50,7 +50,7 @@ export default function FuledaPage() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src="/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp"
+                        src="/images/fuleda/parter/Fuleda parter1.webp"
                         alt="Fuleda"
                         fill
                         className="object-cover"
@@ -75,7 +75,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/mazury-holiday/images/fuleda/Front Apartamenty.webp" alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src="/images/fuleda/Front Apartamenty.webp" alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                             <div
                                 className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mt-12 cursor-pointer group"
@@ -84,7 +84,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/mazury-holiday/images/fuleda/jeziorko.webp" alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src="/images/fuleda/jeziorko.webp" alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                         </div>
                     </div>

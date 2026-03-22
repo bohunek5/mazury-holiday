@@ -59,5 +59,5 @@ export function getAmenityIcon(amenity: string): string {
     else if (normalized.includes('osób') || normalized.includes('osob')) icon = 'BED.svg';
     else if (normalized.includes('stery') || normalized.includes('strumieniow')) icon = 'THRUSTERS.svg';
 
-    return `/mazury-holiday/icons/${icon}`;
+    return `/icons/${icon}`;
 }

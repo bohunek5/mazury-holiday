@@ -15,7 +15,7 @@ export default function AttractionsPage() {
             id: "boyen",
             title: t("attractionsPage", "boyen.title"),
             desc: t("attractionsPage", "boyen.desc"),
-            image: "/mazury-holiday/images/attractions/twierdza-boyen.webp",
+            image: "/images/attractions/twierdza-boyen.webp",
             icon: <Camera className="w-6 h-6" />,
             tags: ["Historia", "Architektura", "Edukacja"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Twierdza+Boyen+Giżycko"
@@ -24,7 +24,7 @@ export default function AttractionsPage() {
             id: "bridge",
             title: t("attractionsPage", "bridge.title"),
             desc: t("attractionsPage", "bridge.desc"),
-            image: "/mazury-holiday/images/attractions/most-obrotowy.webp",
+            image: "/images/attractions/most-obrotowy.webp",
             icon: <Clock className="w-6 h-6" />,
             tags: ["Zabytek", "Technika", "Giżycko"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Most+Obrotowy+Giżycko"
@@ -33,7 +33,7 @@ export default function AttractionsPage() {
             id: "port",
             title: t("attractionsPage", "port.title"),
             desc: t("attractionsPage", "port.desc"),
-            image: "/mazury-holiday/images/attractions/eko-marina.webp",
+            image: "/images/attractions/eko-marina.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Żeglarstwo", "Rekreacja", "Centrum"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Ekomarina+Giżycko"
@@ -42,7 +42,7 @@ export default function AttractionsPage() {
             id: "water",
             title: t("attractionsPage", "water.title"),
             desc: t("attractionsPage", "water.desc"),
-            image: "/mazury-holiday/images/attractions/kisajno-dobskie.webp",
+            image: "/images/attractions/kisajno-dobskie.webp",
             icon: <Waves className="w-6 h-6" />,
             tags: ["Natura", "Cisza", "Krajobraz"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Jezioro+Kisajno"
@@ -51,7 +51,7 @@ export default function AttractionsPage() {
             id: "wolfsLair",
             title: t("attractionsPage", "wolfsLair.title"),
             desc: t("attractionsPage", "wolfsLair.desc"),
-            image: "/mazury-holiday/images/attractions/wilczy-szaniec.webp",
+            image: "/images/attractions/wilczy-szaniec.webp",
             icon: <MapPin className="w-6 h-6" />,
             tags: ["Historia", "II Wojna Światowa", "Muzeum"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Wilczy+Szaniec+Gierłoż"
@@ -60,7 +60,7 @@ export default function AttractionsPage() {
             id: "waterTower",
             title: t("attractionsPage", "waterTower.title"),
             desc: t("attractionsPage", "waterTower.desc"),
-            image: "/mazury-holiday/images/attractions/wieza-cisnien.webp",
+            image: "/images/attractions/wieza-cisnien.webp",
             icon: <Eye className="w-6 h-6" />,
             tags: ["Widok", "Kawiarnia", "Zabytek"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Wieża+Ciśnień+Giżycko"
@@ -69,7 +69,7 @@ export default function AttractionsPage() {
             id: "castle",
             title: t("attractionsPage", "castle.title"),
             desc: t("attractionsPage", "castle.desc"),
-            image: "/mazury-holiday/images/attractions/krzyzacki-zamek.webp",
+            image: "/images/attractions/krzyzacki-zamek.webp",
             icon: <Landmark className="w-6 h-6" />,
             tags: ["Historia", "Architektura", "Hotel"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Hotel+St.+Bruno+Giżycko"
@@ -78,7 +78,7 @@ export default function AttractionsPage() {
             id: "bison",
             title: t("attractionsPage", "bison.title"),
             desc: t("attractionsPage", "bison.desc"),
-            image: "/mazury-holiday/images/attractions/zagroda-zubrow.webp",
+            image: "/images/attractions/zagroda-zubrow.webp",
             icon: <Trees className="w-6 h-6" />,
             tags: ["Natura", "Zwierzęta", "Edukacja"],
             mapLink: "https://www.google.com/maps/search/?api=1&query=Zagroda+Żubrów+Wolisko"
@@ -93,7 +93,7 @@ export default function AttractionsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/mazury-holiday/images/attractions/gizycko-hero.webp"
+                    src="/images/attractions/gizycko-hero.webp"
                     alt="Atrakcje Mazury"
                     fill
                     className="object-cover"

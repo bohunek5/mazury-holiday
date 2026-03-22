@@ -30,19 +30,19 @@ export const kisajnoData: KisajnoData = {
         "Port Neptun"
     ],
     gallery: {
-        heroImage: "/mazury-holiday/images/kisajno/kisajno_1.webp",
+        heroImage: "/images/kisajno/kisajno_1.webp",
         images: [
-            "/mazury-holiday/images/kisajno/kisajno_1.webp",
-            "/mazury-holiday/images/kisajno/kisajno_2.webp",
-            "/mazury-holiday/images/kisajno/kisajno_3.webp",
-            "/mazury-holiday/images/kisajno/kisajno_4.webp",
-            "/mazury-holiday/images/kisajno/kisajno_5.webp",
-            "/mazury-holiday/images/kisajno/kisajno_6.webp",
-            "/mazury-holiday/images/kisajno/kisajno_7.webp",
-            "/mazury-holiday/images/kisajno/kisajno_8.webp",
-            "/mazury-holiday/images/kisajno/kisajno_9.webp",
-            "/mazury-holiday/images/kisajno/kisajno_10.webp",
-            "/mazury-holiday/images/kisajno/kisajno_11.webp"
+            "/images/kisajno/kisajno_1.webp",
+            "/images/kisajno/kisajno_2.webp",
+            "/images/kisajno/kisajno_3.webp",
+            "/images/kisajno/kisajno_4.webp",
+            "/images/kisajno/kisajno_5.webp",
+            "/images/kisajno/kisajno_6.webp",
+            "/images/kisajno/kisajno_7.webp",
+            "/images/kisajno/kisajno_8.webp",
+            "/images/kisajno/kisajno_9.webp",
+            "/images/kisajno/kisajno_10.webp",
+            "/images/kisajno/kisajno_11.webp"
         ]
     },
     idoBookingId: "45",

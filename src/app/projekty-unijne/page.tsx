@@ -15,7 +15,7 @@ export default function EUProjectsPage() {
                 {/* EU Banner Image */}
                 <div className="w-full mb-12 rounded-lg overflow-hidden shadow-sm border border-gray-100 bg-white">
                     <Image
-                        src="/mazury-holiday/dofinansowanie.webp"
+                        src="/dofinansowanie.webp"
                         alt="Sfinansowano w ramach reakcji Unii na pandemię COVID19"
                         width={0}
                         height={0}

@@ -40,19 +40,19 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
+            heroImage: '/images/fuleda/parter/Fuleda parter1.webp',
             images: [
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter3.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter4.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter5.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter6.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter7.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter8.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter9.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter10.webp',
-                '/mazury-holiday/images/fuleda/parter/Fuleda parter11.webp'
+                '/images/fuleda/parter/Fuleda parter1.webp',
+                '/images/fuleda/parter/Fuleda parter.webp',
+                '/images/fuleda/parter/Fuleda parter3.webp',
+                '/images/fuleda/parter/Fuleda parter4.webp',
+                '/images/fuleda/parter/Fuleda parter5.webp',
+                '/images/fuleda/parter/Fuleda parter6.webp',
+                '/images/fuleda/parter/Fuleda parter7.webp',
+                '/images/fuleda/parter/Fuleda parter8.webp',
+                '/images/fuleda/parter/Fuleda parter9.webp',
+                '/images/fuleda/parter/Fuleda parter10.webp',
+                '/images/fuleda/parter/Fuleda parter11.webp'
             ]
         }
     },
@@ -72,18 +72,18 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
+            heroImage: '/images/fuleda/parter/Fuleda parter1.webp',
             images: [
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro2.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro3.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro4.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro5.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro6.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro7.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro8.webp',
-                '/mazury-holiday/images/fuleda/pietro/Fuleda pietro9.webp'
+                '/images/fuleda/pietro/Fuleda pietro1.webp',
+                '/images/fuleda/pietro/Fuleda pietro.webp',
+                '/images/fuleda/pietro/Fuleda pietro2.webp',
+                '/images/fuleda/pietro/Fuleda pietro3.webp',
+                '/images/fuleda/pietro/Fuleda pietro4.webp',
+                '/images/fuleda/pietro/Fuleda pietro5.webp',
+                '/images/fuleda/pietro/Fuleda pietro6.webp',
+                '/images/fuleda/pietro/Fuleda pietro7.webp',
+                '/images/fuleda/pietro/Fuleda pietro8.webp',
+                '/images/fuleda/pietro/Fuleda pietro9.webp'
             ]
         }
     }

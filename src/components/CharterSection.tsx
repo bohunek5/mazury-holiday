@@ -25,7 +25,7 @@ export default function CharterSection() {
                 className="absolute -inset-[20%] z-0 opacity-20"
             >
                 <Image
-                    src="/mazury-holiday/images/czarter/main.webp"
+                    src="/images/czarter/main.webp"
                     alt="Charter background"
                     fill
                     className="object-cover"
@@ -57,20 +57,20 @@ export default function CharterSection() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="relative w-8 h-8 shrink-0">
-                                    <Image src="/mazury-holiday/icons/THRUSTERS.svg" alt="Stery strumieniowe" fill className="object-contain invert" />
+                                    <Image src="/icons/THRUSTERS.svg" alt="Stery strumieniowe" fill className="object-contain invert" />
                                 </div>
                                 <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="relative w-8 h-8 shrink-0">
-                                    <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Ogrzewanie & Klimatyzacja" fill className="object-contain invert" />
+                                    <Image src="/icons/AIR_CONDITIONER.svg" alt="Ogrzewanie & Klimatyzacja" fill className="object-contain invert" />
                                 </div>
                                 <span className="text-lg">Ogrzewanie & Klimatyzacja</span>
                             </li>
                         </ul>
 
                         <a
-                            href="/mazury-holiday/czarter"
+                            href="/czarter"
                             className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-medium transition-all shadow-lg shadow-amber-500/20"
                         >
                             {t("charter", "detailsBtn") || "SPRAWDŹ SZCZEGÓŁY"}
@@ -79,7 +79,7 @@ export default function CharterSection() {
 
                     <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                         <Image
-                            src="/mazury-holiday/images/czarter/main.webp"
+                            src="/images/czarter/main.webp"
                             alt="Jacht motorowy Stillo 30"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"

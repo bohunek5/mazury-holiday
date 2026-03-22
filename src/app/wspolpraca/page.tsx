@@ -42,7 +42,7 @@ export default function CooperationPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/mazury-holiday/images/DJI_0109_optimized.webp"
+                    src="/images/DJI_0109_optimized.webp"
                     alt="Współpraca Mazury Holiday"
                     fill
                     className="object-cover"
@@ -92,7 +92,7 @@ export default function CooperationPage() {
                         className="relative rounded-3xl overflow-hidden shadow-2xl h-[600px]"
                     >
                         <Image
-                            src="/mazury-holiday/images/stranda/A103_images/A103 salonn.webp"
+                            src="/images/stranda/A103_images/A103 salonn.webp"
                             alt="Luxury management"
                             fill
                             className="object-cover"

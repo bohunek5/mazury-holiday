@@ -141,7 +141,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {data.amenities.living.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src="/mazury-holiday/icons/SOFA.svg" alt="Salon" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src="/icons/SOFA.svg" alt="Salon" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Salon</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -154,7 +154,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {data.amenities.kitchen.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src="/mazury-holiday/icons/CUTLERY.svg" alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src="/icons/CUTLERY.svg" alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -167,7 +167,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {data.amenities.bedroom.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src="/mazury-holiday/icons/BED.svg" alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src="/icons/BED.svg" alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Sypialnia</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -180,7 +180,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {data.amenities.bathroom.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src="/mazury-holiday/icons/SHOWER.svg" alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src="/icons/SHOWER.svg" alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Łazienka</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -193,7 +193,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                                 {data.amenities.terrace.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow md:col-span-2">
                                         <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src="/mazury-holiday/icons/TERRACE.svg" alt="Taras i otoczenie" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src="/icons/TERRACE.svg" alt="Taras i otoczenie" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Taras i otoczenie</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">

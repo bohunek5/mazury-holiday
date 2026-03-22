@@ -22,7 +22,7 @@ export default function Apartments() {
             id: 1,
             title: t("apartments", "items.stranda.title"),
             description: t("apartments", "items.stranda.description"),
-            image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
+            image: "/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
             price: `${lowestStrandaPrice} zł`
@@ -31,7 +31,7 @@ export default function Apartments() {
             id: 2,
             title: t("apartments", "items.kisajno.title"),
             description: t("apartments", "items.kisajno.description"),
-            image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
+            image: "/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
             price: `${kisajnoData.price} zł`
@@ -40,7 +40,7 @@ export default function Apartments() {
             id: 3,
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp",
+            image: "/images/fuleda/pietro/Fuleda pietro1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: `${lowestFuledaPrice} zł`
@@ -53,7 +53,7 @@ export default function Apartments() {
             title: t("apartments", "items.domkiSkorupki.title"),
             location: t("apartments", "items.domkiSkorupki.location"),
             description: t("apartments", "items.domkiSkorupki.description"),
-            image: "/mazury-holiday/images/skorupki/skorupki_1.webp",
+            image: "/images/skorupki/skorupki_1.webp",
             people: skorupkiData.guests,
             link: "/domki",
             price: `${skorupkiData.price} zł`
@@ -63,7 +63,7 @@ export default function Apartments() {
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
-            image: "/mazury-holiday/images/pokoje_fuleda/334.webp",
+            image: "/images/pokoje_fuleda/334.webp",
             people: "4",
             link: "/pokoje/fuleda",
             price: "375 zł"

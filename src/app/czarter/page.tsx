@@ -17,27 +17,27 @@ export default function CharterPage() {
     const { t, language } = useLanguage();
 
     const galleryImages = [
-        "/mazury-holiday/images/czarter/gallery/stillo_1.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_2.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_3.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_4.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_5.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_6.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_7.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_8.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_9.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_10.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_11.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_12.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_13.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_14.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_15.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_16.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_17.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_18.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_19.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_20.webp",
-        "/mazury-holiday/images/czarter/gallery/stillo_21.webp"
+        "/images/czarter/gallery/stillo_1.webp",
+        "/images/czarter/gallery/stillo_2.webp",
+        "/images/czarter/gallery/stillo_3.webp",
+        "/images/czarter/gallery/stillo_4.webp",
+        "/images/czarter/gallery/stillo_5.webp",
+        "/images/czarter/gallery/stillo_6.webp",
+        "/images/czarter/gallery/stillo_7.webp",
+        "/images/czarter/gallery/stillo_8.webp",
+        "/images/czarter/gallery/stillo_9.webp",
+        "/images/czarter/gallery/stillo_10.webp",
+        "/images/czarter/gallery/stillo_11.webp",
+        "/images/czarter/gallery/stillo_12.webp",
+        "/images/czarter/gallery/stillo_13.webp",
+        "/images/czarter/gallery/stillo_14.webp",
+        "/images/czarter/gallery/stillo_15.webp",
+        "/images/czarter/gallery/stillo_16.webp",
+        "/images/czarter/gallery/stillo_17.webp",
+        "/images/czarter/gallery/stillo_18.webp",
+        "/images/czarter/gallery/stillo_19.webp",
+        "/images/czarter/gallery/stillo_20.webp",
+        "/images/czarter/gallery/stillo_21.webp"
     ];
 
     const openLightbox = (index: number) => {
@@ -76,7 +76,7 @@ export default function CharterPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/40 z-10" />
                 <Image
-                    src="/mazury-holiday/images/czarter/gallery/stillo_1.webp"
+                    src="/images/czarter/gallery/stillo_1.webp"
                     alt={t("charterPage", "heroTitle")}
                     fill
                     className="object-cover"
@@ -110,7 +110,7 @@ export default function CharterPage() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src="/mazury-holiday/icons/LOCATION.svg" alt="Technika" fill className="object-contain dark:invert opacity-80" />
+                                        <Image src="/icons/LOCATION.svg" alt="Technika" fill className="object-contain dark:invert opacity-80" />
                                     </div>
                                     <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "navAndDriveTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -120,7 +120,7 @@ export default function CharterPage() {
 
                                 <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                                        <Image src="/icons/AIR_CONDITIONER.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                                     </div>
                                     <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "vipStandardTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -130,7 +130,7 @@ export default function CharterPage() {
 
                                 <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src="/mazury-holiday/icons/FIRE_EXTINGUISHER.svg" alt="Bezpieczeństwo" fill className="object-contain dark:invert opacity-80" />
+                                        <Image src="/icons/FIRE_EXTINGUISHER.svg" alt="Bezpieczeństwo" fill className="object-contain dark:invert opacity-80" />
                                     </div>
                                     <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "safetyTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">

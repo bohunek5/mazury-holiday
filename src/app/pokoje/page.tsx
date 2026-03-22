@@ -27,7 +27,7 @@ export default function RoomsPage() {
             id: "fuleda",
             title: fuledaTrans.title,
             description: fuledaTrans.description,
-            image: "/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp",
+            image: "/images/pokoje_fuleda/pokoje/pokoje_1.webp",
             link: "/pokoje/fuleda",
             price: "od 375 zł/doba",
             features: fuledaTrans.features,
@@ -45,7 +45,7 @@ export default function RoomsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 {/* Removed overlay to fix foggy look */}
                 <Image
-                    src="/mazury-holiday/images/pokoje_fuleda/pokoje/pokoje_1.webp"
+                    src="/images/pokoje_fuleda/pokoje/pokoje_1.webp"
                     alt={trans.heroTitle}
                     fill
                     className="object-cover"

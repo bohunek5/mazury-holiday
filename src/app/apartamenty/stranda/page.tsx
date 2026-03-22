@@ -23,7 +23,7 @@ const getBuildingsData = () => {
         if (buildings[b]) {
             buildings[b].push({
                 id: apt.id,
-                image: apt.gallery.heroImage || apt.gallery.images[0] || "/mazury-holiday/images/placeholder.webp",
+                image: apt.gallery.heroImage || apt.gallery.images[0] || "/images/placeholder.webp",
             });
         }
     });
@@ -60,19 +60,19 @@ export default function StrandaPage() {
 
     const getBuildingLakeView = (key: string) => {
         switch (key) {
-            case "A": return "/mazury-holiday/images/stranda/A205/A205_15.webp";
-            case "B": return "/mazury-holiday/images/stranda/B401/B401_1.webp";
-            case "C": return "/mazury-holiday/images/stranda/C404/C404_17.webp";
-            default: return "/mazury-holiday/images/hero_bg.webp";
+            case "A": return "/images/stranda/A205/A205_15.webp";
+            case "B": return "/images/stranda/B401/B401_1.webp";
+            case "C": return "/images/stranda/C404/C404_17.webp";
+            default: return "/images/hero_bg.webp";
         }
     };
 
     const getBuildingVisuals = (key: string) => {
         switch (key) {
-            case "A": return "/mazury-holiday/images/stranda/A205/A205_15.webp";
-            case "B": return "/mazury-holiday/images/stranda/B401/B401_1.webp";
-            case "C": return "/mazury-holiday/images/stranda/C404/C404_17.webp";
-            default: return "/mazury-holiday/images/hero_bg.webp";
+            case "A": return "/images/stranda/A205/A205_15.webp";
+            case "B": return "/images/stranda/B401/B401_1.webp";
+            case "C": return "/images/stranda/C404/C404_17.webp";
+            default: return "/images/hero_bg.webp";
         }
     };
 
@@ -84,7 +84,7 @@ export default function StrandaPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/mazury-holiday/images/apartments_2.webp')]"
+                    className="absolute inset-0 bg-cover bg-center bg-[url('/images/apartments_2.webp')]"
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
