@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    basePath: "/mazury-holiday",
     images: {
-        // Must use unoptimized: true for static export (output: "export")
-        // Images are pre-compressed using scripts/compress-images.js before build
+        // Images are served from the public /mazury-holiday directory.
         unoptimized: true,
         remotePatterns: [
             {
@@ -13,7 +10,6 @@ const nextConfig = {
             },
         ],
     },
-    // Ensure trailing slashes for GitHub Pages
     trailingSlash: true,
     typescript: {
         ignoreBuildErrors: true,

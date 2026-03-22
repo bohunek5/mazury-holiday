@@ -6,6 +6,12 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { strandaApartments } from "@/data/stranda-apartments";
+import { fuledaApartments } from "@/data/fuleda-data";
+import { kisajnoData } from "@/data/kisajno-data";
+
+const lowestStrandaPrice = Math.min(...Object.values(strandaApartments).map((apartment) => apartment.price));
+const lowestFuledaPrice = Math.min(...Object.values(fuledaApartments).map((apartment) => apartment.price));
 
 export default function ApartmentsHub() {
     const { t } = useLanguage();
@@ -18,7 +24,7 @@ export default function ApartmentsHub() {
             image: "/mazury-holiday/images/stranda/C304/C304_1.webp",
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
-            price: "250 zł"
+            price: `${lowestStrandaPrice} zł`
         },
         {
             id: "kisajno",
@@ -27,7 +33,7 @@ export default function ApartmentsHub() {
             image: "/mazury-holiday/images/kisajno/kisajno_1.webp",
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
-            price: "500 zł"
+            price: `${kisajnoData.price} zł`
         },
         {
             id: "fuleda",
@@ -36,7 +42,7 @@ export default function ApartmentsHub() {
             image: "/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp",
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
-            price: "200 zł"
+            price: `${lowestFuledaPrice} zł`
         },
     ];
 

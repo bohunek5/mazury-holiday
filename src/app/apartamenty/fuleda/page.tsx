@@ -26,17 +26,17 @@ export default function FuledaPage() {
     const apartments = [
         {
             id: 'parter',
-            title: 'Apartament Fuleda Parter',
-            guests: '2+2',
-            image: '/mazury-holiday/images/fuleda/parter/Fuleda parter1.webp',
-            features: ['Klimatyzacja', 'Kominek', 'Prywatne zejście do jeziora', 'Miejsce na ognisko']
+            title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
+            guests: fuledaApartments.parter.guests,
+            image: fuledaApartments.parter.gallery.heroImage,
+            features: fuledaApartments.parter.amenities.terrace.slice(0, 4)
         },
         {
             id: 'pietro',
-            title: 'Apartament Fuleda Piętro',
-            guests: '2+1',
-            image: '/mazury-holiday/images/fuleda/pietro/Fuleda pietro1.webp',
-            features: ['Klimatyzacja', 'Kominek', 'Przestronny taras', 'Widok na jezioro']
+            title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
+            guests: fuledaApartments.pietro.guests,
+            image: fuledaApartments.pietro.gallery.heroImage,
+            features: fuledaApartments.pietro.amenities.terrace.slice(0, 4)
         }
     ];
 

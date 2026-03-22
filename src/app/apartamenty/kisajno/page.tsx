@@ -7,6 +7,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { kisajnoData } from "@/data/kisajno-data";
 
 export default function KisajnoPage() {
     const { t } = useLanguage();
@@ -14,19 +15,7 @@ export default function KisajnoPage() {
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
-    const galleryImages = [
-        "/mazury-holiday/images/kisajno/kisajno_1.webp",
-        "/mazury-holiday/images/kisajno/kisajno_2.webp",
-        "/mazury-holiday/images/kisajno/kisajno_3.webp",
-        "/mazury-holiday/images/kisajno/kisajno_4.webp",
-        "/mazury-holiday/images/kisajno/kisajno_5.webp",
-        "/mazury-holiday/images/kisajno/kisajno_6.webp",
-        "/mazury-holiday/images/kisajno/kisajno_7.webp",
-        "/mazury-holiday/images/kisajno/kisajno_8.webp",
-        "/mazury-holiday/images/kisajno/kisajno_9.webp",
-        "/mazury-holiday/images/kisajno/kisajno_10.webp",
-        "/mazury-holiday/images/kisajno/kisajno_11.webp"
-    ];
+    const galleryImages = kisajnoData.gallery.images;
 
     const openLightbox = (index: number) => {
         setLightboxIndex(index);
@@ -50,7 +39,7 @@ export default function KisajnoPage() {
                 </div>
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-4xl md:text-6xl font-playfair mb-4">{t("kisajnoPage", "title")}</h1>
+                    <h1 className="text-4xl md:text-6xl font-playfair mb-4">{kisajnoData.title}</h1>
                     <p className="text-xl md:text-2xl font-light">{t("kisajnoPage", "subtitle")}</p>
                 </div>
             </section>
@@ -62,30 +51,20 @@ export default function KisajnoPage() {
                     <div>
                         <h2 className="text-4xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "introTitle")}</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                            {t("kisajnoPage", "description")}
+                            {kisajnoData.description}
                         </p>
                         <ul className="space-y-4 mb-8">
-                            <li className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
-                                <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                <span>{t("kisajnoPage", "features.0")}</span>
-                            </li>
-                            <li className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
-                                <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                <span>{t("kisajnoPage", "features.1")}</span>
-                            </li>
-                            <li className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
-                                <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                <span>{t("kisajnoPage", "features.2")}</span>
-                            </li>
-                            <li className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
-                                <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                <span>{t("kisajnoPage", "features.3")}</span>
-                            </li>
+                            {kisajnoData.amenities.map((amenity) => (
+                                <li key={amenity} className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
+                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                    <span>{amenity}</span>
+                                </li>
+                            ))}
                         </ul>
                         <div className="flex items-baseline space-x-2">
                             <span className="text-slate-500 uppercase text-sm tracking-widest">Cena od</span>
-                            <span className="text-3xl font-bold text-slate-900 dark:text-white">500</span>
-                            <span className="text-slate-500">zł / doba</span>
+                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{kisajnoData.price}</span>
+                            <span className="text-slate-500">zł / doba • {kisajnoData.guests} osoby</span>
                         </div>
                     </div>
 
@@ -204,10 +183,10 @@ export default function KisajnoPage() {
                     <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "bookingTitle")}</h3>
                     <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                         {t("kisajnoPage", "bookingDesc")}
-                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">od 500 zł / doba</p>
+                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">od {kisajnoData.price} zł / doba</p>
                     </p>
                     <a
-                        href="https://engine37851.idobooking.com/index.php?ob[45]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                        href={`https://engine37851.idobooking.com/index.php?ob[${kisajnoData.idoBookingId || "45"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-[#50B848] hover:bg-[#45a041] text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-500/25 whitespace-nowrap uppercase tracking-wider mb-4 md:mb-0 md:mr-4 active:scale-95"
@@ -222,7 +201,7 @@ export default function KisajnoPage() {
                     </a>
                     <div className="mt-8 max-w-4xl mx-auto">
                         <ICalCalendar
-                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                            icalUrl={kisajnoData.icalUrl || "https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"}
                             apartmentId="Kisajno"
                         />
                     </div>
@@ -232,7 +211,7 @@ export default function KisajnoPage() {
             {/* Mobile Floating Booking Button */}
             <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
                 <a
-                    href="https://engine37851.idobooking.com/index.php?ob[45]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                    href={`https://engine37851.idobooking.com/index.php?ob[${kisajnoData.idoBookingId || "45"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"

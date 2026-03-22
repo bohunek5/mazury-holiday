@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Phone, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { heroContent } from "@/data/hero-content";
 
 export default function Hero() {
   const { t, language } = useLanguage();
@@ -26,13 +27,13 @@ export default function Hero() {
 
       <div className="container relative z-10 px-4 text-center text-white">
         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 drop-shadow-lg">
-          {language === 'pl' ? "Wakacje na Mazurach" : t("hero", "title")}
+          {language === "pl" ? heroContent.title : t("hero", "title")}
         </h1>
 
         <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 rounded-full shadow-lg" />
 
         <p className="text-xl md:text-2xl font-light tracking-[0.15em] mb-12 text-white/95 max-w-3xl mx-auto uppercase drop-shadow-md">
-          {language === 'pl' ? "Sprawdź naszą ofertę" : t("hero", "subtitle")}
+          {language === "pl" ? heroContent.subtitle : t("hero", "subtitle")}
         </p>
 
         <div className="flex justify-center mb-16">
@@ -43,7 +44,7 @@ export default function Hero() {
             <span className="p-2 bg-amber-500 rounded-full group-hover:bg-white group-hover:text-amber-500 transition-colors">
               <Phone size={20} className="text-white group-hover:text-amber-500 transition-colors" />
             </span>
-            {t("hero", "charterBtn")}
+            {language === "pl" ? heroContent.ctaText : t("hero", "charterBtn")}
           </a>
         </div>
 
@@ -60,4 +61,3 @@ export default function Hero() {
     </section>
   );
 }
-
