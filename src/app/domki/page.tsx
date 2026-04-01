@@ -224,7 +224,7 @@ export default function DomkiPage() {
                             href="tel:666666666"
                             className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-amber-500/40 whitespace-nowrap"
                         >
-                            666 666 666
+                            730 067 027
                         </a>
                     </div>
                 </div>

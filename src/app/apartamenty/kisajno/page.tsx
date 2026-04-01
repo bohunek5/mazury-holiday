@@ -218,7 +218,7 @@ export default function KisajnoPage() {
                         href="tel:666666666"
                         className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
-                        {t("kisajnoPage", "callAction")}: 666 666 666
+                        {t("kisajnoPage", "callAction")}: 730 067 027
                     </a>
                     <div className="mt-8 max-w-4xl mx-auto">
                         <ICalCalendar

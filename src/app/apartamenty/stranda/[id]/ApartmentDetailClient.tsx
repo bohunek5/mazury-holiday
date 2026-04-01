@@ -258,7 +258,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 href="tel:666666666"
                                 className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4 whitespace-nowrap"
                             >
-                                {t("details", "callBtn")}: 666 666 666
+                                {t("details", "callBtn")}: 730 067 027
                             </a>
 
                             {/* iDoBooking Widget Button - Desktop Only */}

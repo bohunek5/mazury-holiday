@@ -61,11 +61,11 @@ export default function CharterSection() {
                                 </div>
                                 <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
                             </li>
-                            <li className="flex items-center gap-4">
+                             <li className="flex items-center gap-4">
                                 <div className="relative w-8 h-8 shrink-0">
-                                    <Image src="/mazury-holiday/icons/AIR_CONDITIONER.svg" alt="Ogrzewanie & Klimatyzacja" fill className="object-contain invert" />
+                                    <Image src="/mazury-holiday/icons/WIFI.svg" alt="Ogrzewanie i WiFi" fill className="object-contain invert" />
                                 </div>
-                                <span className="text-lg">Ogrzewanie & Klimatyzacja</span>
+                                <span className="text-lg">Ogrzewanie, WiFi bez limitu</span>
                             </li>
                         </ul>
 

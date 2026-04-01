@@ -56,7 +56,7 @@ export default function Footer() {
                                 <Phone size={18} />
                             </div>
                             <a href="tel:666666666" className="text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-white transition-colors font-medium text-left whitespace-nowrap">
-                                666 666 666
+                                730 067 027
                             </a>
                         </li>
                         <li className="flex items-center gap-4 group">
