@@ -223,7 +223,7 @@ export default function CharterPage() {
                                         {t("charterPage", "bookBtn")}
                                     </a>
                                     <a
-                                        href="tel:666666666"
+                                        href="tel:+48730067027"
                                         className="flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-xl transition-all mb-8 shadow-lg active:scale-95"
                                         title={t("details", "callBtn")}
                                     >

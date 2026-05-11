@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        // Images are served from the public /mazury-holiday directory.
         unoptimized: true,
         remotePatterns: [
             {
@@ -10,10 +9,11 @@ const nextConfig = {
             },
         ],
     },
+    output: "export",
     trailingSlash: true,
+    assetPrefix: "/wp-content/themes/mazury-clone/out",
     typescript: {
         ignoreBuildErrors: true,
     },
 };
-
 export default nextConfig;

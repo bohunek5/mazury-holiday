@@ -223,10 +223,10 @@ export default function DomkiPage() {
                             {t('skorupki', 'ctaDesc')}
                         </p>
                         <a
-                            href="tel:666666666"
+                            href="tel:+48730067027"
                             className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-amber-500/40 whitespace-nowrap"
                         >
-                            666 666 666
+                            +48 730 067 027
                         </a>
                     </div>
                 </div>

@@ -6,62 +6,53 @@ export async function POST(request: Request) {
         const body = await request.json();
         const { name, email, phone, subject, message } = body;
 
-        // Basic validation
-        if (!name || !email || !message) {
-            return NextResponse.json(
-                { error: 'Proszę wypełnić wszystkie wymagane pola.' },
-                { status: 400 }
-            );
-        }
-
-        // Configure transporter with environment variables
+        // Utwórz transporter używając danych SMTP z .env
         const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT),
-            secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+            host: process.env.SMTP_HOST || 'smtp.gmail.com',
+            port: Number(process.env.SMTP_PORT) || 587,
+            secure: process.env.SMTP_SECURE === 'true', // true dla portu 465, false dla innych (np. 587)
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASSWORD,
+                pass: process.env.SMTP_PASS,
             },
         });
 
-        // Email content options
+        // Opcje wiadomości e-mail
         const mailOptions = {
-            from: process.env.SMTP_FROM || process.env.SMTP_USER,
-            to: process.env.SMTP_TO || 'rezerwacje@mazury.holiday',
+            from: process.env.SMTP_USER ? `"Formularz Mazury Holiday" <${process.env.SMTP_USER}>` : '"Mazury Holiday" <no-reply@mazury.holiday>',
+            to: 'prezes@zeglarstwomazury.pl',
             replyTo: email,
-            subject: `[Formularz Kontaktowy] ${subject || 'Nowa wiadomość'} - ${name}`,
+            subject: `[Formularz Kontaktowy] ${subject || 'Nowa wiadomość'}`,
             text: `
-Nowa wiadomość z formularza kontaktowego mazury.holiday:
+Otrzymałeś nową wiadomość z formularza kontaktowego Mazury Holiday:
 
 Imię i nazwisko: ${name}
-Email: ${email}
-Telefon: ${phone || 'Nie podano'}
-Temat: ${subject || 'Brak'}
+Adres e-mail: ${email}
+Numer telefonu: ${phone || 'Nie podano'}
+
+Temat: ${subject}
 
 Wiadomość:
 ${message}
             `,
             html: `
-<h3>Nowa wiadomość z formularza kontaktowego mazury.holiday</h3>
-<p><strong>Od:</strong> ${name} (<a href="mailto:${email}">${email}</a>)</p>
-<p><strong>Telefon:</strong> ${phone || 'Nie podano'}</p>
-<p><strong>Temat:</strong> ${subject || 'Brak'}</p>
-<hr />
-<p><strong>Treść wiadomości:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
+<h3>Otrzymałeś nową wiadomość z formularza kontaktowego Mazury Holiday</h3>
+<p><strong>Imię i nazwisko:</strong> ${name}</p>
+<p><strong>Adres e-mail:</strong> ${email}</p>
+<p><strong>Numer telefonu:</strong> ${phone || 'Nie podano'}</p>
+<p><strong>Temat:</strong> ${subject}</p>
+<br/>
+<p><strong>Wiadomość:</strong></p>
+<p>${message.replace(/\n/g, '<br/>')}</p>
             `,
         };
 
-        // Send email
+        // Wyślij e-mail
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ success: true, message: 'Wiadomość wysłana pomyślnie!' });
-    } catch (error: unknown) {
-        console.error('Błąd wysyłania maila:', error);
-        return NextResponse.json(
-            { error: 'Wystąpił błąd podczas wysyłania wiadomości.', details: error instanceof Error ? error.message : String(error) },
-            { status: 500 }
-        );
+        return NextResponse.json({ success: true, message: 'Wiadomość została wysłana pomyślnie' });
+    } catch (error) {
+        console.error('Błąd podczas wysyłania e-maila:', error);
+        return NextResponse.json({ success: false, error: 'Nie udało się wysłać wiadomości' }, { status: 500 });
     }
 }

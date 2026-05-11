@@ -106,16 +106,10 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 }
             }
 
-            const proxies = [
-                (url: string) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-                (url: string) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
-                (url: string) => `https://api.codetabs.com/v1/proxy?url=${encodeURIComponent(url)}`
-            ];
-
-            const fetchWithRetry = async (proxyFn: (url: string) => string, retries = 2) => {
+            const fetchWithRetry = async (url: string, retries = 2) => {
                 for (let i = 0; i < retries; i++) {
                     try {
-                        const response = await fetch(proxyFn(icalUrl));
+                        const response = await fetch(url);
                         if (!response.ok) throw new Error(`HTTP ${response.status}`);
                         const text = await response.text();
                         if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
@@ -128,23 +122,21 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 return null;
             };
 
-            for (const getProxyUrl of proxies) {
-                try {
-                    const text = await fetchWithRetry(getProxyUrl);
-                    if (text && isMounted) {
-                        const parsedEvents = parseICal(text);
-                        setEvents(parsedEvents);
-                        setError(null);
-                        setLoading(false);
-                        localStorage.setItem(cacheKey, JSON.stringify({
-                            text,
-                            timestamp: Date.now()
-                        }));
-                        return;
-                    }
-                } catch {
-                    // Ignore error, try next proxy
+            try {
+                const text = await fetchWithRetry(icalUrl);
+                if (text && isMounted) {
+                    const parsedEvents = parseICal(text);
+                    setEvents(parsedEvents);
+                    setError(null);
+                    setLoading(false);
+                    localStorage.setItem(cacheKey, JSON.stringify({
+                        text,
+                        timestamp: Date.now()
+                    }));
+                    return;
                 }
+            } catch {
+                // Ignore error, handle failure below
             }
 
             if (isMounted && !hasData) {
