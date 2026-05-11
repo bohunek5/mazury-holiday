@@ -5,10 +5,11 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
 import Link from "next/link";
-import { Users } from "lucide-react";
+import { Users, BedDouble, Maximize2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { skorupkiData } from "@/data/skorupki-data";
+import { cottagesData } from "@/data/cottages-data";
 
 export default function DomkiPage() {
     const { t } = useLanguage();
@@ -90,30 +91,46 @@ export default function DomkiPage() {
                 <div className="mb-24">
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Wybierz swój domek</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {Array.from({ length: skorupkiData.unitsCount }, (_, i) => i + 1).map((num) => (
-                            <Link href={`/domki/${num}`} key={num} className="group block">
+                        {cottagesData.map((cottage) => (
+                            <Link href={`/domki/${cottage.id}`} key={cottage.id} className="group block">
                                 <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800 h-full flex flex-col">
                                     <div className="relative h-64 overflow-hidden">
                                         <Image
-                                            src={`/images/skorupki/skorupki_${((num % 5) + 1) === 3 ? (num === 2 ? 1 : 6) : (num % 5) + 1}.webp`}
-                                            alt={`Domek ${num}`}
+                                            src={cottage.heroImage}
+                                            alt={cottage.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                         <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-slate-900 dark:text-white shadow-sm">
-                                            od {skorupkiData.price} zł/doba
+                                            od {cottage.price} zł/doba
                                         </div>
+                                        {cottage.id === 8 || cottage.id === 10 ? (
+                                            <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</div>
+                                        ) : null}
                                     </div>
                                     <div className="p-6 flex flex-col flex-grow">
-                                        <h4 className="text-2xl font-playfair font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-500 transition-colors">Domek {num}</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
-                                            {t('skorupki', 'details.interiorDesc')}
+                                        <h4 className="text-xl font-playfair font-bold text-slate-900 dark:text-white mb-1 group-hover:text-amber-500 transition-colors">{cottage.name}</h4>
+                                        <p className="text-sm text-amber-500 font-medium mb-3">{cottage.tagline}</p>
+                                        <p className="text-slate-500 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                                            {cottage.description}
                                         </p>
+
+                                        {/* Quick highlights icons */}
+                                        <div className="flex gap-2 mb-4 flex-wrap">
+                                            {cottage.highlights.slice(0, 4).map((h) => (
+                                                <div key={h.label} title={h.label} className="relative w-7 h-7 bg-slate-50 dark:bg-slate-800 rounded-lg p-1">
+                                                    <Image src={`/icons/${h.icon}`} alt={h.label} fill className="object-contain dark:invert p-1" />
+                                                </div>
+                                            ))}
+                                        </div>
+
                                         <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
-                                            <span className="text-sm text-slate-500 flex items-center gap-1">
-                                                <Users size={16} /> {skorupkiData.guests} osób
-                                            </span>
-                                            <span className="text-amber-500 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                            <div className="flex items-center gap-3 text-sm text-slate-500">
+                                                <span className="flex items-center gap-1"><Users size={14} /> {cottage.guests} os.</span>
+                                                <span className="flex items-center gap-1"><BedDouble size={14} /> {cottage.bedrooms} syp.</span>
+                                                <span className="flex items-center gap-1"><Maximize2 size={14} /> {cottage.area}m²</span>
+                                            </div>
+                                            <span className="text-amber-500 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform text-sm">
                                                 Szczegóły &rarr;
                                             </span>
                                         </div>
