@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Phone, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import TypewriterTitle from "@/components/TypewriterTitle";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function Hero() {
   const { t, language } = useLanguage();
