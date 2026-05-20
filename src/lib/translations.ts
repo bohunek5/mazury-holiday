@@ -1,6 +1,6 @@
 export const translations = {
     pl: {
-        nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj", language: "Język", back: "Powrót" },
+        nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj", language: "Język", back: "Powrót", euProjects: "Projekty UE" },
         hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "730 067 027", scrollDown: "Przewiń w dół" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur w naszych luksusowych apartamentach, klimatycznych domkach oraz na pokładzie jachtu.", p2: "Ciesz się spokojem w Giżycku, dziką naturą we Fuledzie lub relaksem w Skorupkach. Twój wymarzony wypoczynek zaczyna się tutaj." },
         luxuryBenefits: {
@@ -441,7 +441,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     en: {
-        nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now", language: "Language", back: "Back" },
+        nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now", language: "Language", back: "Back", euProjects: "EU Projects" },
         hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "730 067 027", scrollDown: "Scroll down" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
         luxuryBenefits: {

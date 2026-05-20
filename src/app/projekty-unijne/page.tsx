@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function EUProjectsPage() {
     return (
@@ -15,7 +16,7 @@ export default function EUProjectsPage() {
                 {/* EU Banner Image */}
                 <div className="w-full mb-12 rounded-lg overflow-hidden shadow-sm border border-gray-100 bg-white">
                     <Image
-                        src="/dofinansowanie.webp"
+                        src={getAssetPath("/dofinansowanie.webp")}
                         alt="Sfinansowano w ramach reakcji Unii na pandemię COVID19"
                         width={0}
                         height={0}

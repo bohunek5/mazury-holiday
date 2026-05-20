@@ -103,7 +103,7 @@ export default function Navbar() {
                         {/* EU Flag */}
                         <Link href="/projekty-unijne">
                             <div className="w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                                <Lottie animationData={euFlagData} loop={true} />
+                                <Lottie animationData={euFlagData} loop={true} style={{ pointerEvents: "none" }} />
                             </div>
                         </Link>
 
@@ -185,12 +185,25 @@ export default function Navbar() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className="flex flex-col items-center gap-4 mt-0 mb-8"
+                            className="flex flex-col items-center gap-4 mt-0 mb-8 w-full"
                         >
                             <div className={cn("w-16 h-px", "bg-slate-200 dark:bg-slate-800")} />
-                            <div className="flex items-center gap-4">
-                                <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">{t("nav", "language")}</span>
-                                <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">{t("nav", "language")}</span>
+                                    <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} />
+                                </div>
+                                <div className="h-6 w-px bg-slate-200 dark:bg-slate-800 hidden sm:block" />
+                                <Link
+                                    href="/projekty-unijne"
+                                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50/50 dark:bg-blue-950/20 text-slate-700 dark:text-slate-300 hover:bg-blue-100 transition-colors"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    <div className="w-6 h-6 flex items-center justify-center">
+                                        <Lottie animationData={euFlagData} loop={true} style={{ pointerEvents: "none" }} />
+                                    </div>
+                                    <span className="text-xs font-semibold uppercase tracking-wider">{t("nav", "euProjects")}</span>
+                                </Link>
                             </div>
                         </motion.div>
                     </motion.div>

@@ -42,3 +42,4 @@ next-env.d.ts
 
 # image backups
 /public/images/originals/
+.agent-config.sh
