@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function Footer() {
     const { t } = useLanguage();
@@ -14,7 +15,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center md:items-start">
                     <Link href="/" className="relative h-20 w-64 md:h-24 md:w-80 mb-6 md:mb-8 block">
                         <Image
-                            src="/images/logo-poziom.svg"
+                            src={getAssetPath("/images/logo-poziom.svg")}
                             alt="Mazury.Holiday"
                             fill
                             className="object-contain object-center md:object-left opacity-90 transition-all duration-300 dark:brightness-0 dark:invert"
@@ -55,8 +56,8 @@ export default function Footer() {
                             <div className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0 border border-slate-200 dark:border-slate-700">
                                 <Phone size={18} />
                             </div>
-                            <a href="tel:+48607241090" className="text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-white transition-colors font-medium text-left whitespace-nowrap">
-                                +48 607 241 090
+                            <a href="tel:+48730067027" className="text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-white transition-colors font-medium text-left whitespace-nowrap">
+                                +48 730 067 027
                             </a>
                         </li>
                         <li className="flex items-center gap-4 group">

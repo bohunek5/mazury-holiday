@@ -8,6 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Handshake, TrendingUp, ShieldCheck, Sparkles, MessageCircle } from "lucide-react";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 export default function CooperationPage() {
     const { t } = useLanguage();
 
@@ -42,7 +44,7 @@ export default function CooperationPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src="/images/DJI_0109_optimized.webp"
+                    src={getAssetPath("/images/DJI_0109_optimized.webp")}
                     alt="Współpraca Mazury Holiday"
                     fill
                     className="object-cover"
@@ -92,7 +94,7 @@ export default function CooperationPage() {
                         className="relative rounded-3xl overflow-hidden shadow-2xl h-[600px]"
                     >
                         <Image
-                            src="/images/stranda/A103_images/A103 salonn.webp"
+                            src={getAssetPath("/images/stranda/A103_images/A103 salonn.webp")}
                             alt="Luxury management"
                             fill
                             className="object-cover"
@@ -141,6 +143,7 @@ export default function CooperationPage() {
                     </Link>
                 </div>
             </section>
+
 
             <Footer />
         </main>

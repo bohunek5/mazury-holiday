@@ -10,6 +10,8 @@ import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
 import { kisajnoData } from "@/data/kisajno-data";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 const lowestStrandaPrice = Math.min(...Object.values(strandaApartments).map((apartment) => apartment.price));
 const lowestFuledaPrice = Math.min(...Object.values(fuledaApartments).map((apartment) => apartment.price));
 
@@ -21,7 +23,7 @@ export default function ApartmentsHub() {
             id: "stranda",
             title: t("apartments", "items.stranda.title"),
             description: t("apartments", "items.stranda.description"),
-            image: "/images/stranda/C304/C304_1.webp",
+            image: getAssetPath("/images/stranda/C304/C304_1.webp"),
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
             price: `${lowestStrandaPrice} zł`
@@ -30,7 +32,7 @@ export default function ApartmentsHub() {
             id: "kisajno",
             title: t("apartments", "items.kisajno.title"),
             description: t("apartments", "items.kisajno.description"),
-            image: "/images/kisajno/kisajno_1.webp",
+            image: getAssetPath("/images/kisajno/kisajno_1.webp"),
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
             price: `${kisajnoData.price} zł`
@@ -39,7 +41,7 @@ export default function ApartmentsHub() {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
             description: t("apartments", "items.fuleda.description"),
-            image: "/images/fuleda/pietro/Fuleda pietro1.webp",
+            image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: `${lowestFuledaPrice} zł`
@@ -55,7 +57,7 @@ export default function ApartmentsHub() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/apartments_2.webp"
+                        src={getAssetPath("/images/apartments_2.webp")}
                         alt="Apartamenty"
                         fill
                         className="object-cover"
@@ -83,11 +85,12 @@ export default function ApartmentsHub() {
                                 className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
-                                    src={apt.image}
+                                    src={getAssetPath(apt.image)}
                                     alt={apt.title}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
+
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
 
                                 <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">

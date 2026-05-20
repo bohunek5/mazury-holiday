@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 interface BannerData {
     content: {
         headline: string;
@@ -47,7 +49,7 @@ export function SkorupkiPopupClient() {
         }
 
         console.log("Fetching popup data...");
-        fetch("/skorupki-popup.json")
+        fetch(getAssetPath("/skorupki-popup.json"))
             .then((res) => {
                 if (!res.ok) throw new Error("JSON not found");
                 return res.json();
@@ -76,7 +78,7 @@ export function SkorupkiPopupClient() {
                 {/* Tło: Obrazek (zastepczy, bo w JSON brak) + Gradient */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/apartments_2.webp"
+                        src={getAssetPath("/images/apartments_2.webp")}
                         alt="Background"
                         className="w-full h-full object-cover transition-transform duration-[2s] scale-105 group-hover:scale-110"
                     />
@@ -102,7 +104,7 @@ export function SkorupkiPopupClient() {
                     {/* Logo MH */}
                     <div className="animate-in fade-in slide-in-from-top-4 duration-700 delay-100 mb-8">
                         <img
-                            src="/images/logo-poziom.svg"
+                            src={getAssetPath("/images/logo-poziom.svg")}
                             alt="Mazury Holiday"
                             className="h-16 md:h-20 w-auto object-contain drop-shadow-xl mx-auto"
                         />

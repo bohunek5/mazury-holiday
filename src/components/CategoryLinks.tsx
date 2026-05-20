@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAssetPath } from "@/utils/assetPath";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -14,28 +15,28 @@ export default function CategoryLinks() {
             id: "apartments",
             title: t("categories", "apartments"),
             href: "/apartamenty",
-            image: "/images/stranda/A103_images/A103 salonn.webp",
+            image: getAssetPath("/images/stranda/A103_images/A103 salonn.webp"),
             icon: <Building2 className="w-6 h-6" />,
         },
         {
             id: "cottages",
             title: t("categories", "cottages"),
             href: "/domki",
-            image: "/images/skorupki/skorupki_1.webp",
+            image: getAssetPath("/images/skorupki/skorupki_1.webp"),
             icon: <Home className="w-6 h-6" />,
         },
         {
             id: "rooms",
             title: t("categories", "rooms"),
             href: "/pokoje",
-            image: "/images/hero_bg.webp",
+            image: getAssetPath("/images/hero_bg.webp"),
             icon: <Bed className="w-6 h-6" />,
         },
         {
             id: "charter",
             title: t("categories", "charter"),
             href: "/czarter",
-            image: "/images/czarter/main.webp",
+            image: getAssetPath("/images/czarter/main.webp"),
             icon: <Anchor className="w-6 h-6" />,
         },
     ];

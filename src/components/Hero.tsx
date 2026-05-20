@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Phone, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAssetPath } from "@/utils/assetPath";
 import TypewriterTitle from "./TypewriterTitle";
 
 export default function Hero() {
@@ -19,7 +20,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/images/apartments_2.webp"
+          src={getAssetPath("/images/apartments_2.webp")}
           alt="Mazury Landscape"
           fill
           priority
@@ -54,9 +55,14 @@ export default function Hero() {
 
       </div>
 
-      <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
         <button 
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
           className="flex flex-col items-center gap-3 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
         >
           <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause" />

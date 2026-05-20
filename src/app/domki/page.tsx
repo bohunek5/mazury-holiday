@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { skorupkiData } from "@/data/skorupki-data";
 import { cottagesData } from "@/data/cottages-data";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function DomkiPage() {
     const { t } = useLanguage();
@@ -18,7 +19,7 @@ export default function DomkiPage() {
     const [galleryExpanded, setGalleryExpanded] = useState(false);
 
     const galleryIndices = Array.from({ length: 55 }, (_, i) => i + 4); // 4 to 58
-    const galleryImages = galleryIndices.map(num => `/images/skorupki/skorupki_${num}.webp`);
+    const galleryImages = galleryIndices.map(num => getAssetPath(`/images/skorupki/skorupki_${num}.webp`));
 
     const openLightbox = (index: number) => {
         setLightboxIndex(index);
@@ -32,7 +33,8 @@ export default function DomkiPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/images/skorupki/skorupki_1.webp')]"
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url('${getAssetPath('/images/skorupki/skorupki_1.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
@@ -70,7 +72,7 @@ export default function DomkiPage() {
                     <div className="space-y-4">
                         <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/skorupki/skorupki_2.webp"
+                                src={getAssetPath("/images/skorupki/skorupki_2.webp")}
                                 alt="Domki Skorupki wnętrze"
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -78,7 +80,7 @@ export default function DomkiPage() {
                         </div>
                         <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl">
                             <Image
-                                src="/images/skorupki/skorupki_3.webp"
+                                src={getAssetPath("/images/skorupki/skorupki_3.webp")}
                                 alt="Domki Skorupki okolica"
                                 fill
                                 className="object-cover"
@@ -96,7 +98,7 @@ export default function DomkiPage() {
                                 <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800 h-full flex flex-col">
                                     <div className="relative h-64 overflow-hidden">
                                         <Image
-                                            src={cottage.heroImage}
+                                            src={getAssetPath(cottage.heroImage)}
                                             alt={cottage.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -119,7 +121,7 @@ export default function DomkiPage() {
                                         <div className="flex gap-2 mb-4 flex-wrap">
                                             {cottage.highlights.slice(0, 4).map((h) => (
                                                 <div key={h.label} title={h.label} className="relative w-7 h-7 bg-slate-50 dark:bg-slate-800 rounded-lg p-1">
-                                                    <Image src={`/icons/${h.icon}`} alt={h.label} fill className="object-contain dark:invert p-1" />
+                                                    <Image src={h.icon} alt={h.label} fill className="object-contain dark:invert p-1" />
                                                 </div>
                                             ))}
                                         </div>
@@ -147,7 +149,7 @@ export default function DomkiPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/ROOM.svg" alt="Domki" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/ROOM.svg")} alt="Domki" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Wyposażenie</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -157,7 +159,7 @@ export default function DomkiPage() {
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/LOCATION.svg" alt="Teren" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Teren" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Teren i Relaks</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -167,7 +169,7 @@ export default function DomkiPage() {
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/PARKING.svg" alt="Udogodnienia" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/PARKING.svg")} alt="Udogodnienia" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Dostępność</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -189,7 +191,7 @@ export default function DomkiPage() {
                                 onClick={() => openLightbox(idx)}
                             >
                                 <Image
-                                    src={`/images/skorupki/skorupki_${num}.webp`}
+                                    src={getAssetPath(`/images/skorupki/skorupki_${num}.webp`)}
                                     alt={`Domki Skorupki - widok ${num}`}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -218,7 +220,7 @@ export default function DomkiPage() {
                                         onClick={() => openLightbox(idx + 3)}
                                     >
                                         <Image
-                                            src={`/images/skorupki/skorupki_${num}.webp`}
+                                            src={getAssetPath(`/images/skorupki/skorupki_${num}.webp`)}
                                             alt={`Domki Skorupki - widok ${num}`}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -233,7 +235,10 @@ export default function DomkiPage() {
                 </div>
 
                 <div className="bg-slate-900 text-white p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-20 bg-[url('/images/skorupki/skorupki_1.webp')] bg-cover bg-center" />
+                    <div 
+                        className="absolute inset-0 opacity-20 bg-cover bg-center" 
+                        style={{ backgroundImage: `url('${getAssetPath('/images/skorupki/skorupki_1.webp')}')` }}
+                    />
                     <div className="relative z-10">
                         <h3 className="text-4xl font-playfair mb-6">{t('skorupki', 'ctaTitle')}</h3>
                         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">

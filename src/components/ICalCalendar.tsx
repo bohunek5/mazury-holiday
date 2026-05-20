@@ -109,7 +109,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             const fetchWithRetry = async (url: string, retries = 2) => {
                 for (let i = 0; i < retries; i++) {
                     try {
-                        const response = await fetch(url);
+                        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                        const response = await fetch(proxyUrl);
                         if (!response.ok) throw new Error(`HTTP ${response.status}`);
                         const text = await response.text();
                         if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");

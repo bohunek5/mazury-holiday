@@ -8,6 +8,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 export default function RoomsPage() {
 
     const { language } = useLanguage();
@@ -27,7 +29,7 @@ export default function RoomsPage() {
             id: "fuleda",
             title: fuledaTrans.title,
             description: fuledaTrans.description,
-            image: "/images/pokoje_fuleda/pokoje/pokoje_1.webp",
+            image: getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_1.webp"),
             link: "/pokoje/fuleda",
             price: "od 375 zł/doba",
             features: fuledaTrans.features,
@@ -45,7 +47,7 @@ export default function RoomsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 {/* Removed overlay to fix foggy look */}
                 <Image
-                    src="/images/pokoje_fuleda/pokoje/pokoje_1.webp"
+                    src={getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_1.webp")}
                     alt={trans.heroTitle}
                     fill
                     className="object-cover"
@@ -73,11 +75,12 @@ export default function RoomsPage() {
                                 {/* Image */}
                                 <Link href={room.link} className="relative h-64 md:h-auto w-full overflow-hidden block">
                                     <Image
-                                        src={room.image}
+                                        src={getAssetPath(room.image)}
                                         alt={room.title}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
+
                                 </Link>
 
                                 {/* Content */}

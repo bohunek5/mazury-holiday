@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { getAssetPath } from "@/utils/assetPath";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
@@ -28,7 +29,7 @@ export default function LuxuryBenefits() {
                 className="absolute -inset-[20%] z-0"
             >
                 <Image
-                    src="/images/DJI_0017_optimized.webp"
+                    src={getAssetPath("/images/DJI_0017_optimized.webp")}
                     alt="Luxury background"
                     fill
                     className="object-cover"

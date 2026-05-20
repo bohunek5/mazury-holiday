@@ -9,18 +9,20 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fuledaApartments } from "@/data/fuleda-data";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 export default function FuledaPage() {
     const { t } = useLanguage();
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
     const galleryImages = [
-        "/images/fuleda/Front Apartamenty.webp",
-        "/images/fuleda/front apartamenty jeziorko.webp",
-        "/images/fuleda/jeziorko.webp",
-        "/images/fuleda/linia plaza.webp",
-        "/images/fuleda/plaza cdd.webp",
-        "/images/fuleda/fuleda_1.webp"
+        getAssetPath("/images/fuleda/Front Apartamenty.webp"),
+        getAssetPath("/images/fuleda/front apartamenty jeziorko.webp"),
+        getAssetPath("/images/fuleda/jeziorko.webp"),
+        getAssetPath("/images/fuleda/linia plaza.webp"),
+        getAssetPath("/images/fuleda/plaza cdd.webp"),
+        getAssetPath("/images/fuleda/fuleda_1.webp")
     ];
 
     const apartments = [
@@ -28,14 +30,14 @@ export default function FuledaPage() {
             id: 'parter',
             title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
             guests: fuledaApartments.parter.guests,
-            image: fuledaApartments.parter.gallery.heroImage,
+            image: getAssetPath(fuledaApartments.parter.gallery.heroImage),
             features: fuledaApartments.parter.amenities.terrace.slice(0, 4)
         },
         {
             id: 'pietro',
             title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
             guests: fuledaApartments.pietro.guests,
-            image: fuledaApartments.pietro.gallery.heroImage,
+            image: getAssetPath(fuledaApartments.pietro.gallery.heroImage),
             features: fuledaApartments.pietro.amenities.terrace.slice(0, 4)
         }
     ];
@@ -50,7 +52,7 @@ export default function FuledaPage() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/fuleda/parter/Fuleda parter1.webp"
+                        src={getAssetPath("/images/fuleda/parter/Fuleda parter1.webp")}
                         alt="Fuleda"
                         fill
                         className="object-cover"
@@ -75,7 +77,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/images/fuleda/Front Apartamenty.webp" alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src={getAssetPath("/images/fuleda/Front Apartamenty.webp")} alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                             <div
                                 className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mt-12 cursor-pointer group"
@@ -84,7 +86,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src="/images/fuleda/jeziorko.webp" alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src={getAssetPath("/images/fuleda/jeziorko.webp")} alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                         </div>
                     </div>
@@ -123,11 +125,12 @@ export default function FuledaPage() {
                             >
                                 <div className="relative h-64">
                                     <Image
-                                        src={apartment.image}
+                                        src={getAssetPath(apartment.image)}
                                         alt={apartment.title}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
+
                                     <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold">
                                         {apartment.guests} osoby
                                     </div>

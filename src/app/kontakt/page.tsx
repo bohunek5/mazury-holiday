@@ -7,6 +7,8 @@ import { MapPin, Phone, Mail, Send, Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 
+import { getAssetPath } from "@/utils/assetPath";
+
 const locations = [
     {
         title: "Apartamenty Stranda Residence & Czarter",
@@ -48,7 +50,7 @@ export default function ContactPage() {
         };
 
         try {
-            const response = await fetch("/api-contact", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
@@ -74,7 +76,8 @@ export default function ContactPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-[url('/images/DJI_0059_optimized.webp')]"
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url('${getAssetPath('/images/DJI_0059_optimized.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>

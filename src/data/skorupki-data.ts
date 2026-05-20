@@ -1,3 +1,4 @@
+import { getAssetPath } from '@/utils/assetPath';
 export type SkorupkiData = {
     id: string;
     title: string;
@@ -19,7 +20,7 @@ export const skorupkiData: SkorupkiData = {
     unitsCount: 10,
     description: "Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.",
     gallery: {
-        heroImage: "/images/skorupki/skorupki_1.webp",
+        heroImage: getAssetPath("/images/skorupki/skorupki_1.webp"),
         images: []
     }
 };

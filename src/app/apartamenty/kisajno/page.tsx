@@ -8,6 +8,7 @@ import ICalCalendar from "@/components/ICalCalendar";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { kisajnoData } from "@/data/kisajno-data";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function KisajnoPage() {
     const { t } = useLanguage();
@@ -30,7 +31,7 @@ export default function KisajnoPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/DJI_0017_optimized.webp"
+                        src={getAssetPath("/images/DJI_0017_optimized.webp")}
                         alt="Kisajno Hero"
                         fill
                         className="object-cover"
@@ -149,7 +150,7 @@ export default function KisajnoPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/ROOM.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/ROOM.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Komfort i Multimedia</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -159,7 +160,7 @@ export default function KisajnoPage() {
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/CUTLERY.svg" alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia i Wyposażenie</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -169,7 +170,7 @@ export default function KisajnoPage() {
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                             <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src="/icons/LOCATION.svg" alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
+                                <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Otoczenie</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">

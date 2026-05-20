@@ -1,11 +1,12 @@
 import CottageDetailsClient from "@/components/CottageDetailsClient";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
     return Array.from({ length: 10 }, (_, i) => ({
         id: (i + 1).toString(),
     }));
 }
 
-export default function Page({ params }: { params: { id: string } }) {
-    return <CottageDetailsClient id={params.id} />;
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    return <CottageDetailsClient id={id} />;
 }

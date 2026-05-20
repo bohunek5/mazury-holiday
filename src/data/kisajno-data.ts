@@ -1,3 +1,4 @@
+import { getAssetPath } from '@/utils/assetPath';
 export type KisajnoData = {
     id: string;
     title: string;
@@ -30,19 +31,19 @@ export const kisajnoData: KisajnoData = {
         "Port Neptun"
     ],
     gallery: {
-        heroImage: "/images/kisajno/kisajno_1.webp",
+        heroImage: getAssetPath("/images/kisajno/kisajno_1.webp"),
         images: [
-            "/images/kisajno/kisajno_1.webp",
-            "/images/kisajno/kisajno_2.webp",
-            "/images/kisajno/kisajno_3.webp",
-            "/images/kisajno/kisajno_4.webp",
-            "/images/kisajno/kisajno_5.webp",
-            "/images/kisajno/kisajno_6.webp",
-            "/images/kisajno/kisajno_7.webp",
-            "/images/kisajno/kisajno_8.webp",
-            "/images/kisajno/kisajno_9.webp",
-            "/images/kisajno/kisajno_10.webp",
-            "/images/kisajno/kisajno_11.webp"
+            getAssetPath("/images/kisajno/kisajno_1.webp"),
+            getAssetPath("/images/kisajno/kisajno_2.webp"),
+            getAssetPath("/images/kisajno/kisajno_3.webp"),
+            getAssetPath("/images/kisajno/kisajno_4.webp"),
+            getAssetPath("/images/kisajno/kisajno_5.webp"),
+            getAssetPath("/images/kisajno/kisajno_6.webp"),
+            getAssetPath("/images/kisajno/kisajno_7.webp"),
+            getAssetPath("/images/kisajno/kisajno_8.webp"),
+            getAssetPath("/images/kisajno/kisajno_9.webp"),
+            getAssetPath("/images/kisajno/kisajno_10.webp"),
+            getAssetPath("/images/kisajno/kisajno_11.webp")
         ]
     },
     idoBookingId: "45",

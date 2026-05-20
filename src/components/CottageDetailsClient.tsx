@@ -9,6 +9,7 @@ import { useState } from "react";
 import ImageLightbox from "@/components/ImageLightbox";
 import { Users, BedDouble, Bath, Maximize2, ChevronLeft, ChevronRight, Phone, Mail } from "lucide-react";
 import { getCottageById } from "@/data/cottages-data";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function CottageDetailsClient({ id }: { id: string }) {
     const { t } = useLanguage();
@@ -24,7 +25,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
     const galleryCount = 12;
     const galleryImages = Array.from({ length: galleryCount }, (_, i) => {
         const idx = ((galleryStart + i - 1) % 55) + 4;
-        return `/images/skorupki/skorupki_${idx}.webp`;
+        return getAssetPath(`/images/skorupki/skorupki_${idx}.webp`);
     });
 
     const openLightbox = (index: number) => {
@@ -128,7 +129,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                         {cottage.highlights.map((h) => (
                             <div key={h.label} className="flex items-center gap-2 flex-shrink-0">
                                 <div className="relative w-6 h-6">
-                                    <Image src={`/icons/${h.icon}`} alt={h.label} fill className="object-contain dark:invert" />
+                                    <Image src={h.icon} alt={h.label} fill className="object-contain dark:invert" />
                                 </div>
                                 <span className="text-sm text-slate-700 dark:text-slate-300 whitespace-nowrap">{h.label}</span>
                             </div>
@@ -166,7 +167,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                         }`}
                                     >
                                         <div className={`relative w-4 h-4 ${activeTab === idx ? "" : "dark:invert"}`}>
-                                            <Image src={`/icons/${cat.icon}`} alt={cat.category} fill className={`object-contain ${activeTab === idx ? "invert" : ""}`} />
+                                            <Image src={cat.icon} alt={cat.category} fill className={`object-contain ${activeTab === idx ? "invert" : ""}`} />
                                         </div>
                                         {cat.category}
                                     </button>
@@ -178,7 +179,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="relative w-14 h-14 bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-3">
                                         <Image
-                                            src={`/icons/${cottage.amenities[activeTab].icon}`}
+                                            src={cottage.amenities[activeTab].icon}
                                             alt={cottage.amenities[activeTab].category}
                                             fill
                                             className="object-contain p-2"
@@ -208,7 +209,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                             className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 text-left hover:border-amber-300 transition-colors group"
                                         >
                                             <div className="relative w-8 h-8 mb-2">
-                                                <Image src={`/icons/${cat.icon}`} alt={cat.category} fill className="object-contain dark:invert opacity-70 group-hover:opacity-100 transition-opacity" />
+                                                <Image src={cat.icon} alt={cat.category} fill className="object-contain dark:invert opacity-70 group-hover:opacity-100 transition-opacity" />
                                             </div>
                                             <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{cat.category}</p>
                                             <p className="text-xs text-slate-400">{cat.items.length} pozycji</p>
@@ -229,7 +230,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                         onClick={() => openLightbox(idx)}
                                     >
                                         <Image
-                                            src={src}
+                                            src={getAssetPath(src)}
                                             alt={`${cottage.name} - zdjęcie ${idx + 1}`}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-700"
