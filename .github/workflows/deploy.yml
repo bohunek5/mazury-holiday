@@ -35,6 +35,7 @@ jobs:
         env:
           CI: false
           NEXT_TELEMETRY_DISABLED: 1
+          DEPLOY_TARGET: github-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
