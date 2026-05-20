@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
 import { kisajnoData } from "@/data/kisajno-data";
+import { mikolajkiData } from "@/data/mikolajki-data";
 
 import { getAssetPath } from "@/utils/assetPath";
 
@@ -36,6 +37,15 @@ export default function ApartmentsHub() {
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
             price: `${kisajnoData.price} zł`
+        },
+        {
+            id: "mikolajki",
+            title: t("apartments", "items.mikolajki.title"),
+            description: t("apartments", "items.mikolajki.description"),
+            image: getAssetPath("/images/mikolajki/hero.webp"),
+            link: "/apartamenty/mikolajki",
+            location: t("apartments", "items.mikolajki.location"),
+            price: `${mikolajkiData.price} zł`
         },
         {
             id: "fuleda",

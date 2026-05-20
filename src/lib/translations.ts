@@ -25,7 +25,8 @@ export const translations = {
                 kisajno: { title: "Apartamenty Kisajno (Giżycko)", location: "Al. Wojska Polskiego 35, Giżycko", description: "Luksus nad brzegiem jeziora Kisajno." },
                 fuleda: { title: "Apartamenty Fuleda (Fuleda)", location: "Fuleda, Jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
                 domkiSkorupki: { title: "Domki Skorupki (Skorupki)", location: "Skorupki, k. Giżycka", description: "Luksusowe domki w sercu mazurskiej natury." },
-                pokojeFuleda: { title: "Pokoje Fuleda (Fuleda)", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." }
+                pokojeFuleda: { title: "Pokoje Fuleda (Fuleda)", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." },
+                mikolajki: { title: "Apartament Gigu Mikołajki", location: "Plac Wolności, Mikołajki", description: "Nowoczesny apartament w samym centrum Mikołajek." }
             }
         },
         cottagesAndRooms: {
@@ -200,6 +201,29 @@ export const translations = {
                 dishwasher: "Zmywarka",
                 parking: "Parking",
                 port: "Port Neptun"
+            }
+        },
+        mikolajkiPage: {
+            title: "Apartament Gigu Mikołajki",
+            subtitle: "Centrum Mikołajek – Plac Wolności",
+            introTitle: "Komfortowy apartament w sercu Mikołajek",
+            description: "Nowoczesny i komfortowy apartament położony w samym sercu Mikołajek, przy Placu Wolności – idealna lokalizacja dla osób, które chcą mieć wszystko „pod ręką”. Apartament przeznaczony jest dla maksymalnie 4 osób i składa się z przytulnej sypialni z wygodnym łóżkiem podwójnym, salonu z rozkładaną sofą (dodatkowe miejsca do spania), w pełni wyposażonego aneksu kuchennego oraz nowoczesnej łazienki.",
+            priceLabel: "Cena od",
+            priceValue: "350 PLN",
+            priceUnit: "/ doba",
+            amenitiesTitle: "Udogodnienia",
+            bookingTitle: "Zarezerwuj swój pobyt",
+            bookingDesc: "Skontaktuj się z nami bezpośrednio lub dokonaj natychmiastowej rezerwacji online za pomocą przycisku poniżej.",
+            callAction: "Zadzwoń",
+            amenities: {
+                view: "Widok na dziedziniec",
+                ac: "Klimatyzacja",
+                smartTv: "Smart TV",
+                wifi: "Bezpłatne WiFi",
+                kitchen: "Aneks kuchenny",
+                dishwasher: "Zmywarka",
+                parking: "Centrum miasta",
+                port: "Blisko jeziora"
             }
         },
         fuledaPage: {
@@ -466,7 +490,8 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxury on the shores of Lake Kisajno." },
                 fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "An oasis of peace away from the city." },
                 domkiSkorupki: { title: "Skorupki Cottages", location: "Skorupki, near Giżycko", description: "Luxury cottages in the heart of Masurian nature." },
-                pokojeFuleda: { title: "Fuleda Rooms", location: "Fuleda, Lake Dobskie", description: "Cozy rooms with a lake view in the quiet zone." }
+                pokojeFuleda: { title: "Fuleda Rooms", location: "Fuleda, Lake Dobskie", description: "Cozy rooms with a lake view in the quiet zone." },
+                mikolajki: { title: "Gigu Apartment Mikołajki", location: "Plac Wolności, Mikołajki", description: "Modern apartment in the very center of Mikołajki." }
             }
         },
         cottagesAndRooms: {
@@ -616,6 +641,29 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 dishwasher: "Dishwasher",
                 parking: "Parking",
                 port: "Port Neptun"
+            }
+        },
+        mikolajkiPage: {
+            title: "Gigu Apartment Mikołajki",
+            subtitle: "Mikołajki Center – Wolności Square",
+            introTitle: "Comfortable apartment in the heart of Mikołajki",
+            description: "A modern and comfortable apartment located in the very heart of Mikołajki, at Wolności Square – the perfect location for guests who want everything close by. The apartment is designed for up to 4 guests and features a cozy bedroom with a comfortable double bed, a living room with a sofa bed (additional sleeping space), a fully equipped kitchenette, and a modern bathroom.",
+            priceLabel: "Price from",
+            priceValue: "350 PLN",
+            priceUnit: "/ night",
+            amenitiesTitle: "Amenities",
+            bookingTitle: "Book your stay",
+            bookingDesc: "Contact us directly or make an instant online booking using the button below.",
+            callAction: "Call",
+            amenities: {
+                view: "Courtyard view",
+                ac: "Air conditioning",
+                smartTv: "Smart TV",
+                wifi: "Free WiFi",
+                kitchen: "Kitchenette",
+                dishwasher: "Dishwasher",
+                parking: "City center",
+                port: "Close to the lake"
             }
         },
         fuledaPage: {
@@ -860,7 +908,8 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 kisajno: { title: "Kisajno Apartments", location: "Giżycko", description: "Luxus am Kisajno-See." },
                 fuleda: { title: "Fuleda Apartments", location: "Fuleda", description: "Ruheoase in der Natur." },
                 domkiSkorupki: { title: "Ferienhäuser Skorupki", location: "Skorupki, bei Giżycko", description: "Luxuriöse Ferienhäuser im Herzen der masurischen Natur." },
-                pokojeFuleda: { title: "Fuleda Zimmer", location: "Fuleda, Dobskie-See", description: "Gemütliche Zimmer mit Seeblick in der Stille-Zone." }
+                pokojeFuleda: { title: "Fuleda Zimmer", location: "Fuleda, Dobskie-See", description: "Gemütliche Zimmer mit Seeblick in der Stille-Zone." },
+                mikolajki: { title: "Gigu Apartment Mikołajki", location: "Plac Wolności, Mikołajki", description: "Modernes Apartment im Zentrum von Mikołajki." }
             }
         },
         cottagesAndRooms: {
@@ -1198,7 +1247,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             flexible: { title: "Reserva flexible", desc: "Entendemos que no todos los viajes pueden planificarse por completo. Por eso ofrecemos condiciones flexibles de reserva y cancelación." }
         },
         intro: { tag: "Mazury.Holiday", title: "Bienvenido a", titleHighlight: "Grandes Lagos", p1: "Descubra la magia de Masuria.", p2: "Ya sea descanso en Giżycko o lujo en Fuleda." },
-        apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." }, domkiSkorupki: { title: "Cabañas Skorupki", location: "Skorupki, cerca de Giżycko", description: "Cabañas de lujo en el corazón de la naturaleza de Masuria." }, pokojeFuleda: { title: "Habitaciones Fuleda", location: "Fuleda, Lago Dobskie", description: "Habitaciones acogedoras con vista al lago en zona de silencio." } } },
+        apartments: { title: "Nuestros Apartamentos", description: "Elija el lugar perfecto.", details: "Detalles", pricePrefix: "desde", night: "noche", people: "pers.", items: { stranda: { title: "Apartamentos Stranda", location: "Giżycko", description: "Confort en el puerto Stranda." }, kisajno: { title: "Apartamentos Kisajno", location: "Giżycko", description: "Lujo en el lago Kisajno." }, fuleda: { title: "Apartamentos Fuleda", location: "Fuleda", description: "Oasis de paz." }, domkiSkorupki: { title: "Cabañas Skorupki", location: "Skorupki, cerca de Giżycko", description: "Cabañas de lujo en el corazón de la naturaleza de Masuria." }, pokojeFuleda: { title: "Habitaciones Fuleda", location: "Fuleda, Lago Dobskie", description: "Habitaciones acogedoras con vista al lago en zona de silencio." }, mikolajki: { title: "Apartamento Gigu Mikołajki", location: "Plac Wolności, Mikołajki", description: "Moderno apartamento en el centro de Mikołajki." } } },
         cottagesAndRooms: {
             title: "Nuestras cabañas y habitaciones",
             description: "Siente la cercanía de la naturaleza en condiciones confortables."
@@ -1501,7 +1550,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota", language: "Lingua", back: "Indietro" },
         hero: { title: "Vacanze in Masuria", subtitle: "MOMENTI UNICI", apartmentsBtn: "I nostri appartamenti", charterBtn: "Noleggio Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Benvenuti nei", titleHighlight: "Grandi Laghi", p1: "Scopri la magia della Masuria.", p2: "Relax a Giżycko o lusso a Fuleda." },
-        apartments: { title: "Appartamenti", description: "Scegli il posto perfetto.", details: "Dettagli", pricePrefix: "da", night: "notte", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Comfort al porto." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lusso sul lago." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasi di pace." }, domkiSkorupki: { title: "Case Skorupki", location: "Skorupki, vicino a Giżycko", description: "Case di lusso nel cuore della natura masuriana." }, pokojeFuleda: { title: "Camere Fuleda", location: "Fuleda, Lago Dobskie", description: "Camere accoglienti con vista lago in zona di silenzio." } } },
+        apartments: { title: "Appartamenti", description: "Scegli il posto perfetto.", details: "Dettagli", pricePrefix: "da", night: "notte", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Comfort al porto." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lusso sul lago." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasi di pace." }, domkiSkorupki: { title: "Case Skorupki", location: "Skorupki, vicino a Giżycko", description: "Case di lusso nel cuore della natura masuriana." }, pokojeFuleda: { title: "Camere Fuleda", location: "Fuleda, Lago Dobskie", description: "Camere accoglienti con vista lago in zona di silenzio." }, mikolajki: { title: "Appartamento Gigu Mikołajki", location: "Plac Wolności, Mikołajki", description: "Moderno appartamento nel centro di Mikołajki." } } },
         cottagesAndRooms: {
             title: "Le nostre case e camere",
             description: "Senti la vicinanza della natura in condizioni confortevoli."
@@ -1713,7 +1762,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver", language: "Langue", back: "Retour" },
         hero: { title: "Vacances en Mazurie", subtitle: "MOMENTS UNIQUES", apartmentsBtn: "Nos Appartements", charterBtn: "Location de Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenue aux", titleHighlight: "Grands Lacs", p1: "Découvrez la magie de la Mazurie.", p2: "Repos à Giżycko ou luxe à Fuleda." },
-        apartments: { title: "Nos Appartements", description: "Choisissez l'endroit idéal.", details: "Détails", pricePrefix: "dès", night: "nuit", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Confort au port." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxe sur le lac." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasis de paix." }, domkiSkorupki: { title: "Chalets Skorupki", location: "Skorupki, près de Giżycko", description: "Chalets de luxe au cœur de la nature masurienne." }, pokojeFuleda: { title: "Chambres Fuleda", location: "Fuleda, Lac Dobskie", description: "Chambres douillettes avec vue sur le lac en zone de silence." } } },
+        apartments: { title: "Nos Appartements", description: "Choisissez l'endroit idéal.", details: "Détails", pricePrefix: "dès", night: "nuit", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Confort au port." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxe sur le lac." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oasis de paix." }, domkiSkorupki: { title: "Chalets Skorupki", location: "Skorupki, près de Giżycko", description: "Chalets de luxe au cœur de la nature masurienne." }, pokojeFuleda: { title: "Chambres Fuleda", location: "Fuleda, Lac Dobskie", description: "Chambres douillettes avec vue sur le lac en zone de silence." }, mikolajki: { title: "Appartement Gigu Mikołajki", location: "Plac Wolności, Mikołajki", description: "Appartement moderne au centre de Mikołajki." } } },
         cottagesAndRooms: {
             title: "Nos chalets et chambres",
             description: "Ressentez la proximité de la nature dans des conditions confortables."
@@ -1863,7 +1912,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             gifts: { title: "Startovací balíček", desc: "Pro každého našeho hosta jsme připravili malý dárek, který je součástí naší nabídky dovolené v apartmánech" },
             flexible: { title: "Flexibilní rezervace", desc: "Chápeme, že ne každý výlet lze plně naplánovat. Proto nabízíme flexibilní podmínky rezervace a zrušení" }
         },
-        apartments: { title: "Naše Apartmány", description: "Vyberte si místo.", details: "Podrobnosti", pricePrefix: "od", night: "noc", people: "os.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort v přístavu." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxus u jezera." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oáza klidu." }, domkiSkorupki: { title: "Domky Skorupki", location: "Skorupki, u Giżycka", description: "Luxusní domky v srdci mazurské přírody." }, pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezero Dobské", description: "Útulné pokoje s výhledem na jezero v klidové zóně." } } },
+        apartments: { title: "Naše Apartmány", description: "Vyberte si místo.", details: "Podrobnosti", pricePrefix: "od", night: "noc", people: "os.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort v přístavu." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luxus u jezera." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oáza klidu." }, domkiSkorupki: { title: "Domky Skorupki", location: "Skorupki, u Gižky", description: "Luxusní domky v srdci mazurské přírody." }, pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezero Dobské", description: "Útulné pokoje s výhledem na jezero v klidové zóně." } } },
         cottagesAndRooms: {
             title: "Naše domky a pokoje",
             description: "Pociťte blízkost přírody v komfortních podmínkách."
@@ -2208,7 +2257,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             gifts: { title: "Pradinis rinkinys", desc: "Kiekvienam mūsų svečiui paruošėme nedidelę dovaną, kuri yra mūsų atostogų pasiūlymo apartamentuose dalis" },
             flexible: { title: "Lanksti rezervacija", desc: "Suprantame, kad ne kiekviena kelionė gali būti visiškai suplanuota. Todėl siūlome lanksčias rezervavimo ir atšaukimo sąlygas" }
         },
-        apartments: { title: "Mūsų Apartamentai", description: "Pasirinkite vietą.", details: "Detalės", pricePrefix: "nuo", night: "naktis", people: "žm.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfortas uoste." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Prabanga." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Ramybės oazė." }, domkiSkorupki: { title: "Skorupki Nameliai", location: "Skorupki, šalia Gižycko", description: "Prabangūs nameliai Mozūrijos gamtoje." }, pokojeFuleda: { title: "Fuleda Kambariai", location: "Fuleda, Dobskie ežeras", description: "Jaukūs kambariai su vaizdu į ežerą tylos zonoje." } } },
+        apartments: { title: "Mūsų Apartamentai", description: "Pasirinkite vietą.", details: "Detalės", pricePrefix: "nuo", night: "naktis", people: "žm.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfortas uoste." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Prabanga." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Ramybės oazė." }, domkiSkorupki: { title: "Skorupki Nameliai", location: "Skorupki, šalia Gižycko", description: "Prabangūs nameliai Mozūrijos gamtoje." }, pokojeFuleda: { title: "Fuleda Kambariai", location: "Fuleda, Dobskie ežeras", description: "Jaukūs kambariai su vaizdu į ežerą tylos zonoje." }, mikolajki: { title: "Gigu apartamentai Mikołajki", location: "Plac Wolności, Mikołajki", description: "Modernūs apartamentai pačiame Mikołajki centre." } } },
         cottagesAndRooms: {
             title: "Mūsų nameliai ir kambariai",
             description: "Pajuskite gamtos artumą patogiomis sąlygomis."
@@ -2499,7 +2548,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "Om os", apartments: "Lejligheder", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraktioner", cooperation: "Samarbejde", contact: "Kontakt", rooms: "Værelser", bookBtn: "Book nu", language: "Sprog", back: "Tilbage" },
         hero: { title: "Ferie i Masurien", subtitle: "UNIKKE ØJEBLIKKE", apartmentsBtn: "Lejligheder", charterBtn: "Yachtcharter" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen til", titleHighlight: "De Store Søer", p1: "Oplev magien.", p2: "Hvile i Giżycko." },
-        apartments: { title: "Lejligheder", description: "Vælg det perfekte sted.", details: "Detaljer", pricePrefix: "fra", night: "nat", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksushytter i hjertet af den masuriske natur." }, pokojeFuleda: { title: "Fuleda Værelser", location: "Fuleda, Dobskie Sø", description: "Hyggelige værelser med søudsigt i stilhedszonen." } } },
+        apartments: { title: "Lejligheder", description: "Vælg det perfekte sted.", details: "Detaljer", pricePrefix: "fra", night: "nat", people: "pers.", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksushytter i hjertet af den masuriske natur." }, pokojeFuleda: { title: "Fuleda Værelser", location: "Fuleda, Dobskie Sø", description: "Hyggelige værelser med søudsigt i stilhedszonen." }, mikolajki: { title: "Gigu Lejlighed Mikołajki", location: "Plac Wolności, Mikołajki", description: "Moderne lejlighed i centrum af Mikołajki." } } },
         cottagesAndRooms: {
             title: "Vores hytter og værelser",
             description: "Mærk naturens nærhed under komfortable forhold."
@@ -2539,7 +2588,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "Om oss", apartments: "Lägenheter", cottages: "Stugor", charter: "Charter", port: "Hamn", attractions: "Sevärdheter", cooperation: "Samarbete", contact: "Kontakt", rooms: "Rum", bookBtn: "Boka", language: "Språk", back: "Tillbaka" },
         hero: { title: "Semester i Masurien", subtitle: "UNIKA STUNDER", apartmentsBtn: "Lägenheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Välkommen", titleHighlight: "Sjöarna", p1: "Upptäck magin.", p2: "Avkoppling." },
-        apartments: { title: "Våra Lägenheter", description: "Välj plats.", details: "Detaljer", pricePrefix: "från", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lyx." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oas." }, domkiSkorupki: { title: "Skorupki Stugor", location: "Skorupki, nära Giżycko", description: "Lyxiga stugor i hjärtat af den masuriska naturen." }, pokojeFuleda: { title: "Fuleda Rum", location: "Fuleda, Dobskie Sjön", description: "Mysiga rum med sjöutsikt i tystnadzonen." } } },
+        apartments: { title: "Våra Lägenheter", description: "Välj plats.", details: "Detaljer", pricePrefix: "från", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Lyx." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oas." }, domkiSkorupki: { title: "Skorupki Stugor", location: "Skorupki, nära Giżycko", description: "Lyxiga stugor i hjärtat af den masuriska naturen." }, pokojeFuleda: { title: "Fuleda Rum", location: "Fuleda, Dobskie Sjön", description: "Mysiga rum med sjöutsikt i tystnadzonen." }, mikolajki: { title: "Gigu Lägenhet Mikołajki", location: "Plac Wolności, Mikołajki", description: "Modern lägenhet i centrum av Mikołajki." } } },
         cottagesAndRooms: {
             title: "Våra stugor och rum",
             description: "Känn närheten till naturen under bekväma förhållanden."
@@ -2578,7 +2627,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "Om oss", apartments: "Leiligheter", cottages: "Hytter", charter: "Charter", port: "Havn", attractions: "Attraksjoner", cooperation: "Samarbeid", contact: "Kontakt", rooms: "Rom", bookBtn: "Bestill", language: "Språk", back: "Tilbake" },
         hero: { title: "Ferie i Masuria", subtitle: "UNIKE ØYEBLIKK", apartmentsBtn: "Leiligheter", charterBtn: "Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Velkommen", titleHighlight: "Innsjøene", p1: "Oppdag magien.", p2: "Avslapning." },
-        apartments: { title: "Våre Leiligheter", description: "Velg sted.", details: "Detaljer", pricePrefix: "fra", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksuriøse hytter i hjertet av masurisk natur." }, pokojeFuleda: { title: "Fuleda Rom", location: "Fuleda, Dobskie Innsjø", description: "Koselige rom med utsikt over innsjøen i stillhetssonen." } } },
+        apartments: { title: "Våre Leiligheter", description: "Velg sted.", details: "Detaljer", pricePrefix: "fra", night: "natt", people: "pers", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Komfort." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Oase." }, domkiSkorupki: { title: "Skorupki Hytter", location: "Skorupki, nær Giżycko", description: "Luksuriøse hytter i hjertet av masurisk natur." }, pokojeFuleda: { title: "Fuleda Rom", location: "Fuleda, Dobskie Innsjø", description: "Koselige rom med utsikt over innsjøen i stillhetssonen." }, mikolajki: { title: "Gigu Leilighet Mikołajki", location: "Plac Wolności, Mikołajki", description: "Moderne leilighet i sentrum av Mikołajki." } } },
         cottagesAndRooms: {
             title: "Våre hytter og rom",
             description: "Føl nærheten til naturen under komfortable forhold."
@@ -2617,7 +2666,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         nav: { about: "Meistä", apartments: "Huoneistot", cottages: "Mökit", charter: "Vuokraus", port: "Satama", attractions: "Nähtävyydet", cooperation: "Yhteistyö", contact: "Yhteystiedot", rooms: "Huoneet", bookBtn: "Varaa", language: "Kieli", back: "Takaisin" },
         hero: { title: "Loma", subtitle: "AINUTLAATUINEN", apartmentsBtn: "Huoneistot", charterBtn: "Venevuokraus" },
         intro: { tag: "Mazury.Holiday", title: "Tervetuloa", titleHighlight: "Järvet", p1: "Koe taika.", p2: "Lepo." },
-        apartments: { title: "Huoneistot", description: "Valitse.", details: "Tiedot", pricePrefix: "alk.", night: "yö", people: "hlö", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Mukavuus." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Rauha." }, domkiSkorupki: { title: "Skorupki Mökit", location: "Skorupki, lähellä Giżycko", description: "Luksusmökkejä masurialaisen luonnon sydämessä." }, pokojeFuleda: { title: "Fuleda Huoneet", location: "Fuleda, Dobskie Järvi", description: "Viihtyisiä huoneita järvinäköalalla hiljaisella vyöhykkeellä." } } },
+        apartments: { title: "Huoneistot", description: "Valitse.", details: "Tiedot", pricePrefix: "alk.", night: "yö", people: "hlö", items: { stranda: { title: "Stranda", location: "Giżycko", description: "Mukavuus." }, kisajno: { title: "Kisajno", location: "Giżycko", description: "Luksus." }, fuleda: { title: "Fuleda", location: "Fuleda", description: "Rauha." }, domkiSkorupki: { title: "Skorupki Mökit", location: "Skorupki, lähellä Giżycko", description: "Luksusmökkejä masurialaisen luonnon sydämessä." }, pokojeFuleda: { title: "Fuleda Huoneet", location: "Fuleda, Dobskie Järvi", description: "Viihtyisiä huoneita järvinäköalalla hiljaisella vyöhykkeellä." }, mikolajki: { title: "Gigu Huoneisto Mikołajki", location: "Plac Wolności, Mikołajki", description: "Moderni huoneisto Mikołajkin keskustassa." } } },
         cottagesAndRooms: {
             title: "Meidän mökkimme ja huoneemme",
             description: "Tunne luonnon läheisyys mukavissa olosuhteissa."
