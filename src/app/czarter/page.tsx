@@ -121,7 +121,7 @@ export default function CharterPage() {
 
                                 <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src={getAssetPath("/icons/AIR_CONDITIONER.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                                        <Image src="/mazury-holiday/icons/WIFI.svg" alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                                     </div>
                                     <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "vipStandardTitle")}</h4>
                                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
