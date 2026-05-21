@@ -111,7 +111,7 @@ export function SkorupkiPopupClient() {
                     </div>
 
                     {/* Headline */}
-                    <h2 className="text-3xl md:text-5xl font-playfair font-medium leading-tight drop-shadow-2xl animate-in fade-in zoom-in-50 duration-700 delay-200">
+                    <h2 className="text-3xl md:text-5xl font-sans font-medium leading-tight drop-shadow-2xl animate-in fade-in zoom-in-50 duration-700 delay-200">
                         {content.headline || "Dzień Kobiet: Promocja w Stranda Residence 🌷"}
                     </h2>
 

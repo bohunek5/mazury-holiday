@@ -52,7 +52,7 @@ export default function FAQPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase animate-fade-in">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4 animate-fade-in-up">FAQ</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-4 animate-fade-in-up">FAQ</h1>
                     <p className="text-xl md:text-3xl font-light animate-fade-in-up delay-100">Najczęściej zadawane pytania</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent z-10"></div>
@@ -66,7 +66,7 @@ export default function FAQPage() {
                                 <HelpCircle className="text-white" size={24} />
                             </div>
                             <div>
-                                <h2 className="text-3xl font-playfair font-bold text-slate-900 dark:text-white">Centrum pomocy</h2>
+                                <h2 className="text-3xl font-sans font-bold text-slate-900 dark:text-white">Centrum pomocy</h2>
                                 <p className="text-slate-500 dark:text-slate-400">Znajdź odpowiedzi na swoje pytania</p>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function FAQPage() {
                         <div className="bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden group shadow-2xl">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -mr-32 -mt-32 transition-transform group-hover:scale-150 duration-1000"></div>
                             <div className="relative z-10">
-                                <h3 className="text-3xl font-playfair font-bold mb-4">Potrzebujesz więcej informacji?</h3>
+                                <h3 className="text-3xl font-sans font-bold mb-4">Potrzebujesz więcej informacji?</h3>
                                 <p className="text-slate-400 mb-8 text-lg">Zadzwoń do nas, chętnie odpowiemy na każde pytanie i pomożemy w rezerwacji.</p>
                                 <a 
                                     href="tel:+48730067027" 
@@ -127,7 +127,7 @@ export default function FAQPage() {
 
                         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 relative overflow-hidden group shadow-xl border border-slate-100 dark:border-slate-800">
                             <div className="relative z-10">
-                                <h3 className="text-3xl font-playfair font-bold mb-4 text-slate-900 dark:text-white">Napisz do nas</h3>
+                                <h3 className="text-3xl font-sans font-bold mb-4 text-slate-900 dark:text-white">Napisz do nas</h3>
                                 <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg">Wolisz kontakt mailowy? Skorzystaj z naszego formularza kontaktowego.</p>
                                 <a 
                                     href="/kontakt" 

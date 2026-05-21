@@ -118,7 +118,7 @@ export const cottagesData: Cottage[] = [
             { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
             { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
             { icon: getAssetPath("/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
-            { icon: getAssetPath("/icons/FIRE_EXTINGUISHER.svg"), label: "Kominek" },
+            { icon: getAssetPath("/icons/FIREPLACE.svg"), label: "Kominek" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta za opłatą", "Cisza nocna 22:00–7:00", "Check-in: 15:00, Check-out: 11:00"]
     },
@@ -264,7 +264,7 @@ export const cottagesData: Cottage[] = [
         ],
         highlights: [
             { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/FIRE_EXTINGUISHER.svg"), label: "Kominek" },
+            { icon: getAssetPath("/icons/FIREPLACE.svg"), label: "Kominek" },
             { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
             { icon: getAssetPath("/icons/BAR.svg"), label: "Ognisko" },
             { icon: getAssetPath("/icons/COFFEE.svg"), label: "Ekspres" },

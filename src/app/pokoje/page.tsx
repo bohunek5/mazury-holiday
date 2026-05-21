@@ -56,7 +56,7 @@ export default function RoomsPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{trans.heroTitle}</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-2">{trans.heroTitle}</h1>
                     <p className="text-xl md:text-3xl font-light">{trans.heroSubtitle}</p>
                 </div>
             </section>
@@ -85,7 +85,7 @@ export default function RoomsPage() {
 
                                 {/* Content */}
                                 <div className="p-8 bg-white dark:bg-slate-900 flex flex-col">
-                                    <h3 className="text-2xl font-playfair font-bold text-slate-900 dark:text-white mb-2">{room.title}</h3>
+                                    <h3 className="text-2xl font-sans font-bold text-slate-900 dark:text-white mb-2">{room.title}</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">{room.description}</p>
 
                                     <div className="space-y-3 mb-8">
@@ -97,11 +97,7 @@ export default function RoomsPage() {
                                         ))}
                                     </div>
 
-                                    <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                                        <div>
-                                            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">{room.priceLabel}</p>
-                                            <p className="text-lg font-bold text-slate-900 dark:text-white">{room.price}</p>
-                                        </div>
+                                    <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end">
                                         <div className="flex gap-2">
                                             <Link
                                                 href={room.link}
@@ -113,7 +109,7 @@ export default function RoomsPage() {
                                                 href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="bg-[#50B848] hover:bg-[#45a041] text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
+                                                className="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
                                             >
                                                 {room.bookBtn}
                                             </a>

@@ -47,7 +47,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center md:items-start">
-                    <h3 className="text-slate-900 dark:text-white font-serif font-bold text-xl mb-6 relative inline-block">
+                    <h3 className="text-slate-900 dark:text-white font-sans font-bold text-xl mb-6 relative inline-block">
                         {t("footer", "contactTitle")}
                         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-1 bg-amber-500 rounded-full"></span>
                     </h3>
@@ -71,8 +71,8 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div className="flex flex-col items-center md:items-start">
-                    <h3 className="text-slate-900 dark:text-white font-serif font-bold text-xl mb-6 relative inline-block">
+        <div className="flex flex-col items-center md:items-start">
+                    <h3 className="text-slate-900 dark:text-white font-sans font-bold text-xl mb-6 relative inline-block">
                         {t("footer", "linksTitle")}
                         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-1 bg-amber-500 rounded-full"></span>
                     </h3>
@@ -83,7 +83,8 @@ export default function Footer() {
                             { id: "rooms", href: "/pokoje" },
                             { id: "cottages", href: "/domki" },
                             { id: "charter", href: "/czarter" },
-                            { id: "contact", href: "/kontakt" }
+                            { id: "contact", href: "/kontakt" },
+                            { id: "cooperation", href: "/wspolpraca" }
                         ].map((link) => (
                             <li key={link.id}>
                                 <Link
@@ -106,6 +107,10 @@ export default function Footer() {
                     <Link href="/polityka-prywatnosci" className="hover:text-amber-500 transition-colors">
                         {t("privacyPolicy", "title")}
                     </Link>
+                    <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
+                    <a href="https://www.radlight.pl" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors font-medium">
+                        Poznaj Radlight
+                    </a>
                 </div>
             </div>
         </footer>

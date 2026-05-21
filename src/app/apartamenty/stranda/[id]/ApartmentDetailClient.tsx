@@ -70,7 +70,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white p-4">
                         <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Stranda Residence</span>
-                        <h1 className="text-5xl md:text-7xl font-playfair mb-4">{apartment.title}</h1>
+                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{apartment.title}</h1>
                     </div>
                 </div>
             </section>
@@ -91,7 +91,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                     <div className="lg:col-span-2 space-y-12">
                         {/* Description */}
                         <div className="text-center md:text-left">
-                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "about")}</h2>
+                            <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white">{t("details", "about")}</h2>
                             <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed whitespace-pre-line">
                                 {apartment.description}
                             </p>
@@ -100,10 +100,10 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                         {/* Gallery */}
                         {apartment.gallery.length > 0 && (
                             <div>
-                                <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white text-center md:text-left">Galeria</h2>
+                                <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white text-center md:text-left">Galeria</h2>
 
                                 {/* First 3 images - always visible */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
                                     {apartment.gallery.slice(0, 3).map((img: string, idx: number) => (
                                         <div
                                             key={idx}
@@ -130,7 +130,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                     <div className="mt-6">
                                         <button
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                            className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                                            className="w-full mb-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
                                             {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
                                         </button>
@@ -165,17 +165,17 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
                         {/* Amenities */}
                         <div className="space-y-12">
-                            <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Udogodnienia w apartamencie</h3>
+                            <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">Udogodnienia w apartamencie</h3>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 {/* Living Room */}
                                 {data.amenities.living.length > 0 && (
-                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-14 h-14 mx-auto mb-6">
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
                                             <Image src={getAssetPath("/icons/SOFA.svg")} alt="Salon" fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Salon</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Salon</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.living.join(", ")}
                                         </p>
                                     </div>
@@ -183,12 +183,12 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
                                 {/* Kitchen */}
                                 {data.amenities.kitchen.length > 0 && (
-                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
-                                            <Utensils size={56} strokeWidth={1.2} />
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Kuchnia</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.kitchen.join(", ")}
                                         </p>
                                     </div>
@@ -196,12 +196,12 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
                                 {/* Bedroom */}
                                 {data.amenities.bedroom.length > 0 && (
-                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
-                                            <BedDouble size={56} strokeWidth={1.2} />
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/icons/BED.svg")} alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Sypialnia</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Sypialnia</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.bedroom.join(", ")}
                                         </p>
                                     </div>
@@ -209,12 +209,12 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
                                 {/* Bathroom */}
                                 {data.amenities.bathroom.length > 0 && (
-                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
-                                            <Bath size={56} strokeWidth={1.2} />
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/icons/SHOWER.svg")} alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Łazienka</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Łazienka</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.bathroom.join(", ")}
                                         </p>
                                     </div>
@@ -222,12 +222,12 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
                                 {/* Terrace */}
                                 {data.amenities.terrace.length > 0 && (
-                                    <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
-                                            <Sun size={56} strokeWidth={1.2} />
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 lg:col-span-4">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/icons/TERRACE.svg")} alt="Taras" fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Taras</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Taras</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.terrace.join(", ")}
                                         </p>
                                     </div>
@@ -239,7 +239,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                     {/* Sidebar / Booking */}
                     <div className="lg:col-span-1">
                         <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 sticky top-32 shadow-xl">
-                            <h3 className="text-2xl font-playfair mb-6 text-slate-900 dark:text-white">{t("details", "booking")}</h3>
+                            <h3 className="text-2xl font-sans mb-6 text-slate-900 dark:text-white">{t("details", "booking")}</h3>
                             <p className="text-slate-600 dark:text-slate-400 mb-8">
                                 {t("details", "checkAvailability")}
                             </p>
@@ -249,7 +249,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block w-full text-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 rounded-xl transition-all mb-4 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-500/25 active:scale-95"
+                                className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 rounded-xl transition-all mb-2 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-amber-500/25 active:scale-95"
                             >
                                 ZAREZERWUJ GO
                             </a>
@@ -257,7 +257,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                             {/* Phone Call Button - Second */}
                             <a
                                 href="tel:+48730067027"
-                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-4 whitespace-nowrap"
+                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-2 whitespace-nowrap"
                             >
                                 {t("details", "callBtn")}: 730 067 027
                             </a>
@@ -291,12 +291,12 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
             </section>
 
             {/* Mobile Floating Booking Button */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="fixed bottom-0 left-0 right-0 p-3 pb-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
                 <a
                     href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     ZAREZERWUJ GO
                 </a>

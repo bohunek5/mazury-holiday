@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Anchor, LifeBuoy } from "lucide-react";
+import { Anchor, LifeBuoy, MapPin, Wifi, ShieldCheck, Navigation, Star, Shield } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -85,8 +85,8 @@ export default function CharterPage() {
                     quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-5xl md:text-7xl font-playfair mb-4">{t("charterPage", "heroTitle")}</h1>
-                    <p className="text-xl md:text-3xl font-light text-amber-400">od 800 zł / doba</p>
+                    <h1 className="text-5xl md:text-7xl font-sans mb-2">{t("charterPage", "heroTitle")}</h1>
+                    <p className="text-xl md:text-3xl font-light text-amber-400">od 1000 zł / doba</p>
                 </div>
             </section>
 
@@ -96,7 +96,7 @@ export default function CharterPage() {
 
                     {/* Left Column: Description & Gallery (Span 2) */}
                     <div className="lg:col-span-2">
-                        <h2 className="text-3xl md:text-4xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "mainTitle")}</h2>
+                        <h2 className="text-3xl md:text-4xl font-sans mb-8 text-slate-900 dark:text-white">{t("charterPage", "mainTitle")}</h2>
 
                         <div className="prose prose-lg text-slate-600 dark:text-slate-300 mb-12 leading-relaxed">
                             <p className="mb-6" dangerouslySetInnerHTML={{ __html: t("charterPage", "desc1") }} />
@@ -107,34 +107,34 @@ export default function CharterPage() {
 
                         {/* Amenities Grid (Clean Cards) */}
                         <div className="mb-16">
-                            <h3 className="text-2xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "vipAmenitiesTitle")}</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                                    <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Technika" fill className="object-contain dark:invert opacity-80" />
+                            <h3 className="text-2xl font-sans mb-8 text-slate-900 dark:text-white">{t("charterPage", "vipAmenitiesTitle")}</h3>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="flex justify-center mb-2">
+                                        <Navigation className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "navAndDriveTitle")}</h4>
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("charterPage", "navAndDriveTitle")}</h4>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                         {t("charterPage", "navAndDriveDesc")}
                                     </p>
                                 </div>
 
-                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                                    <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src={getAssetPath("/icons/WIFI.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                                <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="flex justify-center mb-2">
+                                        <Star className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "vipStandardTitle")}</h4>
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("charterPage", "vipStandardTitle")}</h4>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                         {t("charterPage", "vipStandardDesc")}
                                     </p>
                                 </div>
 
-                                <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                                    <div className="relative w-14 h-14 mx-auto mb-6">
-                                        <Image src={getAssetPath("/icons/FIRE_EXTINGUISHER.svg")} alt="Bezpieczeństwo" fill className="object-contain dark:invert opacity-80" />
+                                <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="flex justify-center mb-2">
+                                        <Shield className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
                                     </div>
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("charterPage", "safetyTitle")}</h4>
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("charterPage", "safetyTitle")}</h4>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                         {t("charterPage", "safetyDesc")}
                                     </p>
                                 </div>
@@ -144,10 +144,10 @@ export default function CharterPage() {
                         {/* Gallery Section */}
                         {galleryImages.length > 0 && (
                             <div>
-                                <h3 className="2xl font-playfair mb-8 text-slate-900 dark:text-white">{t("charterPage", "galleryTitle")}</h3>
+                                <h3 className="2xl font-sans mb-8 text-slate-900 dark:text-white">{t("charterPage", "galleryTitle")}</h3>
 
                                 {/* First 3 images - always visible */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
                                     {galleryImages.slice(0, 3).map((src, idx) => (
                                         <div
                                             key={idx}
@@ -172,7 +172,7 @@ export default function CharterPage() {
                                     <div className="mt-6">
                                         <button
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                            className="w-full mb-4 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                                            className="w-full mb-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
                                             {galleryExpanded ? `▲ ${t("charterPage", "collapseGallery")}` : `▼ ${t("charterPage", "expandGallery")}`}
                                         </button>
@@ -209,8 +209,8 @@ export default function CharterPage() {
                             {/* Main CTA Card */}
                             <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
-                                <h3 className="text-2xl font-playfair mb-2 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
-                                <p className="text-3xl font-bold text-amber-500 mb-4 relative z-10">od 800 zł / doba</p>
+                                <h3 className="text-2xl font-sans mb-2 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
+                                <p className="text-3xl font-bold text-amber-500 mb-2 relative z-10">od 1000 zł / doba</p>
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
                                     {t("charterPage", "bookTermDesc")}
                                 </p>
@@ -219,7 +219,7 @@ export default function CharterPage() {
                                         href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-500/25 active:scale-95"
+                                        className="flex-1 text-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-amber-500/25 active:scale-95"
                                     >
                                         {t("charterPage", "bookBtn")}
                                     </a>
@@ -245,7 +245,7 @@ export default function CharterPage() {
                                     <Anchor className="text-amber-500" size={20} />
                                     {t("charterPage", "techSpecsTitle")}
                                 </h4>
-                                <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8 border-b border-slate-100 dark:border-slate-800 pb-8">
+                                <ul className="space-y-3 text-xs text-slate-600 dark:text-slate-400 mb-8 border-b border-slate-100 dark:border-slate-800 pb-8">
                                     {specs.map((spec, idx) => (
                                         <li key={idx} className="flex justify-between items-center">
                                             <span>{spec.label}</span>
@@ -258,7 +258,7 @@ export default function CharterPage() {
                                     <LifeBuoy className="text-amber-500" size={20} />
                                     {t("charterPage", "equipmentTitle")}
                                 </h4>
-                                <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+                                <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
                                     {equipment.map((item: string, idx: number) => (
                                         <li key={idx} className="flex items-start gap-2">
                                             <span className="text-amber-500 mt-1">•</span>
@@ -273,12 +273,12 @@ export default function CharterPage() {
             </section>
 
             {/* Mobile Floating Booking Button */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="fixed bottom-0 left-0 right-0 p-3 pb-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
                 <a
                     href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     {t("charterPage", "bookBtn")}
                 </a>

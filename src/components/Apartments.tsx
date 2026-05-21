@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Users, Trees, Wifi, Wind, Car, Tv, MapPin } from "lucide-react";
+import { Users, Trees, Wifi, Wind, Car, Tv, MapPin, Waves } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
@@ -18,39 +18,44 @@ export default function Apartments() {
 
 
 
-    const mainApartments = [
+        const mainApartments = [
         {
             id: 1,
-            title: t("apartments", "items.stranda.title"),
-            description: t("apartments", "items.stranda.description"),
+            title: "Apartamenty Stranda Residence",
+            location: "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/stranda/C304/C304_1.webp"),
             link: "/apartamenty/stranda",
-            location: t("apartments", "items.stranda.location"),
-            price: `${lowestStrandaPrice} zł`
+            icons: [<Wifi key="wifi" size={18} />, <Wind key="wind" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: 2,
-            title: t("apartments", "items.kisajno.title"),
-            description: t("apartments", "items.kisajno.description"),
+            title: "Apartamenty Kisajno",
+            location: "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/kisajno/kisajno_1.webp"),
             link: "/apartamenty/kisajno",
-            location: t("apartments", "items.kisajno.location"),
-            price: `${kisajnoData.price} zł`
+            icons: [<Wifi key="wifi" size={18} />, <Waves key="waves" size={18} />, <Tv key="tv" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: 3,
-            title: t("apartments", "items.fuleda.title"),
-            description: t("apartments", "items.fuleda.description"),
+            title: "Apartament Mikołajki",
+            location: "Mikołajki, jezioro Mikołajskie",
+            image: getAssetPath("/images/mikolajki/mikolajki_1.webp"),
+            link: "/apartamenty/mikolajki",
+            icons: [<Wifi key="wifi" size={18} />, <Tv key="tv" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+        },
+        {
+            id: 4,
+            title: "Apartamenty Fuleda",
+            location: "Fuleda, jezioro Dobskie",
             image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
             link: "/apartamenty/fuleda",
-            location: t("apartments", "items.fuleda.location"),
-            price: `${lowestFuledaPrice} zł`
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         }
     ];
 
     const additionalOffers = [
         {
-            id: 4,
+            id: 5,
             title: t("apartments", "items.domkiSkorupki.title"),
             location: t("apartments", "items.domkiSkorupki.location"),
             description: t("apartments", "items.domkiSkorupki.description"),
@@ -60,7 +65,7 @@ export default function Apartments() {
             price: `${skorupkiData.price} zł`
         },
         {
-            id: 5,
+            id: 6,
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
@@ -77,7 +82,7 @@ export default function Apartments() {
             <section id="apartamenty" className="pt-24 pb-12 bg-white dark:bg-slate-900 transition-colors duration-300">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-serif text-slate-900 dark:text-white mb-4">
+                        <h2 className="text-4xl md:text-5xl font-sans text-slate-900 dark:text-white mb-4">
                             {t("apartments", "title")}
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -85,7 +90,7 @@ export default function Apartments() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {mainApartments.map((apt) => (
                             <Link
                                 key={apt.id}
@@ -105,13 +110,16 @@ export default function Apartments() {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
-
-                                    <h3 className="text-2xl font-serif font-bold text-white mb-2 decoration-amber-500 group-hover:text-amber-400">
+                                    <h1 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
-                                    </h3>
-                                    <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-4">
-                                        {apt.description}
-                                    </p>
+                                    </h1>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {apt.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                                {icon}
+                                            </div>
+                                        ))}
+                                    </div>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
                                             {t("apartments", "details")} &rarr;
@@ -128,7 +136,7 @@ export default function Apartments() {
             <section id="domki-pokoje" className="pt-12 pb-24 bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-serif text-slate-900 dark:text-white mb-4">
+                        <h2 className="text-4xl md:text-5xl font-sans text-slate-900 dark:text-white mb-4">
                             {t("cottagesAndRooms", "title")}
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -160,11 +168,11 @@ export default function Apartments() {
 
                                         <div className="text-white text-xs font-medium flex items-center gap-1 bg-slate-900/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
                                             <Users size={14} className="text-amber-500" />
-                                            {apt.people} {t("apartments", "people")}
+                                            Max. ilość osób: {apt.people}
                                         </div>
                                     </div>
 
-                                    <h3 className="text-2xl font-serif font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
+                                    <h3 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
                                     </h3>
                                     

@@ -27,8 +27,13 @@ const locations = [
     },
     {
         title: "Domki Skorupki",
-        address: "Skorupki, Mazury",
-        mapQuery: "Domki+Skorupki",
+        address: "Skorupki 213",
+        mapQuery: "Domki+Skorupki+213",
+    },
+    {
+        title: "Apartament Mikołajki",
+        address: "Mikołajki",
+        mapQuery: "Mikolajki",
     },
 ];
 
@@ -81,7 +86,7 @@ export default function ContactPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{t("nav", "contact")}</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-4">{t("nav", "contact")}</h1>
                     <p className="text-xl md:text-3xl font-light">Skontaktuj się z nami</p>
                 </div>
             </section>
@@ -108,7 +113,7 @@ export default function ContactPage() {
                     {locations.map((loc, index) => (
                         <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-800">
                             <div className="p-6 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
-                                <h3 className="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">{loc.title}</h3>
+                                <h3 className="text-xl font-bold font-sans text-slate-900 dark:text-white mb-2">{loc.title}</h3>
                                 <div className="flex items-start space-x-2 text-slate-600 dark:text-slate-400">
                                     <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-amber-500" />
                                     <span>{loc.address}</span>
@@ -139,7 +144,7 @@ export default function ContactPage() {
                         className="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-slate-100 dark:border-slate-800"
                     >
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white mb-4">
+                            <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white mb-4">
                                 {t("contactForm", "title")}
                             </h2>
                             <p className="text-slate-600 dark:text-slate-400">

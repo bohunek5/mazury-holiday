@@ -46,7 +46,7 @@ export default function LuxuryBenefits() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <p className="text-amber-400 font-bold tracking-widest mb-4 uppercase">{t("luxuryBenefits", "tag")}</p>
-                    <h2 className="text-4xl md:text-5xl font-playfair mb-6">
+                    <h2 className="text-4xl md:text-5xl font-sans mb-6">
                         {t("luxuryBenefits", "title")}
                     </h2>
                 </div>

@@ -21,7 +21,7 @@ export function getAmenityIcon(amenity: string): string {
     else if (normalized.includes('tv') || normalized.includes('telewizor') || normalized.includes('smart tv')) icon = 'TV.svg';
     else if (normalized.includes('wi-fi') || normalized.includes('wifi')) icon = 'WIFI.svg';
     else if (normalized.includes('stół') || normalized.includes('stol') || normalized.includes('krzesł')) icon = 'ROOM.svg'; 
-    else if (normalized.includes('kominek')) icon = 'FIRE_EXTINGUISHER.svg';
+    else if (normalized.includes('kominek')) icon = 'FIREPLACE.svg';
     else if (normalized.includes('odkurzacz')) icon = 'CLEANING_STAFF.svg';
     else if (normalized.includes('żelazko') || normalized.includes('zelazko') || normalized.includes('prasowan')) icon = 'IRON.svg';
 

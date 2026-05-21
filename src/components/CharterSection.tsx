@@ -42,7 +42,7 @@ export default function CharterSection() {
                         <div className="inline-block px-4 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold text-sm mb-6 border border-amber-500/30">
                             {t("charter", "premiumFleet")}
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6">
                             {t("charter", "title")}
                         </h2>
                         <p className="text-slate-300 text-lg mb-8 leading-relaxed">
@@ -91,7 +91,7 @@ export default function CharterSection() {
                                 <span className="text-2xl">⚓</span>
                                 <span>Stillo 30 VIP</span>
                             </div>
-                            <p className="text-white text-2xl font-serif">Luksusowy Houseboat bez patentu</p>
+                            <p className="text-white text-2xl font-sans">Luksusowy Houseboat bez patentu</p>
                         </div>
                     </div>
                 </div>

@@ -47,7 +47,7 @@ export function getAssistantResponse(message: string): string {
         return "Jacht jest przygotowany na każdą pogodę. Posiada ogrzewanie Webasto, a materace w sypialniach wykonane są z pianki termoaktywnej dla najwyższego komfortu.";
     }
     if ((msg.includes('jacht') || msg.includes('stillo')) && msg.includes('wyposaż')) {
-        return "Jacht jest wyposażony w standardzie VIP. Posiada m.in. ster strumieniowy (dziobowy i rufowy), ciepłą wodę, TV ze Smart TV (Netflix, HBO), Wi-Fi bez limitu, kostkarkę do lodu oraz ekspres Nespresso.";
+        return "Jacht jest wyposażony w standardzie VIP. Posiada m.in. ster strumieniowy (dziobowy i rufowy), ciepłą wodę, TV ze Smart TV (Smart TV), Wi-Fi bez limitu, kostkarkę do lodu oraz ekspres Nespresso.";
     }
 
     // Category 4: Booking, Prices, Policy

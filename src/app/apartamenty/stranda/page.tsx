@@ -90,7 +90,7 @@ export default function StrandaPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">Stranda Residence</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-2">Stranda Residence</h1>
                     <p className="text-xl md:text-3xl font-light">{t("stranda", "subtitle")}</p>
                 </div>
             </section>
@@ -166,7 +166,18 @@ export default function StrandaPage() {
                                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
                                                         <div className="absolute bottom-4 left-5 text-white">
                                                             <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
-                                                            <h3 className="text-2xl font-bold font-playfair">{unit.id}</h3>
+                                                            <h3 className="text-2xl font-bold font-sans">
+                                                                {unit.id}
+                                                                {aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.amenities?.living?.some((item: string) => item.includes('sauna')) 
+                                                                    ? " z sauną i jacuzzi"
+                                                                    : aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.description?.includes('na dachu')
+                                                                    ? " z jacuzzi na dachu"
+                                                                    : aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi'))
+                                                                    ? " z jacuzzi"
+                                                                    : aptData?.amenities?.living?.some((item: string) => item.includes('sauna'))
+                                                                    ? " z sauną"
+                                                                    : ""}
+                                                            </h3>
 
                                                         </div>
                                                     </div>
@@ -176,7 +187,7 @@ export default function StrandaPage() {
                                                 href={`https://engine37851.idobooking.com/index.php?ob[${aptData?.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-full bg-[#50B848] hover:bg-[#45a041] text-white text-center py-4 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-green-500/30 active:scale-95 uppercase tracking-widest"
+                                                className="w-full bg-amber-500 hover:bg-amber-400 text-black text-center py-4 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-amber-500/30 active:scale-95 uppercase tracking-widest"
                                             >
                                                 {t("nav", "bookBtn")}
                                             </a>
@@ -224,7 +235,7 @@ export default function StrandaPage() {
                             </button>
 
                             <div className="absolute bottom-8 left-8 text-white z-20">
-                                <h3 className="text-3xl font-playfair font-bold mb-2">Bezpośredni widok na jezioro</h3>
+                                <h3 className="text-3xl font-sans font-bold mb-2">Bezpośredni widok na jezioro</h3>
                                 <p className="text-white/70 font-light tracking-widest uppercase text-sm">Doświadcz luksusu w Stranda Residence</p>
                             </div>
                         </motion.div>

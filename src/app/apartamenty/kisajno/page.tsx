@@ -40,7 +40,7 @@ export default function KisajnoPage() {
                 </div>
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-4xl md:text-6xl font-playfair mb-4">{kisajnoData.title}</h1>
+                    <h1 className="text-4xl md:text-6xl font-sans mb-2">{kisajnoData.title}</h1>
                     <p className="text-xl md:text-2xl font-light">{t("kisajnoPage", "subtitle")}</p>
                 </div>
             </section>
@@ -50,15 +50,15 @@ export default function KisajnoPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
                     {/* Left Column: Description & Features */}
                     <div>
-                        <h2 className="text-4xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "introTitle")}</h2>
+                        <h2 className="text-4xl font-sans mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "introTitle")}</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                             {kisajnoData.description}
                         </p>
-                        <ul className="space-y-4 mb-8">
+                        <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
                             {kisajnoData.amenities.map((amenity) => (
-                                <li key={amenity} className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
-                                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                    <span>{amenity}</span>
+                                <li key={amenity} className="flex items-center space-x-2 text-sm text-slate-700 dark:text-slate-200">
+                                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0" />
+                                    <span className="truncate" title={amenity}>{amenity}</span>
                                 </li>
                             ))}
                         </ul>
@@ -146,34 +146,34 @@ export default function KisajnoPage() {
                 </div>
 
                 <div className="mb-24">
-                    <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t("kisajnoPage", "amenitiesTitle")}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
+                    <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t("kisajnoPage", "amenitiesTitle")}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-8 h-8 mx-auto mb-2">
                                 <Image src={getAssetPath("/icons/ROOM.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Komfort i Multimedia</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Komfort</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {t("kisajnoPage", "amenities.ac")}, {t("kisajnoPage", "amenities.wifi")}, {t("kisajnoPage", "amenities.smartTv")}
                             </p>
                         </div>
 
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
+                        <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-8 h-8 mx-auto mb-2">
                                 <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia i Wyposażenie</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Kuchnia</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {t("kisajnoPage", "amenities.kitchen")}, {t("kisajnoPage", "amenities.dishwasher")}
                             </p>
                         </div>
 
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
+                        <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                            <div className="relative w-8 h-8 mx-auto mb-2">
                                 <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Otoczenie</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Otoczenie</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {t("kisajnoPage", "amenities.view")}, {t("kisajnoPage", "amenities.parking")}, {t("kisajnoPage", "amenities.port")}
                             </p>
                         </div>
@@ -181,7 +181,7 @@ export default function KisajnoPage() {
                 </div>
 
                 <div className="bg-slate-50 dark:bg-slate-900 p-12 rounded-3xl border border-slate-100 dark:border-slate-800 text-center">
-                    <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "bookingTitle")}</h3>
+                    <h3 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "bookingTitle")}</h3>
                     <div className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                         <p>{t("kisajnoPage", "bookingDesc")}</p>
                     </div>
@@ -189,13 +189,13 @@ export default function KisajnoPage() {
                         href={`https://engine37851.idobooking.com/index.php?ob[${kisajnoData.idoBookingId || "45"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-[#50B848] hover:bg-[#45a041] text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-500/25 whitespace-nowrap uppercase tracking-wider mb-4 md:mb-0 md:mr-4 active:scale-95"
+                        className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap uppercase tracking-wider mb-2 md:mb-0 md:mr-4 active:scale-95"
                     >
                         ZAREZERWUJ GO
                     </a>
                     <a
                         href="tel:+48730067027"
-                        className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
+                        className="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
                         {t("kisajnoPage", "callAction")}: 730 067 027
                     </a>
@@ -209,12 +209,12 @@ export default function KisajnoPage() {
             </section>
 
             {/* Mobile Floating Booking Button */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40 lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="fixed bottom-0 left-0 right-0 p-3 pb-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
                 <a
                     href={`https://engine37851.idobooking.com/index.php?ob[${kisajnoData.idoBookingId || "45"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-[#50B848] hover:bg-[#45a041] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     {t("nav", "bookBtn")}
                 </a>

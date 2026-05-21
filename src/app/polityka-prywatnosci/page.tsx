@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
                     </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-playfair font-bold text-slate-900 dark:text-white mb-6">
+                <h1 className="text-4xl md:text-5xl font-sans font-bold text-slate-900 dark:text-white mb-6">
                     {t("privacyPolicy", "title")}
                 </h1>
 
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
                     {t("privacyPolicy", "intro")}
                 </p>
 
-                <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-playfair prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-a:text-amber-600 dark:prose-a:text-amber-400 hover:prose-a:text-amber-700 dark:hover:prose-a:text-amber-300 prose-strong:text-slate-800 dark:prose-strong:text-white">
+                <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-a:text-amber-600 dark:prose-a:text-amber-400 hover:prose-a:text-amber-700 dark:hover:prose-a:text-amber-300 prose-strong:text-slate-800 dark:prose-strong:text-white">
                     <p className="mb-8">{t("privacyPolicy", "content")}</p>
 
                     {hasSections && sections.map((section: any, idx: number) => (

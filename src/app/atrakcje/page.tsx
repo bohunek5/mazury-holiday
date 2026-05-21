@@ -103,7 +103,7 @@ export default function AttractionsPage() {
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-playfair mb-4">{t("attractionsPage", "title")}</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-4">{t("attractionsPage", "title")}</h1>
                     <p className="text-xl md:text-3xl font-light">{t("attractionsPage", "subtitle")}</p>
                 </div>
             </section>
@@ -140,7 +140,7 @@ export default function AttractionsPage() {
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold mb-4 text-slate-900 dark:text-white">
+                                <h3 className="text-2xl font-sans font-bold mb-4 text-slate-900 dark:text-white">
                                     {attr.title}
                                 </h3>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">

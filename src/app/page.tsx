@@ -21,7 +21,7 @@ export default function Home() {
       <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 text-center">
           <Anchor className="mx-auto h-12 w-12 text-amber-500 mb-6" />
-          <h2 className="text-3xl md:text-4xl font-serif text-slate-900 dark:text-white mb-6 transition-colors">
+          <h2 className="text-3xl md:text-4xl font-sans text-slate-900 dark:text-white mb-6 transition-colors">
             {t("intro", "title")} <span className="text-amber-500">{t("intro", "titleHighlight")}</span>
           </h2>
           <div className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed transition-colors space-y-4">

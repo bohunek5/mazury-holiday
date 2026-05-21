@@ -128,7 +128,7 @@ export function ApartmentsEditor({
                     <div className="h-12 w-1.5 rounded-full bg-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]" />
                     <div>
                         <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500/80">Management Suite</p>
-                        <h2 className="mt-1 text-4xl font-serif font-bold text-white">Zarządzanie Ofertą</h2>
+                        <h2 className="mt-1 text-4xl font-sans font-bold text-white">Zarządzanie Ofertą</h2>
                     </div>
                 </div>
             </header>
@@ -140,7 +140,7 @@ export function ApartmentsEditor({
                         <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500">
                             <span className="text-lg font-bold">S</span>
                         </div>
-                        <h3 className="text-2xl font-serif font-bold text-white">Stranda Residence</h3>
+                        <h3 className="text-2xl font-sans font-bold text-white">Stranda Residence</h3>
                     </div>
                 </div>
 
@@ -193,7 +193,7 @@ export function ApartmentsEditor({
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-400">
                         <span className="text-lg font-bold">K</span>
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-white">Apartament Kisajno</h3>
+                    <h3 className="text-2xl font-sans font-bold text-white">Apartament Kisajno</h3>
                 </div>
 
                 <div className="rounded-[2.5rem] border border-indigo-500/20 bg-indigo-500/5 p-10">
@@ -244,7 +244,7 @@ export function ApartmentsEditor({
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-400">
                         <span className="text-lg font-bold">P</span>
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-white">Pokoje Fuleda</h3>
+                    <h3 className="text-2xl font-sans font-bold text-white">Pokoje Fuleda</h3>
                 </div>
 
                 <div className="rounded-[2.5rem] border border-emerald-500/20 bg-emerald-500/5 p-10">
@@ -275,7 +275,7 @@ export function ApartmentsEditor({
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-500/10 text-rose-400">
                         <span className="text-lg font-bold">S</span>
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-white">Domki Skorupki</h3>
+                    <h3 className="text-2xl font-sans font-bold text-white">Domki Skorupki</h3>
                 </div>
 
                 <div className="rounded-[2.5rem] border border-rose-500/20 bg-rose-500/5 p-10">

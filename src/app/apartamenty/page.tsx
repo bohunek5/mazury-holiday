@@ -12,6 +12,7 @@ import { kisajnoData } from "@/data/kisajno-data";
 import { mikolajkiData } from "@/data/mikolajki-data";
 
 import { getAssetPath } from "@/utils/assetPath";
+import { Users, Trees, Wifi, Wind, Car, Tv, Waves } from "lucide-react";
 
 const lowestStrandaPrice = Math.min(...Object.values(strandaApartments).map((apartment) => apartment.price));
 const lowestFuledaPrice = Math.min(...Object.values(fuledaApartments).map((apartment) => apartment.price));
@@ -23,38 +24,38 @@ export default function ApartmentsHub() {
         {
             id: "stranda",
             title: t("apartments", "items.stranda.title"),
-            description: t("apartments", "items.stranda.description"),
             image: getAssetPath("/images/stranda/C304/C304_1.webp"),
             link: "/apartamenty/stranda",
             location: t("apartments", "items.stranda.location"),
-            price: `${lowestStrandaPrice} zł`
+            price: `${lowestStrandaPrice} zł`,
+            icons: [<Wifi key="wifi" size={18} />, <Wind key="wind" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: "kisajno",
             title: t("apartments", "items.kisajno.title"),
-            description: t("apartments", "items.kisajno.description"),
             image: getAssetPath("/images/kisajno/kisajno_1.webp"),
             link: "/apartamenty/kisajno",
             location: t("apartments", "items.kisajno.location"),
-            price: `${kisajnoData.price} zł`
+            price: `${kisajnoData.price} zł`,
+            icons: [<Wifi key="wifi" size={18} />, <Waves key="waves" size={18} />, <Tv key="tv" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: "mikolajki",
             title: t("apartments", "items.mikolajki.title"),
-            description: t("apartments", "items.mikolajki.description"),
             image: getAssetPath("/images/mikolajki/hero.webp"),
             link: "/apartamenty/mikolajki",
             location: t("apartments", "items.mikolajki.location"),
-            price: `${mikolajkiData.price} zł`
+            price: `${mikolajkiData.price} zł`,
+            icons: [<Wifi key="wifi" size={18} />, <Tv key="tv" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
-            description: t("apartments", "items.fuleda.description"),
             image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
-            price: `${lowestFuledaPrice} zł`
+            price: `${lowestFuledaPrice} zł`,
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
     ];
 
@@ -76,7 +77,7 @@ export default function ApartmentsHub() {
                 </div>
                 <div className="relative z-20 text-center text-white p-4">
                     <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Mazury Holiday</span>
-                    <h1 className="text-4xl md:text-7xl font-serif mb-4">{t("apartments", "title")}</h1>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-2">{t("apartments", "title")}</h1>
                     <p className="text-xl md:text-3xl font-light">{t("apartments", "description")}</p>
                 </div>
             </section>
@@ -109,12 +110,16 @@ export default function ApartmentsHub() {
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
 
-                                    <h3 className="text-2xl font-serif font-bold text-amber-400 mb-2 group-hover:text-amber-300 transition-colors">
+                                    <h1 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
                                         {apt.title}
-                                    </h3>
-                                    <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-4">
-                                        {apt.description}
-                                    </p>
+                                    </h1>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {apt.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                                {icon}
+                                            </div>
+                                        ))}
+                                    </div>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
                                             {t("apartments", "details")} &rarr;

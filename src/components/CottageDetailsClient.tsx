@@ -39,7 +39,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                 <Navbar />
                 <div className="flex items-center justify-center min-h-[60vh]">
                     <div className="text-center">
-                        <h1 className="text-4xl font-playfair text-slate-900 dark:text-white mb-4">Domek nie znaleziony</h1>
+                        <h1 className="text-4xl font-sans text-slate-900 dark:text-white mb-4">Domek nie znaleziony</h1>
                         <Link href="/domki" className="text-amber-500 hover:underline">← Wróć do listy domków</Link>
                     </div>
                 </div>
@@ -84,14 +84,14 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                             <span className="inline-block bg-amber-500 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
                                 Mazury Holiday — Skorupki
                             </span>
-                            <h1 className="text-5xl md:text-7xl font-playfair text-white mb-2">{cottage.name}</h1>
+                            <h1 className="text-5xl md:text-7xl font-sans text-white mb-2">{cottage.name}</h1>
                             <p className="text-xl text-white/80 font-light">{cottage.tagline}</p>
                         </div>
 
                         {/* Quick Stats */}
                         <div className="flex gap-4 flex-wrap">
                             {[
-                                { icon: Users, label: `${cottage.guests} osób` },
+                                { icon: Users, label: `Max. ilość osób: ${cottage.guests}` },
                                 { icon: BedDouble, label: `${cottage.bedrooms} sypialnie` },
                                 { icon: Bath, label: `${cottage.bathrooms} łaz.` },
                                 { icon: Maximize2, label: `${cottage.area} m²` },
@@ -146,13 +146,13 @@ export default function CottageDetailsClient({ id }: { id: string }) {
 
                         {/* Description */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-4 text-slate-900 dark:text-white">O domku</h2>
+                            <h2 className="text-3xl font-sans mb-4 text-slate-900 dark:text-white">O domku</h2>
                             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{cottage.description}</p>
                         </div>
 
                         {/* Amenities with Icon Tabs */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-8 text-slate-900 dark:text-white">Wyposażenie</h2>
+                            <h2 className="text-3xl font-sans mb-8 text-slate-900 dark:text-white">Wyposażenie</h2>
 
                             {/* Tab Buttons */}
                             <div className="flex gap-2 flex-wrap mb-8">
@@ -185,13 +185,13 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                                             className="object-contain p-2"
                                         />
                                     </div>
-                                    <h3 className="text-2xl font-playfair text-slate-900 dark:text-white">
+                                    <h3 className="text-2xl font-sans text-slate-900 dark:text-white">
                                         {cottage.amenities[activeTab].category}
                                     </h3>
                                 </div>
-                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <ul className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {cottage.amenities[activeTab].items.map((item) => (
-                                        <li key={item} className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                                        <li key={item} className="flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300">
                                             <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0" />
                                             {item}
                                         </li>
@@ -221,7 +221,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
 
                         {/* Photo Gallery */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Galeria zdjęć</h2>
+                            <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white">Galeria zdjęć</h2>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {galleryImages.map((src, idx) => (
                                     <div
@@ -248,7 +248,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
 
                         {/* Rules */}
                         <div>
-                            <h2 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">Zasady pobytu</h2>
+                            <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white">Zasady pobytu</h2>
                             <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-100 dark:border-slate-800">
                                 <ul className="space-y-3">
                                     {cottage.rules.map((rule) => (
@@ -269,7 +269,7 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                             {/* Quick info */}
                             <div className="grid grid-cols-2 gap-4 mb-6">
                                 {[
-                                    { label: "Goście", value: `${cottage.guests} osób`, icon: Users },
+                                    { label: "Max. ilość osób", value: `${cottage.guests}`, icon: Users },
                                     { label: "Sypialnie", value: `${cottage.bedrooms}`, icon: BedDouble },
                                     { label: "Łazienki", value: `${cottage.bathrooms}`, icon: Bath },
                                     { label: "Powierzchnia", value: `${cottage.area} m²`, icon: Maximize2 },

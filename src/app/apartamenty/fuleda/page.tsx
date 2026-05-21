@@ -60,7 +60,7 @@ export default function FuledaPage() {
                     />
                 </div>
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-4xl md:text-6xl font-playfair mb-4">{t("fuledaPage", "title")}</h1>
+                    <h1 className="text-4xl md:text-6xl font-sans mb-2">{t("fuledaPage", "title")}</h1>
                     <p className="text-xl md:text-2xl font-light">{t("fuledaPage", "subtitle")}</p>
                 </div>
             </section>
@@ -91,7 +91,7 @@ export default function FuledaPage() {
                         </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                        <h2 className="text-4xl font-playfair mb-6 text-slate-900 dark:text-white">{t("fuledaPage", "introTitle")}</h2>
+                        <h2 className="text-4xl font-sans mb-6 text-slate-900 dark:text-white">{t("fuledaPage", "introTitle")}</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                             {t("fuledaPage", "description")}
                         </p>
@@ -115,7 +115,7 @@ export default function FuledaPage() {
 
                 {/* Apartment Cards */}
                 <div className="mb-24">
-                    <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">Nasze Apartamenty</h3>
+                    <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">Nasze Apartamenty</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {apartments.map((apartment) => (
                             <Link
@@ -137,7 +137,7 @@ export default function FuledaPage() {
 
                                 </div>
                                 <div className="p-6">
-                                    <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
+                                    <h4 className="text-2xl font-sans mb-2 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
                                         {apartment.title}
                                     </h4>
                                     <ul className="space-y-2 mb-6">
@@ -159,7 +159,7 @@ export default function FuledaPage() {
 
                 {/* Amenities */}
                 <div className="mb-24">
-                    <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{t("fuledaPage", "amenitiesTitle")}</h3>
+                    <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t("fuledaPage", "amenitiesTitle")}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
                             { key: "ac", icon: "🌡️" },
@@ -172,7 +172,7 @@ export default function FuledaPage() {
                             { key: "pier", icon: "🚤" }
                         ].map((item, idx) => (
                             <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-emerald-50 dark:hover:bg-emerald-950/20 transition-colors group">
-                                <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</span>
+                                <span className="text-4xl mb-2 group-hover:scale-110 transition-transform">{item.icon}</span>
                                 <span className="font-medium text-slate-800 dark:text-slate-200 text-center">{t("fuledaPage", `amenities.${item.key}`)}</span>
                             </div>
                         ))}

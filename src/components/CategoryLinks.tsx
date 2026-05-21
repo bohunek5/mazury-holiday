@@ -72,7 +72,7 @@ export default function CategoryLinks() {
                                             {cat.icon}
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-serif font-bold tracking-wide uppercase transition-colors duration-300 group-hover:text-amber-400">
+                                    <h3 className="text-xl font-sans font-bold tracking-wide uppercase transition-colors duration-300 group-hover:text-amber-400">
                                         {cat.title}
                                     </h3>
                                     <div className="mt-3 w-12 h-1 bg-amber-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
