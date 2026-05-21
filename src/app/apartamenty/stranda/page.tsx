@@ -167,9 +167,7 @@ export default function StrandaPage() {
                                                         <div className="absolute bottom-4 left-5 text-white">
                                                             <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
                                                             <h3 className="text-2xl font-bold font-playfair">{unit.id}</h3>
-                                                            {aptData?.price && (
-                                                                <p className="text-amber-400 font-bold mt-1">od {aptData.price} zł/noc</p>
-                                                            )}
+
                                                         </div>
                                                     </div>
                                                 </div>

@@ -266,17 +266,6 @@ export default function CottageDetailsClient({ id }: { id: string }) {
                     <div className="space-y-6">
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 sticky top-24">
 
-                            {/* Price */}
-                            <div className="mb-6 pb-6 border-b border-slate-100 dark:border-slate-800">
-                                <div className="flex items-baseline gap-2">
-                                    <span className="text-4xl font-bold text-slate-900 dark:text-white">od {cottage.price} zł</span>
-                                    <span className="text-slate-500 dark:text-slate-400">/doba</span>
-                                </div>
-                                {cottage.priceWeekend !== cottage.price && (
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Weekend: od {cottage.priceWeekend} zł/doba</p>
-                                )}
-                            </div>
-
                             {/* Quick info */}
                             <div className="grid grid-cols-2 gap-4 mb-6">
                                 {[

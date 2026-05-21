@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
+import { BedDouble, Utensils, MapPin } from "lucide-react";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -40,7 +41,7 @@ export default function MikolajkiPage() {
     const bookingUrl = `https://client37851.idobooking.com/book-now/index.php?ob[${mikolajkiData.idoBookingId || "31"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`;
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
             {/* Hero Section */}
@@ -87,12 +88,10 @@ export default function MikolajkiPage() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex items-baseline space-x-2">
-                            <span className="text-slate-500 uppercase text-sm tracking-widest">{priceLabel}</span>
-                            <span className="text-3xl font-bold text-slate-900 dark:text-white">
-                                {t("mikolajkiPage", "priceValue") || `${mikolajkiData.price} zł`}
-                            </span>
-                            <span className="text-slate-500">{t("mikolajkiPage", "priceUnit") || "/ doba"} • {mikolajkiData.guests} {guestsSuffix}</span>
+                        <div className="flex items-baseline space-x-2 mt-4">
+                            <span className="text-slate-500 uppercase text-sm tracking-widest">Pojemność:</span>
+                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{mikolajkiData.guests}</span>
+                            <span className="text-slate-500">{guestsSuffix}</span>
                         </div>
                     </div>
 
@@ -181,8 +180,8 @@ export default function MikolajkiPage() {
                     <h3 className="text-3xl font-playfair mb-12 text-center text-slate-900 dark:text-white">{amenitiesTitle}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/ROOM.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
+                            <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                <BedDouble size={56} strokeWidth={1.2} />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "comfortTitle") || "Komfort i Wyposażenie"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -191,8 +190,8 @@ export default function MikolajkiPage() {
                         </div>
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                            <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                <Utensils size={56} strokeWidth={1.2} />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "kitchenTitle") || "Kuchnia i Łazienka"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -201,8 +200,8 @@ export default function MikolajkiPage() {
                         </div>
 
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
+                            <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                <MapPin size={56} strokeWidth={1.2} />
                             </div>
                             <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "locationTitle") || "Otoczenie i Lokalizacja"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -216,9 +215,6 @@ export default function MikolajkiPage() {
                     <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{bookingTitle}</h3>
                     <div className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                         <p>{bookingDesc}</p>
-                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">
-                            {t("apartments", "pricePrefix") || "od"} {t("mikolajkiPage", "priceValue") || `${mikolajkiData.price} zł`} {t("mikolajkiPage", "priceUnit") || "/ doba"}
-                        </p>
                     </div>
                     <a
                         href={bookingUrl}
@@ -230,7 +226,7 @@ export default function MikolajkiPage() {
                     </a>
                     <a
                         href="tel:+48730067027"
-                        className="inline-block bg-amber-50 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
+                        className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
                     >
                         {callAction}: 730 067 027
                     </a>

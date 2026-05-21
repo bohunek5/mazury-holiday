@@ -108,9 +108,7 @@ export default function ApartmentsHub() {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
-                                    <div className="text-amber-400 text-sm font-bold mb-2">
-                                        {t("apartments", "pricePrefix")} {apt.price} / {t("apartments", "night")}
-                                    </div>
+
                                     <h3 className="text-2xl font-serif font-bold text-amber-400 mb-2 group-hover:text-amber-300 transition-colors">
                                         {apt.title}
                                     </h3>

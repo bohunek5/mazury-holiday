@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -9,9 +9,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+const lato = Lato({
+  variable: "--font-lato",
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}
+        className={`${inter.variable} ${lato.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}
       >
         <ThemeProvider
           attribute="class"

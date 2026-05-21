@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Users, Trees } from "lucide-react";
+import { Users, Trees, Wifi, Wind, Car, Tv, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
@@ -105,9 +105,7 @@ export default function Apartments() {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
-                                    <div className="text-amber-400 text-sm font-bold mb-2">
-                                        {t("apartments", "pricePrefix")} {apt.price} / {t("apartments", "night")}
-                                    </div>
+
                                     <h3 className="text-2xl font-serif font-bold text-white mb-2 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
                                     </h3>
@@ -159,9 +157,7 @@ export default function Apartments() {
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
                                     <div className="flex justify-between items-center mb-3">
-                                        <div className="text-amber-400 text-sm font-bold bg-slate-900/40 backdrop-blur-sm px-3 py-1 rounded-full border border-amber-500/20">
-                                            {t("apartments", "pricePrefix")} {apt.price}/{t("apartments", "night")}
-                                        </div>
+
                                         <div className="text-white text-xs font-medium flex items-center gap-1 bg-slate-900/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
                                             <Users size={14} className="text-amber-500" />
                                             {apt.people} {t("apartments", "people")}
@@ -175,26 +171,26 @@ export default function Apartments() {
                                     <div className="flex gap-2 mb-4 overflow-hidden">
                                         {apt.id === 4 ? (
                                             <>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="WiFi">
-                                                    <Image src={getAssetPath("/icons/WIFI.svg")} alt="WiFi" width={20} height={20} className="invert" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="WiFi">
+                                                    <Wifi size={18} />
                                                 </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="Klimatyzacja">
-                                                    <Image src={getAssetPath("/icons/AIR_CONDITIONER.svg")} alt="AC" width={20} height={20} className="invert" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Klimatyzacja">
+                                                    <Wind size={18} />
                                                 </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="Parking">
-                                                    <Image src={getAssetPath("/icons/PARKING.svg")} alt="Parking" width={20} height={20} className="invert" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Parking">
+                                                    <Car size={18} />
                                                 </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="TV">
-                                                    <Image src={getAssetPath("/icons/TV.svg")} alt="TV" width={20} height={20} className="invert" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="TV">
+                                                    <Tv size={18} />
                                                 </div>
                                             </>
                                         ) : (
                                             <>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="Plaża">
-                                                    <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Plaża" width={20} height={20} className="invert" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Lokalizacja">
+                                                    <MapPin size={18} />
                                                 </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10" title="Las">
-                                                    <Trees size={20} className="text-white" />
+                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Las">
+                                                    <Trees size={18} />
                                                 </div>
                                             </>
                                         )}

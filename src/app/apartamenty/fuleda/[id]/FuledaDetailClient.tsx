@@ -35,7 +35,7 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
     const title = `Apartament Fuleda ${id === 'parter' ? 'Parter' : 'Piętro'}`;
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
             {/* Hero / Header Image */}

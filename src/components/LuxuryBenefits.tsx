@@ -5,6 +5,7 @@ import { getAssetPath } from "@/utils/assetPath";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
+import { Sparkles, Sun, BedDouble, Wifi, Gift, RefreshCw } from "lucide-react";
 
 export default function LuxuryBenefits() {
     const { t } = useLanguage();
@@ -53,7 +54,9 @@ export default function LuxuryBenefits() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {/* Benefit 1 - Quality */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">✨</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <Sparkles size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "quality.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "quality.desc")}
@@ -62,7 +65,9 @@ export default function LuxuryBenefits() {
 
                     {/* Benefit 2 - Views */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🌅</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <Sun size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "views.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "views.desc")}
@@ -71,7 +76,9 @@ export default function LuxuryBenefits() {
 
                     {/* Benefit 3 - Comfort */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">😴</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <BedDouble size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "comfort.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "comfort.desc")}
@@ -80,7 +87,9 @@ export default function LuxuryBenefits() {
 
                     {/* Benefit 4 - WiFi */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">📶</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <Wifi size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "wifi.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "wifi.desc")}
@@ -89,7 +98,9 @@ export default function LuxuryBenefits() {
 
                     {/* Benefit 5 - Gifts */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🎁</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <Gift size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "gifts.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "gifts.desc")}
@@ -98,7 +109,9 @@ export default function LuxuryBenefits() {
 
                     {/* Benefit 6 - Flexible */}
                     <div className="bg-slate-900/90 md:bg-white/5 md:backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🔄</div>
+                        <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-amber-400">
+                            <RefreshCw size={48} strokeWidth={1.5} />
+                        </div>
                         <h3 className="text-xl font-bold mb-3 text-amber-400">{t("luxuryBenefits", "flexible.title")}</h3>
                         <p className="text-slate-300 leading-relaxed">
                             {t("luxuryBenefits", "flexible.desc")}

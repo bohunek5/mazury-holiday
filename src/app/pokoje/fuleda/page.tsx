@@ -27,7 +27,7 @@ export default function PokojeFuledaPage() {
     const trans = getCurrentTranslations();
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
             {/* Hero / Header Image */}

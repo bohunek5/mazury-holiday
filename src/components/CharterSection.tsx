@@ -92,7 +92,6 @@ export default function CharterSection() {
                                 <span>Stillo 30 VIP</span>
                             </div>
                             <p className="text-white text-2xl font-serif">Luksusowy Houseboat bez patentu</p>
-                            <p className="text-amber-400 font-bold mt-2 text-xl">Cena od 800 zł / doba</p>
                         </div>
                     </div>
                 </div>

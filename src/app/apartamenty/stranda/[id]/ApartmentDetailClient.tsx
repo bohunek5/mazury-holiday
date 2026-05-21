@@ -10,7 +10,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import { useState } from "react";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useRouter } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BedDouble, Utensils, MapPin, Bath, Sun } from "lucide-react";
 
 
 
@@ -54,7 +54,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
     };
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
             {/* Hero / Header Image */}
@@ -184,8 +184,8 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 {/* Kitchen */}
                                 {data.amenities.kitchen.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                            <Utensils size={56} strokeWidth={1.2} />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -197,8 +197,8 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 {/* Bedroom */}
                                 {data.amenities.bedroom.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src={getAssetPath("/icons/BED.svg")} alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
+                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                            <BedDouble size={56} strokeWidth={1.2} />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Sypialnia</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -210,8 +210,8 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 {/* Bathroom */}
                                 {data.amenities.bathroom.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src={getAssetPath("/icons/SHOWER.svg")} alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
+                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                            <Bath size={56} strokeWidth={1.2} />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Łazienka</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -223,8 +223,8 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 {/* Terrace */}
                                 {data.amenities.terrace.length > 0 && (
                                     <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                                        <div className="relative w-14 h-14 mx-auto mb-6">
-                                            <Image src={getAssetPath("/icons/TERRACE.svg")} alt="Taras" fill className="object-contain dark:invert opacity-80" />
+                                        <div className="mx-auto mb-6 flex justify-center text-slate-700 dark:text-slate-300">
+                                            <Sun size={56} strokeWidth={1.2} />
                                         </div>
                                         <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Taras</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -266,10 +266,6 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
 
 
                             <div className="mb-6 space-y-4">
-                                <div className="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
-                                    <span className="text-slate-500">{t("details", "priceFrom") || "Cena od"}:</span>
-                                    <span className="text-2xl font-bold text-amber-500">{data.price} zł</span>
-                                </div>
                                 <div className="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
                                     <span className="text-slate-500">{t("details", "guests") || "Liczba osób"}:</span>
                                     <span className="font-semibold text-slate-900 dark:text-white">{data.guests}</span>

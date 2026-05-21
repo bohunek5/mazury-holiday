@@ -24,7 +24,7 @@ export default function KisajnoPage() {
     };
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+        <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
             {/* Hero Section */}
@@ -62,10 +62,10 @@ export default function KisajnoPage() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex items-baseline space-x-2">
-                            <span className="text-slate-500 uppercase text-sm tracking-widest">Cena od</span>
-                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{kisajnoData.price}</span>
-                            <span className="text-slate-500">zł / doba • {kisajnoData.guests} osoby</span>
+                        <div className="flex items-baseline space-x-2 mt-4">
+                            <span className="text-slate-500 uppercase text-sm tracking-widest">Pojemność:</span>
+                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{kisajnoData.guests}</span>
+                            <span className="text-slate-500">osoby</span>
                         </div>
                     </div>
 
@@ -182,10 +182,9 @@ export default function KisajnoPage() {
 
                 <div className="bg-slate-50 dark:bg-slate-900 p-12 rounded-3xl border border-slate-100 dark:border-slate-800 text-center">
                     <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{t("kisajnoPage", "bookingTitle")}</h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
-                        {t("kisajnoPage", "bookingDesc")}
-                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">od {kisajnoData.price} zł / doba</p>
-                    </p>
+                    <div className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
+                        <p>{t("kisajnoPage", "bookingDesc")}</p>
+                    </div>
                     <a
                         href={`https://engine37851.idobooking.com/index.php?ob[${kisajnoData.idoBookingId || "45"}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                         target="_blank"
