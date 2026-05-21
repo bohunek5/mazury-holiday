@@ -71,7 +71,16 @@ export default function MikolajkiPage() {
                             {description}
                         </p>
                         <ul className="space-y-4 mb-8">
-                            {mikolajkiData.amenities.map((amenity) => (
+                            {[
+                                t("mikolajkiPage", "amenities.parking"),
+                                t("mikolajkiPage", "amenities.port"),
+                                t("mikolajkiPage", "amenities.ac"),
+                                t("mikolajkiPage", "amenities.smartTv"),
+                                t("mikolajkiPage", "amenities.kitchen"),
+                                t("mikolajkiPage", "amenities.dishwasher"),
+                                t("mikolajkiPage", "amenities.wifi"),
+                                t("mikolajkiPage", "amenities.view"),
+                            ].filter(Boolean).map((amenity) => (
                                 <li key={amenity} className="flex items-center space-x-3 text-slate-700 dark:text-slate-200">
                                     <div className="w-2 h-2 bg-amber-500 rounded-full" />
                                     <span>{amenity}</span>
@@ -80,8 +89,10 @@ export default function MikolajkiPage() {
                         </ul>
                         <div className="flex items-baseline space-x-2">
                             <span className="text-slate-500 uppercase text-sm tracking-widest">{priceLabel}</span>
-                            <span className="text-3xl font-bold text-slate-900 dark:text-white">{mikolajkiData.price}</span>
-                            <span className="text-slate-500">{priceUnit} • {mikolajkiData.guests} {guestsSuffix}</span>
+                            <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                                {t("mikolajkiPage", "priceValue") || `${mikolajkiData.price} zł`}
+                            </span>
+                            <span className="text-slate-500">{t("mikolajkiPage", "priceUnit") || "/ doba"} • {mikolajkiData.guests} {guestsSuffix}</span>
                         </div>
                     </div>
 
@@ -112,7 +123,8 @@ export default function MikolajkiPage() {
                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     loading="eager"
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                />
+                                
+                            />
                             </div>
                         )}
 
@@ -125,14 +137,14 @@ export default function MikolajkiPage() {
                                 >
                                     {galleryExpanded ? (
                                         <>
-                                            <span>Zwiń galerię</span>
+                                            <span>{t("mikolajkiPage", "collapseGallery") || "Zwiń galerię"}</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
                                             </svg>
                                         </>
                                     ) : (
                                         <>
-                                            <span>Zobacz więcej zdjęć</span>
+                                            <span>{t("mikolajkiPage", "expandGallery") || "Zobacz więcej zdjęć"}</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                             </svg>
@@ -172,9 +184,9 @@ export default function MikolajkiPage() {
                             <div className="relative w-14 h-14 mx-auto mb-6">
                                 <Image src={getAssetPath("/icons/ROOM.svg")} alt="Komfort" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Komfort i Wyposażenie</h4>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "comfortTitle") || "Komfort i Wyposażenie"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t("mikolajkiPage", "amenities.ac") || "Sypialnia z łóżkiem 180x200"}, {t("mikolajkiPage", "amenities.wifi") || "Szybkie WiFi"}, {t("mikolajkiPage", "amenities.smartTv") || "Salon z TV i rozkładaną sofą"}
+                                {t("mikolajkiPage", "comfortDesc") || "Sypialnia z łóżkiem 180x200, szybkie WiFi, salon z TV i rozkładaną sofą"}
                             </p>
                         </div>
 
@@ -182,9 +194,9 @@ export default function MikolajkiPage() {
                             <div className="relative w-14 h-14 mx-auto mb-6">
                                 <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Kuchnia i Łazienka</h4>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "kitchenTitle") || "Kuchnia i Łazienka"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t("mikolajkiPage", "amenities.kitchen") || "Aneks kuchenny ze zmywarką"}, Nowoczesna łazienka z prysznicem, Zestaw startowy (kawa, herbata)
+                                {t("mikolajkiPage", "kitchenDesc") || "Aneks kuchenny ze zmywarką, nowoczesna łazienka z prysznicem, zestaw startowy (kawa, herbata)"}
                             </p>
                         </div>
 
@@ -192,9 +204,9 @@ export default function MikolajkiPage() {
                             <div className="relative w-14 h-14 mx-auto mb-6">
                                 <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Lokalizacja" fill className="object-contain dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">Otoczenie i Lokalizacja</h4>
+                            <h4 className="text-2xl font-playfair mb-4 text-slate-900 dark:text-white">{t("mikolajkiPage", "locationTitle") || "Otoczenie i Lokalizacja"}</h4>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t("mikolajkiPage", "amenities.view") || "Widok na wewnętrzny dziedziniec"}, Prywatne wejście, Ścisłe centrum Mikołajek przy Placu Wolności
+                                {t("mikolajkiPage", "locationDesc") || "Widok na wewnętrzny dziedziniec, ścisłe centrum Mikołajek przy Placu Wolności, blisko jeziora"}
                             </p>
                         </div>
                     </div>
@@ -204,7 +216,9 @@ export default function MikolajkiPage() {
                     <h3 className="text-3xl font-playfair mb-6 text-slate-900 dark:text-white">{bookingTitle}</h3>
                     <div className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                         <p>{bookingDesc}</p>
-                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">od {mikolajkiData.price} zł / doba</p>
+                        <p className="text-3xl font-bold text-amber-500 mb-4 mt-4">
+                            {t("apartments", "pricePrefix") || "od"} {t("mikolajkiPage", "priceValue") || `${mikolajkiData.price} zł`} {t("mikolajkiPage", "priceUnit") || "/ doba"}
+                        </p>
                     </div>
                     <a
                         href={bookingUrl}
@@ -212,7 +226,7 @@ export default function MikolajkiPage() {
                         rel="noopener noreferrer"
                         className="inline-block bg-[#50B848] hover:bg-[#45a041] text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-500/25 whitespace-nowrap uppercase tracking-wider mb-4 md:mb-0 md:mr-4 active:scale-95 animate-pulse"
                     >
-                        ZAREZERWUJ GO
+                        {t("mikolajkiPage", "bookBtn") || "ZAREZERWUJ GO"}
                     </a>
                     <a
                         href="tel:+48730067027"
