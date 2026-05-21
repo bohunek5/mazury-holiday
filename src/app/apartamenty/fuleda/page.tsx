@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
+import { Thermometer, Flame, Umbrella, Tent, Wifi, Utensils, WashingMachine, Ship } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fuledaApartments } from "@/data/fuleda-data";
@@ -162,17 +163,17 @@ export default function FuledaPage() {
                     <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t("fuledaPage", "amenitiesTitle")}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { key: "ac", icon: "🌡️" },
-                            { key: "fireplace", icon: "🔥" },
-                            { key: "beach", icon: "🏖️" },
-                            { key: "bonfire", icon: "🏮" },
-                            { key: "wifi", icon: "📶" },
-                            { key: "kitchen", icon: "🍳" },
-                            { key: "washer", icon: "🫧" },
-                            { key: "pier", icon: "🚤" }
+                            { key: "ac", icon: <Thermometer size={32} strokeWidth={1.5} /> },
+                            { key: "fireplace", icon: <Flame size={32} strokeWidth={1.5} /> },
+                            { key: "beach", icon: <Umbrella size={32} strokeWidth={1.5} /> },
+                            { key: "bonfire", icon: <Tent size={32} strokeWidth={1.5} /> },
+                            { key: "wifi", icon: <Wifi size={32} strokeWidth={1.5} /> },
+                            { key: "kitchen", icon: <Utensils size={32} strokeWidth={1.5} /> },
+                            { key: "washer", icon: <WashingMachine size={32} strokeWidth={1.5} /> },
+                            { key: "pier", icon: <Ship size={32} strokeWidth={1.5} /> }
                         ].map((item, idx) => (
                             <div key={idx} className="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl hover:bg-emerald-50 dark:hover:bg-emerald-950/20 transition-colors group">
-                                <span className="text-4xl mb-2 group-hover:scale-110 transition-transform">{item.icon}</span>
+                                <span className="mb-2 group-hover:scale-110 transition-transform text-slate-700 dark:text-slate-300 group-hover:text-amber-500">{item.icon}</span>
                                 <span className="font-medium text-slate-800 dark:text-slate-200 text-center">{t("fuledaPage", `amenities.${item.key}`)}</span>
                             </div>
                         ))}

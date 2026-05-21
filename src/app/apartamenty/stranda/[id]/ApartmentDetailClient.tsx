@@ -130,7 +130,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                     <div className="mt-6">
                                         <button
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                            className="w-full mb-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                                            className="w-full mb-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
                                             {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
                                         </button>
@@ -249,7 +249,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                                 href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 rounded-xl transition-all mb-2 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-amber-500/25 active:scale-95"
+                                className="block w-full text-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-all mb-2 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-600/25 active:scale-95"
                             >
                                 ZAREZERWUJ GO
                             </a>
@@ -257,7 +257,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                             {/* Phone Call Button - Second */}
                             <a
                                 href="tel:+48730067027"
-                                className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors mb-2 whitespace-nowrap"
+                                className="block w-full text-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors mb-2 whitespace-nowrap"
                             >
                                 {t("details", "callBtn")}: 730 067 027
                             </a>
@@ -296,7 +296,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                     href={`https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     ZAREZERWUJ GO
                 </a>

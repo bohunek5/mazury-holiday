@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getAssetPath } from "@/utils/assetPath";
 import Image from "next/image";
+import { Anchor, Navigation, Wifi } from "lucide-react";
 
 export default function CharterSection() {
     const { t } = useLanguage();
@@ -51,20 +52,20 @@ export default function CharterSection() {
 
                         <ul className="space-y-6 mb-10 text-slate-300">
                             <li className="flex items-center gap-4">
-                                <div className="relative w-8 h-8 shrink-0">
-                                    <span className="text-3xl">⚓</span>
+                                <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
+                                    <Anchor size={24} className="text-amber-500" />
                                 </div>
                                 <span className="text-lg">{t("charter", "feature1") || "Bez patentu"}</span>
                             </li>
                             <li className="flex items-center gap-4">
-                                <div className="relative w-8 h-8 shrink-0">
-                                    <Image src={getAssetPath("/icons/THRUSTERS.svg")} alt="Stery strumieniowe" fill className="object-contain invert" />
+                                <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
+                                    <Navigation size={24} className="text-amber-500" />
                                 </div>
                                 <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
                             </li>
                              <li className="flex items-center gap-4">
-                                <div className="relative w-8 h-8 shrink-0">
-                                    <Image src={getAssetPath("/icons/WIFI.svg")} alt="Ogrzewanie i WiFi" fill className="object-contain invert" />
+                                <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
+                                    <Wifi size={24} className="text-amber-500" />
                                 </div>
                                 <span className="text-lg">Ogrzewanie, WiFi bez limitu</span>
                             </li>

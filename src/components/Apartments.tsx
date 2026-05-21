@@ -61,8 +61,7 @@ export default function Apartments() {
             description: t("apartments", "items.domkiSkorupki.description"),
             image: getAssetPath("/images/skorupki/skorupki_1.webp"),
             people: skorupkiData.guests,
-            link: "/domki",
-            price: `${skorupkiData.price} zł`
+            link: "/domki"
         },
         {
             id: 6,
@@ -71,8 +70,7 @@ export default function Apartments() {
             description: t("apartments", "items.pokojeFuleda.description"),
             image: getAssetPath("/images/pokoje_fuleda/334.webp"),
             people: "4",
-            link: "/pokoje/fuleda",
-            price: "375 zł"
+            link: "/pokoje/fuleda"
         }
     ];
 

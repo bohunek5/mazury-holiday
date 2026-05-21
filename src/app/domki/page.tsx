@@ -11,6 +11,7 @@ import { useState } from "react";
 import { skorupkiData } from "@/data/skorupki-data";
 import { cottagesData } from "@/data/cottages-data";
 import { getAssetPath } from "@/utils/assetPath";
+import ICalCalendar from "@/components/ICalCalendar";
 
 export default function DomkiPage() {
     const { t } = useLanguage();
@@ -89,88 +90,66 @@ export default function DomkiPage() {
                     </div>
                 </div>
 
-                {/* Cottages Grid */}
-                <div className="mb-24">
-                    <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">Wybierz swój domek</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cottagesData.map((cottage) => (
-                            <Link href={`/domki/${cottage.id}`} key={cottage.id} className="group block">
-                                <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-800 h-full flex flex-col">
-                                    <div className="relative h-64 overflow-hidden">
-                                        <Image
-                                            src={getAssetPath(cottage.heroImage)}
-                                            alt={cottage.name}
-                                            fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                        />
-                                        {cottage.id === 8 || cottage.id === 10 ? (
-                                            <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</div>
-                                        ) : null}
-                                    </div>
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <h4 className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-1 group-hover:text-amber-500 transition-colors">{cottage.name}</h4>
-                                        <p className="text-sm text-amber-500 font-medium mb-3">{cottage.tagline}</p>
-                                        <p className="text-slate-500 dark:text-slate-400 text-sm mb-2 line-clamp-2">
-                                            {cottage.description}
-                                        </p>
-
-                                        {/* Quick highlights icons */}
-                                        <div className="flex gap-2 mb-2 flex-wrap">
-                                            {cottage.highlights.slice(0, 4).map((h) => (
-                                                <div key={h.label} title={h.label} className="relative w-7 h-7 bg-slate-50 dark:bg-slate-800 rounded-lg p-1">
-                                                    <Image src={h.icon} alt={h.label} fill className="object-contain dark:invert p-1" />
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
-                                            <div className="flex items-center gap-3 text-sm text-slate-500">
-                                                <span className="flex items-center gap-1"><Users size={14} /> Max. ilość osób: {cottage.guests}</span>
-                                                <span className="flex items-center gap-1"><BedDouble size={14} /> {cottage.bedrooms} syp.</span>
-                                                <span className="flex items-center gap-1"><Maximize2 size={14} /> {cottage.area}m²</span>
-                                            </div>
-                                            <span className="text-amber-500 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform text-sm">
-                                                Szczegóły &rarr;
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
+                {/* Booking Button & Calendar */}
+                <div className="flex flex-col items-center justify-center mb-24 max-w-4xl mx-auto">
+                    <a
+                        href="https://engine37851.idobooking.com/index.php"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-green-600/40 whitespace-nowrap mb-12"
+                    >
+                        Zarezerwuj
+                    </a>
+                    <div className="w-full bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+                        <h3 className="text-2xl font-sans mb-6 text-center text-slate-900 dark:text-white">Dostępność</h3>
+                        <ICalCalendar
+                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                            apartmentId="Domki Skorupki"
+                        />
                     </div>
                 </div>
 
                 {/* Amenities Grid */}
                 <div className="mb-24">
-                    <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t('skorupki', 'amenitiesTitle')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/ROOM.svg")} alt="Domki" fill className="object-contain dark:invert opacity-80" />
+                    <h3 className="text-2xl font-sans mb-8 text-center text-slate-900 dark:text-white">{t('skorupki', 'amenitiesTitle')}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex justify-center mb-2">
+                                <Image src={getAssetPath("/icons/ROOM.svg")} alt="Domki" width={32} height={32} className="dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-sans mb-2 text-slate-900 dark:text-white">Wyposażenie</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t('skorupki', 'amenities.fullEquip')}, {t('skorupki', 'amenities.ac')}, {t('skorupki', 'amenities.wifi')}
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Wyposażenie</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.fullEquip')}, {t('skorupki', 'amenities.ac')}
                             </p>
                         </div>
 
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Teren" fill className="object-contain dark:invert opacity-80" />
+                        <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex justify-center mb-2">
+                                <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Teren" width={32} height={32} className="dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-sans mb-2 text-slate-900 dark:text-white">Teren i Relaks</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t('skorupki', 'amenities.garden')}, {t('skorupki', 'amenities.bonfire')}, {t('skorupki', 'amenities.peace')}
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Teren i Relaks</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.garden')}, {t('skorupki', 'amenities.bonfire')}
                             </p>
                         </div>
 
-                        <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <div className="relative w-14 h-14 mx-auto mb-6">
-                                <Image src={getAssetPath("/icons/PARKING.svg")} alt="Udogodnienia" fill className="object-contain dark:invert opacity-80" />
+                        <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex justify-center mb-2">
+                                <Image src={getAssetPath("/icons/PARKING.svg")} alt="Udogodnienia" width={32} height={32} className="dark:invert opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-sans mb-2 text-slate-900 dark:text-white">Dostępność</h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Dostępność</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {t('skorupki', 'amenities.parking')}, {t('skorupki', 'amenities.waterAccess')}
+                            </p>
+                        </div>
+
+                        <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex justify-center mb-2">
+                                <Image src={getAssetPath("/icons/WIFI.svg")} alt="Media" width={32} height={32} className="dark:invert opacity-80" />
+                            </div>
+                            <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Media</h4>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t('skorupki', 'amenities.wifi')}, Smart TV
                             </p>
                         </div>
                     </div>
@@ -203,7 +182,7 @@ export default function DomkiPage() {
                     <div>
                         <button
                             onClick={() => setGalleryExpanded(!galleryExpanded)}
-                            className="w-full mb-6 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                            className="w-full mb-6 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                         >
                             {galleryExpanded ? `▲ ${t('skorupki', 'collapseGallery')}` : `▼ ${t('skorupki', 'expandGallery')}`}
                         </button>
@@ -243,7 +222,7 @@ export default function DomkiPage() {
                         </p>
                         <a
                             href="tel:+48730067027"
-                            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-amber-500/40 whitespace-nowrap"
+                            className="inline-block bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-green-600/40 whitespace-nowrap"
                         >
                             730 067 027
                         </a>

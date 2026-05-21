@@ -41,21 +41,21 @@ export default function Hero() {
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : t("hero", "subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-16">
           <a
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-black rounded-full font-bold transition-all flex items-center justify-center shadow-lg hover:shadow-amber-500/25 active:scale-95 whitespace-nowrap uppercase"
+            className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-500 text-amber-400 rounded-full font-bold transition-all flex items-center justify-center shadow-lg active:scale-95 whitespace-nowrap uppercase text-sm sm:text-base tracking-wider"
           >
             Rezerwuj Online
           </a>
           <a
             href="tel:730067027"
-            className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group"
+            className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base"
           >
             <span className="p-2 bg-white/20 rounded-full group-hover:bg-white group-hover:text-amber-500 transition-colors">
-              <Phone size={20} className="text-white group-hover:text-amber-500 transition-colors" />
+              <Phone size={16} className="text-white group-hover:text-amber-500 transition-colors sm:w-5 sm:h-5" />
             </span>
             +48 730 067 027
           </a>

@@ -132,7 +132,7 @@ export default function MikolajkiPage() {
                             <div className="pt-4">
                                 <button
                                     onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                    className="w-full px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 uppercase tracking-wide flex items-center justify-center gap-2"
+                                    className="w-full px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/25 uppercase tracking-wide flex items-center justify-center gap-2"
                                 >
                                     {galleryExpanded ? (
                                         <>
@@ -220,13 +220,13 @@ export default function MikolajkiPage() {
                         href={bookingUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap uppercase tracking-wider mb-2 md:mb-0 md:mr-4 active:scale-95 animate-pulse"
+                        className="inline-block bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-600/25 whitespace-nowrap uppercase tracking-wider mb-2 md:mb-0 md:mr-4 active:scale-95 animate-pulse"
                     >
                         {t("mikolajkiPage", "bookBtn") || "ZAREZERWUJ GO"}
                     </a>
                     <a
                         href="tel:+48730067027"
-                        className="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-amber-500/25 whitespace-nowrap"
+                        className="inline-block bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-4 rounded-xl transition-all shadow-lg hover:shadow-green-600/25 whitespace-nowrap"
                     >
                         {callAction}: 730 067 027
                     </a>
@@ -245,7 +245,7 @@ export default function MikolajkiPage() {
                     href={bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     {t("nav", "bookBtn")}
                 </a>

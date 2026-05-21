@@ -138,6 +138,16 @@ export default function CharterPage() {
                                         {t("charterPage", "safetyDesc")}
                                     </p>
                                 </div>
+
+                                <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
+                                    <div className="flex justify-center mb-2">
+                                        <Wifi className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
+                                    </div>
+                                    <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Media</h4>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        Wydajne ogrzewanie oraz WiFi bez limitu zapewniające stałą łączność ze światem.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -172,7 +182,7 @@ export default function CharterPage() {
                                     <div className="mt-6">
                                         <button
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                            className="w-full mb-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+                                            className="w-full mb-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
                                             {galleryExpanded ? `▲ ${t("charterPage", "collapseGallery")}` : `▼ ${t("charterPage", "expandGallery")}`}
                                         </button>
@@ -219,7 +229,7 @@ export default function CharterPage() {
                                         href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-amber-500/25 active:scale-95"
+                                        className="flex-1 text-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-600/25 active:scale-95"
                                     >
                                         {t("charterPage", "bookBtn")}
                                     </a>
@@ -278,7 +288,7 @@ export default function CharterPage() {
                     href="https://engine37851.idobooking.com/index.php?ob[31]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-black font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
+                    className="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
                     {t("charterPage", "bookBtn")}
                 </a>

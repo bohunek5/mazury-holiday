@@ -109,7 +109,7 @@ export default function RoomsPage() {
                                                 href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
+                                                className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
                                             >
                                                 {room.bookBtn}
                                             </a>
