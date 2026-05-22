@@ -24,8 +24,8 @@ export const translations = {
                 stranda: { title: "Apartamenty Stranda Residence", location: "Giżycko, jezioro Kisajno", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
                 kisajno: { title: "Apartamenty Kisajno", location: "Giżycko, jezioro Kisajno", description: "Luksus nad brzegiem jeziora Kisajno." },
                 fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
-                domkiSkorupki: { title: "Domki Skorupki (Skorupki)", location: "Skorupki, jezioro Tałty", description: "Luksusowe domki w sercu mazurskiej natury." },
-                pokojeFuleda: { title: "Pokoje Fuleda (Fuleda)", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." },
+                domkiSkorupki: { title: "Domki Skorupki", location: "Skorupki, jezioro Tałty", description: "Luksusowe domki w sercu mazurskiej natury." },
+                pokojeFuleda: { title: "Pokoje Fuleda", location: "Fuleda, Jezioro Dobskie", description: "Przytulne pokoje z widokiem na jezioro w strefie ciszy." },
                 mikolajki: { title: "Apartament Mikołajki", location: "Mikołajki, jezioro Mikołajskie", description: "Nowoczesny apartament w samym centrum Mikołajek." }
             }
         },
