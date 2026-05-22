@@ -70,9 +70,9 @@ miejsce na grilla i ognisko`,
         terrace: ['Przestronny taras', 'Prywatne zejście do jeziora', 'Miejsce na grilla i ognisko', 'Łódź wiosłowa', 'Taras widokowy']
     },
     gallery: {
-        heroImage: getAssetPath("/images/pokoje_fuleda/334.webp"),
+        heroImage: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_hero.webp"),
         images: [
-            getAssetPath("/images/pokoje_fuleda/334.webp"),
+            getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_hero.webp"),
             getAssetPath("/images/pokoje_fuleda/333.webp"),
             getAssetPath("/images/pokoje_fuleda/335.webp"),
             getAssetPath("/images/pokoje_fuleda/336.webp"),

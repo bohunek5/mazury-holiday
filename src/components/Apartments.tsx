@@ -94,7 +94,7 @@ export default function Apartments() {
             title: t("apartments", "items.pokojeFuleda.title"),
             location: t("apartments", "items.pokojeFuleda.location"),
             description: t("apartments", "items.pokojeFuleda.description"),
-            image: getAssetPath("/images/pokoje_fuleda/334.webp"),
+            image: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_miniaturka.webp"),
             people: "4",
             link: "/pokoje/fuleda",
             icons: [

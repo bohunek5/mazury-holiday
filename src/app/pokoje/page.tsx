@@ -29,7 +29,7 @@ export default function RoomsPage() {
             id: "fuleda",
             title: fuledaTrans.title,
             description: fuledaTrans.description,
-            image: getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_1.webp"),
+            image: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_miniaturka.webp"),
             link: "/pokoje/fuleda",
             price: "od 375 zł/doba",
             features: fuledaTrans.features,
@@ -46,7 +46,7 @@ export default function RoomsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 z-10" />
                 <Image
-                    src={getAssetPath("/images/pokoje_fuleda/336.webp")}
+                    src={getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_hero.webp")}
                     alt={trans.heroTitle}
                     fill
                     className="object-cover"
