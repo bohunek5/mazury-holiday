@@ -30,6 +30,7 @@ export default function PokojeFuledaPage() {
             terrace: data.amenities.terrace,
         },
         gallery: data.gallery.images,
+        mainImage: data.gallery.heroImage,
         idoBookingId: data.idoBookingId,
         icalUrl: data.icalUrl,
     };

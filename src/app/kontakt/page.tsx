@@ -79,13 +79,12 @@ export default function ContactPage() {
 
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/50 z-10" />
+                <div className="absolute inset-0 bg-slate-900/40 z-10" />
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${getAssetPath('/images/DJI_0059_optimized.webp')}')` }}
+                    style={{ backgroundImage: `url('${getAssetPath('/images/hero-mazury-holiday-final.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Mazury Holiday</div>
                     <h1 className="text-4xl md:text-7xl font-sans mb-4">{t("nav", "contact")}</h1>
                     <p className="text-xl md:text-3xl font-light">Skontaktuj się z nami</p>
                 </div>
@@ -123,7 +122,7 @@ export default function ContactPage() {
                                 <iframe
                                     width="100%"
                                     height="100%"
-                                    title={`Mapa lokalizacji: ${loc.title}`}
+                                    title={`${t("contactExtra", "mapLabel")} ${loc.title}`}
                                     src={`https://maps.google.com/maps?q=${loc.mapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                                     frameBorder="0"
                                     scrolling="no"

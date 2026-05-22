@@ -85,7 +85,7 @@ export default function CharterPage() {
                     quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{t("charterPage", "heroBadge")}</div>
+                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Port Stranda Giżycko, jezioro Kisajno</div>
                     <h1 className="text-4xl md:text-7xl font-sans mb-2">{t("charterPage", "heroTitle")}</h1>
                     <p className="text-xl md:text-3xl font-light">{t("charterPage", "heroSubtitle")}</p>
                 </div>

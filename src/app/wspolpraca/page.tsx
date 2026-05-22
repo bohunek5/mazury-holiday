@@ -31,8 +31,8 @@ export default function CooperationPage() {
         },
         {
             icon: <ShieldCheck className="w-8 h-8 text-amber-500" />,
-            title: "Pełne Bezpieczeństwo",
-            desc: "Dbamy o Twój obiekt jak o własny, zapewniając stały nadzór i ubezpieczenie."
+            title: t("coopExtra", "securityTitle"),
+            desc: t("coopExtra", "securityDesc")
         }
     ];
 
@@ -44,7 +44,7 @@ export default function CooperationPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <Image
-                    src={getAssetPath("/images/DJI_0109_optimized.webp")}
+                    src={getAssetPath("/images/hero-mazury-holiday-final.webp")}
                     alt="Współpraca Mazury Holiday"
                     fill
                     className="object-cover"
@@ -52,9 +52,8 @@ export default function CooperationPage() {
                     quality={60}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Mazury Holiday</div>
-                    <h1 className="text-4xl md:text-7xl font-sans mb-4">Współpraca</h1>
-                    <p className="text-xl md:text-3xl font-light">Dołącz do nas i zwiększ zyski z nieruchomości</p>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-4">{t("coopExtra", "heroTitle")}</h1>
+                    <p className="text-xl md:text-3xl font-light">{t("coopExtra", "heroSubtitle")}</p>
                 </div>
             </section>
 
@@ -94,7 +93,7 @@ export default function CooperationPage() {
                         className="relative rounded-3xl overflow-hidden shadow-2xl h-[600px]"
                     >
                         <Image
-                            src={getAssetPath("/images/stranda/A103_images/A103 salonn.webp")}
+                            src={getAssetPath("/images/wspolpraca-radlight.webp")}
                             alt="Luxury management"
                             fill
                             className="object-cover"
@@ -131,15 +130,15 @@ export default function CooperationPage() {
             {/* CTA Section */}
             <section className="py-20 bg-amber-500 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-5xl font-sans font-bold mb-8">Gotowy na współpracę?</h2>
+                    <h2 className="text-3xl md:text-5xl font-sans font-bold mb-8">{t("coopExtra", "readyTitle")}</h2>
                     <p className="text-xl mb-12 opacity-90">
-                        Skontaktuj się z nami, aby porozmawiać o potencjale Twojej nieruchomości na Mazurach.
+                        {t("coopExtra", "readyDesc")}
                     </p>
                     <Link
                         href="/kontakt"
                         className="inline-flex items-center gap-3 px-10 py-5 bg-white text-amber-500 hover:bg-slate-900 hover:text-white rounded-full font-bold text-lg transition-all shadow-xl"
                     >
-                        <MessageCircle /> Porozmawiajmy
+                        <MessageCircle /> {t("coopExtra", "letsTalk")}
                     </Link>
                 </div>
             </section>

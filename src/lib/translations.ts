@@ -1,5 +1,7 @@
+import { translationsLegal } from './translationsLegal';
 export const translations = {
     pl: {
+        ...translationsLegal.pl,
         nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj", language: "Język", back: "Powrót", euProjects: "Projekty UE" },
         hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "730 067 027", scrollDown: "Przewiń w dół" },
         intro: { tag: "Mazury.Holiday", title: "Witaj w krainie", titleHighlight: "Wielkich Jezior", p1: "Zapraszamy do odkrycia magii Mazur w naszych luksusowych apartamentach, klimatycznych domkach oraz na pokładzie jachtu.", p2: "Ciesz się spokojem w Giżycku, dziką naturą we Fuledzie lub relaksem w Skorupkach. Twój wymarzony wypoczynek zaczyna się tutaj." },
@@ -474,6 +476,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     en: {
+        ...translationsLegal.en,
         nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now", language: "Language", back: "Back", euProjects: "EU Projects" },
         hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "730 067 027", scrollDown: "Scroll down" },
         intro: { tag: "Mazury.Holiday", title: "Welcome to", titleHighlight: "Great Lakes", p1: "Discover the magic of Masuria from our luxury apartments.", p2: "Whether you seek peace in Giżycko or luxury in Fuleda." },
@@ -901,6 +904,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     de: {
+        ...translationsLegal.de,
         nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen", language: "Sprache", back: "Zurück" },
         hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "730 067 027" },
         intro: { tag: "Mazury.Holiday", title: "Willkommen in", titleHighlight: "Masuren", p1: "Entdecken Sie die Magie Masurens.", p2: "Ob Ruhe in Giżycko oder Luxus in Fuleda." },
@@ -1284,6 +1288,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     es: {
+        ...translationsLegal.es,
         nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar", language: "Idioma", back: "Volver" },
         hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "730 067 027" },
         luxuryBenefits: {
@@ -1629,6 +1634,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     it: {
+        ...translationsLegal.it,
         nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota", language: "Lingua", back: "Indietro" },
         hero: { title: "Vacanze in Masuria", subtitle: "MOMENTI UNICI", apartmentsBtn: "I nostri appartamenti", charterBtn: "Noleggio Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Benvenuti nei", titleHighlight: "Grandi Laghi", p1: "Scopri la magia della Masuria.", p2: "Relax a Giżycko o lusso a Fuleda." },
@@ -1873,6 +1879,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         },
     },
     fr: {
+        ...translationsLegal.fr,
         nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver", language: "Langue", back: "Retour" },
         hero: { title: "Vacances en Mazurie", subtitle: "MOMENTS UNIQUES", apartmentsBtn: "Nos Appartements", charterBtn: "Location de Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenue aux", titleHighlight: "Grands Lacs", p1: "Découvrez la magie de la Mazurie.", p2: "Repos à Giżycko ou luxe à Fuleda." },
@@ -2196,6 +2203,9 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             priceLabel: "Cena od",
             priceValue: "500 PLN",
             priceUnit: "/ noc",
+            groundFloorTitle: "Apartmán Přízemí",
+            groundFloorDesc: "Prostorný obývací pokoj s krbem, klimatizací, ložnice a velká terasa s přímým přístupem k jezeru.",
+            firstFloorTitle: "Apartmán Patro",
             amenitiesTitle: "Vybavení",
             bookingTitle: "Rezervujte si pobyt",
             bookingDesc: "Kontaktujte nás přímo pro nejlepší nabídku.",
@@ -2248,9 +2258,9 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             subtitle: "Ticho, klid, příroda u jezera Dobské",
             introTitle: "Oáza klidu v tiché zóně",
             description: "Lokalita Fuleda je návrh pro ty, kteří se chtějí zcela odříznout od shonu civilizace.",
-            groundFloorTitle: "Apartmán Přízemí (od 250 PLN)",
+            groundFloorTitle: "Apartmán Přízemí",
             groundFloorDesc: "Prostorný obývací pokoj s krbem, klimatizací a velkou terasou.",
-            firstFloorTitle: "Apartmán Patro (od 200 PLN)",
+            firstFloorTitle: "Apartmán Patro",
             firstFloorDesc: "Stylově zařízený apartmán s výhledem na rezervaci.",
             amenitiesTitle: "Premium Vybavení",
             amenities: {
@@ -2422,6 +2432,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     lt: {
+        ...translationsLegal.lt,
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Nameliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti", language: "Kalba", back: "Grįžti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "730 067 027", scrollDown: "Slinkite žemyn" },
         intro: { tag: "Mazury.Holiday", title: "Sveiki atvykę", titleHighlight: "Didieji Ežerai", p1: "Atraskite Mozūrijos magiją.", p2: "Poilsis Giżycko." },
@@ -2508,7 +2519,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             genericDesc: "Mūsų apartamentai yra Gižycke, prie Stranda uosto Stranda Residence daugiabučiuose, ant Kisajno ežero kranto (Tracz įlanka). Iš jo atsiveria gražus vaizdas į Kisajno ežero panoramą ir Didžiųjų Mozūrijos ežerų taką. Apartamentai yra prabangiai įrengti ir užtikrina aukštą poilsio komfortą. Vietoje galite naudotis uosto ištekliais, tokiais kaip: smuklė, koncertai vasaros sezonu, prieplauka, vandens įrangos nuoma ir kt.",
             locationDesc: "Artumas iki Gižycko centro leidžia mėgautis daugybe turistinių pramogų, daugelio restoranų ir barų pasiūlymais. Objekto vieta taip pat palengvina Mozūrijos pažinimą gamtos, istorijos ir pramogų požiūriu.",
             A103: "Apartamentai A103 Suite yra pirmame pastato aukšte, turi didelę ir erdvę svetainę su virtuvėle ir išlankstoma sofa, miegamąjį, vonios kambarį su dušu ir didelę terasą su baldais.",
-            A104: "Apartamentai A104 Delux su privačiu sūkurine vonia terasoje yra A pastato pirmame aukšte. Jį sudaro erdvi svetainė su virtuvėle ir sofa, miegamasis su viena dvigule lova, vonios kambarys su dušu, terasa, kurioje yra privati sūkurinė vonia.",
+            A104: "Apartamentai A104 Delux su privačia sūkurine vonia terasoje yra A pastato pirmame aukšte. Jį sudaro erdvi svetainė su virtuvėle ir sofa, miegamasis su viena dvigule lova, vonios kambarys su dušu, terasa, kurioje yra privati sūkurinė vonia.",
             A105: "Apartamentai A105 yra prabangus vienetas su sūkurine vonia, siūlantis patogų poilsį moderniame interjere.",
             B102: "Apartamentai B102, esantys B pastato pirmame aukšte, turi didelę svetainę su virtuvėle ir nuosavą sūkurine vonia terasoje.",
             B106: "Prabangūs apartamentai pirmame aukšte su dviem miegamaisiais ir didelė svetainė.",

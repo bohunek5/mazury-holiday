@@ -24,7 +24,6 @@ export default function PrivacyPolicyPage() {
                     style={{ backgroundImage: `url('${getAssetPath('/images/mazury_hero.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4 mt-16">
-                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Mazury Holiday</div>
                     <h1 className="text-4xl md:text-6xl font-sans mb-4">{t("privacyPolicy", "title")}</h1>
                 </div>
             </section>

@@ -73,7 +73,6 @@ miejsce na grilla i ognisko`,
         heroImage: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_hero.webp"),
         images: [
             getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_hero.webp"),
-            getAssetPath("/images/pokoje_fuleda/333.webp"),
             getAssetPath("/images/pokoje_fuleda/335.webp"),
             getAssetPath("/images/pokoje_fuleda/336.webp"),
             getAssetPath("/images/pokoje_fuleda/337.webp"),
