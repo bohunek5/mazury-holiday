@@ -46,7 +46,7 @@ export default function Hero() {
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-500 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
+            className="w-full max-w-[280px] sm:max-w-none sm:w-[260px] px-5 py-2.5 sm:px-8 sm:py-4 bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-500 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
           >
             <span className="p-1.5 sm:p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500 transition-colors">
               <Calendar size={16} className="text-amber-500 group-hover:text-white transition-colors sm:w-5 sm:h-5" />
@@ -55,7 +55,7 @@ export default function Hero() {
           </a>
           <a
             href="tel:730067027"
-            className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
+            className="w-full max-w-[280px] sm:max-w-none sm:w-[260px] px-5 py-2.5 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
           >
             <span className="p-1.5 sm:p-2 bg-white/20 rounded-full group-hover:bg-white group-hover:text-slate-900 transition-colors">
               <Phone size={16} className="text-white group-hover:text-slate-900 transition-colors sm:w-5 sm:h-5" />
