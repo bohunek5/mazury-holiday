@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getAssetPath } from "@/utils/assetPath";
 import Image from "next/image";
 import { Anchor, Navigation, Wifi, ShieldCheck, Ship } from "lucide-react";
+import Link from "next/link";
 
 export default function CharterSection() {
     const { t } = useLanguage();
@@ -71,12 +72,12 @@ export default function CharterSection() {
                             </li>
                         </ul>
 
-                        <a
+                        <Link
                             href="/czarter"
                             className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-medium transition-all shadow-lg shadow-amber-500/20"
                         >
                             {t("charter", "detailsBtn") || "SPRAWDŹ SZCZEGÓŁY"}
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
