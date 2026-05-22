@@ -18,9 +18,9 @@ export default function DomkiPage() {
 
     const mappedData = {
         id: skorupkiData.id,
-        title: skorupkiData.title,
+        title: "Domki Skorupki",
         subtitle: "Skorupki, jezioro Tałty",
-        description: `${skorupkiData.description}\n\n${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
+        description: `Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.\n\n${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
         mainImage: skorupkiData.gallery.heroImage,
         amenities: {
             living: [
@@ -49,8 +49,9 @@ export default function DomkiPage() {
             ]
         },
         gallery: galleryImages,
+        icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/18/key/da39a3ee5e6b4b0d3255bfef95601890afd80709",
         customBookingUrl: "https://client37851.idobooking.com/book-now/index.php?currency=0&language=0&loc_city=Ryn&from_own_button=1"
     };
 
-    return <ApartmentDetailTemplate data={mappedData} breadcrumbPath={[{ name: "Domki", url: "/domki" }]} />;
+    return <ApartmentDetailTemplate data={mappedData} />;
 }
