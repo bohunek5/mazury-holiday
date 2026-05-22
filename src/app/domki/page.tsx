@@ -19,21 +19,34 @@ export default function DomkiPage() {
     const mappedData = {
         id: skorupkiData.id,
         title: skorupkiData.title,
-        subtitle: t('skorupki', 'subtitle'),
+        subtitle: "Skorupki, jezioro Tałty",
         description: `${skorupkiData.description}\n\n${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
+        mainImage: skorupkiData.gallery.heroImage,
         amenities: {
-            general: [
-                t('skorupki', 'amenities.fullEquip'),
+            living: [
                 t('skorupki', 'amenities.ac'),
                 t('skorupki', 'amenities.wifi'),
-                "Smart TV",
-                t('skorupki', 'amenities.parking'),
-                t('skorupki', 'amenities.waterAccess')
+                "Smart TV"
+            ],
+            kitchen: [
+                t('skorupki', 'amenities.fullEquip'),
+                "Zmywarka",
+                "Płyta indukcyjna"
+            ],
+            bedroom: [
+                "Łóżka małżeńskie i pojedyncze",
+                "Pościel"
+            ],
+            bathroom: [
+                "Prysznic",
+                "Ręczniki"
             ],
             terrace: [
                 t('skorupki', 'amenities.garden'),
-                t('skorupki', 'amenities.bonfire')
-            ],
+                t('skorupki', 'amenities.bonfire'),
+                t('skorupki', 'amenities.waterAccess'),
+                t('skorupki', 'amenities.parking')
+            ]
         },
         gallery: galleryImages,
         customBookingUrl: "https://client37851.idobooking.com/book-now/index.php?currency=0&language=0&loc_city=Ryn&from_own_button=1"
