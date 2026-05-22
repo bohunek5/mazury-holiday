@@ -25,6 +25,13 @@ export default function CategoryLinks() {
             image: getAssetPath("/images/skorupki/skorupki_1.webp"),
             icon: <Home className="w-6 h-6" />,
         },
+        {
+            id: "rooms",
+            title: t("categories", "rooms"),
+            href: "/pokoje",
+            image: getAssetPath("/images/hero_bg.webp"),
+            icon: <Bed className="w-6 h-6" />,
+        },
 
         {
             id: "charter",

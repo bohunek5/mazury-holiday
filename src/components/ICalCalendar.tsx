@@ -231,17 +231,17 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                     <div className="flex gap-2">
                         <button
                             onClick={() => changeMonth(-1)}
-                            className="p-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-colors text-slate-900 dark:text-white"
+                            className="p-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 rounded-full transition-colors text-slate-900 dark:text-white flex items-center justify-center"
                             title={t.prevMonth}
                         >
-                            <ChevronLeft className="w-5 h-5" />
+                            <ChevronLeft className="w-5 h-5" strokeWidth={2.5} />
                         </button>
                         <button
                             onClick={() => changeMonth(1)}
-                            className="p-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-colors text-slate-900 dark:text-white"
+                            className="p-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 rounded-full transition-colors text-slate-900 dark:text-white flex items-center justify-center"
                             title={t.nextMonth}
                         >
-                            <ChevronRight className="w-5 h-5" />
+                            <ChevronRight className="w-5 h-5" strokeWidth={2.5} />
                         </button>
                     </div>
                 </div>

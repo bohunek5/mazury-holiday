@@ -25,7 +25,12 @@ export default function Apartments() {
             location: "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/stranda/C304/C304_1.webp"),
             link: "/apartamenty/stranda",
-            icons: [<Wifi key="wifi" size={18} />, <Wind key="wind" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="wind" title="Klimatyzacja" className="flex items-center justify-center"><Wind size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         },
         {
             id: 2,
@@ -33,7 +38,12 @@ export default function Apartments() {
             location: "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/kisajno/kisajno_1.webp"),
             link: "/apartamenty/kisajno",
-            icons: [<Wifi key="wifi" size={18} />, <Waves key="waves" size={18} />, <Tv key="tv" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="tv" title="Smart TV" className="flex items-center justify-center"><Tv size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         },
         {
             id: 3,
@@ -41,7 +51,12 @@ export default function Apartments() {
             location: "Mikołajki, jezioro Mikołajskie",
             image: getAssetPath("/images/mikolajki/mikolajki_1.webp"),
             link: "/apartamenty/mikolajki",
-            icons: [<Wifi key="wifi" size={18} />, <Tv key="tv" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="tv" title="Smart TV" className="flex items-center justify-center"><Tv size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         },
         {
             id: 4,
@@ -49,7 +64,12 @@ export default function Apartments() {
             location: "Fuleda, jezioro Dobskie",
             image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
             link: "/apartamenty/fuleda",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="location" title="Lokalizacja" className="flex items-center justify-center"><MapPin size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         }
     ];
 
@@ -62,7 +82,27 @@ export default function Apartments() {
             image: getAssetPath("/images/skorupki/skorupki_1.webp"),
             people: skorupkiData.guests,
             link: "/domki",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Car key="car" size={18} />, <div key="users" className="flex items-center gap-1 font-medium"><Users size={14}/> {skorupkiData.guests}</div>]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>,
+                <div key="users" title="Max. ilość osób" className="flex items-center gap-1 font-medium"><Users size={14}/> {skorupkiData.guests}</div>
+            ]
+        },
+        {
+            id: 6,
+            title: t("apartments", "items.pokojeFuleda.title"),
+            location: t("apartments", "items.pokojeFuleda.location"),
+            description: t("apartments", "items.pokojeFuleda.description"),
+            image: getAssetPath("/images/pokoje_fuleda/334.webp"),
+            people: "4",
+            link: "/pokoje/fuleda",
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>,
+                <div key="users" title="Max. ilość osób" className="flex items-center gap-1 font-medium"><Users size={14}/> 4</div>
+            ]
         }
     ];
 

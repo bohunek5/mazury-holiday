@@ -44,7 +44,7 @@ export default function RoomsPage() {
             <Navbar />
 
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                {/* Removed overlay to fix foggy look */}
+                <div className="absolute inset-0 bg-black/40 z-10" />
                 <Image
                     src={getAssetPath("/images/pokoje_fuleda/336.webp")}
                     alt={trans.heroTitle}

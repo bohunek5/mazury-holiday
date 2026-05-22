@@ -39,43 +39,10 @@ const getBuildingsData = () => {
 
 export default function StrandaPage() {
     const { t } = useLanguage();
-    const [selectedView, setSelectedView] = useState<string | null>(null);
     const buildings = useMemo(() => getBuildingsData(), []);
     const buildingKeys: Array<"A" | "B" | "C"> = ["A", "B", "C"];
 
-    useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") setSelectedView(null);
-        };
 
-        if (selectedView) {
-            window.addEventListener("keydown", handleKeyDown);
-            document.body.style.overflow = "hidden";
-        }
-
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-            document.body.style.overflow = "unset";
-        };
-    }, [selectedView]);
-
-    const getBuildingLakeView = (key: string) => {
-        switch (key) {
-            case "A": return getAssetPath("/images/stranda/A205/A205_15.webp");
-            case "B": return getAssetPath("/images/stranda/B401/B401_1.webp");
-            case "C": return getAssetPath("/images/stranda/C404/C404_17.webp");
-            default: return getAssetPath("/images/hero_bg.webp");
-        }
-    };
-
-    const getBuildingVisuals = (key: string) => {
-        switch (key) {
-            case "A": return getAssetPath("/images/stranda/A205/A205_15.webp");
-            case "B": return getAssetPath("/images/stranda/B401/B401_1.webp");
-            case "C": return getAssetPath("/images/stranda/C404/C404_17.webp");
-            default: return getAssetPath("/images/hero_bg.webp");
-        }
-    };
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -105,9 +72,6 @@ export default function StrandaPage() {
 
                 {/* Building Sections */}
                 {buildingKeys.map((buildingKey) => {
-                    const lakeViewPhoto = getBuildingLakeView(buildingKey);
-                    const buttonBgImage = getBuildingVisuals(buildingKey);
-
                     return (
                         <div key={buildingKey} className="mb-24 last:mb-0">
                             {/* Section Header with Large Button */}
@@ -171,50 +135,7 @@ export default function StrandaPage() {
                     );
                 })}
             </section>
-
-            {/* View Modal */}
-            <AnimatePresence>
-                {selectedView && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setSelectedView(null)}
-                            className="absolute inset-0 bg-black/95 backdrop-blur-xl"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative z-10 w-full max-w-6xl aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10"
-                        >
-                            <Image
-                                src={selectedView}
-                                alt="Building View"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-
-                            <button
-                                onClick={() => setSelectedView(null)}
-                                title="Zamknij"
-                                className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all z-20 group"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-90 transition-transform duration-300"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-                            </button>
-
-                            <div className="absolute bottom-8 left-8 text-white z-20">
-                                <h3 className="text-3xl font-sans font-bold mb-2">Bezpośredni widok na jezioro</h3>
-                                <p className="text-white/70 font-light tracking-widest uppercase text-sm">Doświadcz luksusu w Stranda Residence</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
-
+            
             <Footer />
         </main>
     );
