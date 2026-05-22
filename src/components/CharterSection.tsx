@@ -80,7 +80,7 @@ export default function CharterSection() {
                         </Link>
                     </div>
 
-                    <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+                    <Link href="/czarter" className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group block">
                         <Image
                             src={getAssetPath("/images/czarter/main.webp")}
                             alt="Jacht motorowy Stillo 30"
@@ -95,7 +95,7 @@ export default function CharterSection() {
                             </div>
                             <p className="text-white text-2xl font-sans">Luksusowy Houseboat bez patentu</p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section >

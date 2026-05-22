@@ -5,7 +5,7 @@ export const strandaApartments: Record<string, Apartment> = {
     'A103': {
         id: 'A103',
         building: 'A',
-        type: 'Suite',
+        type: 'oneBedroom',
         price: 300,
         guests: '2+2',
         description: `Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.
@@ -58,8 +58,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         },
         additionalInfo: [],
-        idoBookingId: '2',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/2/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        idoBookingId: '1',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/1/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
             "heroImage": getAssetPath("/images/stranda/A103/A103_1.webp"),
             "images": [
@@ -81,7 +81,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A104': {
         id: 'A104',
         building: 'A',
-        type: 'Delux z jacuzzi',
+        type: 'oneBedroomJacuzzi',
         price: 450,
         guests: '2+1',
         description: `Apartament A104 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienkę z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
@@ -132,8 +132,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         },
         additionalInfo: [],
-        idoBookingId: '3',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/3/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        idoBookingId: '2',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/2/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
             "heroImage": getAssetPath("/images/stranda/A104/A104_1.webp"),
             "images": [
@@ -157,7 +157,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A105': {
         id: 'A105',
         building: 'A',
-        type: 'Delux z jacuzzi',
+        type: 'jacuzziTerrace',
         price: 450,
         guests: '2+2',
         description: `Apartament A105 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
@@ -230,7 +230,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A204': {
         id: 'A204',
         building: 'A',
-        type: 'Suite',
+        type: 'oneBedroom',
         price: 300,
         guests: '2+2',
         description: `Apartament A204 Suite leży na pierwszym piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym, rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
@@ -295,7 +295,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A205': {
         id: 'A205',
         building: 'A',
-        type: 'Suite',
+        type: 'oneBedroom',
         price: 300,
         guests: '2+2',
         description: `Apartament A205 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami. Znajduje się na drugiej kondygnacji budynku.
@@ -369,7 +369,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A302': {
         id: 'A302',
         building: 'A',
-        type: 'Suite',
+        type: 'oneBedroom',
         price: 500,
         guests: '2+2',
         description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
@@ -443,7 +443,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A305': {
         id: 'A305',
         building: 'A',
-        type: 'Suite',
+        type: 'oneBedroom',
         price: 300,
         guests: '2+2',
         description: `Apartament A305 Suite leży na trzeciej kondygnacji budynku, z której rozpościera się piękny widok na jezioro Kisajno. Posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami.
@@ -517,7 +517,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'A306': {
         id: 'A306',
         building: 'A',
-        type: 'Suite',
+        type: 'twoBedrooms',
         price: 500,
         guests: '4+2',
         description: `Apartament A306 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży zadaszony taras z meblami. Leży na trzeciej kondygnacji budynku.
@@ -594,87 +594,10 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
-    'A403': {
-        id: 'A403',
-        building: 'A',
-        type: 'Delux z jacuzzi',
-        price: 550,
-        guests: '2+2',
-        description: `Apartament A403 Delux leży na ostatniej kondygnacji budynku i posiada prywatne jacuzzi na tarasie na dachu. Składa się z przestronnego salonu z aneksem kuchennym i rozkładaną sofą, sypialni, łazienki z prysznicem, balkonu oraz dużego tarasu na dachu na którym znajduje się komplet mebli wypoczynkowych oraz prywatne jacuzzi.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "klimatyzacja",
-                "wyjście na taras"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "szlafroki",
-                "kosmetyki"
-            ],
-            "terrace": [
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro",
-                "dwa fotele",
-                "jacuzzi"
-            ]
-        },
-        additionalInfo: [],
-        idoBookingId: '17',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/17/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/A403/A403_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/A403/A403_1.webp"),
-                getAssetPath("/images/stranda/A403/A403_2.webp"),
-                getAssetPath("/images/stranda/A403/A403_3.webp"),
-                getAssetPath("/images/stranda/A403/A403_4.webp"),
-                getAssetPath("/images/stranda/A403/A403_5.webp"),
-                getAssetPath("/images/stranda/A403/A403_6.webp"),
-                getAssetPath("/images/stranda/A403/A403_7.webp"),
-                getAssetPath("/images/stranda/A403/A403_8.webp"),
-                getAssetPath("/images/stranda/A403/A403_9.webp"),
-                getAssetPath("/images/stranda/A403/A403_10.webp"),
-                getAssetPath("/images/stranda/A403/A403_11.webp"),
-                getAssetPath("/images/stranda/A403/A403_12.webp"),
-                getAssetPath("/images/stranda/A403/A403_13.webp"),
-                getAssetPath("/images/stranda/A403/A403_14.webp"),
-                getAssetPath("/images/stranda/A403/A403_15.webp")
-            ]
-        }
-    },
     'B102': {
         id: 'B102',
         building: 'B',
-        type: 'Delux z jacuzzi',
+        type: 'jacuzziTerrace',
         price: 450,
         guests: '2+1',
         description: `Apartament B102 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku B. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno, zatokę Tracz i port Stranda.
@@ -745,10 +668,84 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+    'B103': {
+        id: 'B103',
+        building: 'B',
+        type: 'jacuzziTerrace',
+        price: 450,
+        guests: '2+1',
+        description: `Apartament B103 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku B. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno, zatokę Tracz i port Stranda.
+
+Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
+
+Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        amenities: {
+            "living": [
+                "TV",
+                "sofa 2os.",
+                "stół",
+                "krzesła",
+                "klimatyzacja",
+                "wifi"
+            ],
+            "kitchen": [
+                "płyta indukcyjna",
+                "lodówka",
+                "zmywarka",
+                "mikrofalówka",
+                "komplet naczyń i sztućców"
+            ],
+            "bedroom": [
+                "TV",
+                "łóżko 180x200",
+                "komplet pościeli",
+                "suszarka na ubrania",
+                "deska do prasowania",
+                "żelazko",
+                "klimatyzacja"
+            ],
+            "bathroom": [
+                "prysznic",
+                "suszarka do włosów",
+                "szlafroki",
+                "balsam do ciała"
+            ],
+            "terrace": [
+                "komplet mebli wypoczynkowych",
+                "leżak",
+                "stolik",
+                "prywatne jacuzzi"
+            ]
+        },
+        additionalInfo: [],
+        idoBookingId: '19',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/19/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B103/B103_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B103/B103_1.webp"),
+                getAssetPath("/images/stranda/B103/B103_2.webp"),
+                getAssetPath("/images/stranda/B103/B103_3.webp"),
+                getAssetPath("/images/stranda/B103/B103_4.webp"),
+                getAssetPath("/images/stranda/B103/B103_5.webp"),
+                getAssetPath("/images/stranda/B103/B103_6.webp"),
+                getAssetPath("/images/stranda/B103/B103_7.webp"),
+                getAssetPath("/images/stranda/B103/B103_8.webp"),
+                getAssetPath("/images/stranda/B103/B103_9.webp"),
+                getAssetPath("/images/stranda/B103/B103_10.webp"),
+                getAssetPath("/images/stranda/B103/B103_11.webp"),
+                getAssetPath("/images/stranda/B103/B103_12.webp"),
+                getAssetPath("/images/stranda/B103/B103_13.webp"),
+                getAssetPath("/images/stranda/B103/B103_14.webp"),
+                getAssetPath("/images/stranda/B103/B103_15.webp"),
+                getAssetPath("/images/stranda/B103/B103_16.webp")
+            ]
+        }
+    },
     'B106': {
         id: 'B106',
         building: 'B',
-        type: 'Suite',
+        type: 'suite',
         price: 500,
         guests: '2',
         description: `Apartament B106 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z meblami. Leży na parterze budynku B.
@@ -820,7 +817,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B201': {
         id: 'B201',
         building: 'B',
-        type: 'Delux z jacuzzi',
+        type: 'deluxeJacuzzi',
         price: 500,
         guests: '2+2',
         description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno
@@ -899,7 +896,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B202': {
         id: 'B202',
         building: 'B',
-        type: 'Delux z sauną i jacuzzi',
+        type: 'deluxeSaunaJacuzzi',
         price: 500,
         guests: '2+2',
         description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz
@@ -975,7 +972,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B304': {
         id: 'B304',
         building: 'B',
-        type: 'Apartament',
+        type: 'apartment',
         price: 300,
         guests: '2+2',
         description: `Apartamenty B304 z 1 sypialnią znajdują się w budynku B w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
@@ -1053,7 +1050,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B305': {
         id: 'B305',
         building: 'B',
-        type: 'Apartament',
+        type: 'apartment',
         price: 300,
         guests: '4+2',
         description: `Apartamenty B305 z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
@@ -1131,7 +1128,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B401': {
         id: 'B401',
         building: 'B',
-        type: 'Suite',
+        type: 'suite',
         price: 500,
         guests: '4+2',
         description: `Apartament B401 Delux położony jest na 3 najwyższym piętrze budynku. Składa się z przestronnego salonu z aneksem kuchennym i rozkładaną sofą, sypialni, łazienki z prysznicem, balkonu i dużego tarasu na dachu budynku. Całość z pięknym widokiem na jezioro.
@@ -1208,7 +1205,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B402': {
         id: 'B402',
         building: 'B',
-        type: 'Suite',
+        type: 'suite',
         price: 350,
         guests: '2+2',
         description: `Apartament B402 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
@@ -1286,7 +1283,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'B404': {
         id: 'B404',
         building: 'B',
-        type: 'Suite',
+        type: 'suite',
         price: 350,
         guests: '2+2',
         description: `Apartament B404 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
@@ -1363,7 +1360,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'C301': {
         id: 'C301',
         building: 'C',
-        type: 'Suite',
+        type: 'twoBedrooms',
         price: 500,
         guests: '2+2',
         description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda
@@ -1435,7 +1432,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'C304': {
         id: 'C304',
         building: 'C',
-        type: 'typu Studio',
+        type: 'studio',
         price: 250,
         guests: '2+2',
         description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda. C304 Studio (maksymalna ilość osób 4).
@@ -1506,7 +1503,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'C404': {
         id: 'C404',
         building: 'C',
-        type: 'Delux z jacuzzi',
+        type: 'deluxeJacuzzi',
         price: 500,
         guests: '2+2',
         description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem.Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz
@@ -1580,80 +1577,6 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 getAssetPath("/images/stranda/C404/C404_19.webp"),
                 getAssetPath("/images/stranda/C404/C404_20.webp"),
                 getAssetPath("/images/stranda/C404/C404_21.webp")
-            ]
-        }
-    },
-    'C402': {
-        id: 'C402',
-        building: 'C',
-        type: 'Delux z jacuzzi',
-        price: 450,
-        guests: '2+2',
-        description: `Apartament C402 typu Delux z prywatnym jacuzzi znajduje się w budynku C. Posiada przestronny salon z aneksem kuchennym, sypialnię, łazienkę z prysznicem oraz taras z jacuzzi i widokiem na jezioro.
-
-        Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno(zatoka Tracz).Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich.Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-        Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów.Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym.Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "klimatyzacja",
-                "wyjście na taras"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców",
-                "czajnik",
-                "ekspres kapsułkowy do kawy Tchibo"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "kosmetyki"
-            ],
-            "terrace": [
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro",
-                "prywatne jacuzzi"
-            ]
-        },
-        additionalInfo: [],
-        idoBookingId: '46',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/46/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C403/C403_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/C403/C403_1.webp"),
-                getAssetPath("/images/stranda/C403/C403_2.webp"),
-                getAssetPath("/images/stranda/C403/C403_3.webp"),
-                getAssetPath("/images/stranda/C403/C403_4.webp"),
-                getAssetPath("/images/stranda/C403/C403_5.webp"),
-                getAssetPath("/images/stranda/C403/C403_6.webp"),
-                getAssetPath("/images/stranda/C403/C403_7.webp"),
-                getAssetPath("/images/stranda/C403/C403_8.webp"),
-                getAssetPath("/images/stranda/C403/C403_9.webp"),
-                getAssetPath("/images/stranda/C403/C403_10.webp"),
-                getAssetPath("/images/stranda/C403/C403_11.webp"),
-                getAssetPath("/images/stranda/C403/C403_12.webp"),
-                getAssetPath("/images/stranda/C403/C403_13.webp")
             ]
         }
     },

@@ -49,7 +49,6 @@ export default function DomkiPage() {
             ]
         },
         gallery: galleryImages,
-        icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/18/key/da39a3ee5e6b4b0d3255bfef95601890afd80709",
         customBookingUrl: "https://client37851.idobooking.com/book-now/index.php?currency=0&language=0&loc_city=Ryn&from_own_button=1"
     };
 
