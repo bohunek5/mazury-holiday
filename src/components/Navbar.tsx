@@ -25,7 +25,6 @@ export default function Navbar() {
     const navLinks = [
         { name: t("nav", "apartments"), href: "/apartamenty" },
         { name: t("nav", "cottages"), href: "/domki" },
-        { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "charter"), href: "/czarter" },
         { name: t("nav", "attractions"), href: "/atrakcje" },
         { name: t("nav", "cooperation"), href: "/wspolpraca" },

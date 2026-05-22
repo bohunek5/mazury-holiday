@@ -63,16 +63,6 @@ export default function Apartments() {
             people: skorupkiData.guests,
             link: "/domki",
             icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Car key="car" size={18} />, <div key="users" className="flex items-center gap-1 font-medium"><Users size={14}/> {skorupkiData.guests}</div>]
-        },
-        {
-            id: 6,
-            title: t("apartments", "items.pokojeFuleda.title"),
-            location: t("apartments", "items.pokojeFuleda.location"),
-            description: t("apartments", "items.pokojeFuleda.description"),
-            image: getAssetPath("/images/pokoje_fuleda/334.webp"),
-            people: "4",
-            link: "/pokoje/fuleda",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Car key="car" size={18} />, <div key="users" className="flex items-center gap-1 font-medium"><Users size={14}/> 4</div>]
         }
     ];
 

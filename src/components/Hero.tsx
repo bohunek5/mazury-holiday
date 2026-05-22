@@ -20,7 +20,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src={getAssetPath("/images/apartments_2.webp")}
+          src={getAssetPath("/images/mazury_hero.webp")}
           alt="Mazury Landscape"
           fill
           priority

@@ -110,39 +110,11 @@ export default function StrandaPage() {
 
                     return (
                         <div key={buildingKey} className="mb-24 last:mb-0">
-                            {/* Section Header with Two Large Buttons */}
+                            {/* Section Header with Large Button */}
                             <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12">
-                                {/* Left Button: Building Label */}
+                                {/* Building Label */}
                                 <div className="w-full sm:w-auto px-12 py-5 bg-amber-500 text-white rounded-full font-bold text-xl md:text-2xl shadow-xl shadow-amber-500/20 text-center tracking-widest uppercase">
                                     {t("stranda", "building")} {buildingKey}
-                                </div>
-
-                                {/* Right Button: Interactive Lake View */}
-                                <button
-                                    onClick={() => setSelectedView(lakeViewPhoto)}
-                                    className="group relative w-full sm:w-auto px-10 py-5 rounded-full overflow-hidden shadow-xl transition-all active:scale-95 flex items-center justify-center"
-                                >
-                                    <div className="absolute inset-0 z-0">
-                                        <Image
-                                            src={buttonBgImage}
-                                            alt="Widok tło"
-                                            fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
-                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
-                                    </div>
-                                    <span className="relative z-10 text-white font-bold text-lg md:text-xl tracking-wide uppercase flex items-center gap-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-400"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg>
-                                        widok z budynku
-                                    </span>
-                                </button>
-
-                                <div className="hidden lg:flex flex-col ml-4">
-                                    <p className="text-slate-400 font-light text-sm tracking-widest uppercase italic border-l-2 border-amber-500 pl-4 py-1">
-                                        {buildingKey === "A" && "Port i zatoka"}
-                                        {buildingKey === "B" && "Główny basen Kisajna"}
-                                        {buildingKey === "C" && "Zachody słońca i marina"}
-                                    </p>
                                 </div>
                             </div>
 

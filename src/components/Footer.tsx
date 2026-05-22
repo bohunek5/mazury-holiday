@@ -80,7 +80,6 @@ export default function Footer() {
                         {[
                             { id: "about", href: "/#about" },
                             { id: "apartments", href: "/apartamenty" },
-                            { id: "rooms", href: "/pokoje" },
                             { id: "cottages", href: "/domki" },
                             { id: "charter", href: "/czarter" },
                             { id: "contact", href: "/kontakt" },
