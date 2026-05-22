@@ -85,8 +85,9 @@ export default function CharterPage() {
                     quality={100}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-5xl md:text-7xl font-sans mb-2">{t("charterPage", "heroTitle")}</h1>
-                    <p className="text-xl md:text-3xl font-light text-amber-400">od 1000 zł / doba</p>
+                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{t("charterPage", "heroBadge")}</div>
+                    <h1 className="text-4xl md:text-7xl font-sans mb-2">{t("charterPage", "heroTitle")}</h1>
+                    <p className="text-xl md:text-3xl font-light">{t("charterPage", "heroSubtitle")}</p>
                 </div>
             </section>
 
@@ -220,7 +221,6 @@ export default function CharterPage() {
                             <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
                                 <h3 className="text-2xl font-sans mb-2 relative z-10">{t("charterPage", "bookTermTitle")}</h3>
-                                <p className="text-3xl font-bold text-amber-500 mb-2 relative z-10">od 1000 zł / doba</p>
                                 <p className="text-slate-300 mb-8 relative z-10 text-sm">
                                     {t("charterPage", "bookTermDesc")}
                                 </p>

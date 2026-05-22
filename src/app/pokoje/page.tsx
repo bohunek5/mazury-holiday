@@ -46,7 +46,7 @@ export default function RoomsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 {/* Removed overlay to fix foggy look */}
                 <Image
-                    src={getAssetPath("/images/pokoje_fuleda/hero.webp")}
+                    src={getAssetPath("/images/pokoje_fuleda/336.webp")}
                     alt={trans.heroTitle}
                     fill
                     className="object-cover"
