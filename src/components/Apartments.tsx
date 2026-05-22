@@ -61,7 +61,8 @@ export default function Apartments() {
             description: t("apartments", "items.domkiSkorupki.description"),
             image: getAssetPath("/images/skorupki/skorupki_1.webp"),
             people: skorupkiData.guests,
-            link: "/domki"
+            link: "/domki",
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Car key="car" size={18} />, <div key="users" className="flex items-center gap-1 font-medium"><Users size={14}/> {skorupkiData.guests}</div>]
         },
         {
             id: 6,
@@ -70,7 +71,8 @@ export default function Apartments() {
             description: t("apartments", "items.pokojeFuleda.description"),
             image: getAssetPath("/images/pokoje_fuleda/334.webp"),
             people: "4",
-            link: "/pokoje/fuleda"
+            link: "/pokoje/fuleda",
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Car key="car" size={18} />, <div key="users" className="flex items-center gap-1 font-medium"><Users size={14}/> 4</div>]
         }
     ];
 
@@ -113,7 +115,7 @@ export default function Apartments() {
                                     </h1>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                                         {apt.icons.map((icon, index) => (
-                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                            <div key={index} className="bg-white/10 p-2 px-3 rounded-full backdrop-blur-sm border border-white/20 flex items-center justify-center">
                                                 {icon}
                                             </div>
                                         ))}
@@ -162,52 +164,19 @@ export default function Apartments() {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
-                                    <div className="flex justify-between items-center mb-3">
-
-                                        <div className="text-white text-xs font-medium flex items-center gap-1 bg-slate-900/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
-                                            <Users size={14} className="text-amber-500" />
-                                            Max. ilość osób: {apt.people}
-                                        </div>
-                                    </div>
-
-                                    <h3 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
+                                    <h1 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
                                         {apt.title}
-                                    </h3>
-                                    
-                                    <div className="flex gap-2 mb-4 overflow-hidden">
-                                        {apt.id === 4 ? (
-                                            <>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="WiFi">
-                                                    <Wifi size={18} />
-                                                </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Klimatyzacja">
-                                                    <Wind size={18} />
-                                                </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Parking">
-                                                    <Car size={18} />
-                                                </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="TV">
-                                                    <Tv size={18} />
-                                                </div>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Lokalizacja">
-                                                    <MapPin size={18} />
-                                                </div>
-                                                <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/10 flex items-center justify-center text-white" title="Las">
-                                                    <Trees size={18} />
-                                                </div>
-                                            </>
-                                        )}
+                                    </h1>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {apt.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 px-3 rounded-full backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                                                {icon}
+                                            </div>
+                                        ))}
                                     </div>
-
-                                    <p className="text-slate-200 text-sm line-clamp-2 opacity-90 group-hover:opacity-100 mb-6">
-                                        {apt.description}
-                                    </p>
                                     <div className="flex items-center gap-4 mt-auto">
-                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-all group-hover:gap-3 flex items-center gap-2">
-                                            {t("apartments", "details")} <span>&rarr;</span>
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                            {t("apartments", "details")} &rarr;
                                         </span>
                                     </div>
                                 </div>
