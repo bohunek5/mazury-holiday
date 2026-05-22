@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function PrivacyPolicyPage() {
     const { t } = useLanguage();
@@ -16,7 +17,19 @@ export default function PrivacyPolicyPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <div className="pt-32 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
+            <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-slate-900/60 z-10" />
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url('${getAssetPath('/images/mazury_hero.webp')}')` }}
+                />
+                <div className="relative z-20 text-center text-white p-4 mt-16">
+                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Mazury Holiday</div>
+                    <h1 className="text-4xl md:text-6xl font-sans mb-4">{t("privacyPolicy", "title")}</h1>
+                </div>
+            </section>
+
+            <div className="pt-16 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
                 <div className="flex items-center gap-4 mb-8">
                     <Link
                         href="/"
@@ -28,10 +41,6 @@ export default function PrivacyPolicyPage() {
                         {t("nav", "back")}
                     </span>
                 </div>
-
-                <h1 className="text-4xl md:text-5xl font-sans font-bold text-slate-900 dark:text-white mb-6">
-                    {t("privacyPolicy", "title")}
-                </h1>
 
                 <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light border-l-4 border-amber-500 pl-6 my-8 italic">
                     {t("privacyPolicy", "intro")}
