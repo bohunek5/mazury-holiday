@@ -395,7 +395,7 @@ export const translations = {
             mobileDevices: "Urządzenia mobilne:"
         },
         pokojeFuledaPage: {
-            heroTitle: "Fuleda Residence",
+            heroTitle: "Pokoje Fuleda",
             price: "od 375 zł/doba",
             description: `Oferujemy do wynajęcia dwa pokoje: jeden z łóżkiem podwójnym, drugi z dwoma pojedynczymi, łazienka z prysznicem i wc. Przy pokojach zadaszony taras. W osobnym budynku oddalonym o 10m od pokoi kuchnia z dodatkowym wc. Wszystko znajduje się na półwyspie Fuledzki Róg nad brzegiem jeziora Dobskie ze strefą ciszy na ogrodzonym terenie Folwark Fuleda. Wspaniałe miejsce dla osób ceniących sobie dziką naturę, ciszę i spokój. Z dala od miasta.
 
@@ -828,7 +828,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             mobileDevices: "Mobile devices:"
         },
         pokojeFuledaPage: {
-            heroTitle: "Fuleda Residence",
+            heroTitle: "Pokoje Fuleda",
             price: "from 375 PLN/night",
             description: "We offer two rooms for rent: one with a double bed, the other with two singles, bathroom with shower and toilet. Covered terrace by the rooms. In a separate building 10m away, a kitchen with an additional toilet. Located on the Fuledzki Róg peninsula on Lake Dobskie (quiet zone) within the fenced Folwark Fuleda area.\n\nRow building located on private allotments by Lake Dobskie. Main building has two rooms, bathroom, terrace. Opposite (10m) is the kitchen building with 2nd WC. On the other side (20m) private lake access with viewing deck, grill, bonfire place, and rowboat.\n\nPublic beach 250m away. Fuleda is 10km from Giżycko. Nearby forests, meadows, bike paths. Nearest shop 3km.\n\nRecommended for families, anglers, mushroom pickers, and nature lovers.",
             amenitiesTitle: "Amenities",
