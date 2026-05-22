@@ -69,7 +69,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white p-4">
-                        <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">Stranda Residence</span>
+                        <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Giżycko, Jezioro Kisajno</div>
                         <h1 className="text-5xl md:text-7xl font-sans mb-2">{apartment.title}</h1>
                     </div>
                 </div>

@@ -51,7 +51,7 @@ export default function FAQPage() {
                     style={{ backgroundImage: `url('${getAssetPath('/images/apartments_2.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
-                    <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase animate-fade-in">Mazury Holiday</span>
+                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4 animate-fade-in">Mazury Holiday</div>
                     <h1 className="text-4xl md:text-7xl font-sans mb-4 animate-fade-in-up">FAQ</h1>
                     <p className="text-xl md:text-3xl font-light animate-fade-in-up delay-100">Najczęściej zadawane pytania</p>
                 </div>

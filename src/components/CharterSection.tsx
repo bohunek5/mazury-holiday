@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getAssetPath } from "@/utils/assetPath";
 import Image from "next/image";
-import { Anchor, Navigation, Wifi } from "lucide-react";
+import { Anchor, Navigation, Wifi, ShieldCheck, Ship } from "lucide-react";
 
 export default function CharterSection() {
     const { t } = useLanguage();
@@ -53,13 +53,13 @@ export default function CharterSection() {
                         <ul className="space-y-6 mb-10 text-slate-300">
                             <li className="flex items-center gap-4">
                                 <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
-                                    <Anchor size={24} className="text-amber-500" />
+                                    <ShieldCheck size={24} className="text-amber-500" />
                                 </div>
                                 <span className="text-lg">{t("charter", "feature1") || "Bez patentu"}</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
-                                    <Navigation size={24} className="text-amber-500" />
+                                    <Ship size={24} className="text-amber-500" />
                                 </div>
                                 <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
                             </li>

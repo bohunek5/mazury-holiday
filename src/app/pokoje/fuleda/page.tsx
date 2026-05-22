@@ -43,8 +43,8 @@ export default function PokojeFuledaPage() {
                 {/* Removed overlay to fix foggy look */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white p-4">
-                        <span className="block text-amber-400 font-bold tracking-widest mb-2 uppercase">{trans.heroTitle}</span>
-                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{trans.heroTitle}</h1>
+                        <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Fuleda, Jezioro Dobskie</div>
+                        <h1 className="text-5xl md:text-7xl font-sans mb-2">Fuleda Pokoje</h1>
 
                     </div>
                 </div>

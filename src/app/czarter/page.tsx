@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Anchor, LifeBuoy, MapPin, Wifi, ShieldCheck, Navigation, Star, Shield } from "lucide-react";
+import { Anchor, LifeBuoy, MapPin, Wifi, ShieldCheck, Navigation, Star, Shield, Ship } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -111,7 +111,7 @@ export default function CharterPage() {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm">
                                     <div className="flex justify-center mb-2">
-                                        <Navigation className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
+                                        <Ship className="w-8 h-8 text-slate-700 dark:text-slate-300 opacity-80" strokeWidth={1.5} />
                                     </div>
                                     <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("charterPage", "navAndDriveTitle")}</h4>
                                     <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
