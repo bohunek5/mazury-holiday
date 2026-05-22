@@ -239,6 +239,19 @@ export default function ContactPage() {
                                     ></textarea>
                                 </div>
 
+                                <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
+                                    <input
+                                        type="checkbox"
+                                        required
+                                        id="rodo"
+                                        name="rodo"
+                                        className="mt-1 w-5 h-5 rounded border-slate-300 text-amber-500 focus:ring-amber-500 dark:border-slate-600 dark:bg-slate-700"
+                                    />
+                                    <label htmlFor="rodo" className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed cursor-pointer">
+                                        Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z wysłaniem zapytania przez formularz kontaktowy. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem danych osobowych jest RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.
+                                    </label>
+                                </div>
+
                                 <button
                                     disabled={status === "sending"}
                                     type="submit"

@@ -78,13 +78,15 @@ export default function Footer() {
                     </h3>
                     <ul className="space-y-3 flex flex-col items-center md:items-start">
                         {[
-                            { id: "about", href: "/#about" },
-                            { id: "apartments", href: "/apartamenty" },
-                            { id: "rooms", href: "/pokoje" },
-                            { id: "cottages", href: "/domki" },
-                            { id: "charter", href: "/czarter" },
-                            { id: "contact", href: "/kontakt" },
-                            { id: "cooperation", href: "/wspolpraca" }
+                            { id: "about", href: "/#about", label: t("nav", "about") },
+                            { id: "apartments", href: "/apartamenty", label: t("nav", "apartments") },
+                            { id: "rooms", href: "/pokoje", label: t("nav", "rooms") },
+                            { id: "cottages", href: "/domki", label: t("nav", "cottages") },
+                            { id: "charter", href: "/czarter", label: t("nav", "charter") },
+                            { id: "contact", href: "/kontakt", label: t("nav", "contact") },
+                            { id: "cooperation", href: "/wspolpraca", label: t("nav", "cooperation") },
+                            { id: "regulamin", href: "/regulamin", label: "Regulamin serwisu" },
+                            { id: "rodo", href: "/rodo", label: "Klauzula informacyjna (RODO)" }
                         ].map((link) => (
                             <li key={link.id}>
                                 <Link
@@ -92,7 +94,7 @@ export default function Footer() {
                                     className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-all hover:translate-x-1 group"
                                 >
                                     <span className="h-1.5 w-1.5 rounded-full bg-amber-500/50 group-hover:bg-amber-500 transition-colors"></span>
-                                    {t("nav", link.id)}
+                                    {link.label || t("nav", link.id)}
                                 </Link>
                             </li>
                         ))}
