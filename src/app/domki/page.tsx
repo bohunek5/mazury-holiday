@@ -46,7 +46,9 @@ export default function DomkiPage() {
 
             {/* Content Section */}
             <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div className="lg:col-span-2 space-y-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div>
                         <h2 className="text-4xl font-sans mb-8 text-slate-900 dark:text-white">{t('skorupki', 'introTitle')}</h2>
                         <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -90,27 +92,8 @@ export default function DomkiPage() {
                     </div>
                 </div>
 
-                {/* Booking Button & Calendar */}
-                <div className="flex flex-col items-center justify-center mb-24 max-w-4xl mx-auto">
-                    <a
-                        href="https://engine37851.idobooking.com/index.php"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-5 rounded-full transition-all text-xl shadow-2xl hover:shadow-green-600/40 whitespace-nowrap mb-12"
-                    >
-                        Zarezerwuj
-                    </a>
-                    <div className="w-full bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-2xl font-sans mb-6 text-center text-slate-900 dark:text-white">Dostępność</h3>
-                        <ICalCalendar
-                            icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
-                            apartmentId="Domki Skorupki"
-                        />
-                    </div>
-                </div>
-
                 {/* Amenities Grid */}
-                <div className="mb-24">
+                <div>
                     <h3 className="text-2xl font-sans mb-8 text-center text-slate-900 dark:text-white">{t('skorupki', 'amenitiesTitle')}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
@@ -156,7 +139,7 @@ export default function DomkiPage() {
                 </div>
 
                 {/* Photo Gallery */}
-                <div className="mb-24">
+                <div>
                     <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t('skorupki', 'galleryTitle')}</h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -227,6 +210,49 @@ export default function DomkiPage() {
                             730 067 027
                         </a>
                     </div>
+                </div>
+                </div>
+
+                {/* Sidebar / Booking */}
+                <div className="lg:col-span-1 h-full relative">
+                    <div className="sticky top-32 space-y-8">
+                        <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
+                            <h3 className="text-2xl font-sans mb-2 relative z-10">Zarezerwuj pobyt</h3>
+                            <p className="text-3xl font-bold text-amber-500 mb-2 relative z-10">od 400 zł / doba</p>
+                            <p className="text-slate-300 mb-8 relative z-10 text-sm">
+                                Sprawdź wolne terminy i zaplanuj wypoczynek na Mazurach.
+                            </p>
+                            <div className="flex gap-2">
+                                <a
+                                    href="https://client37851.idobooking.com/book-now/index.php?currency=0&language=0&loc_city=Ryn&from_own_button=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 flex items-center justify-center text-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-2 rounded-xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-green-600/25 active:scale-95"
+                                >
+                                    ZAREZERWUJ GO
+                                </a>
+                                <a
+                                    href="tel:+48730067027"
+                                    className="flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-xl transition-all mb-8 shadow-lg active:scale-95"
+                                    title="Zadzwoń"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                </a>
+                            </div>
+                            <div className="text-center text-xs text-slate-400 mb-6 pb-6 border-b border-slate-800">
+                                Gwarancja najniższej ceny przy rezerwacji bezpośredniej
+                            </div>
+                            <div className="mt-6">
+                                <ICalCalendar
+                                    icalUrl="https://client37851.idosell.com/panel/offer/icalexport/itemid/45/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                                    apartmentId="Domki Skorupki"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 </div>
             </section>
 
