@@ -41,19 +41,19 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/parter/Fuleda parter1.webp"),
+            heroImage: getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
             images: [
-                getAssetPath("/images/fuleda/parter/Fuleda parter1.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter3.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter4.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter5.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter6.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter7.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter8.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter9.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter10.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda parter11.webp")
+                getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter3.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter4.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter5.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter6.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter7.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter8.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter9.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter10.webp"),
+                getAssetPath("/images/fuleda/parter/Fuleda_parter11.webp")
             ]
         }
     },
@@ -73,18 +73,18 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/parter/Fuleda parter1.webp"),
+            heroImage: getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
             images: [
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro2.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro3.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro4.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro5.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro6.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro7.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro8.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda pietro9.webp")
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro1.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro2.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro3.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro4.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro5.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro6.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro7.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro8.webp"),
+                getAssetPath("/images/fuleda/pietro/Fuleda_pietro9.webp")
             ]
         }
     }

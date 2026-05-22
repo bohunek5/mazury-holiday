@@ -51,7 +51,7 @@ export default function ApartmentsHub() {
         {
             id: "fuleda",
             title: t("apartments", "items.fuleda.title"),
-            image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
+            image: getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
             link: "/apartamenty/fuleda",
             location: t("apartments", "items.fuleda.location"),
             price: `${lowestFuledaPrice} zł`,

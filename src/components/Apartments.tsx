@@ -62,7 +62,7 @@ export default function Apartments() {
             id: 4,
             title: "Apartamenty Fuleda",
             location: "Fuleda, jezioro Dobskie",
-            image: getAssetPath("/images/fuleda/pietro/Fuleda pietro1.webp"),
+            image: getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
             link: "/apartamenty/fuleda",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,

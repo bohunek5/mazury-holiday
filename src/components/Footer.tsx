@@ -84,9 +84,7 @@ export default function Footer() {
                             { id: "cottages", href: "/domki", label: t("nav", "cottages") },
                             { id: "charter", href: "/czarter", label: t("nav", "charter") },
                             { id: "contact", href: "/kontakt", label: t("nav", "contact") },
-                            { id: "cooperation", href: "/wspolpraca", label: t("nav", "cooperation") },
-                            { id: "regulamin", href: "/regulamin", label: "Regulamin serwisu" },
-                            { id: "rodo", href: "/rodo", label: "Klauzula informacyjna (RODO)" }
+                            { id: "cooperation", href: "/wspolpraca", label: t("nav", "cooperation") }
                         ].map((link) => (
                             <li key={link.id}>
                                 <Link
@@ -108,6 +106,14 @@ export default function Footer() {
                     <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
                     <Link href="/polityka-prywatnosci" className="hover:text-amber-500 transition-colors">
                         {t("privacyPolicy", "title")}
+                    </Link>
+                    <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
+                    <Link href="/regulamin" className="hover:text-amber-500 transition-colors">
+                        Regulamin serwisu
+                    </Link>
+                    <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
+                    <Link href="/rodo" className="hover:text-amber-500 transition-colors">
+                        Klauzula informacyjna (RODO)
                     </Link>
                     <span className="hidden md:inline text-slate-300 dark:text-slate-700">|</span>
                     <a href="https://www.radlight.pl" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors font-medium">
