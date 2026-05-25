@@ -124,9 +124,6 @@ export default function ApartmentsHub() {
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
                                             {t("apartments", "details")} &rarr;
                                         </span>
-                                        <span className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors">
-                                            REZERWUJ
-                                        </span>
                                     </div>
                                 </div>
                             </Link>

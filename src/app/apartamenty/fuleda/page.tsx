@@ -53,7 +53,7 @@ export default function FuledaPage() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src={getAssetPath("/images/fuleda/parter/Fuleda parter1.webp")}
+                        src={getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp")}
                         alt="Fuleda"
                         fill
                         className="object-cover"
@@ -148,13 +148,19 @@ export default function FuledaPage() {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="flex items-center justify-between w-full mt-auto">
-                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                    <div className="flex items-center justify-between w-full mt-auto pointer-events-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors pointer-events-none">
                                             Zobacz szczegóły &rarr;
                                         </span>
-                                        <span className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors">
-                                            REZERWUJ
-                                        </span>
+                                        <a
+                                            href={`https://engine37851.idobooking.com/index.php?ob[${apartment.id === 'parter' ? '29' : '30'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            ZAREZERWUJ GO
+                                        </a>
                                     </div>
                                 </div>
                             </Link>

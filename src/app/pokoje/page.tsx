@@ -107,9 +107,9 @@ export default function RoomsPage() {
                                             href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto"
+                                            className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95"
                                         >
-                                            {room.bookBtn}
+                                            ZAREZERWUJ GO
                                         </a>
                                     </div>
                                 </div>
