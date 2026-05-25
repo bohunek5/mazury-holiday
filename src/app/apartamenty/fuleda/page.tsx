@@ -31,7 +31,7 @@ export default function FuledaPage() {
             id: 'parter',
             title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
             image: fuledaApartments.parter.gallery.heroImage,
-            location: "Fuleda",
+            location: "Fuleda, Jezioro Dobskie",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
@@ -43,7 +43,7 @@ export default function FuledaPage() {
             id: 'pietro',
             title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
             image: fuledaApartments.pietro.gallery.heroImage,
-            location: "Fuleda",
+            location: "Fuleda, Jezioro Dobskie",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
@@ -169,7 +169,7 @@ export default function FuledaPage() {
                                             className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95"
                                             onClick={(e) => e.stopPropagation()}
                                         >
-                                            ZAREZERWUJ GO
+                                            {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                                         </a>
                                     </div>
                                 </div>

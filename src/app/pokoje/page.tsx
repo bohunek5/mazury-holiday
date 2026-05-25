@@ -13,7 +13,7 @@ import { getAssetPath } from "@/utils/assetPath";
 
 export default function RoomsPage() {
 
-    const { language } = useLanguage();
+    const { language, t } = useLanguage();
 
     const getForLang = (lang: string) => {
         // @ts-expect-error - key access
@@ -114,7 +114,7 @@ export default function RoomsPage() {
                                             rel="noopener noreferrer"
                                             className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95"
                                         >
-                                            ZAREZERWUJ GO
+                                            {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                                         </a>
                                     </div>
                                 </div>

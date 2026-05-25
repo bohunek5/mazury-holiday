@@ -229,7 +229,7 @@ export default function StrandaPage() {
                                                     rel="noopener noreferrer"
                                                     className="w-full bg-[#00c853] hover:bg-[#00e676] text-white text-center py-4 rounded-2xl font-bold text-sm transition-all shadow-lg active:scale-95 uppercase tracking-widest"
                                                 >
-                                                    ZAREZERWUJ GO
+                                                    {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                                                 </a>
                                             </motion.div>
                                         );

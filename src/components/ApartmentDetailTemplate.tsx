@@ -273,7 +273,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                         rel="noopener noreferrer"
                                         className="flex-1 flex items-center justify-center text-center bg-[#00c853] hover:bg-[#00e676] text-white font-bold py-4 px-2 rounded-2xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-[#00c853]/25 active:scale-95"
                                     >
-                                        ZAREZERWUJ GO
+                                        {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                                     </a>
                                     <a
                                         href="tel:+48730067027"
@@ -309,7 +309,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center bg-[#00c853] hover:bg-[#00e676] text-white font-bold py-4 px-4 rounded-2xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
                 >
-                    ZAREZERWUJ GO
+                    {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                 </a>
 
             </div>
