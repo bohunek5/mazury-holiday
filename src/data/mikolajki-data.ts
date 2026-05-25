@@ -17,10 +17,10 @@ export type MikolajkiData = {
 
 export const mikolajkiData: MikolajkiData = {
     id: "mikolajki",
-    title: "Apartament Gigu Mikołajki",
+    title: "Mikołajki - Apartament Gigu z 1 sypialnią",
     price: 350,
     guests: "4",
-    description: "Nowoczesny i komfortowy apartament położony w samym sercu Mikołajek, przy Placu Wolności – idealna lokalizacja dla osób, które chcą mieć wszystko „pod ręką”. Apartament przeznaczony jest dla maksymalnie 4 osób i składa się z przytulnej sypialni z wygodnym łóżkiem podwójnym, salonu z rozkładaną sofą (dodatkowe miejsca do spania), w pełni wyposażonego aneksu kuchennego oraz nowoczesnej łazienki.",
+    description: `Nowoczesny i komfortowy apartament położony w samym sercu Mikołajek, przy Placu Wolności – idealna lokalizacja dla osób, które chcą mieć wszystko „pod ręką”. Apartament przeznaczony jest dla maksymalnie 4 osób i składa się z przytulnej sypialni z wygodnym łóżkiem podwójnym, salonu z rozkładaną sofą (dodatkowe miejsca do spania), w pełni wyposażonego aneksu kuchennego oraz nowoczesnej łazienki.`,
     amenities: [
         "Centrum Mikołajek - Plac Wolności",
         "Dla maksymalnie 4 osób (2+2)",

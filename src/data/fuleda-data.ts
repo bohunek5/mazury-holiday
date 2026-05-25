@@ -28,11 +28,21 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
         guests: '2+2',
         idoBookingId: '26',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/26/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: `Apartamenty na Fuledzie to pięknie i stylowo wykończony obiekt. Lokalizacja nad samym jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.
-
-Apartament Fuleda Parter jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Posiada klimatyzację, przytulny kominek oraz dwa tarasy z widokiem na jezioro. Dostęp do prywatnego zejścia do jeziora z miejscem na ognisko i grilla sprawia, że jest to idealne miejsce dla osób ceniących bliskość natury.
-
-Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (Wilczy Szaniec). W pobliżu znajdują się lasy, łąki oraz liczne trasy rowerowe.`,
+        description: `Apartament z jedną sypialnią zlokalizowany na parterze budynku to pięknie i stylowo wykończony obiekt. Położony nad jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.
+Nasze apartamenty ulokowane są w miejscowości Fuleda na półwyspie nad brzegiem jeziora. Rozpościera się z niego piękny widok na panoramę jezioro Dobskiego, wyspę Kormoranów, wyspę Heleny.  Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z prywatnego dostępu do wody, grilla i ogniska. Giżycko (oddalone o około 12km) umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym i historycznym.
+Apartament Fuleda (parter) z bezpośrednim widokiem na jezioro Dobskie znajduje się na parterze budynku, posiada przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i dwa zadaszone tarasy: jeden z przodu budynku z bezpośrednim widokiem na jezioro Dobskie, drugi z tyłu budynku.
+Położenie: parter
+Maksymalna ilość osób: 2+2
+Wyposażenie kuchni: kapsułkowy ekspres do kawy Tchibo, kuchenka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców
+Wyposażenie salonu: TV, kominek, rozkładana sofa 2os., stół, krzesła, odkurzacz, żelazko, deska do prasowania, klimatyzacja, suszarka na ubrania, szafa
+Wyposażenie sypialni: TV, łózko 160x200, dwie szafki nocne, komplet pościeli, szafa
+Wyposażenie łazienki: prysznic, pralka, suszarka do włosów, prostownica, ręczniki, żel pod prysznic, mydło, balsam do ciała
+Taras przód: fotele, stolik, kokon
+Taras tył: zestaw mebli tarasowych, grill
+Prywatne dojście do jeziora z miejscem na ognisko i grilla, hamak, dwa leżaki
+Pozostałe: internet, wifi
+Apartament jest kompleksowo wyposażony, ogrzewany, zapewnia komfortowy wypoczynek przez cały rok.
+Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży gdzie znajduje się Wilczy Szaniec - kwatera Hitlera. W pobliżu lasy, łąki, trasy rowerowe, płac zabaw,. Najbliższy sklep około 3km.`,
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'TV', 'Stół i krzesła', 'Kominek', 'WiFi'],
             kitchen: ['Ekspres do kawy', 'Kuchenka', 'Lodówka', 'Zmywarka', 'Chłodziarka do wina', 'Komplet naczyń'],
@@ -41,19 +51,32 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
+            heroImage: getAssetPath("/images/fuleda/ido_parter_26_1.jpg"),
             images: [
-                getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter3.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter4.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter5.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter6.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter7.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter8.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter9.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter10.webp"),
-                getAssetPath("/images/fuleda/parter/Fuleda_parter11.webp")
+                getAssetPath("/images/fuleda/ido_parter_26_1.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_2.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_3.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_4.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_5.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_6.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_7.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_8.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_9.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_10.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_11.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_12.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_13.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_14.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_15.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_16.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_17.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_18.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_19.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_20.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_21.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_22.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_23.jpg"),
+                getAssetPath("/images/fuleda/ido_parter_26_24.jpg")
             ]
         }
     },
@@ -64,7 +87,20 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
         guests: '2+1',
         idoBookingId: '27',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/27/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: 'Apartament Fuleda z jedną sypialnią położony na piętrze jest kompleksowo wyposażony, ogrzewany i zapewnia komfortowy wypoczynek przez cały rok. Posiada klimatyzację oraz przytulny kominek.',
+        description: `Apartament z jedną sypialnią zlokalizowany na piętrze budynku to pięknie i stylowo wykończony obiekt. Położony nad jeziorem Dobskim, które jest objęte strefą ciszy to gwarancja wypoczynku w ciszy i spokoju, na łonie pięknej, nieskazitelnej mazurskiej przyrody.
+Nasze apartamenty ulokowane są w miejscowości Fuleda na półwyspie nad brzegiem jeziora. Rozpościera się z niego piękny widok na panoramę jezioro Dobskiego, wyspę Kormoranów, wyspę Heleny.  Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z prywatnego dostępu do wody, grilla i ogniska. Giżycko (oddalone o około 12km) umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym i historycznym.
+Apartament Fuleda (piętro) z bezpośrednim widokiem na jezioro Dobskie znajduje się na piętrze budynku, posiada salon z aneksem kuchennym i rozkładaną wersalke, sypialnię, łazienkę z prysznicem i dwa zadaszone tarasy: jeden z przodu budynku z bezpośrednim widokiem na jezioro Dobskie, drugi z tyłu budynku.
+Położenie: 1 piętro (poddasze)
+Maksymalna ilość osób: 2+1
+Wyposażenie kuchni: kapsułkowy ekspres do kawy Tchibo, kuchenka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców
+Wyposażenie salonu: TV, kominek, rozkładana sofa 2os., stół, krzesła, odkurzacz, żelazko, deska do prasowania, klimatyzacja, suszarka na ubrania, szafa
+Wyposażenie sypialni: TV, łózko 160x200, dwie szafki nocne, komplet pościeli, szafa
+Wyposażenie łazienki: prysznic, pralka, suszarka do włosów, prostownica, ręczniki, żel pod prysznic, mydło, balsam do ciała
+Taras z widokiem na jezioro: dwa leżaki, fotele, stolik
+Prywatne dojście do jeziora z miejscem na ognisko i grilla, hamak, dwa leżaki
+Pozostałe: internet, wifi
+Apartament jest kompleksowo wyposażony, ogrzewany, zapewnia komfortowy wypoczynek przez cały rok.
+Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży gdzie znajduje się Wilczy Szaniec - kwatera Hitlera. W pobliżu lasy, łąki, trasy rowerowe, płac zabaw,. Najbliższy sklep około 3km.`,
         amenities: {
             living: ['Klimatyzacja', 'Sofa 2-osobowa', 'TV', 'Stół i krzesła', 'Kominek', 'WiFi'],
             kitchen: ['Ekspres do kawy', 'Kuchenka', 'Lodówka', 'Zmywarka', 'Chłodziarka do wina', 'Komplet naczyń'],
@@ -73,18 +109,39 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/pietro/Fuleda_pietro1.webp"),
+            heroImage: getAssetPath("/images/fuleda/ido_pietro_27_1.jpg"),
             images: [
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro1.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro2.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro3.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro4.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro5.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro6.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro7.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro8.webp"),
-                getAssetPath("/images/fuleda/pietro/Fuleda_pietro9.webp")
+                getAssetPath("/images/fuleda/ido_pietro_27_1.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_2.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_3.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_4.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_5.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_6.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_7.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_8.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_9.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_10.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_11.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_12.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_13.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_14.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_15.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_16.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_17.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_18.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_19.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_20.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_21.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_22.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_23.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_24.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_25.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_26.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_27.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_28.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_29.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_30.jpg"),
+                getAssetPath("/images/fuleda/ido_pietro_27_31.jpg")
             ]
         }
     }

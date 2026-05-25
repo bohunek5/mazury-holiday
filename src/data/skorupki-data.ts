@@ -18,8 +18,8 @@ export const skorupkiData: SkorupkiData = {
     price: 600,
     guests: "6",
     unitsCount: 10,
-    description: "Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.",
-    gallery: {
+    description: `Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.`,
+        gallery: {
         heroImage: getAssetPath("/images/skorupki/skorupki_1.webp"),
         images: []
     }

@@ -16,10 +16,10 @@ export type KisajnoData = {
 
 export const kisajnoData: KisajnoData = {
     id: "kisajno",
-    title: "Apartamenty Kisajno",
+    title: "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)",
     price: 500,
     guests: "4",
-    description: "Oferujemy nowoczesny apartament o powierzchni 55 m², położony na parterze z bezpośrednim dostępem do uroków jeziora Kisajno. To oferta premium dla rodzin lub grupy znajomych, które szukają wysokiego standardu, spokojnej lokalizacji i szybkiego dostępu do centrum Giżycka.",
+    description: `Oferujemy nowoczesny apartament o powierzchni 55 m², położony na parterze z bezpośrednim dostępem do uroków jeziora Kisajno. To oferta premium dla rodzin lub grupy znajomych, które szukają wysokiego standardu, spokojnej lokalizacji i szybkiego dostępu do centrum Giżycka.`,
     amenities: [
         "Widok na jezioro",
         "Klimatyzacja",

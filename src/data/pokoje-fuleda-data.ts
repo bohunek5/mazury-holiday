@@ -22,7 +22,7 @@ export type PokojeData = {
 
 export const pokojeFuledaData: PokojeData = {
     id: 'pokoje',
-    title: 'Fuleda Pokoje',
+    title: 'Fuleda - Dwa pokoje z łazienką',
     price: 'od 375 zł/doba',
     guests: '4',
     idoBookingId: '28',
@@ -76,7 +76,6 @@ miejsce na grilla i ognisko`,
             getAssetPath("/images/pokoje_fuleda/335.webp"),
             getAssetPath("/images/pokoje_fuleda/336.webp"),
             getAssetPath("/images/pokoje_fuleda/337.webp"),
-            getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_1.webp"),
             getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_2.webp"),
             getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_3.webp"),
             getAssetPath("/images/pokoje_fuleda/pokoje/pokoje_4.webp"),
