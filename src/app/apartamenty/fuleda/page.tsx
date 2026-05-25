@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
-import { Thermometer, Flame, Umbrella, Tent, Wifi, Utensils, WashingMachine, Ship } from "lucide-react";
+import { Thermometer, Flame, Umbrella, Tent, Wifi, Utensils, WashingMachine, Ship, Trees, Waves, Car } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fuledaApartments } from "@/data/fuleda-data";
@@ -30,16 +30,16 @@ export default function FuledaPage() {
         {
             id: 'parter',
             title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
-            guests: fuledaApartments.parter.guests,
             image: getAssetPath(fuledaApartments.parter.gallery.heroImage),
-            features: fuledaApartments.parter.amenities.terrace.slice(0, 4)
+            location: "Fuleda",
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
         {
             id: 'pietro',
             title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
-            guests: fuledaApartments.pietro.guests,
             image: getAssetPath(fuledaApartments.pietro.gallery.heroImage),
-            features: fuledaApartments.pietro.amenities.terrace.slice(0, 4)
+            location: "Fuleda",
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         }
     ];
 
@@ -122,35 +122,39 @@ export default function FuledaPage() {
                             <Link
                                 key={apartment.id}
                                 href={`/apartamenty/fuleda/${apartment.id}`}
-                                className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-800"
+                                className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
-                                <div className="relative h-64">
-                                    <Image
-                                        src={getAssetPath(apartment.image)}
-                                        alt={apartment.title}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                    />
+                                <Image
+                                    src={apartment.image}
+                                    alt={apartment.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
 
-                                    <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold">
-                                        {apartment.guests} osoby
-                                    </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
 
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    {apartment.location}
                                 </div>
-                                <div className="p-6">
-                                    <h4 className="text-2xl font-sans mb-2 text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
+
+                                <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
+                                    <h1 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
                                         {apartment.title}
-                                    </h4>
-                                    <ul className="space-y-2 mb-6">
-                                        {apartment.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                                                <span className="text-amber-500">✓</span>
-                                                {feature}
-                                            </li>
+                                    </h1>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {apartment.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                                {icon}
+                                            </div>
                                         ))}
-                                    </ul>
-                                    <div className="text-amber-500 font-semibold group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
-                                        Zobacz szczegóły →
+                                    </div>
+                                    <div className="flex items-center justify-between w-full mt-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
+                                            Zobacz szczegóły &rarr;
+                                        </span>
+                                        <span className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors">
+                                            REZERWUJ
+                                        </span>
                                     </div>
                                 </div>
                             </Link>

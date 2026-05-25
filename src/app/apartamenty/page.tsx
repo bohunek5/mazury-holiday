@@ -120,9 +120,12 @@ export default function ApartmentsHub() {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="flex items-center gap-4 mt-auto">
+                                    <div className="flex items-center justify-between w-full mt-auto">
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
                                             {t("apartments", "details")} &rarr;
+                                        </span>
+                                        <span className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors">
+                                            REZERWUJ
                                         </span>
                                     </div>
                                 </div>

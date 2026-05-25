@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
+import { Trees, Waves, Wifi, Car } from "lucide-react";
 
 import { getAssetPath } from "@/utils/assetPath";
 
@@ -31,6 +32,8 @@ export default function RoomsPage() {
             description: fuledaTrans.description,
             image: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_miniaturka.webp"),
             link: "/pokoje/fuleda",
+            location: "Fuleda",
+            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />],
             price: "od 375 zł/doba",
             features: fuledaTrans.features,
             priceLabel: fuledaTrans.priceLabel,
@@ -61,58 +64,53 @@ export default function RoomsPage() {
             </section>
 
             <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {rooms.map((room, index) => (
                         <motion.div
                             key={room.id}
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            <div className="grid md:grid-cols-2 gap-0">
-                                {/* Image */}
-                                <Link href={room.link} className="relative h-64 md:h-auto w-full overflow-hidden block">
-                                    <Image
-                                        src={getAssetPath(room.image)}
-                                        alt={room.title}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
+                            <div className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                                <Image
+                                    src={room.image}
+                                    alt={room.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+                                
+                                {/* Clickable area for the whole card */}
+                                <Link href={room.link} className="absolute inset-0 z-10" />
 
-                                </Link>
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg z-20 pointer-events-none">
+                                    {room.location}
+                                </div>
 
-                                {/* Content */}
-                                <div className="p-8 bg-white dark:bg-slate-900 flex flex-col">
-                                    <h3 className="text-2xl font-sans font-bold text-slate-900 dark:text-white mb-2">{room.title}</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">{room.description}</p>
-
-                                    <div className="space-y-3 mb-8">
-                                        {room.features.map((feature: string, i: number) => (
-                                            <div key={i} className="flex items-center text-xs text-slate-500 dark:text-slate-400">
-                                                <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2" />
-                                                {feature}
+                                <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300 z-20 pointer-events-none">
+                                    <h1 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
+                                        {room.title}
+                                    </h1>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {room.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                                {icon}
                                             </div>
                                         ))}
                                     </div>
-
-                                    <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end">
-                                        <div className="flex gap-2">
-                                            <Link
-                                                href={room.link}
-                                                className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors uppercase"
-                                            >
-                                                {room.detailsBtn}
-                                            </Link>
-                                            <a
-                                                href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md uppercase active:scale-95"
-                                            >
-                                                {room.bookBtn}
-                                            </a>
-                                        </div>
+                                    <div className="flex items-center justify-between w-full mt-auto pointer-events-auto">
+                                        <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors pointer-events-none">
+                                            {room.detailsBtn} &rarr;
+                                        </span>
+                                        <a 
+                                            href="https://engine37851.idobooking.com/index.php?ob[28]=&showOtherOffers=true&currency=0&language=0&from_own_button=1"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto"
+                                        >
+                                            {room.bookBtn}
+                                        </a>
                                     </div>
                                 </div>
                             </div>
