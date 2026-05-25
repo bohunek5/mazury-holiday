@@ -1978,7 +1978,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         type: 'studio',
         price: 300,
         guests: '4',
-        title: `Giżycko Stranda - Apartament typu Studio`,
+        title: `C Studio`,
         description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],
@@ -2228,7 +2228,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        title: `Giżycko  Stranda - Apartament z 2 sypialniami`,
+        title: `C z dwoma sypialniami`,
         description: `Apartamenty z 2 sypialniami znajdują się w budynku C, są to miejsce noclegowe z dwoma sypialniami, w każdej łóżko podwójne, salonem z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 6 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],
@@ -2266,7 +2266,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        title: `Giżycko  Stranda - Apartament z 1 sypialnią`,
+        title: `C z jedną sypialnią`,
         description: `Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik, leżaki\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],

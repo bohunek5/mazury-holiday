@@ -1,41 +1,91 @@
 const fs = require('fs');
 const content = fs.readFileSync('src/data/stranda-apartments.ts', 'utf8');
 
-const keysToRemove = ['B104', 'B105', 'B101', 'B302', 'C401'];
-const keysToRename = {
-    'ID_32': 'C_STUDIO',
-    'ID_43': 'C_2BEDROOM',
-    'ID_44': 'C_1BEDROOM'
-};
+const lines = content.split('\n');
+const items = {}; // map of key -> array of lines for that block
 
-let lines = content.split('\n');
-let newLines = [];
-let skip = false;
+let currentKey = null;
+let currentBlock = [];
+let headerLines = [];
+let footerLines = [];
+let inDict = false;
 
 for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
+    const line = lines[i];
     
-    let match = line.match(/^    '([^']+)': \{/);
-    if (match) {
-        let key = match[1];
-        if (keysToRemove.includes(key)) {
-            skip = true;
-        }
+    if (line.startsWith('export const STRANDA_APARTMENTS')) {
+        inDict = true;
+        headerLines.push(line);
+        continue;
     }
     
-    if (!skip) {
-        // rename
-        for (const [oldKey, newKey] of Object.entries(keysToRename)) {
-            line = line.replace(`'${oldKey}'`, `'${newKey}'`);
-            line = line.replace(`id: '${oldKey}'`, `id: '${newKey}'`);
+    if (inDict) {
+        if (line === '};') {
+            inDict = false;
+            footerLines.push(line);
+            continue;
         }
-        newLines.push(line);
-    }
-    
-    // reset skip if we see `    },` (4 spaces, closing bracket, comma) and we were skipping
-    if (skip && line === '    },') {
-        skip = false;
+        
+        let match = line.match(/^    '([^']+)': \{/);
+        if (match) {
+            if (currentKey && currentBlock.length > 0) {
+                items[currentKey] = currentBlock;
+            }
+            currentKey = match[1];
+            currentBlock = [line];
+        } else if (currentKey) {
+            currentBlock.push(line);
+        } else {
+            headerLines.push(line);
+        }
+    } else {
+        if (currentKey && currentBlock.length > 0) {
+            items[currentKey] = currentBlock;
+            currentKey = null;
+            currentBlock = [];
+        }
+        footerLines.push(line);
     }
 }
+if (currentKey && currentBlock.length > 0) {
+    items[currentKey] = currentBlock;
+}
 
-fs.writeFileSync('src/data/stranda-apartments.ts', newLines.join('\n'));
+// Remove the old C_Studio ones
+delete items['C_Studio'];
+delete items['C_1_Sypialnia'];
+delete items['C_2_Sypialnie'];
+
+// Update titles for C_STUDIO, C_1BEDROOM, C_2BEDROOM
+if (items['C_STUDIO']) {
+    items['C_STUDIO'] = items['C_STUDIO'].map(line => line.includes('title: `') ? '        title: `C Studio`,' : line);
+}
+if (items['C_1BEDROOM']) {
+    items['C_1BEDROOM'] = items['C_1BEDROOM'].map(line => line.includes('title: `') ? '        title: `C z jedną sypialnią`,' : line);
+}
+if (items['C_2BEDROOM']) {
+    items['C_2BEDROOM'] = items['C_2BEDROOM'].map(line => line.includes('title: `') ? '        title: `C z dwoma sypialniami`,' : line);
+}
+
+// Reassemble
+let outputLines = [...headerLines];
+const finalKeys = Object.keys(items);
+for (let i = 0; i < finalKeys.length; i++) {
+    let block = items[finalKeys[i]];
+    if (i < finalKeys.length - 1) {
+        // ensure it has a comma if it's not the last one
+        if (!block[block.length - 1].endsWith(',')) {
+            block[block.length - 1] += ',';
+        }
+    } else {
+        // remove comma for the last one
+        if (block[block.length - 1].endsWith(',')) {
+            block[block.length - 1] = block[block.length - 1].slice(0, -1);
+        }
+    }
+    outputLines = outputLines.concat(block);
+}
+outputLines = outputLines.concat(footerLines);
+
+fs.writeFileSync('src/data/stranda-apartments.ts', outputLines.join('\n'));
+console.log('Fixed stranda apartments');
