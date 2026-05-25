@@ -19,13 +19,17 @@ export default function KisajnoPage() {
                 subtitle: subtitle,
                 description: description,
                 amenities: {
-                    general: [
-                        t("kisajnoPage", "amenities.lakeView"),
+                    living: [
                         t("kisajnoPage", "amenities.ac"),
                         t("kisajnoPage", "amenities.smartTv"),
                         t("kisajnoPage", "amenities.wifi"),
+                    ].filter(Boolean) as string[],
+                    kitchen: [
                         t("kisajnoPage", "amenities.kitchen"),
                         t("kisajnoPage", "amenities.dishwasher"),
+                    ].filter(Boolean) as string[],
+                    general: [
+                        t("kisajnoPage", "amenities.lakeView"),
                         t("kisajnoPage", "amenities.parking"),
                         t("kisajnoPage", "amenities.port"),
                     ].filter(Boolean) as string[]

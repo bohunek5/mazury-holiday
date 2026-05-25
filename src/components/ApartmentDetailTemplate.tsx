@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export interface ApartmentTemplateData {
     id?: string;
@@ -246,8 +246,8 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.general && data.amenities.general.length > 0 && (
                                     <div className="col-span-2 md:col-span-4 grid grid-cols-2 gap-4">
                                         {data.amenities.general.map((amenity, idx) => (
-                                            <div key={idx} className="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
-                                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                                            <div key={idx} className="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+                                                <div className="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0" />
                                                 <span className="text-sm text-slate-700 dark:text-slate-300">{amenity}</span>
                                             </div>
                                         ))}
