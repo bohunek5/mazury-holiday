@@ -73,7 +73,7 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży (
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/parter/Fuleda_parter1.webp"),
+            heroImage: getAssetPath("/images/fuleda/pietro/Fuleda_pietro1.webp"),
             images: [
                 getAssetPath("/images/fuleda/pietro/Fuleda_pietro1.webp"),
                 getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
