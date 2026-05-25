@@ -6,7 +6,14 @@ export type MikolajkiData = {
     price: number;
     guests: string;
     description: string;
-    amenities: string[];
+    amenities: {
+        living?: string[];
+        kitchen?: string[];
+        bedroom?: string[];
+        bathroom?: string[];
+        terrace?: string[];
+        general?: string[];
+    };
     gallery: {
         heroImage: string;
         images: string[];
@@ -21,18 +28,13 @@ export const mikolajkiData: MikolajkiData = {
     price: 350,
     guests: "4",
     description: `Nowoczesny i komfortowy apartament położony w samym sercu Mikołajek, przy Placu Wolności – idealna lokalizacja dla osób, które chcą mieć wszystko „pod ręką”. Apartament przeznaczony jest dla maksymalnie 4 osób i składa się z przytulnej sypialni z wygodnym łóżkiem podwójnym, salonu z rozkładaną sofą (dodatkowe miejsca do spania), w pełni wyposażonego aneksu kuchennego oraz nowoczesnej łazienki.`,
-    amenities: [
-        "Centrum Mikołajek - Plac Wolności",
-        "Dla maksymalnie 4 osób (2+2)",
-        "Sypialnia z wygodnym łożem małżeńskim (180x200)",
-        "Salon z rozkładaną sofą i TV",
-        "W pełni wyposażony aneks kuchenny ze zmywarką",
-        "Nowoczesna łazienka z kabiną prysznicową",
-        "Szybkie, bezpłatne WiFi",
-        "Prywatne wejście i widok na wewnętrzny dziedziniec",
-        "Zestaw startowy (woda, kawa, herbata)",
-        "Komplet świeżej pościeli i ręczników"
-    ],
+    amenities: {
+        living: ["Rozkładana sofa", "TV", "Szybkie, bezpłatne WiFi"],
+        kitchen: ["W pełni wyposażony aneks kuchenny ze zmywarką", "Zestaw startowy (woda, kawa, herbata)"],
+        bedroom: ["Wygodne łoże małżeńskie (180x200)", "Komplet świeżej pościeli i ręczników"],
+        bathroom: ["Nowoczesna łazienka z kabiną prysznicową"],
+        general: ["Centrum Mikołajek - Plac Wolności", "Prywatne wejście i widok na dziedziniec", "Dla maksymalnie 4 osób (2+2)"]
+    },
     gallery: {
         heroImage: getAssetPath("/images/mikolajki/hero.webp"),
         images: [

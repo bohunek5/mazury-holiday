@@ -5,7 +5,14 @@ export type KisajnoData = {
     price: number;
     guests: string;
     description: string;
-    amenities: string[];
+    amenities: {
+        living?: string[];
+        kitchen?: string[];
+        bedroom?: string[];
+        bathroom?: string[];
+        terrace?: string[];
+        general?: string[];
+    };
     gallery: {
         heroImage: string;
         images: string[];
@@ -20,16 +27,11 @@ export const kisajnoData: KisajnoData = {
     price: 500,
     guests: "4",
     description: `Oferujemy nowoczesny apartament o powierzchni 55 m², położony na parterze z bezpośrednim dostępem do uroków jeziora Kisajno. To oferta premium dla rodzin lub grupy znajomych, które szukają wysokiego standardu, spokojnej lokalizacji i szybkiego dostępu do centrum Giżycka.`,
-    amenities: [
-        "Widok na jezioro",
-        "Klimatyzacja",
-        "Smart TV",
-        "Szybkie WiFi",
-        "Pełna kuchnia",
-        "Zmywarka",
-        "Parking",
-        "Port Neptun"
-    ],
+    amenities: {
+        living: ["Klimatyzacja", "Smart TV", "Szybkie WiFi"],
+        kitchen: ["Pełna kuchnia", "Zmywarka"],
+        general: ["Widok na jezioro", "Parking", "Port Neptun"]
+    },
     gallery: {
         heroImage: getAssetPath("/images/kisajno/kisajno_1.webp"),
         images: [

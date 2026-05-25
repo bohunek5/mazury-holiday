@@ -18,18 +18,7 @@ export default function MikolajkiPage() {
                 title: title,
                 subtitle: subtitle,
                 description: description,
-                amenities: {
-                    general: [
-                        t("mikolajkiPage", "amenities.parking"),
-                        t("mikolajkiPage", "amenities.port"),
-                        t("mikolajkiPage", "amenities.ac"),
-                        t("mikolajkiPage", "amenities.smartTv"),
-                        t("mikolajkiPage", "amenities.kitchen"),
-                        t("mikolajkiPage", "amenities.dishwasher"),
-                        t("mikolajkiPage", "amenities.wifi"),
-                        t("mikolajkiPage", "amenities.view"),
-                    ].filter(Boolean) as string[]
-                },
+                amenities: mikolajkiData.amenities,
                 mainImage: mikolajkiData.gallery.heroImage,
                 gallery: mikolajkiData.gallery.images,
                 idoBookingId: mikolajkiData.idoBookingId || "31",

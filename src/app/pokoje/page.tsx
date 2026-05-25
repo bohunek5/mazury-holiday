@@ -32,7 +32,7 @@ export default function RoomsPage() {
             description: fuledaTrans.description,
             image: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_miniaturka.webp"),
             link: "/pokoje/fuleda",
-            location: "Fuleda",
+            location: fuledaTrans.location || "Fuleda, Jezioro Dobskie",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,

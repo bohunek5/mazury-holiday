@@ -154,6 +154,7 @@ export const translations = {
                 fuleda: {
                     title: "Pokoje Fuleda",
                     description: "Komfortowe pokoje nad jeziorem Dobskim w strefie ciszy. Idealne dla rodzin i miłośników natury.",
+                    location: "Fuleda, Jezioro Dobskie",
                     features: ["2 pokoje", "Łazienka", "Kuchnia", "Taras", "Dostęp do jeziora"],
                     priceLabel: "Cena",
                     priceValue: "od 375 zł/doba",
@@ -629,6 +630,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 fuleda: {
                     title: "Fuleda Rooms",
                     description: "Comfortable rooms by Lake Dobskie in a silent zone. Perfect for families and nature lovers.",
+                    location: "Fuleda, Lake Dobskie",
                     features: ["2 rooms", "Bathroom", "Kitchen", "Terrace", "Lake access"],
                     priceLabel: "Price",
                     priceValue: "from 375 PLN/night",
@@ -1083,6 +1085,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 fuleda: {
                     title: "Fuleda Zimmer",
                     description: "Komfortable Zimmer am Dobskie-See in einer Ruhezone. Perfekt für Familien und Naturliebhaber.",
+                    location: "Fuleda, Dobskie-See",
                     features: ["2 Zimmer", "Badezimmer", "Küche", "Terrasse", "See-Zugang"],
                     priceLabel: "Preis",
                     priceValue: "ab 375 PLN/Nacht",
@@ -1470,7 +1473,8 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             items: {
                 fuleda: {
                     title: "Habitaciones Fuleda",
-                    description: "Habitaciones cómodas junto al lago Dobskie en zona de silencio. Ideal para familias y amantes de la naturaleza.",
+                    description: "Habitaciones cómodas junto al lago Dobskie en zona de silencio. Perfecto para familias y amantes de la naturaleza.",
+                    location: "Fuleda, Lago Dobskie",
                     features: ["2 habitaciones", "Baño", "Cocina", "Terraza", "Acceso al lago"],
                     priceLabel: "Precio",
                     priceValue: "desde 375 PLN/noche",
@@ -1701,13 +1705,13 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 "Agua caliente (Caldera 30L)",
                 "Inodoro marino con ducha",
                 "Máquina de hielo, Tostadora, Hervidor",
-                "Cafetera Nespresso (+cápsulas)",
+                "Cafetera Nespresso (+cápsules)",
                 "Equipamiento de cocina completo",
                 "Molinete de ancla eléctrico",
                 "Ecosonda, Navegación - Plotter"
             ]
         },
-                strandaTypes: {
+        strandaTypes: {
             oneBedroom: "con un dormitorio",
             oneBedroomJacuzzi: "con un dormitorio y jacuzzi",
             jacuzziTerrace: "con jacuzzi en la terraza",
@@ -2145,6 +2149,24 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 pier: "Accès à la jetée"
             }
         },
+        roomsPage: {
+            heroTitle: "Chambres en Mazurie",
+            heroSubtitle: "Chambres confortables dans une zone calme",
+            ctaText: "Vous cherchez plus d'espace à Fuleda ? Découvrez nos",
+            ctaLink: "Appartements Fuleda",
+            items: {
+                fuleda: {
+                    title: "Chambres Fuleda",
+                    description: "Chambres confortables au bord du lac Dobskie dans une zone de silence. Parfait pour les familles et les amoureux de la nature.",
+                    location: "Fuleda, Lac Dobskie",
+                    features: ["2 chambres", "Salle de bain", "Cuisine", "Terrasse", "Accès au lac"],
+                    priceLabel: "Prix",
+                    priceValue: "dès 375 PLN/nuit",
+                    detailsBtn: "DÉTAILS",
+                    bookBtn: "RÉSERVER"
+                }
+            }
+        },
         cookieConsent: {
             title: "Cookies et Confidentialité 🍪",
             description: "Nous attachons de l'importance à votre vie privée. Vous pouvez accepter tous les cookies ou personnaliser vos consentements. Plus d'infos dans la",
@@ -2275,6 +2297,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 fuleda: {
                     title: "Pokoje Fuleda",
                     description: "Komfortní pokoje u jezera Dobskie v tiché zóně. Ideální pro rodiny a milovníky přírody.",
+                    location: "Fuleda, jezero Dobské",
                     features: ["2 pokoje", "Koupelna", "Kuchyně", "Terasa", "Přístup k jezeru"],
                     priceLabel: "Cena",
                     priceValue: "od 375 PLN/noc",
