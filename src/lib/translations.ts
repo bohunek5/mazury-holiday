@@ -41,6 +41,17 @@ export const translations = {
             description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.",
             building: "Budynek",
             apartment: "Apartament",
+            filters: {
+                jacuzzi: "Tylko z Jacuzzi",
+                size: "Rozmiar",
+                sizeAny: "Dowolny",
+                size4: "Max 4 osoby",
+                size6: "Max 6 osób",
+                floor: "Kondygnacja",
+                floorAny: "Dowolna",
+                floorParter: "Parter",
+                floorPietro: "Piętro"
+            },
             units: {
                 "C404": {
                     title: "Apartament C404 typu Studio",
@@ -536,7 +547,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             description: "Feel the closeness of nature in comfortable conditions."
         },
         charter: { tag: "No license", title: "Motor Yacht Charter", description: "Stillo 30 motor yacht available without a license.", model: "Stillo 30 (2020)", cabins: "3 Cabins", checkBtn: "Check availability", premiumFleet: "Premium Fleet", feature1: "No license", feature2: "Year 2020", feature3: "Luxury equipment", detailsBtn: "Details", thrusters: "Bow thrusters", heating: "Heating", modelVip: "Stillo 30 VIP", boatType: "Luxury Houseboat without license" },
-        stranda: { subtitle: "Luxury by Lake Kisajno", description: "Stranda Residence combines modern design with nature.", building: "Building", apartment: "Apartment" },
+        stranda: { subtitle: "Luxury by Lake Kisajno", description: "Stranda Residence combines modern design with nature.", building: "Building", apartment: "Apartment", filters: { jacuzzi: "Jacuzzi only", size: "Size", sizeAny: "Any", size4: "Max 4 people", size6: "Max 6 people", floor: "Floor", floorAny: "Any", floorParter: "Ground floor", floorPietro: "Upper floor" } },
         details: { about: "About", amenities: "Amenities", booking: "Booking", checkAvailability: "Check availability and book.", callBtn: "Call", lowPrice: "Best price guarantee.", priceFrom: "Price from", guests: "Guests", backToList: "Back", descriptionPart1: "Luxury apartment in building", descriptionPart2: "at Stranda Residence.", descriptionPart3: "Unforgettable views of Lake Kisajno.", items: { view: "Lake view", ac: "A/C", terrace: "Terrace", kitchen: "Kitchenette", tv: "Smart TV", wifi: "WiFi", parking: "Parking", sauna: "Sauna access" } },
         footer: { brandDesc: "Unique moments in Masuria.", navTitle: "Navigation", contactTitle: "Contact", followTitle: "Follow", rights: "All rights reserved.", linksTitle: "Links" },
         skorupki: {
@@ -989,7 +1000,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
             description: "Fühlen Sie die Nähe zur Natur unter komfortablen Bedingungen."
         },
         charter: { tag: "Führerscheinfrei", title: "Motoryachtcharter", description: "Stillo 30 ohne Führerschein.", model: "Stillo 30 (2020)", cabins: "3 Kabinen", checkBtn: "Verfügbarkeit", premiumFleet: "Premium", feature1: "Kein Schein", feature2: "Baujahr 2020", feature3: "Luxus", detailsBtn: "Details", thrusters: "Bugstrahlruder", heating: "Heizung", modelVip: "Stillo 30 VIP", boatType: "Luxus-Hausboot führerscheinfrei" },
-        stranda: { subtitle: "Luxus am Kisajno", description: "Stranda Residence verbindet Design mit Natur.", building: "Gebäude", apartment: "Apartment" },
+        stranda: { subtitle: "Luxus am Kisajno", description: "Stranda Residence verbindet Design mit Natur.", building: "Gebäude", apartment: "Apartment", filters: { jacuzzi: "Nur mit Whirlpool", size: "Größe", sizeAny: "Beliebig", size4: "Max 4 Personen", size6: "Max 6 Personen", floor: "Etage", floorAny: "Beliebig", floorParter: "Erdgeschoss", floorPietro: "Obergeschoss" } },
         details: { about: "Über", amenities: "Ausstattung", booking: "Buchung", checkAvailability: "Verfügbarkeit prüfen.", callBtn: "Anrufen", lowPrice: "Bestpreisgarantie.", descriptionPart1: "Luxusapartment im Gebäude", descriptionPart2: "in Stranda Residence.", descriptionPart3: "Unvergesslicher Seeblick.", items: { view: "Seeblick", ac: "Klimaanlage", terrace: "Terrasse", kitchen: "Küche", tv: "Smart TV", wifi: "WLAN", parking: "Parkplatz", sauna: "Sauna" } },
         footer: { brandDesc: "Einzigartige Momente.", navTitle: "Navigation", contactTitle: "Kontakt", followTitle: "Folgen", rights: "Rechte vorbehalten.", linksTitle: "Links" },
         skorupki: {
