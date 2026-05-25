@@ -412,8 +412,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             "terrace": [
                 "komplet mebli wypoczynkowych",
                 "leżak",
-                "stolik",
-                "prywatne jacuzzi"
+                "stolik"
             ]
         },
         additionalInfo: [],
@@ -532,8 +531,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "krzesła",
                 "sofa dla 2 osób",
                 "klimatyzacja",
-                "wyjście na taras",
-                "sauna"
+                "wyjście na taras"
             ],
             "kitchen": [
                 "ekspres do kawy",
@@ -564,8 +562,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 "meble tarasowe",
                 "dwa leżaki",
                 "stolik",
-                "widok na jezioro",
-                "jacuzzi"
+                "widok na jezioro"
             ]
         },
         additionalInfo: [],
