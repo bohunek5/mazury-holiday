@@ -1972,8 +1972,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'ID_32': {
-        id: 'ID_32',
+    'C_STUDIO': {
+        id: 'C_STUDIO',
         building: 'C',
         type: 'studio',
         price: 300,
@@ -2010,130 +2010,10 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'B104': {
-        id: 'B104',
-        building: 'B',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `B104`,
-        description: `B104 Prywatny`,
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_33_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_33_1.jpg")
-            ]
-        },
-        idoBookingId: '33',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/33/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
-    'B105': {
-        id: 'B105',
-        building: 'B',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `B105`,
-        description: `B105`,
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_34_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_34_1.jpg")
-            ]
-        },
-        idoBookingId: '34',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/34/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
-    'B101': {
-        id: 'B101',
-        building: 'B',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `B101`,
-        description: `B101`,
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_35_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_35_1.jpg")
-            ]
-        },
-        idoBookingId: '35',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/35/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
-    'B302': {
-        id: 'B302',
-        building: 'B',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `B302`,
-        description: `B302`,
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_36_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_36_1.jpg")
-            ]
-        },
-        idoBookingId: '36',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/36/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
-    'C401': {
-        id: 'C401',
-        building: 'C',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `C401`,
-        description: `C401`,
-        amenities: {
-            living: [],
-            kitchen: [],
-            bedroom: [],
-            bathroom: [],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_37_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_37_1.jpg")
-            ]
-        },
-        idoBookingId: '37',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/37/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
     'B202': {
         id: 'B202',
@@ -2342,8 +2222,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/42/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'ID_43': {
-        id: 'ID_43',
+    'C_2BEDROOM': {
+        id: 'C_2BEDROOM',
         building: 'C',
         type: 'twoBedrooms',
         price: 300,
@@ -2380,8 +2260,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'ID_44': {
-        id: 'ID_44',
+    'C_1BEDROOM': {
+        id: 'C_1BEDROOM',
         building: 'C',
         type: 'oneBedroom',
         price: 300,
