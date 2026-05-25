@@ -33,7 +33,12 @@ export default function RoomsPage() {
             image: getAssetPath("/images/pokoje_fuleda/fuleda_pokoje_miniaturka.webp"),
             link: "/pokoje/fuleda",
             location: "Fuleda",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />],
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ],
             price: "od 375 zł/doba",
             features: fuledaTrans.features,
             priceLabel: fuledaTrans.priceLabel,
@@ -94,7 +99,7 @@ export default function RoomsPage() {
                                     </h1>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                                         {room.icons.map((icon, index) => (
-                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                            <div key={index} className="bg-white/10 p-2 px-3 rounded-full backdrop-blur-sm border border-white/20 flex items-center justify-center">
                                                 {icon}
                                             </div>
                                         ))}

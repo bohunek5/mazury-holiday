@@ -227,9 +227,9 @@ export default function StrandaPage() {
                                                     href={`https://engine37851.idobooking.com/index.php?ob[${aptData?.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="w-full bg-green-600 hover:bg-green-500 text-white text-center py-4 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-green-600/30 active:scale-95 uppercase tracking-widest"
+                                                    className="w-full bg-[#00c853] hover:bg-[#00e676] text-white text-center py-4 rounded-2xl font-bold text-sm transition-all shadow-lg active:scale-95 uppercase tracking-widest"
                                                 >
-                                                    {t("nav", "bookBtn")}
+                                                    ZAREZERWUJ GO
                                                 </a>
                                             </motion.div>
                                         );

@@ -85,8 +85,7 @@ export default function Apartments() {
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
-                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>,
-                <div key="users" title="Max. ilość osób" className="flex items-center gap-1 font-medium"><Users size={14}/> {skorupkiData.guests}</div>
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
             ]
         },
         {
@@ -100,8 +99,7 @@ export default function Apartments() {
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
-                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>,
-                <div key="users" title="Max. ilość osób" className="flex items-center gap-1 font-medium"><Users size={14}/> 4</div>
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
             ]
         }
     ];

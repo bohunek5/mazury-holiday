@@ -30,16 +30,26 @@ export default function FuledaPage() {
         {
             id: 'parter',
             title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
-            image: getAssetPath(fuledaApartments.parter.gallery.heroImage),
+            image: fuledaApartments.parter.gallery.heroImage,
             location: "Fuleda",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         },
         {
             id: 'pietro',
             title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
-            image: getAssetPath(fuledaApartments.pietro.gallery.heroImage),
+            image: fuledaApartments.pietro.gallery.heroImage,
             location: "Fuleda",
-            icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
+            icons: [
+                <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
+                <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
+                <div key="waves" title="Jezioro" className="flex items-center justify-center"><Waves size={18} /></div>,
+                <div key="car" title="Parking" className="flex items-center justify-center"><Car size={18} /></div>
+            ]
         }
     ];
 
@@ -143,7 +153,7 @@ export default function FuledaPage() {
                                     </h1>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                                         {apartment.icons.map((icon, index) => (
-                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                            <div key={index} className="bg-white/10 p-2 px-3 rounded-full backdrop-blur-sm border border-white/20 flex items-center justify-center">
                                                 {icon}
                                             </div>
                                         ))}

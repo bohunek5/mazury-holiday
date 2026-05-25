@@ -42,8 +42,8 @@ export const translations = {
             building: "Budynek",
             apartment: "Apartament",
             filters: {
-                jacuzzi: "Tylko z Jacuzzi",
-                size: "Rozmiar",
+                jacuzzi: "Jacuzzi",
+                size: "Ilość osób",
                 sizeAny: "Dowolny",
                 size4: "Max 4 osoby",
                 size6: "Max 6 osób",
