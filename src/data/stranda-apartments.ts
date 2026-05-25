@@ -722,21 +722,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '30',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C304/C304_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/C304/C304_1.webp"),
-                getAssetPath("/images/stranda/C304/C304_2.webp"),
-                getAssetPath("/images/stranda/C304/C304_3.webp"),
-                getAssetPath("/images/stranda/C304/C304_4.webp"),
-                getAssetPath("/images/stranda/C304/C304_5.webp"),
-                getAssetPath("/images/stranda/C304/C304_6.webp"),
-                getAssetPath("/images/stranda/C304/C304_7.webp"),
-                getAssetPath("/images/stranda/C304/C304_8.webp"),
-                getAssetPath("/images/stranda/C304/C304_9.webp"),
-                getAssetPath("/images/stranda/C304/C304_10.webp"),
-                getAssetPath("/images/stranda/C304/C304_11.webp"),
-                getAssetPath("/images/stranda/C304/C304_12.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -947,24 +941,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '40',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C301/C301_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/C301/C301_1.webp"),
-                getAssetPath("/images/stranda/C301/C301_2.webp"),
-                getAssetPath("/images/stranda/C301/C301_3.webp"),
-                getAssetPath("/images/stranda/C301/C301_4.webp"),
-                getAssetPath("/images/stranda/C301/C301_5.webp"),
-                getAssetPath("/images/stranda/C301/C301_6.webp"),
-                getAssetPath("/images/stranda/C301/C301_7.webp"),
-                getAssetPath("/images/stranda/C301/C301_8.webp"),
-                getAssetPath("/images/stranda/C301/C301_9.webp"),
-                getAssetPath("/images/stranda/C301/C301_10.webp"),
-                getAssetPath("/images/stranda/C301/C301_11.webp"),
-                getAssetPath("/images/stranda/C301/C301_12.webp"),
-                getAssetPath("/images/stranda/C301/C301_13.webp"),
-                getAssetPath("/images/stranda/C301/C301_14.webp"),
-                getAssetPath("/images/stranda/C301/C301_15.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1100,25 +1085,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '24',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B402/B402_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/B402/B402_1.webp"),
-                getAssetPath("/images/stranda/B402/B402_2.webp"),
-                getAssetPath("/images/stranda/B402/B402_3.webp"),
-                getAssetPath("/images/stranda/B402/B402_4.webp"),
-                getAssetPath("/images/stranda/B402/B402_5.webp"),
-                getAssetPath("/images/stranda/B402/B402_6.webp"),
-                getAssetPath("/images/stranda/B402/B402_7.webp"),
-                getAssetPath("/images/stranda/B402/B402_8.webp"),
-                getAssetPath("/images/stranda/B402/B402_9.webp"),
-                getAssetPath("/images/stranda/B402/B402_10.webp"),
-                getAssetPath("/images/stranda/B402/B402_11.webp"),
-                getAssetPath("/images/stranda/B402/B402_12.webp"),
-                getAssetPath("/images/stranda/B402/B402_13.webp"),
-                getAssetPath("/images/stranda/B402/B402_14.webp"),
-                getAssetPath("/images/stranda/B402/B402_15.webp"),
-                getAssetPath("/images/stranda/B402/B402_16.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1178,25 +1153,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '44',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B402/B402_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/B402/B402_1.webp"),
-                getAssetPath("/images/stranda/B402/B402_2.webp"),
-                getAssetPath("/images/stranda/B402/B402_3.webp"),
-                getAssetPath("/images/stranda/B402/B402_4.webp"),
-                getAssetPath("/images/stranda/B402/B402_5.webp"),
-                getAssetPath("/images/stranda/B402/B402_6.webp"),
-                getAssetPath("/images/stranda/B402/B402_7.webp"),
-                getAssetPath("/images/stranda/B402/B402_8.webp"),
-                getAssetPath("/images/stranda/B402/B402_9.webp"),
-                getAssetPath("/images/stranda/B402/B402_10.webp"),
-                getAssetPath("/images/stranda/B402/B402_11.webp"),
-                getAssetPath("/images/stranda/B402/B402_12.webp"),
-                getAssetPath("/images/stranda/B402/B402_13.webp"),
-                getAssetPath("/images/stranda/B402/B402_14.webp"),
-                getAssetPath("/images/stranda/B402/B402_15.webp"),
-                getAssetPath("/images/stranda/B402/B402_16.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1555,25 +1520,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '44',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B402/B402_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/B402/B402_1.webp"),
-                getAssetPath("/images/stranda/B402/B402_2.webp"),
-                getAssetPath("/images/stranda/B402/B402_3.webp"),
-                getAssetPath("/images/stranda/B402/B402_4.webp"),
-                getAssetPath("/images/stranda/B402/B402_5.webp"),
-                getAssetPath("/images/stranda/B402/B402_6.webp"),
-                getAssetPath("/images/stranda/B402/B402_7.webp"),
-                getAssetPath("/images/stranda/B402/B402_8.webp"),
-                getAssetPath("/images/stranda/B402/B402_9.webp"),
-                getAssetPath("/images/stranda/B402/B402_10.webp"),
-                getAssetPath("/images/stranda/B402/B402_11.webp"),
-                getAssetPath("/images/stranda/B402/B402_12.webp"),
-                getAssetPath("/images/stranda/B402/B402_13.webp"),
-                getAssetPath("/images/stranda/B402/B402_14.webp"),
-                getAssetPath("/images/stranda/B402/B402_15.webp"),
-                getAssetPath("/images/stranda/B402/B402_16.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1586,9 +1541,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         guests: '2+2',
         idoBookingId: '32',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.`,
+                description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.`,
         amenities: {
             "living": [
                 "TV",
@@ -1634,13 +1587,15 @@ Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowca
             ]
         },
         additionalInfo: ['Widok na jezioro'],
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C304/C304_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/C304/C304_1.webp"),
-                getAssetPath("/images/stranda/C304/C304_2.webp"),
-                getAssetPath("/images/stranda/C304/C304_3.webp"),
-                getAssetPath("/images/stranda/C304/C304_4.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1652,9 +1607,7 @@ Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowca
         guests: '2+2',
         idoBookingId: '44',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: `Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym i rozkładaną sofą 2os., łazienka z prysznicem oraz taras.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.`,
+                description: `Wypoczywaj w komfortowych apartamentach na łonie natury, otoczony przyrodą i tysiącami mazurskich jezior.`,
         amenities: {
             "living": [
                 "TV",
@@ -1700,13 +1653,15 @@ Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowca
             ]
         },
         additionalInfo: ['Widok na jezioro'],
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B402/B402_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/B402/B402_1.webp"),
-                getAssetPath("/images/stranda/B402/B402_2.webp"),
-                getAssetPath("/images/stranda/B402/B402_3.webp"),
-                getAssetPath("/images/stranda/B402/B402_4.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     },
@@ -1718,9 +1673,7 @@ Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowca
         guests: '4+2',
         idoBookingId: '43',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        description: `Apartamenty z 2 sypialniami znajdują się w budynku C, są to miejsce noclegowe z dwoma sypialniami, w każdej łóżko podwójne, przestronny salon z aneksem kuchennym i sofą, łazienka z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.`,
+                description: `Wypoczywaj w komfortowych apartamentach na łonie natury, otoczony przyrodą i tysiącami mazurskich jezior.`,
         amenities: {
             "living": [
                 "TV",
@@ -1766,13 +1719,15 @@ Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowca
             ]
         },
         additionalInfo: ['Widok na jezioro'],
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C301/C301_1.webp"),
+                gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
             "images": [
-                getAssetPath("/images/stranda/C301/C301_1.webp"),
-                getAssetPath("/images/stranda/C301/C301_2.webp"),
-                getAssetPath("/images/stranda/C301/C301_3.webp"),
-                getAssetPath("/images/stranda/C301/C301_4.webp")
+                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
+                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
             ]
         }
     }
