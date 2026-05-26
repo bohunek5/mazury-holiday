@@ -159,7 +159,24 @@ export default function Navbar() {
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
-                        <div className="flex flex-col items-center w-full px-6 gap-0">
+                        {/* Mobile Menu Logo */}
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="mb-8 mt-4"
+                        >
+                            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="relative h-[80px] w-[320px] block">
+                                <Image
+                                    src={logoPoziom}
+                                    alt="Mazury.Holiday"
+                                    fill
+                                    className="object-contain transition-all duration-300 dark:brightness-0 dark:invert"
+                                />
+                            </Link>
+                        </motion.div>
+
+                        <div className="flex flex-col items-center w-full px-6 gap-6">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -171,7 +188,7 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "block text-xl md:text-2xl font-medium py-0.5 w-full text-center transition-colors",
+                                            "block text-3xl md:text-4xl font-semibold py-2 w-full text-center transition-colors",
                                             mobileLinkClass
                                         )}
                                         onClick={() => setIsMobileMenuOpen(false)}
