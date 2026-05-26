@@ -30,18 +30,18 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-900/40" /> {/* Overlay */}
       </div>
 
-      <div className="container relative z-10 px-4 text-center text-white mt-0 md:-mt-12 flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center text-white mt-0 md:-mt-12 flex flex-col items-center justify-center">
         <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)] min-h-[120px] sm:min-h-[1.2em] flex items-center justify-center w-full">
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
 
-        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-1 rounded-full shadow-lg" />
+        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-4 rounded-full shadow-lg" />
 
-        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-2 text-white max-w-4xl mx-auto uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-8 text-white uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
         </p>
 
-        <div className="flex flex-col justify-center items-center gap-3 mt-1 w-full">
+        <div className="flex flex-col items-center gap-4 w-full mb-8">
           <a
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll Down Button - stacked right under the buttons */}
-        <div className="mt-6 z-30 pointer-events-auto flex w-full justify-center">
+        <div className="z-30 pointer-events-auto flex w-full justify-center mt-4">
           <button 
             onClick={() => {
               const aboutSection = document.getElementById('about');
@@ -73,7 +73,7 @@ export default function Hero() {
                 aboutSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity w-full mx-auto"
+            className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
           >
             <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
             <span className="text-white text-base md:text-lg font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_12px_rgba(0,0,0,0.9)] text-center">
