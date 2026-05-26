@@ -231,5 +231,11 @@ export function getAssistantResponse(message: string): string {
         return "Dzień dobry! Chętnie pomogę Ci znaleźć idealne miejsce na Mazurach. Szukasz apartamentu z jacuzzi, domku dla rodziny, czy może chcesz wynająć jacht?";
     }
 
-    return "Ciekawy temat! Przypomnę, że mogę Ci pomóc znaleźć apartament (np. dla 4 osób), sprawdzić wyposażenie konkretnego numeru (np. A104) lub opowiedzieć o naszych lokalizacjach (Stranda, Fuleda, Kisajno, Skorupki). O co chcesz zapytać?";
+    return "Niestety nie mam pewności, jak odpowiedzieć na to pytanie. W naszej ofercie posiadamy:\n\n" +
+        "📍 **Apartamenty Stranda** (Giżycko) - luksusowe apartamenty nad jeziorem.\n" +
+        "📍 **Apartamenty Fuleda** - strefa ciszy i spokoju.\n" +
+        "📍 **Apartament Kisajno** (Giżycko) - komfort i piękny widok.\n" +
+        "📍 **Domki Skorupki** - idealne na rodzinny wyjazd.\n" +
+        "⛵ **Czarter Jachtu Stillo 30** - dom na wodzie bez patentu.\n\n" +
+        "O czym chciałbyś dowiedzieć się więcej?";
 }
