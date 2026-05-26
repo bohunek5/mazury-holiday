@@ -228,14 +228,20 @@ export function getAssistantResponse(message: string): string {
     }
 
     if (msg.includes('cześć') || msg.includes('czesc') || msg.includes('hej') || msg.includes('dzień dobry') || msg.includes('witam')) {
-        return "Dzień dobry! Chętnie pomogę Ci znaleźć idealne miejsce na Mazurach. Szukasz apartamentu z jacuzzi, domku dla rodziny, czy może chcesz wynająć jacht?";
+        return "Cześć! 👋 Jestem Twoim wirtualnym asystentem Mazury Holiday. Chętnie pomogę Ci zaplanować idealny pobyt. Mamy w ofercie świetne lokalizacje:\n\n" +
+            "📍 **[Apartamenty Stranda](/apartamenty/stranda)** (Giżycko) - luksus z widokiem na jezioro, niektóre z prywatnym jacuzzi lub sauną na dachu.\n" +
+            "📍 **[Apartamenty Fuleda](/apartamenty/fuleda)** - oaza spokoju w strefie ciszy nad jeziorem Dobskim, z dala od zgiełku.\n" +
+            "📍 **[Apartament Kisajno](/apartamenty/kisajno)** (Giżycko) - komfort i piękny widok tuż przy porcie Neptun.\n" +
+            "🏡 **[Domki Skorupki](/domki)** - przytulne domki otoczone zielenią, idealne dla rodzin.\n" +
+            "⛵ **[Czarter Jachtu Stillo 30 VIP](/czarter)** - komfortowy dom na wodzie, na który nie potrzebujesz patentu motorowodnego!\n\n" +
+            "Wybierz którąś z opcji, klikając w link, albo po prostu napisz mi dla ilu osób szukasz noclegu (np. \"szukam dla 4 osób\"), a przygotuję dla Ciebie dopasowane propozycje!";
     }
 
-    return "Niestety nie mam pewności, jak odpowiedzieć na to pytanie. W naszej ofercie posiadamy:\n\n" +
-        "📍 **Apartamenty Stranda** (Giżycko) - luksusowe apartamenty nad jeziorem.\n" +
-        "📍 **Apartamenty Fuleda** - strefa ciszy i spokoju.\n" +
-        "📍 **Apartament Kisajno** (Giżycko) - komfort i piękny widok.\n" +
-        "📍 **Domki Skorupki** - idealne na rodzinny wyjazd.\n" +
-        "⛵ **Czarter Jachtu Stillo 30** - dom na wodzie bez patentu.\n\n" +
-        "O czym chciałbyś dowiedzieć się więcej?";
+    return "Wybacz, nie do końca rozumiem Twoje zapytanie. Jako asystent AI ciągle się uczę. W naszej ofercie z pewnością znajdziesz coś dla siebie:\n\n" +
+        "📍 **[Apartamenty Stranda](/apartamenty/stranda)** (Giżycko) - luksus i portowy klimat.\n" +
+        "📍 **[Apartamenty Fuleda](/apartamenty/fuleda)** - strefa ciszy, kominek i relaks.\n" +
+        "📍 **[Apartament Kisajno](/apartamenty/kisajno)** (Giżycko) - piękny widok na jezioro.\n" +
+        "🏡 **[Domki Skorupki](/domki)** - przytulne, rodzinne domki letniskowe.\n" +
+        "⛵ **[Czarter Jachtu Stillo 30 VIP](/czarter)** - luksusowy jacht bez uprawnień.\n\n" +
+        "O czym chciałbyś dowiedzieć się więcej? Możesz zapytać o konkretny obiekt, zapytać o cenę, lub podać liczbę osób, a ja przeszukam dla Ciebie dostępne opcje.";
 }
