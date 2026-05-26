@@ -38,37 +38,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie (łóżko 2-os. + 2 łóżka 1-os.)", "Pościel i poduszki", "Szafa z wieszakami", "Zasłony zaciemniające"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Aneks kuchenny", "Lodówka z zamrażarką", "Płyta indukcyjna", "Ekspres do kawy", "Czajnik", "Naczynia i sztućce", "Kuchenka mikrofalowa"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Ręczniki", "Suszarka do włosów", "Środki czystości"]
             },
             {
                 category: "Salon & Udogodnienia",
-                icon: getAssetPath("/icons/TV.svg"),
+                icon: getAssetPath("/images/icons/TV.svg"),
                 items: ["Telewizor Smart TV 50\"", "Wi-Fi", "Klimatyzacja", "Sofa rozkładana", "Kominek elektryczny"]
             },
             {
                 category: "Taras & Na zewnątrz",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Taras z meblami", "Leżaki", "Grill ogrodowy", "Ognisko (miejsce wyznaczone)", "Parking przy domku"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/FRIDGE.svg"), label: "Lodówka" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "Smart TV" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/FRIDGE.svg"), label: "Lodówka" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "Smart TV" },
         ],
         rules: ["Zakaz palenia w domku", "Zwierzęta za opłatą 50 zł/pobyt", "Cisza nocna od 22:00 do 7:00", "Check-in: 15:00, Check-out: 11:00"]
     },
@@ -88,37 +88,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie (łóżko 2-os. + 2 łóżka 1-os.)", "Pościel premium", "Komoda i szafa", "Lampki nocne"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Pełna kuchnia", "Lodówka z zamrażarką", "Płyta ceramiczna 4-palnikowa", "Piekarnik", "Zmywarka", "Ekspres ciśnieniowy", "Komplet naczyń i sztućców"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Ręczniki kąpielowe i do rąk", "Suszarka do włosów", "Zestaw szamponów i mydła"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/SOFA.svg"),
+                icon: getAssetPath("/images/icons/SOFA.svg"),
                 items: ["Smart TV 55\"", "Wi-Fi szerokopasmowe", "Kominek elektryczny", "Sofa narożna", "Stół z krzesłami"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Weranda ze stolikiem", "Meble ogrodowe", "Grill ogrodowy", "Huśtawka ogrodowa", "Parking dedykowany"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
-            { icon: getAssetPath("/icons/FIREPLACE.svg"), label: "Kominek" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
+            { icon: getAssetPath("/images/icons/FIREPLACE.svg"), label: "Kominek" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta za opłatą", "Cisza nocna 22:00–7:00", "Check-in: 15:00, Check-out: 11:00"]
     },
@@ -138,37 +138,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie", "Łóżko małżeńskie 160×200", "2 łóżka jednoosobowe", "Pościel i ręczniki"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Aneks kuchenny", "Lodówka dwudrzwiowa", "Kuchenka indukcyjna", "Microfalówka", "Ekspres do kawy", "Naczynia i sztućce"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic walk-in", "Ręczniki", "Suszarka do włosów"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/TV.svg"),
+                icon: getAssetPath("/images/icons/TV.svg"),
                 items: ["Smart TV", "Wi-Fi", "Klimatyzacja", "Sofa", "Kominek"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Taras zadaszony", "Ognisko w ogrodzie", "Meble ogrodowe", "Parking"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Ognisko" },
-            { icon: getAssetPath("/icons/FRIDGE.svg"), label: "Lodówka" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "Smart TV" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Ognisko" },
+            { icon: getAssetPath("/images/icons/FRIDGE.svg"), label: "Lodówka" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "Smart TV" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta za opłatą", "Cisza nocna 22:00", "Check-in: 15:00"]
     },
@@ -188,37 +188,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie (2+2 osoby)", "Łóżka z materacami premium", "Pościel i poduszki", "Szafy wnękowe"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Kuchnia otwarta na salon", "Lodówka", "Płyta indukcyjna", "Piekarnik", "Zmywarka", "Ekspres do kawy", "Naczynia"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Wanna", "Ręczniki", "Suszarka do włosów"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/SOFA.svg"),
+                icon: getAssetPath("/images/icons/SOFA.svg"),
                 items: ["Smart TV 58\"", "Wi-Fi", "Klimatyzacja", "Sofa L-shape", "Stół jadalniany"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Duży taras", "Leżaki i parasol", "Grill", "Parking"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/BATHTUB.svg"), label: "Wanna" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
-            { icon: getAssetPath("/icons/SUNBED.svg"), label: "Leżaki" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/BATHTUB.svg"), label: "Wanna" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
+            { icon: getAssetPath("/images/icons/SUNBED.svg"), label: "Leżaki" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta po uzgodnieniu", "Cisza nocna 22:00", "Check-in: 15:00"]
     },
@@ -238,37 +238,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie", "Łóżko 2-osobowe", "2 łóżka 1-osobowe", "Pościel", "Szafa"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Kuchnia", "Lodówka", "Kuchenka", "Ekspres do kawy", "Naczynia i sztućce"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Ręczniki", "Suszarka"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/TV.svg"),
+                icon: getAssetPath("/images/icons/TV.svg"),
                 items: ["Smart TV", "Wi-Fi", "Klimatyzacja", "Kominek", "Sofa"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Taras", "Meble ogrodowe", "Ognisko", "Parking"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/FIREPLACE.svg"), label: "Kominek" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Ognisko" },
-            { icon: getAssetPath("/icons/COFFEE.svg"), label: "Ekspres" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "Smart TV" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/FIREPLACE.svg"), label: "Kominek" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Ognisko" },
+            { icon: getAssetPath("/images/icons/COFFEE.svg"), label: "Ekspres" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "Smart TV" },
         ],
         rules: ["Zakaz palenia", "Cisza nocna 22:00", "Check-in: 15:00", "Check-out: 11:00"]
     },
@@ -288,37 +288,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie (6 miejsc)", "Łóżka z materacami sprężynowymi", "Pościel i poduszki"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Aneks kuchenny", "Lodówka", "Płyta indukcyjna", "Mikrofalówka", "Ekspres", "Naczynia"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Ręczniki", "Suszarka do włosów"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/SOFA.svg"),
+                icon: getAssetPath("/images/icons/SOFA.svg"),
                 items: ["Smart TV", "Wi-Fi", "Klimatyzacja", "Sofa rozkładana"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/SWIMMING.svg"),
+                icon: getAssetPath("/images/icons/SWIMMING.svg"),
                 items: ["Taras z widokiem", "Grill", "Bliskość jeziora", "Parking", "Rower wodny w cenie"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/SWIMMING.svg"), label: "Blisko jeziora" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/SUNBED.svg"), label: "Leżaki" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/SWIMMING.svg"), label: "Blisko jeziora" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/SUNBED.svg"), label: "Leżaki" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta za opłatą", "Cisza nocna 22:00", "Check-in: 15:00"]
     },
@@ -338,37 +338,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["3 sypialnie (8 miejsc)", "Łóżka podwójne i pojedyncze", "Pościel premium", "Szafy i lustra"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Duża kuchnia", "Lodówka side-by-side", "Płyta indukcyjna", "Piekarnik", "Zmywarka", "Ekspres do kawy", "Komplet naczyń"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Wanna", "Ręczniki", "Suszarka", "Lustro z oświetleniem"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/TV.svg"),
+                icon: getAssetPath("/images/icons/TV.svg"),
                 items: ["Smart TV 65\"", "Wi-Fi", "Klimatyzacja", "Kanapa L", "Stół 8-osobowy"]
             },
             {
                 category: "Zewnętrze",
-                icon: getAssetPath("/icons/TERRACE.svg"),
+                icon: getAssetPath("/images/icons/TERRACE.svg"),
                 items: ["Duży taras 30m²", "Leżaki x6", "Grill węglowy i gazowy", "Ognisko", "2 miejsca parkingowe"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/BATHTUB.svg"), label: "Wanna" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
-            { icon: getAssetPath("/icons/SUNBED.svg"), label: "Leżaki" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/BATHTUB.svg"), label: "Wanna" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/WASHING_MACHINE.svg"), label: "Zmywarka" },
+            { icon: getAssetPath("/images/icons/SUNBED.svg"), label: "Leżaki" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta do uzgodnienia", "Cisza nocna 22:00", "Check-in: 15:00", "Check-out: 11:00"]
     },
@@ -388,37 +388,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/DOUBLE_BED.svg"),
+                icon: getAssetPath("/images/icons/DOUBLE_BED.svg"),
                 items: ["2 sypialnie premium", "Łóżka z materacami memory foam", "Pościel satynowa", "Szafy wnękowe", "TV w sypialni"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Kuchnia premium", "Lodówka wine cooler", "Płyta indukcyjna", "Piekarnik parowy", "Zmywarka", "Ekspres Nespresso", "Komplet naczyń premium"]
             },
             {
                 category: "Łazienki (2)",
-                icon: getAssetPath("/icons/BATHTUB.svg"),
+                icon: getAssetPath("/images/icons/BATHTUB.svg"),
                 items: ["Łazienka z wanną wolnostojącą", "Łazienka z prysznicem deszczowym", "Ręczniki pluszowe", "Suszarka Dyson", "Zestaw kosmetyków"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/SOFA.svg"),
+                icon: getAssetPath("/images/icons/SOFA.svg"),
                 items: ["Smart TV OLED 65\"", "Wi-Fi gigabit", "Klimatyzacja", "Sofa premium", "System audio"]
             },
             {
                 category: "Taras SPA",
-                icon: getAssetPath("/icons/SPA.svg"),
+                icon: getAssetPath("/images/icons/SPA.svg"),
                 items: ["Jacuzzi zewnętrzne", "Leżaki premium", "Zadaszony taras", "Grill gazowy", "Parking VIP"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/SPA.svg"), label: "Jacuzzi" },
-            { icon: getAssetPath("/icons/BATHTUB.svg"), label: "Wanna" },
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi Gigabit" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill gazowy" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "OLED TV" },
+            { icon: getAssetPath("/images/icons/SPA.svg"), label: "Jacuzzi" },
+            { icon: getAssetPath("/images/icons/BATHTUB.svg"), label: "Wanna" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi Gigabit" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill gazowy" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "OLED TV" },
         ],
         rules: ["Zakaz palenia", "Bez zwierząt", "Cisza nocna 22:00", "Check-in: 15:00", "Kaucja: 500 zł"]
     },
@@ -438,37 +438,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/BED.svg"),
+                icon: getAssetPath("/images/icons/BED.svg"),
                 items: ["2 sypialnie", "Łóżko 2-osobowe + 2 pojedyncze", "Pościel", "Szafy"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Aneks kuchenny", "Lodówka", "Kuchenka", "Ekspres", "Naczynia"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic", "Ręczniki", "Suszarka"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/TV.svg"),
+                icon: getAssetPath("/images/icons/TV.svg"),
                 items: ["Smart TV", "Wi-Fi", "Klimatyzacja", "Sofa", "Stół"]
             },
             {
                 category: "Plac zabaw",
-                icon: getAssetPath("/icons/TOURIST.svg"),
+                icon: getAssetPath("/images/icons/TOURIST.svg"),
                 items: ["Huśtawka ogrodowa", "Piaskownica", "Grill", "Ognisko", "Parking", "Ogrodzony ogród"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/TOURIST.svg"), label: "Plac zabaw" },
-            { icon: getAssetPath("/icons/PARKING.svg"), label: "Parking" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Ognisko" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "Smart TV" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/TOURIST.svg"), label: "Plac zabaw" },
+            { icon: getAssetPath("/images/icons/PARKING.svg"), label: "Parking" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Ognisko" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "Smart TV" },
         ],
         rules: ["Zakaz palenia", "Zwierzęta za opłatą", "Cisza nocna 22:00", "Check-in: 15:00"]
     },
@@ -488,37 +488,37 @@ export const cottagesData: Cottage[] = [
         amenities: [
             {
                 category: "Sypialnia",
-                icon: getAssetPath("/icons/DOUBLE_BED.svg"),
+                icon: getAssetPath("/images/icons/DOUBLE_BED.svg"),
                 items: ["2 sypialnie z widokiem na jezioro", "Łóżka premium", "Pościel", "Szafy", "Rolety elektryczne"]
             },
             {
                 category: "Kuchnia",
-                icon: getAssetPath("/icons/CUTLERY.svg"),
+                icon: getAssetPath("/images/icons/CUTLERY.svg"),
                 items: ["Kuchnia premium", "Lodówka", "Płyta indukcyjna", "Piekarnik", "Ekspres do kawy", "Naczynia premium"]
             },
             {
                 category: "Łazienka",
-                icon: getAssetPath("/icons/SHOWER.svg"),
+                icon: getAssetPath("/images/icons/SHOWER.svg"),
                 items: ["Prysznic deszczowy", "Ręczniki pluszowe", "Suszarka Dyson", "Zestaw kosmetyków"]
             },
             {
                 category: "Salon",
-                icon: getAssetPath("/icons/SOFA.svg"),
+                icon: getAssetPath("/images/icons/SOFA.svg"),
                 items: ["Smart TV 60\"", "Wi-Fi", "Klimatyzacja", "Sofa z widokiem na jezioro"]
             },
             {
                 category: "Pomost i zewnętrze",
-                icon: getAssetPath("/icons/SWIMMING.svg"),
+                icon: getAssetPath("/images/icons/SWIMMING.svg"),
                 items: ["Własny pomost", "Taras z widokiem na jezioro", "Leżaki", "Kajak w cenie", "Grill", "Parking"]
             }
         ],
         highlights: [
-            { icon: getAssetPath("/icons/SWIMMING.svg"), label: "Własny pomost" },
-            { icon: getAssetPath("/icons/WIFI.svg"), label: "Wi-Fi" },
-            { icon: getAssetPath("/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
-            { icon: getAssetPath("/icons/BAR.svg"), label: "Grill" },
-            { icon: getAssetPath("/icons/SUNBED.svg"), label: "Leżaki" },
-            { icon: getAssetPath("/icons/TV.svg"), label: "Smart TV 60\"" },
+            { icon: getAssetPath("/images/icons/SWIMMING.svg"), label: "Własny pomost" },
+            { icon: getAssetPath("/images/icons/WIFI.svg"), label: "Wi-Fi" },
+            { icon: getAssetPath("/images/icons/AIR_CONDITIONER.svg"), label: "Klimatyzacja" },
+            { icon: getAssetPath("/images/icons/BAR.svg"), label: "Grill" },
+            { icon: getAssetPath("/images/icons/SUNBED.svg"), label: "Leżaki" },
+            { icon: getAssetPath("/images/icons/TV.svg"), label: "Smart TV 60\"" },
         ],
         rules: ["Zakaz palenia", "Bez zwierząt", "Cisza nocna 22:00", "Check-in: 15:00", "Kaucja: 500 zł"]
     }

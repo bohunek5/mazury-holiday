@@ -181,7 +181,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.living && data.amenities.living.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/SOFA.svg")} alt="Salon" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt="Salon" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Salon</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -194,7 +194,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.kitchen && data.amenities.kitchen.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Kuchnia</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -207,7 +207,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.bedroom && data.amenities.bedroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/BED.svg")} alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Sypialnia</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -220,7 +220,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.bathroom && data.amenities.bathroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/SHOWER.svg")} alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Łazienka</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -233,7 +233,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.terrace && data.amenities.terrace.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 lg:col-span-4">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/TERRACE.svg")} alt="Taras" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt="Taras" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Taras</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -246,7 +246,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.general && data.amenities.general.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-2">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Pozostałe / Lokalizacja" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/LOCATION.svg")} alt="Pozostałe / Lokalizacja" fill className="object-contain dark:invert opacity-80" />
                                         </div>
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Pozostałe</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
