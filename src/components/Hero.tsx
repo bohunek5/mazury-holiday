@@ -76,7 +76,7 @@ export default function Hero() {
             className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
           >
             <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
-            <span className="text-white text-base md:text-lg font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_12px_rgba(0,0,0,0.9)] text-center">
+            <span className="text-white/90 text-xs md:text-sm font-semibold tracking-[0.15em] uppercase whitespace-nowrap [text-shadow:_0_2px_8px_rgba(0,0,0,0.8),_0_1px_2px_rgba(0,0,0,0.8)] text-center">
               {t("hero", "scrollDown") || "Przewiń w dół"}
             </span>
           </button>
