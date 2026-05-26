@@ -9,6 +9,7 @@ import { useState } from "react";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import ImageLightbox from "@/components/ImageLightbox";
 
 export interface ApartmentTemplateData {
     id?: string;
