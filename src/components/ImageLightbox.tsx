@@ -14,21 +14,13 @@ interface ImageLightboxProps {
 export default function ImageLightbox({ images = [], currentIndex = 0, onClose, altPrefix = "Image" }: ImageLightboxProps) {
     const [index, setIndex] = useState(currentIndex);
 
-    if (!images || images.length === 0) return null;
-
     useEffect(() => {
         setIndex(currentIndex);
     }, [currentIndex]);
 
-    const handleNext = () => {
-        setIndex((prev) => (prev + 1) % images.length);
-    };
-
-    const handlePrev = () => {
-        setIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
-
     useEffect(() => {
+        if (!images || images.length === 0) return;
+
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "Escape") onClose();
             if (e.key === "ArrowLeft") setIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -42,7 +34,19 @@ export default function ImageLightbox({ images = [], currentIndex = 0, onClose, 
             window.removeEventListener("keydown", handleKeyDown);
             document.body.style.overflow = "unset";
         };
-    }, [images.length, onClose]);
+    }, [images, onClose]);
+
+    const handleNext = () => {
+        if (!images || images.length === 0) return;
+        setIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const handlePrev = () => {
+        if (!images || images.length === 0) return;
+        setIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    if (!images || images.length === 0) return null;
 
     return (
         <div

@@ -857,6 +857,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             heroImage: getAssetPath("/images/stranda/B404/wow.webp"),
             images: [
                 getAssetPath("/images/stranda/B404/wow.webp"),
+                getAssetPath("/images/stranda/B404/wow.webp"),
                 getAssetPath("/images/stranda/B404/B404_28.webp"),
                 getAssetPath("/images/stranda/B404/P1014626.webp"),
                 getAssetPath("/images/stranda/B404/B404_12.webp"),
@@ -1056,8 +1057,9 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             terrace: ['dwa leżaki', 'stolik']
         },
         gallery: {
-            heroImage: getAssetPath("/images/stranda/B401/0T1A5397-standard.webp"),
+            heroImage: getAssetPath("/images/stranda/B401/wow.webp"),
             images: [
+                getAssetPath("/images/stranda/B401/wow.webp"),
                 getAssetPath("/images/stranda/B401/0T1A5397-standard.webp"),
                 getAssetPath("/images/stranda/B401/0T1A5402-standard.webp"),
                 getAssetPath("/images/stranda/B401/0T1A5407-standard.webp"),
@@ -1155,6 +1157,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         gallery: {
             heroImage: getAssetPath("/images/stranda/C301/wow.webp"),
             images: [
+                getAssetPath("/images/stranda/C301/wow.webp"),
                 getAssetPath("/images/stranda/C301/wow.webp"),
                 getAssetPath("/images/stranda/C301/C301_2.webp"),
                 getAssetPath("/images/stranda/C301/C301_13.webp"),
@@ -1263,6 +1266,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         gallery: {
             heroImage: getAssetPath("/images/stranda/B402/wow.webp"),
             images: [
+                getAssetPath("/images/stranda/B402/wow.webp"),
                 getAssetPath("/images/stranda/B402/wow.webp"),
                 getAssetPath("/images/stranda/B402/P1001074.webp"),
                 getAssetPath("/images/stranda/B402/B402_17.webp"),

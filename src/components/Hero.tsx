@@ -20,7 +20,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src={getAssetPath("/images/hero-mazury-holiday-final.webp")}
+          src={getAssetPath("/images/wow.webp")}
           alt="Mazury Landscape"
           fill
           priority
@@ -76,7 +76,7 @@ export default function Hero() {
             className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
           >
             <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
-            <span className="text-white/90 text-xs md:text-sm font-semibold tracking-[0.15em] uppercase whitespace-nowrap [text-shadow:_0_2px_8px_rgba(0,0,0,0.8),_0_1px_2px_rgba(0,0,0,0.8)] text-center">
+            <span className="text-white/90 text-[10px] md:text-xs font-medium tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_2px_8px_rgba(0,0,0,0.8),_0_1px_2px_rgba(0,0,0,0.8)] text-center">
               {t("hero", "scrollDown") || "Przewiń w dół"}
             </span>
           </button>
