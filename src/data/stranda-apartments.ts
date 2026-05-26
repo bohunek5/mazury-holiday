@@ -67,6 +67,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A105': {
         id: 'A105',
         building: 'A',
@@ -140,6 +141,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A103': {
         id: 'A103',
         building: 'A',
@@ -216,6 +218,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A205': {
         id: 'A205',
         building: 'A',
@@ -290,6 +293,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A104': {
         id: 'A104',
         building: 'A',
@@ -366,6 +370,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A306': {
         id: 'A306',
         building: 'A',
@@ -444,6 +449,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'A305': {
         id: 'A305',
         building: 'A',
@@ -518,6 +524,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'B102': {
         id: 'B102',
         building: 'B',
@@ -592,732 +599,382 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
+
     'B404': {
         id: 'B404',
         building: 'B',
-        type: 'suite',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B404 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z 1 sypialnią i jacuzzi na dachu  (B404)`,
+        description: `Apartament B404 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nB404 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 2os.",
-                "stół",
-                "krzesła",
-                "odkurzacz",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "piekarnik",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 160x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "ręczniki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "stół",
-                "leżaki",
-                "stolik"
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
+            terrace: ['dwa leżaki', 'stolik']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_25_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_25_1.jpg"),
+                getAssetPath("/images/stranda/ido_25_2.jpg"),
+                getAssetPath("/images/stranda/ido_25_3.jpg"),
+                getAssetPath("/images/stranda/ido_25_4.jpg"),
+                getAssetPath("/images/stranda/ido_25_5.jpg"),
+                getAssetPath("/images/stranda/ido_25_6.jpg"),
+                getAssetPath("/images/stranda/ido_25_7.jpg"),
+                getAssetPath("/images/stranda/ido_25_8.jpg"),
+                getAssetPath("/images/stranda/ido_25_9.jpg"),
+                getAssetPath("/images/stranda/ido_25_10.jpg"),
+                getAssetPath("/images/stranda/ido_25_11.jpg"),
+                getAssetPath("/images/stranda/ido_25_12.jpg"),
+                getAssetPath("/images/stranda/ido_25_13.jpg"),
+                getAssetPath("/images/stranda/ido_25_14.jpg"),
+                getAssetPath("/images/stranda/ido_25_15.jpg"),
+                getAssetPath("/images/stranda/ido_25_16.jpg"),
+                getAssetPath("/images/stranda/ido_25_17.jpg"),
+                getAssetPath("/images/stranda/ido_25_18.jpg"),
+                getAssetPath("/images/stranda/ido_25_19.jpg"),
+                getAssetPath("/images/stranda/ido_25_20.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '25',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B404/B404_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B404/B404_1.webp"),
-                getAssetPath("/images/stranda/B404/B404_2.webp"),
-                getAssetPath("/images/stranda/B404/B404_3.webp"),
-                getAssetPath("/images/stranda/B404/B404_4.webp"),
-                getAssetPath("/images/stranda/B404/B404_5.webp"),
-                getAssetPath("/images/stranda/B404/B404_6.webp"),
-                getAssetPath("/images/stranda/B404/B404_7.webp"),
-                getAssetPath("/images/stranda/B404/B404_8.webp"),
-                getAssetPath("/images/stranda/B404/B404_9.webp"),
-                getAssetPath("/images/stranda/B404/B404_10.webp"),
-                getAssetPath("/images/stranda/B404/B404_11.webp"),
-                getAssetPath("/images/stranda/B404/B404_12.webp"),
-                getAssetPath("/images/stranda/B404/B404_13.webp"),
-                getAssetPath("/images/stranda/B404/B404_14.webp"),
-                getAssetPath("/images/stranda/B404/B404_15.webp"),
-                getAssetPath("/images/stranda/B404/B404_16.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'C304': {
         id: 'C304',
         building: 'C',
         type: 'studio',
-        price: 250,
-        guests: '2+2',
-        description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda. C304 Studio (maksymalna ilość osób 4).
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        price: 300,
+        guests: '4',
+        title: `Giżycko Stranda - Apartament C304 Studio`,
+        description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.\nC304 Studio (maksymalna ilość osób 4) Wyposażenie kuchni: płyta indukcyjna, mikrofalówka, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: dwa fotele, stolik, leżak\nPozostałe: internet, wifi, komplet pościeli i ręczników, kosmetyki w łazience, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "klimatyzacja",
-                "wyjście na taras"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców",
-                "ekspres kapsułkowy do kawy Tchibo"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica"
-            ],
-            "terrace": [
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro",
-                "przestronny taras"
+            living: [],
+            kitchen: ['płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['dwa fotele', 'stolik', 'leżak']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_30_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_30_1.jpg"),
+                getAssetPath("/images/stranda/ido_30_2.jpg"),
+                getAssetPath("/images/stranda/ido_30_3.jpg"),
+                getAssetPath("/images/stranda/ido_30_4.jpg"),
+                getAssetPath("/images/stranda/ido_30_5.jpg"),
+                getAssetPath("/images/stranda/ido_30_6.jpg"),
+                getAssetPath("/images/stranda/ido_30_7.jpg"),
+                getAssetPath("/images/stranda/ido_30_8.jpg"),
+                getAssetPath("/images/stranda/ido_30_9.jpg"),
+                getAssetPath("/images/stranda/ido_30_10.jpg"),
+                getAssetPath("/images/stranda/ido_30_11.jpg"),
+                getAssetPath("/images/stranda/ido_30_12.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '30',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'B201': {
         id: 'B201',
         building: 'B',
-        type: 'deluxeJacuzzi',
-        price: 500,
-        guests: '2+2',
-        description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        type: 'twoBedrooms',
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z dwoma sypialniami i jacuzzi (B201)`,
+        description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno na którym znajduje się prywatne jacuzzi czynne cały rok.\nB201 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, piekarnik, mikrofala, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki 1: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie łazienki 2: wanna/prysznic, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: stolik, kanapa, dwa fotele, jacuzzi\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 1os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "szlafroki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała",
-                "wanna"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "leżak",
-                "stolik"
+            living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'piekarnik', 'mikrofala', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: [],
+            terrace: ['stolik', 'kanapa', 'dwa fotele', 'jacuzzi']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_39_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_39_1.jpg"),
+                getAssetPath("/images/stranda/ido_39_2.jpg"),
+                getAssetPath("/images/stranda/ido_39_3.jpg"),
+                getAssetPath("/images/stranda/ido_39_4.jpg"),
+                getAssetPath("/images/stranda/ido_39_5.jpg"),
+                getAssetPath("/images/stranda/ido_39_6.jpg"),
+                getAssetPath("/images/stranda/ido_39_7.jpg"),
+                getAssetPath("/images/stranda/ido_39_8.jpg"),
+                getAssetPath("/images/stranda/ido_39_9.jpg"),
+                getAssetPath("/images/stranda/ido_39_10.jpg"),
+                getAssetPath("/images/stranda/ido_39_11.jpg"),
+                getAssetPath("/images/stranda/ido_39_12.jpg"),
+                getAssetPath("/images/stranda/ido_39_13.jpg"),
+                getAssetPath("/images/stranda/ido_39_14.jpg"),
+                getAssetPath("/images/stranda/ido_39_15.jpg"),
+                getAssetPath("/images/stranda/ido_39_16.jpg"),
+                getAssetPath("/images/stranda/ido_39_17.jpg"),
+                getAssetPath("/images/stranda/ido_39_18.jpg"),
+                getAssetPath("/images/stranda/ido_39_19.jpg"),
+                getAssetPath("/images/stranda/ido_39_20.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '39',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/39/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B201/B201_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B201/B201_1.webp"),
-                getAssetPath("/images/stranda/B201/B201_2.webp"),
-                getAssetPath("/images/stranda/B201/B201_3.webp"),
-                getAssetPath("/images/stranda/B201/B201_4.webp"),
-                getAssetPath("/images/stranda/B201/B201_5.webp"),
-                getAssetPath("/images/stranda/B201/B201_6.webp"),
-                getAssetPath("/images/stranda/B201/B201_7.webp"),
-                getAssetPath("/images/stranda/B201/B201_8.webp"),
-                getAssetPath("/images/stranda/B201/B201_9.webp"),
-                getAssetPath("/images/stranda/B201/B201_10.webp"),
-                getAssetPath("/images/stranda/B201/B201_11.webp"),
-                getAssetPath("/images/stranda/B201/B201_12.webp"),
-                getAssetPath("/images/stranda/B201/B201_13.webp"),
-                getAssetPath("/images/stranda/B201/B201_14.webp"),
-                getAssetPath("/images/stranda/B201/B201_15.webp"),
-                getAssetPath("/images/stranda/B201/B201_16.webp"),
-                getAssetPath("/images/stranda/B201/B201_17.webp"),
-                getAssetPath("/images/stranda/B201/B201_18.webp"),
-                getAssetPath("/images/stranda/B201/B201_19.webp"),
-                getAssetPath("/images/stranda/B201/B201_20.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/39/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'B401': {
         id: 'B401',
         building: 'B',
-        type: 'suite',
-        price: 500,
-        guests: '4+2',
-        description: `Apartament B401 Delux położony jest na 3 najwyższym piętrze budynku. Składa się z przestronnego salonu z aneksem kuchennym i rozkładaną sofą, sypialni, łazienki z prysznicem, balkonu i dużego tarasu na dachu budynku. Całość z pięknym widokiem na jezioro.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        type: 'twoBedrooms',
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z 2 sypialniami i jacuzzi na dachu (B401)`,
+        description: `Apartament B401 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, 2 sypialnie, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok\nB401 Suite z dwoma sypialniami (maksymalna ilość osób 6)\nWyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie sypialni 2: TV, łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 2os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 160x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "dwa krzesełka",
-                "sofa i stolik",
-                "leżaki",
-                "stolik"
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
+            terrace: ['dwa leżaki', 'stolik']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_23_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_23_1.jpg"),
+                getAssetPath("/images/stranda/ido_23_2.jpg"),
+                getAssetPath("/images/stranda/ido_23_3.jpg"),
+                getAssetPath("/images/stranda/ido_23_4.jpg"),
+                getAssetPath("/images/stranda/ido_23_5.jpg"),
+                getAssetPath("/images/stranda/ido_23_6.jpg"),
+                getAssetPath("/images/stranda/ido_23_7.jpg"),
+                getAssetPath("/images/stranda/ido_23_8.jpg"),
+                getAssetPath("/images/stranda/ido_23_9.jpg"),
+                getAssetPath("/images/stranda/ido_23_10.jpg"),
+                getAssetPath("/images/stranda/ido_23_11.jpg"),
+                getAssetPath("/images/stranda/ido_23_12.jpg"),
+                getAssetPath("/images/stranda/ido_23_13.jpg"),
+                getAssetPath("/images/stranda/ido_23_14.jpg"),
+                getAssetPath("/images/stranda/ido_23_15.jpg"),
+                getAssetPath("/images/stranda/ido_23_16.jpg"),
+                getAssetPath("/images/stranda/ido_23_17.jpg"),
+                getAssetPath("/images/stranda/ido_23_18.jpg"),
+                getAssetPath("/images/stranda/ido_23_19.jpg"),
+                getAssetPath("/images/stranda/ido_23_20.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '23',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/23/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B401/B401_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B401/B401_1.webp"),
-                getAssetPath("/images/stranda/B401/B401_2.webp"),
-                getAssetPath("/images/stranda/B401/B401_3.webp"),
-                getAssetPath("/images/stranda/B401/B401_4.webp"),
-                getAssetPath("/images/stranda/B401/B401_5.webp"),
-                getAssetPath("/images/stranda/B401/B401_6.webp"),
-                getAssetPath("/images/stranda/B401/B401_7.webp"),
-                getAssetPath("/images/stranda/B401/B401_8.webp"),
-                getAssetPath("/images/stranda/B401/B401_9.webp"),
-                getAssetPath("/images/stranda/B401/B401_10.webp"),
-                getAssetPath("/images/stranda/B401/B401_11.webp"),
-                getAssetPath("/images/stranda/B401/B401_12.webp"),
-                getAssetPath("/images/stranda/B401/B401_13.webp"),
-                getAssetPath("/images/stranda/B401/B401_14.webp"),
-                getAssetPath("/images/stranda/B401/B401_15.webp"),
-                getAssetPath("/images/stranda/B401/B401_16.webp"),
-                getAssetPath("/images/stranda/B401/B401_17.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/23/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'C301': {
         id: 'C301',
         building: 'C',
         type: 'twoBedrooms',
-        price: 500,
-        guests: '2+2',
-        description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z dwoma sypialniami (C301)`,
+        description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda\nC301 z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, klimatyzacja, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko piętrowe, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 1os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja",
-                "łóżko piętrowe komplet pościel"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "szlafroki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "widok na zatokę Tracz i port Stranda"
+            living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
+            terrace: []
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_40_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_40_1.jpg"),
+                getAssetPath("/images/stranda/ido_40_2.jpg"),
+                getAssetPath("/images/stranda/ido_40_3.jpg"),
+                getAssetPath("/images/stranda/ido_40_4.jpg"),
+                getAssetPath("/images/stranda/ido_40_5.jpg"),
+                getAssetPath("/images/stranda/ido_40_6.jpg"),
+                getAssetPath("/images/stranda/ido_40_7.jpg"),
+                getAssetPath("/images/stranda/ido_40_8.jpg"),
+                getAssetPath("/images/stranda/ido_40_9.jpg"),
+                getAssetPath("/images/stranda/ido_40_10.jpg"),
+                getAssetPath("/images/stranda/ido_40_11.jpg"),
+                getAssetPath("/images/stranda/ido_40_12.jpg"),
+                getAssetPath("/images/stranda/ido_40_13.jpg"),
+                getAssetPath("/images/stranda/ido_40_14.jpg"),
+                getAssetPath("/images/stranda/ido_40_15.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '40',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'B202': {
         id: 'B202',
         building: 'B',
-        type: 'deluxeSaunaJacuzzi',
-        price: 500,
-        guests: '2+2',
-        description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        type: 'twoBedrooms',
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z 2 sypialniami jacuzzi i sauną (B202)`,
+        description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz\nB202 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: rozkladana kanapa 2os., komplet pościeli, klimatyzacja\nWyposażenie łazienki: sauna, prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: jacuzzi, stolik, kanapa, dwa fotele, dwa rozkładane fotele\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 1os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja",
-                "sauna"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "szlafroki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "leżak",
-                "stolik",
-                "prywatne jacuzzi"
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: ['sauna', 'prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
+            terrace: []
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_38_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_38_1.jpg"),
+                getAssetPath("/images/stranda/ido_38_2.jpg"),
+                getAssetPath("/images/stranda/ido_38_3.jpg"),
+                getAssetPath("/images/stranda/ido_38_4.jpg"),
+                getAssetPath("/images/stranda/ido_38_5.jpg"),
+                getAssetPath("/images/stranda/ido_38_6.jpg"),
+                getAssetPath("/images/stranda/ido_38_7.jpg"),
+                getAssetPath("/images/stranda/ido_38_8.jpg"),
+                getAssetPath("/images/stranda/ido_38_9.jpg"),
+                getAssetPath("/images/stranda/ido_38_10.jpg"),
+                getAssetPath("/images/stranda/ido_38_11.jpg"),
+                getAssetPath("/images/stranda/ido_38_12.jpg"),
+                getAssetPath("/images/stranda/ido_38_13.jpg"),
+                getAssetPath("/images/stranda/ido_38_14.jpg"),
+                getAssetPath("/images/stranda/ido_38_15.jpg"),
+                getAssetPath("/images/stranda/ido_38_16.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '38',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/38/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B202/B202_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B202/B202_1.webp"),
-                getAssetPath("/images/stranda/B202/B202_2.webp"),
-                getAssetPath("/images/stranda/B202/B202_3.webp"),
-                getAssetPath("/images/stranda/B202/B202_4.webp"),
-                getAssetPath("/images/stranda/B202/B202_5.webp"),
-                getAssetPath("/images/stranda/B202/B202_6.webp"),
-                getAssetPath("/images/stranda/B202/B202_7.webp"),
-                getAssetPath("/images/stranda/B202/B202_8.webp"),
-                getAssetPath("/images/stranda/B202/B202_9.webp"),
-                getAssetPath("/images/stranda/B202/B202_10.webp"),
-                getAssetPath("/images/stranda/B202/B202_11.webp"),
-                getAssetPath("/images/stranda/B202/B202_12.webp"),
-                getAssetPath("/images/stranda/B202/B202_13.webp"),
-                getAssetPath("/images/stranda/B202/B202_14.webp"),
-                getAssetPath("/images/stranda/B202/B202_15.webp"),
-                getAssetPath("/images/stranda/B202/B202_16.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/38/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'B402': {
         id: 'B402',
         building: 'B',
-        type: 'suite',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B402 Suite leży na trzecim piętrze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem, balkon i duży taras na dachu z widokiem na jezioro.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
-        amenities: {
-            "living": [
-                "TV",
-                "sofa 2os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja",
-                "internet",
-                "wifi"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "piekarnik",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 160x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "ręczniki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "stół",
-                "leżaki",
-                "stolik"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-        idoBookingId: '24',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
-    },
-    'B305': {
-        id: 'B305',
-        building: 'B',
-        type: 'apartment',
+        type: 'oneBedroom',
         price: 300,
-        guests: '4+2',
-        description: `Apartamenty B305 z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z 1 sypialnią i jacuzzi na dachu (B402)`,
+        description: `Apartament B402 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB402 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "klimatyzacja",
-                "wyjście na taras"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "żel pod prysznic",
-                "mydło",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "dwa leżaki",
-                "meble tarasowe",
-                "stolik",
-                "widok na jezioro",
-                "przestronny taras"
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
+            terrace: ['dwa leżaki', 'stolik']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_24_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_24_1.jpg"),
+                getAssetPath("/images/stranda/ido_24_2.jpg"),
+                getAssetPath("/images/stranda/ido_24_3.jpg"),
+                getAssetPath("/images/stranda/ido_24_4.jpg"),
+                getAssetPath("/images/stranda/ido_24_5.jpg"),
+                getAssetPath("/images/stranda/ido_24_6.jpg"),
+                getAssetPath("/images/stranda/ido_24_7.jpg"),
+                getAssetPath("/images/stranda/ido_24_8.jpg"),
+                getAssetPath("/images/stranda/ido_24_9.jpg"),
+                getAssetPath("/images/stranda/ido_24_10.jpg"),
+                getAssetPath("/images/stranda/ido_24_11.jpg"),
+                getAssetPath("/images/stranda/ido_24_12.jpg"),
+                getAssetPath("/images/stranda/ido_24_13.jpg"),
+                getAssetPath("/images/stranda/ido_24_14.jpg"),
+                getAssetPath("/images/stranda/ido_24_15.jpg"),
+                getAssetPath("/images/stranda/ido_24_16.jpg"),
+                getAssetPath("/images/stranda/ido_24_17.jpg"),
+                getAssetPath("/images/stranda/ido_24_18.jpg"),
+                getAssetPath("/images/stranda/ido_24_19.jpg"),
+                getAssetPath("/images/stranda/ido_24_20.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
-        idoBookingId: '44',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
+        idoBookingId: '24',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'A302': {
         id: 'A302',
         building: 'A',
         type: 'oneBedroom',
-        price: 500,
-        guests: '2+2',
-        description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament z jedną sypialnią (A302)`,
+        description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA302 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, lodówka, zmywarka, chłodziarka do wina, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele, leżak\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 1os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "szlafroki",
-                "mydło",
-                "żel pod prysznic",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "leżak",
-                "stolik"
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'chłodziarka do wina', 'komplet naczyń i sztućców'],
+            bedroom: ['łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
+            terrace: []
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_42_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_42_1.jpg"),
+                getAssetPath("/images/stranda/ido_42_2.jpg"),
+                getAssetPath("/images/stranda/ido_42_3.jpg"),
+                getAssetPath("/images/stranda/ido_42_4.jpg"),
+                getAssetPath("/images/stranda/ido_42_5.jpg"),
+                getAssetPath("/images/stranda/ido_42_6.jpg"),
+                getAssetPath("/images/stranda/ido_42_7.jpg"),
+                getAssetPath("/images/stranda/ido_42_8.jpg"),
+                getAssetPath("/images/stranda/ido_42_9.jpg"),
+                getAssetPath("/images/stranda/ido_42_10.jpg"),
+                getAssetPath("/images/stranda/ido_42_11.jpg"),
+                getAssetPath("/images/stranda/ido_42_12.jpg"),
+                getAssetPath("/images/stranda/ido_42_13.jpg"),
+                getAssetPath("/images/stranda/ido_42_14.jpg"),
+                getAssetPath("/images/stranda/ido_42_15.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '42',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/42/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/A302/A302_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/A302/A302_1.webp"),
-                getAssetPath("/images/stranda/A302/A302_2.webp"),
-                getAssetPath("/images/stranda/A302/A302_3.webp"),
-                getAssetPath("/images/stranda/A302/A302_4.webp"),
-                getAssetPath("/images/stranda/A302/A302_5.webp"),
-                getAssetPath("/images/stranda/A302/A302_6.webp"),
-                getAssetPath("/images/stranda/A302/A302_7.webp"),
-                getAssetPath("/images/stranda/A302/A302_8.webp"),
-                getAssetPath("/images/stranda/A302/A302_9.webp"),
-                getAssetPath("/images/stranda/A302/A302_10.webp"),
-                getAssetPath("/images/stranda/A302/A302_11.webp"),
-                getAssetPath("/images/stranda/A302/A302_12.webp"),
-                getAssetPath("/images/stranda/A302/A302_13.webp"),
-                getAssetPath("/images/stranda/A302/A302_14.webp"),
-                getAssetPath("/images/stranda/A302/A302_15.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/42/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'C404': {
         id: 'C404',
         building: 'C',
-        type: 'deluxeJacuzzi',
-        price: 500,
-        guests: '2+2',
-        description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem.Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno(zatoka Tracz).Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich.Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku.Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów.Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym.Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
+        type: 'jacuzzi',
+        price: 300,
+        guests: '4',
+        title: `Giżycko  Stranda - Apartament Studio z jacuzzi na dachu (C404)`,
+        description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, piekarnik, pralka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: fotel, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
-            "living": [
-                "TV",
-                "sofa 2os.",
-                "stół",
-                "krzesła",
-                "klimatyzacja",
-                "wifi"
-            ],
-            "kitchen": [
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "mikrofalówka",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "TV",
-                "łóżko 180x200",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "suszarka do włosów",
-                "szlafroki",
-                "balsam do ciała"
-            ],
-            "terrace": [
-                "komplet mebli wypoczynkowych",
-                "leżak",
-                "stolik",
-                "prywatne jacuzzi",
-                "fotele i stolik"
+            living: [],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
+            bedroom: [],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
+            terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_41_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_41_1.jpg"),
+                getAssetPath("/images/stranda/ido_41_2.jpg"),
+                getAssetPath("/images/stranda/ido_41_3.jpg"),
+                getAssetPath("/images/stranda/ido_41_4.jpg"),
+                getAssetPath("/images/stranda/ido_41_5.jpg"),
+                getAssetPath("/images/stranda/ido_41_6.jpg"),
+                getAssetPath("/images/stranda/ido_41_7.jpg"),
+                getAssetPath("/images/stranda/ido_41_8.jpg"),
+                getAssetPath("/images/stranda/ido_41_9.jpg"),
+                getAssetPath("/images/stranda/ido_41_10.jpg"),
+                getAssetPath("/images/stranda/ido_41_11.jpg"),
+                getAssetPath("/images/stranda/ido_41_12.jpg"),
+                getAssetPath("/images/stranda/ido_41_13.jpg"),
+                getAssetPath("/images/stranda/ido_41_14.jpg"),
+                getAssetPath("/images/stranda/ido_41_15.jpg"),
+                getAssetPath("/images/stranda/ido_41_16.jpg"),
+                getAssetPath("/images/stranda/ido_41_17.jpg"),
+                getAssetPath("/images/stranda/ido_41_18.jpg"),
+                getAssetPath("/images/stranda/ido_41_19.jpg"),
+                getAssetPath("/images/stranda/ido_41_20.jpg"),
+                getAssetPath("/images/stranda/ido_41_21.jpg")
             ]
         },
-        additionalInfo: ['Widok na jezioro'],
         idoBookingId: '41',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/41/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/C404/C404_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/C404/C404_1.webp"),
-                getAssetPath("/images/stranda/C404/C404_2.webp"),
-                getAssetPath("/images/stranda/C404/C404_3.webp"),
-                getAssetPath("/images/stranda/C404/C404_4.webp"),
-                getAssetPath("/images/stranda/C404/C404_5.webp"),
-                getAssetPath("/images/stranda/C404/C404_6.webp"),
-                getAssetPath("/images/stranda/C404/C404_7.webp"),
-                getAssetPath("/images/stranda/C404/C404_8.webp"),
-                getAssetPath("/images/stranda/C404/C404_9.webp"),
-                getAssetPath("/images/stranda/C404/C404_10.webp"),
-                getAssetPath("/images/stranda/C404/C404_11.webp"),
-                getAssetPath("/images/stranda/C404/C404_12.webp"),
-                getAssetPath("/images/stranda/C404/C404_13.webp"),
-                getAssetPath("/images/stranda/C404/C404_14.webp"),
-                getAssetPath("/images/stranda/C404/C404_15.webp"),
-                getAssetPath("/images/stranda/C404/C404_16.webp"),
-                getAssetPath("/images/stranda/C404/C404_17.webp"),
-                getAssetPath("/images/stranda/C404/C404_18.webp"),
-                getAssetPath("/images/stranda/C404/C404_19.webp"),
-                getAssetPath("/images/stranda/C404/C404_20.webp"),
-                getAssetPath("/images/stranda/C404/C404_21.webp")
-            ]
-        }
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/41/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
+
     'B103': {
         id: 'B103',
         building: 'B',
@@ -1392,345 +1049,6 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             ]
         }
     },
-    'B106': {
-        id: 'B106',
-        building: 'B',
-        type: 'suite',
-        price: 500,
-        guests: '2',
-        description: `Apartament B106 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z meblami. Leży na parterze budynku B.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "wyjście na taras"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "ręczniki",
-                "szlafroki",
-                "kosmetyki"
-            ],
-            "terrace": [
-                "przestronny taras",
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro",
-                "komplet mebli wypoczynkowych"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-        idoBookingId: '22',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/22/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B106/B106_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B106/B106_1.webp"),
-                getAssetPath("/images/stranda/B106/B106_2.webp"),
-                getAssetPath("/images/stranda/B106/B106_3.webp"),
-                getAssetPath("/images/stranda/B106/B106_4.webp"),
-                getAssetPath("/images/stranda/B106/B106_5.webp"),
-                getAssetPath("/images/stranda/B106/B106_6.webp"),
-                getAssetPath("/images/stranda/B106/B106_7.webp"),
-                getAssetPath("/images/stranda/B106/B106_8.webp"),
-                getAssetPath("/images/stranda/B106/B106_9.webp"),
-                getAssetPath("/images/stranda/B106/B106_10.webp"),
-                getAssetPath("/images/stranda/B106/B106_11.webp")
-            ]
-        }
-    },
-    'B304': {
-        id: 'B304',
-        building: 'B',
-        type: 'apartment',
-        price: 300,
-        guests: '2+2',
-        description: `Apartamenty B304 z 1 sypialnią znajdują się w budynku B w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z pięknym widokiem na jezioro Kisajno.
-
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
-
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "wyjście na taras",
-                "klimatyzacja"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "ręczniki",
-                "żel pod prysznic",
-                "balsam"
-            ],
-            "terrace": [
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro",
-                "przestronny taras"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-        idoBookingId: '44',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
-    },
-
-    'C_Studio': {
-        id: 'C Studio',
-        building: 'C',
-        type: 'studio',
-        price: 250,
-        guests: '2+2',
-        idoBookingId: '32',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "wyjście na taras",
-                "klimatyzacja",
-                "wifi"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców",
-                "zestaw startowy (woda, kawa, herbata)"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "ręczniki",
-                "żel pod prysznic",
-                "balsam"
-            ],
-            "terrace": [
-                "przestronny taras",
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
-    },
-    'C_1_Sypialnia': {
-        id: 'C 1-Sypialnia',
-        building: 'C',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '2+2',
-        idoBookingId: '44',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                description: `Wypoczywaj w komfortowych apartamentach na łonie natury, otoczony przyrodą i tysiącami mazurskich jezior.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "wyjście na taras",
-                "klimatyzacja",
-                "wifi"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców",
-                "zestaw startowy (woda, kawa, herbata)"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "ręczniki",
-                "żel pod prysznic",
-                "balsam"
-            ],
-            "terrace": [
-                "przestronny taras",
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
-    },
-    'C_2_Sypialnie': {
-        id: 'C 2-Sypialnie',
-        building: 'C',
-        type: 'twoBedrooms',
-        price: 450,
-        guests: '4+2',
-        idoBookingId: '43',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
-                description: `Wypoczywaj w komfortowych apartamentach na łonie natury, otoczony przyrodą i tysiącami mazurskich jezior.`,
-        amenities: {
-            "living": [
-                "TV",
-                "stół",
-                "krzesła",
-                "sofa dla 2 osób",
-                "wyjście na taras",
-                "klimatyzacja",
-                "wifi"
-            ],
-            "kitchen": [
-                "ekspres do kawy",
-                "płyta indukcyjna",
-                "lodówka",
-                "zmywarka",
-                "chłodziarka do wina",
-                "komplet naczyń i sztućców",
-                "zestaw startowy (woda, kawa, herbata)"
-            ],
-            "bedroom": [
-                "łóżko 180x200",
-                "TV",
-                "komplet pościeli",
-                "suszarka na ubrania",
-                "deska do prasowania",
-                "żelazko",
-                "klimatyzacja"
-            ],
-            "bathroom": [
-                "prysznic",
-                "pralka",
-                "suszarka do włosów",
-                "prostownica",
-                "ręczniki",
-                "żel pod prysznic",
-                "balsam"
-            ],
-            "terrace": [
-                "przestronny taras",
-                "dwa leżaki",
-                "stolik",
-                "widok na jezioro"
-            ]
-        },
-        additionalInfo: ['Widok na jezioro'],
-                gallery: {
-            "heroImage": getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-            "images": [
-                getAssetPath("/images/stranda/C_Generic/C_Generic_1.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_2.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_3.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_4.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_5.jpg"),
-                getAssetPath("/images/stranda/C_Generic/C_Generic_6.jpg")
-            ]
-        }
-    },
 
     'B106': {
         id: 'B106',
@@ -1767,138 +1085,6 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/22/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'B401': {
-        id: 'B401',
-        building: 'B',
-        type: 'twoBedrooms',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z 2 sypialniami i jacuzzi na dachu (B401)`,
-        description: `Apartament B401 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, 2 sypialnie, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok\nB401 Suite z dwoma sypialniami (maksymalna ilość osób 6)\nWyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie sypialni 2: TV, łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['dwa leżaki', 'stolik']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_23_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_23_1.jpg"),
-                getAssetPath("/images/stranda/ido_23_2.jpg"),
-                getAssetPath("/images/stranda/ido_23_3.jpg"),
-                getAssetPath("/images/stranda/ido_23_4.jpg"),
-                getAssetPath("/images/stranda/ido_23_5.jpg"),
-                getAssetPath("/images/stranda/ido_23_6.jpg"),
-                getAssetPath("/images/stranda/ido_23_7.jpg"),
-                getAssetPath("/images/stranda/ido_23_8.jpg"),
-                getAssetPath("/images/stranda/ido_23_9.jpg"),
-                getAssetPath("/images/stranda/ido_23_10.jpg"),
-                getAssetPath("/images/stranda/ido_23_11.jpg"),
-                getAssetPath("/images/stranda/ido_23_12.jpg"),
-                getAssetPath("/images/stranda/ido_23_13.jpg"),
-                getAssetPath("/images/stranda/ido_23_14.jpg"),
-                getAssetPath("/images/stranda/ido_23_15.jpg"),
-                getAssetPath("/images/stranda/ido_23_16.jpg"),
-                getAssetPath("/images/stranda/ido_23_17.jpg"),
-                getAssetPath("/images/stranda/ido_23_18.jpg"),
-                getAssetPath("/images/stranda/ido_23_19.jpg"),
-                getAssetPath("/images/stranda/ido_23_20.jpg")
-            ]
-        },
-        idoBookingId: '23',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/23/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'B402': {
-        id: 'B402',
-        building: 'B',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z 1 sypialnią i jacuzzi na dachu (B402)`,
-        description: `Apartament B402 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB402 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['dwa leżaki', 'stolik']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_24_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_24_1.jpg"),
-                getAssetPath("/images/stranda/ido_24_2.jpg"),
-                getAssetPath("/images/stranda/ido_24_3.jpg"),
-                getAssetPath("/images/stranda/ido_24_4.jpg"),
-                getAssetPath("/images/stranda/ido_24_5.jpg"),
-                getAssetPath("/images/stranda/ido_24_6.jpg"),
-                getAssetPath("/images/stranda/ido_24_7.jpg"),
-                getAssetPath("/images/stranda/ido_24_8.jpg"),
-                getAssetPath("/images/stranda/ido_24_9.jpg"),
-                getAssetPath("/images/stranda/ido_24_10.jpg"),
-                getAssetPath("/images/stranda/ido_24_11.jpg"),
-                getAssetPath("/images/stranda/ido_24_12.jpg"),
-                getAssetPath("/images/stranda/ido_24_13.jpg"),
-                getAssetPath("/images/stranda/ido_24_14.jpg"),
-                getAssetPath("/images/stranda/ido_24_15.jpg"),
-                getAssetPath("/images/stranda/ido_24_16.jpg"),
-                getAssetPath("/images/stranda/ido_24_17.jpg"),
-                getAssetPath("/images/stranda/ido_24_18.jpg"),
-                getAssetPath("/images/stranda/ido_24_19.jpg"),
-                getAssetPath("/images/stranda/ido_24_20.jpg")
-            ]
-        },
-        idoBookingId: '24',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'B404': {
-        id: 'B404',
-        building: 'B',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z 1 sypialnią i jacuzzi na dachu  (B404)`,
-        description: `Apartament B404 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nB404 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['dwa leżaki', 'stolik']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_25_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_25_1.jpg"),
-                getAssetPath("/images/stranda/ido_25_2.jpg"),
-                getAssetPath("/images/stranda/ido_25_3.jpg"),
-                getAssetPath("/images/stranda/ido_25_4.jpg"),
-                getAssetPath("/images/stranda/ido_25_5.jpg"),
-                getAssetPath("/images/stranda/ido_25_6.jpg"),
-                getAssetPath("/images/stranda/ido_25_7.jpg"),
-                getAssetPath("/images/stranda/ido_25_8.jpg"),
-                getAssetPath("/images/stranda/ido_25_9.jpg"),
-                getAssetPath("/images/stranda/ido_25_10.jpg"),
-                getAssetPath("/images/stranda/ido_25_11.jpg"),
-                getAssetPath("/images/stranda/ido_25_12.jpg"),
-                getAssetPath("/images/stranda/ido_25_13.jpg"),
-                getAssetPath("/images/stranda/ido_25_14.jpg"),
-                getAssetPath("/images/stranda/ido_25_15.jpg"),
-                getAssetPath("/images/stranda/ido_25_16.jpg"),
-                getAssetPath("/images/stranda/ido_25_17.jpg"),
-                getAssetPath("/images/stranda/ido_25_18.jpg"),
-                getAssetPath("/images/stranda/ido_25_19.jpg"),
-                getAssetPath("/images/stranda/ido_25_20.jpg")
-            ]
-        },
-        idoBookingId: '25',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
     'C403': {
         id: 'C403',
         building: 'C',
@@ -1915,65 +1101,37 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             terrace: ['komplet mebli ogodowych', 'dwa leżaki', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
         },
         gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_29_1.jpg"),
+            heroImage: getAssetPath("/images/stranda/ido_41_1.jpg"),
             images: [
-                getAssetPath("/images/stranda/ido_29_1.jpg"),
-                getAssetPath("/images/stranda/ido_29_2.jpg"),
-                getAssetPath("/images/stranda/ido_29_3.jpg"),
-                getAssetPath("/images/stranda/ido_29_4.jpg"),
-                getAssetPath("/images/stranda/ido_29_5.jpg"),
-                getAssetPath("/images/stranda/ido_29_6.jpg"),
-                getAssetPath("/images/stranda/ido_29_7.jpg"),
-                getAssetPath("/images/stranda/ido_29_8.jpg"),
-                getAssetPath("/images/stranda/ido_29_9.jpg"),
-                getAssetPath("/images/stranda/ido_29_10.jpg"),
-                getAssetPath("/images/stranda/ido_29_11.jpg"),
-                getAssetPath("/images/stranda/ido_29_12.jpg"),
-                getAssetPath("/images/stranda/ido_29_13.jpg")
+                getAssetPath("/images/stranda/ido_41_1.jpg"),
+                getAssetPath("/images/stranda/ido_41_2.jpg"),
+                getAssetPath("/images/stranda/ido_41_3.jpg"),
+                getAssetPath("/images/stranda/ido_41_4.jpg"),
+                getAssetPath("/images/stranda/ido_41_5.jpg"),
+                getAssetPath("/images/stranda/ido_41_6.jpg"),
+                getAssetPath("/images/stranda/ido_41_7.jpg"),
+                getAssetPath("/images/stranda/ido_41_8.jpg"),
+                getAssetPath("/images/stranda/ido_41_9.jpg"),
+                getAssetPath("/images/stranda/ido_41_10.jpg"),
+                getAssetPath("/images/stranda/ido_41_11.jpg"),
+                getAssetPath("/images/stranda/ido_41_12.jpg"),
+                getAssetPath("/images/stranda/ido_41_13.jpg"),
+                getAssetPath("/images/stranda/ido_41_14.jpg"),
+                getAssetPath("/images/stranda/ido_41_15.jpg"),
+                getAssetPath("/images/stranda/ido_41_16.jpg"),
+                getAssetPath("/images/stranda/ido_41_17.jpg"),
+                getAssetPath("/images/stranda/ido_41_18.jpg"),
+                getAssetPath("/images/stranda/ido_41_19.jpg"),
+                getAssetPath("/images/stranda/ido_41_20.jpg"),
+                getAssetPath("/images/stranda/ido_41_21.jpg")
             ]
         },
         idoBookingId: '29',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/29/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'C304': {
-        id: 'C304',
-        building: 'C',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        title: `Giżycko Stranda - Apartament C304 Studio`,
-        description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.\nC304 Studio (maksymalna ilość osób 4) Wyposażenie kuchni: płyta indukcyjna, mikrofalówka, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: dwa fotele, stolik, leżak\nPozostałe: internet, wifi, komplet pościeli i ręczników, kosmetyki w łazience, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
-            terrace: ['dwa fotele', 'stolik', 'leżak']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_30_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_30_1.jpg"),
-                getAssetPath("/images/stranda/ido_30_2.jpg"),
-                getAssetPath("/images/stranda/ido_30_3.jpg"),
-                getAssetPath("/images/stranda/ido_30_4.jpg"),
-                getAssetPath("/images/stranda/ido_30_5.jpg"),
-                getAssetPath("/images/stranda/ido_30_6.jpg"),
-                getAssetPath("/images/stranda/ido_30_7.jpg"),
-                getAssetPath("/images/stranda/ido_30_8.jpg"),
-                getAssetPath("/images/stranda/ido_30_9.jpg"),
-                getAssetPath("/images/stranda/ido_30_10.jpg"),
-                getAssetPath("/images/stranda/ido_30_11.jpg"),
-                getAssetPath("/images/stranda/ido_30_12.jpg")
-            ]
-        },
-        idoBookingId: '30',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/30/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'C_STUDIO': {
-        id: 'C_STUDIO',
+    'c-studio': {
+        id: 'c-studio',
         building: 'C',
         type: 'studio',
         price: 300,
@@ -2010,220 +1168,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-
-
-
-
-
-    'B202': {
-        id: 'B202',
-        building: 'B',
-        type: 'twoBedrooms',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z 2 sypialniami jacuzzi i sauną (B202)`,
-        description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz\nB202 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: rozkladana kanapa 2os., komplet pościeli, klimatyzacja\nWyposażenie łazienki: sauna, prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: jacuzzi, stolik, kanapa, dwa fotele, dwa rozkładane fotele\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: ['sauna', 'prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_38_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_38_1.jpg"),
-                getAssetPath("/images/stranda/ido_38_2.jpg"),
-                getAssetPath("/images/stranda/ido_38_3.jpg"),
-                getAssetPath("/images/stranda/ido_38_4.jpg"),
-                getAssetPath("/images/stranda/ido_38_5.jpg"),
-                getAssetPath("/images/stranda/ido_38_6.jpg"),
-                getAssetPath("/images/stranda/ido_38_7.jpg"),
-                getAssetPath("/images/stranda/ido_38_8.jpg"),
-                getAssetPath("/images/stranda/ido_38_9.jpg"),
-                getAssetPath("/images/stranda/ido_38_10.jpg"),
-                getAssetPath("/images/stranda/ido_38_11.jpg"),
-                getAssetPath("/images/stranda/ido_38_12.jpg"),
-                getAssetPath("/images/stranda/ido_38_13.jpg"),
-                getAssetPath("/images/stranda/ido_38_14.jpg"),
-                getAssetPath("/images/stranda/ido_38_15.jpg"),
-                getAssetPath("/images/stranda/ido_38_16.jpg")
-            ]
-        },
-        idoBookingId: '38',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/38/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'B201': {
-        id: 'B201',
-        building: 'B',
-        type: 'twoBedrooms',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z dwoma sypialniami i jacuzzi (B201)`,
-        description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno na którym znajduje się prywatne jacuzzi czynne cały rok.\nB201 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, piekarnik, mikrofala, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki 1: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie łazienki 2: wanna/prysznic, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: stolik, kanapa, dwa fotele, jacuzzi\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'piekarnik', 'mikrofala', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: [],
-            terrace: ['stolik', 'kanapa', 'dwa fotele', 'jacuzzi']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_39_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_39_1.jpg"),
-                getAssetPath("/images/stranda/ido_39_2.jpg"),
-                getAssetPath("/images/stranda/ido_39_3.jpg"),
-                getAssetPath("/images/stranda/ido_39_4.jpg"),
-                getAssetPath("/images/stranda/ido_39_5.jpg"),
-                getAssetPath("/images/stranda/ido_39_6.jpg"),
-                getAssetPath("/images/stranda/ido_39_7.jpg"),
-                getAssetPath("/images/stranda/ido_39_8.jpg"),
-                getAssetPath("/images/stranda/ido_39_9.jpg"),
-                getAssetPath("/images/stranda/ido_39_10.jpg"),
-                getAssetPath("/images/stranda/ido_39_11.jpg"),
-                getAssetPath("/images/stranda/ido_39_12.jpg"),
-                getAssetPath("/images/stranda/ido_39_13.jpg"),
-                getAssetPath("/images/stranda/ido_39_14.jpg"),
-                getAssetPath("/images/stranda/ido_39_15.jpg"),
-                getAssetPath("/images/stranda/ido_39_16.jpg"),
-                getAssetPath("/images/stranda/ido_39_17.jpg"),
-                getAssetPath("/images/stranda/ido_39_18.jpg"),
-                getAssetPath("/images/stranda/ido_39_19.jpg"),
-                getAssetPath("/images/stranda/ido_39_20.jpg")
-            ]
-        },
-        idoBookingId: '39',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/39/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'C301': {
-        id: 'C301',
-        building: 'C',
-        type: 'twoBedrooms',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z dwoma sypialniami (C301)`,
-        description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda\nC301 z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, klimatyzacja, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko piętrowe, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_40_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_40_1.jpg"),
-                getAssetPath("/images/stranda/ido_40_2.jpg"),
-                getAssetPath("/images/stranda/ido_40_3.jpg"),
-                getAssetPath("/images/stranda/ido_40_4.jpg"),
-                getAssetPath("/images/stranda/ido_40_5.jpg"),
-                getAssetPath("/images/stranda/ido_40_6.jpg"),
-                getAssetPath("/images/stranda/ido_40_7.jpg"),
-                getAssetPath("/images/stranda/ido_40_8.jpg"),
-                getAssetPath("/images/stranda/ido_40_9.jpg"),
-                getAssetPath("/images/stranda/ido_40_10.jpg"),
-                getAssetPath("/images/stranda/ido_40_11.jpg"),
-                getAssetPath("/images/stranda/ido_40_12.jpg"),
-                getAssetPath("/images/stranda/ido_40_13.jpg"),
-                getAssetPath("/images/stranda/ido_40_14.jpg"),
-                getAssetPath("/images/stranda/ido_40_15.jpg")
-            ]
-        },
-        idoBookingId: '40',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/40/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'C404': {
-        id: 'C404',
-        building: 'C',
-        type: 'jacuzzi',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament Studio z jacuzzi na dachu (C404)`,
-        description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, piekarnik, pralka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: fotel, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_41_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_41_1.jpg"),
-                getAssetPath("/images/stranda/ido_41_2.jpg"),
-                getAssetPath("/images/stranda/ido_41_3.jpg"),
-                getAssetPath("/images/stranda/ido_41_4.jpg"),
-                getAssetPath("/images/stranda/ido_41_5.jpg"),
-                getAssetPath("/images/stranda/ido_41_6.jpg"),
-                getAssetPath("/images/stranda/ido_41_7.jpg"),
-                getAssetPath("/images/stranda/ido_41_8.jpg"),
-                getAssetPath("/images/stranda/ido_41_9.jpg"),
-                getAssetPath("/images/stranda/ido_41_10.jpg"),
-                getAssetPath("/images/stranda/ido_41_11.jpg"),
-                getAssetPath("/images/stranda/ido_41_12.jpg"),
-                getAssetPath("/images/stranda/ido_41_13.jpg"),
-                getAssetPath("/images/stranda/ido_41_14.jpg"),
-                getAssetPath("/images/stranda/ido_41_15.jpg"),
-                getAssetPath("/images/stranda/ido_41_16.jpg"),
-                getAssetPath("/images/stranda/ido_41_17.jpg"),
-                getAssetPath("/images/stranda/ido_41_18.jpg"),
-                getAssetPath("/images/stranda/ido_41_19.jpg"),
-                getAssetPath("/images/stranda/ido_41_20.jpg"),
-                getAssetPath("/images/stranda/ido_41_21.jpg")
-            ]
-        },
-        idoBookingId: '41',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/41/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'A302': {
-        id: 'A302',
-        building: 'A',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '4',
-        title: `Giżycko  Stranda - Apartament z jedną sypialnią (A302)`,
-        description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA302 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, lodówka, zmywarka, chłodziarka do wina, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele, leżak\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'chłodziarka do wina', 'komplet naczyń i sztućców'],
-            bedroom: ['łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
-            terrace: []
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_42_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_42_1.jpg"),
-                getAssetPath("/images/stranda/ido_42_2.jpg"),
-                getAssetPath("/images/stranda/ido_42_3.jpg"),
-                getAssetPath("/images/stranda/ido_42_4.jpg"),
-                getAssetPath("/images/stranda/ido_42_5.jpg"),
-                getAssetPath("/images/stranda/ido_42_6.jpg"),
-                getAssetPath("/images/stranda/ido_42_7.jpg"),
-                getAssetPath("/images/stranda/ido_42_8.jpg"),
-                getAssetPath("/images/stranda/ido_42_9.jpg"),
-                getAssetPath("/images/stranda/ido_42_10.jpg"),
-                getAssetPath("/images/stranda/ido_42_11.jpg"),
-                getAssetPath("/images/stranda/ido_42_12.jpg"),
-                getAssetPath("/images/stranda/ido_42_13.jpg"),
-                getAssetPath("/images/stranda/ido_42_14.jpg"),
-                getAssetPath("/images/stranda/ido_42_15.jpg")
-            ]
-        },
-        idoBookingId: '42',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/42/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'C_2BEDROOM': {
-        id: 'C_2BEDROOM',
+    'c-z-dwoma-sypialniami': {
+        id: 'c-z-dwoma-sypialniami',
         building: 'C',
         type: 'twoBedrooms',
         price: 300,
@@ -2260,8 +1206,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'C_1BEDROOM': {
-        id: 'C_1BEDROOM',
+    'c-z-jedna-sypialnia': {
+        id: 'c-z-jedna-sypialnia',
         building: 'C',
         type: 'oneBedroom',
         price: 300,
@@ -2329,5 +1275,5 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         },
         idoBookingId: '46',
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/46/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
+    }
 };

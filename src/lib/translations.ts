@@ -364,6 +364,15 @@ export const translations = {
                 point4: "Optymalizacja cen (Revenue Management)"
             }
         },
+        coopExtra: {
+            heroTitle: "Współpraca B2B",
+            heroSubtitle: "TWÓJ OBIEKT W NAJLEPSZYCH RĘKACH NA MAZURACH",
+            securityTitle: "Bezpieczeństwo",
+            securityDesc: "Weryfikacja gości oraz ubezpieczenia na wypadek szkód gwarantują bezpieczeństwo Twojej inwestycji.",
+            readyTitle: "Gotowy na wyższe zyski?",
+            readyDesc: "Skontaktuj się z nami i sprawdź, ile może zarabiać Twój apartament lub domek na Mazurach.",
+            letsTalk: "Porozmawiajmy"
+        },
         contactForm: {
             title: "Napisz do nas",
             subtitle: "Masz pytania? Chcesz zarezerwować pobyt? Skorzystaj z formularza poniżej.",
@@ -799,7 +808,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         },
         cooperationPage: {
             title: "Cooperation",
-            subtitle: "Your property in good hands",
+            subtitle: "Your property in the best hands in Masuria",
             services: {
                 title: "Comprehensive Management",
                 desc: "We will take care of your apartment, cottage, or facility in Masuria. We offer a full range of services - from marketing to cleaning."
@@ -823,6 +832,15 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
                 point3: "Constant technical care and maintenance",
                 point4: "Price optimization (Revenue Management)"
             }
+        },
+        coopExtra: {
+            heroTitle: "B2B Cooperation",
+            heroSubtitle: "YOUR PROPERTY IN THE BEST HANDS IN MASURIA",
+            securityTitle: "Security",
+            securityDesc: "Guest verification and damage insurance guarantee the safety of your investment.",
+            readyTitle: "Ready for higher profits?",
+            readyDesc: "Contact us and see how much your apartment or cottage in Masuria can earn.",
+            letsTalk: "Let's talk"
         },
         contactForm: {
             title: "Write to us",

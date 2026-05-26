@@ -244,13 +244,14 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
 
                                 {/* General (For flat amenities) */}
                                 {data.amenities.general && data.amenities.general.length > 0 && (
-                                    <div className="col-span-2 md:col-span-4 grid grid-cols-2 gap-4">
-                                        {data.amenities.general.map((amenity, idx) => (
-                                            <div key={idx} className="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
-                                                <div className="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0" />
-                                                <span className="text-sm text-slate-700 dark:text-slate-300">{amenity}</span>
-                                            </div>
-                                        ))}
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-2">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/icons/LOCATION.svg")} alt="Pozostałe / Lokalizacja" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Pozostałe</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.general.join(", ")}
+                                        </p>
                                     </div>
                                 )}
                             </div>

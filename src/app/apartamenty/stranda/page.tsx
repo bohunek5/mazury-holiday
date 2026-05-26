@@ -208,7 +208,7 @@ export default function StrandaPage() {
                                                             <div className="absolute bottom-4 left-5 text-white">
                                                                 <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
                                                                 <h3 className="text-2xl font-bold font-sans">
-                                                                    {unit.id}
+                                                                    {unit.id === 'c-studio' ? 'C Studio' : unit.id === 'c-z-dwoma-sypialniami' ? 'C z dwoma sypialniami' : unit.id === 'c-z-jedna-sypialnia' ? 'C z jedną sypialnią' : unit.id}
                                                                     {aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.amenities?.living?.some((item: string) => item.includes('sauna')) 
                                                                         ? " z sauną i jacuzzi"
                                                                         : aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.description?.includes('na dachu')

@@ -106,17 +106,23 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 }
             }
 
-            const fetchWithRetry = async (url: string, retries = 2) => {
-                for (let i = 0; i < retries; i++) {
+            const fetchWithRetry = async (url: string) => {
+                const proxies = [
+                    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+                    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+                    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+                ];
+                
+                for (let i = 0; i < proxies.length; i++) {
                     try {
-                        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                        const proxyUrl = proxies[i];
                         const response = await fetch(proxyUrl);
                         if (!response.ok) throw new Error(`HTTP ${response.status}`);
                         const text = await response.text();
                         if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
                         return text;
                     } catch (e) {
-                        if (i === retries - 1) throw e;
+                        if (i === proxies.length - 1) throw e;
                         await new Promise(r => setTimeout(r, 1000));
                     }
                 }
