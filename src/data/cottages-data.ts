@@ -84,7 +84,7 @@ export const cottagesData: Cottage[] = [
         area: 62,
         heroImage: getAssetPath("/images/skorupki/skorupki_2.webp"),
         galleryStart: 8,
-        description: `Elegancki domek z drewnianą werandą i panoramicznym widokiem na las. Wyposażony w nowoczesną kuchnię i wygodny salon z kominkiem. Idealne miejsce na romantyczny wyjazd lub spokojne rodzinne wakacje.",
+        description: "Elegancki domek z drewnianą werandą i panoramicznym widokiem na las. Wyposażony w nowoczesną kuchnię i wygodny salon z kominkiem. Idealne miejsce na romantyczny wyjazd lub spokojne rodzinne wakacje.",
         amenities: [
             {
                 category: "Sypialnia",
