@@ -62,7 +62,6 @@ export default function CharterPage() {
 
     // Safely access current language translations, falling back to English then Polish
     const getCurrentTranslations = () => {
-        // @ts-expect-error - we know charterPage might not exist on all languages types yet
         return translations[language]?.charterPage || translations['en']?.charterPage || translations['pl'].charterPage;
     };
 

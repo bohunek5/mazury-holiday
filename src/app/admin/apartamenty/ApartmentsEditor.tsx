@@ -6,21 +6,7 @@ import type { FuledaApartment } from "@/data/fuleda-data";
 import type { Apartment } from "@/types/apartment";
 import type { PokojeData } from "@/data/pokoje-fuleda-data";
 import type { SkorupkiData } from "@/data/skorupki-data";
-
-type KisajnoData = {
-    id: string;
-    title: string;
-    price: number;
-    guests: string;
-    description: string;
-    amenities: string[];
-    gallery: {
-        heroImage: string;
-        images: string[];
-    };
-    idoBookingId?: string;
-    icalUrl?: string;
-};
+import type { KisajnoData } from "@/data/kisajno-data";
 
 type ApartmentsEditorProps = {
     initialStranda: Record<string, Apartment>;

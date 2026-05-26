@@ -10,7 +10,6 @@ export default function PokojeFuledaPage() {
     
     // Safely access current language translations
     const getCurrentTranslations = () => {
-        // @ts-expect-error - we know key might not exist on all languages types yet
         return translations[language]?.pokojeFuledaPage || translations['en']?.pokojeFuledaPage || translations['pl'].pokojeFuledaPage;
     };
 

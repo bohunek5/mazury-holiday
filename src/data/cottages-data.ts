@@ -34,7 +34,7 @@ export const cottagesData: Cottage[] = [
         area: 60,
         heroImage: getAssetPath("/images/skorupki/skorupki_1.webp"),
         galleryStart: 4,
-        description: `Przytulny domek z pełnym wyposażeniem, idealny dla rodzin z dziećmi lub grupy przyjaciół. Drewniane wykończenia, duży taras z meblami ogrodowymi i bezpośredni dostęp do ciszy mazurskiej przyrody.",
+        description: `Przytulny domek z pełnym wyposażeniem, idealny dla rodzin z dziećmi lub grupy przyjaciół. Drewniane wykończenia, duży taras z meblami ogrodowymi i bezpośredni dostęp do ciszy mazurskiej przyrody.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -134,7 +134,7 @@ export const cottagesData: Cottage[] = [
         area: 58,
         heroImage: getAssetPath("/images/skorupki/skorupki_3.webp"),
         galleryStart: 12,
-        description: `Przestronny domek z ogrodem i miejscem na ognisko. Duże przeszklenia wpuszczają mnóstwo światła i otwierają widok na zieloną okolicę. Doskonały wybór dla aktywnych rodzin.",
+        description: `Przestronny domek z ogrodem i miejscem na ognisko. Duże przeszklenia wpuszczają mnóstwo światła i otwierają widok na zieloną okolicę. Doskonały wybór dla aktywnych rodzin.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -184,7 +184,7 @@ export const cottagesData: Cottage[] = [
         area: 65,
         heroImage: getAssetPath("/images/skorupki/skorupki_4.webp"),
         galleryStart: 16,
-        description: `Wyróżniający się przestronią i nowoczesnym wnętrzem domek. Otwarta przestrzeń dzienna łączy salon z jadalnią i kuchnią, tworząc idealne miejsce do wspólnego spędzania czasu.",
+        description: `Wyróżniający się przestronią i nowoczesnym wnętrzem domek. Otwarta przestrzeń dzienna łączy salon z jadalnią i kuchnią, tworząc idealne miejsce do wspólnego spędzania czasu.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -234,7 +234,7 @@ export const cottagesData: Cottage[] = [
         area: 60,
         heroImage: getAssetPath("/images/skorupki/skorupki_5.webp"),
         galleryStart: 20,
-        description: `Domek w stylu skandynawskim z drewnianymi akcentami i przytulną atmosferą. Idealne połączenie rustykalnego uroku z nowoczesnym komfortem. Okolica bogata w szlaki rowerowe i piesze.",
+        description: `Domek w stylu skandynawskim z drewnianymi akcentami i przytulną atmosferą. Idealne połączenie rustykalnego uroku z nowoczesnym komfortem. Okolica bogata w szlaki rowerowe i piesze.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -284,7 +284,7 @@ export const cottagesData: Cottage[] = [
         area: 63,
         heroImage: getAssetPath("/images/skorupki/skorupki_6.webp"),
         galleryStart: 24,
-        description: `Jeden z najbardziej popularnych domków — położony najbliżej dostępu do wody. Doskonały punkt startowy dla miłośników kajaków, łodzi motorowych i żeglarstwa. W pobliżu wypożyczalnia sprzętu wodnego.",
+        description: `Jeden z najbardziej popularnych domków — położony najbliżej dostępu do wody. Doskonały punkt startowy dla miłośników kajaków, łodzi motorowych i żeglarstwa. W pobliżu wypożyczalnia sprzętu wodnego.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -334,7 +334,7 @@ export const cottagesData: Cottage[] = [
         area: 75,
         heroImage: getAssetPath("/images/skorupki/skorupki_7.webp"),
         galleryStart: 28,
-        description: `Największy domek w kompleksie — idealny dla rodzin wieloosobowych lub grupy przyjaciół. Trzy sypialnie, przestronny salon i duży ogród z miejscem na ognisko gwarantują niezapomniane chwile.",
+        description: `Największy domek w kompleksie — idealny dla rodzin wieloosobowych lub grupy przyjaciół. Trzy sypialnie, przestronny salon i duży ogród z miejscem na ognisko gwarantują niezapomniane chwile.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -384,7 +384,7 @@ export const cottagesData: Cottage[] = [
         area: 70,
         heroImage: getAssetPath("/images/skorupki/skorupki_8.webp"),
         galleryStart: 32,
-        description: `Domek premium z dwiema łazienkami i tarasemsem SPA. Wyjątkowy wystrój, jacuzzi na zewnętrznym tarasie i intymna lokalizacja na skraju lasu. Dla tych, którzy nie chcą rezygnować z luksusu nawet na wakacjach.",
+        description: `Domek premium z dwiema łazienkami i tarasemsem SPA. Wyjątkowy wystrój, jacuzzi na zewnętrznym tarasie i intymna lokalizacja na skraju lasu. Dla tych, którzy nie chcą rezygnować z luksusu nawet na wakacjach.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -434,7 +434,7 @@ export const cottagesData: Cottage[] = [
         area: 60,
         heroImage: getAssetPath("/images/skorupki/skorupki_9.webp"),
         galleryStart: 36,
-        description: `Sielski domek otoczony sosnowym lasem. Doskonały dla rodzin z dziećmi — bezpieczna, zamknięta posesja, piaskownica, huśtawki i mnóstwo przestrzeni do zabawy na świeżym powietrzu.",
+        description: `Sielski domek otoczony sosnowym lasem. Doskonały dla rodzin z dziećmi — bezpieczna, zamknięta posesja, piaskownica, huśtawki i mnóstwo przestrzeni do zabawy na świeżym powietrzu.`,
         amenities: [
             {
                 category: "Sypialnia",
@@ -484,7 +484,7 @@ export const cottagesData: Cottage[] = [
         area: 68,
         heroImage: getAssetPath("/images/skorupki/skorupki_10.webp"),
         galleryStart: 40,
-        description: `Flagowy domek kompleksu Skorupki. Bezpośredni dostęp do pomostu, widok na jezioro z tarasu, piękne drewniane wnętrza. Jedyne miejsce, gdzie możesz o świcie wyjść z domku wprost na pomost i zacząć dzień od porannej kąpieli.",
+        description: `Flagowy domek kompleksu Skorupki. Bezpośredni dostęp do pomostu, widok na jezioro z tarasu, piękne drewniane wnętrza. Jedyne miejsce, gdzie możesz o świcie wyjść z domku wprost na pomost i zacząć dzień od porannej kąpieli.`,
         amenities: [
             {
                 category: "Sypialnia",

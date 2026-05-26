@@ -15,11 +15,13 @@ export type Apartment = {
     id: string;
     building: string;
     type: string;
+    title?: string;
+    subtitle?: string;
     price: number;
     guests: string;
     description: string;
     amenities: ApartmentAmenities;
-    additionalInfo: string[];
+    additionalInfo?: string[];
     idoBookingId?: string;
     icalUrl?: string;
     gallery: ApartmentGallery;

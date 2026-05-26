@@ -11,8 +11,10 @@ interface ImageLightboxProps {
     altPrefix?: string;
 }
 
-export default function ImageLightbox({ images, currentIndex, onClose, altPrefix = "Image" }: ImageLightboxProps) {
+export default function ImageLightbox({ images = [], currentIndex = 0, onClose, altPrefix = "Image" }: ImageLightboxProps) {
     const [index, setIndex] = useState(currentIndex);
+
+    if (!images || images.length === 0) return null;
 
     useEffect(() => {
         setIndex(currentIndex);
@@ -87,16 +89,18 @@ export default function ImageLightbox({ images, currentIndex, onClose, altPrefix
                 className="relative w-[90vw] h-[90vh] flex items-center justify-center"
                 onClick={(e) => e.stopPropagation()}
             >
-                <Image
-                    src={images[index]}
-                    alt={`${altPrefix} ${index + 1}`}
-                    fill
-                    className="object-contain"
-                    quality={100}
-                    priority
-                    unoptimized
-                    sizes="100vw"
-                />
+                {images[index] ? (
+                    <Image
+                        src={images[index]}
+                        alt={`${altPrefix} ${index + 1}`}
+                        fill
+                        className="object-contain"
+                        quality={100}
+                        priority
+                        unoptimized
+                        sizes="100vw"
+                    />
+                ) : null}
             </div>
 
             {/* Image Counter */}

@@ -16,20 +16,7 @@ import {
 } from "@/lib/admin/serializers";
 import { ADMIN_COOKIE_NAME, isAdminSessionToken } from "@/lib/admin/auth";
 
-type KisajnoData = {
-    id: string;
-    title: string;
-    price: number;
-    guests: string;
-    description: string;
-    amenities: string[];
-    gallery: {
-        heroImage: string;
-        images: string[];
-    };
-    idoBookingId?: string;
-    icalUrl?: string;
-};
+import type { KisajnoData } from "@/data/kisajno-data";
 
 type SkorupkiData = {
     id: string;
@@ -63,7 +50,7 @@ type SaveRequest =
     }
     | {
         section: "translations";
-        payload: Record<string, unknown>;
+        payload: any;
     };
 
 export const runtime = "nodejs";

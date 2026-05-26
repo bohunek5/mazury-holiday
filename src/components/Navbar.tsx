@@ -65,7 +65,7 @@ export default function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,border-color,box-shadow] duration-300 ease-in-out",
+                "fixed top-0 left-0 right-0 z-[110] transition-[background-color,padding,border-color,box-shadow] duration-300 ease-in-out",
                 isScrolled || !isHomePage
                     ? "bg-white dark:bg-slate-900/95 shadow-lg py-4 border-b border-slate-200 dark:border-slate-800"
                     : "bg-transparent py-8"
@@ -152,14 +152,14 @@ export default function Navbar() {
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
                         className={cn(
-                            "fixed inset-0 z-40 flex flex-col items-center justify-start pt-32 gap-6 lg:hidden overflow-y-auto",
+                            "fixed inset-0 z-[105] flex flex-col items-center justify-start pt-32 gap-4 lg:hidden overflow-y-auto",
                             mobileMenuBgClass
                         )}
                     >
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
-                        <div className="flex flex-col items-center w-full px-6 gap-6">
+                        <div className="flex flex-col items-center w-full px-6 gap-1">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -171,7 +171,7 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "block text-2xl font-medium py-2 w-full text-center transition-colors",
+                                            "block text-xl md:text-2xl font-medium py-0.5 w-full text-center transition-colors",
                                             mobileLinkClass
                                         )}
                                         onClick={() => setIsMobileMenuOpen(false)}

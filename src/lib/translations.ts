@@ -1,7 +1,7 @@
 import { translationsLegal } from './translationsLegal';
 export const translations = {
     pl: {
-        ...translationsLegal.pl,
+        ...(translationsLegal as any).pl,
         amenityNames: {"Klimatyzacja": "Klimatyzacja", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Prysznic", "Ręczniki": "Ręczniki", "Zmywarka": "Zmywarka", "Płyta indukcyjna": "Płyta indukcyjna", "Pościel": "Pościel", "Łóżka małżeńskie i pojedyncze": "Łóżka małżeńskie i pojedyncze", "Prywatny taras z grillem": "Prywatny taras z grillem", "Miejsce na ognisko": "Miejsce na ognisko", "Dostęp do jeziora": "Dostęp do jeziora", "Miejsce parkingowe": "Miejsce parkingowe", "W pełni wyposażony aneks kuchenny": "W pełni wyposażony aneks kuchenny", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Aneks kuchenny (płyta, lodówka, zmywarka)", "Ekspres do kawy": "Ekspres do kawy", "Taras z meblami wypoczynkowymi": "Taras z meblami wypoczynkowymi", "Prywatne Jacuzzi": "Prywatne Jacuzzi", "Balkon z meblami wypoczynkowymi": "Balkon z meblami wypoczynkowymi"},
         nav: { about: "O nas", apartments: "Apartamenty", cottages: "Domki", charter: "Czarter", port: "Port", attractions: "Atrakcje", cooperation: "Współpraca", contact: "Kontakt", rooms: "Pokoje", bookBtn: "Rezerwuj", language: "Język", back: "Powrót", euProjects: "Projekty UE" },
         hero: { title: "Wakacje na Mazurach", subtitle: "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE", apartmentsBtn: "Nasze Apartamenty", charterBtn: "730 067 027", bookOnlineBtn: "Rezerwuj Online", scrollDown: "Przewiń w dół" },
@@ -10,7 +10,7 @@ export const translations = {
             tag: "Zalety naszej oferty",
             title: "Luksus tkwi w szczegółach",
             quality: { title: "Wysoka jakość wykończenia", desc: "W każdym naszym apartamencie zadbaliśmy o wykończenie. Mamy nadzieję, że dostrzeżesz wszystkie ukryte i widoczne szczegóły" },
-            views: { title: "Widoki na jezioro", desc: "W piękne słoneczne dni, od wschodu do zachodu słońca - filmy na VOD mogą zastąpić Ci piękne widocki na jezioro Kisajno lub Dobskie" },
+            views: { title: "Widoki na jezioro", desc: "W piękne słoneczne dni, od wschodu do zachodu słońca - filmy na VOD mogą zastąpić Ci piękne widoki na jezioro Kisajno lub Dobskie" },
             comfort: { title: "Sen w komfortowych warunkach", desc: "Sen jest niezbędny do wypoczynku i wpływa na jakość Państwa pobytu u nas. Wszystkie łóżka są wyposażone w bardzo dobre i wygodne materace" },
             wifi: { title: "Bezpłatne Wi-Fi", desc: "Na terenie naszych apartamentów przygotowaliśmy połączenie Wi-Fi. Nie jest one niezbędne podczas wypoczynku, ale pomaga np. w zdalnej pracy" },
             gifts: { title: "Zestaw startowy", desc: "Dla każdego z naszych gości przygotowaliśmy niewielki upominek, który jest elementem naszej oferty wypoczynkowej w apartamentach" },
@@ -23,7 +23,10 @@ export const translations = {
             pricePrefix: "od",
             night: "noc",
             people: "max ilość osób",
-            bookBtn: "ZAREZERWUJ GO", items: {
+            bookBtn: "ZAREZERWUJ GO",
+            bookingTitle: "Zarezerwuj pobyt",
+            bookingDesc: "Wybierz daty i sprawdź dostępność.",
+            items: {
                 stranda: { title: "Apartamenty Stranda Residence", location: "Giżycko, jezioro Kisajno", description: "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..." },
                 kisajno: { title: "Apartamenty Kisajno", location: "Giżycko, jezioro Kisajno", description: "Luksus nad brzegiem jeziora Kisajno." },
                 fuleda: { title: "Apartamenty Fuleda", location: "Fuleda, jezioro Dobskie", description: "Oaza spokoju z dala od zgiełku miasta." },
@@ -74,7 +77,7 @@ export const translations = {
                 }
             }
         },
-        details: { about: "O apartamencie", amenities: "Udogodnienia", booking: "Rezerwacja", checkAvailability: "Sprawdź dostępność i zarezerwuj.", callBtn: "Zadzwoń", lowPrice: "Gwarancja najniższej ceny.", priceFrom: "Cena od", guests: "Max. ilość osób", backToList: "Powrót", descriptionPart1: "Wszystkie oferowane apartamenty są wykończone luksusowo i zapewniają bardzo duży komfort wypoczynku.", descriptionPart2: "Posiadają salon z TV i aneksem kuchennym, jedną lub dwie sypialnie z TV, łazienkę z prysznicem, dostęp do WiFi, tarasy z meblami wypoczynkowymi z widokiem na jezioro, wygodne łóżka oraz szereg dodatków które ułatwiają i umilają pobyt.", descriptionPart3: "Dodatkowo apartamenty położone najwyżej, mają dostęp z przestronnego tarasu na taras górny z jacuzzi.", items: { view: "Widok na jezioro", ac: "Klimatyzacja", terrace: "Taras z meblami", kitchen: "Aneks kuchenny (płyta, lodówka, zmywarka)", tv: "Smart TV (Salon + Sypialnia)", wifi: "WiFi", parking: "Miejsce parkingowe", sauna: "Dostęp do sauny", iron: "Żelazko i deska", hairDryer: "Suszarka do włosów", coffee: "Zestaw do parzenia kawy/herbaty", roomSalon: "Salon", roomKitchen: "Kuchnia", roomBedroom: "Sypialnia", roomBathroom: "Łazienka", salonFeatures: "TV, sofa 2os., stół, krzesła, klimatyzacja, wifi", kitchenFeatures: "płyta indukcyjna, lodówka, zmywarka, mikrofalówka, komplet naczyń i sztućców", bedroomFeatures: "TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja", bathroomFeatures: "prysznic, suszarka do włosów, szlafroki, balsam do ciała" , terraceAndOther: "Taras i Pozostałe"} },
+        details: { about: "O apartamencie", amenities: "Udogodnienia", booking: "Rezerwacja", checkAvailability: "Sprawdź dostępność i zarezerwuj.", callBtn: "Zadzwoń", lowPrice: "Gwarancja najniższej ceny.", priceFrom: "Cena od", guests: "Max. ilość osób", backToList: "Powrót", descriptionPart1: "Wszystkie oferowane apartamenty są wykończone luksusowo i zapewniają bardzo duży komfort wypoczynku.", descriptionPart2: "Posiadają salon z TV i aneksem kuchennym, jedną lub dwie sypialnie z TV, łazienkę z prysznicem, dostęp do WiFi, tarasy z meblami wypoczynkowymi z widokiem na jezioro, wygodne łóżka oraz szereg dodatków które ułatwiają i umilają pobyt.", descriptionPart3: "Dodatkowo apartamenty położone najwyżej, mają dostęp z przestronnego tarasu na taras górny z jacuzzi.", gallery: "Galeria", collapseGallery: "Zwiń galerię", seeMorePhotos: "Zobacz więcej zdjęć", needHelp: "Potrzebujesz pomocy?", availability: "Dostępność", items: { view: "Widok na jezioro", ac: "Klimatyzacja", terrace: "Taras z meblami", kitchen: "Aneks kuchenny (płyta, lodówka, zmywarka)", tv: "Smart TV (Salon + Sypialnia)", wifi: "WiFi", parking: "Miejsce parkingowe", sauna: "Dostęp do sauny", iron: "Żelazko i deska", hairDryer: "Suszarka do włosów", coffee: "Zestaw do parzenia kawy/herbaty", roomSalon: "Salon", roomKitchen: "Kuchnia", roomBedroom: "Sypialnia", roomBathroom: "Łazienka", salonFeatures: "TV, sofa 2os., stół, krzesła, klimatyzacja, wifi", kitchenFeatures: "płyta indukcyjna, lodówka, zmywarka, mikrofalówka, komplet naczyń i sztućców", bedroomFeatures: "TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja", bathroomFeatures: "prysznic, suszarka do włosów, szlafroki, balsam do ciała" , terraceAndOther: "Taras i Pozostałe"} },
         footer: { brandDesc: "Jedyne i niepowtarzalne chwile na Mazurach.", navTitle: "Nawigacja", contactTitle: "Kontakt", followTitle: "Obserwuj nas", rights: "Wszelkie prawa zastrzeżone.", linksTitle: "Linki" },
         skorupki: {
             title: "Domki Skorupki",
@@ -523,7 +526,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     en: {
-        ...translationsLegal.en,
+        ...(translationsLegal as any).en,
         amenityNames: {"Klimatyzacja": "Air conditioning", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Shower", "Ręczniki": "Towels", "Zmywarka": "Dishwasher", "Płyta indukcyjna": "Induction hob", "Pościel": "Bed linen", "Łóżka małżeńskie i pojedyncze": "Double and single beds", "Prywatny taras z grillem": "Private terrace with grill", "Miejsce na ognisko": "Campfire spot", "Dostęp do jeziora": "Lake access", "Miejsce parkingowe": "Parking space", "W pełni wyposażony aneks kuchenny": "Fully equipped kitchenette", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Kitchenette (hob, fridge, dishwasher)", "Ekspres do kawy": "Coffee machine", "Taras z meblami wypoczynkowymi": "Terrace with lounge furniture", "Prywatne Jacuzzi": "Private Jacuzzi", "Balkon z meblami wypoczynkowymi": "Balcony with lounge furniture"},
         nav: { about: "About Us", apartments: "Apartments", cottages: "Cottages", charter: "Charter", port: "Port", attractions: "Attractions", cooperation: "Cooperation", contact: "Contact", rooms: "Rooms", bookBtn: "Book Now", language: "Language", back: "Back", euProjects: "EU Projects" },
         hero: { title: "Holidays in Masuria", subtitle: "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS", apartmentsBtn: "Our Apartments", charterBtn: "730 067 027", bookOnlineBtn: "Book Online", scrollDown: "Scroll down" },
@@ -987,7 +990,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     de: {
-        ...translationsLegal.de,
+        ...(translationsLegal as any).de,
         amenityNames: {"Klimatyzacja": "Klimaanlage", "WiFi": "WLAN", "Smart TV": "Smart TV", "Prysznic": "Dusche", "Ręczniki": "Handtücher", "Zmywarka": "Spülmaschine", "Płyta indukcyjna": "Induktionskochfeld", "Pościel": "Bettwäsche", "Łóżka małżeńskie i pojedyncze": "Doppel- und Einzelbetten", "Prywatny taras z grillem": "Private Terrasse mit Grill", "Miejsce na ognisko": "Lagerfeuerplatz", "Dostęp do jeziora": "Zugang zum See", "Miejsce parkingowe": "Parkplatz", "W pełni wyposażony aneks kuchenny": "Voll ausgestattete Küchenzeile", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Küchenzeile (Kochfeld, Kühlschrank, Spülmaschine)", "Ekspres do kawy": "Kaffeemaschine", "Taras z meblami wypoczynkowymi": "Terrasse mit Loungemöbeln", "Prywatne Jacuzzi": "Privater Whirlpool", "Balkon z meblami wypoczynkowymi": "Balkon mit Loungemöbeln"},
         nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen", language: "Sprache", back: "Zurück" },
         hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "730 067 027", bookOnlineBtn: "Online buchen" },
@@ -1398,7 +1401,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     es: {
-        ...translationsLegal.es,
+        ...(translationsLegal as any).es,
         amenityNames: {"Klimatyzacja": "Aire acondicionado", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Ducha", "Ręczniki": "Toallas", "Zmywarka": "Lavavajillas", "Płyta indukcyjna": "Placa de inducción", "Pościel": "Ropa de cama", "Łóżka małżeńskie i pojedyncze": "Camas dobles e individuales", "Prywatny taras z grillem": "Terraza privada con parrilla", "Miejsce na ognisko": "Zona de fogata", "Dostęp do jeziora": "Acceso al lago", "Miejsce parkingowe": "Aparcamiento", "W pełni wyposażony aneks kuchenny": "Cocina americana totalmente equipada", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Cocina americana (placa, nevera, lavavajillas)", "Ekspres do kawy": "Cafetera", "Taras z meblami wypoczynkowymi": "Terraza con muebles de exterior", "Prywatne Jacuzzi": "Jacuzzi privado", "Balkon z meblami wypoczynkowymi": "Balcón con muebles de exterior"},
         nav: { about: "Nosotros", apartments: "Apartamentos", cottages: "Cabañas", charter: "Chárter", port: "Puerto", attractions: "Atracciones", cooperation: "Cooperación", contact: "Contacto", rooms: "Habitaciones", bookBtn: "Reservar", language: "Idioma", back: "Volver" },
         hero: { title: "Vacaciones en Masuria", subtitle: "MOMENTOS ÚNICOS", apartmentsBtn: "Nuestros Apartamentos", charterBtn: "730 067 027" },
@@ -1757,7 +1760,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     it: {
-        ...translationsLegal.it,
+        ...(translationsLegal as any).it,
         nav: { about: "Chi siamo", apartments: "Appartamenti", cottages: "Case", charter: "Noleggio", port: "Porto", attractions: "Attrazioni", cooperation: "Cooperazione", contact: "Contatti", rooms: "Camere", bookBtn: "Prenota", language: "Lingua", back: "Indietro" },
         hero: { title: "Vacanze in Masuria", subtitle: "MOMENTI UNICI", apartmentsBtn: "I nostri appartamenti", charterBtn: "Noleggio Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Benvenuti nei", titleHighlight: "Grandi Laghi", p1: "Scopri la magia della Masuria.", p2: "Relax a Giżycko o lusso a Fuleda." },
@@ -2013,7 +2016,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         },
     },
     fr: {
-        ...translationsLegal.fr,
+        ...(translationsLegal as any).fr,
         nav: { about: "À propos", apartments: "Appartements", cottages: "Chalets", charter: "Location", port: "Port", attractions: "Attractions", cooperation: "Coopération", contact: "Contact", rooms: "Chambres", bookBtn: "Réserver", language: "Langue", back: "Retour" },
         hero: { title: "Vacances en Mazurie", subtitle: "MOMENTS UNIQUES", apartmentsBtn: "Nos Appartements", charterBtn: "Location de Yacht" },
         intro: { tag: "Mazury.Holiday", title: "Bienvenue aux", titleHighlight: "Grands Lacs", p1: "Découvrez la magie de la Mazurie.", p2: "Repos à Giżycko ou luxe à Fuleda." },
@@ -2607,7 +2610,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     lt: {
-        ...translationsLegal.lt,
+        ...(translationsLegal as any).lt,
         amenityNames: {"Klimatyzacja": "Oro kondicionierius", "WiFi": "WiFi", "Smart TV": "Išmanusis televizorius", "Prysznic": "Dušas", "Ręczniki": "Rankšluosčiai", "Zmywarka": "Indaplovė", "Płyta indukcyjna": "Indukcinė viryklė", "Pościel": "Patalynė", "Łóżka małżeńskie i pojedyncze": "Dvigulės ir viengulės lovos", "Prywatny taras z grillem": "Privati terasa su griliu", "Miejsce na ognisko": "Laužavietė", "Dostęp do jeziora": "Prieiga prie ežero", "Miejsce parkingowe": "Automobilių stovėjimo aikštelė", "W pełni wyposażony aneks kuchenny": "Visiškai įrengta virtuvėlė", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Virtuvėlė (viryklė, šaldytuvas, indaplovė)", "Ekspres do kawy": "Kavos aparatas", "Taras z meblami wypoczynkowymi": "Terasa su lauko baldais", "Prywatne Jacuzzi": "Privati sūkurinė vonia", "Balkon z meblami wypoczynkowymi": "Balkonas su lauko baldais"},
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Nameliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti", language: "Kalba", back: "Grįžti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "730 067 027", bookOnlineBtn: "Užsisakyti internetu", scrollDown: "Slinkite žemyn" },

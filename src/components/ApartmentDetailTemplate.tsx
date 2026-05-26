@@ -34,9 +34,10 @@ export interface ApartmentTemplateData {
 interface ApartmentDetailTemplateProps {
     data: ApartmentTemplateData;
     backUrl?: string;
+    breadcrumbPath?: { name: string; url: string }[];
 }
 
-export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDetailTemplateProps) {
+export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath }: ApartmentDetailTemplateProps) {
     const { t } = useLanguage();
     const router = useRouter();
     const [lightboxOpen, setLightboxOpen] = useState(false);
