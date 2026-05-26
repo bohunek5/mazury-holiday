@@ -31,13 +31,13 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 px-4 text-center text-white -mt-24 md:-mt-12">
-        <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 drop-shadow-lg min-h-[120px] sm:min-h-[1.2em] flex items-center justify-center">
+        <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)] min-h-[120px] sm:min-h-[1.2em] flex items-center justify-center">
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
 
         <div className="w-24 h-1 bg-amber-500 mx-auto mb-10 rounded-full shadow-lg" />
 
-        <p className="text-sm md:text-base lg:text-lg font-light tracking-[0.2em] mb-12 text-white/95 max-w-4xl mx-auto uppercase drop-shadow-md leading-relaxed">
+        <p className="text-sm md:text-base lg:text-lg font-light tracking-[0.2em] mb-12 text-white/95 max-w-4xl mx-auto uppercase [text-shadow:_0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed">
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
         </p>
 
