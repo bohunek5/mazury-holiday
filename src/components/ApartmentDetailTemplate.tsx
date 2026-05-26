@@ -229,28 +229,15 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                     </div>
                                 )}
 
-                                {/* Terrace */}
-                                {data.amenities.terrace && data.amenities.terrace.length > 0 && (
-                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 lg:col-span-4">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt="Taras" fill className="object-contain dark:invert opacity-80" />
+                                {/* Terrace & General Combined */}
+                                {( (data.amenities.terrace && data.amenities.terrace.length > 0) || (data.amenities.general && data.amenities.general.length > 0) ) && (
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-4">
+                                        <div className="relative w-8 h-8 mx-auto mb-2 flex justify-center gap-2">
+                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt="Taras i Pozostałe" width={32} height={32} className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Taras</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Taras i Pozostałe</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.terrace.join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* General (For flat amenities) */}
-                                {data.amenities.general && data.amenities.general.length > 0 && (
-                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-2">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/LOCATION.svg")} alt="Pozostałe / Lokalizacja" fill className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Pozostałe</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.general.join(", ")}
+                                            {[...(data.amenities.terrace || []), ...(data.amenities.general || [])].join(", ")}
                                         </p>
                                     </div>
                                 )}

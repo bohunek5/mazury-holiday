@@ -678,7 +678,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
             terrace: ['dwa fotele', 'stolik', 'leżak']
         },
@@ -714,8 +714,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'piekarnik', 'mikrofala', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
-            bathroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
+            bathroom: ['prysznic', 'ręczniki', 'suszarka do włosów', 'zestaw kosmetyków'],
             terrace: ['stolik', 'kanapa', 'dwa fotele', 'jacuzzi']
         },
         gallery: {
@@ -758,7 +758,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
             terrace: ['dwa leżaki', 'stolik']
         },
@@ -802,7 +802,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
             terrace: []
         },
@@ -841,7 +841,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['sauna', 'prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu'],
             terrace: []
         },
@@ -964,7 +964,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
             terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
         },
@@ -1084,7 +1084,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
             terrace: []
         },
@@ -1164,7 +1164,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
             terrace: ['dwa krzesła', 'stolik']
         },
@@ -1202,7 +1202,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
             terrace: ['dwa krzesła', 'stolik']
         },
@@ -1240,7 +1240,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
             terrace: ['dwa krzesła', 'stolik', 'leżaki']
         },
@@ -1280,7 +1280,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         amenities: {
             living: [],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
-            bedroom: [],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
             terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
         },
