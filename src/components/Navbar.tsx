@@ -73,7 +73,7 @@ export default function Navbar() {
         >
             <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative">
                 {/* Logo */}
-                <Link href="/" className="relative h-12 w-36 md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
+                <Link href="/" className="relative h-[60px] w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -152,7 +152,7 @@ export default function Navbar() {
                         exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
                         transition={{ duration: 0.3 }}
                         className={cn(
-                            "fixed inset-0 z-[9998] flex flex-col items-center justify-start pt-24 gap-2 lg:hidden overflow-y-auto",
+                            "fixed inset-0 z-[9998] flex flex-col items-center justify-start pt-16 gap-2 lg:hidden overflow-y-auto",
                             mobileMenuBgClass
                         )}
                     >
@@ -164,7 +164,7 @@ export default function Navbar() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="mb-8 mt-4"
+                            className="mb-4 mt-0"
                         >
                             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="relative h-[80px] w-[320px] block">
                                 <Image
@@ -176,7 +176,7 @@ export default function Navbar() {
                             </Link>
                         </motion.div>
 
-                        <div className="flex flex-col items-center w-full px-6 gap-4">
+                        <div className="flex flex-col items-center w-full px-6 gap-2">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
