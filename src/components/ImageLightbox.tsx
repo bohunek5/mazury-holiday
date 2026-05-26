@@ -94,6 +94,8 @@ export default function ImageLightbox({ images, currentIndex, onClose, altPrefix
                     className="object-contain"
                     quality={100}
                     priority
+                    unoptimized
+                    sizes="100vw"
                 />
             </div>
 
