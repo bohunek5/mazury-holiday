@@ -623,6 +623,36 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         }
     },
 
+    'A403': {
+        id: 'A403',
+        building: 'A',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        title: `Giżycko Stranda - Apartament z 1 sypialnią i jacuzzi na dachu (A403)`,
+        description: `Apartament A403 Suite leży na najwyższym 3 piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok.\nA403 Suite z jedną sypialnią (maksymalna ilość osób 4)\nWyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+        amenities: {
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['dwa leżaki', 'stolik', 'prywatne jacuzzi na dachu']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/ido_25_1.jpg"),
+            images: [
+                getAssetPath("/images/stranda/ido_25_1.jpg"),
+                getAssetPath("/images/stranda/ido_25_2.jpg"),
+                getAssetPath("/images/stranda/ido_25_3.jpg"),
+                getAssetPath("/images/stranda/ido_25_4.jpg"),
+                getAssetPath("/images/stranda/ido_25_5.jpg"),
+                getAssetPath("/images/stranda/ido_25_6.jpg")
+            ]
+        },
+        idoBookingId: '',
+        icalUrl: ''
+    },
+
     'B404': {
         id: 'B404',
         building: 'B',

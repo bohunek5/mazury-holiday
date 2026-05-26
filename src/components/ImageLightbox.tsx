@@ -96,8 +96,7 @@ export default function ImageLightbox({ images = [], currentIndex = 0, onClose, 
                         fill
                         className="object-contain"
                         quality={100}
-                        priority
-                        unoptimized
+                        priority={index === 0}
                         sizes="100vw"
                     />
                 ) : null}
