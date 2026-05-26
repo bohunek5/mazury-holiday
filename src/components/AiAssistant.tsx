@@ -12,7 +12,7 @@ export function AiAssistant() {
     const { isOpen, closeChat, toggleChat } = useChat();
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([
-        { role: "assistant", content: "Cześć! Jestem Twoim wirtualnym asystentem Mazury Holiday. W czym mogę Ci pomóc?" }
+        { role: "assistant", content: "Cześć! Jestem Twoim wirtualnym asystentem Mazury Holiday. Chętnie opowiem Ci o naszych apartamentach (Stranda, Kisajno), strefie ciszy w Fuledzie, domkach Skorupki czy czarterze luksusowych jachtów. W czym mogę pomóc?" }
     ]);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
