@@ -35,38 +35,37 @@ export default function Hero() {
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
 
-        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-2 rounded-full shadow-lg" />
+        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-1 rounded-full shadow-lg" />
 
-        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-3 text-white max-w-4xl mx-auto uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1)] leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-2 text-white max-w-4xl mx-auto uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mt-3 sm:mt-5 w-full">
+        <div className="flex flex-col justify-center items-center gap-3 mt-1 w-full">
           <a
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-[280px] sm:max-w-none sm:w-[260px] px-5 py-3 sm:px-8 sm:py-4 bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-500 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
+            className="w-full max-w-[280px] px-5 py-3 bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-500 text-white rounded-full font-bold transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
           >
-            <span className="p-1.5 sm:p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500 transition-colors">
-              <Calendar size={16} className="text-amber-500 group-hover:text-white transition-colors sm:w-5 sm:h-5" />
+            <span className="p-1.5 bg-amber-500/20 rounded-full group-hover:bg-amber-500 transition-colors">
+              <Calendar size={16} className="text-amber-500 group-hover:text-white transition-colors" />
             </span>
             {t("hero", "bookOnlineBtn") || "Rezerwuj Online"}
           </a>
           <a
             href="tel:730067027"
-            className="w-full max-w-[280px] sm:max-w-none sm:w-[260px] px-5 py-3 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
+            className="w-full max-w-[280px] px-5 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full font-bold transition-all flex items-center justify-center gap-3 group text-sm sm:text-base shadow-lg"
           >
-            <span className="p-1.5 sm:p-2 bg-white/20 rounded-full group-hover:bg-white group-hover:text-slate-900 transition-colors">
-              <Phone size={16} className="text-white group-hover:text-slate-900 transition-colors sm:w-5 sm:h-5" />
+            <span className="p-1.5 bg-white/20 rounded-full group-hover:bg-white group-hover:text-slate-900 transition-colors">
+              <Phone size={16} className="text-white group-hover:text-slate-900 transition-colors" />
             </span>
             +48 730 067 027
           </a>
         </div>
 
-
-        {/* Scroll Down Button mobile - inside container for perfect symmetry */}
-        <div className="mt-8 z-30 pointer-events-auto flex w-full justify-center md:hidden">
+        {/* Scroll Down Button - stacked right under the buttons */}
+        <div className="mt-6 z-30 pointer-events-auto flex w-full justify-center">
           <button 
             onClick={() => {
               const aboutSection = document.getElementById('about');
@@ -76,30 +75,12 @@ export default function Hero() {
             }}
             className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity w-full mx-auto"
           >
-            <Sun className="w-9 h-9 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
-            <span className="text-white text-[15px] font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] text-center">
+            <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
+            <span className="text-white text-base md:text-lg font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_12px_rgba(0,0,0,0.9)] text-center">
               {t("hero", "scrollDown") || "Przewiń w dół"}
             </span>
           </button>
         </div>
-      </div>
-
-      {/* Scroll Down Button desktop - absolute at bottom */}
-      <div className="hidden md:flex absolute bottom-12 left-0 right-0 z-30 pointer-events-auto justify-center w-full">
-        <button 
-          onClick={() => {
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-              aboutSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity mx-auto"
-        >
-          <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
-          <span className="text-white text-base font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] text-center">
-            {t("hero", "scrollDown") || "Przewiń w dół"}
-          </span>
-        </button>
       </div>
     </section>
   );
