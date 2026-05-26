@@ -98,7 +98,7 @@ export default function StrandaPage() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${getAssetPath('/images/apartments_2.webp')}')` }}
+                    style={{ backgroundImage: `url('${getAssetPath('/images/stranda/stranda_main.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Giżycko, Jezioro Kisajno</div>

@@ -23,7 +23,7 @@ export default function Apartments() {
             id: 1,
             title: t("apartments", "items.stranda.title") || "Apartamenty Stranda Residence",
             location: t("apartments", "items.stranda.location") || "Giżycko, jezioro Kisajno",
-            image: getAssetPath("/images/stranda/C304/C304_1.webp"),
+            image: getAssetPath("/images/stranda/stranda_main.webp"),
             link: "/apartamenty/stranda",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
