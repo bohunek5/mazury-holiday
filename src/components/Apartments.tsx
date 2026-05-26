@@ -129,6 +129,7 @@ export default function Apartments() {
                                     src={apt.image}
                                     alt={apt.title}
                                     fill
+                                    quality={95}
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
@@ -183,6 +184,7 @@ export default function Apartments() {
                                     src={apt.image}
                                     alt={apt.title}
                                     fill
+                                    quality={95}
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />

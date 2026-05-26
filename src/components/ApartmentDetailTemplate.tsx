@@ -128,6 +128,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                                 src={img}
                                                 alt={`${apartment.title} view ${idx + 1}`}
                                                 fill
+                                                quality={95}
                                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                 loading="eager"
                                                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -161,6 +162,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                                             src={img}
                                                             alt={`${apartment.title} view ${idx + 4}`}
                                                             fill
+                                                            quality={95}
                                                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                             loading="lazy"
                                                             sizes="(max-width: 768px) 100vw, 33vw"
