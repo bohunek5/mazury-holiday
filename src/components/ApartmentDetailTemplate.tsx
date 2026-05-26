@@ -183,9 +183,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 {data.amenities.living && data.amenities.living.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt={t("details", "roomSalon") || "Salon"} fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt={t("details", "items.roomSalon") || "Salon"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomSalon") || "Salon"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomSalon") || "Salon"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.living.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
@@ -196,9 +196,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 {data.amenities.kitchen && data.amenities.kitchen.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/CUTLERY.svg")} alt={t("details", "roomKitchen") || "Kuchnia"} fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/KITCHEN.svg")} alt={t("details", "items.roomKitchen") || "Kuchnia"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomKitchen") || "Kuchnia"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomKitchen") || "Kuchnia"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.kitchen.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
@@ -209,9 +209,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 {data.amenities.bedroom && data.amenities.bedroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt={t("details", "roomBedroom") || "Sypialnia"} fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt={t("details", "items.roomBedroom") || "Sypialnia"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomBedroom") || "Sypialnia"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomBedroom") || "Sypialnia"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.bedroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
@@ -222,9 +222,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 {data.amenities.bathroom && data.amenities.bathroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt={t("details", "roomBathroom") || "Łazienka"} fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt={t("details", "items.roomBathroom") || "Łazienka"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomBathroom") || "Łazienka"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomBathroom") || "Łazienka"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.bathroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
@@ -235,9 +235,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 {( (data.amenities.terrace && data.amenities.terrace.length > 0) || (data.amenities.general && data.amenities.general.length > 0) ) && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-4">
                                         <div className="relative w-8 h-8 mx-auto mb-2 flex justify-center gap-2">
-                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt={t("details", "terraceAndOther") || "Taras i Pozostałe"} width={32} height={32} className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt={t("details", "items.terraceAndOther") || "Taras i Pozostałe"} width={32} height={32} className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "terraceAndOther") || "Taras i Pozostałe"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.terraceAndOther") || "Taras i Pozostałe"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {[...(data.amenities.terrace || []), ...(data.amenities.general || [])].map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
