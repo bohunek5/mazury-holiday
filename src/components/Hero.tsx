@@ -35,13 +35,13 @@ export default function Hero() {
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
 
-        <div className="w-24 h-1 bg-amber-500 mx-auto mb-1 rounded-full shadow-lg" />
+        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-2 rounded-full shadow-lg" />
 
-        <p className="text-sm md:text-base lg:text-lg font-black tracking-[0.2em] mb-2 text-white max-w-4xl mx-auto uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1)] leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-3 text-white max-w-4xl mx-auto uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1)] leading-relaxed">
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mt-2 sm:mt-6 w-full">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mt-3 sm:mt-5 w-full">
           <a
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
@@ -66,7 +66,7 @@ export default function Hero() {
 
 
         {/* Scroll Down Button mobile - inside container for perfect symmetry */}
-        <div className="mt-6 z-30 pointer-events-auto flex flex-col items-center justify-center w-full md:hidden">
+        <div className="mt-8 z-30 pointer-events-auto flex w-full justify-center md:hidden">
           <button 
             onClick={() => {
               const aboutSection = document.getElementById('about');
@@ -74,10 +74,10 @@ export default function Hero() {
                 aboutSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
+            className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity w-full mx-auto"
           >
-            <Sun className="w-9 h-9 text-amber-500 animate-spin-slow-pause mx-auto drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
-            <span className="text-white text-sm font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1)] text-center">
+            <Sun className="w-9 h-9 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+            <span className="text-white text-[15px] font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] text-center">
               {t("hero", "scrollDown") || "Przewiń w dół"}
             </span>
           </button>
@@ -85,7 +85,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down Button desktop - absolute at bottom */}
-      <div className="hidden md:flex absolute bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto justify-center w-full">
+      <div className="hidden md:flex absolute bottom-12 left-0 right-0 z-30 pointer-events-auto justify-center w-full">
         <button 
           onClick={() => {
             const aboutSection = document.getElementById('about');
@@ -93,10 +93,10 @@ export default function Hero() {
               aboutSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="flex flex-col items-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
+          className="flex flex-col items-center justify-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity mx-auto"
         >
-          <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause" />
-          <span className="text-white text-sm font-extrabold tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_12px_rgba(0,0,0,1)]">
+          <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+          <span className="text-white text-base font-black tracking-[0.2em] uppercase whitespace-nowrap [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] text-center">
             {t("hero", "scrollDown") || "Przewiń w dół"}
           </span>
         </button>
