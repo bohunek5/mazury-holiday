@@ -66,7 +66,8 @@ export default function Hero() {
 
       </div>
 
-      <div className="absolute bottom-[5%] md:bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
+      {/* Scroll Down Button (Flows naturally on mobile, absolute on desktop) */}
+      <div className="mt-8 md:mt-0 md:absolute md:bottom-12 md:left-1/2 md:-translate-x-1/2 z-30 pointer-events-auto flex justify-center w-full">
         <button 
           onClick={() => {
             const aboutSection = document.getElementById('about');

@@ -96,11 +96,6 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Mobile Assistant (Center) */}
-                <div className="xl:hidden absolute left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
-                    <MobileChatTrigger />
-                </div>
-
                 {/* Desktop & Mobile Actions (Right) */}
                 <div className="flex items-center gap-4 z-50 shrink-0">
                     {/* Desktop Controls */}
@@ -120,7 +115,9 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="xl:hidden flex items-center gap-3">
+                    <div className="xl:hidden flex items-center gap-2 sm:gap-3">
+                        <MobileChatTrigger />
+                        
                         <ThemeToggle className={cn(
                             isMobileMenuOpen ? "text-slate-900 dark:text-white" : textColorClass,
                             "hover:bg-white/10"
