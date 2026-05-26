@@ -71,9 +71,9 @@ export default function Navbar() {
                     : "bg-transparent py-8"
             )}
         >
-            <div className="max-w-[1920px] mx-auto px-3 md:px-12 flex items-center justify-between">
+            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 grid grid-cols-3 xl:flex xl:justify-between items-center">
                 {/* Logo */}
-                <Link href="/" className="relative h-12 w-48 md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
+                <Link href="/" className="relative h-10 w-32 md:h-[115px] md:w-[460px] flex items-center z-50 justify-self-start shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -96,8 +96,13 @@ export default function Navbar() {
                     ))}
                 </div>
 
+                {/* Mobile Assistant (Center) */}
+                <div className="xl:hidden flex justify-center items-center z-50">
+                    <MobileChatTrigger />
+                </div>
+
                 {/* Right Actions */}
-                <div className="flex items-center gap-4 z-50">
+                <div className="flex items-center justify-self-end gap-4 z-50">
                     {/* Desktop Controls */}
                     <div className="hidden xl:flex items-center gap-4">
                         {/* EU Flag */}
@@ -115,8 +120,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="xl:hidden flex items-center gap-2">
-                        <MobileChatTrigger />
+                    <div className="xl:hidden flex items-center gap-3">
                         <ThemeToggle className={cn(
                             isMobileMenuOpen ? "text-slate-900 dark:text-white" : textColorClass,
                             "hover:bg-white/10"
@@ -124,7 +128,7 @@ export default function Navbar() {
 
                         <button
                             className={cn(
-                                "transition-colors duration-300",
+                                "transition-colors duration-300 ml-1",
                                 isMobileMenuOpen
                                     ? "text-slate-900 dark:text-white hover:text-amber-500"
                                     : cn(textColorClass, "hover:text-amber-400")

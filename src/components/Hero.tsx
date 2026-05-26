@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-900/40" /> {/* Overlay */}
       </div>
 
-      <div className="container relative z-10 px-4 text-center text-white">
+      <div className="container relative z-10 px-4 text-center text-white -mt-24 md:-mt-12">
         <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 drop-shadow-lg min-h-[1.2em]">
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : t("hero", "subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mt-8 sm:mt-16">
           <a
             href="https://engine37851.idobooking.com/index.php"
             target="_blank"
@@ -66,7 +66,7 @@ export default function Hero() {
 
       </div>
 
-      <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
         <button 
           onClick={() => {
             const aboutSection = document.getElementById('about');
