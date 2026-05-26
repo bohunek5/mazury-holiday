@@ -176,7 +176,7 @@ export default function Navbar() {
                             </Link>
                         </motion.div>
 
-                        <div className="flex flex-col items-center w-full px-6 gap-6">
+                        <div className="flex flex-col items-center w-full px-6 gap-4">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -188,7 +188,7 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "block text-3xl md:text-4xl font-semibold py-2 w-full text-center transition-colors",
+                                            "block text-2xl md:text-3xl font-semibold py-2 w-full text-center transition-colors",
                                             mobileLinkClass
                                         )}
                                         onClick={() => setIsMobileMenuOpen(false)}
