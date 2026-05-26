@@ -18,18 +18,18 @@ export default function DomkiPage() {
 
     const mappedData = {
         id: skorupkiData.id,
-        title: "Domki Skorupki",
-        subtitle: "Skorupki, jezioro Tałty",
-        description: `Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.\n\n${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
+        title: t("apartments", "items.domkiSkorupki.title") || "Domki Skorupki",
+        subtitle: t("apartments", "items.domkiSkorupki.location") || "Skorupki, jezioro Tałty",
+        description: `${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
         mainImage: skorupkiData.gallery.heroImage,
         amenities: {
             living: [
-                t('skorupki', 'amenities.ac'),
-                t('skorupki', 'amenities.wifi'),
+                t('details', 'items.ac') || "Klimatyzacja",
+                t('details', 'items.wifi') || "WiFi",
                 "Smart TV"
             ],
             kitchen: [
-                t('skorupki', 'amenities.fullEquip'),
+                t('details', 'items.kitchen') || "W pełni wyposażony aneks kuchenny",
                 "Zmywarka",
                 "Płyta indukcyjna"
             ],
@@ -42,10 +42,10 @@ export default function DomkiPage() {
                 "Ręczniki"
             ],
             terrace: [
-                t('skorupki', 'amenities.garden'),
-                t('skorupki', 'amenities.bonfire'),
-                t('skorupki', 'amenities.waterAccess'),
-                t('skorupki', 'amenities.parking')
+                "Prywatny taras z grillem",
+                "Miejsce na ognisko",
+                "Dostęp do jeziora",
+                "Miejsce parkingowe"
             ]
         },
         gallery: galleryImages,

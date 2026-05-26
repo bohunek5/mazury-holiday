@@ -109,7 +109,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                         {/* Gallery */}
                         {apartment.gallery.length > 0 && (
                             <div>
-                                <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white text-center md:text-left">Galeria</h2>
+                                <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white text-center md:text-left">{t("details", "gallery") || "Galeria"}</h2>
 
                                 {/* First 3 images - always visible */}
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
@@ -141,7 +141,7 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                             onClick={() => setGalleryExpanded(!galleryExpanded)}
                                             className="w-full mb-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                         >
-                                            {galleryExpanded ? '▲ Zwiń galerię' : `▼ Zobacz więcej zdjęć`}
+                                            {galleryExpanded ? `▲ ${t("details", "collapseGallery") || "Zwiń galerię"}` : `▼ ${t("details", "seeMorePhotos") || "Zobacz więcej zdjęć"}`}
                                         </button>
 
                                         {galleryExpanded && (
@@ -174,18 +174,18 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
 
                         {/* Amenities */}
                         <div className="space-y-12">
-                            <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">Udogodnienia w apartamencie</h3>
+                            <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{t("details", "amenities") || "Udogodnienia w apartamencie"}</h3>
 
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 {/* Living Room */}
                                 {data.amenities.living && data.amenities.living.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt="Salon" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt={t("details", "roomSalon") || "Salon"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Salon</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomSalon") || "Salon"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.living.join(", ")}
+                                            {data.amenities.living.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
@@ -194,11 +194,11 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.kitchen && data.amenities.kitchen.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/CUTLERY.svg")} alt="Kuchnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/CUTLERY.svg")} alt={t("details", "roomKitchen") || "Kuchnia"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Kuchnia</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomKitchen") || "Kuchnia"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.kitchen.join(", ")}
+                                            {data.amenities.kitchen.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
@@ -207,11 +207,11 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.bedroom && data.amenities.bedroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt="Sypialnia" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt={t("details", "roomBedroom") || "Sypialnia"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Sypialnia</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomBedroom") || "Sypialnia"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.bedroom.join(", ")}
+                                            {data.amenities.bedroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
@@ -220,11 +220,11 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {data.amenities.bathroom && data.amenities.bathroom.length > 0 && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt="Łazienka" fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt={t("details", "roomBathroom") || "Łazienka"} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Łazienka</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "roomBathroom") || "Łazienka"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.bathroom.join(", ")}
+                                            {data.amenities.bathroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
@@ -233,11 +233,11 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                                 {( (data.amenities.terrace && data.amenities.terrace.length > 0) || (data.amenities.general && data.amenities.general.length > 0) ) && (
                                     <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-4 lg:col-span-4">
                                         <div className="relative w-8 h-8 mx-auto mb-2 flex justify-center gap-2">
-                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt="Taras i Pozostałe" width={32} height={32} className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt={t("details", "terraceAndOther") || "Taras i Pozostałe"} width={32} height={32} className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Taras i Pozostałe</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "terraceAndOther") || "Taras i Pozostałe"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {[...(data.amenities.terrace || []), ...(data.amenities.general || [])].join(", ")}
+                                            {[...(data.amenities.terrace || []), ...(data.amenities.general || [])].map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
@@ -245,44 +245,50 @@ export default function ApartmentDetailTemplate({ data, backUrl }: ApartmentDeta
                         </div>
                     </div>
 
-                    {/* Sidebar / Booking */}
-                    <div className="lg:col-span-1 h-full relative">
-                        <div className="sticky top-32 space-y-8">
-                            <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden transform transition-all hover:scale-[1.02]">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-bl-full -mr-10 -mt-10" />
-                                <h3 className="text-2xl font-sans mb-2 relative z-10">Zarezerwuj pobyt</h3>
-                                <p className="text-slate-300 mb-8 relative z-10 text-sm">
-                                    {t("details", "checkAvailability")}
+                    {/* Booking Sidebar */}
+                    <div className="lg:col-span-1">
+                        <div className="sticky top-24 bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden">
+                            {/* Accent line */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600" />
+
+                            <div className="mb-8">
+                                <h3 className="text-2xl font-sans mb-2 relative z-10">{t("apartments", "bookingTitle") || "Zarezerwuj pobyt"}</h3>
+                                <p className="text-slate-500 dark:text-slate-400 text-sm">
+                                    {t("apartments", "bookingDesc") || "Wybierz daty i sprawdź dostępność."}
                                 </p>
-                                <div className="flex gap-2">
-                                    <a
-                                        href={data.customBookingUrl || `https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex-1 flex items-center justify-center text-center bg-[#00c853] hover:bg-[#00e676] text-white font-bold py-4 px-2 rounded-2xl transition-all mb-8 whitespace-nowrap uppercase tracking-wider shadow-lg hover:shadow-[#00c853]/25 active:scale-95"
-                                    >
-                                        {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
-                                    </a>
-                                    <a
-                                        href="tel:+48730067027"
-                                        className="flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-xl transition-all mb-8 shadow-lg active:scale-95"
-                                        title={t("details", "callBtn")}
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                                    </a>
-                                </div>
-                                <div className="text-center text-xs text-slate-400 mb-6 pb-6 border-b border-slate-800">
-                                    {t("details", "lowPrice")}
-                                </div>
-                                <div className="mt-6">
-                                    {data.icalUrl && (
-                                        <ICalCalendar
-                                            icalUrl={data.icalUrl}
-                                            apartmentId={data.id || "1"}
-                                        />
-                                    )}
-                                </div>
                             </div>
+
+                            <a
+                                href={data.customBookingUrl || `https://engine37851.idobooking.com/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full px-6 py-4 bg-[#00c853] hover:bg-[#00e676] text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex justify-center items-center gap-2"
+                            >
+                                {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
+                            </a>
+
+                            {/* Contact Box */}
+                            <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
+                                <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 text-center">
+                                    {t("details", "needHelp") || "Potrzebujesz pomocy?"}
+                                </p>
+                                <a
+                                    href="tel:+48730067027"
+                                    className="flex items-center justify-center gap-3 px-6 py-3 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-white font-medium rounded-xl transition-colors"
+                                >
+                                    +48 730 067 027
+                                </a>
+                            </div>
+
+                            {data.icalUrl && (
+                                <div className="mt-8">
+                                    <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
+                                    <ICalCalendar
+                                        icalUrl={data.icalUrl}
+                                        apartmentId={data.id || "1"}
+                                    />
+                                </div>
+                            )}
                         </div>
                     </div>
 

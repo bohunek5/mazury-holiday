@@ -21,8 +21,8 @@ export default function Apartments() {
         const mainApartments = [
         {
             id: 1,
-            title: "Apartamenty Stranda Residence",
-            location: "Giżycko, jezioro Kisajno",
+            title: t("apartments", "items.stranda.title") || "Apartamenty Stranda Residence",
+            location: t("apartments", "items.stranda.location") || "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/stranda/C304/C304_1.webp"),
             link: "/apartamenty/stranda",
             icons: [
@@ -34,8 +34,8 @@ export default function Apartments() {
         },
         {
             id: 2,
-            title: "Apartamenty Kisajno",
-            location: "Giżycko, jezioro Kisajno",
+            title: t("apartments", "items.kisajno.title") || "Apartamenty Kisajno",
+            location: t("apartments", "items.kisajno.location") || "Giżycko, jezioro Kisajno",
             image: getAssetPath("/images/kisajno/kisajno_1.webp"),
             link: "/apartamenty/kisajno",
             icons: [
@@ -47,8 +47,8 @@ export default function Apartments() {
         },
         {
             id: 3,
-            title: "Apartament Mikołajki",
-            location: "Mikołajki, jezioro Mikołajskie",
+            title: t("apartments", "items.mikolajki.title") || "Apartament Mikołajki",
+            location: t("apartments", "items.mikolajki.location") || "Mikołajki, jezioro Mikołajskie",
             image: getAssetPath("/images/mikolajki/mikolajki_1.webp"),
             link: "/apartamenty/mikolajki",
             icons: [
@@ -60,8 +60,8 @@ export default function Apartments() {
         },
         {
             id: 4,
-            title: "Apartamenty Fuleda",
-            location: "Fuleda, jezioro Dobskie",
+            title: t("apartments", "items.fuleda.title") || "Apartamenty Fuleda",
+            location: t("apartments", "items.fuleda.location") || "Fuleda, jezioro Dobskie",
             image: getAssetPath("/images/fuleda/pietro/Fuleda_pietro.webp"),
             link: "/apartamenty/fuleda",
             icons: [

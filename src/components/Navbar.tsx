@@ -71,9 +71,9 @@ export default function Navbar() {
                     : "bg-transparent py-8"
             )}
         >
-            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 grid grid-cols-3 xl:flex xl:justify-between items-center">
+            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative">
                 {/* Logo */}
-                <Link href="/" className="relative h-10 w-32 md:h-[115px] md:w-[460px] flex items-center z-50 justify-self-start shrink-0">
+                <Link href="/" className="relative h-12 w-36 md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -97,12 +97,12 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Assistant (Center) */}
-                <div className="xl:hidden flex justify-center items-center z-50">
+                <div className="xl:hidden absolute left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
                     <MobileChatTrigger />
                 </div>
 
-                {/* Right Actions */}
-                <div className="flex items-center justify-self-end gap-4 z-50">
+                {/* Desktop & Mobile Actions (Right) */}
+                <div className="flex items-center gap-4 z-50 shrink-0">
                     {/* Desktop Controls */}
                     <div className="hidden xl:flex items-center gap-4">
                         {/* EU Flag */}

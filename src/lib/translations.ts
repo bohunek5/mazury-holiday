@@ -135,6 +135,7 @@ export const translations = {
                 bookBtn: "Zarezerwuj"
             },
             amenities: {
+        amenityNames: {"Klimatyzacja": "Aire acondicionado", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Ducha", "Ręczniki": "Toallas", "Zmywarka": "Lavavajillas", "Płyta indukcyjna": "Placa de inducción", "Pościel": "Ropa de cama", "Łóżka małżeńskie i pojedyncze": "Camas dobles e individuales", "Prywatny taras z grillem": "Terraza privada con parrilla", "Miejsce na ognisko": "Zona de fogata", "Dostęp do jeziora": "Acceso al lago", "Miejsce parkingowe": "Aparcamiento", "W pełni wyposażony aneks kuchenny": "Cocina americana totalmente equipada", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Cocina americana (placa, nevera, lavavajillas)", "Ekspres do kawy": "Cafetera", "Taras z meblami wypoczynkowymi": "Terraza con muebles de exterior", "Prywatne Jacuzzi": "Jacuzzi privado", "Balkon z meblami wypoczynkowymi": "Balcón con muebles de exterior"},
                 fullEquip: "Pełne wyposażenie",
                 garden: "Prywatny ogród",
                 bonfire: "Grill i ognisko",
@@ -305,6 +306,7 @@ export const translations = {
             title: "Atrakcje regionu",
             subtitle: "Giżycko i serce Mazur oferują mnóstwo możliwości",
             boyen: {
+        amenityNames: {"Klimatyzacja": "Air Conditioning", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Shower", "Ręczniki": "Towels", "Zmywarka": "Dishwasher", "Płyta indukcyjna": "Induction hob", "Pościel": "Bed linen", "Łóżka małżeńskie i pojedyncze": "Double and single beds", "Prywatny taras z grillem": "Private terrace with grill", "Miejsce na ognisko": "Bonfire area", "Dostęp do jeziora": "Lake access", "Miejsce parkingowe": "Parking space", "W pełni wyposażony aneks kuchenny": "Fully equipped kitchenette", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Kitchenette (hob, fridge, dishwasher)", "Ekspres do kawy": "Coffee machine", "Taras z meblami wypoczynkowymi": "Terrace with lounge furniture", "Prywatne Jacuzzi": "Private Jacuzzi", "Balkon z meblami wypoczynkowymi": "Balcony with lounge furniture"},
                 title: "Twierdza Boyen",
                 desc: "XIX-wieczna pruska twierdza o kształcie gwiazdy, kluczowy punkt historyczny regionu. Doskonale zachowane mury, bramy i budynki koszarowe stanowią unikalny przykład fortyfikacji."
             },
@@ -985,6 +987,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     de: {
+        amenityNames: {"Klimatyzacja": "Klimaanlage", "WiFi": "WLAN", "Smart TV": "Smart TV", "Prysznic": "Dusche", "Ręczniki": "Handtücher", "Zmywarka": "Geschirrspüler", "Płyta indukcyjna": "Induktionskochfeld", "Pościel": "Bettwäsche", "Łóżka małżeńskie i pojedyncze": "Doppel- und Einzelbetten", "Prywatny taras z grillem": "Private Terrasse mit Grill", "Miejsce na ognisko": "Lagerfeuerplatz", "Dostęp do jeziora": "Zugang zum See", "Miejsce parkingowe": "Parkplatz", "W pełni wyposażony aneks kuchenny": "Voll ausgestattete Küchenzeile", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Küchenzeile (Herd, Kühlschrank, Geschirrspüler)", "Ekspres do kawy": "Kaffeemaschine", "Taras z meblami wypoczynkowymi": "Terrasse mit Loungemöbeln", "Prywatne Jacuzzi": "Privater Whirlpool", "Balkon z meblami wypoczynkowymi": "Balkon mit Loungemöbeln"},
         ...translationsLegal.de,
         nav: { about: "Über uns", apartments: "Apartments", cottages: "Hütten", charter: "Charter", port: "Hafen", attractions: "Attraktionen", cooperation: "Zusammenarbeit", contact: "Kontakt", rooms: "Zimmer", bookBtn: "Buchen", language: "Sprache", back: "Zurück" },
         hero: { title: "Urlaub in Masuren", subtitle: "ABENTEUER ERLEBEN", apartmentsBtn: "Unsere Apartments", charterBtn: "730 067 027" },
@@ -2603,6 +2606,7 @@ Polecany rodzinom z dziećmi, wędkarzom, grzybiarzom i miłośnikom natury.`,
         }
     },
     lt: {
+        amenityNames: {"Klimatyzacja": "Oro kondicionierius", "WiFi": "WiFi", "Smart TV": "Smart TV", "Prysznic": "Dušas", "Ręczniki": "Rankšluosčiai", "Zmywarka": "Indaplovė", "Płyta indukcyjna": "Indukcinė viryklė", "Pościel": "Patalynė", "Łóżka małżeńskie i pojedyncze": "Dvigulės ir viengulės lovos", "Prywatny taras z grillem": "Privati terasa su kepsnine", "Miejsce na ognisko": "Laužavietė", "Dostęp do jeziora": "Prieiga prie ežero", "Miejsce parkingowe": "Automobilių stovėjimo aikštelė", "W pełni wyposażony aneks kuchenny": "Visiškai įrengta virtuvėlė", "Aneks kuchenny (płyta, lodówka, zmywarka)": "Virtuvėlė (viryklė, šaldytuvas, indaplovė)", "Ekspres do kawy": "Kavos aparatas", "Taras z meblami wypoczynkowymi": "Terasa su lauko baldais", "Prywatne Jacuzzi": "Privati sūkurinė vonia", "Balkon z meblami wypoczynkowymi": "Balkonas su lauko baldais"},
         ...translationsLegal.lt,
         nav: { about: "Apie mus", apartments: "Apartamentai", cottages: "Nameliai", charter: "Nuoma", port: "Uostas", attractions: "Atrakcijos", cooperation: "Bendradarbiavimas", contact: "Kontaktai", rooms: "Kambariai", bookBtn: "Rezervuoti", language: "Kalba", back: "Grįžti" },
         hero: { title: "Atostogos Mozūrijoje", subtitle: "YPATINGOS AKIMIRKOS", apartmentsBtn: "Mūsų Apartamentai", charterBtn: "730 067 027", scrollDown: "Slinkite žemyn" },

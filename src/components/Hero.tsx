@@ -11,7 +11,7 @@ export default function Hero() {
 
   const phrases = language === 'pl'
     ? ["Wakacje na Mazurach", "Sprawdź naszą ofertę"]
-    : [t("hero", "title"), t("hero", "subtitle")];
+    : [t("hero", "title") || "Wakacje na Mazurach", t("hero", "subtitle") || "Sprawdź naszą ofertę"];
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -31,14 +31,14 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 px-4 text-center text-white -mt-24 md:-mt-12">
-        <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 drop-shadow-lg min-h-[1.2em]">
+        <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 drop-shadow-lg min-h-[120px] sm:min-h-[1.2em] flex items-center justify-center">
           <TypewriterTitle phrases={phrases} speed={50} />
         </h1>
 
         <div className="w-24 h-1 bg-amber-500 mx-auto mb-10 rounded-full shadow-lg" />
 
         <p className="text-sm md:text-base lg:text-lg font-light tracking-[0.2em] mb-12 text-white/95 max-w-4xl mx-auto uppercase drop-shadow-md leading-relaxed">
-          {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : t("hero", "subtitle")}
+          {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mt-8 sm:mt-16">
@@ -51,7 +51,7 @@ export default function Hero() {
             <span className="p-1.5 sm:p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500 transition-colors">
               <Calendar size={16} className="text-amber-500 group-hover:text-white transition-colors sm:w-5 sm:h-5" />
             </span>
-            Rezerwuj Online
+            {t("hero", "bookOnlineBtn") || "Rezerwuj Online"}
           </a>
           <a
             href="tel:730067027"
@@ -66,7 +66,7 @@ export default function Hero() {
 
       </div>
 
-      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
+      <div className="absolute bottom-[5%] md:bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
         <button 
           onClick={() => {
             const aboutSection = document.getElementById('about');
@@ -74,11 +74,11 @@ export default function Hero() {
               aboutSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="flex flex-col items-center gap-3 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
+          className="flex flex-col items-center gap-2 animate-bounce-slow cursor-pointer hover:opacity-80 transition-opacity"
         >
-          <Sun className="w-10 h-10 text-amber-500 animate-spin-slow-pause" />
-          <span className="text-white/80 text-xs font-light tracking-[0.2em] uppercase whitespace-nowrap">
-            {t("hero", "scrollDown")}
+          <Sun className="w-8 h-8 md:w-10 md:h-10 text-amber-500 animate-spin-slow-pause" />
+          <span className="text-white/80 text-[10px] md:text-xs font-light tracking-[0.2em] uppercase whitespace-nowrap">
+            {t("hero", "scrollDown") || "Przewiń w dół"}
           </span>
         </button>
       </div>

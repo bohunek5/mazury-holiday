@@ -62,13 +62,13 @@ export default function CharterSection() {
                                 <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
                                     <Ship size={24} className="text-amber-500" />
                                 </div>
-                                <span className="text-lg">Stery strumieniowe (Dziób i Rufa)</span>
+                                <span className="text-lg">{t("charter", "thrusters") || "Stery strumieniowe (Dziób i Rufa)"}</span>
                             </li>
                              <li className="flex items-center gap-4">
                                 <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
                                     <Wifi size={24} className="text-amber-500" />
                                 </div>
-                                <span className="text-lg">Ogrzewanie, WiFi bez limitu</span>
+                                <span className="text-lg">{t("charter", "heating") || "Ogrzewanie, WiFi bez limitu"}</span>
                             </li>
                         </ul>
 
@@ -91,9 +91,9 @@ export default function CharterSection() {
                         <div className="absolute bottom-8 left-8">
                             <div className="flex items-center gap-2 text-amber-400 mb-2 font-medium">
                                 <span className="text-2xl">⚓</span>
-                                <span>Stillo 30 VIP</span>
+                                <span>{t("charter", "modelVip") || "Stillo 30 VIP"}</span>
                             </div>
-                            <p className="text-white text-2xl font-sans">Luksusowy Houseboat bez patentu</p>
+                            <p className="text-white text-2xl font-sans">{t("charter", "boatType") || "Luksusowy Houseboat bez patentu"}</p>
                         </div>
                     </Link>
                 </div>
