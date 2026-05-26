@@ -1847,14 +1847,14 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
             terrace: ['dwa leżaki', 'stolik']
         },
         gallery: {
-            heroImage: getAssetPath("/images/stranda/B304/B304 aneks kuchenny.webp"),
+            heroImage: getAssetPath("/images/stranda/B304/B304_aneks_kuchenny.webp"),
             images: [
-                getAssetPath("/images/stranda/B304/B304 aneks kuchenny.webp"),
-                getAssetPath("/images/stranda/B304/B304 balkon3.webp"),
-                getAssetPath("/images/stranda/B304/B304 salon 1.webp"),
-                getAssetPath("/images/stranda/B304/B304 salon.webp"),
-                getAssetPath("/images/stranda/B304/B304 sypialnia.webp"),
-                getAssetPath("/images/stranda/B304/B304 łazienka.webp"),
+                getAssetPath("/images/stranda/B304/B304_aneks_kuchenny.webp"),
+                getAssetPath("/images/stranda/B304/B304_balkon3.webp"),
+                getAssetPath("/images/stranda/B304/B304_salon_1.webp"),
+                getAssetPath("/images/stranda/B304/B304_salon.webp"),
+                getAssetPath("/images/stranda/B304/B304_sypialnia.webp"),
+                getAssetPath("/images/stranda/B304/B304_łazienka.webp"),
                 getAssetPath("/images/stranda/B304/IMG_6280.webp"),
                 getAssetPath("/images/stranda/B304/Jacuzzi.webp"),
                 getAssetPath("/images/stranda/B304/Kuchnia1.webp"),
