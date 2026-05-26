@@ -13,7 +13,7 @@ export function getAmenityIcon(amenity: string): string {
     else if (normalized.includes('czajnik')) icon = 'HOT_TEA.svg';
     else if (normalized.includes('toster')) icon = 'TOASTER.svg';
     else if (normalized.includes('naczyn') || normalized.includes('sztuć') || normalized.includes('sztucce')) icon = 'CUTLERY.svg';
-    else if (normalized.includes('kuchnia') || normalized.includes('aneks')) icon = 'CUTLERY.svg';
+    else if (normalized.includes('kuchnia') || normalized.includes('aneks') || normalized.includes('kuchenn')) icon = 'CUTLERY.svg';
 
     // Living Room
     else if (normalized.includes('klimatyzac')) icon = 'AIR_CONDITIONER.svg';
@@ -57,5 +57,5 @@ export function getAmenityIcon(amenity: string): string {
     else if (normalized.includes('osób') || normalized.includes('osob')) icon = 'BED.svg';
     else if (normalized.includes('stery') || normalized.includes('strumieniow')) icon = 'THRUSTERS.svg';
 
-    return `/icons/${icon}`;
+    return `/images/icons/${icon}`;
 }

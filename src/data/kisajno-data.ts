@@ -38,6 +38,12 @@ export const kisajnoData: KisajnoData = {
     gallery: {
         heroImage: getAssetPath("/images/kisajno/kisajno_1.webp"),
         images: [
+            getAssetPath("/images/kisajno/5fa85862-bc95-41b7-90bf-a8041d18c07f.webp"),
+            getAssetPath("/images/kisajno/a0c37bde-dd6b-406e-bdae-badc6b5b5bf3.webp"),
+            getAssetPath("/images/kisajno/kis.webp"),
+            getAssetPath("/images/kisajno/kis1.webp"),
+            getAssetPath("/images/kisajno/kis2.webp"),
+
             getAssetPath("/images/kisajno/kisajno_1.webp"),
             getAssetPath("/images/kisajno/kisajno_2.webp"),
             getAssetPath("/images/kisajno/kisajno_3.webp"),
@@ -49,6 +55,7 @@ export const kisajnoData: KisajnoData = {
             getAssetPath("/images/kisajno/kisajno_9.webp"),
             getAssetPath("/images/kisajno/kisajno_10.webp"),
             getAssetPath("/images/kisajno/kisajno_11.webp")
+        
         ]
     },
     idoBookingId: "45",
