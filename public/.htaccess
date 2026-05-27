@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddCharset utf-8 .txt
+  AddCharset utf-8 .html
+  AddCharset utf-8 .css
+  AddCharset utf-8 .js
+  AddCharset utf-8 .json
+</IfModule>
+
+AddDefaultCharset UTF-8
