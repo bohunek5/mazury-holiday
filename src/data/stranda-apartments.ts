@@ -2,6 +2,107 @@ import { getAssetPath } from '@/utils/assetPath';
 import { Apartment } from '@/types/apartment';
 
 export const strandaApartments: Record<string, Apartment> = {
+
+    'B101': {
+        id: 'B101',
+        title: `Apartament B101 Suite 2+2`,
+        building: 'B',
+        type: 'standard',
+        price: 350,
+        guests: '2+2',
+        description: `Apartament B101 znajduje się na parterze budynku B.`,
+        amenities: {
+            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
+            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
+            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
+            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
+            "terrace": ["meble wypoczynkowe"]
+        },
+        idoBookingId: '35',
+        gallery: {
+            heroImage: '/images/apartments/stranda/b304/1.jpg',
+            images: [
+                '/images/apartments/stranda/b304/1.jpg',
+                '/images/apartments/stranda/b304/2.jpg'
+            ]
+        }
+    },
+    'B104': {
+        id: 'B104',
+        title: `Apartament B104 Suite 2+2`,
+        building: 'B',
+        type: 'standard',
+        price: 350,
+        guests: '2+2',
+        description: `Apartament B104 znajduje się na parterze budynku B.`,
+        amenities: {
+            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
+            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
+            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
+            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
+            "terrace": ["meble wypoczynkowe"]
+        },
+        idoBookingId: '20',
+        gallery: {
+            heroImage: '/images/apartments/stranda/b304/1.jpg',
+            images: [
+                '/images/apartments/stranda/b304/1.jpg',
+                '/images/apartments/stranda/b304/2.jpg'
+            ]
+        }
+    },
+    'B105': {
+        id: 'B105',
+        title: `Apartament B105 Suite 2+2`,
+        building: 'B',
+        type: 'standard',
+        price: 350,
+        guests: '2+2',
+        description: `Apartament B105 znajduje się na parterze budynku B.`,
+        amenities: {
+            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
+            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
+            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
+            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
+            "terrace": ["meble wypoczynkowe"]
+        },
+        idoBookingId: '21',
+        gallery: {
+            heroImage: '/images/apartments/stranda/b304/1.jpg',
+            images: [
+                '/images/apartments/stranda/b304/1.jpg',
+                '/images/apartments/stranda/b304/2.jpg'
+            ]
+        }
+    },
+    'B302': {
+        id: 'B302',
+        title: `Apartament B302 Suite 2+2`,
+        building: 'B',
+        type: 'standard',
+        price: 350,
+        guests: '2+2',
+        description: `Apartament B302 znajduje się na drugim piętrze budynku B.`,
+        amenities: {
+            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
+            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
+            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
+            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
+            "terrace": ["meble wypoczynkowe"]
+        },
+        idoBookingId: '36',
+        gallery: {
+            heroImage: '/images/apartments/stranda/b304/1.jpg',
+            images: [
+                '/images/apartments/stranda/b304/1.jpg',
+                '/images/apartments/stranda/b304/2.jpg'
+            ]
+        }
+    },
+
+
+
+
     'A204': {
         id: 'A204',
         title: `Apartament A204 Suite 2+2`,
@@ -658,6 +759,7 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
     'C304': {
         id: 'C304',
         title: `Apartament C304 Studio 2+2`,
+        shortTitle: 'Apartament typu Studio',
         building: 'C',
         type: 'studio',
         price: 300,
@@ -1094,54 +1196,10 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/22/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'C403': {
-        id: 'C403',
-        title: `Apartament C403 Studio z Jacuzzi`,
-        building: 'C',
-        type: 'jacuzzi',
-        price: 300,
-        guests: '4',
-        description: `Apartament C403 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC403 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: dwa fotele, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, dwa leżaki, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, kosmetyki w łazience, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: ['łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['komplet mebli ogodowych', 'dwa leżaki', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_41_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_41_1.jpg"),
-                getAssetPath("/images/stranda/ido_41_2.jpg"),
-                getAssetPath("/images/stranda/ido_41_3.jpg"),
-                getAssetPath("/images/stranda/ido_41_4.jpg"),
-                getAssetPath("/images/stranda/ido_41_5.jpg"),
-                getAssetPath("/images/stranda/ido_41_6.jpg"),
-                getAssetPath("/images/stranda/ido_41_7.jpg"),
-                getAssetPath("/images/stranda/ido_41_8.jpg"),
-                getAssetPath("/images/stranda/ido_41_9.jpg"),
-                getAssetPath("/images/stranda/ido_41_10.jpg"),
-                getAssetPath("/images/stranda/ido_41_11.jpg"),
-                getAssetPath("/images/stranda/ido_41_12.jpg"),
-                getAssetPath("/images/stranda/ido_41_13.jpg"),
-                getAssetPath("/images/stranda/ido_41_14.jpg"),
-                getAssetPath("/images/stranda/ido_41_15.jpg"),
-                getAssetPath("/images/stranda/ido_41_16.jpg"),
-                getAssetPath("/images/stranda/ido_41_17.jpg"),
-                getAssetPath("/images/stranda/ido_41_18.jpg"),
-                getAssetPath("/images/stranda/ido_41_19.jpg"),
-                getAssetPath("/images/stranda/ido_41_20.jpg"),
-                getAssetPath("/images/stranda/ido_41_21.jpg")
-            ]
-        },
-        idoBookingId: '29',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/29/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
     'c-studio': {
         id: 'c-studio',
-        title: `Apartament C Studio 2+2 z Jacuzzi`,
+        title: 'Giżycko Stranda - Apartament typu Studio - C Studio',
+        shortTitle: 'Apartament typu Studio',
         building: 'C',
         type: 'studio',
         price: 300,
@@ -1184,7 +1242,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'c-z-dwoma-sypialniami': {
         id: 'c-z-dwoma-sypialniami',
-        title: `Apartament C z 2 sypialniami 4+2 z Jacuzzi`,
+        title: 'Giżycko Stranda - Apartament z 2 sypialniami - C z 2 sypialniami',
+        shortTitle: 'Apartament z 2 sypialniami',
         building: 'C',
         type: 'twoBedrooms',
         price: 300,
@@ -1222,7 +1281,8 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'c-z-jedna-sypialnia': {
         id: 'c-z-jedna-sypialnia',
-        title: `Apartament C z 1 sypialnią 2+2 z Jacuzzi`,
+        title: 'Giżycko Stranda - Apartament z 1 sypialnią - C z jedną sypialnią',
+        shortTitle: 'Apartament z 1 sypialnią',
         building: 'C',
         type: 'oneBedroom',
         price: 300,
@@ -1306,19 +1366,26 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B304': {
         id: 'B304',
-        title: `Apartament B304 Suite 2+2 z Jacuzzi`,
+        title: `Apartament B304 Suite 2+2`,
         building: 'B',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament B304 Suite leży na najwyższym 2 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB304 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+        description: `Apartament B304 Suite leży na 2 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofą, sypialnię, łazienkę z prysznicem i taras.
+B304 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców
+Wyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja
+Wyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja
+Wyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała
+Wyposażenie tarasu: stolik, kanapa, dwa fotele, dwa leżaki
+Pozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
             bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['dwa leżaki', 'stolik']
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['stolik', 'kanapa', 'dwa fotele', 'dwa leżaki']
         },
+        idoBookingId: '44',
         gallery: {
             "heroImage": getAssetPath("/images/stranda/B304/hero_1.webp"),
             "images": [
@@ -1328,73 +1395,9 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
                 getAssetPath("/images/stranda/B304/new_3.webp")
             ]
         },
-        idoBookingId: '24',
+        
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'B305': {
-        id: 'B305',
-        title: `Apartament B305 Suite 2+2 z Jacuzzi`,
-        building: 'B',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '4',
-        description: `Apartament B305 Suite leży na najwyższym 2 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB305 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
-            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
-            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['dwa leżaki', 'stolik']
-        },
-        gallery: {
-            "heroImage": getAssetPath("/images/stranda/B305/hero_1.webp"),
-            "images": [
-                getAssetPath("/images/stranda/B305/hero_1.webp"),
-                getAssetPath("/images/stranda/B305/new_1.webp"),
-                getAssetPath("/images/stranda/B305/new_2.webp"),
-                getAssetPath("/images/stranda/B305/new_3.webp"),
-                getAssetPath("/images/stranda/B305/new_4.webp"),
-                getAssetPath("/images/stranda/B305/new_5.webp")
-            ]
-        },
-        idoBookingId: '24',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 
-    'C205': {
-        id: 'C205',
-        title: `Apartament C205 Studio z Jacuzzi`,
-        building: 'C',
-        type: 'jacuzzi',
-        price: 300,
-        guests: '4',
-        description: `Apartament C205 typu Studio leży na najwyższym 1 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC205 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, piekarnik, pralka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: fotel, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
-            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała Wyposażenie tarasu dolnego'],
-            terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/C205/5S5A2488_004319308.webp"),
-            images: [
-                getAssetPath("/images/stranda/C205/5S5A2488_004319308.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2490_004328385.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2492_004328386.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2499_004346539.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2503_004356617.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2509_004414768.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2512_004423842.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2513_004423844.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2519_004441996.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2521_0044511073.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2523_0044511074.webp"),
-                getAssetPath("/images/stranda/C205/5S5A2526_0045101231.webp")
-            ]
-        },
-        idoBookingId: '41',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/41/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
 };

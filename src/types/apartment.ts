@@ -16,6 +16,7 @@ export type Apartment = {
     building: string;
     type: string;
     title?: string;
+    shortTitle?: string;
     subtitle?: string;
     price: number;
     guests: string;

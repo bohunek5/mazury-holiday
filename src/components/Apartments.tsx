@@ -127,7 +127,7 @@ export default function Apartments() {
                             >
                                 <Image
                                     src={apt.image}
-                                    alt={apt.title}
+                                    alt={apt.shortTitle || apt.title}
                                     fill
                                     quality={95}
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -140,7 +140,7 @@ export default function Apartments() {
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
                                     <h1 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
-                                        {apt.title}
+                                        {apt.shortTitle || apt.title}
                                     </h1>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                                         {apt.icons.map((icon, index) => (
@@ -182,7 +182,7 @@ export default function Apartments() {
                             >
                                 <Image
                                     src={apt.image}
-                                    alt={apt.title}
+                                    alt={apt.shortTitle || apt.title}
                                     fill
                                     quality={95}
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -195,7 +195,7 @@ export default function Apartments() {
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
                                     <h1 className="text-2xl font-sans font-bold text-white mb-3 decoration-amber-500 group-hover:text-amber-400">
-                                        {apt.title}
+                                        {apt.shortTitle || apt.title}
                                     </h1>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                                         {apt.icons.map((icon, index) => (
