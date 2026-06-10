@@ -92,7 +92,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             if (cachedData) {
                 try {
                     const { text, timestamp } = JSON.parse(cachedData);
-                    const isNewEnough = Date.now() - timestamp < 3600000;
+                    // Caching for 5 minutes instead of 1 hour to prevent stale availability
+                    const isNewEnough = Date.now() - timestamp < 300000;
                     const parsed = parseICal(text);
                     if (isMounted) {
                         setEvents(parsed);
@@ -107,26 +108,26 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             }
 
             const fetchWithRetry = async (url: string) => {
-                const proxies = [
-                    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
-                    `https://corsproxy.io/?${encodeURIComponent(url)}`,
-                    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-                ];
+                // Use local API route to avoid public proxy caching issues
+                const proxyUrl = `/api/calendar?url=${encodeURIComponent(url)}`;
                 
-                for (let i = 0; i < proxies.length; i++) {
-                    try {
-                        const proxyUrl = proxies[i];
-                        const response = await fetch(proxyUrl);
-                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                        const text = await response.text();
-                        if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
-                        return text;
-                    } catch (e) {
-                        if (i === proxies.length - 1) throw e;
-                        await new Promise(r => setTimeout(r, 1000));
-                    }
+                try {
+                    const response = await fetch(proxyUrl, { cache: 'no-store' });
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    const text = await response.text();
+                    if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
+                    return text;
+                } catch (e) {
+                    console.error("Failed to fetch calendar via local proxy:", e);
+                    
+                    // Fallback to one of the public proxies just in case
+                    const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                    const fallbackResponse = await fetch(fallbackUrl, { cache: 'no-store' });
+                    if (!fallbackResponse.ok) throw new Error(`Fallback HTTP ${fallbackResponse.status}`);
+                    const fallbackText = await fallbackResponse.text();
+                    if (!fallbackText || !fallbackText.includes('BEGIN:VCALENDAR')) throw new Error("Format");
+                    return fallbackText;
                 }
-                return null;
             };
 
             try {

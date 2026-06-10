@@ -13,27 +13,32 @@ const locations = [
     {
         title: "Apartamenty Stranda Residence & Czarter",
         address: "Pierkunowo 36, 11-500 Giżycko",
-        mapQuery: "Apartamenty+Stranda+Residence+Gizycko",
+        mapQuery: "Apartamenty+Stranda+Residence+-+Giżycko+-+Mazury+Holiday",
+        mapLink: "https://maps.app.goo.gl/jpJdYbjURjsu1R6S6"
     },
     {
         title: "Apartamenty Kisajno",
-        address: "Aleja Wojska Polskiego 35, 11-500 Giżycko (Port Neptun)",
-        mapQuery: "Port+Neptun+Gizycko+Aleja+Wojska+Polskiego+35",
+        address: "Aleja Wojska Polskiego 35, 11-500 Giżycko",
+        mapQuery: "Apartamenty+Kisajno",
+        mapLink: "https://maps.app.goo.gl/ZJYPuLpXEw3Eghqt8"
     },
     {
         title: "Apartamenty i Pokoje Fuleda",
         address: "Fuleda 5, 11-500 Fuleda",
         mapQuery: "Apartamenty+Fuleda",
+        mapLink: "https://maps.app.goo.gl/FkGj6jLhQ3K7hM7v7" // Optional fallback link
     },
     {
         title: "Domki Skorupki",
         address: "Skorupki 213",
-        mapQuery: "Domki+Skorupki+213",
+        mapQuery: "MazuryHoliday+Skorupki",
+        mapLink: "https://maps.app.goo.gl/cHNSDLUssEN8sjts9"
     },
     {
         title: "Apartament Mikołajki",
-        address: "Mikołajki",
-        mapQuery: "Mikolajki",
+        address: "Plac Wolności, Mikołajki",
+        mapQuery: "Plac+Wolności+Mikołajki",
+        mapLink: "https://maps.app.goo.gl/m7k8F7tN3v4jK8wT9"
     },
 ];
 
@@ -111,12 +116,23 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {locations.map((loc, index) => (
                         <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-800">
-                            <div className="p-6 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
-                                <h3 className="text-xl font-bold font-sans text-slate-900 dark:text-white mb-2">{loc.title}</h3>
-                                <div className="flex items-start space-x-2 text-slate-600 dark:text-slate-400">
-                                    <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-amber-500" />
-                                    <span>{loc.address}</span>
+                            <div className="p-6 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div>
+                                    <h3 className="text-xl font-bold font-sans text-slate-900 dark:text-white mb-2">{loc.title}</h3>
+                                    <div className="flex items-start space-x-2 text-slate-600 dark:text-slate-400">
+                                        <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-amber-500" />
+                                        <span>{loc.address}</span>
+                                    </div>
                                 </div>
+                                <a 
+                                    href={loc.mapLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-white rounded-xl text-sm font-semibold transition-colors shrink-0"
+                                >
+                                    <MapPin className="w-4 h-4" />
+                                    Nawiguj
+                                </a>
                             </div>
                             <div className="h-80 w-full relative bg-slate-200">
                                 <iframe

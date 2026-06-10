@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
 import { getAssetPath } from "@/utils/assetPath";
-
+import StrandaMap from "@/components/StrandaMap";
 
 // Update buildings data structure to include images from strandaApartments data
 const getBuildingsData = () => {
@@ -44,8 +44,9 @@ export default function StrandaPage() {
 
     // Filter states
     const [filterJacuzzi, setFilterJacuzzi] = useState(false);
+    const [filterSauna, setFilterSauna] = useState(false);
     const [filterCapacity, setFilterCapacity] = useState<'all' | '4' | '6'>('all');
-    const [filterFloor, setFilterFloor] = useState<'all' | 'parter' | 'pietro'>('all');
+    const [filterFloor, setFilterFloor] = useState<'all' | 'parter' | 'pietro1' | 'pietro2' | 'pietro3'>('all');
 
     const filteredBuildings = useMemo(() => {
         const result: Record<"A" | "B" | "C", typeof buildings.A> = { A: [], B: [], C: [] };
@@ -57,9 +58,18 @@ export default function StrandaPage() {
                 
                 // Check Jacuzzi
                 if (filterJacuzzi) {
-                    const hasJacuzzi = aptData.amenities?.terrace?.some((item: string) => item.toLowerCase().includes('jacuzzi')) 
-                        || aptData.title?.toLowerCase().includes('jacuzzi');
+                    const hasJacuzzi = (aptData.amenities?.terrace?.some((item: string) => item.toLowerCase().includes('jacuzzi')) || false)
+                        || (aptData.amenities?.bathroom?.some((item: string) => item.toLowerCase().includes('jacuzzi')) || false)
+                        || (aptData.title?.toLowerCase().includes('jacuzzi') || false);
                     if (!hasJacuzzi) return false;
+                }
+
+                // Check Sauna
+                if (filterSauna) {
+                    const hasSauna = (aptData.amenities?.bathroom?.some((item: string) => item.toLowerCase().includes('sauna')) || false)
+                        || (aptData.amenities?.living?.some((item: string) => item.toLowerCase().includes('sauna')) || false)
+                        || (aptData.title?.toLowerCase().includes('sauna') || false);
+                    if (!hasSauna) return false;
                 }
                 
                 // Check Capacity
@@ -74,18 +84,33 @@ export default function StrandaPage() {
                 
                 // Check Floor
                 if (filterFloor !== 'all') {
-                    const floorDigit = parseInt(unit.id[1], 10);
-                    const isParter = floorDigit === 1;
+                    let floorDigit: number | null = null;
+                    const match = unit.id.match(/[a-cA-C](\d)\d\d/);
+                    if (match) {
+                        floorDigit = parseInt(match[1], 10);
+                    }
                     
-                    if (filterFloor === 'parter' && !isParter) return false;
-                    if (filterFloor === 'pietro' && isParter) return false;
+                    if (floorDigit !== null) {
+                        const isParter = floorDigit === 1;
+                        const isP1 = floorDigit === 2;
+                        const isP2 = floorDigit === 3;
+                        const isP3 = floorDigit === 4;
+                        
+                        if (filterFloor === 'parter' && !isParter) return false;
+                        if (filterFloor === 'pietro1' && !isP1) return false;
+                        if (filterFloor === 'pietro2' && !isP2) return false;
+                        if (filterFloor === 'pietro3' && !isP3) return false;
+                    } else {
+                        // Units without clear floor number in ID (like c-studio) 
+                        return false; 
+                    }
                 }
                 
                 return true;
             });
         }
         return result;
-    }, [buildings, filterJacuzzi, filterCapacity, filterFloor]);
+    }, [buildings, filterJacuzzi, filterSauna, filterCapacity, filterFloor]);
 
     const filtersLabels = (t("stranda", "filters") as any) || {};
 
@@ -97,8 +122,8 @@ export default function StrandaPage() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${getAssetPath('/images/stranda/stranda_main.webp')}')` }}
+                    className="absolute inset-0 bg-cover bg-[center_30%]"
+                    style={{ backgroundImage: `url('${getAssetPath('/images/stranda/stranda_hero_jacuzzi.jpg')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Giżycko, Jezioro Kisajno</div>
@@ -116,18 +141,32 @@ export default function StrandaPage() {
                 </div>
 
                 {/* Filters Panel */}
-                <div className="mb-16 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm">
+                <div className="mb-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm">
                     <div className="flex flex-col md:flex-row gap-8 justify-between items-start md:items-center">
                         
-                        {/* Jacuzzi Toggle */}
-                        <div className="flex flex-col gap-3 w-full md:w-auto">
-                            <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{filtersLabels.jacuzzi || "Tylko z Jacuzzi"}</span>
-                            <button
-                                onClick={() => setFilterJacuzzi(!filterJacuzzi)}
-                                className={`px-6 py-3 rounded-xl font-medium transition-all ${filterJacuzzi ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500/50'}`}
-                            >
-                                {filterJacuzzi ? "✓ " + (filtersLabels.jacuzzi || "Tylko z Jacuzzi") : "○ " + (filtersLabels.jacuzzi || "Tylko z Jacuzzi")}
-                            </button>
+                        {/* Toggles Group */}
+                        <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                            {/* Jacuzzi Toggle */}
+                            <div className="flex flex-col gap-3 w-full sm:w-auto">
+                                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{filtersLabels.jacuzzi || "Jacuzzi"}</span>
+                                <button
+                                    onClick={() => setFilterJacuzzi(!filterJacuzzi)}
+                                    className={`px-6 py-3 rounded-xl font-medium transition-all ${filterJacuzzi ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500/50'}`}
+                                >
+                                    {filterJacuzzi ? "✓ Jacuzzi" : "○ Jacuzzi"}
+                                </button>
+                            </div>
+
+                            {/* Sauna Toggle */}
+                            <div className="flex flex-col gap-3 w-full sm:w-auto">
+                                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{filtersLabels.sauna || "Sauna"}</span>
+                                <button
+                                    onClick={() => setFilterSauna(!filterSauna)}
+                                    className={`px-6 py-3 rounded-xl font-medium transition-all ${filterSauna ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500/50'}`}
+                                >
+                                    {filterSauna ? "✓ Sauna" : "○ Sauna"}
+                                </button>
+                            </div>
                         </div>
 
                         {/* Capacity Selector */}
@@ -150,13 +189,13 @@ export default function StrandaPage() {
                         <div className="flex flex-col gap-3 w-full md:w-auto">
                             <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{filtersLabels.floor || "Kondygnacja"}</span>
                             <div className="flex bg-white dark:bg-slate-800 rounded-xl p-1 border border-slate-200 dark:border-slate-700 flex-wrap">
-                                {['all', 'parter', 'pietro'].map((floor) => (
+                                {['all', 'parter', 'pietro1', 'pietro2', 'pietro3'].map((floor) => (
                                     <button
                                         key={floor}
                                         onClick={() => setFilterFloor(floor as any)}
                                         className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${filterFloor === floor ? 'bg-amber-500 text-white shadow-md' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'}`}
                                     >
-                                        {floor === 'all' ? (filtersLabels.floorAny || "Dowolna") : floor === 'parter' ? (filtersLabels.floorParter || "Parter") : (filtersLabels.floorPietro || "Piętro")}
+                                        {floor === 'all' ? (filtersLabels.floorAny || "Dowolna") : floor === 'parter' ? (filtersLabels.floorParter || "Parter") : floor === 'pietro1' ? "1 Piętro" : floor === 'pietro2' ? "2 Piętro" : "3 Piętro"}
                                     </button>
                                 ))}
                             </div>
@@ -164,12 +203,18 @@ export default function StrandaPage() {
                     </div>
                 </div>
 
+                {/* Interactive Map */}
+                <div className="mb-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm text-center max-w-4xl mx-auto">
+                    <h2 className="text-xl font-bold uppercase tracking-widest text-slate-700 dark:text-slate-300 mb-6">Lokalizacja budynków</h2>
+                    <StrandaMap />
+                </div>
+
                 {/* Building Sections */}
                 {buildingKeys.map((buildingKey) => {
                     if (filteredBuildings[buildingKey].length === 0) return null;
                     
                     return (
-                        <motion.div layout key={buildingKey} className="mb-24 last:mb-0">
+                        <motion.div layout key={buildingKey} id={`building-${buildingKey}`} className="mb-24 last:mb-0 scroll-mt-32">
                             {/* Section Header with Large Button */}
                             <motion.div layout className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12">
                                 {/* Building Label */}
@@ -206,19 +251,12 @@ export default function StrandaPage() {
                                                                 className="object-cover group-hover:scale-110 transition-transform duration-700"
                                                             />
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+
                                                             <div className="absolute bottom-4 left-5 text-white">
                                                                 <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
                                                                 <h3 className="text-2xl font-bold font-sans">
                                                                     {unit.id === 'c-studio' ? 'C Studio' : unit.id === 'c-z-dwoma-sypialniami' ? 'C z dwoma sypialniami' : unit.id === 'c-z-jedna-sypialnia' ? 'C z jedną sypialnią' : unit.id}
-                                                                    {aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.amenities?.living?.some((item: string) => item.includes('sauna')) 
-                                                                        ? " z sauną i jacuzzi"
-                                                                        : aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi')) && aptData?.description?.includes('na dachu')
-                                                                        ? " z jacuzzi na dachu"
-                                                                        : aptData?.amenities?.terrace?.some((item: string) => item.includes('jacuzzi'))
-                                                                        ? " z jacuzzi"
-                                                                        : aptData?.amenities?.living?.some((item: string) => item.includes('sauna'))
-                                                                        ? " z sauną"
-                                                                        : ""}
+                                                                    {aptData?.title?.match(/( z .*)/i)?.[1] || ""}
                                                                 </h3>
                                                             </div>
                                                         </div>

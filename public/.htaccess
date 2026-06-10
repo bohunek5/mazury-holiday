@@ -2,9 +2,16 @@
   RewriteEngine On
   RewriteBase /
 
+  # Wymuszenie SSL (HTTPS)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
+
+  # Routing API contact do PHP
+  RewriteRule ^api/contact/?$ send_mail.php [L]
 
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]

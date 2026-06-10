@@ -68,7 +68,7 @@ export default function ApartmentsHub() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div className="absolute inset-0">
                     <Image
-                        src={getAssetPath("/images/apartments_2.webp")}
+                        src={getAssetPath("/images/hero-mazury-holiday-final.webp")}
                         alt="Apartamenty"
                         fill
                         className="object-cover"

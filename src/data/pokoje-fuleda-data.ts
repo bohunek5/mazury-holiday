@@ -106,9 +106,7 @@ miejsce na grilla i ognisko`,
             getAssetPath("/images/pokoje_fuleda/104043_8.webp"),
             getAssetPath("/images/pokoje_fuleda/104044_8.webp"),
             getAssetPath("/images/pokoje_fuleda/104045_8.webp"),
-            getAssetPath("/images/pokoje_fuleda/104046_8.webp"),
-            getAssetPath("/images/pokoje_fuleda/pietro_20.webp"),
-            getAssetPath("/images/pokoje_fuleda/pietro_21.webp")
+            getAssetPath("/images/pokoje_fuleda/104046_8.webp")
         ]
     }
 };

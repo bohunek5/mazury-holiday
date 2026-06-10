@@ -24,8 +24,9 @@ export default function Hero() {
           alt="Mazury Landscape"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
-          quality={85}
+          quality={100}
         />
         <div className="absolute inset-0 bg-slate-900/40" /> {/* Overlay */}
       </div>
