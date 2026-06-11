@@ -1247,8 +1247,8 @@ export const strandaApartments: Record<string, Apartment> = {
                 getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_16.webp")
             ]
         },
-        idoBookingId: '44',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+        idoBookingId: '43',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
     'c-z-dwoma-sypialniami': {
