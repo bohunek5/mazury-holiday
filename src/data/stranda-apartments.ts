@@ -3,118 +3,17 @@ import { Apartment } from '@/types/apartment';
 
 export const strandaApartments: Record<string, Apartment> = {
 
-    'B101': {
-        id: 'B101',
-        title: `Apartament B101 Suite 2+2`,
-        building: 'B',
-        type: 'standard',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B101 znajduje się na parterze budynku B.`,
-        amenities: {
-            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
-            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
-            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
-            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
-            "terrace": ["meble wypoczynkowe"]
-        },
-        idoBookingId: '35',
-        gallery: {
-            heroImage: '/images/apartments/stranda/b304/1.jpg',
-            images: [
-                '/images/apartments/stranda/b304/1.jpg',
-                '/images/apartments/stranda/b304/2.jpg'
-            ]
-        }
-    },
-    'B104': {
-        id: 'B104',
-        title: `Apartament B104 Suite 2+2`,
-        building: 'B',
-        type: 'standard',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B104 znajduje się na parterze budynku B.`,
-        amenities: {
-            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
-            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
-            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
-            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
-            "terrace": ["meble wypoczynkowe"]
-        },
-        idoBookingId: '20',
-        gallery: {
-            heroImage: '/images/apartments/stranda/b304/1.jpg',
-            images: [
-                '/images/apartments/stranda/b304/1.jpg',
-                '/images/apartments/stranda/b304/2.jpg'
-            ]
-        }
-    },
-    'B105': {
-        id: 'B105',
-        title: `Apartament B105 Suite 2+2`,
-        building: 'B',
-        type: 'standard',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B105 znajduje się na parterze budynku B.`,
-        amenities: {
-            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
-            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
-            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
-            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
-            "terrace": ["meble wypoczynkowe"]
-        },
-        idoBookingId: '21',
-        gallery: {
-            heroImage: '/images/apartments/stranda/b304/1.jpg',
-            images: [
-                '/images/apartments/stranda/b304/1.jpg',
-                '/images/apartments/stranda/b304/2.jpg'
-            ]
-        }
-    },
-    'B302': {
-        id: 'B302',
-        title: `Apartament B302 Suite 2+2`,
-        building: 'B',
-        type: 'standard',
-        price: 350,
-        guests: '2+2',
-        description: `Apartament B302 znajduje się na drugim piętrze budynku B.`,
-        amenities: {
-            "living": ["TV", "sofa 2os.", "stół", "krzesła", "stolik kawowy", "szafa", "klimatyzacja"],
-            "kitchen": ["lodówka", "płyta indukcyjna", "zmywarka", "czajnik elektryczny", "przybory kuchenne", "zastawa stołowa", "ekspres do kawy"],
-            "bedroom": ["łóżko podwójne", "pościel", "szafki nocne", "szafa"],
-            "bathroom": ["prysznic", "WC", "umywalka", "ręczniki", "suszarka do włosów", "zestaw kosmetyków"],
-            "terrace": ["meble wypoczynkowe"]
-        },
-        idoBookingId: '36',
-        gallery: {
-            heroImage: '/images/apartments/stranda/b304/1.jpg',
-            images: [
-                '/images/apartments/stranda/b304/1.jpg',
-                '/images/apartments/stranda/b304/2.jpg'
-            ]
-        }
-    },
-
-
-
-
     'A204': {
         id: 'A204',
-        title: `Apartament A204 Suite 2+2`,
+        title: "Z jedną sypialnią (A204)",
+        shortTitle: "Z jedną sypialnią (A204)",
+        description: "Apartament A204 Suite leży na pierwszym piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym, rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA204 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '2+2',
-        description: `Apartament A204 Suite leży na pierwszym piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym, rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -172,16 +71,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A105': {
         id: 'A105',
-        title: `Apartament A105 Delux 2+2 z Jacuzzi`,
+        title: "Z jacuzzi na tarasie (A105)",
+        shortTitle: "Z jacuzzi na tarasie (A105)",
+        description: "Apartament A105 Suite leży na parterze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras z prywatnym jacuzzi z widokiem na jezioro Kisajno.\nJacuzzi jest czynne przez cały rok.\nA105 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'jacuzziTerrace',
         price: 450,
         guests: '2+2',
-        description: `Apartament A105 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda v apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -247,16 +145,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A103': {
         id: 'A103',
-        title: `Apartament A103 Suite 2+2`,
+        title: "Z jedną sypialnią (A103)",
+        shortTitle: "Z jedną sypialnią (A103)",
+        description: "Apartament A103 Suite leży na parterze budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA103 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '2+2',
-        description: `Apartament A103 Suite leży na pierwszej kondygnacji budynku, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży taras z meblami.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -325,16 +222,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A205': {
         id: 'A205',
-        title: `Apartament A205 Suite 2+2`,
+        title: "Z jedną sypialnią (A205)",
+        shortTitle: "Z jedną sypialnią (A205)",
+        description: "Apartament A205 Suite leży na pierwszym piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym, rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA205 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '2+2',
-        description: `Apartament A205 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami. Znajduje się na drugiej kondygnacji budynku.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -401,16 +297,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A104': {
         id: 'A104',
-        title: `Apartament A104 Delux 2+2 z Jacuzzi`,
+        title: "Z jedną sypialnią i jacuzzi (A104)",
+        shortTitle: "Z jedną sypialnią i jacuzzi (A104)",
+        description: "Apartament A104 Suite leży na parterze budynku A, posiada duży i przestronny salon z aneksem kuchennym i sofą, sypialnię, łazienkę z prysznicem i taras z prywatnym jacuzzi z widokiem na jezioro Kisajno.\nA104 Suite z jedną sypialnią (maksymalna ilość osób 3)",
         building: 'A',
         type: 'oneBedroomJacuzzi',
         price: 450,
         guests: '2+1',
-        description: `Apartament A104 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku A. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienkę z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno. 
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda v apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -470,16 +365,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A306': {
         id: 'A306',
-        title: `Apartament A306 Suite 4+2`,
+        title: "Z dwoma sypialniami(A306)",
+        shortTitle: "Z dwoma sypialniami(A306)",
+        description: "Apartament A306 Suite leży na drugim piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z widokiem na jezioro Kisajno\nA306 Suite z dwoma sypialniami (maksymalna ilość osób 6)",
         building: 'A',
         type: 'twoBedrooms',
         price: 500,
         guests: '4+2',
-        description: `Apartament A306 Suite posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży zadaszony taras z meblami. Leży na trzeciej kondygnacji budynku.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -550,16 +444,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A305': {
         id: 'A305',
-        title: `Apartament A305 Suite 2+2`,
+        title: "Z jedną sypialnią (A305)",
+        shortTitle: "Z jedną sypialnią (A305)",
+        description: "Apartament A305 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA305 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '2+2',
-        description: `Apartament A305 Suite leży na trzeciej kondygnacji budynku, z której rozpościera się piękny widok na jezioro Kisajno. Posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i duży zadaszony taras z meblami.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence, nad brzegiem jeziora Kisajno (zatoka Tracz). Rozpościera się z niego piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -635,16 +528,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B102': {
         id: 'B102',
-        title: `Apartament B102 Delux 2+2 z Jacuzzi`,
+        title: "Z jacuzzi na tarasie (B102)",
+        shortTitle: "Z jacuzzi na tarasie (B102)",
+        description: "Apartament B102 Suite leży na parterze budynku A, posiada duży i przestronny salon z aneksem kuchennym i sofą, sypialnię, łazienkę z prysznicem i taras z prywatnym jacuzzi z widokiem na zatokę Tracz i Port Stranda.\nJacuzzi jest czynne cały rok.\nB102 Suite z jedną sypialnią (maksymalna ilość osób 3)",
         building: 'B',
         type: 'jacuzziTerrace',
         price: 450,
         guests: '2+1',
-        description: `Apartament B102 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku B. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno, zatokę Tracz i port Stranda.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -697,12 +589,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A403': {
         id: 'A403',
-        title: `Apartament A403 Delux 2+2 z Jacuzzi`,
+        title: "Z 1 sypialnią i jacuzzi na dachu (A403)",
+        shortTitle: "Z 1 sypialnią i jacuzzi na dachu (A403)",
+        description: "Apartament A403 Suite leży na najwyższym 3 piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na jezioro Kisajno.\nJacuzzi jest czynne przez cały rok.\nA403 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament A403 Suite leży na najwyższym 3 piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok.\nA403 Suite z jedną sypialnią (maksymalna ilość osób 4)\nWyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -727,12 +620,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B404': {
         id: 'B404',
-        title: `Apartament B404 Suite 2+2 z Jacuzzi`,
+        title: "Z 1 sypialnią i jacuzzi na dachu  (B404)",
+        shortTitle: "Z 1 sypialnią i jacuzzi na dachu  (B404)",
+        description: "Apartament B404 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nB404 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'B',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament B404 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nB404 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -758,13 +652,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'C304': {
         id: 'C304',
-        title: `Apartament C304 Studio 2+2`,
-        shortTitle: 'Apartament typu Studio',
+        title: "C304 Studio",
+        shortTitle: "C304 Studio",
+        description: "Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.\nC304 Studio (maksymalna ilość osób 4)\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja",
         building: 'C',
         type: 'studio',
         price: 300,
         guests: '4',
-        description: `Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda.\nC304 Studio (maksymalna ilość osób 4) Wyposażenie kuchni: płyta indukcyjna, mikrofalówka, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: dwa fotele, stolik, leżak\nPozostałe: internet, wifi, komplet pościeli i ręczników, kosmetyki w łazience, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],
             kitchen: ['płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -819,12 +713,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B201': {
         id: 'B201',
-        title: `Apartament B201 Suite 2+2 z Jacuzzi`,
+        title: "Z dwoma sypialniami i jacuzzi (B201)",
+        shortTitle: "Z dwoma sypialniami i jacuzzi (B201)",
+        description: "Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno na którym znajduje się prywatne jacuzzi czynne cały rok.\nB201 Suite z dwoma sypialniami (maksymalna ilość osób 4)\nWyposażenie łazienki 1: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie łazienki 2: wanna/prysznic, ręczniki, żel pod prysznic, mydło, balsam do ciała",
         building: 'B',
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        description: `Apartament B201 Suite położony jest na pierwszym piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym, dwie sypialnie, dwie łazienki, jedna z prysznicem, druga z wanną, duży taras z widokiem na zatokę Tracz i jezioro Kisajno na którym znajduje się prywatne jacuzzi czynne cały rok.\nB201 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, piekarnik, mikrofala, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki 1: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie łazienki 2: wanna/prysznic, ręczniki, żel pod prysznic, mydło, balsam do ciała\nWyposażenie tarasu: stolik, kanapa, dwa fotele, jacuzzi\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'piekarnik', 'mikrofala', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -863,12 +758,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B401': {
         id: 'B401',
-        title: `Apartament B401 Suite 4+2 z Jacuzzi`,
+        title: "Z 2 sypialniami i jacuzzi na dachu (B401)",
+        shortTitle: "Z 2 sypialniami i jacuzzi na dachu (B401)",
+        description: "Apartament B401 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, 2 sypialnie, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok\nB401 Suite z dwoma sypialniami (maksymalna ilość osób 6)",
         building: 'B',
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        description: `Apartament B401 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, 2 sypialnie, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz\nJacuzzi jest czynne cały rok\nB401 Suite z dwoma sypialniami (maksymalna ilość osób 6)\nWyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie sypialni 2: TV, łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -896,12 +792,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'C301': {
         id: 'C301',
-        title: `Apartament C301 Suite 2+2`,
+        title: "Z dwoma sypialniami (C301)",
+        shortTitle: "Z dwoma sypialniami (C301)",
+        description: "Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda\nC301 z dwoma sypialniami (maksymalna ilość osób 4)",
         building: 'C',
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        description: `Apartament C301 Suite znajduje się na drugim piętrze budynku C, posiada przestronny salon z aneksem kuchennym i sofę, dwie sypialnie, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda\nC301 z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa, stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, klimatyzacja, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: łóżko piętrowe, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -953,12 +850,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B202': {
         id: 'B202',
-        title: `Apartament B202 Suite 2+2 z Sauną i Jacuzzi`,
+        title: "Z 2 sypialniami jacuzzi i sauną (B202)",
+        shortTitle: "Z 2 sypialniami jacuzzi i sauną (B202)",
+        description: "Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz\nB202 Suite z dwoma sypialniami (maksymalna ilość osób 4)",
         building: 'B',
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        description: `Apartament B202 Suite leży na pierwszym piętrze budynku B, posiada salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem, saunę i duży zadaszony taras z jacuzzi i widokiem na zatokę Tracz\nB202 Suite z dwoma sypialniami (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: rozkladana kanapa 2os., komplet pościeli, klimatyzacja\nWyposażenie łazienki: sauna, prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: jacuzzi, stolik, kanapa, dwa fotele, dwa rozkładane fotele\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -1005,12 +903,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B402': {
         id: 'B402',
-        title: `Apartament B402 Suite 2+2 z Jacuzzi`,
+        title: "Z 1 sypialnią i jacuzzi na dachu (B402)",
+        shortTitle: "Z 1 sypialnią i jacuzzi na dachu (B402)",
+        description: "Apartament B402 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB402 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'B',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament B402 Suite leży na najwyższym 3 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i taras dolny oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i Zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nB402 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nWyposażenie tarasu górnego na dachu: dwa leżaki, stolik\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -1034,12 +933,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'A302': {
         id: 'A302',
-        title: `Apartament A302 Suite 2+2`,
+        title: "Z jedną sypialnią (A302)",
+        shortTitle: "Z jedną sypialnią (A302)",
+        description: "Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA302 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'A',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament A302 Suite leży na piętrze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, sypialnię, łazienkę z prysznicem i zadaszony taras z widokiem na jezioro Kisajno..\nA302 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, lodówka, zmywarka, chłodziarka do wina, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu: stolik, kanapa, dwa fotele, leżak\nPozostałe: internet, wifi, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'chłodziarka do wina', 'komplet naczyń i sztućców'],
@@ -1073,12 +973,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'C404': {
         id: 'C404',
-        title: `Apartament C404 Studio z Jacuzzi`,
+        title: "Studio z jacuzzi na dachu (C404)",
+        shortTitle: "Studio z jacuzzi na dachu (C404)",
+        description: "Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko",
         building: 'C',
         type: 'jacuzzi',
         price: 300,
         guests: '4',
-        description: `Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, piekarnik, pralka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: fotel, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
@@ -1101,16 +1002,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B103': {
         id: 'B103',
-        title: `Apartament B103 Delux 2+2 z Jacuzzi`,
+        title: "Z jacuzzi na tarasie (B103)",
+        shortTitle: "Z jacuzzi na tarasie (B103)",
+        description: "Apartament B103 Suite leży na parterze budynku A, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofą, sypialnię, łazienkę z prysznicem i taras z prywatnym jacuzzi z widokiem na zatokę Tracz i Port Stranda.\nJacuzzi jest czynne cały rok.\nB103 Suite z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'B',
         type: 'jacuzziTerrace',
         price: 450,
         guests: '2+1',
-        description: `Apartament B103 Delux z prywatnym jacuzzi na tarasie położony jest na parterze budynku B. Składa się z przestronnego salonu z aneksem kuchennym i sofą, sypialni z jednym łóżkiem podwójnym, łazienki z prysznicem, tarasu gdzie znajduje się prywatne jacuzzi. Całość z pięknym widokiem na jezioro Kisajno, zatokę Tracz i port Stranda.
 
-Nasze apartamenty ulokowane są w Giżycku, przy porcie Stranda w apartamentowcach Stranda Residence A,B i C, nad brzegiem jeziora Kisajno i zatoki Tracz. Z tarasu rozpościera się piękny widok na panoramę jezioro Kisajno i szlak żeglowny Wielkich Jezior Mazurskich. Apartament Delux jest luksusowo wykończony i zapewnia wysoki komfort wypoczynku. Na miejscu można skorzystać z zasobów portu takich jak: tawerna, koncerty w sezonie letnim, marina, wypożyczalnia sprzętu wodnego, itp.
 
-Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycznych, ofert wielu restauracji i pubów. Lokalizacja obiektu, ułatwia również poznawanie Mazur pod kątem przyrodniczym, historycznym i rozrywkowym. Do większości miejsc wartych odwiedzenia i poznania jest około 15-35 minut drogi samochodem.`,
         amenities: {
             "living": [
                 "TV",
@@ -1163,12 +1063,13 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B106': {
         id: 'B106',
-        title: `Apartament B106 Suite 4+2`,
+        title: "B106 z dwoma sypialniami",
+        shortTitle: "B106 z dwoma sypialniami",
+        description: "Apartament B106 Suite leży na parterze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z widokiem na port Stranda, zatokę Tracz oraz jezioro Kisajno\nB106 Suite z dwoma sypialniami (maksymalna ilość osób 6)",
         building: 'B',
         type: 'twoBedrooms',
         price: 300,
         guests: '4',
-        description: `Apartament B106 Suite leży na parterze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofę, dwie sypialnie, łazienkę z prysznicem i duży taras z widokiem na port Stranda, zatokę Tracz oraz jezioro Kisajno\nB106 Suite z dwoma sypialniami (maksymalna ilość osób 6) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców\nWyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie sypialni 1: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie sypialni 2: TV, łóżko 180x200, komplet pościeli, klimatyzacja\nWyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: stolik, kanapa, dwa fotele, dwa leżaki\nPozostałe: internet, wifi, komplet pościeli i ręczników, kosmetyki w łazience, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -1196,138 +1097,15 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/22/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'c-studio': {
-        id: 'c-studio',
-        title: 'Giżycko Stranda - Apartament typu Studio - C Studio',
-        shortTitle: 'Apartament typu Studio',
-        building: 'C',
-        type: 'studio',
-        price: 300,
-        guests: '4',
-        description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
-            terrace: ['dwa krzesła', 'stolik']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/C_Studio/5S5A0547_04453781500.webp"),
-            images: [
-                getAssetPath("/images/stranda/C_Studio/5S5A0547_04453781500.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A0549_04473882485.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A0550_04483582949.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A0553_04503583932.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A0554_04513984453.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2313-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2338-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2339-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2343-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2344-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2354-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2356-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2359-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2363-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2364-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2366-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2367-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2371-standard.webp"),
-                getAssetPath("/images/stranda/C_Studio/5S5A2372-standard.webp")
-            ]
-        },
-        idoBookingId: '32',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'c-z-dwoma-sypialniami': {
-        id: 'c-z-dwoma-sypialniami',
-        title: 'Giżycko Stranda - Apartament z 2 sypialniami - C z 2 sypialniami',
-        shortTitle: 'Apartament z 2 sypialniami',
-        building: 'C',
-        type: 'twoBedrooms',
-        price: 300,
-        guests: '4',
-        description: `Apartamenty z 2 sypialniami znajdują się w budynku C, są to miejsce noclegowe z dwoma sypialniami, w każdej łóżko podwójne, salonem z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 6 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
-            terrace: ['dwa krzesła', 'stolik']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_43_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_43_1.jpg"),
-                getAssetPath("/images/stranda/ido_43_2.jpg"),
-                getAssetPath("/images/stranda/ido_43_3.jpg"),
-                getAssetPath("/images/stranda/ido_43_4.jpg"),
-                getAssetPath("/images/stranda/ido_43_5.jpg"),
-                getAssetPath("/images/stranda/ido_43_6.jpg"),
-                getAssetPath("/images/stranda/ido_43_7.jpg"),
-                getAssetPath("/images/stranda/ido_43_8.jpg"),
-                getAssetPath("/images/stranda/ido_43_9.jpg"),
-                getAssetPath("/images/stranda/ido_43_10.jpg"),
-                getAssetPath("/images/stranda/ido_43_11.jpg"),
-                getAssetPath("/images/stranda/ido_43_12.jpg"),
-                getAssetPath("/images/stranda/ido_43_13.jpg"),
-                getAssetPath("/images/stranda/ido_43_14.jpg")
-            ]
-        },
-        idoBookingId: '43',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
-    'c-z-jedna-sypialnia': {
-        id: 'c-z-jedna-sypialnia',
-        title: 'Giżycko Stranda - Apartament z 1 sypialnią - C z jedną sypialnią',
-        shortTitle: 'Apartament z 1 sypialnią',
-        building: 'C',
-        type: 'oneBedroom',
-        price: 300,
-        guests: '4',
-        description: `Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo\nWyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic\nWyposażenie tarasu: dwa krzesła, stolik, leżaki\nPozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
-        amenities: {
-            living: [],
-            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres kapsułkowy do kawy Tchibo'],
-            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
-            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
-            terrace: ['dwa krzesła', 'stolik', 'leżaki']
-        },
-        gallery: {
-            heroImage: getAssetPath("/images/stranda/ido_44_1.jpg"),
-            images: [
-                getAssetPath("/images/stranda/ido_44_1.jpg"),
-                getAssetPath("/images/stranda/ido_44_2.jpg"),
-                getAssetPath("/images/stranda/ido_44_3.jpg"),
-                getAssetPath("/images/stranda/ido_44_4.jpg"),
-                getAssetPath("/images/stranda/ido_44_5.jpg"),
-                getAssetPath("/images/stranda/ido_44_6.jpg"),
-                getAssetPath("/images/stranda/ido_44_7.jpg"),
-                getAssetPath("/images/stranda/ido_44_8.jpg"),
-                getAssetPath("/images/stranda/ido_44_9.jpg"),
-                getAssetPath("/images/stranda/ido_44_10.jpg"),
-                getAssetPath("/images/stranda/ido_44_11.jpg"),
-                getAssetPath("/images/stranda/ido_44_12.jpg"),
-                getAssetPath("/images/stranda/ido_44_13.jpg"),
-                getAssetPath("/images/stranda/ido_44_14.jpg"),
-                getAssetPath("/images/stranda/ido_44_15.jpg"),
-                getAssetPath("/images/stranda/ido_44_16.jpg")
-            ]
-        },
-        idoBookingId: '44',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
-    },
-
     'C402': {
         id: 'C402',
-        title: `Apartament C402 Studio z Jacuzzi`,
+        title: "Studio z jacuzzi na dachu (C402)",
+        shortTitle: "Studio z jacuzzi na dachu (C402)",
+        description: "Apartament C402 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko",
         building: 'C',
         type: 'jacuzzi',
         price: 300,
         guests: '4',
-        description: `Apartament C402 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, lodówka, zmywarka, piekarnik, pralka, komplet naczyń i sztućców\nWyposażenie: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja\nWyposażenie: łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko\nWyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała Wyposażenie tarasu dolnego: fotel, stolik\nWyposażenie tarasu górnego na dachu: komplet mebli ogodowych, stolik, prywatne jacuzzi czynne przez cały rok\nPozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
         amenities: {
             living: [],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
@@ -1366,18 +1144,14 @@ Bliskość do centrum Giżycka umożliwia korzystanie z wielu atrakcji turystycz
 
     'B304': {
         id: 'B304',
-        title: `Apartament B304 Suite 2+2`,
+        title: "B304",
+        shortTitle: "B304",
+        description: "Opis dla B304",
         building: 'B',
         type: 'oneBedroom',
         price: 300,
         guests: '4',
-        description: `Apartament B304 Suite leży na 2 piętrze budynku B, posiada duży i przestronny salon z aneksem kuchennym i rozkładaną sofą, sypialnię, łazienkę z prysznicem i taras.
-B304 Suite z jedną sypialnią (maksymalna ilość osób 4) Wyposażenie kuchni: ekspres do kawy, płyta indukcyjna, mikrofalówka, piekarnik, lodówka, zmywarka, komplet naczyń i sztućców
-Wyposażenie salonu: TV, sofa 2os., stół, krzesła, odkurzacz, klimatyzacja
-Wyposażenie sypialni: TV, łóżko 180x200, komplet pościeli, suszarka na ubrania, deska do prasowania, żelazko, klimatyzacja
-Wyposażenie łazienki: prysznic, pralka, suszarka do włosów, ręczniki, żel pod prysznic, mydło, balsam do ciała
-Wyposażenie tarasu: stolik, kanapa, dwa fotele, dwa leżaki
-Pozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+
         amenities: {
             living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
@@ -1396,8 +1170,124 @@ Pozostałe: internet, wifi, komplet pościeli i ręczników, zestaw startowy (wo
             ]
         },
         
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/24/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
+
+
+    'c-studio': {
+        id: 'c-studio',
+        title: "C Studio",
+        shortTitle: "C Studio",
+        description: "Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.",
+        building: 'C',
+        type: 'studio',
+        price: 300,
+        guests: '4',
+        amenities: {
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'klimatyzacja'],
+            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres do kawy'],
+            bedroom: ['łóżko 180x200', 'komplet pościeli', 'deska do prasowania', 'żelazko'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
+            terrace: ['dwa krzesła', 'stolik']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/C_Studio/5S5A0547_04453781500.webp"),
+            images: [
+                getAssetPath("/images/stranda/C_Studio/5S5A0547_04453781500.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A0549_04473882485.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A0550_04483582949.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A0553_04503583932.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A0554_04513984453.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A2313-standard.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A2338-standard.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A2339-standard.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A2343-standard.webp"),
+                getAssetPath("/images/stranda/C_Studio/5S5A2344-standard.webp")
+            ]
+        },
+        idoBookingId: '32',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'c-z-jedna-sypialnia': {
+        id: 'c-z-jedna-sypialnia',
+        title: "Z 1 sypialnią",
+        shortTitle: "Z 1 sypialnią",
+        description: "Studio z 1 sypialnią znajduje się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.",
+        building: 'C',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        amenities: {
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'klimatyzacja'],
+            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres do kawy'],
+            bedroom: ['łóżko 180x200', 'komplet pościeli', 'deska do prasowania', 'żelazko'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
+            terrace: ['dwa krzesła', 'stolik', 'leżaki']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_1.webp"),
+            images: [
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_1.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_2.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_3.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_4.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_5.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_6.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_7.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_8.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_9.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_10.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_11.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_12.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_13.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_14.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_15.webp"),
+                getAssetPath("/images/stranda/c-z-jedna-sypialnia/c-z-jedna-sypialnia_16.webp")
+            ]
+        },
+        idoBookingId: '44',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'c-z-dwoma-sypialniami': {
+        id: 'c-z-dwoma-sypialniami',
+        title: "Z 2 sypialniami",
+        shortTitle: "Z 2 sypialniami",
+        description: "Studio z 2 sypialniami znajduje się w budynku C, w każdej sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 6 osób.",
+        building: 'C',
+        type: 'twoBedroom',
+        price: 300,
+        guests: '6',
+        amenities: {
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'klimatyzacja'],
+            kitchen: ['płyta indukcyjna', 'lodówka', 'komplet naczyń i sztućców', 'ekspres do kawy'],
+            bedroom: ['łóżko 180x200', 'komplet pościeli', 'deska do prasowania', 'żelazko'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic'],
+            terrace: ['dwa krzesła', 'stolik']
+        },
+        gallery: {
+            heroImage: getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_1.webp"),
+            images: [
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_1.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_2.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_3.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_4.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_5.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_6.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_7.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_8.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_9.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_10.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_11.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_12.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_13.webp"),
+                getAssetPath("/images/stranda/c-z-dwoma-sypialniami/c-z-dwoma-sypialniami_14.webp")
+            ]
+        },
+        idoBookingId: '43',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
 
 };

@@ -22,8 +22,8 @@ export default function PokojeFuledaPage() {
         subtitle: "Jezioro Dobskie, Fuleda Róg",
         description: trans.description || data.description,
         amenities: {
-            living: data.amenities.room2,
             bedroom: data.amenities.room1,
+            bedroom2: data.amenities.room2,
             bathroom: data.amenities.bathroom,
             kitchen: data.amenities.kitchen,
             terrace: data.amenities.terrace,

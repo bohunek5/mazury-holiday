@@ -18,9 +18,10 @@ export interface ApartmentTemplateData {
     description: string;
     amenities: {
         living?: string[];
-        kitchen?: string[];
         bedroom?: string[];
+        bedroom2?: string[];
         bathroom?: string[];
+        kitchen?: string[];
         terrace?: string[];
         general?: string[];
     };
@@ -216,6 +217,19 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                         <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomBedroom") || "Sypialnia"}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                                             {data.amenities.bedroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
+                                        </p>
+                                    </div>
+                                )}
+
+                                {/* Bedroom 2 */}
+                                {data.amenities.bedroom2 && data.amenities.bedroom2.length > 0 && (
+                                    <div className="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div className="relative w-8 h-8 mx-auto mb-2">
+                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt="Sypialnia 2" fill className="object-contain dark:invert opacity-80" />
+                                        </div>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Sypialnia 2</h4>
+                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {data.amenities.bedroom2.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
                                 )}
