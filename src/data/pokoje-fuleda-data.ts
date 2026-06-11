@@ -63,8 +63,8 @@ przestronny taras
 prywatne zejście do jeziora
 miejsce na grilla i ognisko`,
     amenities: {
-        room1: ['Łóżko dla 2 osób', 'Wyjście na taras', 'Odkurzacz', 'Suszarka', 'Żelazko', 'Deska do prasowania'],
-        room2: ['Dwa łóżka pojedyncze', 'TV', 'Wyjście na taras'],
+        room1: ['Łóżko dla 2 osób', 'Dwa łóżka pojedyncze', 'TV', 'Wyjście na taras', 'Odkurzacz', 'Suszarka', 'Żelazko', 'Deska do prasowania'],
+        room2: [],
         bathroom: ['Prysznic', 'Pralka', 'Suszarka do włosów', 'Prostownica', 'Ręczniki', 'Szlafroki', 'Kosmetyki'],
         kitchen: ['Lodówka', 'Zmywarka', 'Mikrofalówka', 'Toster', 'Komplet naczyń i sztućców', 'Kuchnia gazowa', 'Ekspres do kawy'],
         terrace: ['Przestronny taras', 'Prywatne zejście do jeziora', 'Miejsce na grilla i ognisko', 'Łódź wiosłowa', 'Taras widokowy']
