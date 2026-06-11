@@ -27,6 +27,7 @@ export default function Navbar() {
         { name: t("nav", "cottages"), href: "/domki" },
         { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "charter"), href: "/czarter" },
+        { name: t("nav", "concerts"), href: "/koncerty" },
         { name: t("nav", "attractions"), href: "/atrakcje" },
         { name: t("nav", "cooperation"), href: "/wspolpraca" },
         { name: t("nav", "contact"), href: "/kontakt" },

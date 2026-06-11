@@ -9,13 +9,16 @@ import { getAssetPath } from "@/utils/assetPath";
 export default function Hero() {
   const { t, language } = useLanguage();
 
-  const phrases = language === 'pl'
-    ? ["Wakacje na Mazurach", "Sprawdź naszą ofertę"]
-    : [t("hero", "title") || "Wakacje na Mazurach", t("hero", "subtitle") || "Sprawdź naszą ofertę"];
+  const typewriterDesc = t("hero", "typewriterDesc");
+  const subtitle = t("hero", "subtitle");
+
+  const phrases = [
+    t("hero", "title") || "Wakacje na Mazurach", 
+    typewriterDesc !== "typewriterDesc" ? typewriterDesc : "Sprawdź naszą ofertę"
+  ];
 
   return (
     <section className="relative h-screen min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
-      {/* Hero Background Image */}
       <div
         className="absolute inset-0 z-0"
       >
@@ -24,6 +27,7 @@ export default function Hero() {
           alt="Mazury Landscape"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover"
           quality={100}
@@ -39,7 +43,7 @@ export default function Hero() {
         <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-4 rounded-full shadow-lg" />
 
         <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-8 text-white uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
-          {language === 'pl' ? "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE" : (t("hero", "subtitleDesc") || t("hero", "subtitle") || "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE")}
+          {subtitle !== "subtitle" ? subtitle : "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE"}
         </p>
 
         <div className="flex flex-col items-center gap-4 w-full mb-8">

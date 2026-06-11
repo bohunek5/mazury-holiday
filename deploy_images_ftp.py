@@ -7,9 +7,9 @@ OUT_DIR = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/out"
 ZIP_PATH = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/images.zip"
 FTP_HOST = "serwer194525.lh.pl"
 FTP_USER = "serwer194525"
-FTP_PASS = "Piaskowa11510$$$"
+FTP_PASS = "KochamAntygravity2026$"
 REMOTE_DIR = "public_html/autoinstalator/serwer194525.lh.pl/wordpress162339"
-HTTP_URL = "http://serwer194525.lh.pl/autoinstalator/serwer194525.lh.pl/wordpress162339/unzip_images.php"
+HTTP_URL = "https://mazuryholiday.pl/unzip_images.php"
 
 print(f"📦 Zipping images to {ZIP_PATH}...")
 os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images")

@@ -1,0 +1,187 @@
+
+    'B101': {
+        id: 'B101',
+        title: `B101`,
+        building: 'B',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        description: `B101`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B101/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B101/hero_1.webp")
+            ]
+        },
+        idoBookingId: '35',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/35/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'B104': {
+        id: 'B104',
+        title: `B104`,
+        building: 'B',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        description: `B104`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B104/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B104/hero_1.webp")
+            ]
+        },
+        idoBookingId: '20',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/20/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'B105': {
+        id: 'B105',
+        title: `B105`,
+        building: 'B',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        description: `B105`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B105/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B105/hero_1.webp")
+            ]
+        },
+        idoBookingId: '21',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/21/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'B302': {
+        id: 'B302',
+        title: `B302`,
+        building: 'B',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        description: `B302`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B302/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B302/hero_1.webp")
+            ]
+        },
+        idoBookingId: '36',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/36/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'C_1_sypialnia': {
+        id: 'C_1_sypialnia',
+        title: `Giżycko  Stranda - Apartament z 1 sypialnią`,
+        building: 'C',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+        description: `Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo
+Wyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko
+Wyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic
+Wyposażenie tarasu: dwa krzesła, stolik, leżaki
+Pozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_1_sypialnia/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/C_1_sypialnia/hero_1.webp")
+            ]
+        },
+        idoBookingId: '44',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'C_Studio': {
+        id: 'C_Studio',
+        title: `Giżycko Stranda - Apartament typu Studio`,
+        building: 'C',
+        type: 'studio',
+        price: 300,
+        guests: '4',
+        description: `Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo
+Wyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko
+Wyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic
+Wyposażenie tarasu: dwa krzesła, stolik
+Pozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_Studio/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/C_Studio/hero_1.webp")
+            ]
+        },
+        idoBookingId: '32',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+
+    'C_2_sypialnie': {
+        id: 'C_2_sypialnie',
+        title: `Giżycko  Stranda - Apartament z 2 sypialniami`,
+        building: 'C',
+        type: 'twoBedroom',
+        price: 300,
+        guests: '4',
+        description: `Apartamenty z 2 sypialniami znajdują się w budynku C, są to miejsce noclegowe z dwoma sypialniami, w każdej łóżko podwójne, salonem z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 6 osób Wyposażenie kuchni: płyta indukcyjna, lodówka, komplet naczyń i sztućców, ekspres kapsułkowy do kawy Tchibo
+Wyposażenie: TV, sofa 2os., stół, krzesła, klimatyzacja, łóżko 180x200, komplet pościeli, deska do prasowania, żelazko
+Wyposażenie łazienki: prysznic, suszarka do włosów, ręczniki, żel pod prysznic
+Wyposażenie tarasu: dwa krzesła, stolik
+Pozostałe: komplet pościeli i ręczników, zestaw startowy (woda, kawa, herbata).`,
+        amenities: {
+            living: [],
+            kitchen: [],
+            bedroom: [],
+            bathroom: [],
+            terrace: []
+        },
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/C_2_sypialnie/hero_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/C_2_sypialnie/hero_1.webp")
+            ]
+        },
+        idoBookingId: '43',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },

@@ -1,13 +1,16 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Apartments from "@/components/Apartments";
-import Footer from "@/components/Footer";
-import LuxuryBenefits from "@/components/LuxuryBenefits";
-import CharterSection from "@/components/CharterSection";
 import { Anchor } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+// Dynamically import below-the-fold components
+const LuxuryBenefits = dynamic(() => import("@/components/LuxuryBenefits"));
+const Apartments = dynamic(() => import("@/components/Apartments"));
+const CharterSection = dynamic(() => import("@/components/CharterSection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   const { t } = useLanguage();

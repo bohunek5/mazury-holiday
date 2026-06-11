@@ -9,7 +9,7 @@ interface ApartmentDetailClientProps {
 }
 
 export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps) {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const data = strandaApartments[id as keyof typeof strandaApartments];
 
     if (!data) {
@@ -25,7 +25,7 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
             data={{
                 id: id,
                 title: data.title || `${t("stranda", "apartment")} ${id} ${t("strandaTypes", data.type as any) || data.type}`,
-                description: t("strandaDescriptions", id as any) || data.description,
+                description: language === "pl" ? data.description : (t("strandaDescriptions", id as any) || data.description),
                 amenities: data.amenities,
                 mainImage: data.gallery.heroImage,
                 gallery: data.gallery.images,

@@ -9,6 +9,7 @@ interface CalendarEvent {
     start: Date;
     end: Date;
     summary?: string;
+    status?: string;
 }
 
 const localeMap: Record<string, string> = {
@@ -67,9 +68,13 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                     if (val) currentEvent.end = parseDate(val);
                 } else if (line.startsWith('SUMMARY')) {
                     currentEvent.summary = line.split(':')[1];
+                } else if (line.startsWith('STATUS')) {
+                    currentEvent.status = line.split(':')[1];
                 } else if (line === 'END:VEVENT') {
                     if (currentEvent.start && currentEvent.end) {
-                        events.push(currentEvent as CalendarEvent);
+                        if (currentEvent.status !== 'CANCELLED') {
+                            events.push(currentEvent as CalendarEvent);
+                        }
                     }
                 }
             }
@@ -92,8 +97,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
             if (cachedData) {
                 try {
                     const { text, timestamp } = JSON.parse(cachedData);
-                    // Caching for 5 minutes instead of 1 hour to prevent stale availability
-                    const isNewEnough = Date.now() - timestamp < 300000;
+                    // Cache for 1 minute
+                    const isNewEnough = Date.now() - timestamp < 60000;
                     const parsed = parseICal(text);
                     if (isMounted) {
                         setEvents(parsed);
@@ -109,7 +114,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
 
             const fetchWithRetry = async (url: string) => {
                 // Use local API route to avoid public proxy caching issues
-                const proxyUrl = `/api/calendar?url=${encodeURIComponent(url)}`;
+                const proxyUrl = `/calendar.php?url=${encodeURIComponent(url)}&t=${Date.now()}`;
                 
                 try {
                     const response = await fetch(proxyUrl, { cache: 'no-store' });

@@ -303,7 +303,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                     <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
                                     <ICalCalendar
                                         icalUrl={data.icalUrl}
-                                        apartmentId={data.id || "1"}
+                                        apartmentId={data.title || data.id || "1"}
                                     />
                                 </div>
                             )}

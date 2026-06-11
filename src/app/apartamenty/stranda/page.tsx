@@ -45,7 +45,7 @@ export default function StrandaPage() {
     // Filter states
     const [filterJacuzzi, setFilterJacuzzi] = useState(false);
     const [filterSauna, setFilterSauna] = useState(false);
-    const [filterCapacity, setFilterCapacity] = useState<'all' | '4' | '6'>('all');
+    const [filterCapacity, setFilterCapacity] = useState<'all' | '2' | '3' | '4' | '5' | '6'>('all');
     const [filterFloor, setFilterFloor] = useState<'all' | 'parter' | 'pietro1' | 'pietro2' | 'pietro3'>('all');
 
     const filteredBuildings = useMemo(() => {
@@ -72,14 +72,15 @@ export default function StrandaPage() {
                     if (!hasSauna) return false;
                 }
                 
-                // Check Capacity
                 if (filterCapacity !== 'all') {
                     const guestsStr = aptData.guests || "4";
                     const parts = guestsStr.split('+').map(n => parseInt(n.trim(), 10) || 0);
                     const totalGuests = parts.reduce((a, b) => a + b, 0);
                     
-                    if (filterCapacity === '4' && totalGuests > 4) return false;
-                    if (filterCapacity === '6' && totalGuests <= 4) return false;
+                    const filterNum = parseInt(filterCapacity, 10);
+                    
+                    // Typowy filtr hotelowy: pokaż wszystkie apartamenty, które pomieszczą minimum 'filterNum' osób
+                    if (totalGuests < filterNum) return false; 
                 }
                 
                 // Check Floor
@@ -173,13 +174,13 @@ export default function StrandaPage() {
                         <div className="flex flex-col gap-3 w-full md:w-auto">
                             <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{filtersLabels.size || "Rozmiar"}</span>
                             <div className="flex bg-white dark:bg-slate-800 rounded-xl p-1 border border-slate-200 dark:border-slate-700 flex-wrap">
-                                {['all', '4', '6'].map((cap) => (
+                                {['all', '2', '3', '4', '5', '6'].map((cap) => (
                                     <button
                                         key={cap}
                                         onClick={() => setFilterCapacity(cap as any)}
                                         className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${filterCapacity === cap ? 'bg-amber-500 text-white shadow-md' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'}`}
                                     >
-                                        {cap === 'all' ? (filtersLabels.sizeAny || "Dowolny") : cap === '4' ? (filtersLabels.size4 || "Max 4 os.") : (filtersLabels.size6 || "Max 6 os.")}
+                                        {cap === 'all' ? (filtersLabels.sizeAny || "Dowolna") : `${cap} os.`}
                                     </button>
                                 ))}
                             </div>
@@ -218,7 +219,7 @@ export default function StrandaPage() {
                             {/* Section Header with Large Button */}
                             <motion.div layout className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12">
                                 {/* Building Label */}
-                                <div className="w-full sm:w-auto px-12 py-5 bg-amber-500 text-white rounded-full font-bold text-xl md:text-2xl shadow-xl shadow-amber-500/20 text-center tracking-widest uppercase">
+                                <div className="w-full sm:w-auto px-6 py-3 md:px-12 md:py-5 bg-amber-500 text-white rounded-full font-bold text-lg md:text-2xl shadow-lg md:shadow-xl shadow-amber-500/20 text-center tracking-widest uppercase">
                                     {t("stranda", "building")} {buildingKey}
                                 </div>
                             </motion.div>
@@ -253,10 +254,8 @@ export default function StrandaPage() {
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                                                             <div className="absolute bottom-4 left-5 text-white">
-                                                                <span className="text-xs uppercase tracking-widest opacity-90 font-medium mb-1 block">{t("stranda", "apartment")}</span>
-                                                                <h3 className="text-2xl font-bold font-sans">
-                                                                    {unit.id === 'c-studio' ? 'C Studio' : unit.id === 'c-z-dwoma-sypialniami' ? 'C z dwoma sypialniami' : unit.id === 'c-z-jedna-sypialnia' ? 'C z jedną sypialnią' : unit.id}
-                                                                    {aptData?.title?.match(/( z .*)/i)?.[1] || ""}
+                                                                <h3 className="text-lg md:text-2xl font-bold font-sans">
+                                                                    {aptData?.title || unit.id}
                                                                 </h3>
                                                             </div>
                                                         </div>
