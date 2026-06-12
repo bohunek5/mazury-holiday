@@ -49,6 +49,6 @@ export const mikolajkiData: MikolajkiData = {
             getAssetPath("/images/mikolajki/mikolajki_8.webp")
         ]
     },
-    idoBookingId: "31",
-    icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/31/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    idoBookingId: "48",
+    icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/48/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"
 };
