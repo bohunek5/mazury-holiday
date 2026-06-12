@@ -21,6 +21,7 @@ interface UnifiedItem {
     name: string;
     location: string;
     heroImage: string;
+    images: string[];
     photoCount: number;
     guests: string | number;
     price: number | string;
@@ -31,7 +32,7 @@ interface UnifiedItem {
 export default function Dashboard({ onLogout }: DashboardProps) {
     const [darkMode, setDarkMode] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [selectedGallery, setSelectedGallery] = useState<{images: string[], index: number} | null>(null);
 
     // Prepare unified data
     const allItems = useMemo<UnifiedItem[]>(() => {
@@ -54,6 +55,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 name: apt.title,
                 location: 'Stranda',
                 heroImage: apt.images?.[0] || '/images/hero_1.webp',
+                images: apt.images || [],
                 photoCount: apt.images?.length || 0,
                 guests: apt.guests || 'Brak',
                 price: apt.price || 'Brak',
@@ -71,6 +73,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             name: skorupkiData.title || 'Domki Skorupki',
             location: 'Skorupki',
             heroImage: skorupkiData.gallery?.heroImage || cottagesData[0]?.heroImage || '/images/skorupki/skorupki_1.webp',
+            images: skorupkiData.gallery?.images || cottagesData.map(c => c.image) || [],
             photoCount: skorupkiData.gallery?.images?.length || 58,
             guests: skorupkiData.guests || '6',
             price: skorupkiData.price || 'Brak',
@@ -87,6 +90,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             name: mikolajkiData.title,
             location: 'Mikołajki',
             heroImage: mikolajkiData.gallery?.heroImage || mikolajkiData.gallery?.images?.[0] || '/images/mikolajki/mikolajki_1.webp',
+            images: mikolajkiData.gallery?.images || [],
             photoCount: mikolajkiData.gallery?.images?.length || 0,
             guests: mikolajkiData.guests || 'Brak',
             price: mikolajkiData.price || 'Brak',
@@ -103,6 +107,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             name: pokojeFuledaData.title,
             location: 'Pokoje Fuleda',
             heroImage: pokojeFuledaData.gallery?.heroImage || pokojeFuledaData.gallery?.images?.[0] || '/images/pokoje_fuleda/fuleda_pokoj_1.webp',
+            images: pokojeFuledaData.gallery?.images || [],
             photoCount: pokojeFuledaData.gallery?.images?.length || 0,
             guests: pokojeFuledaData.guests || 'Brak',
             price: pokojeFuledaData.price || 'Brak',
@@ -120,6 +125,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 name: apt.title || apt.type,
                 location: 'Fuleda',
                 heroImage: apt.gallery?.heroImage || apt.gallery?.images?.[0] || apt.images?.[0] || '/images/fuleda/fuleda_1.webp',
+                images: apt.gallery?.images || apt.images || [],
                 photoCount: apt.gallery?.images?.length || apt.images?.length || 0,
                 guests: apt.guests || 'Brak',
                 price: apt.price || 'Brak',
@@ -139,6 +145,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 name: kisajnoData.title,
                 location: 'Kisajno',
                 heroImage: kisajnoData.gallery?.heroImage || kisajnoData.gallery?.images?.[0] || kisajnoData.images?.[0] || '/images/kisajno/kisajno_1.webp',
+                images: kisajnoData.gallery?.images || kisajnoData.images || [],
                 photoCount: kisajnoData.gallery?.images?.length || kisajnoData.images?.length || 0,
                 guests: kisajnoData.guests || 'Brak',
                 price: kisajnoData.price || 'Brak',
@@ -249,9 +256,9 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                                     <tr key={item.id} className={`transition-colors hover:${darkMode ? 'bg-slate-800/30' : 'bg-slate-50'}`}>
                                         <td className="px-6 py-3">
                                             <button 
-                                                onClick={() => setSelectedImage(item.heroImage)}
+                                                onClick={() => setSelectedGallery({ images: item.images.length > 0 ? item.images : [item.heroImage], index: 0 })}
                                                 className="relative group block w-16 h-12 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                                title="Kliknij by powiększyć"
+                                                title="Kliknij by powiększyć galerię"
                                             >
                                                 <img src={item.heroImage} alt={item.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -332,21 +339,84 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 </div>
             </main>
 
-            {/* Image Modal */}
-            {selectedImage && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setSelectedImage(null)}>
-                    <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm animate-in fade-in duration-200"></div>
+            {/* Image Gallery Modal */}
+            {selectedGallery && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setSelectedGallery(null)}>
+                    <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-sm animate-in fade-in duration-200"></div>
                     <div 
-                        className="relative z-10 max-w-5xl w-full max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl border border-white/10 animate-in zoom-in-95 duration-200"
+                        className="relative z-10 w-full max-w-6xl max-h-[90vh] flex flex-col items-center animate-in zoom-in-95 duration-200"
                         onClick={e => e.stopPropagation()}
                     >
+                        {/* Close button */}
                         <button 
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors backdrop-blur-md"
+                            onClick={() => setSelectedGallery(null)}
+                            className="absolute -top-12 right-0 p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-colors"
                         >
-                            <LogOut size={20} className="rotate-180" />
+                            <LogOut size={24} className="rotate-180" />
                         </button>
-                        <img src={selectedImage} alt="Powiększenie" className="w-full h-full object-contain bg-black/50" style={{ maxHeight: '90vh' }} />
+                        
+                        {/* Main Image */}
+                        <div className="relative w-full h-[70vh] flex items-center justify-center mb-4">
+                            <img 
+                                src={selectedGallery.images[selectedGallery.index]} 
+                                alt={`Zdjęcie ${selectedGallery.index + 1}`} 
+                                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl" 
+                            />
+                            
+                            {/* Navigation */}
+                            {selectedGallery.images.length > 1 && (
+                                <>
+                                    <button 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedGallery({
+                                                ...selectedGallery,
+                                                index: selectedGallery.index === 0 ? selectedGallery.images.length - 1 : selectedGallery.index - 1
+                                            });
+                                        }}
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/80 text-white rounded-full transition-all"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                    </button>
+                                    <button 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedGallery({
+                                                ...selectedGallery,
+                                                index: selectedGallery.index === selectedGallery.images.length - 1 ? 0 : selectedGallery.index + 1
+                                            });
+                                        }}
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/80 text-white rounded-full transition-all"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                    </button>
+                                </>
+                            )}
+                        </div>
+
+                        {/* Thumbnails */}
+                        {selectedGallery.images.length > 1 && (
+                            <div className="w-full flex justify-center gap-2 overflow-x-auto pb-2 custom-scrollbar max-w-4xl">
+                                {selectedGallery.images.map((img, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setSelectedGallery({ ...selectedGallery, index: idx })}
+                                        className={`shrink-0 w-16 h-12 rounded-md overflow-hidden border-2 transition-all ${
+                                            idx === selectedGallery.index 
+                                                ? 'border-orange-500 opacity-100 scale-110' 
+                                                : 'border-transparent opacity-50 hover:opacity-100'
+                                        }`}
+                                    >
+                                        <img src={img} alt="" className="w-full h-full object-cover" />
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                        
+                        {/* Counter */}
+                        <div className="absolute -bottom-8 text-white/70 text-sm font-medium">
+                            {selectedGallery.index + 1} / {selectedGallery.images.length}
+                        </div>
                     </div>
                 </div>
             )}
