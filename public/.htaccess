@@ -1,3 +1,24 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Jeśli ktoś wchodzi na samą domenę (/) -> przekieruj na /pl
+    RewriteRule ^$ /pl/ [R=301,L]
+
+    # Jeśli ścieżka nie jest plikiem, nie jest katalogiem i nie ma prefiksu językowego -> dodaj /pl
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(pl|en|de|lt|cs)(/|$) [NC]
+    RewriteCond %{REQUEST_URI} !\.(jpeg|jpg|png|gif|webp|svg|ico|css|js|woff|woff2|ttf|otf|json)$ [NC]
+    RewriteRule ^(.*)$ /pl/$1 [R=301,L]
+
+    # Fallback dla statycznych plików HTML Next.js (np. /pl/apartamenty -> /pl/apartamenty.html)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
 <IfModule mod_expires.c>
     ExpiresActive On
 

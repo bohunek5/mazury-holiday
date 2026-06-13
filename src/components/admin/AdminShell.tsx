@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, LogOut, Languages, Home, Building2, TentTree, Sparkles } from "lucide-react";
+import { LayoutDashboard, LogOut, Languages, Home, Building2, TentTree, Sparkles, Calendar } from "lucide-react";
 import { ReactNode, useState } from "react";
 import { ADMIN_COOKIE_NAME } from "@/lib/admin/auth";
 
@@ -32,6 +32,12 @@ const navigation = [
         icon: TentTree
     },
     {
+        href: "https://panel.idobooking.com/",
+        label: "Kalendarze",
+        icon: Calendar,
+        external: true
+    },
+    {
         href: "/admin/translations",
         label: "Tłumaczenia",
         icon: Languages
@@ -59,15 +65,26 @@ export function AdminShell({ children }: AdminShellProps) {
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100">
-            <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col lg:flex-row">
-                <aside className="border-b border-white/10 bg-slate-950/95 px-4 py-4 lg:min-h-screen lg:w-80 lg:border-b-0 lg:border-r lg:px-6 lg:py-8">
+        <div className="min-h-screen bg-slate-950 text-slate-100 relative">
+            {/* Blurred Background Image */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <img 
+                    src="/images/hero_1.webp" 
+                    alt="" 
+                    className="w-full h-full object-cover opacity-20 blur-3xl scale-110" 
+                />
+            </div>
+            
+            <div className="flex min-h-screen w-full flex-col lg:flex-row relative z-10">
+                <aside className="border-b border-white/10 bg-slate-950/60 backdrop-blur-xl px-4 py-4 lg:min-h-screen lg:w-80 lg:border-b-0 lg:border-r lg:px-6 lg:py-8 shrink-0">
                     <div className="mb-8 flex items-center justify-between gap-3">
                         <div>
-                            <p className="text-xs uppercase tracking-widest text-amber-300/90">
-                                Mazury.Holiday
-                            </p>
-                            <h1 className="mt-2 text-2xl font-semibold">Admin Panel</h1>
+                            <img 
+                                src="/images/logo-poziom.svg" 
+                                alt="Mazury Holiday" 
+                                className="h-8 w-auto brightness-0 invert opacity-90"
+                            />
+                            <h1 className="mt-4 text-xl font-medium tracking-tight text-white">Panel Administracyjny</h1>
                         </div>
 
                         <Link
@@ -83,6 +100,21 @@ export function AdminShell({ children }: AdminShellProps) {
                         {navigation.map((item) => {
                             const Icon = item.icon;
                             const active = pathname === item.href;
+
+                            if (item.external) {
+                                return (
+                                    <a
+                                        key={item.href}
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium transition bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500 hover:text-white"
+                                    >
+                                        <Icon className="h-4 w-4" />
+                                        {item.label}
+                                    </a>
+                                );
+                            }
 
                             return (
                                 <Link

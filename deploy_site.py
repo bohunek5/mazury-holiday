@@ -7,14 +7,14 @@ ZIP_PATH = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/deploy.zip"
 FTP_HOST = "serwer194525.lh.pl"
 FTP_USER = "serwer194525"
 FTP_PASS = "KochamAntygravity2026$"
-REMOTE_DIR = "public_html/mazury.holiday"
+REMOTE_DIR = "public_html/autoinstalator/serwer194525.lh.pl/wordpress162339"
 HTTP_URL = "https://mazuryholiday.pl/unzip.php"
 
 # Create deploy.zip excluding the huge images dir to save time, 
-# but including the specific C apartments we touched
+# but including the specific C apartments we touched and hero images
 print("Zipping...")
 os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} . -x 'images/*'")
-os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images/stranda/C* images/koncerty.jpg images/stranda.webp")
+os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images/stranda/*/hero_1.webp images/stranda/C* images/koncerty.jpg images/stranda.webp images/skorupki/* images/fuleda/*")
 print("Zipped!")
 
 with open("unzip.php", "w") as f:
@@ -32,9 +32,19 @@ if ($zip->open('deploy.zip') === TRUE) {
 @unlink('unzip.php');
 ?>""")
 
+class MyFTP_TLS(ftplib.FTP_TLS):
+    def ntransfercmd(self, cmd, rest=None):
+        conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
+        if self._prot_p:
+            conn = self.context.wrap_socket(conn,
+                                            server_hostname=self.host,
+                                            session=self.sock.session)
+        return conn, size
+
 print("Connecting to FTP...")
-ftp = ftplib.FTP(FTP_HOST)
+ftp = MyFTP_TLS(FTP_HOST)
 ftp.login(FTP_USER, FTP_PASS)
+ftp.prot_p()
 ftp.cwd(REMOTE_DIR)
 
 print("Uploading unzip.php...")

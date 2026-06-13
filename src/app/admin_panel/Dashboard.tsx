@@ -10,6 +10,7 @@ import { pokojeFuledaData } from '@/data/pokoje-fuleda-data';
 import { fuledaApartments } from '@/data/fuleda-data';
 import { kisajnoData } from '@/data/kisajno-data';
 import { cottagesData } from '@/data/cottages-data';
+import ICalCalendar from '@/components/ICalCalendar';
 
 interface DashboardProps {
     onLogout: () => void;
@@ -33,6 +34,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
     const [darkMode, setDarkMode] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGallery, setSelectedGallery] = useState<{images: string[], index: number} | null>(null);
+    const [stats, setStats] = useState<{sizesByItem: Record<string, string>, translationStats: {en: number, de: number, totalSizeAllMB: string}} | null>(null);
 
     // Prepare unified data
     const allItems = useMemo<UnifiedItem[]>(() => {
@@ -40,8 +42,19 @@ export default function Dashboard({ onLogout }: DashboardProps) {
 
         const flattenAmenities = (amenitiesObj: any): string[] => {
             if (!amenitiesObj) return [];
-            if (Array.isArray(amenitiesObj)) return amenitiesObj;
             const list: string[] = [];
+            
+            if (Array.isArray(amenitiesObj)) {
+                amenitiesObj.forEach((item: any) => {
+                    if (typeof item === 'string') {
+                        list.push(item);
+                    } else if (item && typeof item === 'object' && Array.isArray(item.items)) {
+                        list.push(...item.items);
+                    }
+                });
+                return list;
+            }
+            
             Object.values(amenitiesObj).forEach((arr: any) => {
                 if (Array.isArray(arr)) list.push(...arr);
             });
@@ -49,40 +62,26 @@ export default function Dashboard({ onLogout }: DashboardProps) {
         };
 
         // 1. Stranda
-        Object.values(strandaApartments).forEach(apt => {
+        Object.values(strandaApartments).forEach((apt: any) => {
             items.push({
                 id: `Stranda-${apt.id}`,
                 name: apt.title,
                 location: 'Stranda',
-                heroImage: apt.images?.[0] || '/images/hero_1.webp',
-                images: apt.images || [],
-                photoCount: apt.images?.length || 0,
+                heroImage: apt.gallery?.heroImage || apt.gallery?.images?.[0] || apt.images?.[0] || '/images/hero_1.webp',
+                images: apt.gallery?.images || apt.images || [],
+                photoCount: apt.gallery?.images?.length || apt.images?.length || 0,
                 guests: apt.guests || 'Brak',
                 price: apt.price || 'Brak',
                 calendarLinks: [
                     ...(apt.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${apt.idoBookingId}` }] : []),
+                    ...(apt.icalUrl ? [{ name: 'iCal', url: apt.icalUrl }] : []),
                     ...(apt.icalLink ? [{ name: 'iCal', url: apt.icalLink }] : [])
                 ],
                 amenities: flattenAmenities(apt.amenities)
             });
         });
 
-        // 2. Skorupki (skorupkiData properties)
-        items.push({
-            id: `Skorupki`,
-            name: skorupkiData.title || 'Domki Skorupki',
-            location: 'Skorupki',
-            heroImage: skorupkiData.gallery?.heroImage || cottagesData[0]?.heroImage || '/images/skorupki/skorupki_1.webp',
-            images: skorupkiData.gallery?.images || cottagesData.map(c => c.image) || [],
-            photoCount: skorupkiData.gallery?.images?.length || 58,
-            guests: skorupkiData.guests || '6',
-            price: skorupkiData.price || 'Brak',
-            calendarLinks: [
-                ...(skorupkiData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${skorupkiData.idoBookingId}` }] : []),
-                ...(skorupkiData.icalUrl ? [{ name: 'iCal', url: skorupkiData.icalUrl }] : [])
-            ],
-            amenities: flattenAmenities(skorupkiData.amenities)
-        });
+        // 2. Skorupki (złączone w jeden domek bez kalendarza - usunięte na rzecz listy poszczególnych domków)
 
         // 3. Mikołajki
         items.push({
@@ -151,11 +150,70 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 price: kisajnoData.price || 'Brak',
                 calendarLinks: [
                     ...(kisajnoData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${kisajnoData.idoBookingId}` }] : []),
-                    ...(kisajnoData.icalUrl ? [{ name: 'iCal', url: kisajnoData.icalUrl }] : [])
+                    ...(kisajnoData.icalUrl ? [{ name: 'iCal', url: kisajnoData.icalUrl }] : []),
+                    ...(kisajnoData.icalLink ? [{ name: 'iCal', url: kisajnoData.icalLink }] : [])
                 ],
                 amenities: flattenAmenities(kisajnoData.amenities)
             });
         }
+
+        // 7. Cottages (Skorupki poszczególne domki)
+        if (Array.isArray(cottagesData)) {
+            cottagesData.forEach((cottage) => {
+                items.push({
+                    id: `Skorupki-S${cottage.id}`,
+                    name: cottage.name || `Domek S${cottage.id}`,
+                    location: 'Skorupki',
+                    heroImage: cottage.heroImage || '/images/skorupki/skorupki_1.webp',
+                    images: [],
+                    photoCount: 0,
+                    guests: cottage.guests || 'Brak',
+                    price: cottage.price || 'Brak',
+                    calendarLinks: [], // "w domki skorupki nie ma kalendarza wiec tam nie dawaj"
+                    amenities: flattenAmenities(cottage.amenities)
+                });
+            });
+        }
+
+        // 8. Stillo
+        items.push({
+            id: `Stillo-1`,
+            name: 'Jacht Motorowy Stillo 30 VIP',
+            location: 'Stillo',
+            heroImage: '/images/czarter/gallery/stillo_1.webp',
+            images: Array.from({ length: 21 }, (_, i) => `/images/czarter/gallery/stillo_${i + 1}.webp`),
+            photoCount: 21,
+            guests: '6-8',
+            price: 'Brak',
+            calendarLinks: [],
+            amenities: ['Ster strumieniowy', 'Ogrzewanie', 'Lodówka', 'TV', 'Prysznic']
+        });
+
+        // Custom sort logic
+        const locationOrder = ['Stranda', 'Kisajno', 'Fuleda', 'Pokoje Fuleda', 'Skorupki', 'Stillo', 'Mikołajki'];
+        
+        items.sort((a, b) => {
+            const locA = locationOrder.indexOf(a.location);
+            const locB = locationOrder.indexOf(b.location);
+            
+            if (locA !== locB) {
+                const aIdx = locA === -1 ? 999 : locA;
+                const bIdx = locB === -1 ? 999 : locB;
+                return aIdx - bIdx;
+            }
+            
+            // If same location, sort Stranda by ID to keep A, B, C order
+            if (a.location === 'Stranda') {
+                const aCode = a.id.replace('Stranda-', '');
+                const bCode = b.id.replace('Stranda-', '');
+                
+                // Studio and C304 are part of C, but standard string sort puts Studio after C. That's fine or we can force C prefix.
+                // Let's just use string localeCompare which works well for A, B, C
+                return aCode.localeCompare(bCode, 'pl');
+            }
+            
+            return a.name.localeCompare(b.name, 'pl');
+        });
 
         return items;
     }, []);
@@ -170,19 +228,53 @@ export default function Dashboard({ onLogout }: DashboardProps) {
         );
     }, [allItems, searchTerm]);
 
+    useEffect(() => {
+        const fetchStats = async () => {
+            const imagesByItem: Record<string, string[]> = {};
+            allItems.forEach(item => {
+                imagesByItem[item.id] = item.images.length > 0 ? item.images : [item.heroImage].filter(Boolean);
+            });
+            try {
+                const res = await fetch('/api/admin/stats', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ imagesByItem })
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    setStats(data);
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        };
+        if (allItems.length > 0) fetchStats();
+    }, [allItems]);
+
     const toggleTheme = () => setDarkMode(!darkMode);
 
     return (
         <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-800'}`}>
+            {/* Blurred Background Image */}
+            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+                <img 
+                    src="/images/hero_1.webp" 
+                    alt="" 
+                    className="w-full h-full object-cover opacity-10 blur-3xl scale-110" 
+                />
+            </div>
+
             {/* Header */}
             <header className={`sticky top-0 z-40 border-b backdrop-blur-md px-6 py-4 flex items-center justify-between transition-colors duration-300 ${darkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
-                <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-orange-500/30">
-                        <Layers size={22} />
-                    </div>
-                    <div>
+                <div className="flex items-center space-x-4">
+                    <img 
+                        src="/images/logo-poziom.svg" 
+                        alt="Mazury Holiday" 
+                        className={`h-8 w-auto ${darkMode ? 'brightness-0 invert opacity-90' : ''}`}
+                    />
+                    <div className="hidden sm:block">
                         <h1 className="text-xl font-bold tracking-tight">Mazury Holiday</h1>
-                        <p className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Przegląd Oferty (Panel)</p>
+                        <p className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Przegląd Oferty</p>
                     </div>
                 </div>
 
@@ -223,7 +315,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             </header>
 
             {/* Main Content */}
-            <main className="p-6 max-w-7xl mx-auto">
+            <main className="p-2 sm:p-6 w-full relative z-10">
                 {/* Stats row */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                     <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
@@ -233,6 +325,31 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                             <p className="text-2xl font-bold">{allItems.length}</p>
                         </div>
                     </div>
+                    {stats && (
+                        <>
+                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
+                                <div className="p-3 bg-indigo-500/10 text-indigo-500 rounded-xl"><ImageIcon size={24} /></div>
+                                <div>
+                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Waga Danych</p>
+                                    <p className="text-2xl font-bold">{stats.translationStats.totalSizeAllMB} MB</p>
+                                </div>
+                            </div>
+                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
+                                <div className="p-3 bg-green-500/10 text-green-500 rounded-xl"><span className="text-lg font-bold">EN</span></div>
+                                <div>
+                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Tłumaczenie EN</p>
+                                    <p className="text-2xl font-bold">{stats.translationStats.en}%</p>
+                                </div>
+                            </div>
+                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
+                                <div className="p-3 bg-orange-500/10 text-orange-500 rounded-xl"><span className="text-lg font-bold">DE</span></div>
+                                <div>
+                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Tłumaczenie DE</p>
+                                    <p className="text-2xl font-bold">{stats.translationStats.de}%</p>
+                                </div>
+                            </div>
+                        </>
+                    )}
                 </div>
 
                 {/* Table */}
@@ -245,6 +362,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                                     <th className="px-6 py-4 font-medium">ID / Nazwa</th>
                                     <th className="px-6 py-4 font-medium">Lokalizacja</th>
                                     <th className="px-6 py-4 font-medium">Zdjęcia</th>
+                                    <th className="px-6 py-4 font-medium">Waga (MB)</th>
                                     <th className="px-6 py-4 font-medium">Goście</th>
                                     <th className="px-6 py-4 font-medium">Udogodnienia</th>
                                     <th className="px-6 py-4 font-medium">Cena</th>
@@ -283,6 +401,9 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                                             </div>
                                         </td>
                                         <td className="px-6 py-4">
+                                            <span className="font-medium">{stats?.sizesByItem[item.id] ? `${stats.sizesByItem[item.id]} MB` : '...'}</span>
+                                        </td>
+                                        <td className="px-6 py-4">
                                             <div className="flex items-center space-x-1.5">
                                                 <User size={14} className={darkMode ? 'text-slate-500' : 'text-slate-400'} />
                                                 <span className="font-medium">{item.guests}</span>
@@ -304,24 +425,30 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                                         <td className="px-6 py-4 font-medium">
                                             {item.price}
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 align-top">
                                             {item.calendarLinks.length > 0 ? (
-                                                <div className="flex space-x-2">
+                                                <div className="flex flex-col gap-4 w-[320px]">
                                                     {item.calendarLinks.map((link, i) => (
-                                                        <a 
-                                                            key={i} 
-                                                            href={link.url} 
-                                                            target="_blank" 
-                                                            rel="noopener noreferrer"
-                                                            className="inline-flex items-center space-x-1 px-2.5 py-1 bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-500/20 rounded-md text-xs font-medium transition-colors"
-                                                        >
-                                                            <Calendar size={12} />
-                                                            <span>{link.name}</span>
-                                                        </a>
+                                                        link.name === 'iCal' ? (
+                                                            <div key={i} className="transform scale-[0.85] origin-top-left">
+                                                                <ICalCalendar icalUrl={link.url} apartmentId={item.name} />
+                                                            </div>
+                                                        ) : (
+                                                            <a 
+                                                                key={i} 
+                                                                href={link.url} 
+                                                                target="_blank" 
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center space-x-1 px-3 py-2 bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-500/20 rounded-lg text-sm font-medium transition-colors w-max"
+                                                            >
+                                                                <Calendar size={14} />
+                                                                <span>{link.name} panel</span>
+                                                            </a>
+                                                        )
                                                     ))}
                                                 </div>
                                             ) : (
-                                                <span className={`text-xs italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak linków</span>
+                                                <span className={`text-xs italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak kalendarza</span>
                                             )}
                                         </td>
                                     </tr>

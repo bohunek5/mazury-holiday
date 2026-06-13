@@ -1,0 +1,782 @@
+{
+  "termsPage": {
+    "title": "Terms of Service",
+    "intro": "The following Regulations define the rules for using apartment and cottage rental services, as well as charter services offered by Mazury.Holiday. Making a reservation is equivalent to reading and accepting the provisions of the Regulations.",
+    "sections": [
+      {
+        "title": "§1. General Provisions",
+        "list": [
+          "The service provider and administrator of the facility is the company RAD'LIGHT, ul. Myśliwska 3, 11-500 Giżycko.",
+          "These Regulations apply to all reservations made through the website mazury.holiday, by phone, and by email.",
+          "The hotel day begins at 3:00 PM on the day of arrival and ends at 11:00 AM on the day of departure."
+        ]
+      },
+      {
+        "title": "§2. Reservation and Payments",
+        "list": [
+          "Reservations can be made through the booking system, by phone, or by email.",
+          "A reservation becomes guaranteed after paying a deposit of 30% of the total stay value within the period specified by the Service Provider.",
+          "Failure to pay the deposit within the specified period is equivalent to canceling the reservation.",
+          "The remaining amount for the stay is collected at the latest on the day of arrival, during the handover of the keys.",
+          "In case of cancellation of the stay, the paid deposit is non-refundable. Shortening the stay does not oblige the Service Provider to refund the fees paid for unused days."
+        ]
+      },
+      {
+        "title": "§3. Rules of Stay",
+        "list": [
+          "The Guest is obliged to present a photo ID at the time of check-in.",
+          "The number of people staying in the facility cannot exceed the number specified in the reservation. Unregistered persons may stay on the premises only between 8:00 AM and 10:00 PM with the consent of the Service Provider.",
+          "Smoking of tobacco products and e-cigarettes is strictly prohibited in the apartments and cottages. Smoking is allowed only outdoors in designated areas.",
+          "The Guest bears full financial responsibility for any damage or destruction of equipment and technical devices caused by their fault or the fault of their visitors.",
+          "Quiet hours must be observed in the facilities from 10:00 PM to 7:00 AM the following day."
+        ]
+      },
+      {
+        "title": "§4. Stay with Pets",
+        "list": [
+          "Staying with pets is possible only after prior notification and obtaining the Service Provider's approval during booking.",
+          "An additional fee may be charged for the pet's stay in accordance with the current price list.",
+          "The pet owner bears full financial and legal responsibility for any damage caused by the pet on the premises.",
+          "Pets must not be left unattended in the apartment or cottage. Dogs in common areas must be kept on a leash."
+        ]
+      },
+      {
+        "title": "§5. Final Provisions",
+        "list": [
+          "The Service Provider is not responsible for Guests' property left in the facility.",
+          "The Service Provider reserves the right to refuse to accept a Guest who, during a previous stay, flagrantly violated the Regulations, causing damage to the property of the facility or other Guests.",
+          "In the event of a violation of the provisions of the Regulations, the Service Provider has the right to check out the Guest immediately without refunding the fees paid."
+        ]
+      }
+    ]
+  },
+  "gdprPage": {
+    "title": "Information Clause (GDPR)",
+    "intro": "Pursuant to Art. 13 of the General Data Protection Regulation of April 27, 2016 (Official Journal of the EU L 119 of 04.05.2016), I inform that:",
+    "list": [
+      "<strong>The administrator of your personal data is:</strong> RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
+      "<strong>Contact with the Personal Data Administrator:</strong> rezerwacje@mazury.holiday",
+      "Your personal data will be processed for the purpose of providing the service based on Art. 6 sec. 1 lit. a of the general regulation on the protection of personal data of April 27, 2016.",
+      "Your personal data will be stored until the consent is revoked.",
+      "You have the right to request access to your personal data from the administrator, the right to rectify, delete, or limit processing, the right to withdraw consent, and the right to data portability.",
+      "Providing personal data is voluntary, however, failure to provide data may result in the inability to contact you to provide the service. At the same time, pursuant to art.6 sec.1 lit. a of the general regulation on the protection of personal data of April 27, 2016, I consent to the processing of my personal data for the purpose of telephone or e-mail contact regarding the arrangement of the service."
+    ]
+  },
+  "contactExtra": {
+    "callUs": "Call us",
+    "writeUs": "Write to us",
+    "mapLabel": "Location map:"
+  },
+  "coopExtra": {
+    "heroTitle": "B2B Cooperation",
+    "heroSubtitle": "YOUR PROPERTY IN THE BEST HANDS IN MASURIA",
+    "securityTitle": "Security",
+    "securityDesc": "Guest verification and damage insurance guarantee the safety of your investment.",
+    "readyTitle": "Ready for higher profits?",
+    "readyDesc": "Contact us and see how much your apartment or cottage in Masuria can earn.",
+    "letsTalk": "Let's talk"
+  },
+  "amenityNames": {
+    "Klimatyzacja": "Air conditioning",
+    "WiFi": "WiFi",
+    "Smart TV": "Smart TV",
+    "Prysznic": "Shower",
+    "Ręczniki": "Towels",
+    "Zmywarka": "Dishwasher",
+    "Płyta indukcyjna": "Induction hob",
+    "Pościel": "Bed linen",
+    "Łóżka małżeńskie i pojedyncze": "Double and single beds",
+    "Prywatny taras z grillem": "Private terrace with grill",
+    "Miejsce na ognisko": "Campfire spot",
+    "Dostęp do jeziora": "Lake access",
+    "Miejsce parkingowe": "Parking space",
+    "W pełni wyposażony aneks kuchenny": "Fully equipped kitchenette",
+    "Aneks kuchenny (płyta, lodówka, zmywarka)": "Kitchenette (hob, fridge, dishwasher)",
+    "Ekspres do kawy": "Coffee machine",
+    "Taras z meblami wypoczynkowymi": "Terrace with lounge furniture",
+    "Prywatne Jacuzzi": "Private Jacuzzi",
+    "Balkon z meblami wypoczynkowymi": "Balcony with lounge furniture"
+  },
+  "nav": {
+    "about": "About Us",
+    "apartments": "Apartments",
+    "cottages": "Cottages",
+    "charter": "Charter",
+    "concerts": "Concerts",
+    "port": "Port",
+    "attractions": "Attractions",
+    "cooperation": "Cooperation",
+    "contact": "Contact",
+    "rooms": "Rooms",
+    "bookBtn": "Book Now",
+    "language": "Language",
+    "back": "Back",
+    "euProjects": "EU Projects"
+  },
+  "hero": {
+    "title": "Holidays in Masuria",
+    "subtitle": "CHECK HOW YOU CAN SPEND UNIQUE MOMENTS",
+    "apartmentsBtn": "Our Apartments",
+    "charterBtn": "730 067 027",
+    "bookOnlineBtn": "Book Online",
+    "scrollDown": "Scroll down"
+  },
+  "intro": {
+    "tag": "Mazury.Holiday",
+    "title": "Welcome to",
+    "titleHighlight": "Great Lakes",
+    "p1": "Discover the magic of Masuria from our luxury apartments.",
+    "p2": "Whether you seek peace in Giżycko or luxury in Fuleda."
+  },
+  "luxuryBenefits": {
+    "tag": "Advantages of our offer",
+    "title": "Luxury is in the details",
+    "quality": {
+      "title": "High quality finish",
+      "desc": "We have taken care of the finish in each of our apartments. We hope you will notice all the hidden and visible details"
+    },
+    "views": {
+      "title": "Lake views",
+      "desc": "On beautiful sunny days, from sunrise to sunset - TV and VOD movies can replace the beautiful views of Lake Kisajno or Dobskie"
+    },
+    "comfort": {
+      "title": "Sleep in comfortable conditions",
+      "desc": "Sleep is essential for rest and affects the quality of your stay with us. All beds are equipped with very good and comfortable mattresses"
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "desc": "We have prepared a Wi-Fi connection in our apartments. It is not necessary for relaxation, but it helps, for example, for remote work"
+    },
+    "gifts": {
+      "title": "Starter kit",
+      "desc": "For each of our guests, we have prepared a small gift, which is an element of our holiday offer in the apartments"
+    },
+    "flexible": {
+      "title": "Flexible reservation",
+      "desc": "We understand that not every trip can be fully planned. That's why we offer flexible booking and cancellation terms"
+    }
+  },
+  "apartments": {
+    "title": "Our Apartments",
+    "description": "Choose the perfect place for your rest.",
+    "details": "Details",
+    "pricePrefix": "from",
+    "night": "night",
+    "people": "people",
+    "bookBtn": "BOOK NOW",
+    "items": {
+      "stranda": {
+        "title": "Stranda Residence Apartments",
+        "location": "Giżycko",
+        "description": "Comfortable apartments in the heart of Stranda port."
+      },
+      "kisajno": {
+        "title": "Kisajno Apartments",
+        "location": "Giżycko",
+        "description": "Luxury on the shores of Lake Kisajno."
+      },
+      "fuleda": {
+        "title": "Fuleda Apartments",
+        "location": "Fuleda, Jezioro Dobskie",
+        "description": "An oasis of peace away from the city."
+      },
+      "domkiSkorupki": {
+        "title": "Skorupki Cottages",
+        "location": "Skorupki, Lake Tałty",
+        "description": "Luxury cottages in the heart of Masurian nature."
+      },
+      "pokojeFuleda": {
+        "title": "Fuleda Rooms",
+        "location": "Fuleda, Lake Dobskie",
+        "description": "Cozy rooms with a lake view in the quiet zone."
+      },
+      "mikolajki": {
+        "title": "Gigu Apartment Mikołajki",
+        "location": "Plac Wolności, Mikołajki",
+        "description": "Modern apartment in the very center of Mikołajki."
+      }
+    }
+  },
+  "cottagesAndRooms": {
+    "title": "Our cottages and rooms",
+    "description": "Feel the closeness of nature in comfortable conditions."
+  },
+  "charter": {
+    "tag": "No license",
+    "title": "Motor Yacht Charter",
+    "description": "Stillo 30 motor yacht available without a license.",
+    "model": "Stillo 30 (2020)",
+    "cabins": "3 Cabins",
+    "checkBtn": "Check availability",
+    "premiumFleet": "Premium Fleet",
+    "feature1": "No license",
+    "feature2": "Year 2020",
+    "feature3": "Luxury equipment",
+    "detailsBtn": "Details",
+    "thrusters": "Bow thrusters",
+    "heating": "Heating",
+    "modelVip": "Stillo 30 VIP",
+    "boatType": "Luxury Houseboat without license"
+  },
+  "stranda": {
+    "subtitle": "Luxury by Lake Kisajno",
+    "description": "Stranda Residence combines modern design with nature.",
+    "building": "Building",
+    "apartment": "Apartment",
+    "filters": {
+      "jacuzzi": "Jacuzzi only",
+      "size": "Size",
+      "sizeAny": "Any",
+      "size4": "Max 4 people",
+      "size6": "Max 6 people",
+      "floor": "Floor",
+      "floorAny": "Any",
+      "floorParter": "Ground floor",
+      "floorPietro": "Upper floor"
+    }
+  },
+  "details": {
+    "about": "About",
+    "amenities": "Amenities",
+    "booking": "Booking",
+    "checkAvailability": "Check availability and book.",
+    "callBtn": "Call",
+    "lowPrice": "Best price guarantee.",
+    "priceFrom": "Price from",
+    "guests": "Guests",
+    "backToList": "Back",
+    "descriptionPart1": "Luxury apartment in building",
+    "descriptionPart2": "at Stranda Residence.",
+    "descriptionPart3": "Unforgettable views of Lake Kisajno.",
+    "items": {
+      "view": "Lake view",
+      "ac": "A/C",
+      "terrace": "Terrace",
+      "kitchen": "Kitchenette",
+      "tv": "Smart TV",
+      "wifi": "WiFi",
+      "parking": "Parking",
+      "sauna": "Sauna access",
+      "roomSalon": "Living Room",
+      "roomKitchen": "Kitchen",
+      "roomBedroom": "Bedroom",
+      "roomBathroom": "Bathroom",
+      "salonFeatures": "TV, 2-person sofa, table, chairs, A/C, wifi",
+      "kitchenFeatures": "induction hob, fridge, dishwasher, microwave, set of dishes and cutlery",
+      "bedroomFeatures": "TV, 180x200 bed, bedding set, clothes dryer, ironing board, iron, A/C",
+      "bathroomFeatures": "shower, hair dryer, bathrobes, body lotion",
+      "terraceAndOther": "Terrace and Other"
+    }
+  },
+  "footer": {
+    "brandDesc": "Unique moments in Masuria.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "followTitle": "Follow",
+    "rights": "All rights reserved.",
+    "linksTitle": "Links"
+  },
+  "skorupki": {
+    "title": "Skorupki Cottages",
+    "subtitle": "Your luxury haven in the heart of Masuria",
+    "introTitle": "Intimate settlement in Masuria",
+    "descriptionPart1": "Skorupki Cottages is an intimate settlement of 10 elegant holiday cottages, located in the village of Skorupki, in one of the most peaceful and green parts of Masuria.",
+    "descriptionPart2": "This is a proposal for guests who appreciate space, privacy and high standard, and at the same time want to stay close to nature. The cottages are located approx. 350 meters from the lake, and guests have at their disposal a separate, private recreational area by the water.",
+    "descriptionPart3": "🏡 Comfort and elegance for up to 6 people. Each cottage was designed to ensure maximum comfort of rest: two independent bedrooms on the first floor, a living room with a sofa bed on the ground floor, a modern, fully equipped kitchenette, an elegant bathroom with a shower, a covered terrace – the perfect place for morning coffee or an evening glass of wine. Carefully selected materials, bright interiors and a functional layout favor both short stays and longer rest.",
+    "descriptionPart4": "🌊 Private zone by the lake. Guests of our cottages have access to a dedicated recreational area by the lake, where awaits: an atmospheric place for a bonfire, a playground for children, discreetly inscribed in the natural surroundings, a space for relaxation, rest and spending time peacefully by the water. It is the perfect space for summer evenings and moments of silence away from the daily rush.",
+    "externalAmenities": "🌲 Peace, space and nature. The location of the settlement ensures: an intimate atmosphere and silence, proximity to lakes and Masurian forests, excellent conditions for walking, cycling and outdoor recreation.",
+    "areaTitle": "Why Skorupki Cottages?",
+    "areaDesc": "✔ only 10 cottages – intimacy and privacy. \n✔ 350 m from the lake + private area by the water. \n✔ elegant standard and refined interiors. \n✔ perfect place for a quiet, quality rest. \n✔ service standard www.Mazury.Holiday",
+    "amenitiesTitle": "Cottage Amenities",
+    "galleryTitle": "Gallery",
+    "expandGallery": "See more photos",
+    "collapseGallery": "Collapse gallery",
+    "ctaTitle": "Feel the magic of Skorupki",
+    "ctaDesc": "Booking a cottage is the first step to an unforgettable vacation. Call us and ask about available dates.",
+    "amenities": {
+      "fullEquip": "Fully equipped",
+      "garden": "Private garden",
+      "bonfire": "BBQ and bonfire",
+      "parking": "Parking",
+      "wifi": "WiFi",
+      "ac": "Air conditioning",
+      "waterAccess": "Water access",
+      "peace": "Peace and quiet"
+    },
+    "details": {
+      "interiorTitle": "A Spacious Interior",
+      "interiorDesc": "On the ground floor, a spacious living area awaits you with air conditioning, a large TV, and a sofa bed for 2 people. The upper floor is a sleeping zone: a bedroom with a double bed (180x200) and a second room with two single beds (90x200) that can be joined.",
+      "terraceTitle": "Terrace and Nature",
+      "terraceDesc": "Each cottage has a large, covered terrace with garden furniture, sun loungers, and its own grill. It's the perfect place for a common feast regardless of the weather. There is a private piece of lawn in front of the cottage.",
+      "activityTitle": "Activity and Relaxation",
+      "activityDesc": "Just 350m separates you from the private lakeside area with a fishing pier, beach volleyball court, and playground. In the evening, we invite you to the common area with gazebos for a bonfire. We accept pets – take your pet with you!",
+      "locationTitle": "Location and Amenities",
+      "locationDesc": "You are 10 minutes from Mikołajki and the Tropikana Water Park. On-site you have free parking, fast WiFi, and a starter kit (coffee, tea, water). In the cottage, you will also find an iron, ironing board, and clothes dryer.",
+      "amenitiesBlockTitle": "EQUIPMENT AND DETAILS",
+      "bedroomTitle": "Bedrooms and Living Room",
+      "bedroomItems": [
+        "Maximum 6 guests (approx. 55 m²)",
+        "Bedroom 1: Double bed 180x200",
+        "Bedroom 2: Two 90x200 beds (can be joined)",
+        "Living room: A/C, Smart TV, 2-person sofa",
+        "Bed linen and towels included"
+      ],
+      "cottageAmenitiesTitle": "Kitchen and Terrace",
+      "cottageAmenitiesItems": [
+        "Dishwasher and induction hob",
+        "Coffee machine and refrigerator",
+        "Full set of dishes, pots and cutlery",
+        "Covered terrace, loungers, private grill"
+      ],
+      "commonAreasTitle": "Private Shoreline (350m)",
+      "commonAreasItems": [
+        "Fishing pier and lake view",
+        "Bonfire place and covered gazebos",
+        "Children's playground",
+        "Beach volleyball court"
+      ],
+      "additionalTitle": "Additional Information",
+      "additionalItems": [
+        "Starter kit: water, coffee, tea",
+        "Free parking and fast WiFi",
+        "Pet-friendly property",
+        "Iron, board and dryer in each cottage"
+      ],
+      "price": "from 350 PLN / night",
+      "bookBtn": "Book Now"
+    }
+  },
+  "roomsPage": {
+    "heroTitle": "Rooms in Masuria",
+    "heroSubtitle": "Comfortable rooms in a quiet area",
+    "ctaText": "Looking for more space at Fuleda? Check out our",
+    "ctaLink": "Fuleda Apartments",
+    "items": {
+      "fuleda": {
+        "title": "Fuleda Rooms",
+        "description": "Comfortable rooms by Lake Dobskie in a silent zone. Perfect for families and nature lovers.",
+        "location": "Fuleda, Lake Dobskie",
+        "features": [
+          "2 rooms",
+          "Bathroom",
+          "Kitchen",
+          "Terrace",
+          "Lake access"
+        ],
+        "priceLabel": "Price",
+        "priceValue": "from 375 PLN/night",
+        "detailsBtn": "DETAILS",
+        "bookBtn": "BOOK NOW"
+      }
+    }
+  },
+  "calendar": {
+    "title": "Availability",
+    "loading": "Loading...",
+    "error": "Failed to fetch current data. Retrying...",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "legend": {
+      "busy": "Busy",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "available": "Available"
+    }
+  },
+  "strandaTypes": {
+    "oneBedroom": "with one bedroom",
+    "oneBedroomJacuzzi": "with one bedroom and jacuzzi",
+    "jacuzziTerrace": "with terrace jacuzzi",
+    "twoBedrooms": "with two bedrooms",
+    "deluxeJacuzzi": "Deluxe with jacuzzi",
+    "deluxeSaunaJacuzzi": "Deluxe with sauna & jacuzzi",
+    "apartment": "Apartment",
+    "studio": "Studio",
+    "suite": "Suite"
+  },
+  "strandaDescriptions": {
+    "genericDesc": "Our apartments are located in Giżycko, by the Stranda port in Stranda Residence apartment buildings, on the shore of Lake Kisajno (Tracz Bay). It offers a beautiful panoramic view of Lake Kisajno and the Great Masurian Lakes trail. The apartment is luxuriously finished and ensures high comfort of rest. On site, you can use the port's resources such as: tavern, concerts in the summer season, marina, water equipment rental, etc.",
+    "locationDesc": "The proximity to the center of Giżycko allows you to enjoy many tourist attractions, offers of many restaurants and pubs. The location of the facility also facilitates exploring Masuria in terms of nature, history and entertainment. Included parking space.",
+    "A103": "Apartment A103 Suite is located on the first floor of the building, has a large and spacious living room with a kitchenette and a sofa bed, a bedroom, a bathroom with a shower and a large terrace with furniture.",
+    "A104": "Apartment A104 Delux with a private jacuzzi on the terrace is located on the ground floor of building A. It consists of a spacious living room with a kitchenette and a sofa, a bedroom with one double bed, a bathroom with a shower, a terrace where there is a private jacuzzi.",
+    "A105": "Apartment A105 is a luxury unit with a jacuzzi, offering comfortable relaxation in a modern interior.",
+    "B102": "Apartment B102 located on the ground floor of building B has a spacious living room with a kitchenette and its own jacuzzi on the terrace.",
+    "B106": "Luxury apartment on the ground floor with two bedrooms and a large living room.",
+    "B202": "Unique apartment on the first floor with a private sauna and jacuzzi on the terrace.",
+    "C404": "Studio apartments are located in building C, they are accommodation with one double bed, a sofa bed for 2 people, a living room with a kitchenette, a bathroom with a shower and a terrace overlooking Tracz Bay and Stranda port.",
+    "A204": "Apartment A204 Suite is located on the first floor of building A, has a large and spacious living room with a kitchenette, a fold-out sofa, a bedroom, a bathroom with a shower, and a covered terrace overlooking Lake Kisajno.",
+    "A205": "Apartment A205 Suite has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, and a large covered terrace with furniture. It is located on the second floor of the building.",
+    "A302": "Apartment A302 Suite is located on the upper floor of building A, has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, and a covered terrace overlooking Lake Kisajno.",
+    "A305": "Apartment A305 Suite is located on the third floor of the building, offering a beautiful view of Lake Kisajno. It has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, and a large covered terrace with furniture.",
+    "A306": "Apartment A306 Suite has a large and spacious living room with a kitchenette and a fold-out sofa, two bedrooms, a bathroom with a shower, and a large covered terrace with furniture. It is located on the third floor of the building.",
+    "B103": "Apartment B103 Deluxe with a private jacuzzi on the terrace is located on the ground floor of building B. It consists of a spacious living room with a kitchenette and a sofa, a bedroom with one double bed, a bathroom with a shower, and a terrace with a private jacuzzi. All this with a beautiful view of Lake Kisajno, Tracz Bay, and Stranda port.",
+    "B201": "Apartment B201 Suite is located on the first floor of building B, has a large and spacious living room with a kitchenette, two bedrooms, two bathrooms (one with a shower, one with a bathtub), and a large terrace with a view of Tracz Bay and Lake Kisajno.",
+    "B304": "Apartment B304 with 1 bedroom is located in building B. It features a double bed in the bedroom, a living room with a kitchenette and a fold-out sofa for 2 people, a bathroom with a shower, and a terrace with a beautiful view of Lake Kisajno.",
+    "B305": "Apartment B305 with 1 bedroom is located in building B. It features a double bed in the bedroom, a living room with a kitchenette and a fold-out sofa for 2 people, a bathroom with a shower, and a terrace with a beautiful view of Lake Kisajno.",
+    "B401": "Apartment B401 Deluxe is located on the 3rd, highest floor of the building. It consists of a spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, a balcony, and a large terrace on the building's roof. All this with a beautiful view of the lake.",
+    "B402": "Apartment B402 Suite is located on the third floor of the building, has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, a balcony, and a large roof terrace with a view of the lake.",
+    "B404": "Apartment B404 Suite is located on the third floor of the building, has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, a balcony, and a large roof terrace with a view of the lake.",
+    "A403": "Apartment A403 Suite is located on the top 3rd floor of building A, has a large and spacious living room with a kitchenette and a fold-out sofa, a bedroom, a bathroom with a shower, a lower terrace, and a roof terrace with a private jacuzzi overlooking the Stranda port and Tracz Bay.",
+    "C301": "Apartment C301 Suite is located on the second floor of building C, has a spacious living room with a kitchenette and a sofa, two bedrooms, a bathroom with a shower, and a terrace with a view of Tracz Bay and Stranda port.",
+    "C304": "Apartment C304 Studio is located on the second floor of building C, features a sleeping area with a double bed, a fold-out sofa for 2, a living room with a kitchenette, a bathroom with a shower, and a terrace with a view of Tracz Bay and Stranda port. C304 Studio (maximum 4 people).",
+    "C205": "Studio-type apartments are located in building C, featuring a sleeping area with a double bed, a fold-out sofa for 2 people, a living room with a kitchenette, a bathroom with a shower, and a terrace with a view of Tracz Bay and Stranda port.",
+    "C_1_sypialnia": "Apartment in building C with 1 bedroom, offering a comfortable stay for up to 4 people.",
+    "C_Studio": "Studio in building C, a perfect place to relax with a view of Tracz Bay.",
+    "C_2_sypialnie": "Spacious apartment in building C with 2 bedrooms, perfect for families."
+  },
+  "kisajnoPage": {
+    "title": "Kisajno Apartments",
+    "subtitle": "Port Neptun, Giżycko",
+    "introTitle": "Unique standard by the lake",
+    "description": "We offer a modern apartment of 55 m², located on the ground floor with direct access to the charms of Lake Kisajno. Ideal for families or groups of friends, it ensures comfortable rest in premium standard.",
+    "features": [
+      "2 Separate bedrooms with large beds",
+      "Living room with comfortable sofa and TV",
+      "Full kitchen: dishwasher, microwave, fridge",
+      "Air conditioning and fast WiFi"
+    ],
+    "priceLabel": "Price from",
+    "priceValue": "500 PLN",
+    "priceUnit": "/ night",
+    "amenitiesTitle": "Amenities",
+    "bookingTitle": "Book your stay",
+    "bookingDesc": "Contact us directly to get the best offer and check availability on selected dates.",
+    "callAction": "Call",
+    "amenities": {
+      "view": "Lake view",
+      "ac": "Air conditioning",
+      "smartTv": "Smart TV",
+      "wifi": "WiFi",
+      "kitchen": "Full kitchen",
+      "dishwasher": "Dishwasher",
+      "parking": "Parking",
+      "port": "Port Neptun"
+    }
+  },
+  "mikolajkiPage": {
+    "title": "Gigu Apartment Mikołajki",
+    "subtitle": "Mikołajki Center – Wolności Square",
+    "introTitle": "Comfortable apartment in the heart of Mikołajki",
+    "description": "A modern and comfortable apartment located in the very heart of Mikołajki, at Wolności Square – the perfect location for guests who want everything close by. The apartment is designed for up to 4 guests and features a cozy bedroom with a comfortable double bed, a living room with a sofa bed (additional sleeping space), a fully equipped kitchenette, and a modern bathroom.",
+    "priceLabel": "Price from",
+    "priceValue": "350 PLN",
+    "priceUnit": "/ night",
+    "amenitiesTitle": "Amenities",
+    "bookingTitle": "Book your stay",
+    "bookingDesc": "Contact us directly or make an instant online booking using the button below.",
+    "callAction": "Call",
+    "comfortTitle": "Comfort & Amenities",
+    "comfortDesc": "Bedroom with 180x200 bed, fast WiFi, living room with TV and sofa bed",
+    "kitchenTitle": "Kitchen & Bathroom",
+    "kitchenDesc": "Kitchenette with dishwasher, modern bathroom with shower, starter kit (coffee, tea)",
+    "locationTitle": "Surroundings & Location",
+    "locationDesc": "Courtyard view, strict center of Mikołajki at Wolności Square, close to the lake",
+    "collapseGallery": "Collapse gallery",
+    "expandGallery": "See more photos",
+    "bookBtn": "BOOK NOW",
+    "amenities": {
+      "view": "Courtyard view",
+      "ac": "Air conditioning",
+      "smartTv": "Smart TV",
+      "wifi": "Free WiFi",
+      "kitchen": "Kitchenette",
+      "dishwasher": "Dishwasher",
+      "parking": "City center",
+      "port": "Close to the lake"
+    }
+  },
+  "fuledaPage": {
+    "title": "Fuleda Apartments",
+    "subtitle": "Silence, peace, nature by Lake Dobskie",
+    "introTitle": "Oasis of peace in the quiet zone",
+    "description": "Fuleda location is a proposal for those who want to completely cut off from the hustle and bustle of civilization. Located by Lake Dobskie, covered by the quiet zone, it offers conditions for true relaxation surrounded by a nature reserve.",
+    "groundFloorTitle": "Ground Floor Apartment",
+    "groundFloorDesc": "Two bedrooms with air conditioning (including one with a fireplace) and a huge terrace with direct access to the lake.",
+    "firstFloorTitle": "First Floor Apartment",
+    "firstFloorDesc": "Two bedrooms with air conditioning, stylishly finished interior with a view of the reserve and full amenities.",
+    "amenitiesTitle": "Premium Amenities",
+    "amenities": {
+      "ac": "Air conditioning",
+      "fireplace": "Fireplace",
+      "beach": "Private beach",
+      "bonfire": "Bonfire place",
+      "wifi": "WiFi",
+      "kitchen": "Full kitchen",
+      "washer": "Washing machine",
+      "pier": "Pier access"
+    }
+  },
+  "categories": {
+    "apartments": "Our Apartments",
+    "cottages": "Our Cottages",
+    "rooms": "Our Rooms",
+    "charter": "Yacht Charter"
+  },
+  "attractionsPage": {
+    "title": "Regional attractions",
+    "subtitle": "Giżycko and the heart of Masuria offer plenty of opportunities",
+    "showOnMap": "Show on map",
+    "tags": {
+      "history": "History",
+      "architecture": "Architecture",
+      "education": "Education",
+      "monument": "Monument",
+      "technology": "Technology",
+      "gizycko": "Giżycko",
+      "sailing": "Sailing",
+      "recreation": "Recreation",
+      "center": "Center",
+      "nature": "Nature",
+      "silence": "Silence",
+      "landscape": "Landscape",
+      "ww2": "WW2",
+      "museum": "Museum",
+      "view": "Viewpoint",
+      "cafe": "Cafe",
+      "hotel": "Hotel",
+      "animals": "Animals"
+    },
+    "boyen": {
+      "title": "Boyen Fortress",
+      "desc": "A 19th-century star-shaped Prussian fortress, a key historical point of the region. Perfectly preserved walls, gates, and barracks buildings represent a unique example of fortification."
+    },
+    "bridge": {
+      "title": "Swing Bridge",
+      "desc": "A unique 19th-century monument of technology, operated manually by a single operator. It connects the banks of the Łuczański Canal and is the only active bridge of this type in Europe."
+    },
+    "port": {
+      "title": "Port Giżycko & Ekomarina",
+      "desc": "The largest and most modern port in Masuria. An ideal place for a walk, dinner at the port, or starting a cruise on the Great Masurian Lakes."
+    },
+    "water": {
+      "title": "Kisajno and Dobskie Lakes",
+      "desc": "Crystal clear water, nature reserves, and quiet zones. A paradise for lovers of nature, kayaking, and peaceful sailing away from the motorboat noise."
+    },
+    "wolfsLair": {
+      "title": "Wolf's Lair",
+      "desc": "Hitler's Headquarters in Gierłoż. A complex of bunkers hidden in the forest, witnessing the history of World War II."
+    },
+    "waterTower": {
+      "title": "Water Tower",
+      "desc": "A historic water tower with an observation deck offering a panoramic view of Giżycko and the surrounding lakes. Inside, there is a museum and a cafe."
+    },
+    "castle": {
+      "title": "Teutonic Castle",
+      "desc": "A restored castle in Giżycko, now the luxury St. Bruno Hotel. A combination of history and modernity."
+    },
+    "bison": {
+      "title": "Bison Enclosure",
+      "desc": "A demonstration bison enclosure in Wolisko. An opportunity to observe the 'kings of the forest' from a viewing platform in their natural environment."
+    }
+  },
+  "cooperationPage": {
+    "title": "Cooperation",
+    "subtitle": "Your property in the best hands in Masuria",
+    "services": {
+      "title": "Comprehensive Management",
+      "desc": "We will take care of your apartment, cottage, or facility in Masuria. We offer a full range of services - from marketing to cleaning."
+    },
+    "marketing": {
+      "title": "Professional Marketing",
+      "desc": "We take care of the visibility of your offer on the most popular booking portals."
+    },
+    "guests": {
+      "title": "Guest Services",
+      "desc": "We provide professional check-in, check-out, and support for guests throughout their stay."
+    },
+    "maintenance": {
+      "title": "Maintenance & Cleaning",
+      "desc": "Your property will always be ready to receive guests at the highest standard."
+    },
+    "whyUs": {
+      "title": "Why cooperate with us?",
+      "point1": "Local experience and knowledge of the Masurian market",
+      "point2": "Transparent settlement system and owner panel",
+      "point3": "Constant technical care and maintenance",
+      "point4": "Price optimization (Revenue Management)"
+    }
+  },
+  "contactForm": {
+    "title": "Write to us",
+    "subtitle": "Have questions? Want to book a stay? Use the form below.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred while sending the message. Please try again."
+  },
+  "cookieConsent": {
+    "title": "Cookies & Privacy 🍪",
+    "description": "We care about your privacy. You can accept all cookies or customize your preferences. Read more in our",
+    "privacyLink": "Privacy Policy",
+    "acceptAll": "Accept All",
+    "customize": "Customize",
+    "decline": "Decline",
+    "settingsTitle": "Cookie Settings",
+    "back": "Back",
+    "necessary": "Necessary",
+    "necessaryDesc": "Required for the website to function.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Help us improve the website.",
+    "marketing": "Marketing",
+    "marketingDesc": "Personalized advertisements.",
+    "save": "Save Settings"
+  },
+  "privacyPolicy": {
+    "title": "Privacy and Cookie Policy",
+    "intro": "We value your privacy, please read our privacy policy.",
+    "content": "This Cookie Policy applies to all mazury.holiday websites. By using our sites, you agree to the use of cookies in accordance with this policy. We use cookies to make our sites work faster, easier to use, and to personalize content and ads. You can manage your cookie settings in your browser at any time.",
+    "sections": [
+      {
+        "title": "What are cookies?",
+        "content": "Cookies are small text information sent by a web server and saved on the user's side (usually on the hard drive). Default cookie parameters allow only the server that created them to read the information contained in them. Cookies are most often used for counters, polls, online stores, pages requiring login, advertisements, and to monitor visitor activity."
+      },
+      {
+        "title": "What do we use cookies for?",
+        "content": "mazury.holiday websites use cookies for various purposes:",
+        "list": [
+          "to make our websites work faster and be easier to use",
+          "to better match the content and advertisements to your expectations and interests",
+          "to collect anonymous, aggregated statistics to help us understand how people use our websites"
+        ]
+      },
+      {
+        "content": "Using cookies in the way described above, we never identify the identity of users based on the information stored in cookies."
+      },
+      {
+        "title": "Retention period",
+        "content": "We use two types of cookies – <strong>session</strong> and <strong>permanent</strong>. The former remain on your device only while using our websites. Permanent cookies remain on your device as long as they have a set lifetime or until you delete them."
+      },
+      {
+        "title": "Third-party cookies",
+        "content": "While using our websites, you may receive cookies from participating third parties such as Facebook, Google, and from companies conducting advertising campaigns. More information about these cookies can be found on the websites of individual third parties."
+      },
+      {
+        "title": "How to delete or change cookie settings?",
+        "content": "Most web browsers are initially set to automatically accept cookies. However, you can change your browser settings so that cookies are blocked – in whole or in part, e.g. only from third parties, or to receive a message each time cookies are sent to your device.<br/><br/>Remember, however, that if you block the cookies we use, it may negatively affect the comfort of using mazury.holiday Pages, for example you may not be able to visit certain areas of mazury.holiday Pages or not receive personalized information while browsing them. You will also prevent us from collecting anonymous information about the use of our pages for the purpose of constant improvement of the content of mazury.holiday Pages and services."
+      }
+    ],
+    "usefulLinks": "Useful links",
+    "linksDescription": "Users should read the privacy policy of these companies to learn about their cookie policies:",
+    "manageCookies": "To manage cookie settings, select the web browser you use from the list below and follow the instructions:",
+    "mobileDevices": "Mobile devices:"
+  },
+  "pokojeFuledaPage": {
+    "heroTitle": "Pokoje Fuleda",
+    "price": "from 375 PLN/night",
+    "description": "We offer two rooms for rent: one with a double bed, the other with two singles, bathroom with shower and toilet. Covered terrace by the rooms. In a separate building 10m away, a kitchen with an additional toilet. Located on the Fuledzki Róg peninsula on Lake Dobskie (quiet zone) within the fenced Folwark Fuleda area.\n\nRow building located on private allotments by Lake Dobskie. Main building has two rooms, bathroom, terrace. Opposite (10m) is the kitchen building with 2nd WC. On the other side (20m) private lake access with viewing deck, grill, bonfire place, and rowboat.\n\nPublic beach 250m away. Fuleda is 10km from Giżycko. Nearby forests, meadows, bike paths. Nearest shop 3km.\n\nRecommended for families, anglers, mushroom pickers, and nature lovers.",
+    "amenitiesTitle": "Amenities",
+    "room1Title": "Room 1 (Double)",
+    "room1Items": [
+      "Double bed",
+      "Terrace access",
+      "Vacuum cleaner",
+      "Hair dryer",
+      "Iron",
+      "Ironing board"
+    ],
+    "room2Title": "Room 2 (Twin)",
+    "room2Items": [
+      "Two single beds",
+      "TV",
+      "Terrace access"
+    ],
+    "kitchenTitle": "Kitchen",
+    "kitchenNote": "(separate building 10m)",
+    "kitchenItems": [
+      "Fridge",
+      "Dishwasher",
+      "Microwave",
+      "Toaster",
+      "Cutlery and dishes",
+      "Gas stove",
+      "Coffee and tea"
+    ],
+    "bathroomTitle": "Bathroom",
+    "bathroomItems": [
+      "Shower",
+      "Washing machine",
+      "Hair dryer",
+      "Straightener",
+      "Towels",
+      "Bathrobes",
+      "Toiletries"
+    ],
+    "terraceTitle": "Terrace & Surroundings",
+    "terraceItems": [
+      "Spacious terrace",
+      "Private lake access",
+      "Grill and bonfire place",
+      "Rowboat",
+      "Viewing deck"
+    ],
+    "bookingTitle": "Booking",
+    "bookingDesc": "Check availability and book your stay",
+    "bookBtn": "BOOK NOW",
+    "callBtn": "Call: 730 067 027",
+    "bestPrice": "Best prices - book directly",
+    "galleryTitle": "Gallery",
+    "expandGallery": "See more photos",
+    "collapseGallery": "Collapse gallery"
+  },
+  "charterPage": {
+    "heroTitle": "Stillo 30 VIP",
+    "heroSubtitle": "Stillo 30 VIP Motor Yacht",
+    "mainTitle": "Your luxury home on the water",
+    "desc1": "<strong>Stillo 30 VIP</strong> is the successor to the proven and valued Futura 870. It is a unit designed to meet the expectations of the most demanding shipowners in the displacement and semi-planing Houseboat sector. Nautical qualities, proven in the award-winning predecessor, combined with revolutionary practicality.",
+    "desc2": "On board you will find up to <strong>6 sleeping places</strong>, a full-size bathroom and a living room with panoramic windows and a high (approx. 190 cm) ceiling, which gives the feeling of a real apartment on the water. Wide side decks lead to the bow sunbathing terrace, and the low bathing platform at the stern facilitates descent into the water and mooring at the pier.",
+    "desc3": "Basic advantages include a powerful 52HP stationary engine, <strong>two thrusters</strong>, electric anchor windlass, thermoplastic foam mattresses, unlimited WiFi, TV with Smart TV Max, Nespresso coffee machine and many others...",
+    "desc4": "What is important for charter: the unit maintains a speed below 15 km/h, so in Poland you can steer it <strong>without a license</strong> – after a short training you pick up the yacht and set off on the route. Stillo 30 therefore offers luxury, comfort and the fullness of Masurian adventure, and at the same time is an ideal choice for families and groups of friends looking for their first experience with their own 'home on the water'.",
+    "vipAmenitiesTitle": "VIP Amenities",
+    "navAndDriveTitle": "Navigation and Drive",
+    "navAndDriveDesc": "Thrusters (Bow/Stern), Tablet with lake maps, 52HP Engine",
+    "vipStandardTitle": "VIP Standard",
+    "vipStandardDesc": "Air Conditioning & Heating, Unlimited WiFi, Smart TV, Nespresso Machine",
+    "safetyTitle": "Safety",
+    "safetyDesc": "Full rescue equipment, 230V Non-Stop Installation, Electric anchor windlass",
+    "galleryTitle": "Photo Gallery",
+    "expandGallery": "See more photos",
+    "collapseGallery": "Collapse gallery",
+    "bookTermTitle": "Book a Date",
+    "bookTermDesc": "Check availability in our online calendar and book your dream vacation today.",
+    "bookBtn": "BOOK IT",
+    "techSpecsTitle": "Technical Data",
+    "specs": {
+      "length": "Length",
+      "width": "Width",
+      "draft": "Draft",
+      "engine": "Engine",
+      "cabins": "Cabins",
+      "crew": "Crew"
+    },
+    "equipmentTitle": "Equipment",
+    "equipmentList": [
+      "Bow and stern thrusters",
+      "Cockpit table",
+      "SMART TV (Smart TV, YouTube)",
+      "WiFi (unlimited), Radio/Bluetooth",
+      "12V (4 pcs) and 230V (4 pcs) sockets",
+      "Webasto heating",
+      "Hot water (30L Boiler)",
+      "Marine toilet with shower",
+      "Ice maker, Toaster, Kettle",
+      "Nespresso machine (+capsules)",
+      "Full kitchen equipment",
+      "Electric anchor windlass",
+      "Echo sounder, Navigation - Plotter"
+    ]
+  }
+}

@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { AccessibilityWidget } from "./AccessibilityWidget";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -73,8 +74,7 @@ export default function Navbar() {
             )}
         >
             <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative">
-                {/* Logo */}
-                <Link href="/" className="relative h-[60px] w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
+                <Link href="/" className="relative h-[60px] w-[130px] sm:w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -110,6 +110,7 @@ export default function Navbar() {
 
                         <div className={cn("h-6 w-px xl:block hidden", dividerColorClass)} />
 
+                        <AccessibilityWidget className={textColorClass} />
                         <LanguageSwitcher className={textColorClass} />
                         <div className={cn("h-6 w-px", dividerColorClass)} />
                         <ThemeToggle className={cn(textColorClass, "hover:bg-white/10")} />
@@ -209,8 +210,9 @@ export default function Navbar() {
                             <div className={cn("w-16 h-px", "bg-slate-200 dark:bg-slate-800")} />
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                                 <div className="flex items-center gap-2">
+                                    <AccessibilityWidget dropUp={true} alignCenter={true} />
                                     <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">{t("nav", "language")}</span>
-                                    <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} />
+                                    <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} alignCenter={true} />
                                 </div>
                                 <div className="h-6 w-px bg-slate-200 dark:bg-slate-800 hidden sm:block" />
                                 <Link

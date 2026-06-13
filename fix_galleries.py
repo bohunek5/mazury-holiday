@@ -1,51 +1,70 @@
 import re
+import os
 
-with open('src/data/stranda-apartments.ts', 'r', encoding='utf-8') as f:
+with open('src/data/stranda-apartments.ts', 'r') as f:
     content = f.read()
 
-# Let's find all apartments
-apartments = re.findall(r"('[A-Z0-9c-]+':\s*\{.*?\n    \},?\n)", content, re.DOTALL)
-print(f"Found {len(apartments)} apartments.")
+keys = re.findall(r"'([A-Za-z0-9_-]+)':\s*\{", content)
+print("Found keys:", len(keys))
 
-new_content = content
-fixed_count = 0
+public_dir = 'public/images/stranda'
 
-for apt in apartments:
-    # A robust way to find all gallery blocks.
-    # We look for "gallery: {" and count the matching brackets.
-    # Actually, the simplest way is to look for "gallery: {" followed by anything until "    }," or "\n        }," or "additionalInfo:"
-    # But since we just want to remove the ones that are NOT at the end, we can find them via regex.
-    # Look for any gallery: { ... } that is inside amenities or other places.
+for key in keys:
+    # Find block for key
+    pattern = rf"('{key}':\s*\{{.*?)(gallery:\s*\{{.*?images:\s*\[.*?\]\s*\}})"
+    match = re.search(pattern, content, flags=re.DOTALL)
+    if not match:
+        print("No gallery found for", key)
+        continue
     
-    # Let's find how many times "gallery:" appears in the apartment block.
-    gallery_count = apt.count("gallery: {")
-    if gallery_count > 1:
-        print(f"Apartment has {gallery_count} galleries.")
+    # Try finding directory
+    dirs_to_try = [key, key + '_images', key.lower(), key.replace('_', '-'), key.replace('-', '_'), 'C_Generic', 'Pokoje']
+    if key == 'c-studio': dirs_to_try.insert(0, 'C_Studio')
+    
+    target_dir = None
+    for d in dirs_to_try:
+        p = os.path.join(public_dir, d)
+        if os.path.isdir(p):
+            target_dir = p
+            break
+            
+    if not target_dir:
+        print("No dir for", key)
+        continue
         
-        # We know the correct gallery should be right after icalUrl: '...'
-        m = re.search(r"(icalUrl: '[^']+',\n\s*gallery: \{.*?\n        \})\n", apt, re.DOTALL)
-        if m:
-            correct_block = m.group(1)
-            # Find the ID
-            m_id = re.search(r"id:\s*'([^']+)'", apt)
-            apt_id = m_id.group(1) if m_id else "unknown"
-            print(f"Fixing {apt_id}...")
-            
-            # Now, remove ALL gallery blocks.
-            # A gallery block is: \s*gallery: \{.*?\]\n\s*\}
-            clean_apt = re.sub(r"\s*gallery: \{.*?\]\n\s*\}", "", apt, flags=re.DOTALL)
-            
-            # And reinsert the correct block
-            clean_apt = re.sub(r"(icalUrl: '[^']+',)", correct_block, clean_apt)
-            
-            new_content = new_content.replace(apt, clean_apt)
-            fixed_count += 1
-        else:
-            print("Could not find correct block in apt")
+    webp_files = []
+    for root, _, files in os.walk(target_dir):
+        for file in files:
+            if file.endswith('.webp'):
+                full_path = os.path.join(root, file)
+                rel_path = '/' + os.path.relpath(full_path, 'public')
+                webp_files.append(rel_path)
+                
+    if not webp_files:
+        print("No webp files for", key)
+        continue
+        
+    def sort_key(f):
+        f = f.lower()
+        if 'hero' in f: return (0, f)
+        if '_1.' in f: return (1, f)
+        return (2, f)
+        
+    webp_files.sort(key=sort_key)
+    
+    hero = webp_files[0]
+    images_str = ',\n'.join([f'                getAssetPath("{f}")' for f in webp_files])
+    
+    replacement = f'''gallery: {{
+            "heroImage": getAssetPath("{hero}"),
+            "images": [
+{images_str}
+            ]
+        }}'''
+        
+    content = content.replace(match.group(2), replacement, 1)
+    print(f"Updated {key} with {len(webp_files)} images.")
 
-if fixed_count > 0:
-    with open('src/data/stranda-apartments.ts', 'w', encoding='utf-8') as f:
-        f.write(new_content)
-    print(f"Fixed {fixed_count} apartments.")
-else:
-    print("No fixes needed or possible.")
+with open('src/data/stranda-apartments.ts', 'w') as f:
+    f.write(content)
+

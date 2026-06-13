@@ -8,7 +8,7 @@ ZIP_PATH = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/deploy_lhpl.zip"
 FTP_HOST = "serwer194525.lh.pl"
 FTP_USER = "serwer194525"
 FTP_PASS = "KochamAntygravity2026$"
-REMOTE_DIR = "public_html/autoinstalator/serwer194525.lh.pl/wordpress162339"
+REMOTE_DIR = "public_html/mazury.holiday"
 HTTP_URL = "https://mazuryholiday.pl/unzip.php"
 
 print(f"📦 Zipping {OUT_DIR} to {ZIP_PATH}...")
@@ -24,6 +24,8 @@ with zipfile.ZipFile(ZIP_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:
 print("📝 Creating unzip.php...")
 with open("unzip.php", "w") as f:
     f.write("""<?php
+set_time_limit(0);
+ignore_user_abort(true);
 $dir = __DIR__;
 $files = new RecursiveIteratorIterator(
     new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),

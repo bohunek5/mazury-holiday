@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Korektor Mapy Stranda</title>
+    <style>
+        body { font-family: sans-serif; background: #1e293b; color: white; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .map-container { position: relative; width: 1024px; height: 457px; background: url('/images/stranda_map_crop.png') no-repeat center center; background-size: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); overflow: hidden; transform: scale(1.03); transform-origin: center; margin-bottom: 20px; }
+        .dot-wrapper { position: absolute; cursor: grab; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; pointer-events: auto; }
+        .dot-wrapper:active { cursor: grabbing; }
+        .dot { width: 16px; height: 16px; background: white; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.8); }
+        .label { margin-top: 5px; font-size: 11px; font-weight: bold; background: rgba(0,0,0,0.7); padding: 2px 6px; border-radius: 4px; pointer-events: none; white-space: nowrap; }
+        #results { background: #0f172a; padding: 15px; border-radius: 8px; width: 100%; max-width: 800px; font-family: monospace; font-size: 14px; white-space: pre-wrap; }
+        .header { text-align: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Ustaw kropki idealnie tam, gdzie chcesz!</h2>
+        <p>Złap i przeciągnij białe kropki na mapie. Kiedy ustawisz wszystkie w punkt, skopiuj tekst z czarnego pola poniżej i wklej mi na czacie!</p>
+    </div>
+    
+    <div class="map-container" id="map">
+        <!-- Punkty będą tutaj generowane przez JS -->
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        const points = [
+            { id: 'parking', label: 'Parking', x: 49, y: 9, align: 'translate-y-2' },
+            { id: 'playground', label: 'Plac zabaw', x: 31, y: 60, align: '-translate-x-full -ml-2 -translate-y-2' },
+            { id: 'beachbar', label: 'Beach Bar', x: 39, y: 67, align: '-translate-y-full -mt-2' },
+            { id: 'sauna', label: 'Sauna', x: 31, y: 77, align: '-translate-x-full -ml-2' },
+            { id: 'beach', label: 'Plaża', x: 35, y: 83, align: '-translate-y-full -mt-2' },
+            { id: 'scooters', label: 'Wyp. skuterów', x: 39, y: 88, align: 'translate-y-2' },
+            { id: 'tavern', label: 'Tawerna', x: 47, y: 71, align: '-translate-y-full -mt-2' },
+            { id: 'shop', label: 'Sklepik portowy', x: 55, y: 71, align: 'translate-x-2' },
+        ];
+
+        const mapEl = document.getElementById('map');
+        const resultsEl = document.getElementById('results');
+
+        function updateResults() {
+            const lines = points.map(p => 
+                `{ id: '${p.id}', label: '${p.label}', x: ${p.x.toFixed(2)}, y: ${p.y.toFixed(2)}, align: '${p.align}' },`
+            );
+            resultsEl.innerText = `const extraPoints = [\n    ${lines.join('\n    ')}\n];`;
+        }
+
+        points.forEach((p, index) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'dot-wrapper';
+            wrapper.style.left = p.x + '%';
+            wrapper.style.top = p.y + '%';
+            
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            
+            const label = document.createElement('div');
+            label.className = 'label';
+            label.innerText = p.label;
+            
+            wrapper.appendChild(dot);
+            wrapper.appendChild(label);
+            mapEl.appendChild(wrapper);
+
+            // Dragging logic
+            let isDragging = false;
+
+            wrapper.addEventListener('mousedown', (e) => {
+                isDragging = true;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                const rect = mapEl.getBoundingClientRect();
+                let newX = ((e.clientX - rect.left) / rect.width) * 100;
+                let newY = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                // clamp
+                newX = Math.max(0, Math.min(100, newX));
+                newY = Math.max(0, Math.min(100, newY));
+                
+                p.x = newX;
+                p.y = newY;
+                
+                wrapper.style.left = p.x + '%';
+                wrapper.style.top = p.y + '%';
+                updateResults();
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        });
+
+        updateResults();
+    </script>
+</body>
+</html>

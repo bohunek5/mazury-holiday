@@ -82,3 +82,87 @@ body {
     transform: translateX(150%);
   }
 }
+/* WCAG Accessibility Classes */
+
+html.wcag-high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 100%;
+  --accent: 0 0% 20%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --ring: 0 0% 100%;
+}
+
+html.wcag-high-contrast,
+html.wcag-high-contrast body {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+html.wcag-high-contrast * {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html.wcag-high-contrast a,
+html.wcag-high-contrast button,
+html.wcag-high-contrast a *,
+html.wcag-high-contrast button * {
+  color: #ff0 !important;
+  border-color: #ff0 !important;
+  outline-color: #ff0 !important;
+}
+
+html.wcag-high-contrast img,
+html.wcag-high-contrast video,
+html.wcag-high-contrast svg {
+  background-color: transparent !important;
+}
+
+html.wcag-large-text {
+  font-size: 120% !important;
+}
+
+html.wcag-dyslexia * {
+  font-family: "OpenDyslexic", "Comic Sans MS", Arial, sans-serif !important;
+  letter-spacing: 0.1em !important;
+  word-spacing: 0.2em !important;
+  line-height: 1.6 !important;
+}
+
+html.wcag-highlight-links a,
+html.wcag-highlight-links button {
+  text-decoration: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-decoration-color: red !important;
+  text-underline-offset: 4px !important;
+  background-color: rgba(255, 255, 0, 0.2) !important;
+}
+
+html.wcag-stop-animations *,
+html.wcag-stop-animations *::before,
+html.wcag-stop-animations *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+html.wcag-grayscale {
+  filter: grayscale(100%) contrast(120%) !important;
+}

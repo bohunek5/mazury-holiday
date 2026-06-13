@@ -10,6 +10,7 @@ interface CalendarEvent {
     end: Date;
     summary?: string;
     status?: string;
+    uid?: string;
 }
 
 const localeMap: Record<string, string> = {
@@ -70,6 +71,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                     currentEvent.summary = line.split(':')[1];
                 } else if (line.startsWith('STATUS')) {
                     currentEvent.status = line.split(':')[1];
+                } else if (line.startsWith('UID')) {
+                    currentEvent.uid = line.split(':')[1];
                 } else if (line === 'END:VEVENT') {
                     if (currentEvent.start && currentEvent.end) {
                         if (currentEvent.status !== 'CANCELLED') {
@@ -112,27 +115,31 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 }
             }
 
-            const fetchWithRetry = async (url: string) => {
-                // Use local API route to avoid public proxy caching issues
-                const proxyUrl = `/calendar.php?url=${encodeURIComponent(url)}&t=${Date.now()}`;
-                
-                try {
-                    const response = await fetch(proxyUrl, { cache: 'no-store' });
-                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                    const text = await response.text();
-                    if (!text || !text.includes('BEGIN:VCALENDAR')) throw new Error("Format");
-                    return text;
-                } catch (e) {
-                    console.error("Failed to fetch calendar via local proxy:", e);
-                    
-                    // Fallback to one of the public proxies just in case
-                    const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-                    const fallbackResponse = await fetch(fallbackUrl, { cache: 'no-store' });
-                    if (!fallbackResponse.ok) throw new Error(`Fallback HTTP ${fallbackResponse.status}`);
-                    const fallbackText = await fallbackResponse.text();
-                    if (!fallbackText || !fallbackText.includes('BEGIN:VCALENDAR')) throw new Error("Format");
-                    return fallbackText;
+            const fetchWithRetry = async (url: string, retries = 3): Promise<string> => {
+                for (let i = 0; i < retries; i++) {
+                    try {
+                        // Użyj lokalnego proxy na tym samym serwerze (bądź na serwerze produkcyjnym)
+                        const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+                        const proxyUrl = isLocalhost 
+                            ? `https://corsproxy.io/?${encodeURIComponent(url)}`
+                            : `/ical-proxy.php?url=${encodeURIComponent(url)}`;
+                        
+                        let res = await fetch(proxyUrl);
+                        
+                        // Fallback to corsproxy if local php fails (e.g. in some dev environments)
+                        if (!res.ok && !isLocalhost) {
+                            const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                            res = await fetch(fallbackUrl);
+                        }
+
+                        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                        return await res.text();
+                    } catch (e) {
+                        if (i === retries - 1) throw e;
+                        await new Promise(r => setTimeout(r, 1000 * (i + 1)));
+                    }
                 }
+                throw new Error("Failed to fetch calendar");
             };
 
             try {

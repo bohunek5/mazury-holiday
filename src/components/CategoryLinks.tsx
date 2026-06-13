@@ -22,7 +22,7 @@ export default function CategoryLinks() {
             id: "cottages",
             title: t("categories", "cottages"),
             href: "/domki",
-            image: getAssetPath("/images/skorupki/skorupki_1.webp"),
+            image: getAssetPath("/images/skorupki/nowe_2026/domek_przod_S1_1.webp"),
             icon: <Home className="w-6 h-6" />,
         },
         {

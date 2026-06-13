@@ -614,8 +614,8 @@ export const strandaApartments: Record<string, Apartment> = {
                 getAssetPath("/images/stranda/A403/new_5.webp")
             ]
         },
-        idoBookingId: '25',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+        idoBookingId: '17',
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/17/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
     'B404': {
@@ -650,7 +650,7 @@ export const strandaApartments: Record<string, Apartment> = {
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/25/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 
-    'C304': {
+      'C304': {
         id: 'C304',
         title: "C304 Studio",
         shortTitle: "C304 Studio",
@@ -1015,7 +1015,7 @@ export const strandaApartments: Record<string, Apartment> = {
         id: 'B304',
         title: "B304",
         shortTitle: "B304",
-        description: "Opis dla B304",
+        description: "Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.",
         building: 'B',
         type: 'oneBedroom',
         price: 300,
@@ -1035,7 +1035,84 @@ export const strandaApartments: Record<string, Apartment> = {
                 getAssetPath("/images/stranda/B304/hero_1.webp"),
                 getAssetPath("/images/stranda/B304/new_1.webp"),
                 getAssetPath("/images/stranda/B304/new_2.webp"),
-                getAssetPath("/images/stranda/B304/new_3.webp")
+                getAssetPath("/images/stranda/B304/new_3.webp"),
+                getAssetPath("/images/stranda/B304/new_4.webp"),
+                getAssetPath("/images/stranda/B304/new_5.webp"),
+                getAssetPath("/images/stranda/B304/new_6.webp"),
+                getAssetPath("/images/stranda/B304/new_7.webp"),
+                getAssetPath("/images/stranda/B304/new_8.webp"),
+                getAssetPath("/images/stranda/B304/new_9.webp"),
+                getAssetPath("/images/stranda/B304/new_10.webp"),
+                getAssetPath("/images/stranda/B304/new_11.webp"),
+                getAssetPath("/images/stranda/B304/new_12.webp"),
+                getAssetPath("/images/stranda/B304/new_13.webp"),
+                getAssetPath("/images/stranda/B304/new_14.webp"),
+                getAssetPath("/images/stranda/B304/new_15.webp"),
+                getAssetPath("/images/stranda/B304/new_16.webp"),
+                getAssetPath("/images/stranda/B304/new_17.webp"),
+                getAssetPath("/images/stranda/B304/new_18.webp"),
+                getAssetPath("/images/stranda/B304/new_19.webp")
+            ]
+        },
+        
+        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
+    },
+    'B305': {
+        id: 'B305',
+        title: "B305",
+        shortTitle: "B305",
+        description: "Apartamenty z 1 sypialnią znajdują się w budynku C, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.",
+        building: 'B',
+        type: 'oneBedroom',
+        price: 300,
+        guests: '4',
+
+        amenities: {
+            living: ['TV', 'sofa 2os.', 'stół', 'krzesła', 'odkurzacz', 'klimatyzacja'],
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 180x200', 'komplet pościeli', 'suszarka na ubrania', 'deska do prasowania', 'żelazko', 'klimatyzacja'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['stolik', 'kanapa', 'dwa fotele', 'dwa leżaki']
+        },
+        idoBookingId: '44',
+        gallery: {
+            "heroImage": getAssetPath("/images/stranda/B305/nowe_2026/P1001104_1.webp"),
+            "images": [
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001104_1.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001105_2.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001108_3.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014662_4.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014667_5.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014670_6.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014672_7.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014673_8.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014675_9.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014677_10.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014678_11.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014679_12.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014680_13.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014681_14.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_balkon_15.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_balkon1_16.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_jadalnia_17.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_kuchnia_18.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_salon_19.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_salon1_20.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_sypialnia_21.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305_sypialnia1_22.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305__azienka_23.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/B305__azienka1_24.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001104_Poprawione_25.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001107_26.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014663_27.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1001106_28.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014668_29.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014660_30.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014665_31.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014666_32.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014669_33.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014671_34.webp"),
+                getAssetPath("/images/stranda/B305/nowe_2026/P1014676_35.webp")
             ]
         },
         
@@ -1044,8 +1121,8 @@ export const strandaApartments: Record<string, Apartment> = {
 
 
 
-    'c-studio': {
-        id: 'c-studio',
+    'Studio': {
+        id: 'Studio',
         title: "Apartament C Studio",
         shortTitle: "Apartament C Studio",
         description: "Apartamenty typu Studio znajdują się w budynku C, są to miejsce noclegowe z jednym łóżkiem podwójnym, rozkładaną sofą dla 2 osób, salonem z aneksem kuchennym, łazienką z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda. Przeznaczone dla maksymalnie 4 osób.",

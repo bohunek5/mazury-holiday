@@ -11,17 +11,24 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [language, setLanguage] = useState<Language>("pl");
+export function LanguageProvider({ children, initialLanguage = "pl" }: { children: ReactNode; initialLanguage?: Language }) {
+    const [language, setLanguage] = useState<Language>(initialLanguage);
 
     const t = (section: keyof typeof translations.pl, key: string): any => {
         const getVal = (lang: Language, sec: keyof typeof translations.pl, k: string) => {
             const keys = k.split('.');
-            // Force cast to PL structure since we ensure fallback at runtime
-            let result: unknown = (translations[lang] as typeof translations.pl)[sec];
-            for (const k of keys) {
-                if (result && typeof result === 'object' && k in (result as Record<string, unknown>)) {
-                    result = (result as Record<string, unknown>)[k];
+            const validLang = translations && translations[lang] ? lang : "pl";
+            
+            if (!translations || !translations[validLang]) {
+                return undefined;
+            }
+            
+            let result: unknown = (translations[validLang] as any)[sec];
+            if (result === undefined) return undefined;
+            
+            for (const keyChunk of keys) {
+                if (result && typeof result === 'object' && keyChunk in (result as Record<string, unknown>)) {
+                    result = (result as Record<string, unknown>)[keyChunk];
                 } else {
                     return undefined;
                 }

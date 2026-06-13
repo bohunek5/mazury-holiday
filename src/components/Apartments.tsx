@@ -79,7 +79,7 @@ export default function Apartments() {
             title: t("apartments", "items.domkiSkorupki.title"),
             location: t("apartments", "items.domkiSkorupki.location"),
             description: t("apartments", "items.domkiSkorupki.description"),
-            image: getAssetPath("/images/skorupki/skorupki_1.webp"),
+            image: getAssetPath("/images/skorupki/skorupki_2.webp"),
             people: skorupkiData.guests,
             link: "/domki",
             icons: [

@@ -1,23 +1,40 @@
-const https = require('https');
+const fs = require('fs');
 
-https.get('https://client37851.idobooking.com/book-now/index.php?showOtherOffers=true', (res) => {
-    let data = '';
-    res.on('data', chunk => data += chunk);
-    res.on('end', () => {
-        const regex = /<a[^>]+href="([^"]+)"[^>]*>([^<]*C[^<]*sypialniami[^<]*)<\/a>/gi;
-        let match;
-        while ((match = regex.exec(data)) !== null) {
-            console.log("Found:", match[2].trim());
-            console.log("URL:", match[1]);
-        }
-        
-        // Also just look for any offer containing "C" and "sypialn"
-        const regex2 = /class="offer-title"[^>]*>([^<]*)<\/a>/gi;
-        console.log("All offers:");
-        while ((match = regex2.exec(data)) !== null) {
-            if (match[1].toLowerCase().includes('c') || match[1].toLowerCase().includes('sypialn')) {
-                console.log(match[1].trim());
-            }
-        }
-    });
+const files = [
+  'src/data/stranda-apartments.ts',
+  'src/data/kisajno-data.ts',
+  'src/data/fuleda-data.ts',
+  'src/data/skorupki-data.ts',
+  'src/data/mikolajki-data.ts',
+  'src/data/cottages-data.ts',
+  'src/data/pokoje-fuleda-data.ts'
+];
+
+let markdownTable = '| Plik | Obiekt (ID/Tytuł) | idoBookingId | icalUrl |\n| --- | --- | --- | --- |\n';
+
+files.forEach(file => {
+  if (!fs.existsSync(file)) return;
+  const content = fs.readFileSync(file, 'utf8');
+  
+  // Extracting basic blocks matching id, title, idoBookingId, icalUrl using regex
+  // This is a naive parsing since evaluating TS is harder here.
+  
+  const blocks = content.split(/id:\s*['"]/g).slice(1);
+  blocks.forEach(block => {
+    const idMatch = block.match(/^([^'"]+)['"]/);
+    const titleMatch = block.match(/title:\s*['"]([^'"]+)['"]/);
+    const idoMatch = block.match(/idoBookingId:\s*['"]([^'"]+)['"]/);
+    const icalMatch = block.match(/icalUrl:\s*['"]([^'"]+)['"]/);
+    
+    if (idMatch && idoMatch) {
+      const id = idMatch[1];
+      const title = titleMatch ? titleMatch[1] : id;
+      const idoBookingId = idoMatch[1];
+      const icalUrl = icalMatch ? icalMatch[1] : 'BRAK';
+      markdownTable += `| ${file.replace('src/data/', '')} | **${id}** (${title}) | ${idoBookingId} | ${icalUrl} |\n`;
+    }
+  });
 });
+
+fs.writeFileSync('ido_table.md', markdownTable);
+console.log("Written to ido_table.md");

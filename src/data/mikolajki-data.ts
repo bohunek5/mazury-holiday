@@ -38,16 +38,16 @@ export const mikolajkiData: MikolajkiData = {
     gallery: {
         heroImage: getAssetPath("/images/mikolajki/hero.webp"),
         images: [
-            getAssetPath("/images/mikolajki/hero.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_1.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_2.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_3.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_4.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_5.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_6.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_7.webp"),
-            getAssetPath("/images/mikolajki/mikolajki_8.webp")
-        ]
+                getAssetPath("/images/mikolajki/hero.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_1.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_2.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_3.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_4.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_5.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_6.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_7.webp"),
+                getAssetPath("/images/mikolajki/mikolajki_8.webp")
+            ]
     },
     idoBookingId: "48",
     icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/48/key/da39a3ee5e6b4b0d3255bfef95601890afd80709"

@@ -79,84 +79,84 @@ export const translationsLegal = {
         }
     },
     en: {
-        termsPage: {
-            title: "Terms of Service",
-            intro: "The following Terms and Conditions define the rules for using the apartment, cottage rental, and charter services offered by Mazury.Holiday. Making a reservation implies reading and accepting the provisions of the Terms.",
-            sections: [
-                {
-                    title: "§1. General Provisions",
-                    list: [
-                        "The service provider and facility administrator is RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
-                        "These Terms apply to all reservations made through the mazury.holiday website, by phone, and by email.",
-                        "The hotel day begins at 3:00 PM on the day of arrival and ends at 11:00 AM on the day of departure."
-                    ]
-                },
-                {
-                    title: "§2. Reservation and Payments",
-                    list: [
-                        "Reservations can be made via the booking system, by phone, or by email.",
-                        "The reservation becomes guaranteed after paying a deposit of 30% of the total stay value within the time specified by the Service Provider.",
-                        "Failure to pay the deposit within the specified time is equivalent to canceling the reservation.",
-                        "The remaining amount for the stay is collected no later than on the day of arrival, during the handover of the keys.",
-                        "In case of cancellation of the stay, the paid deposit is not refundable. Shortening the stay does not oblige the Service Provider to refund the fees paid for unused days."
-                    ]
-                },
-                {
-                    title: "§3. Rules of Stay",
-                    list: [
-                        "The Guest is obliged to present an identity document with a photograph upon check-in.",
-                        "The number of people staying in the facility cannot exceed the number provided in the reservation. Unregistered persons may stay on the premises only between 8:00 AM and 10:00 PM with the Service Provider's consent.",
-                        "There is a strict ban on smoking tobacco products and e-cigarettes in the apartments and cottages. Smoking is allowed only outside in designated areas.",
-                        "The Guest bears full material responsibility for any damage or destruction of equipment and technical devices caused by their fault or the fault of people visiting them.",
-                        "Quiet hours apply in the facilities from 10:00 PM to 7:00 AM the next day."
-                    ]
-                },
-                {
-                    title: "§4. Stay with Animals",
-                    list: [
-                        "Staying with pets is possible only after prior notification and obtaining the Service Provider's approval when making a reservation.",
-                        "An additional fee may be charged for the pet's stay in accordance with the current price list.",
-                        "The animal's owner bears full financial and legal responsibility for any damage caused by the animal on the premises.",
-                        "Animals cannot be left alone in the apartment or cottage unattended. Dogs must be kept on a leash in common areas."
-                    ]
-                },
-                {
-                    title: "§5. Final Provisions",
-                    list: [
-                        "The Service Provider is not responsible for the Guests' property left in the facility.",
-                        "The Service Provider reserves the right to refuse to accept a Guest who, during their previous stay, grossly violated the Terms, causing damage to the facility's property or other Guests.",
-                        "In case of violation of the provisions of the Terms, the Service Provider has the right to check out the Guest immediately without a refund of the fees paid."
-                    ]
-                }
-            ]
-        },
-        gdprPage: {
-            title: "Information Clause (GDPR)",
-            intro: "Pursuant to Art. 13 of the General Data Protection Regulation of April 27, 2016 (Official Journal of the EU L 119 of 04.05.2016), I inform that:",
-            list: [
-                "<strong>The administrator of your personal data is:</strong> RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
-                "<strong>Contact with the Personal Data Administrator:</strong> rezerwacje@mazury.holiday",
-                "Your personal data will be processed for the purpose of providing the service based on Art. 6 sec. 1 lit. a of the general regulation on the protection of personal data of April 27, 2016.",
-                "Your personal data will be stored until the consent is revoked.",
-                "You have the right to request access to your personal data from the administrator, the right to rectify, delete, or limit processing, the right to withdraw consent, and the right to data portability.",
-                "Providing personal data is voluntary, however, failure to provide data may result in the inability to contact you to provide the service. At the same time, pursuant to art.6 sec.1 lit. a of the general regulation on the protection of personal data of April 27, 2016, I consent to the processing of my personal data for the purpose of telephone or e-mail contact regarding the arrangement of the service."
-            ]
-        },
-        contactExtra: {
-            callUs: "Call us",
-            writeUs: "Write to us",
-            mapLabel: "Location map:"
-        },
-        coopExtra: {
-            heroTitle: "Cooperation",
-            heroSubtitle: "Join us and increase the profits from your real estate",
-            securityTitle: "Full Security",
-            securityDesc: "We take care of your property as our own, providing constant supervision and insurance.",
-            readyTitle: "Ready for cooperation?",
-            readyDesc: "Contact us to discuss the potential of your property in Masuria.",
-            letsTalk: "Let's talk"
-        }
+    "termsPage": {
+        "title": "Terms of Service",
+        "intro": "The following Regulations define the rules for using apartment and cottage rental services, as well as charter services offered by Mazury.Holiday. Making a reservation is equivalent to reading and accepting the provisions of the Regulations.",
+        "sections": [
+            {
+                "title": "§1. General Provisions",
+                "list": [
+                    "The service provider and administrator of the facility is the company RAD'LIGHT, ul. Myśliwska 3, 11-500 Giżycko.",
+                    "These Regulations apply to all reservations made through the website mazury.holiday, by phone, and by email.",
+                    "The hotel day begins at 3:00 PM on the day of arrival and ends at 11:00 AM on the day of departure."
+                ]
+            },
+            {
+                "title": "§2. Reservation and Payments",
+                "list": [
+                    "Reservations can be made through the booking system, by phone, or by email.",
+                    "A reservation becomes guaranteed after paying a deposit of 30% of the total stay value within the period specified by the Service Provider.",
+                    "Failure to pay the deposit within the specified period is equivalent to canceling the reservation.",
+                    "The remaining amount for the stay is collected at the latest on the day of arrival, during the handover of the keys.",
+                    "In case of cancellation of the stay, the paid deposit is non-refundable. Shortening the stay does not oblige the Service Provider to refund the fees paid for unused days."
+                ]
+            },
+            {
+                "title": "§3. Rules of Stay",
+                "list": [
+                    "The Guest is obliged to present a photo ID at the time of check-in.",
+                    "The number of people staying in the facility cannot exceed the number specified in the reservation. Unregistered persons may stay on the premises only between 8:00 AM and 10:00 PM with the consent of the Service Provider.",
+                    "Smoking of tobacco products and e-cigarettes is strictly prohibited in the apartments and cottages. Smoking is allowed only outdoors in designated areas.",
+                    "The Guest bears full financial responsibility for any damage or destruction of equipment and technical devices caused by their fault or the fault of their visitors.",
+                    "Quiet hours must be observed in the facilities from 10:00 PM to 7:00 AM the following day."
+                ]
+            },
+            {
+                "title": "§4. Stay with Pets",
+                "list": [
+                    "Staying with pets is possible only after prior notification and obtaining the Service Provider's approval during booking.",
+                    "An additional fee may be charged for the pet's stay in accordance with the current price list.",
+                    "The pet owner bears full financial and legal responsibility for any damage caused by the pet on the premises.",
+                    "Pets must not be left unattended in the apartment or cottage. Dogs in common areas must be kept on a leash."
+                ]
+            },
+            {
+                "title": "§5. Final Provisions",
+                "list": [
+                    "The Service Provider is not responsible for Guests' property left in the facility.",
+                    "The Service Provider reserves the right to refuse to accept a Guest who, during a previous stay, flagrantly violated the Regulations, causing damage to the property of the facility or other Guests.",
+                    "In the event of a violation of the provisions of the Regulations, the Service Provider has the right to check out the Guest immediately without refunding the fees paid."
+                ]
+            }
+        ]
+    },
+    "gdprPage": {
+        "title": "Information Clause (GDPR)",
+        "intro": "Pursuant to Art. 13 of the General Data Protection Regulation of April 27, 2016 (Official Journal of the EU L 119 of 04.05.2016), I inform that:",
+        "list": [
+            "<strong>The administrator of your personal data is:</strong> RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
+            "<strong>Contact with the Personal Data Administrator:</strong> rezerwacje@mazury.holiday",
+            "Your personal data will be processed for the purpose of providing the service based on Art. 6 sec. 1 lit. a of the general regulation on the protection of personal data of April 27, 2016.",
+            "Your personal data will be stored until the consent is revoked.",
+            "You have the right to request access to your personal data from the administrator, the right to rectify, delete, or limit processing, the right to withdraw consent, and the right to data portability.",
+            "Providing personal data is voluntary, however, failure to provide data may result in the inability to contact you to provide the service. At the same time, pursuant to art.6 sec.1 lit. a of the general regulation on the protection of personal data of April 27, 2016, I consent to the processing of my personal data for the purpose of telephone or e-mail contact regarding the arrangement of the service."
+        ]
+    },
+    "contactExtra": {
+        "callUs": "Call us",
+        "writeUs": "Write to us",
+        "mapLabel": "Location map:"
+    },
+    "coopExtra": {
+        "heroTitle": "Cooperation",
+        "heroSubtitle": "Join us and increase the profits from your real estate",
+        "securityTitle": "Full Security",
+        "securityDesc": "We take care of your property as our own, providing constant supervision and insurance.",
+        "readyTitle": "Ready for cooperation?",
+        "readyDesc": "Contact us to discuss the potential of your property in Masuria.",
+        "letsTalk": "Let's talk"
     }
+}
 };
 
 // Map EN translations to all other languages

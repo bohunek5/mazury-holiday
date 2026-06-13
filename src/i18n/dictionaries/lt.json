@@ -1,0 +1,813 @@
+{
+  "termsPage": {
+    "title": "Reglamentas serviso",
+    "intro": "Šiek tiekantis Reglament nurodoja naudojimo įsigyti paslaugas atskiriamųjų namų, namų ir charterių paslaugų, kuriuos Mazury.Holiday suteikia. Rezervacijos atlikimas yra vienodai kaip susipažinimas su ir priėmimas Reglamento nurodymais.",
+    "sections": [
+      {
+        "title": "§1. Bendra informacija",
+        "list": [
+          "Paslaugų duomenys ir tvarkytojas yra firmos RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
+          "Šis Reglament taikomas visoms rezervacijoms, atlikomoms per interneto svetainę mazury.holiday, telefoną arba el. paštą.",
+          "Hotelio darbo laikas pradedamas 15:00 dienos prijungimo metu ir baigiasi 11:00 dienos išeities metu."
+        ]
+      },
+      {
+        "title": "§2. Rezervacija ir mokėjimas",
+        "list": [
+          "Rezervacijos gali būti atliktos per rezervavimo sistemą, telefonu arba el. paštu.",
+          "Rezervacija gauna garantinio statuso po įmoka, kuri yra 30% paslaugų bendros vertės, nurodytus paslaugų duomenys.",
+          "Nepažymėtas įmokos terminas yra vienodas kaip rezervacijos atšaukimas.",
+          "Paskutinė paslaugų mokesčių suma gauna galimybę iki dienos prijungimo, kai duoda klavesus.",
+          "Jeigu vartotojas atmink paslaugas, įmoka nereikalauja grąžinimo. Jeigu paslaugos trukmė mažėja, paslaugų duomenys nereikalauja grąžinimo už nepanaudotus dienas."
+        ]
+      },
+      {
+        "title": "§3. Paslaugų sąlygos",
+        "list": [
+          "Viesasis privalomas pateikti tobulęs dokumento tokiu kaip pasiūlėjimas, kuriame yra fotografija, metu prijungimo metu.",
+          "Paslaugosje esančios žmonės skaičius negali viršyti rezervacijos metu nurodyto skaičiaus. Nenurodžiamos žmonės gali būti pasiekti paslaugų teritoriją tik nuo 8:00 iki 22:00, su paslaugų duomenys suteikimu.",
+          "Atskirameje namuose ir namuose yra galimybė palinkti smukusius gyvūnus tik po priėmimo į rezervaciją ir gautos paslaugų duomenys priėmimo.",
+          "Viesasis privalomas atsakyti už visus materialius suteikiamus dažniausiems neseniai gyvūnams, kuriuos jis arba jie padeda ištrinti.",
+          "Paslaugosje yra galimybė priimti šiek tiekantis paslaugas nuo 22:00 iki 7:00 dienos kitos metų."
+        ]
+      },
+      {
+        "title": "§4. Paslaugos su gyvūnais",
+        "list": [
+          "Paslaugos su gyvūnais yra galima tik po priėmimo į rezervaciją ir gautos paslaugų duomenys priėmimo.",
+          "Pirktis gyvūno gali būti pridėtas papildomas mokesčius pagal laikomą kainą.",
+          "Gyvūno savininkas atsakoma už visus finansinius ir įstatymus atsakomybes dėl galimų daugybos nurodymų, padarytų gyvūnuje įsekmėje.",
+          "Gyvūnai negali būti palikti vienas namuose ar domkeje be užtikrinimo. Šunsiai turi būti išvykdyti į smycius bendrosios sritis teritorijoje."
+        ]
+      },
+      {
+        "title": "§5. Galimybės",
+        "list": [
+          "Pateiktoji paslauga nesuteikia atsakomybės už gatvę paliktaus gyvūno.",
+          "Pateiktoji paslauga turėtų tekti nepriimti gatvę paliktojo, kuris iš anksto nurodė savo nesklandumą Reglamentui, padarydamas daugybos nurodymus arba škodą į paslaugos objektą ar kitoms gatvėms.",
+          "Jeigu Reglamento nurodymai bus nesuteikti, Pateiktoji paslauga turėtų tekti išmeldyti gatvę paliktają be grįžtamasis mokesčiai."
+        ]
+      }
+    ]
+  },
+  "gdprPage": {
+    "title": "Informacinio sąlygos (RODO)",
+    "intro": "Pagal art. 13 bendrojiame duomenų apsaugos reglamente, priimtame 2016 metu 27 kovo dalyje (EUCJ L 119 nuo 4 mėg.), informuoju, kad:",
+    "list": [
+      "<strong>Informacijos savininkas yra:</strong> RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
+      "<strong>Kontaktas su informacijos savininku:</strong> rezerwacje@mazury.holiday",
+      "Jūsų duomenys bus naudojami paslaugos vykdyti pagal art. 6 ust. 1 lit. a bendrojiame duomenų apsaugos reglamente, priimtame 2016 metu 27 kovo dalyje.",
+      "Jūsų duomenys bus saugomi iki Jūsų sutikimo atšaukimo.",
+      "Jūs turite teisę užsibrėžti informacijos savininkui prieigą į savo duomenis, jų suteikimą, šalinimą arba apriboti naudojimą, atšaukti sutikimą ir perkelti duomenis.",
+      "Jūsų duomenys yra pasirinktiniai, tačiau jei juos nesuteiksime, galėtume neįmanoma susisiekti su Jumis už paslaugos vykdyti. Tačiau pagal art.6 ust.1 lit. a bendrojiame duomenų apsaugos reglamente, priimtame 2016 metu 27 kovo dalyje, suteikiu sutikimą naudojant savo duomenis telefoninėje ar elektroniniame kontaktui apie paslaugos vykdyti."
+    ]
+  },
+  "contactExtra": {
+    "callUs": "Skambinkite mums",
+    "writeUs": "Rašykite mums",
+    "mapLabel": "Vietovės žemėlapis:"
+  },
+  "coopExtra": {
+    "heroTitle": "B2B bendradarbiavimas",
+    "heroSubtitle": "JūSŲ OBJEKTAS MAZURUJE",
+    "securityTitle": "Saugumas",
+    "securityDesc": "Gostų vertifikacija ir draudimas už širdies nusivartojimą garantuoja jūsų investicijos saugumą.",
+    "readyTitle": "Ar esate gotas gauti didesnes lėšas?",
+    "readyDesc": "Susisiekite su mumis ir sužinokite, kiek galėtų uždirbti jūsų atstovaus namo ar domero Mazurųje.",
+    "letsTalk": "Sužinokime"
+  },
+  "amenityNames": {
+    "Klimatyzacja": "Klimatinis konsolis",
+    "WiFi": "WiFi",
+    "Smart TV": "Smart TV",
+    "Prysznic": "Prasciausias širdies stebuklis",
+    "Ręczniki": "Ruošiniai",
+    "Zmywarka": "Zvaigždžių vaikas",
+    "Płyta indukcyjna": "Indukcinė plitas",
+    "Pościel": "Poliūtis",
+    "Łóżka małżeńskie i pojedyncze": "Vidutinio dydžio ir vienos žmonės namai",
+    "Prywatny taras z grillem": "Privatus taras su grillu",
+    "Miejsce na ognisko": "Lietusis vietovėje",
+    "Dostęp do jeziora": "Jūros prieiga",
+    "Miejsce parkingowe": "Parkavimo vietovė",
+    "W pełni wyposażony aneks kuchenny": "Išplėstas vaikų namas",
+    "Aneks kuchenny (płyta, lodówka, zmywarka)": "Vaikų namas (plokštynė, kibicėlė, zvaigždžių vaikas)",
+    "Ekspres do kawy": "Kavosas expressas",
+    "Taras z meblami wypoczynkowymi": "Taras su vaikščiotinėmis mebliu",
+    "Prywatne Jacuzzi": "Privatus Jacuzzi",
+    "Balkon z meblami wypoczynkowymi": "Balkonas su vaikščiotinėmis mebliu"
+  },
+  "nav": {
+    "about": "Apie mus",
+    "apartments": "Atstovai",
+    "cottages": "Miestai",
+    "charter": "Charteris",
+    "concerts": "Koncertai",
+    "port": "Portas",
+    "attractions": "Atrakcijos",
+    "cooperation": "Sprendimai",
+    "contact": "Kontaktai",
+    "rooms": "Kambariai",
+    "bookBtn": "Rezervuoti",
+    "language": "Kalba",
+    "back": "Grįžti",
+    "euProjects": "EUK projektai"
+  },
+  "hero": {
+    "title": "Mazurų vakancijos",
+    "subtitle": "PATIKRINK, KĄ Galiu Jums Padėti",
+    "typewriterDesc": "Patikrinkite musiątę",
+    "apartmentsBtn": "Mūsų atstovavimai",
+    "charterBtn": "730 067 027",
+    "bookOnlineBtn": "Rezervuokite online",
+    "scrollDown": "Nusileiskite žemėlapiui"
+  },
+  "intro": {
+    "tag": "Mazury.Holiday",
+    "title": "Sveikas šiek tiekose",
+    "titleHighlight": "Dideliuose jūriose",
+    "p1": "Laukime Jums atidaryti Mazurų magiją mūsų luksusiniuose atstovavimais, klimatinėse namuose ir yate paslūgai.",
+    "p2": "Sukurti laisvę Giżyckuje, džiaugtis natura Fuleduje arba nuolatyti Skorupkose. Jūsų tikslus vactionas prasideda šiuo metu."
+  },
+  "luxuryBenefits": {
+    "tag": "Mūsų paslaugos savybės",
+    "title": "Luksus yra detalėse",
+    "quality": {
+      "title": "Sunkinga baigiamasis",
+      "desc": "Kiekvienam mūsų atstovavimui dėmesys buvo užtikrintas. Mes tikimės, kad Jums pasižymėtumėte visus paslėptus ir matomus detalius"
+    },
+    "views": {
+      "title": "Jūrių perspektyvos",
+      "desc": "Atsižvelgiant į šiek tiekų svarbiausius dienas - nuo šiaurės iki vėkesies, filmai VOD galėtų užtikrinti Jums šiek tiekų perspektyvas Kisajnoje arba Dobskame"
+    },
+    "comfort": {
+      "title": "Laisvumas keliuose",
+      "desc": "Slinkus laikas yra nebesikeičiamas ir turi įtaką jūsų paslaugos kalidadui už mūsų. Visi šiek tiekų kabinetai yra įgyvendinti su geresnėmis ir komfotinėmis matavimais"
+    },
+    "wifi": {
+      "title": "Nemokamas Wi-Fi",
+      "desc": "Mūsų atstovavimai priklauso nuo nemokamo Wi-Fi ryšio. Jis nėra būtinas keliuose, bet padeda, pvz., dirbant nuotoliniuose"
+    },
+    "gifts": {
+      "title": "Startinė sarašas",
+      "desc": "Kiekvienam iš mūsų gamininkų prikračiaujiame su mažuoju atvykojoje, kuris yra elementas mūsų vactiono paslaugų pakankamoje"
+    },
+    "flexible": {
+      "title": "Elastinė rezerwacija",
+      "desc": "Jie žina, kad planai gali keistis. Dėl to galime leisti datų keitimą situacijose, kai yra nepakankamai laiko arba kitos atvejai."
+    }
+  },
+  "apartments": {
+    "title": "Mūsų apartamentai",
+    "description": "Pasirinkite tinkamus vietovę savo vactionui.",
+    "details": "Sudėtingumai",
+    "pricePrefix": "nuo",
+    "night": "nakties",
+    "people": "maksimali žmonių skaičius",
+    "bookBtn": "UžSAKYTI Jį",
+    "bookingTitle": "Užsakykite atvykojimą",
+    "bookingDesc": "Pasirinkite datus ir patikrinkite galimybę.",
+    "items": {
+      "stranda": {
+        "title": "Apartamentai Stranda Residence",
+        "location": "Giżycko, jezioro Kisajno",
+        "description": "Apartamentai yra prie Stranda porto kompleksui Stranda Residence..."
+      },
+      "kisajno": {
+        "title": "Apartamentai Kisajno",
+        "location": "Giżycko, jezioro Kisajno",
+        "description": "Luksusas už jūsų keliučioje."
+      },
+      "fuleda": {
+        "title": "Apartamentai Fuleda",
+        "location": "Fuledas, Dobskoje jūzias",
+        "description": "Nuo miesto žingsnio vidurio laukimas"
+      },
+      "domkiSkorupki": {
+        "title": "Skorupki domai",
+        "location": "Skorupki, Tałty jūzias",
+        "description": "Mazurskios naturos širdies domai"
+      },
+      "pokojeFuleda": {
+        "title": "Fuledas kambieri aiškumas",
+        "location": "Fuledas, Dobskoje jūzias",
+        "description": "Sveikatai kambieri su jūzio perspektyva centruojant"
+      },
+      "mikolajki": {
+        "title": "Mikołajki apartamentai",
+        "location": "Mikołajki, Mikołajskis jūzias",
+        "description": "Naujas atsargusis apartamentas Mikołajke centroje"
+      }
+    }
+  },
+  "cottagesAndRooms": {
+    "title": "Mūsų domai ir kambieri aiškumas",
+    "description": "Sveikatos aplinka naturėje komfortuose"
+  },
+  "charter": {
+    "tag": "Be vairavimo licencijos",
+    "title": "Motorsvorčio jachtas charteris",
+    "description": "Stillo 30 motorsvorčio jachtas, kurį galima dirbti be vairavimo licencijos",
+    "model": "Stillo 30 (2020)",
+    "cabins": "Trys uždarytos kabiniai",
+    "checkBtn": "Patikrinkite galimybę",
+    "premiumFleet": "Premium flota",
+    "feature1": "Bez patento",
+    "feature2": "Metai 2020",
+    "feature3": "Luksusinė įranga",
+    "detailsBtn": "Peržiūrėk detalius informacijas",
+    "thrusters": "Sterilizavimas struikiais",
+    "heating": "Širdies šiek tiekimas",
+    "modelVip": "Stillo 30 VIP",
+    "boatType": "Luksusinis Houseboat be patento"
+  },
+  "stranda": {
+    "subtitle": "Sveiki atvykę į luksusines aukščiojius apartamentus Giżyckoje už Kisajnojį jūriu",
+    "description": "Apartamentai yra Stranda portui prieiga, Stranda Residence komplekso viduje. Jūsų vietovė yra giliai susijusi su jūriu ir porto paslaugomis (vandens įrankio užtikrinimo lentva, taverna, vandens šventėje - rock koncertai), taip pat Giżyckos centras suteikia daugybę aktyvių laiko suvokimų Mūsų Didžiųjų Jeziorų Marškoje.",
+    "building": "Budynas",
+    "apartment": "Apartamentas",
+    "filters": {
+      "jacuzzi": "Jacuzzi",
+      "size": "Žmonių skaičius",
+      "sizeAny": "Bet koks",
+      "size4": "Maksimaliai 4 žmonės",
+      "size6": "Maksimaliai 6 žmonės",
+      "floor": "Kondygnacija",
+      "floorAny": "Bet koks",
+      "floorParter": "Pirmasis",
+      "floorPietro": "Kambas"
+    },
+    "units": {
+      "C404": {
+        "title": "Komandina C404 tipo Studio",
+        "descriptionPart1": "Komandinia tipo Studio yra suteikiama į budynuką C, tai yra nocleginė vietovė su dviejų žmonių staliu, plitai išdėstytą sofa, salonu su kūryba ir vaikščiotėsu, vaikščiotėsu su prysniuku ir tarasu su Valonos Tracioje ir Strandų portui rodymu.",
+        "descriptionPart2": "Nurodyta maksimaliai 4 žmonėms. Komandina yra luksusinai uždengta ir suteikia aukščioji komforto vypokojimo vietovė.",
+        "descriptionPart3": "Vietovėje galima naudoti porto išteklius, tokius kaip: taverna, lankstai šeimose, marina, vandens įmoka, itp."
+      },
+      "A103": {
+        "title": "Komandina A103 Suite",
+        "descriptionPart1": "Komandina A103 Suite yra pirmame kambuose budynukui, ji turėtų didelę ir plitą saloną su kūryba ir vaikščiotėsu, sypialnius, vaikščiotęsu su prysniuku ir didelę tarasu su mebliu.",
+        "descriptionPart2": "Ji suteikia komfortinį vypokojimą šiek tiekams ir grupėms draugų.",
+        "descriptionPart3": "Porto ir jūros nuotolis padeda ji būti idealios laikinoji vietovė."
+      },
+      "A104": {
+        "title": "Komandina A104 Delux su jacuzzi",
+        "descriptionPart1": "Komandina A104 Delux su privačiu jacuziija tarase yra parterėje budynukui A.",
+        "descriptionPart2": "Ji sudarytas iš plitai saloną su kūryba ir sofa, sypialnius su dviejų žmonių staliu, vaikščiotęsu su prysniuku ir tarasu, kur yra privačia jacuziija.",
+        "descriptionPart3": "Viskas turėtų plakantį Valonos Kisajno rodymą. Komandina yra aukščiausioje vietovėje, tai padeda suteikti atskirius rodymus."
+      }
+    }
+  },
+  "details": {
+    "about": "Apie komandinę",
+    "amenities": "Privalumai",
+    "booking": "Rezervacija",
+    "checkAvailability": "Patikrinkite galimybę ir rezervuokite.",
+    "callBtn": "Skambinkite",
+    "lowPrice": "Garantija mažiausios kainos.",
+    "priceFrom": "Kaina nuo",
+    "guests": "Maksimali ilgis žmonių",
+    "backToList": "Atgal",
+    "descriptionPart1": "Visi suteikti atstovai yra užtikrinti luksus ir suteikia labai didelę komfortą laikymosi.",
+    "descriptionPart2": "Jie turi saloną su TV ir kūrybiškam staliukui, vieną ar duos savininkų su TV, vaistinės kambariu su prysniu, prieigą prie WiFi, tarasę su laikomis laikymosi meilėse su vandenyno perspektyva, suteiktingus šiek tiek išlaidoms ir užtikrinantys labiau laikymosi.",
+    "descriptionPart3": "Taip pat atstovai esanči aiškiausiuose vietomis turi prieigą į tarasę su jacuzi.",
+    "gallery": "Galėjimas",
+    "collapseGallery": "Sukontrauki galėjimą",
+    "seeMorePhotos": "Žiūrėk daugiau nuotarų",
+    "needHelp": "Reikalauja padės?",
+    "availability": "Pasiekiamumas",
+    "items": {
+      "view": "Vandenyno perspektyva",
+      "ac": "Klimatizacija",
+      "terrace": "Taras su laikomis laikymosi meilėse",
+      "kitchen": "Kūrybiškas staliukas (paltas, kibutis, vaistinės mašina)",
+      "tv": "Smart TV (Salonas + Sypininkas)",
+      "wifi": "WiFi",
+      "parking": "Parkavimo vietovė",
+      "sauna": "Prieigą prie saunos",
+      "iron": "Žemėlaukimas ir stulė",
+      "hairDryer": "Kūrybiškas staliukas",
+      "coffee": "Kava/herbatos paruosimo stakas",
+      "roomSalon": "Salonas",
+      "roomKitchen": "Kučios",
+      "roomBedroom": "Sypialnis",
+      "roomBathroom": "Laukimas",
+      "salonFeatures": "TV, sofa 2os., stalo, kiekvienių, klimatizacija, wifi",
+      "kitchenFeatures": "indukcinis platininkas, lūkesys, vaikštinės mašina, mikrovanduo, komplet nakties ir šaltinių",
+      "bedroomFeatures": "TV, 180x200 lėktuvas, komplet sietių, mašina užtikrinti atsiejimą nuo vaikštinio, praskirstymo stalo, želzainis, klimatizacija",
+      "bathroomFeatures": "prysnys, vaikštinės susžirgimo mašina, šlafroki, tūkstančių balsamas",
+      "terraceAndOther": "Taras ir kitos dalys"
+    }
+  },
+  "footer": {
+    "brandDesc": "Jūsų luksusios pristatytis Mazurose.",
+    "navTitle": "Navigacija",
+    "contactTitle": "Kontaktai",
+    "followTitle": "Obserwuoję mes",
+    "rights": "Visi teisiniai pranašumai užtikrinta.",
+    "linksTitle": "Nuorodos"
+  },
+  "skorupki": {
+    "title": "Skorupki domkai",
+    "subtitle": "Jūsų luksusios pristatytis šiek tiek Mazurose",
+    "introTitle": "Kamerales domkai Mazurose",
+    "descriptionPart1": "Skorupki domkai yra kamerales domkai 10 elegančių vaction domkų, suteikiančių laisvę, požymingos vietovėje Skorupki, vienoje iš Mazeurojų geriausių ir žaliuvių vietose.",
+    "descriptionPart2": "Štai propozicija dėl gamininkų, kurių reikalauja tarptautinioje aplinkoje, privatumo ir aukšto standardo, tačiau norint likti įvairiame pasaulyje. Namai yra išdėstyti nuo jezioro 350 metrų atstumą, o gamininkams prieinamas atskiras, privatus rekreacijos teritorija už vandenio.",
+    "descriptionPart3": "🏡 Komfortas ir elegancija į 6 asmenis. Kiekvienas namas buvo projektuotas taip, kad padėtų gamininkams tapti mažiau įvairiame pasaulyje: dviejos nepriklausomos sypialnys antrašteje, salonas su plakantai sofais parterėje, naujas, pilno išsikurto kūrybos namas, elegančiausiai atlikta vaistinė, uždengtas tarasas – idealus vietovės, kurios padėtų jums pradėti savaitę arba baigti savaitę.",
+    "descriptionPart4": "🌊 Privatus teritorijos už vandenio. Gamininkai mūsų namų turi prieigą į atskirą rekreacijos teritoriją už vandenio, kuriame yra: šiek tiekalis vietovėje, vaikų žaidimų laukas, diskretus įterptas į natūralią aplinką, vietovė, kurios padėtų jums susisiekti su savimi ir tapti mažiau įvairiame pasaulyje.",
+    "externalAmenities": "🌲 Spokojimas, tarptautinioje aplinkoje ir natura. Mūsų gyveninio vietovės yra išdėstytos taip, kad padėtų jums tapti mažiau įvairiame pasaulyje: kameralus atmosferos ir ticha, gamininkai gali likti nuo jezioro ir mazurskių širdies, idealūs sąlygos laikyti savaitę arba baigti savaitę.",
+    "areaTitle": "Dlaczego Namai Skorupkės?",
+    "areaDesc": "✔ tik 10 namų – kameralumas ir privatumas. \n✔ nuo jezioro 350 metrų atstumą + atskiras, privatus teritorijos už vandenio. \n✔ elegančiausias standardas ir išdėstyti viduje. \n✔ idealus vietovės, kurios padėtų jums tapti mažiau įvairiame pasaulyje. \n✔ standartinė tvarkymo programa www.Mazury.Holiday",
+    "amenitiesTitle": "Udogodnimas namuose",
+    "galleryTitle": "Galerija",
+    "expandGallery": "Žiūrėk daugiau nuotarų",
+    "collapseGallery": "Sukompresuoti galeriją",
+    "ctaTitle": "Pajungti Skorupeles magiją",
+    "ctaDesc": "Rezervacija namo yra pirmas žingsnis į neapamatinę vakacijos. Užtikrinkite savo laiką ir užsakykite laisvius terminus.",
+    "details": {
+      "interiorTitle": "Viduje plėštas",
+      "interiorDesc": "Parterėje yra ilgasis, klimatizuotas namas su didiu televizoriu ir sofa su spanio funkcija. Antrašte yra sypialnis su mažausiu kameriniu laikmena (180x200) ir antras pokoj su dviejais vienos vietos laikmenomis (90x200), kurios galėtų būti susijusios.",
+      "terraceTitle": "Taras ir natura",
+      "terraceDesc": "Kiekvienas namas turi didelį, uždengtą tarasą su parkavimo mebliu, kroviniuose ir savo grilgu. Tai idealus vietovės, kurios padėtų jums tapti mažiau įvairiame pasaulyje. Prie namo yra atskiras tranklys plotas.",
+      "activityTitle": "Aktyvumas ir laikymas",
+      "activityDesc": "Tik 350 metrų nuo privatus, atskiras teritorijos už vandenio su pomostu į fiskavimą, plaukščių lauką ir vaikų žaidimų lauką. Šiek tiekalis yra prieinamas dalyviams savaitgaliais. Akceptuojame gyvūnus – užtikrinkite savo šuo su jumis!",
+      "locationTitle": "Lokacija ir udogodnimas",
+      "locationDesc": "Jūs esate 10 minučių nuo Mikołajek ir Tropikano vandens parko. Šiek tiekalis yra prieinamas nemokamai, greitas WiFi ir pristatymas (kava, herbata, vода). Namuose galėtumėte rasti ir žemėlankį, plukščių stulę ir mažgiklinį.",
+      "amenitiesBlockTitle": "IŠMOKIMAS IR IŠSILIKIMAI",
+      "bedroomTitle": "Sypialnia ir salonas",
+      "bedroomItems": [
+        "Maksimaliai 6 asmenys (aproximacinai 55 m²)",
+        "Sypialnis 1: dviejų žmonių lėktuvas 180x200",
+        "Sypialnis 2: du lėktuvai 90x200 (galimas susijungimas)",
+        "Salonas: klimatinis valdymas, smart TV, dviejų žmonių sofa",
+        "Pieno ir ruošimio įrankiai yra įtraukti į kainą"
+      ],
+      "cottageAmenitiesTitle": "Kūryba ir tarpa",
+      "cottageAmenitiesItems": [
+        "Vandens keleiviai ir indukcijos platinės",
+        "Kofeinos ekspresas ir lodo kalorometras",
+        "Visa išlaidų sąskaita, garneriai ir stulai",
+        "Uždengtas tarpas, ležikliai, privatus grillas"
+      ],
+      "commonAreasTitle": "Privataus ribojimo linija (350m)",
+      "commonAreasItems": [
+        "Vandens užtikrinimo pomostas ir jūros perspektyva",
+        "Vieta gaminimui ir uždengtam altanai",
+        "Vaikų žaidimų laukas",
+        "Plėtinio žaidimų teritorija"
+      ],
+      "additionalTitle": "Papildomos informacijos",
+      "additionalItems": [
+        "Pradinių įrankių paketas: vanduo, kofeina, teja",
+        "Nemokamas parkavimas ir greitas WiFi",
+        "Obiekt prijatiam žvaigždžiutiklėms",
+        "Sienos, stulė ir šiekūra kiekvieno namoje"
+      ],
+      "price": "nuo 350 € / dieną",
+      "bookBtn": "Rezervuokite"
+    },
+    "amenities": {
+      "fullEquip": "Viskas įtrauktas",
+      "garden": "Privatus rūšis",
+      "bonfire": "Grillas ir palaikas",
+      "parking": "Parkavimas",
+      "wifi": "WiFi",
+      "ac": "Klimatininkas",
+      "waterAccess": "Prieieji vanduo",
+      "peace": "Tolis ir laimingas"
+    }
+  },
+  "roomsPage": {
+    "heroTitle": "Mazurų kambariai",
+    "heroSubtitle": "Komfortiniai kambariai laimingame vietovėje",
+    "ctaText": "Ieškote daugiau tarpusavybės Fuledyje? Patikrinkite mus",
+    "ctaLink": "Fuledo atstovai",
+    "items": {
+      "fuleda": {
+        "title": "Fuledo kambariai",
+        "description": "Komfortiniai kambariai virš Dobskojo jūros, laimingame paukščiu. Idealūs šiek tiekams ir naturų mielieji.",
+        "location": "Fuleda, Dobskaus jūra",
+        "features": [
+          "2 kambariai",
+          "Lavanas",
+          "Kūryba",
+          "Darbas",
+          "Pasiekimas į žaliasęs"
+        ],
+        "priceLabel": "Kaina",
+        "priceValue": "nuo 375 €/diena",
+        "detailsBtn": "DETALIAI",
+        "bookBtn": "rezervuoti"
+      }
+    }
+  },
+  "calendar": {
+    "title": "Galimybė",
+    "loading": "Kraunama...",
+    "error": "Nepavyko užkrauti naujausius duomenis. Bandykime dar kartą po kelių minutę.",
+    "prevMonth": "Anksčiausias mėnuo",
+    "nextMonth": "Sekmingas mėnuo",
+    "days": [
+      "Pn",
+      "Atsiainė",
+      "Treciadienis",
+      "Ketvirtadienis",
+      "Penktadienis",
+      "Šeštadienis",
+      "Sekmadienis"
+    ],
+    "legend": {
+      "busy": "Užimamas",
+      "checkIn": "Galimas atvykimas",
+      "checkOut": "Galimas išvykimas",
+      "available": "Pasiekiamas"
+    }
+  },
+  "strandaTypes": {
+    "oneBedroom": "su vienu vaikščiotu",
+    "oneBedroomJacuzzi": "su vienu vaikščiotu ir jacuzzi",
+    "jacuzziTerrace": "su jacuzzi ant tarasto",
+    "twoBedrooms": "su dviejus vaikščiotis",
+    "deluxeJacuzzi": "Delux su jacuzzi",
+    "deluxeSaunaJacuzzi": "Delux su sauną ir jacuzzi",
+    "apartment": "Atstovaus",
+    "studio": "Studijos",
+    "suite": "Suite"
+  },
+  "strandaDescriptions": {
+    "genericDesc": "Mūsų atstovai suteikiama Giżyckuje, prie Stranda porto Stranda Residence, ant Kisajno jūros (Tracz zatoka). Jie užtikrina šiek tiek piękną perspektyvą į Kisajno jūrų panoramą ir Didžioji Mazurų jūrių turizmo kelionė. Atstovai yra luksusiai atlikęs ir suteikiama aukštas vypokyčio komfortas. Šiuo metu galima naudoti porto resursus tokius kaip: taverna, lankstai šeimose, marina, vandens įrankių užtikrinimo lentva, ir kt.",
+    "locationDesc": "Giżyckos centras yra geresnis vietovės turizmo atrakcijoms, restauracijoms ir pubams. Objekto vieta padeda lengviau žinoti Mazurus prirodoje, istorijoje ir vaidmenyse. Daugybę vietų reikalingų redagavimo yra apie 15-35 minutės atstumui automobiliu.",
+    "A103": "Atstovas A103 Suite yra pirmame stambelyje, turintis didelį ir platus saloną su aneksemu kūryba ir išskirstytu sofa, vaikščiotę, saloną ir bažnyčią su prysniukui ir dideliu tarasu su mebėlėmis.",
+    "A104": "Atstovas A104 Delux su privačiu jacuzzi ant tarasto yra antrame stambelyje. Jis sudarytas iš platus salono su aneksemu kūryba ir sofa, vienos vaikščioties sėkmės, bažnyčią su prysniukui ir taraso su privačiu jacuzzi įtrauktas į kainą.",
+    "A105": "Atstovas A105 yra luksusias vienetas su jacuzzi, suteikiantis komfortinį vypokyčio laikymą naujame stambelyje.",
+    "B102": "Atstovas B102 yra antrame stambelyje, turintis platus saloną su aneksemu kūryba ir savo tarasu su jacuzzi.",
+    "B106": "Luksusias atstovai ant parterio su dviejus vaikščiotys ir didelis salonas.",
+    "B202": "Atsinganantis aptarimas pirmajame aukšte, su privačiau saunou ir jacuziijiu tarase.",
+    "C404": "Studijiniai aptarimai yra budynke C, tai nocleginio vietovės vienas duomenys, dviejų žmonių dvikamasis kameris, plakantasis sofa 2 asmenims, salonas su kūrybiškame kambaryse, vaikščiotė su prysniu ir taras su Valonos Traciu ir Stranda portui.",
+    "C205": "Studijiniai aptarimai yra budynke C, tai nocleginio vietovės vienas duomenys, dviejų žmonių dvikamasis kameris, plakantasis sofa 2 asmenims, salonas su kūrybiškame kambaryse, vaikščiotė su prysniu ir taras su Valonos Traciu ir Stranda portui.",
+    "A204": "Aptarimas A204 Suite yra pirmajame aukšte budynke A, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse, plakantą sofa, kambarį, vaikščiotę su prysniu ir taras su Valonos Kisajno vandeniu.",
+    "A205": "Aptarimas A205 Suite turi didelę ir plakantą saloną su kūrybiškame kambaryse ir plakantą sofa, kambarį, vaikščiotę su prysniu ir didelę tarasą su mebėlėmis. Jis yra antrajame aukšte budynke.",
+    "A302": "Aptarimas A302 Suite yra pirmajame aukšte budynke A, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir plakantą sofa, kambarį, vaikščiotę su prysniu ir taras su Valonos Kisajno vandeniu.",
+    "A305": "Aptarimas A305 Suite yra antrajame aukšte budynke, jis turi šiek tiek plakantą saloną su kūrybiškame kambaryse ir plakantą sofa, kambarį, vaikščiotę su prysniu ir didelę tarasą su mebėlėmis.",
+    "A306": "Aptarimas A306 Suite turi didelę ir plakantą saloną su kūrybiškame kambaryse ir plakantą sofa, duos kambarius, vaikščiotę su prysniu ir didelę tarasą su mebėlėmis. Jis yra antrajame aukšte budynke.",
+    "B103": "Aptarimas B103 Delux su privačiau jacuziijiu tarase yra parterioje budynke B. Jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, kambarį su dviejų žmonių dvikamasis kameris, vaikščiotę su prysniu, taras su privačiu jacuziijiu. Jis turi šiek tiek plakantą tarasą su Valonos Traciu ir Stranda vandeniu.",
+    "B201": "Aptarimas B201 Suite yra pirmajame aukšte budynke B, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, duos kambarius, dviejų vaikščiotių (vienas su prysniu, kitas su vanduo), didelę tarasą su Valonos Traciu ir Valonos Kisajno vandeniu.",
+    "B304": "Aptarimai B304 su vienu kambarium yra budynke B, jie turi dviejų žmonių dvikamasis kameris, plakantą sofa 2 asmenims, salonas su kūrybiškame kambaryse, vaikščiotę su prysniu ir taras su Valonos Kisajno vandeniu.",
+    "B305": "Aptarimai B305 su vienu kambarium yra budynke B, jie turi dviejų žmonių dvikamasis kameris, plakantą sofa 2 asmenims, salonas su kūrybiškame kambaryse, vaikščiotę su prysniu ir taras su Valonos Kisajno vandeniu.",
+    "B401": "Aptarimas B401 Delux yra 3 aukšte budynke. Jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, kambarį, vaikščiotę su prysniu, balkoną ir didelę tarasą į viršinio dėžutę budynke. Jis turi šiek tiek plakantą tarasą su Valonos vandeniu.",
+    "B402": "Aptarimas B402 Suite yra pirmajame aukšte budynke, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, kambarį, vaikščiotę su prysniu, balkoną ir didelę tarasą į viršinio dėžutę budynke su Valonos vandeniu.",
+    "B404": "Aptarimas B404 Suite yra pirmajame aukšte budynke, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, kambarį, vaikščiotę su prysniu, balkoną ir didelę tarasą į viršinio dėžutę budynke su Valonos vandeniu.",
+    "A403": "Aptarimas A403 Suite yra 3 aukšte budynke A. Jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, kambarį, vaikščiotę su prysniu, tarasą žemėje ir didelę tarasą į viršinio dėžutę budynke su privačiu jacuziijiu Valonos Stranda ir Traciu vandeniu.",
+    "C301": "Aptarimas C301 Suite yra antrajame aukšte budynke C, jis turi didelę ir plakantą saloną su kūrybiškame kambaryse ir sofa, duos kambarius, vaikščiotę su prysniu ir taras su Valonos Traciu ir Stranda portui.",
+    "C304": "Aptarimas C304 Studio yra antrajame aukšte budynke C, tai nocleginio vietovės vienas duomenys, dviejų žmonių dvikamasis kameris, plakantą sofa 2 asmenims, salonas su kūrybiškame kambaryse, vaikščiotę su prysniu ir taras su Valonos Traciu ir Stranda portui. C304 Studio (maksimalus skaičius žmonių 4).",
+    "C_1_sypialnia": "Aptarimas budynke C su vienu kambarium, suteikiantis komfortinį vėlšį maksimaliai 4 žmoniams.",
+    "C_Studio": "Studio budynke C yra idealus vietovės vėlšio su Valonos Traciu peržiūra.",
+    "C_2_sypialnie": "Pasikasis aptarnas budynku C su 2 sypialniais, idealus rodinoms."
+  },
+  "kisajnoPage": {
+    "title": "Aptarmentai Kisajno",
+    "subtitle": "Neptuno portas, Giżycko",
+    "introTitle": "Atlikęs standardas uježiamejeje",
+    "description": "Suteikiame naująj aptarną plotyje 55 m², esančią parterėje su tiesiomis į Kisajno jūros uježiamus. Idealus rodinoms ar grupėms žiniučiųse, suteikiant komfortinį vypokštinimą standartui premium.",
+    "features": [
+      "2 Atskirios sypialnys su dideliomis lėkais",
+      "Saliu su kūrybiškai šiek tiekama sofa ir TV",
+      "Ilgasis vaikų namas: vaikų stovu, mikroviltis, lęka",
+      "Klimatizacija ir greitas WiFi"
+    ],
+    "priceLabel": "Kaina nuo",
+    "priceValue": "500 PLN",
+    "priceUnit": "/ diena",
+    "amenitiesTitle": "Papildomai",
+    "bookingTitle": "Rezervuokite savo laiką",
+    "bookingDesc": "Susisiekite su mumis tiesiogiai, kad gautumėte geriausią pasiūlymą ir patikrintumėte galimybę užsisakyti norimuje terminu.",
+    "callAction": "Valdykite",
+    "amenities": {
+      "view": "Jūros perspektyva",
+      "ac": "Klimatizacija",
+      "smartTv": "Smart TV",
+      "wifi": "WiFi",
+      "kitchen": "Pilnas namokas",
+      "dishwasher": "Vanduo",
+      "parking": "Parkavimas",
+      "port": "Neptuno portas"
+    }
+  },
+  "mikolajkiPage": {
+    "title": "Mikołajkinio gijausis",
+    "subtitle": "Mikołajke centras – Vilniaus sviesos laukas",
+    "introTitle": "Komfortinis Mikołajkinio gijausis",
+    "description": "Naujas ir komfortinis Mikołajkinio gijausis, priklausantis nuo Vilniaus sviesos lauko – ideali vieta žmonėms, kurios nori turi viską „prie mano“. Gijausis prižymintas 4 asmenims ir sudarytas iš šiek tiek sypialnio su komfotinėmis dviejų vietomis kovoju, salonio su plakantuoja tvarkytojo sofa (platumus vietos spaniai), pilnai įgūstumo aneksas namokui ir naujasis namokausis.",
+    "priceLabel": "Kaina nuo",
+    "priceValue": "350 PLN",
+    "priceUnit": "/ diena",
+    "amenitiesTitle": "Privalumai",
+    "bookingTitle": "Rezervuokite savo laiką",
+    "bookingDesc": "Susisiekite su mumis tiesiogiai arba užsakykite nuoširdžio rezervacijos internetu naudojant mygtuką žemiau.",
+    "callAction": "Skambinkite",
+    "comfortTitle": "Komfortas ir įgūdžiai",
+    "comfortDesc": "Sypialnis su 180x200 kovoju, greitas WiFi, salonas su TV ir plakantuoja sofa",
+    "kitchenTitle": "Namokas ir namokausis",
+    "kitchenDesc": "Aneksas namokui su vanduo, naujasis namokausis su prysniuviu, pradinių įrankių komplektas (kava, kavos sienė)",
+    "locationTitle": " aplinka ir vieta",
+    "locationDesc": "Vaizdas į vidinį dėžutę, šiek tiek centrum Mikołajek prie Vilniaus sviesos aikščioje, nuojei vandenynio",
+    "collapseGallery": "Sukonkruoti galeriją",
+    "expandGallery": "Žiūrėti daugiau vaizdų",
+    "bookBtn": "rezervuokite jį dabar",
+    "amenities": {
+      "view": "Vaizdas į dėžutę",
+      "ac": "Klimatizacija",
+      "smartTv": "Smart TV",
+      "wifi": "Nemokamas WiFi",
+      "kitchen": "Kukuruzės aikščioje",
+      "dishwasher": "Zmywarka",
+      "parking": "Miesto centras",
+      "port": "Nuojei vandenynio"
+    }
+  },
+  "fuledaPage": {
+    "title": "Fuleda Įžvalgos",
+    "subtitle": "Tolis, laimingas, natura už Dobskojo vandenynio stebėklį",
+    "introTitle": "Laisva oaza laimės šiek tiek tylaose",
+    "description": "Fuleda Įžvalgos vieta yra pasiūlymas žmoniamis, kuriems norima pilno atskirumos nuo miesto gyvenimo. Šiek tiek aukščiau Dobskojo vandenynio stebėklio sritis, ji leidžia gauti tikslų laimę aplink miestinius rezerwatus.",
+    "groundFloorTitle": "Pirmasis aukštas",
+    "groundFloorDesc": "Du sypialnys su klimatizacijomis (įskaitant vieną su kominkiu) ir didelė taras su tiesiogineje ieškojimo vandenynio priemonės.",
+    "firstFloorTitle": "Antrasis aukštas",
+    "firstFloorDesc": "Du sypialnys su klimatizacijomis, styliausiai atlikta išteklių ir sienos su Dobskojo rezerwato perspektyva ir pilnos udogodnimas.",
+    "amenitiesTitle": "Premium udogodnienia",
+    "amenities": {
+      "ac": "Klimatyzacija",
+      "fireplace": "Kominek",
+      "beach": "Privatės plėšys",
+      "bonfire": "Lietusis",
+      "wifi": "WiFi",
+      "kitchen": "Planačia kūryba",
+      "washer": "Svariklis",
+      "pier": "Prieieji pomostas"
+    }
+  },
+  "categories": {
+    "apartments": "Mūsų atstovavimai",
+    "cottages": "Mūsų namai",
+    "rooms": "Mūsų kambariai",
+    "charter": "Charteris"
+  },
+  "attractionsPage": {
+    "title": "Regiono atrakcijos",
+    "subtitle": "Giżycko ir Mazurų kalvė yra daugybė galimybių",
+    "boyen": {
+      "title": "Twierdza Boyen",
+      "desc": "XIX amžiaus prancūzskas twierdžio forma, svarbus istorinis taškas regionui. Istoriniai aukštai ir namai su visomis savo elementais yra unikalus atsargavimo pavyzdys."
+    },
+    "bridge": {
+      "title": "Kreiptasis mostas",
+      "desc": "Unikalus XIX amžiaus technologijos žymas, dirbtinis vieno operacoriaus. Jis jungia lietuviškų ir prancūzų kanałus ir yra vienas tik šiek tiek įgyvendinti kreiptasis mostai Europoje."
+    },
+    "port": {
+      "title": "Giżycko & Ekomarina portas",
+      "desc": "Didžiausias ir naujausias portas Mažurams. Idealus vietovės užvaizduoti, gaminant savarankišką paštę arba pradeda nuvažiuoti į Didžiusius Mazurskie Jūros."
+    },
+    "water": {
+      "title": "Kisajno ir Dobsko Jūra",
+      "desc": "Krystalinė vanduo, prietaisiniai aplinka ir tyla sritis. Lankstumas užvaizduoti naturai, kajakarstvo ir atsargus žemėlaukio."
+    },
+    "wolfsLair": {
+      "title": "Wilczy Szaniec",
+      "desc": "Hitlero pagrindinis namas Gierlozyje. Siaurininkų kompleksas, pasivertę į aplinką, kaip simbolis Antrasis pasaulyje karo."
+    },
+    "waterTower": {
+      "title": "Ciśniečio tvirta",
+      "desc": "Atsargus tvirta tvirta su perspektyvos tarase, iš kurios atvaizduojamas Gižyko miestas ir jų aplinkiniai jūros. Tarase yra muzejas ir kava."
+    },
+    "castle": {
+      "title": "Krzyżackasis namas",
+      "desc": "Atsargus užtikrintas namas Gižykyje, dabar luksusinis St. Bruno hotelis. Sujungimas tarp istorijos ir šiuolaikinio."
+    },
+    "bison": {
+      "title": "Żubrų parkas",
+      "desc": "Demonstracinis žubrų parkas Woliskuose. Galimybė stebeti 'kralius pusčies' iš perspektyvos tarase jų natūraliame aplinkinyje."
+    },
+    "tags": {
+      "history": "Istorija",
+      "architecture": "Architektūra",
+      "education": "Švietimas",
+      "monument": "Paminklas",
+      "technology": "Technologija",
+      "gizycko": "Gižyckas",
+      "sailing": "Buriavimas",
+      "recreation": "Poilsis",
+      "center": "Centras",
+      "nature": "Gamta",
+      "silence": "Tyla",
+      "landscape": "Kraštovaizdis",
+      "ww2": "Antrasis pasaulinis karas",
+      "museum": "Muziejus",
+      "view": "Vaizdas",
+      "cafe": "Kavinė",
+      "hotel": "Viešbutis",
+      "animals": "Gyvūnai"
+    },
+    "showOnMap": "Rodyti žemėlapyje"
+  },
+  "cooperationPage": {
+    "title": "Sąveika",
+    "subtitle": "Jūsų objektas mažiausiose rukomis Mažurams",
+    "services": {
+      "title": "Profesionalus Namų tvarkymas",
+      "desc": "Ieškote savo priitarimo partnerio jūsų nuotoliniame namuose? Mazury.Holiday yra komandos ekspertų, kurių pagalba atlieka visus jūsų nuotolinio namų tvarkymo užduotis. Atidarykime jums jūsų sėkmę, padedant didinti savo sėkmę ir priimant didžiausią klientų patikrinimą."
+    },
+    "marketing": {
+      "title": "Atsargus Marketingas",
+      "desc": "Jūsų namas atsiranda pagrindiniame vietovėje portalais tokiais kaip Booking.com, Airbnb ir mūsų autorskai platforma Mazury.Holiday. Atlikame nuotolinio namų foto ir vaizdo sesijas."
+    },
+    "guests": {
+      "title": "Bevartus Nuotolis",
+      "desc": "Atlieka visą procesą nuo rezervacijos ir mokėjimo, per profesinį sveikatą, iki 24/7 pagalba jūsų klientams."
+    },
+    "maintenance": {
+      "title": "5-Gwiazdkinis Standardas",
+      "desc": "Mūsų spraukininkai ir technikai dirba su kiekviena detalium. Jūsų nuomone lėka ir yra idealios techniškai priprastos prie kiekvieno gaminio."
+    },
+    "whyUs": {
+      "title": "Dlaczego turime su jumis dirbtis?",
+      "point1": "Vietiniame patirtimi ir žinoma Mazuriančiai rinkos",
+      "point2": "Perpildomas sąskaitavimo sistema ir vartotojo panelė",
+      "point3": "Stabili techniška ir konserwacinė pagalba",
+      "point4": "Kainų optimizacija (Pajamų valdymas)"
+    }
+  },
+  "contactForm": {
+    "title": "Rašykite mums",
+    "subtitle": "Jūs turite klausimai? Norėtumėte rezervuoti atsilankimą? Naudokite formularį žemiau.",
+    "name": "Vardas ir pavardė",
+    "email": "El. pašto adresas",
+    "phone": "Telefonas",
+    "subject": "Tema",
+    "message": "Žinutės turinys",
+    "send": "Siųsti žinutę",
+    "sending": "Siunčiama...",
+    "success": "Žinutė sėkmingai siųsta!",
+    "error": "Klaida siunčiant žinutę. Bandykite dar kartą."
+  },
+  "cookieConsent": {
+    "title": "Sukūrykles ir Privatumas 🍪",
+    "description": "Mes dirbame su jūsų privatumu. Galite priimti visus suteikiamus pliktus arba nurodyti savo sutikimus. Daugiau informacijos apie",
+    "privacyLink": "Privatumo politiką",
+    "acceptAll": "Priimti visus",
+    "customize": "Nustatyti",
+    "decline": "Atmestis",
+    "settingsTitle": "Sėkmens savybes nustatymas",
+    "back": "Grįžti",
+    "necessary": "Būtina",
+    "necessaryDesc": "Reikalaujami, kad veiktų svetainė.",
+    "analytics": "Analitinės",
+    "analyticsDesc": "Jums padeda pagerinti svetainę.",
+    "marketing": "Marketinginiai",
+    "marketingDesc": "Priklauso reklamos jums.",
+    "save": "Išsaugoti nustatymus"
+  },
+  "privacyPolicy": {
+    "title": "Sutartis apie privatumą ir sėkmens savybes",
+    "intro": "Mes remimės jūsų privatumu, perskaitykite mūsų sutartį apie privatumą.",
+    "content": "Ši Sutartis apie sėkmens savybes taikoma visoms internetiniams svetainėms mazury.holiday. Naudodamiesi mūsų svetainemis, priimtumėte naudoti sėkmens savybes pagal šią sutartį. Mes naudojame sėkmens savybes, kad mes galėtume jums padėti greičiau ir lengviau naudotis svetainėmis ir kad priimtume įvairias reklamos ir turinio paskirties pagal jūsų poreikius. Bet kada galėsite valdyti savo sėkmens savybių nustatymus savo naršyklėje.",
+    "sections": [
+      {
+        "title": "Kas yra sėkmens savybė?",
+        "content": "Sėkmens savybė (angl. <em>cookies</em>) – maži tekstiniai informacijos, siunčiami internetiniu serveriu ir saugomi jūsų kompiuteryje (dažniausiai į diską). Numatomi parametrai sėkmens savybėms leidžia nuskaityti informaciją, kurią jie turėtų, tik serveriu, kuris juos sukūrė. Sėkmens savybės yra dažniausiai naudojamos licencijavimui, sondams, internetiniu parduotuvėmis, svetainėmis, reikalaujančiomis registracijos, reklamomis ir monitoriuojant žmonių veiklą."
+      },
+      {
+        "title": "Kad kuriame sėkmens savybes?",
+        "content": "Svetainės mazury.holiday naudoja sėkmens savybes įvairiais tikslais:",
+        "list": [
+          "norint, kad svetainės mazury.holiday galėtų veikti greičiau ir būti lengviau naudotis",
+          "Norint gerai suteikti turinio ir reklamos, prieinamios mazury.holiday svetainėse, jums atitinkant savo tikslus ir interesus",
+          "norint gauti anonimines, suskirstytoje statistikos duomenis, kurie leidžia mums suprantoti kaip žmonės naudoja musų svetaines ir padeda joms padėti padėti joms funkcionalumui ir turinio pakeitimui"
+        ]
+      },
+      {
+        "content": "Naudojant sūriukus šiuo atveju niekada nurodome vartotojo identitetos pagal informaciją, saugomą įsivertiniuose sūriukuose."
+      },
+      {
+        "title": "Duomenų saugojimo laikotarpis „cookies“",
+        "content": "Naudojame du sėkmęs – <strong>sesijines</strong> ir <strong>ilgalaikinis</strong>. Šie pirmieji išlieka jūsų įrenginyje tik tada, kai naudoja mazury.holiday svetaines. Ilgalaikiniai sūriukai išlieka jūsų įrenginyje tol kol jiems nustato laiko funkcijos arba kol vartotojas juos ištrins."
+      },
+      {
+        "title": "Trečiųjų šalių sūriukai",
+        "content": "Korzystant mazury.holiday svetainėse galiu gauti sūriukus, išsamesnius su kuriomis susijusių su mumis trečiomis šalimis, tokiais kaip Facebook ir Google, taip pat su reklamos kampanijoms vykstančiomis firmomis. Daugiau informacijos apie šiuos sūriukus galima gauti mazury.holiday svetainėse."
+      },
+      {
+        "title": "Kaip ištrinti arba keisti „cookies“ nustatymus?",
+        "content": "Dauguma internetinių naršyklės pradžiau yra nustatyta automatiskai priimti sūriukus. Tačiau galite pakeisti naršyklės nustatymus, kad blokuotumėte sūriukus – visiems ar tik kai kuriamoms suteikti, pvz., tik trečiomis šalimis, arba taip pat gauti pranešimus, kai jie išsiunčiami į jūsų įrenginy.<br/><br/>Atminkite, kad jei blokuosite naudojamos sūriukus mums, tai gal galėtų turėti negatyvias poveikį jūsų naudojimui mazury.holiday svetainėse, pvz., galiu nebegalėti peržiūrėti kai kuriose svetainėse arba gauti spersonalizuotus informacijas. Taip pat negalėsime gauti anoniminių duomenų apie jūsų naudojimą mums padėti išlieka jums svetainių turinio ir paslaugų."
+      }
+    ],
+    "usefulLinks": "Naudingos nuorodos",
+    "linksDescription": "Jūs turite perskaityti šios firmos privatumo politiką, kad suprantumėte jų suteikiamus sūriukus:",
+    "manageCookies": "Norint valdyti savo sūriuku nustatymus, pasirinkite naršyklę internete, kuri naudojate ir vykdykite pagal žmonių instrukcijas:",
+    "mobileDevices": "Mobiliniai įrenginiai:"
+  },
+  "pokojeFuledaPage": {
+    "heroTitle": "Fuleda kambariai",
+    "price": "nuo 375 €/diena",
+    "description": "Norim išsiųsti du kambarius: vieną su dviejų sienos, kitą su dviejų vienosios sienos, vaikščioji kambarys su prysniukui ir vėliuviu. Kambaryse yra taras. Atskirame budynaku, atstumant 10m nuo kambarių, yra vaikščioji kambarys su papildomu vėliuviu. Viskas yra Fuledžki Rógjeje, priejeje į Jūdžiaus jūrią, su tyla ir laukeliu Folwark Fuleda. Idealus vietovė dėl žmonių, kuriuos reikalauja vaikščios, tyla ir serenitys. Atstumant nuo miesto.\n\nSekmingai išsiųsta įvairiose sienos budynakui, priklausomai nuo jūsų naudojamo įrenginio. Pagrindinis budynkas turėtų du kambarius, vaikščioji kambarys su prysniukui ir vėliuviu, taras. Taip pat yra kelių nuo taros iki kitos sienos, kurie leidžia pasiekti vaikščiojį kambarį, turinčio grillą, palaiką ir vėlę.\n\nNuo 250m atstumant yra bendrovaikščios plaže. Fuleda yra nuo Giżykų apie 10km, nuo Kętrzynos ir Gieržylo, kur yra Wilczy šaniec Hitlero kwatera. Nuo mažiausio lasinio, lankstinių, ciklų ir žaidimų vietovės. Šiek tiek yra nuo miesto apie 3km.\n\nPriklauso nuo jūsų poreikių rodintiems šiuos kambarius: šešiai, vėdkarzai, grzybiavimas ir žmonės, kuriuos reikalauja vaikščios.",
+    "amenitiesTitle": "Išdėstymas",
+    "room1Title": "Kambarys 1 (2-osobinis)",
+    "room1Items": [
+      "Sienos sienos",
+      "Atidarius į taras",
+      "Oskirvėjas",
+      "Sausininkas",
+      "Lietus",
+      "Prasklaida"
+    ],
+    "room2Title": "Pokalbis 2 (2 lėktuvos)",
+    "room2Items": [
+      "Du lėktuvai vienas po kito",
+      "TV",
+      "Išeiti į tarpa"
+    ],
+    "kitchenTitle": "Kūryba",
+    "kitchenNote": "(atskiras namas 10m)",
+    "kitchenItems": [
+      "Laukva",
+      "Vandens keletojas",
+      "Mikrovalandas",
+      "Tostorius",
+      "Komplektas kelių ir šaltinių",
+      "Gazinė kūryba",
+      "Kava expressas"
+    ],
+    "bathroomTitle": "Bendruomenės",
+    "bathroomItems": [
+      "Prančia",
+      "Slinkimas",
+      "Sausainės šiek tiek",
+      "Paviršinio rūšis",
+      "Klavišai",
+      "Kroviniukai",
+      "Kosmetika"
+    ],
+    "terraceTitle": "Taras ir aplinka",
+    "terraceItems": [
+      "Platinantis taras",
+      "Privatus vandens išeitis",
+      "Grilla ir šaltinis",
+      "Vėliavos lūkesčiai",
+      "Peržiūros taras"
+    ],
+    "bookingTitle": "Rezervacija",
+    "bookingDesc": "Patikrinkite galimybę ir rezervuokite savo laiką",
+    "bookBtn": "REZERVIUOKITE Jį",
+    "callBtn": "Skambinkite: 730 067 027",
+    "bestPrice": "Sunkūs kainos - rezervuokite tiesiogiai",
+    "galleryTitle": "Galėjimo galerija",
+    "expandGallery": "Žiūrėkite į daugiau nuotarų",
+    "collapseGallery": "Sutraukti galėjimą"
+  },
+  "charterPage": {
+    "heroTitle": "Stillo 30 VIP",
+    "heroSubtitle": "Jacht motorowy Stillo 30 VIP",
+    "mainTitle": "Twój luksusowy dom na wodzie",
+    "desc1": "<strong>Stillo 30 VIP</strong> to następca sprawdzonej i cenionej Futury 870. Jest jednostką mającą na celu zaspokojenie oczekiwań najbardziej wymagających armatorów w sektorze jachtów wypornościowych i pół ślizgowych typu Houseboat. Walory nautyczne, sprawdzone w wielokrotnie nagradzanym poprzedniku, połączone z rewolucyjną praktycznością.",
+    "desc2": "Na pokładzie znajdziesz do <strong>6 miejsc do spania</strong>, pełnowymiarową łazienkę oraz salon z panoramicznymi oknami i wysokim (ok. 190 cm) stropem, co daje poczucie prawdziwego apartamentu na wodzie. Szerokie półpokłady prowadzą na dziobowy taras do opalania, a niska platforma kąpielowa u rufy ułatwia zejście do wody oraz cumowanie przy pomoście.",
+    "desc3": "Podstawowe atuty to mocny silnik stacjonarny 52KM, <strong>dwa stery strumieniowe</strong>, elektryczna winda kotwiczna, materace z pianką termoplastyczną, WiFi bez ograniczeń, TV ze Smart TV, ekspres do kawy Nespresso i wiele innych…",
+    "desc4": "Co ważne dla czarteru: jednostka utrzymuje prędkość poniżej 15 km/h, więc w Polsce można nią sterować <strong>bez patentu</strong> – po krótkim przeszkoleniu odbierasz jacht i ruszasz w trasę. Stillo 30 oferuje więc luksus, wygodę i pełnię mazurskiej przygody, a jednocześnie jest idealnym wyborem dla rodzin i grup przyjaciół szukających pierwszego doświadczenia z własnym „domem na wodzie”.",
+    "vipAmenitiesTitle": "Udogodnienia VIP",
+    "navAndDriveTitle": "Nawigacja i Napęd",
+    "navAndDriveDesc": "Stery strumieniowe (Dziób/Rufa), Tablet z mapami jezior, Silnik 52KM",
+    "vipStandardTitle": "Standard VIP",
+    "vipStandardDesc": "Ogrzewanie, WiFi bez limitu, Smart TV, Ekspres Nespresso",
+    "safetyTitle": "Bezpieczeństwo",
+    "safetyDesc": "Pełne wyposażenie ratunkowe, Instalacja 230V Non-Stop, Elektryczna winda kotwiczna",
+    "galleryTitle": "Galeria Zdjęć",
+    "expandGallery": "Zobacz więcej zdjęć",
+    "collapseGallery": "Zwiń galerię",
+    "bookTermTitle": "Zarezerwuj Termin",
+    "bookTermDesc": "Sprawdź dostępność w naszym kalendarzu online i zarezerwuj swoje wakacje marzeń już dziś.",
+    "bookBtn": "ZAREZERWUJ GO",
+    "techSpecsTitle": "Dane Techniczne",
+    "specs": {
+      "length": "Ilgis",
+      "width": "Šieksta",
+      "draft": "Naudžiavimas",
+      "engine": "Motinas",
+      "cabins": "Kabynės",
+      "crew": "Komanda"
+    },
+    "equipmentTitle": "Aparatas",
+    "equipmentList": [
+      "Stereo stresmiesys į kūną ir rūfę",
+      "Kabynos stalo",
+      "TV SMART (Smart TV, YouTube)",
+      "WiFi (be ribų), Radio/Bluetooth",
+      "12V gniazda (4 vienas) ir 230V gniazda (4 vienas)",
+      "Webasto širdies ilgai",
+      "Širdies vanduo (Bojleras 30L)",
+      "Mergimasis su prysniukui",
+      "Kostkarka į lodų, tosteris, czajnikas",
+      "Nespresso ekspresas (+kapsulės)",
+      "Viskas kūrybingas",
+      "Elektrinė šieksta kotwiczio",
+      "Echosonda, Navigacija - Ploteris"
+    ]
+  }
+}

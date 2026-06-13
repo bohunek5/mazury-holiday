@@ -1,0 +1,596 @@
+{
+  "nav": {
+    "about": "O nás",
+    "apartments": "Apartmány",
+    "cottages": "Chaty",
+    "charter": "Pronájem",
+    "port": "Přístav",
+    "attractions": "Atrakce",
+    "cooperation": "Spolupráce",
+    "contact": "Kontakt",
+    "rooms": "Pokoje",
+    "bookBtn": "Rezervovat",
+    "language": "Jazyk",
+    "back": "Zpět"
+  },
+  "hero": {
+    "title": "Dovolená na Mazurách",
+    "subtitle": "JEDINEČNÉ OKAMŽIKY",
+    "apartmentsBtn": "Naše Apartmány",
+    "charterBtn": "730 067 027",
+    "scrollDown": "Dolů"
+  },
+  "intro": {
+    "tag": "Mazury.Holiday",
+    "title": "Vítejte na",
+    "titleHighlight": "Mazurech",
+    "p1": "Objevte kouzlo Mazur.",
+    "p2": "Odpočinek v Giżycku."
+  },
+  "luxuryBenefits": {
+    "tag": "Výhody naší nabídky",
+    "title": "Luxus je v detailech",
+    "quality": {
+      "title": "Vysoká kvalita povrchových úprav",
+      "desc": "V každém našem apartmánu jsme dbali na povrchovou úpravu. Doufáme, že si všimnete všech skrytých i viditelných detailů"
+    },
+    "views": {
+      "title": "Výhledy na jezero",
+      "desc": "V krásných slunečných dnech, od východu do západu slunce - TV a filmy na VODu mohou nahradit krásné výhledy na jezero Kisajno nebo Dobské"
+    },
+    "comfort": {
+      "title": "Spánek v komfortních podmínkách",
+      "desc": "Spánek je nezbytný pro odpočinek a ovlivňuje kvalitu vašeho pobytu u nás. Všechny postele jsou vybaveny velmi dobrými a pohodlnými matracemi"
+    },
+    "wifi": {
+      "title": "Bezplatné Wi-Fi",
+      "desc": "V našich apartmánech jsme připravili připojení Wi-Fi. Není nezbytné pro odpočinek, ale pomáhá například při práci na dálku"
+    },
+    "gifts": {
+      "title": "Startovací balíček",
+      "desc": "Pro každého našeho hosta jsme připravili malý dárek, který je součástí naší nabídky dovolené v apartmánech"
+    },
+    "flexible": {
+      "title": "Flexibilní rezervace",
+      "desc": "Chápeme, že ne každý výlet lze plně naplánovat. Proto nabízíme flexibilní podmínky rezervace a zrušení"
+    }
+  },
+  "apartments": {
+    "title": "Naše Apartmány",
+    "description": "Vyberte si místo.",
+    "details": "Podrobnosti",
+    "pricePrefix": "od",
+    "night": "noc",
+    "people": "os.",
+    "bookBtn": "RESERVAR",
+    "items": {
+      "stranda": {
+        "title": "Stranda",
+        "location": "Giżycko",
+        "description": "Komfort v přístavu."
+      },
+      "kisajno": {
+        "title": "Kisajno",
+        "location": "Giżycko",
+        "description": "Luxus u jezera."
+      },
+      "fuleda": {
+        "title": "Fuleda",
+        "location": "Fuleda, Jezioro Dobskie",
+        "description": "Oáza klidu."
+      },
+      "domkiSkorupki": {
+        "title": "Domky Skorupki",
+        "location": "Skorupki, jezero Tałty",
+        "description": "Luxusní domky v srdci mazurské přírody."
+      },
+      "pokojeFuleda": {
+        "title": "Pokoje Fuleda",
+        "location": "Fuleda, Jezero Dobské",
+        "description": "Útulné pokoje s výhledem na jezero v klidové zóně."
+      },
+      "mikolajki": {
+        "title": "Apartmán Gigu Mikołajki",
+        "location": "Plac Wolności, Mikołajki",
+        "description": "Moderní apartmán v samém centru Mikołajek."
+      }
+    }
+  },
+  "cottagesAndRooms": {
+    "title": "Naše domky a pokoje",
+    "description": "Pociťte blízkost přírody v komfortních podmínkách."
+  },
+  "categories": {
+    "apartments": "Naše Apartmány",
+    "cottages": "Naše Chaty",
+    "rooms": "Naše Pokoje",
+    "charter": "Pronájem"
+  },
+  "charter": {
+    "tag": "Bez průkazu",
+    "title": "Pronájem Jachty",
+    "description": "Stillo 30 bez průkazu.",
+    "model": "Stillo 30 (2020)",
+    "cabins": "3 Kabiny",
+    "checkBtn": "Dostupnost",
+    "premiumFleet": "Premium",
+    "feature1": "Bez průkazu",
+    "feature2": "2020",
+    "feature3": "Luxus",
+    "detailsBtn": "Detaily",
+    "thrusters": "Příďové motory",
+    "heating": "Topení a Klimatizace",
+    "modelVip": "Stillo 30 VIP",
+    "boatType": "Luxusní hausbót bez průkazu"
+  },
+  "stranda": {
+    "subtitle": "Luxus u jezera",
+    "description": "Moderní design.",
+    "building": "Budova",
+    "apartment": "Apartmán"
+  },
+  "details": {
+    "about": "O apartmánu",
+    "amenities": "Vybavení",
+    "booking": "Rezervace",
+    "checkAvailability": "Ovĕřit dostupnost.",
+    "callBtn": "Zavolat",
+    "lowPrice": "Nejlepší cena.",
+    "descriptionPart1": "Luxusní apartmán v",
+    "descriptionPart2": "Stranda Residence.",
+    "descriptionPart3": "Výhled na jezero.",
+    "items": {
+      "view": "Výhled",
+      "ac": "Klima",
+      "terrace": "Terasa",
+      "kitchen": "Kuchyně",
+      "tv": "TV",
+      "wifi": "WiFi",
+      "parking": "Parkování",
+      "sauna": "Sauna"
+    }
+  },
+  "footer": {
+    "brandDesc": "Jedinečné chvíle.",
+    "navTitle": "Navigace",
+    "contactTitle": "Kontakt",
+    "followTitle": "Sledujte",
+    "rights": "Všechna práva vyhrazena.",
+    "linksTitle": "Odkazy"
+  },
+  "skorupki": {
+    "title": "Domky Skorupki",
+    "subtitle": "Váš luxusní úkryt v srdci Mazur",
+    "introTitle": "Relaxace v pomalém rytmu",
+    "descriptionPart1": "Domky ve Skorupkách jsou jedinečným místem na mapě Mazur, vytvořeným pro lidi hledající soukromí, luxus a blízkost přírody.",
+    "descriptionPart2": "Každý domek byl navržen s ohledem na pohodlí našich hostů, spojující moderní řešení s tradiční mazurskou atmosférou.",
+    "descriptionPart3": "Kouzlo Skorupek spočívá především v autentičnosti a harmonii s okolím.",
+    "descriptionPart4": "Blízkost jezera Dobské umožňuje jízdu na kajaku, rybaření a dlouhé procházky.",
+    "areaTitle": "Plocha",
+    "areaDesc": "Komfortní domky pro rodiny a skupiny",
+    "locationTitle": "Lokalita",
+    "locationDesc": "Skorupki, poblíž Giżycka a Mikołajek",
+    "amenitiesTitle": "Vybavení domků",
+    "galleryTitle": "Galerie",
+    "expandGallery": "Zobrazit více fotek",
+    "collapseGallery": "Sbalit galerii",
+    "ctaTitle": "Zažijte kouzlo Skorupek",
+    "ctaDesc": "Rezervace domku je prvním krokem k nezapomenutelné dovolené.",
+    "amenities": {
+      "fullEquip": "Plné vybavení",
+      "garden": "Soukromá zahrada",
+      "bonfire": "Gril a ohniště",
+      "parking": "Parkování",
+      "wifi": "WiFi",
+      "ac": "Klimatizace",
+      "waterAccess": "Přístup k vodě",
+      "peace": "Ticho a klid"
+    },
+    "details": {
+      "interiorTitle": "Prostorný interiér",
+      "interiorDesc": "V přízemí na vás čeká prostorný obývací prostor – srdce domu, kde můžete trávit večery společně na pohodlné rozkládací pohovce. Horní patro je spací zóna: najdete zde hlavní ložnici a druhý pokoj se samostatnými lůžky (možnost spojení), což dává flexibilitu, ať už přijedete s rodinou nebo skupinou přátel.",
+      "terraceTitle": "Terasa a příroda",
+      "terraceDesc": "Víme, že počasí může být rozmarné, proto má váš dům velkou zastřešenou terasu. Je to další \"venkovní pokoj\" – ideální pro ranní kávu nebo večerní čtení/odpočinek, bez ohledu na déšť nebo slunce. Před domem máte také svůj vlastní kousek trávníku.",
+      "activityTitle": "Aktivity a relaxace",
+      "activityDesc": "Jen pár kroků vás dělí od břehu jezera. Můžete rybařit z našeho mola, zahrát si volejbal nebo se jen dívat na vodu, zatímco si děti hrají na hřišti. Večer vás zveme do společného prostoru s altány na táborák pod hvězdami. A pokud máte čtyřnohého přítele – vezměte ho s sebou, všichni milují zvířata!",
+      "locationTitle": "A co lokalita?",
+      "locationDesc": "Jste v samém srdci atrakcí, přesto daleko od shonu. Naskočte do auta a za 10 minut jste v aquaparku Tropikana nebo v Sailing Village. Máte chuť na historii? Pevnost Boyen je vzdálena méně než půl hodiny. Auto zaparkujete bezpečně a zdarma u nás a díky rychlé Wi-Fi můžete okamžitě sdílet své fotografie z dovolené.",
+      "amenitiesBlockTitle": "VYBAVENÍ A DETAILY",
+      "bedroomTitle": "Ložnice a spánek",
+      "bedroomItems": [
+        "Max. hostů: 6",
+        "Ložnice 1: Manželská postel",
+        "Ložnice 2: Dvě samostatná lůžka (lze spojit)",
+        "Obývací pokoj: Rozkládací pohovka (pro 2 osoby)",
+        "Ložní prádlo v ceně"
+      ],
+      "cottageAmenitiesTitle": "Vybavení chaty",
+      "cottageAmenitiesItems": [
+        "Prostorná, zastřešená terasa",
+        "Soukromá zelená plocha před vchodem",
+        "Plně vybavený kuchyňský kout",
+        "Jídelní kout"
+      ],
+      "commonAreasTitle": "Společné prostory a rekreace",
+      "commonAreasItems": [
+        "Přímý přístup k jezeru (pobřeží)",
+        "Molo (možnost rybaření)",
+        "Vyhrazené místo na táborák",
+        "Zastřešené zahradní altány",
+        "Dětské hřiště",
+        "Volejbalové hřiště"
+      ],
+      "additionalTitle": "Další informace",
+      "additionalItems": [
+        "Domácí mazlíčci vítáni (Pet-friendly)",
+        "Parkování zdarma v areálu",
+        "Okolí: Lesy (houbaření), ticho, příroda"
+      ],
+      "price": "od 350 PLN / noc",
+      "bookBtn": "Rezervovat"
+    }
+  },
+  "roomsPage": {
+    "heroTitle": "Pokoje na Mazurách",
+    "heroSubtitle": "Komfortní pokoje v klidné oblasti",
+    "ctaText": "Hledáte větší apartmány? Podívejte se na naše",
+    "ctaLink": "Apartmány Fuleda",
+    "items": {
+      "fuleda": {
+        "title": "Pokoje Fuleda",
+        "description": "Komfortní pokoje u jezera Dobskie v tiché zóně. Ideální pro rodiny a milovníky přírody.",
+        "location": "Fuleda, jezero Dobské",
+        "features": [
+          "2 pokoje",
+          "Koupelna",
+          "Kuchyně",
+          "Terasa",
+          "Přístup k jezeru"
+        ],
+        "priceLabel": "Cena",
+        "priceValue": "od 375 PLN/noc",
+        "detailsBtn": "PODROBNOSTI",
+        "bookBtn": "REZERVUJTE"
+      }
+    }
+  },
+  "calendar": {
+    "title": "Dostupnost",
+    "loading": "Načítání...",
+    "error": "Nepodařilo se načíst aktuální data. Zkuste to prosím za chvíli.",
+    "prevMonth": "Předchozí měsíc",
+    "nextMonth": "Příští měsíc",
+    "days": [
+      "Po",
+      "Út",
+      "St",
+      "Čt",
+      "Pá",
+      "So",
+      "Ne"
+    ],
+    "legend": {
+      "busy": "Obsazeno",
+      "checkIn": "Možný příjezd",
+      "checkOut": "Možný odjezd",
+      "available": "Dostupné"
+    }
+  },
+  "strandaTypes": {
+    "oneBedroom": "s jednou ložnicí",
+    "oneBedroomJacuzzi": "s jednou ložnicí a vířivkou",
+    "jacuzziTerrace": "s vířivkou na terase",
+    "twoBedrooms": "se dvěma ložnicemi",
+    "deluxeJacuzzi": "Deluxe s vířivkou",
+    "deluxeSaunaJacuzzi": "Deluxe se saunou a vířivkou",
+    "apartment": "Apartmán",
+    "studio": "Studio",
+    "suite": "Suite"
+  },
+  "strandaDescriptions": {
+    "genericDesc": "Naše apartmány se nacházejí v Giżycku, u přístavu Stranda v komplexu Stranda Residence.",
+    "locationDesc": "Blízkost centra Giżycka umožňuje využívat mnoho turistických atrakcí.",
+    "A103": "Apartmán A103 Suite se nachází v prvním patře, má prostorný obývací pokoj s kuchyňským koutem.",
+    "A104": "Apartmán A104 Delux s soukromou vířivkou na terase se nachází v přízemí budovy A.",
+    "A105": "Apartmán A105 je luxusní jednotka s vířivkou.",
+    "B102": "Apartmán B102 v přízemí budovy B má prostorný obývací pokoj a vlastní vířivku na terase.",
+    "B106": "Luxusní apartmán v přízemí se dvěma ložnicemi.",
+    "B202": "Jedinečný apartmán v prvním patře se soukromou saunou a vířivkou.",
+    "C404": "Studio apartmány se nacházejí v budově C, jsou to ubytování s jednou manželskou postelí."
+  },
+  "kisajnoPage": {
+    "title": "Apartmány Kisajno",
+    "subtitle": "Přístav Neptun, Giżycko",
+    "introTitle": "Výjimečný standard u jezera",
+    "description": "Nabízíme moderní apartmán 55 m² v přízemí s přímým přístupem k jezeru Kisajno.",
+    "features": [
+      "2 oddělené ložnice s velkými postelemi",
+      "Obývací pokoj s pohodlnou pohovkou a TV",
+      "Plná kuchyně: myčka, mikrovlnná trouba, lednice",
+      "Klimatizace a rychlé WiFi"
+    ],
+    "priceLabel": "Cena od",
+    "priceValue": "500 PLN",
+    "priceUnit": "/ noc",
+    "groundFloorTitle": "Apartmán Přízemí",
+    "groundFloorDesc": "Prostorný obývací pokoj s krbem, klimatizací, ložnice a velká terasa s přímým přístupem k jezeru.",
+    "firstFloorTitle": "Apartmán Patro",
+    "amenitiesTitle": "Vybavení",
+    "bookingTitle": "Rezervujte si pobyt",
+    "bookingDesc": "Kontaktujte nás přímo pro nejlepší nabídku.",
+    "callAction": "Zavolat",
+    "amenities": {
+      "view": "Výhled na jezero",
+      "ac": "Klimatizace",
+      "smartTv": "Smart TV",
+      "wifi": "WiFi",
+      "kitchen": "Plná kuchyně",
+      "dishwasher": "Myčka",
+      "parking": "Parkování",
+      "port": "Přístav Neptun"
+    }
+  },
+  "mikolajkiPage": {
+    "title": "Apartmán Gigu Mikołajki",
+    "subtitle": "Centrum Mikołajek – Plac Wolności",
+    "introTitle": "Komfortní apartmán v srdci Mikołajek",
+    "description": "Moderní a komfortní apartmán situovaný v samém srdci Mikołajek na náměstí Plac Wolności – ideální lokalita pro hosty, kteří chtějí mít vše po ruce. Apartmán je určen pro maximálně 4 osoby a skládá se z útulné ložnice s pohodlnou manželskou postelí, obývacího pokoje s rozkládací pohovkou (další místa na spaní), plně vybaveného kuchyňského koutu a moderní koupelny.",
+    "priceLabel": "Cena od",
+    "priceValue": "350 PLN",
+    "priceUnit": "/ noc",
+    "amenitiesTitle": "Vybavení",
+    "bookingTitle": "Rezervujte si svůj pobyt",
+    "bookingDesc": "Kontaktujte nás přímo nebo proveďte okamžitou online rezervaci pomocí tlačítka níže.",
+    "callAction": "Zavolat",
+    "comfortTitle": "Komfort a Vybavení",
+    "comfortDesc": "Ložnice s postelí 180x200, rychlá WiFi, obývací pokoj s TV a rozkládací pohovkou",
+    "kitchenTitle": "Kuchyně a Koupelna",
+    "kitchenDesc": "Kuchyňský kout s myčkou, moderní koupelna se sprchou, startovací sada (káva, čaj)",
+    "locationTitle": "Okolí a Lokalita",
+    "locationDesc": "Výhled do vnitřního dvora, samotné centrum Mikołajek na náměstí Plac Wolności, blízko jezera",
+    "collapseGallery": "Sbalit galerii",
+    "expandGallery": "Zobrazit více fotografií",
+    "bookBtn": "REZERVOVAT",
+    "amenities": {
+      "view": "Výhled do dvora",
+      "ac": "Klimatizace",
+      "smartTv": "Smart TV",
+      "wifi": "WiFi zdarma",
+      "kitchen": "Kuchyňský kout",
+      "dishwasher": "Myčka nádobí",
+      "parking": "Centrum města",
+      "port": "Blízko jezera"
+    }
+  },
+  "fuledaPage": {
+    "title": "Apartmány Fuleda",
+    "subtitle": "Ticho, klid, příroda u jezera Dobské",
+    "introTitle": "Oáza klidu v tiché zóně",
+    "description": "Lokalita Fuleda je návrh pro ty, kteří se chtějí zcela odříznout od shonu civilizace.",
+    "groundFloorTitle": "Apartmán Přízemí",
+    "groundFloorDesc": "Prostorný obývací pokoj s krbem, klimatizací a velkou terasou.",
+    "firstFloorTitle": "Apartmán Patro",
+    "firstFloorDesc": "Stylově zařízený apartmán s výhledem na rezervaci.",
+    "amenitiesTitle": "Premium Vybavení",
+    "amenities": {
+      "ac": "Klimatizace",
+      "fireplace": "Krb",
+      "beach": "Soukromá pláž",
+      "bonfire": "Ohniště",
+      "wifi": "WiFi",
+      "kitchen": "Plná kuchyně",
+      "washer": "Pračka",
+      "pier": "Přístup k molu"
+    }
+  },
+  "attractionsPage": {
+    "title": "Regionální atrakce",
+    "subtitle": "Giżycko a srdce Mazur nabízí mnoho možností",
+    "boyen": {
+      "title": "Pevnost Boyen",
+      "desc": "Pruská pevnost ve tvaru hvězdy z 19. století."
+    },
+    "bridge": {
+      "title": "Otočný most",
+      "desc": "Unikátní technická památka z 19. století."
+    },
+    "port": {
+      "title": "Přístav Giżycko & Plavby",
+      "desc": "Největší přístav na Mazurech."
+    },
+    "water": {
+      "title": "Jezero Kisajno a Dobské",
+      "desc": "Křišťálově čistá voda, zóny ticha a ostrovy."
+    },
+    "tags": {
+      "history": "Historie",
+      "architecture": "Architektura",
+      "education": "Vzdělávání",
+      "monument": "Památka",
+      "technology": "Technika",
+      "gizycko": "Giżycko",
+      "sailing": "Plachtění",
+      "recreation": "Rekreace",
+      "center": "Centrum",
+      "nature": "Příroda",
+      "silence": "Ticho",
+      "landscape": "Krajina",
+      "ww2": "2. světová válka",
+      "museum": "Muzeum",
+      "view": "Výhled",
+      "cafe": "Kavárna",
+      "hotel": "Hotel",
+      "animals": "Zvířata"
+    },
+    "showOnMap": "Zobrazit na mapě"
+  },
+  "cooperationPage": {
+    "title": "Spolupráce",
+    "subtitle": "Vaše nemovitost v dobrých rukou",
+    "services": {
+      "title": "Komplexní správa",
+      "desc": "Postaráme se o váš apartmán nebo chatu na Mazurech."
+    },
+    "marketing": {
+      "title": "Profesionální marketing",
+      "desc": "Dbáme o viditelnost vaší nabídky."
+    },
+    "guests": {
+      "title": "Obsluha hostů",
+      "desc": "Zajišťujeme profesionální check-in a asistenci."
+    },
+    "maintenance": {
+      "title": "Údržba a úklid",
+      "desc": "Vaše nemovitost bude vždy připravena na nejvyšší standard."
+    },
+    "whyUs": {
+      "title": "Proč spolupracovat s námi?",
+      "point1": "Místní zkušenosti a znalost mazurského trhu",
+      "point2": "Transparentní systém vyúčtování a panel majitele",
+      "point3": "Stálá technická péče a údržba",
+      "point4": "Optimalizace cen (Revenue Management)"
+    }
+  },
+  "contactForm": {
+    "title": "Napište nám",
+    "subtitle": "Máte dotazy? Chcete rezervovat pobyt?",
+    "name": "Jméno a příjmení",
+    "email": "E-mailová adresa",
+    "phone": "Telefonní číslo",
+    "subject": "Předmět",
+    "message": "Zpráva",
+    "send": "Odeslat zprávu",
+    "sending": "Odesílání...",
+    "success": "Zpráva byla úspěšně odeslána!",
+    "error": "Při odesílání došlo k chybě."
+  },
+  "cookieConsent": {
+    "title": "Cookies a Soukromí 🍪",
+    "description": "Dbáme na vaše soukromí. Můžete přijmout všechna cookies nebo upravit své preference. Více v",
+    "privacyLink": "Zásadách ochrany osobních údajů",
+    "acceptAll": "Přijmout vše",
+    "customize": "Upravit",
+    "decline": "Odmítnout",
+    "settingsTitle": "Nastavení cookies",
+    "back": "Zpět",
+    "necessary": "Nezbytné",
+    "necessaryDesc": "Vyžadováno pro fungování webu.",
+    "analytics": "Analytické",
+    "analyticsDesc": "Pomáhají nám vylepšovat web.",
+    "marketing": "Marketingové",
+    "marketingDesc": "Personalizované reklamy.",
+    "save": "Uložit nastavení"
+  },
+  "privacyPolicy": {
+    "title": "Zásady ochrany osobních údajů a souborů cookie",
+    "intro": "Vážíme si vašeho soukromí, přečtěte si prosím naše zásady ochrany osobních údajů.",
+    "content": "Tyto Zásady používání souborů cookie se vztahují na všechny webové stránky mazury.holiday. Používáním našich stránek souhlasíte s používáním souborů cookie v souladu s těmito zásadami. Soubory cookie používáme k tomu, aby naše stránky fungovaly rychleji, snadněji se používaly a abychom přizpůsobili obsah a reklamy. Nastavení souborů cookie můžete kdykoli spravovat ve svém prohlížeči.",
+    "usefulLinks": "Užitečné odkazy",
+    "mobileDevices": "Mobilní zařízení:"
+  },
+  "pokojeFuledaPage": {
+    "heroTitle": "Rezidence Fuleda",
+    "price": "od 375 PLN/noc",
+    "description": "Nabízíme k pronájmu dva pokoje: jeden s manželskou postelí, druhý se dvěma samostatnými lůžky, koupelna se sprchou a WC. Krytá terasa u pokojů. V samostatné budově vzdálené 10m je kuchyň s dalším WC. Nachází se na poloostrově Fuledzki Róg u jezera Dobskie (tichá zóna) v oploceném areálu Folwark Fuleda.",
+    "amenitiesTitle": "Vybavení",
+    "room1Title": "Pokoj 1 (Dvoulůžkový)",
+    "room1Items": [
+      "Manželská postel",
+      "Vstup na terasu",
+      "Vysavač",
+      "Fén",
+      "Žehlička",
+      "Žehlicí prkno"
+    ],
+    "room2Title": "Pokoj 2 (Dvě lůžka)",
+    "room2Items": [
+      "Dvě samostatná lůžka",
+      "TV",
+      "Vstup na terasu"
+    ],
+    "kitchenTitle": "Kuchyně",
+    "kitchenNote": "(samostatná budova 10m)",
+    "kitchenItems": [
+      "Lednice",
+      "Myčka",
+      "Mikrovlnná trouba",
+      "Toustovač",
+      "Nádobí a příbory",
+      "Plynový sporák",
+      "Káva a čaj"
+    ],
+    "bathroomTitle": "Koupelna",
+    "bathroomItems": [
+      "Sprcha",
+      "Pračka",
+      "Fén",
+      "Žehlička na vlasy",
+      "Ručníky",
+      "Župany",
+      "Toaletní potřeby"
+    ],
+    "terraceTitle": "Terasa a okolí",
+    "terraceItems": [
+      "Prostorná terasa",
+      "Soukromý přístup k jezeru",
+      "Místo na gril a ohniště",
+      "Veslice",
+      "Vyhlídková terasa"
+    ],
+    "bookingTitle": "Rezervace",
+    "bookingDesc": "Zkontrolujte dostupnost a rezervujte",
+    "bookBtn": "REZERVOVAT NYNÍ",
+    "callBtn": "Volejte: 730 067 027",
+    "bestPrice": "Nejlepší ceny - rezervujte přímo",
+    "galleryTitle": "Galerie",
+    "expandGallery": "Zobrazit více fotek",
+    "collapseGallery": "Sbalit galerii"
+  },
+  "charterPage": {
+    "heroTitle": "Stillo 30 VIP",
+    "heroSubtitle": "Motorová jachta Stillo 30 VIP",
+    "mainTitle": "Váš luxusní domov na vodě",
+    "desc1": "<strong>Stillo 30 VIP</strong> je nástupcem osvědčené a ceněné Futury 870. Jedná se o jednotku navrženou tak, aby splnila očekávání nejnáročnějších majitelů lodí v sektoru výtlačných a polokluzných hausbótů. Nautické kvality, ověřené u oceňovaného předchůdce, spojené s revoluční praktičností.",
+    "desc2": "Na palubě najdete až <strong>6 míst na spaní</strong>, plnohodnotnou koupelnu a obývací pokoj s panoramatickými okny a vysokým stropem (cca 190 cm), což dává pocit skutečného apartmánu na vodě. Široké boční paluby vedou na příďovou terasu na opalování a nízká koupací plošina na zádi usnadňuje vstup do vody a kotvení u mola.",
+    "desc3": "Mezi základní výhody patří silný stacionární motor 52 koní, <strong>dva dokormidlovací zařízení</strong>, elektrický kotevní vrátek, matrace s termoplastickou pěnou, neomezené WiFi, TV s Smart TV Max, kávovar Nespresso a mnoho dalšího...",
+    "desc4": "Co je důležité pro charter: jednotka udržuje rychlost pod 15 km/h, takže v Polsku ji můžete řídit <strong>bez průkazu</strong> – po krátkém zaškolení si převezmete jachtu a vyrazíte na trasu. Stillo 30 tedy nabízí luxus, pohodlí a plnost masurského dobrodružství a zároveň je ideální volbou pro rodiny a skupiny přátel hledající svou první zkušenost s vlastním „domem na vodě“.",
+    "vipAmenitiesTitle": "VIP Vybavení",
+    "navAndDriveTitle": "Navigace a Pohon",
+    "navAndDriveDesc": "Dokormidlovací zařízení (Příď/Záď), Tablet s mapami jezer, Motor 52 koní",
+    "vipStandardTitle": "VIP Standard",
+    "vipStandardDesc": "Topení, Neomezené WiFi, VOD a HBO Max, Kávovar Nespresso",
+    "safetyTitle": "Bezpečnost",
+    "safetyDesc": "Plná záchranná výbava, Instalace 230V Non-Stop, Elektrický kotevní vrátek",
+    "galleryTitle": "Fotogalerie",
+    "expandGallery": "Zobrazit více fotek",
+    "collapseGallery": "Sbalit galerii",
+    "bookTermTitle": "Rezervovat termín",
+    "bookTermDesc": "Zkontrolujte dostupnost v našem online kalendáři a rezervujte si svou vysněnou dovolenou ještě dnes.",
+    "bookBtn": "REZERVUJTE TO",
+    "techSpecsTitle": "Technické údaje",
+    "specs": {
+      "length": "Délka",
+      "width": "Šířka",
+      "draft": "Ponor",
+      "engine": "Motor",
+      "cabins": "Kabiny",
+      "crew": "Posádka"
+    },
+    "equipmentTitle": "Vybavení",
+    "equipmentList": [
+      "Příďové a záďové kormidelní zařízení",
+      "Kokpitový stůl",
+      "SMART TV (Smart TV, YouTube)",
+      "WiFi (neomezené), Rádio/Bluetooth",
+      "Zásuvky 12V (4 ks) a 230V (4 ks)",
+      "Topení Webasto",
+      "Teplá voda (Bojler 30L)",
+      "Mořské WC se sprchou",
+      "Výrobník ledu, Toustovač, Rychlovarná konvice",
+      "Kávovar Nespresso (+kapsle)",
+      "Plné kuchyňské vybavení",
+      "Elektrický kotevní vrátek",
+      "Echolot, Navigace - Plotter"
+    ]
+  }
+}
