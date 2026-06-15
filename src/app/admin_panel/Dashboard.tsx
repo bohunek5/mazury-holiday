@@ -205,7 +205,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 guests: 'max 8',
                 price: 'Brak',
                 calendarLinks: [
-                    ...(czarterData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${czarterData.idoBookingId}` }] : []),
+                    ...(czarterData.idoBookingId ? [{ name: 'IdoBooking', url: `https://client37851.idobooking.com/book-now/index.php?ob[${czarterData.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` }] : []),
                     ...(czarterData.icalUrl ? [{ name: 'iCal', url: czarterData.icalUrl }] : [])
                 ],
                 amenities: ['Ogrzewanie', 'WiFi', 'Nawigacja', 'Bezpieczeństwo'],
