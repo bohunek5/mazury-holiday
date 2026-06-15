@@ -37,6 +37,9 @@ jobs:
           NEXT_TELEMETRY_DISABLED: 1
           DEPLOY_TARGET: github-pages
 
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
