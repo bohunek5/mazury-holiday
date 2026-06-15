@@ -199,9 +199,9 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 id: `Czarter-${czarterData.id}`,
                 name: czarterData.title,
                 location: 'Port Stranda Giżycko',
-                heroImage: '/images/czarter/gallery/stillo_1.webp',
-                images: ['/images/czarter/gallery/stillo_1.webp'],
-                photoCount: 1,
+                heroImage: czarterData.images?.[0] || '/images/czarter/gallery/stillo_1.webp',
+                images: czarterData.images || ['/images/czarter/gallery/stillo_1.webp'],
+                photoCount: czarterData.images?.length || 1,
                 guests: 'max 8',
                 price: 'Brak',
                 calendarLinks: [
