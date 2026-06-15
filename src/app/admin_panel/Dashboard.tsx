@@ -10,6 +10,7 @@ import { pokojeFuledaData } from '@/data/pokoje-fuleda-data';
 import { fuledaApartments } from '@/data/fuleda-data';
 import { kisajnoData } from '@/data/kisajno-data';
 import { cottagesData } from '@/data/cottages-data';
+import { czarterData } from '@/data/czarter-data';
 import ICalCalendar from '@/components/ICalCalendar';
 
 interface DashboardProps {
@@ -28,13 +29,14 @@ interface UnifiedItem {
     price: number | string;
     calendarLinks: { name: string; url: string }[];
     amenities: string[];
+    icalUrl?: string;
+    idoBookingId?: string;
 }
 
 export default function Dashboard({ onLogout }: DashboardProps) {
     const [darkMode, setDarkMode] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGallery, setSelectedGallery] = useState<{images: string[], index: number} | null>(null);
-    const [stats, setStats] = useState<{sizesByItem: Record<string, string>, translationStats: {en: number, de: number, totalSizeAllMB: string}} | null>(null);
 
     // Prepare unified data
     const allItems = useMemo<UnifiedItem[]>(() => {
@@ -74,14 +76,40 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 price: apt.price || 'Brak',
                 calendarLinks: [
                     ...(apt.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${apt.idoBookingId}` }] : []),
-                    ...(apt.icalUrl ? [{ name: 'iCal', url: apt.icalUrl }] : []),
                     ...(apt.icalLink ? [{ name: 'iCal', url: apt.icalLink }] : [])
                 ],
-                amenities: flattenAmenities(apt.amenities)
+                amenities: flattenAmenities(apt.amenities),
+                icalUrl: apt.icalUrl || apt.icalLink,
+                idoBookingId: apt.idoBookingId
             });
         });
 
-        // 2. Skorupki (złączone w jeden domek bez kalendarza - usunięte na rzecz listy poszczególnych domków)
+        // 2. Skorupki (poszczególne domki)
+        cottagesData.forEach((cottage: any, index: number) => {
+            const nextCottage = cottagesData[index + 1];
+            const endIdx = nextCottage ? nextCottage.galleryStart : skorupkiData.gallery?.images?.length || 0;
+            const cottageImages = skorupkiData.gallery?.images?.slice(cottage.galleryStart, endIdx) || [];
+            const allCottageImages = cottage.heroImage ? [cottage.heroImage, ...cottageImages] : cottageImages;
+            
+            const sData: any = skorupkiData;
+            items.push({
+                id: `Skorupki-${cottage.id}`,
+                name: cottage.name || `Domek Skorupki ${index + 1}`,
+                location: 'Skorupki',
+                heroImage: cottage.heroImage || cottageImages[0] || '/images/skorupki/skorupki_1.webp',
+                images: allCottageImages,
+                photoCount: allCottageImages.length,
+                guests: cottage.guests?.toString() || sData.guests || '6',
+                price: cottage.price?.toString() || sData.price || 'Brak',
+                calendarLinks: [
+                    ...(sData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${sData.idoBookingId}` }] : []),
+                    ...(sData.icalUrl ? [{ name: 'iCal', url: sData.icalUrl }] : [])
+                ],
+                amenities: flattenAmenities(cottage.amenities),
+                icalUrl: sData.icalUrl,
+                idoBookingId: sData.idoBookingId
+            });
+        });
 
         // 3. Mikołajki
         items.push({
@@ -97,7 +125,9 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 ...(mikolajkiData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${mikolajkiData.idoBookingId}` }] : []),
                 ...(mikolajkiData.icalUrl ? [{ name: 'iCal', url: mikolajkiData.icalUrl }] : [])
             ],
-            amenities: flattenAmenities(mikolajkiData.amenities)
+            amenities: flattenAmenities(mikolajkiData.amenities),
+            icalUrl: mikolajkiData.icalUrl,
+            idoBookingId: mikolajkiData.idoBookingId
         });
 
         // 4. Pokoje Fuleda
@@ -114,7 +144,9 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 ...(pokojeFuledaData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${pokojeFuledaData.idoBookingId}` }] : []),
                 ...(pokojeFuledaData.icalUrl ? [{ name: 'iCal', url: pokojeFuledaData.icalUrl }] : [])
             ],
-            amenities: flattenAmenities(pokojeFuledaData.amenities)
+            amenities: flattenAmenities(pokojeFuledaData.amenities),
+            icalUrl: pokojeFuledaData.icalUrl,
+            idoBookingId: pokojeFuledaData.idoBookingId
         });
 
         // 5. Fuleda
@@ -133,87 +165,54 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                     ...(apt.icalUrl ? [{ name: 'iCal', url: apt.icalUrl }] : []),
                     ...(apt.icalLink ? [{ name: 'iCal', url: apt.icalLink }] : [])
                 ],
-                amenities: flattenAmenities(apt.amenities)
+                amenities: flattenAmenities(apt.amenities),
+                icalUrl: apt.icalUrl || apt.icalLink,
+                idoBookingId: apt.idoBookingId
             });
         });
 
         // 6. Kisajno
         if (kisajnoData) {
+            const kData: any = kisajnoData;
             items.push({
-                id: `Kisajno-${kisajnoData.id}`,
-                name: kisajnoData.title,
+                id: `Kisajno-${kData.id}`,
+                name: kData.title,
                 location: 'Kisajno',
-                heroImage: kisajnoData.gallery?.heroImage || kisajnoData.gallery?.images?.[0] || kisajnoData.images?.[0] || '/images/kisajno/kisajno_1.webp',
-                images: kisajnoData.gallery?.images || kisajnoData.images || [],
-                photoCount: kisajnoData.gallery?.images?.length || kisajnoData.images?.length || 0,
-                guests: kisajnoData.guests || 'Brak',
-                price: kisajnoData.price || 'Brak',
+                heroImage: kData.gallery?.heroImage || kData.gallery?.images?.[0] || kData.images?.[0] || '/images/kisajno/kisajno_1.webp',
+                images: kData.gallery?.images || kData.images || [],
+                photoCount: kData.gallery?.images?.length || kData.images?.length || 0,
+                guests: kData.guests || 'Brak',
+                price: kData.price || 'Brak',
                 calendarLinks: [
-                    ...(kisajnoData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${kisajnoData.idoBookingId}` }] : []),
-                    ...(kisajnoData.icalUrl ? [{ name: 'iCal', url: kisajnoData.icalUrl }] : []),
-                    ...(kisajnoData.icalLink ? [{ name: 'iCal', url: kisajnoData.icalLink }] : [])
+                    ...(kData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${kData.idoBookingId}` }] : []),
+                    ...(kData.icalUrl ? [{ name: 'iCal', url: kData.icalUrl }] : [])
                 ],
-                amenities: flattenAmenities(kisajnoData.amenities)
+                amenities: flattenAmenities(kData.amenities),
+                icalUrl: kData.icalUrl,
+                idoBookingId: kData.idoBookingId
             });
         }
 
-        // 7. Cottages (Skorupki poszczególne domki)
-        if (Array.isArray(cottagesData)) {
-            cottagesData.forEach((cottage) => {
-                items.push({
-                    id: `Skorupki-S${cottage.id}`,
-                    name: cottage.name || `Domek S${cottage.id}`,
-                    location: 'Skorupki',
-                    heroImage: cottage.heroImage || '/images/skorupki/skorupki_1.webp',
-                    images: [],
-                    photoCount: 0,
-                    guests: cottage.guests || 'Brak',
-                    price: cottage.price || 'Brak',
-                    calendarLinks: [], // "w domki skorupki nie ma kalendarza wiec tam nie dawaj"
-                    amenities: flattenAmenities(cottage.amenities)
-                });
+        // 7. Czarter
+        if (czarterData) {
+            items.push({
+                id: `Czarter-${czarterData.id}`,
+                name: czarterData.title,
+                location: 'Port Stranda Giżycko',
+                heroImage: '/images/czarter/gallery/stillo_1.webp',
+                images: ['/images/czarter/gallery/stillo_1.webp'],
+                photoCount: 1,
+                guests: 'max 8',
+                price: 'Brak',
+                calendarLinks: [
+                    ...(czarterData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${czarterData.idoBookingId}` }] : []),
+                    ...(czarterData.icalUrl ? [{ name: 'iCal', url: czarterData.icalUrl }] : [])
+                ],
+                amenities: ['Ogrzewanie', 'WiFi', 'Nawigacja', 'Bezpieczeństwo'],
+                icalUrl: czarterData.icalUrl,
+                idoBookingId: czarterData.idoBookingId
             });
         }
-
-        // 8. Stillo
-        items.push({
-            id: `Stillo-1`,
-            name: 'Jacht Motorowy Stillo 30 VIP',
-            location: 'Stillo',
-            heroImage: '/images/czarter/gallery/stillo_1.webp',
-            images: Array.from({ length: 21 }, (_, i) => `/images/czarter/gallery/stillo_${i + 1}.webp`),
-            photoCount: 21,
-            guests: '6-8',
-            price: 'Brak',
-            calendarLinks: [],
-            amenities: ['Ster strumieniowy', 'Ogrzewanie', 'Lodówka', 'TV', 'Prysznic']
-        });
-
-        // Custom sort logic
-        const locationOrder = ['Stranda', 'Kisajno', 'Fuleda', 'Pokoje Fuleda', 'Skorupki', 'Stillo', 'Mikołajki'];
-        
-        items.sort((a, b) => {
-            const locA = locationOrder.indexOf(a.location);
-            const locB = locationOrder.indexOf(b.location);
-            
-            if (locA !== locB) {
-                const aIdx = locA === -1 ? 999 : locA;
-                const bIdx = locB === -1 ? 999 : locB;
-                return aIdx - bIdx;
-            }
-            
-            // If same location, sort Stranda by ID to keep A, B, C order
-            if (a.location === 'Stranda') {
-                const aCode = a.id.replace('Stranda-', '');
-                const bCode = b.id.replace('Stranda-', '');
-                
-                // Studio and C304 are part of C, but standard string sort puts Studio after C. That's fine or we can force C prefix.
-                // Let's just use string localeCompare which works well for A, B, C
-                return aCode.localeCompare(bCode, 'pl');
-            }
-            
-            return a.name.localeCompare(b.name, 'pl');
-        });
 
         return items;
     }, []);
@@ -228,65 +227,34 @@ export default function Dashboard({ onLogout }: DashboardProps) {
         );
     }, [allItems, searchTerm]);
 
-    useEffect(() => {
-        const fetchStats = async () => {
-            const imagesByItem: Record<string, string[]> = {};
-            allItems.forEach(item => {
-                imagesByItem[item.id] = item.images.length > 0 ? item.images : [item.heroImage].filter(Boolean);
-            });
-            try {
-                const res = await fetch('/api/admin/stats', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ imagesByItem })
-                });
-                if (res.ok) {
-                    const data = await res.json();
-                    setStats(data);
-                }
-            } catch (e) {
-                console.error(e);
-            }
-        };
-        if (allItems.length > 0) fetchStats();
-    }, [allItems]);
-
     const toggleTheme = () => setDarkMode(!darkMode);
 
     return (
         <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-800'}`}>
-            {/* Blurred Background Image */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <img 
-                    src="/images/hero_1.webp" 
-                    alt="" 
-                    className="w-full h-full object-cover opacity-10 blur-3xl scale-110" 
-                />
-            </div>
-
             {/* Header */}
-            <header className={`sticky top-0 z-40 border-b backdrop-blur-md px-6 py-4 flex items-center justify-between transition-colors duration-300 ${darkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
-                <div className="flex items-center space-x-4">
-                    <img 
-                        src="/images/logo-poziom.svg" 
-                        alt="Mazury Holiday" 
-                        className={`h-8 w-auto ${darkMode ? 'brightness-0 invert opacity-90' : ''}`}
-                    />
-                    <div className="hidden sm:block">
-                        <h1 className="text-xl font-bold tracking-tight">Mazury Holiday</h1>
-                        <p className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Przegląd Oferty</p>
+            <header className={`sticky top-0 z-40 border-b backdrop-blur-md px-4 md:px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition-colors duration-300 ${darkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
+                <div className="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
+                    <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 shrink-0 bg-orange-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-orange-500/30">
+                            <Layers size={22} />
+                        </div>
+                        <div>
+                            <h1 className="text-xl font-bold tracking-tight">Mazury Holiday</h1>
+                            <p className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Przegląd Oferty (Panel)</p>
+                        </div>
                     </div>
+                    {/* Logout button on mobile can go here or at the bottom of the header */}
                 </div>
 
-                <div className="flex items-center space-x-4">
-                    <div className="relative group">
+                <div className="flex items-center gap-2 md:gap-4 w-full md:w-auto">
+                    <div className="relative group flex-1 md:flex-none">
                         <Search className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`} />
                         <input 
                             type="text" 
-                            placeholder="Szukaj obiektu..." 
+                            placeholder="Szukaj..." 
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className={`pl-9 pr-4 py-2 w-64 text-sm rounded-xl outline-none focus:ring-2 focus:ring-orange-500/50 transition-all ${
+                            className={`pl-9 pr-4 py-2 w-full md:w-64 text-sm rounded-xl outline-none focus:ring-2 focus:ring-orange-500/50 transition-all ${
                                 darkMode 
                                     ? 'bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 focus:bg-slate-800' 
                                     : 'bg-white border border-slate-200 text-slate-800 placeholder-slate-400 focus:bg-white'
@@ -296,173 +264,168 @@ export default function Dashboard({ onLogout }: DashboardProps) {
 
                     <button 
                         onClick={toggleTheme}
-                        className={`p-2 rounded-xl transition-all ${darkMode ? 'bg-slate-800 hover:bg-slate-700 text-yellow-400' : 'bg-white hover:bg-slate-100 border border-slate-200 text-slate-600'}`}
+                        className={`p-2 shrink-0 rounded-xl transition-all ${darkMode ? 'bg-slate-800 hover:bg-slate-700 text-yellow-400' : 'bg-white hover:bg-slate-100 border border-slate-200 text-slate-600'}`}
                         title="Przełącz motyw dzień/noc"
                     >
                         {darkMode ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
 
-                    <div className={`h-8 w-px ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}></div>
+                    <div className={`hidden md:block h-8 w-px ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}></div>
 
                     <button 
                         onClick={onLogout}
-                        className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-red-500/90 hover:bg-red-500 rounded-xl transition-all shadow-lg shadow-red-500/20 active:scale-95"
+                        className="flex items-center justify-center shrink-0 space-x-2 px-3 md:px-4 py-2 text-sm font-medium text-white bg-red-500/90 hover:bg-red-500 rounded-xl transition-all shadow-lg shadow-red-500/20 active:scale-95"
                     >
-                        <span>Wyloguj</span>
+                        <span className="hidden sm:inline">Wyloguj</span>
                         <LogOut size={16} />
                     </button>
                 </div>
             </header>
 
             {/* Main Content */}
-            <main className="p-2 sm:p-6 w-full relative z-10">
+            <main className="p-4 md:p-6 w-full max-w-full overflow-hidden">
                 {/* Stats row */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-                    <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div className={`p-4 md:p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
                         <div className="p-3 bg-blue-500/10 text-blue-500 rounded-xl"><Layers size={24} /></div>
                         <div>
                             <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Suma Obiektów</p>
                             <p className="text-2xl font-bold">{allItems.length}</p>
                         </div>
                     </div>
-                    {stats && (
-                        <>
-                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
-                                <div className="p-3 bg-indigo-500/10 text-indigo-500 rounded-xl"><ImageIcon size={24} /></div>
-                                <div>
-                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Waga Danych</p>
-                                    <p className="text-2xl font-bold">{stats.translationStats.totalSizeAllMB} MB</p>
-                                </div>
-                            </div>
-                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
-                                <div className="p-3 bg-green-500/10 text-green-500 rounded-xl"><span className="text-lg font-bold">EN</span></div>
-                                <div>
-                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Tłumaczenie EN</p>
-                                    <p className="text-2xl font-bold">{stats.translationStats.en}%</p>
-                                </div>
-                            </div>
-                            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'} flex items-center space-x-4 shadow-sm`}>
-                                <div className="p-3 bg-orange-500/10 text-orange-500 rounded-xl"><span className="text-lg font-bold">DE</span></div>
-                                <div>
-                                    <p className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Tłumaczenie DE</p>
-                                    <p className="text-2xl font-bold">{stats.translationStats.de}%</p>
-                                </div>
-                            </div>
-                        </>
-                    )}
                 </div>
 
-                {/* Table */}
-                <div className={`rounded-2xl border overflow-hidden shadow-sm ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left text-sm whitespace-nowrap">
-                            <thead className={`text-xs uppercase font-semibold ${darkMode ? 'bg-slate-800/50 text-slate-400' : 'bg-slate-50 text-slate-500'}`}>
-                                <tr>
-                                    <th className="px-6 py-4 font-medium">Miniatura</th>
-                                    <th className="px-6 py-4 font-medium">ID / Nazwa</th>
-                                    <th className="px-6 py-4 font-medium">Lokalizacja</th>
-                                    <th className="px-6 py-4 font-medium">Zdjęcia</th>
-                                    <th className="px-6 py-4 font-medium">Waga (MB)</th>
-                                    <th className="px-6 py-4 font-medium">Goście</th>
-                                    <th className="px-6 py-4 font-medium">Udogodnienia</th>
-                                    <th className="px-6 py-4 font-medium">Cena</th>
-                                    <th className="px-6 py-4 font-medium">Kalendarz</th>
-                                </tr>
-                            </thead>
-                            <tbody className={`divide-y ${darkMode ? 'divide-slate-800' : 'divide-slate-100'}`}>
-                                {filteredItems.map((item) => (
-                                    <tr key={item.id} className={`transition-colors hover:${darkMode ? 'bg-slate-800/30' : 'bg-slate-50'}`}>
-                                        <td className="px-6 py-3">
-                                            <button 
-                                                onClick={() => setSelectedGallery({ images: item.images.length > 0 ? item.images : [item.heroImage], index: 0 })}
-                                                className="relative group block w-16 h-12 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                                title="Kliknij by powiększyć galerię"
-                                            >
-                                                <img src={item.heroImage} alt={item.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                                    <Search size={14} className="text-white opacity-0 group-hover:opacity-100 drop-shadow-md" />
-                                                </div>
-                                            </button>
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            <div className="font-semibold">{item.name}</div>
-                                            <div className={`text-xs ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>{item.id}</div>
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            <span className={`inline-flex items-center px-2 py-1 rounded-md text-xs font-medium ${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'}`}>
-                                                <MapPin size={12} className="mr-1" />
+                {/* List View */}
+                <div className="flex flex-col space-y-6">
+                    {filteredItems.map((item) => (
+                        <div key={item.id} className={`grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 rounded-2xl border shadow-sm transition-colors overflow-visible ${darkMode ? 'bg-slate-900 border-slate-800 hover:bg-slate-800/50' : 'bg-white border-slate-200 hover:bg-slate-50'}`}>
+                            {/* Calendar (1st column) */}
+                            <div className="flex flex-col w-full min-h-[250px] xl:min-h-auto">
+                                <h3 className={`text-xs font-semibold uppercase tracking-wider mb-3 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Kalendarz</h3>
+                                {item.icalUrl ? (
+                                    <div className="w-full bg-slate-950/50 rounded-xl border border-white/5 shadow-md h-full">
+                                        <div className="p-2 border-b border-white/5 text-center bg-black/20">
+                                            <div className="font-bold text-sm text-amber-500">
+                                                {item.name} {item.idoBookingId ? `| ID: ${item.idoBookingId}` : ''}
+                                            </div>
+                                        </div>
+                                        <div className="p-2 h-full">
+                                            <ICalCalendar icalUrl={item.icalUrl} apartmentId={item.id} forceLanguage="pl" />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="w-full h-full min-h-[250px] flex items-center justify-center rounded-xl border border-dashed border-slate-700 text-sm text-slate-500 flex-1">
+                                        Brak kalendarza
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Thumbnail (2nd column) */}
+                            <div className="flex flex-col w-full">
+                                <h3 className={`text-xs font-semibold uppercase tracking-wider mb-3 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Miniatura</h3>
+                                <button 
+                                    onClick={() => setSelectedGallery({ images: item.images.length > 0 ? item.images : [item.heroImage], index: 0 })}
+                                    className="relative group block w-full h-full min-h-[250px] sm:min-h-[350px] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 flex-1"
+                                    title="Kliknij by powiększyć galerię"
+                                >
+                                    <img src={item.heroImage} alt={item.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                                        <Search size={24} className="text-white opacity-0 group-hover:opacity-100 drop-shadow-md transform scale-50 group-hover:scale-100 transition-all duration-300" />
+                                    </div>
+                                    <div className="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md flex items-center gap-1.5 text-white text-xs font-medium">
+                                        <ImageIcon size={12} />
+                                        {item.photoCount}
+                                    </div>
+                                </button>
+                            </div>
+
+                            {/* Details */}
+                            <div className="flex flex-col w-full">
+                                <h3 className={`text-xs font-semibold uppercase tracking-wider mb-3 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Szczegóły</h3>
+                                
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
+                                    {/* Column A */}
+                                    <div className="space-y-4">
+                                        <div>
+                                            <p className={`text-[10px] uppercase font-bold tracking-wider mb-1 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Nazwa & ID</p>
+                                            <p className="font-bold text-lg leading-tight">{item.name}</p>
+                                            <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>{item.id}</p>
+                                        </div>
+                                        
+                                        <div>
+                                            <p className={`text-[10px] uppercase font-bold tracking-wider mb-1 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Lokalizacja</p>
+                                            <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700'}`}>
+                                                <MapPin size={14} className="mr-1.5" />
                                                 {item.location}
                                             </span>
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            <div className="flex items-center space-x-1.5">
-                                                <ImageIcon size={14} className={darkMode ? 'text-slate-500' : 'text-slate-400'} />
-                                                <span className="font-medium">{item.photoCount}</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Column B */}
+                                    <div className="space-y-4">
+                                        <div>
+                                            <p className={`text-[10px] uppercase font-bold tracking-wider mb-1 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Pojemność & Cena</p>
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex items-center gap-2">
+                                                    <div className={`p-1.5 rounded-lg ${darkMode ? 'bg-slate-800 text-slate-400' : 'bg-slate-100 text-slate-500'}`}>
+                                                        <User size={16} />
+                                                    </div>
+                                                    <span className="font-semibold">{item.guests}</span>
+                                                </div>
+                                                <div className="font-bold text-orange-500">
+                                                    {item.price}
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            <span className="font-medium">{stats?.sizesByItem[item.id] ? `${stats.sizesByItem[item.id]} MB` : '...'}</span>
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            <div className="flex items-center space-x-1.5">
-                                                <User size={14} className={darkMode ? 'text-slate-500' : 'text-slate-400'} />
-                                                <span className="font-medium">{item.guests}</span>
-                                            </div>
-                                        </td>
-                                        <td className="px-6 py-4 text-slate-500 dark:text-slate-400 max-w-xs">
-                                            <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-2 custom-scrollbar">
-                                                {item.amenities && item.amenities.length > 0 ? (
-                                                    item.amenities.map((amenity, i) => (
-                                                        <span key={i} className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${darkMode ? 'bg-slate-800/50 border-slate-700 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
-                                                            {amenity}
-                                                        </span>
+                                        </div>
+
+                                        <div>
+                                            <p className={`text-[10px] uppercase font-bold tracking-wider mb-1 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Szybkie Linki</p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {item.calendarLinks.length > 0 ? (
+                                                    item.calendarLinks.map((link, i) => (
+                                                        <a 
+                                                            key={i} 
+                                                            href={link.url} 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-500/20 rounded-lg text-xs font-semibold transition-colors"
+                                                        >
+                                                            <Calendar size={14} />
+                                                            <span>{link.name}</span>
+                                                        </a>
                                                     ))
                                                 ) : (
-                                                    <span className={`text-xs italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak danych</span>
+                                                    <span className={`text-sm italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak linków</span>
                                                 )}
                                             </div>
-                                        </td>
-                                        <td className="px-6 py-4 font-medium">
-                                            {item.price}
-                                        </td>
-                                        <td className="px-6 py-4 align-top">
-                                            {item.calendarLinks.length > 0 ? (
-                                                <div className="flex flex-col gap-4 w-[320px]">
-                                                    {item.calendarLinks.map((link, i) => (
-                                                        link.name === 'iCal' ? (
-                                                            <div key={i} className="transform scale-[0.85] origin-top-left">
-                                                                <ICalCalendar icalUrl={link.url} apartmentId={item.name} />
-                                                            </div>
-                                                        ) : (
-                                                            <a 
-                                                                key={i} 
-                                                                href={link.url} 
-                                                                target="_blank" 
-                                                                rel="noopener noreferrer"
-                                                                className="inline-flex items-center space-x-1 px-3 py-2 bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-500/20 rounded-lg text-sm font-medium transition-colors w-max"
-                                                            >
-                                                                <Calendar size={14} />
-                                                                <span>{link.name} panel</span>
-                                                            </a>
-                                                        )
-                                                    ))}
-                                                </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Column C */}
+                                    <div className="sm:col-span-2 mt-2">
+                                        <p className={`text-[10px] uppercase font-bold tracking-wider mb-2 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>Udogodnienia</p>
+                                        <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto pr-2 custom-scrollbar">
+                                            {item.amenities && item.amenities.length > 0 ? (
+                                                item.amenities.map((amenity, i) => (
+                                                    <span key={i} className={`inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-medium border ${darkMode ? 'bg-slate-800/50 border-slate-700 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
+                                                        {amenity}
+                                                    </span>
+                                                ))
                                             ) : (
-                                                <span className={`text-xs italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak kalendarza</span>
+                                                <span className={`text-sm italic ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>Brak danych</span>
                                             )}
-                                        </td>
-                                    </tr>
-                                ))}
-                                {filteredItems.length === 0 && (
-                                    <tr>
-                                        <td colSpan={7} className="px-6 py-12 text-center text-slate-500">
-                                            Nie znaleziono wyników dla "{searchTerm}"
-                                        </td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </table>
-                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    
+                    {filteredItems.length === 0 && (
+                        <div className={`p-12 text-center rounded-2xl border ${darkMode ? 'bg-slate-900 border-slate-800 text-slate-500' : 'bg-white border-slate-200 text-slate-500'}`}>
+                            Nie znaleziono wyników dla "{searchTerm}"
+                        </div>
+                    )}
                 </div>
             </main>
 

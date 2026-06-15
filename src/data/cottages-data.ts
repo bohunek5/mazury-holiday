@@ -32,7 +32,7 @@ export const cottagesData: Cottage[] = [
         bedrooms: 2,
         bathrooms: 1,
         area: 60,
-        heroImage: getAssetPath("/images/skorupki/skorupki_1.webp"),
+        heroImage: getAssetPath("/images/skorupki/skorupki_10.webp"),
         galleryStart: 4,
         description: `Przytulny domek z pełnym wyposażeniem, idealny dla rodzin z dziećmi lub grupy przyjaciół. Drewniane wykończenia, duży taras z meblami ogrodowymi i bezpośredni dostęp do ciszy mazurskiej przyrody.`,
         amenities: [
@@ -182,7 +182,7 @@ export const cottagesData: Cottage[] = [
         bedrooms: 2,
         bathrooms: 1,
         area: 65,
-        heroImage: getAssetPath("/images/skorupki/skorupki_4.webp"),
+        heroImage: getAssetPath("/images/skorupki/skorupki_1.webp"),
         galleryStart: 16,
         description: `Wyróżniający się przestronią i nowoczesnym wnętrzem domek. Otwarta przestrzeń dzienna łączy salon z jadalnią i kuchnią, tworząc idealne miejsce do wspólnego spędzania czasu.`,
         amenities: [
@@ -232,7 +232,7 @@ export const cottagesData: Cottage[] = [
         bedrooms: 2,
         bathrooms: 1,
         area: 60,
-        heroImage: getAssetPath("/images/skorupki/skorupki_5.webp"),
+        heroImage: getAssetPath("/images/skorupki/skorupki_2.webp"),
         galleryStart: 20,
         description: `Domek w stylu skandynawskim z drewnianymi akcentami i przytulną atmosferą. Idealne połączenie rustykalnego uroku z nowoczesnym komfortem. Okolica bogata w szlaki rowerowe i piesze.`,
         amenities: [
