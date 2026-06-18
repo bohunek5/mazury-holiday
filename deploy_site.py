@@ -32,19 +32,9 @@ if ($zip->open('deploy.zip') === TRUE) {
 @unlink('unzip.php');
 ?>""")
 
-class MyFTP_TLS(ftplib.FTP_TLS):
-    def ntransfercmd(self, cmd, rest=None):
-        conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
-        if self._prot_p:
-            conn = self.context.wrap_socket(conn,
-                                            server_hostname=self.host,
-                                            session=self.sock.session)
-        return conn, size
-
 print("Connecting to FTP...")
-ftp = MyFTP_TLS(FTP_HOST)
+ftp = ftplib.FTP(FTP_HOST)
 ftp.login(FTP_USER, FTP_PASS)
-ftp.prot_p()
 ftp.cwd(REMOTE_DIR)
 
 print("Uploading unzip.php...")

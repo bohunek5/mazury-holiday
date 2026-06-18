@@ -19,9 +19,13 @@ import euFlagData from "../../eu-flag.json";
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const pathname = usePathname();
     const isHomePage = pathname === "/";
+
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
 
     const navLinks = [
         { name: t("nav", "apartments"), href: "/apartamenty" },
@@ -73,8 +77,9 @@ export default function Navbar() {
                     : "bg-transparent py-8"
             )}
         >
-            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative">
-                <Link href="/" className="relative h-[60px] w-[130px] sm:w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink">
+            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative z-[10000]">
+                {/* Logo */}
+                <Link href="/" className="relative h-[60px] w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -98,7 +103,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop & Mobile Actions (Right) */}
-                <div className="flex items-center gap-4 z-50 shrink-0">
+                <div className="flex items-center gap-4 z-[10000] shrink-0">
                     {/* Desktop Controls */}
                     <div className="hidden xl:flex items-center gap-4">
                         {/* EU Flag */}
@@ -132,7 +137,10 @@ export default function Navbar() {
                                     ? "text-slate-900 dark:text-white hover:text-amber-500"
                                     : cn(textColorClass, "hover:text-amber-400")
                             )}
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsMobileMenuOpen(!isMobileMenuOpen);
+                            }}
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? (
@@ -161,24 +169,7 @@ export default function Navbar() {
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
-                        {/* Mobile Menu Logo */}
-                        <motion.div
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="mb-4 mt-0"
-                        >
-                            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="relative h-[80px] w-[320px] block">
-                                <Image
-                                    src={logoPoziom}
-                                    alt="Mazury.Holiday"
-                                    fill
-                                    className="object-contain transition-all duration-300 dark:brightness-0 dark:invert"
-                                />
-                            </Link>
-                        </motion.div>
-
-                        <div className="flex flex-col items-center w-full px-6 gap-2">
+                        <div className="flex flex-col items-center w-full px-6 gap-2 mt-20 md:mt-28">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -208,23 +199,25 @@ export default function Navbar() {
                             className="flex flex-col items-center gap-4 mt-0 mb-8 w-full"
                         >
                             <div className={cn("w-16 h-px", "bg-slate-200 dark:bg-slate-800")} />
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                                <div className="flex items-center gap-2">
-                                    <AccessibilityWidget dropUp={true} alignCenter={true} />
-                                    <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">{t("nav", "language")}</span>
-                                    <LanguageSwitcher className="text-slate-900 dark:text-white" dropUp={true} alignCenter={true} />
+                            <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 w-full">
+                                <div className="flex flex-col items-center gap-3">
+                                    <span className="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">{t("nav", "language")}</span>
+                                    <LanguageSwitcher className="justify-center" inline={true} />
                                 </div>
-                                <div className="h-6 w-px bg-slate-200 dark:bg-slate-800 hidden sm:block" />
-                                <Link
-                                    href="/projekty-unijne"
-                                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50/50 dark:bg-blue-950/20 text-slate-700 dark:text-slate-300 hover:bg-blue-100 transition-colors"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    <div className="w-6 h-6 flex items-center justify-center">
-                                        <Lottie animationData={euFlagData} loop={true} style={{ pointerEvents: "none" }} />
-                                    </div>
-                                    <span className="text-xs font-semibold uppercase tracking-wider">{t("nav", "euProjects")}</span>
-                                </Link>
+                                <div className="flex items-center justify-center gap-4 mt-2">
+                                    <AccessibilityWidget dropUp={true} alignCenter={true} />
+                                    <div className="h-6 w-px bg-slate-200 dark:bg-slate-800" />
+                                    <Link
+                                        href="/projekty-unijne"
+                                        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50/50 dark:bg-blue-950/20 text-slate-700 dark:text-slate-300 hover:bg-blue-100 transition-colors"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        <div className="w-6 h-6 flex items-center justify-center">
+                                            <Lottie animationData={euFlagData} loop={true} style={{ pointerEvents: "none" }} />
+                                        </div>
+                                        <span className="text-xs font-semibold uppercase tracking-wider">{t("nav", "euProjects")}</span>
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>

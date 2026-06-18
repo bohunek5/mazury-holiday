@@ -37,7 +37,7 @@ export default function CategoryLinks() {
             id: "charter",
             title: t("categories", "charter"),
             href: "/czarter",
-            image: getAssetPath("/images/czarter/main.webp"),
+            image: getAssetPath("/images/czarter/s17.webp"),
             icon: <Anchor className="w-6 h-6" />,
         },
     ];

@@ -1,10 +1,14 @@
 import ftplib
-try:
-    ftp = ftplib.FTP('serwer194525.lh.pl')
-    ftp.login('serwer194525', 'Piaskowa11510$$$')
-    print('✅ Connected!')
-    ftp.cwd('public_html/autoinstalator/serwer194525.lh.pl/wordpress162339')
-    ftp.retrlines('LIST')
-    ftp.quit()
-except Exception as e:
-    print('Error:', e)
+
+FTP_HOST = "serwer194525.lh.pl"
+FTP_USER = "serwer194525"
+FTP_PASS = "KochamAntygravity2026$"
+
+ftp = ftplib.FTP(FTP_HOST)
+ftp.login(FTP_USER, FTP_PASS)
+print("Root dirs:")
+ftp.dir()
+ftp.cwd("public_html")
+print("\nPublic HTML dirs:")
+ftp.dir()
+ftp.quit()

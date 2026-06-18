@@ -28,7 +28,7 @@ export default function CharterSection() {
                 className="absolute -inset-[20%] z-0 opacity-20"
             >
                 <Image
-                    src={getAssetPath("/images/czarter/main.webp")}
+                    src={getAssetPath("/images/czarter/s17.webp")}
                     alt="Charter background"
                     fill
                     className="object-cover"
@@ -82,7 +82,7 @@ export default function CharterSection() {
 
                     <Link href="/czarter" className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group block">
                         <Image
-                            src={getAssetPath("/images/czarter/main.webp")}
+                            src={getAssetPath("/images/czarter/s17.webp")}
                             alt="Jacht motorowy Stillo 30"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"

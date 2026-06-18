@@ -23,7 +23,7 @@ export default function Apartments() {
             id: 1,
             title: t("apartments", "items.stranda.title") || "Apartamenty Stranda Residence",
             location: t("apartments", "items.stranda.location") || "Giżycko, jezioro Kisajno",
-            image: getAssetPath("/images/stranda/stranda_main.webp"),
+            image: getAssetPath("/images/wow.webp"),
             link: "/apartamenty/stranda",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
@@ -79,7 +79,7 @@ export default function Apartments() {
             title: t("apartments", "items.domkiSkorupki.title"),
             location: t("apartments", "items.domkiSkorupki.location"),
             description: t("apartments", "items.domkiSkorupki.description"),
-            image: getAssetPath("/images/skorupki/skorupki_2.webp"),
+            image: getAssetPath("/images/skorupki/skorupki_6.webp"),
             people: skorupkiData.guests,
             link: "/domki",
             icons: [
@@ -151,7 +151,7 @@ export default function Apartments() {
                                     </div>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
-                                            {t("apartments", "details")} &rarr;
+                                            {apt.id === 5 ? t("apartments", "seeCottage") || "Zobacz domki" : t("apartments", "details")} &rarr;
                                         </span>
                                     </div>
                                 </div>
@@ -206,7 +206,7 @@ export default function Apartments() {
                                     </div>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors">
-                                            {t("apartments", "details")} &rarr;
+                                            {apt.id === 5 ? t("apartments", "seeCottage") || "Zobacz domki" : apt.id === 6 ? t("apartments", "seeRooms") || "Zobacz pokoje" : t("apartments", "details")} &rarr;
                                         </span>
                                     </div>
                                 </div>

@@ -2,9 +2,9 @@ import { ApartmentsEditor } from "./ApartmentsEditor";
 import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
 import { kisajnoData } from "@/data/kisajno-data";
-import { mikolajkiData } from "@/data/mikolajki-data";
 import { pokojeFuledaData } from "@/data/pokoje-fuleda-data";
 import { skorupkiData } from "@/data/skorupki-data";
+import { czarterData } from "@/data/czarter-data";
 
 export default function AdminApartamentyPage() {
     return (
@@ -12,9 +12,9 @@ export default function AdminApartamentyPage() {
             initialStranda={strandaApartments}
             initialFuleda={fuledaApartments}
             initialKisajno={kisajnoData}
-            initialMikolajki={mikolajkiData}
             initialPokoje={pokojeFuledaData}
             initialSkorupki={skorupkiData}
+            initialCzarter={czarterData}
         />
     );
 }

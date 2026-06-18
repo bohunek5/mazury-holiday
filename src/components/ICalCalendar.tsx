@@ -10,7 +10,6 @@ interface CalendarEvent {
     end: Date;
     summary?: string;
     status?: string;
-    uid?: string;
 }
 
 const localeMap: Record<string, string> = {
@@ -22,12 +21,36 @@ const localeMap: Record<string, string> = {
     es: 'es-ES'
 };
 
-const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apartmentId?: string }) => {
-    const { language } = useLanguage();
+const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUrl: string; apartmentId?: string; forceLanguage?: string }) => {
+    const { language: contextLanguage } = useLanguage();
+    const language = forceLanguage || contextLanguage;
     const [events, setEvents] = useState<CalendarEvent[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [currentDate, setCurrentDate] = useState(new Date());
+    const [inView, setInView] = useState(false);
+    const containerRef = React.useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInView(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '200px' }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
 
     const getTrans = (lang: string) => {
         // @ts-expect-error - key access
@@ -71,8 +94,6 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                     currentEvent.summary = line.split(':')[1];
                 } else if (line.startsWith('STATUS')) {
                     currentEvent.status = line.split(':')[1];
-                } else if (line.startsWith('UID')) {
-                    currentEvent.uid = line.split(':')[1];
                 } else if (line === 'END:VEVENT') {
                     if (currentEvent.start && currentEvent.end) {
                         if (currentEvent.status !== 'CANCELLED') {
@@ -88,6 +109,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
     }, [parseDate]);
 
     useEffect(() => {
+        if (!inView) return;
+
         let isMounted = true;
 
         const fetchCalendarWithFallback = async () => {
@@ -115,31 +138,47 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
                 }
             }
 
-            const fetchWithRetry = async (url: string, retries = 3): Promise<string> => {
-                for (let i = 0; i < retries; i++) {
-                    try {
-                        // Użyj lokalnego proxy na tym samym serwerze (bądź na serwerze produkcyjnym)
-                        const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
-                        const proxyUrl = isLocalhost 
-                            ? `https://corsproxy.io/?${encodeURIComponent(url)}`
-                            : `/ical-proxy.php?url=${encodeURIComponent(url)}`;
-                        
-                        let res = await fetch(proxyUrl);
-                        
-                        // Fallback to corsproxy if local php fails (e.g. in some dev environments)
-                        if (!res.ok && !isLocalhost) {
-                            const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-                            res = await fetch(fallbackUrl);
-                        }
+            const fetchWithRetry = async (url: string) => {
+                // Fix idosell.com redirect issues by using idobooking.com directly
+                const cleanUrl = url.replace('.idosell.com', '.idobooking.com');
 
-                        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-                        return await res.text();
-                    } catch (e) {
-                        if (i === retries - 1) throw e;
-                        await new Promise(r => setTimeout(r, 1000 * (i + 1)));
+                // 1. Try local PHP proxy (works on production)
+                try {
+                    const proxyUrl = `/calendar.php?url=${encodeURIComponent(cleanUrl)}&t=${Date.now()}`;
+                    const response = await fetch(proxyUrl, { cache: 'no-store' });
+                    if (response.ok) {
+                        const text = await response.text();
+                        if (text && text.includes('BEGIN:VCALENDAR')) return text;
                     }
+                } catch (e) {
+                    console.error("Failed to fetch calendar via local proxy:", e);
                 }
-                throw new Error("Failed to fetch calendar");
+
+                // 2. Try live production PHP proxy (works on localhost during dev)
+                try {
+                    const phpUrl = `https://mazuryholiday.pl/calendar.php?url=${encodeURIComponent(cleanUrl)}&t=${Date.now()}`;
+                    const response = await fetch(phpUrl, { cache: 'no-store' });
+                    if (response.ok) {
+                        const text = await response.text();
+                        if (text && text.includes('BEGIN:VCALENDAR')) return text;
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch calendar via live PHP proxy:", e);
+                }
+
+                // 3. Fallback to corsproxy.io
+                try {
+                    const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(cleanUrl)}`;
+                    const fallbackResponse = await fetch(fallbackUrl, { cache: 'no-store' });
+                    if (fallbackResponse.ok) {
+                        const fallbackText = await fallbackResponse.text();
+                        if (fallbackText && fallbackText.includes('BEGIN:VCALENDAR')) return fallbackText;
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch calendar via corsproxy:", e);
+                }
+                
+                return "";
             };
 
             try {
@@ -170,7 +209,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
         return () => {
             isMounted = false;
         };
-    }, [icalUrl, parseICal, apartmentId, t.error]);
+    }, [icalUrl, parseICal, apartmentId, t.error, inView]);
 
     const daysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     const firstDayOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
@@ -228,7 +267,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103" }: { icalUrl: string; apar
 
 
     return (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+        <div ref={containerRef} className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800">
             <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <CalendarIcon className="w-5 h-5 text-amber-500" />

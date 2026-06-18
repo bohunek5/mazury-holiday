@@ -72,9 +72,10 @@ interface LanguageSwitcherProps {
     className?: string;
     dropUp?: boolean;
     alignCenter?: boolean;
+    inline?: boolean;
 }
 
-export function LanguageSwitcher({ className, dropUp = false, alignCenter = false }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ className, dropUp = false, alignCenter = false, inline = false }: LanguageSwitcherProps) {
     const [isOpen, setIsOpen] = React.useState(false);
     const { language, setLanguage } = useLanguage();
     const dropdownRef = React.useRef<HTMLDivElement>(null);
@@ -82,27 +83,68 @@ export function LanguageSwitcher({ className, dropUp = false, alignCenter = fals
     const selectedLang = languages.find(l => l.code === language) || languages[0];
 
     React.useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
+        function handleClickOutside(event: MouseEvent | TouchEvent) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
             }
         }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+        if (!inline) {
+            document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("touchstart", handleClickOutside, { passive: true });
+        }
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("touchstart", handleClickOutside);
+        };
+    }, [inline]);
+
+    if (inline) {
+        return (
+            <div className={cn("flex flex-wrap items-center gap-2", className)}>
+                {languages.map((lang) => (
+                    <button
+                        key={lang.code}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setLanguage(lang.code);
+                        }}
+                        title={lang.name}
+                        className={cn(
+                            "flex items-center justify-center w-10 h-10 rounded-full transition-transform hover:scale-110 cursor-pointer",
+                            language === lang.code
+                                ? "ring-2 ring-amber-500 ring-offset-2 dark:ring-offset-slate-900"
+                                : "hover:bg-slate-50 dark:hover:bg-slate-800 opacity-70 hover:opacity-100"
+                        )}
+                    >
+                        <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm flex items-center justify-center border border-slate-200/20 bg-slate-100 dark:bg-slate-800">
+                            {React.cloneElement(lang.flag as React.ReactElement, { 
+                                className: "w-full h-full",
+                                preserveAspectRatio: "xMidYMid slice"
+                            } as any)}
+                        </div>
+                    </button>
+                ))}
+            </div>
+        );
+    }
 
     return (
         <div className={cn("relative", className)} ref={dropdownRef}>
             <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setIsOpen(!isOpen);
+                }}
+                className="flex items-center justify-center w-10 h-10 md:w-8 md:h-8 rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                 title={selectedLang.name}
             >
-                <div className="w-6 h-6 rounded-full overflow-hidden shadow-sm flex items-center justify-center border border-slate-200/20 bg-slate-100 dark:bg-slate-800">
+                <div className="w-8 h-8 md:w-6 md:h-6 rounded-full overflow-hidden shadow-sm flex items-center justify-center border border-slate-200/20 bg-slate-100 dark:bg-slate-800">
                     {React.cloneElement(selectedLang.flag as React.ReactElement, { 
                         className: "w-full h-full",
                         preserveAspectRatio: "xMidYMid slice"
-                    })}
+                    } as any)}
                 </div>
             </button>
 
@@ -116,23 +158,26 @@ export function LanguageSwitcher({ className, dropUp = false, alignCenter = fals
                         {languages.map((lang) => (
                             <button
                                 key={lang.code}
-                                onClick={() => {
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    // Defer closing slightly to prevent ghost clicks on mobile
                                     setLanguage(lang.code);
-                                    setIsOpen(false);
+                                    setTimeout(() => setIsOpen(false), 50);
                                 }}
                                 title={lang.name}
                                 className={cn(
-                                    "flex items-center justify-center w-8 h-8 rounded-full transition-transform hover:scale-110 relative cursor-pointer",
+                                    "flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full transition-transform hover:scale-110 relative cursor-pointer",
                                     language === lang.code
                                         ? "ring-2 ring-amber-500 ring-offset-2 dark:ring-offset-slate-900"
                                         : "hover:bg-slate-50 dark:hover:bg-slate-800"
                                 )}
                             >
-                                <div className="w-full h-full rounded-full overflow-hidden shadow-sm flex items-center justify-center border border-slate-200/20 bg-slate-100 dark:bg-slate-800">
+                                <div className="w-10 h-10 md:w-8 md:h-8 rounded-full overflow-hidden shadow-sm flex items-center justify-center border border-slate-200/20 bg-slate-100 dark:bg-slate-800">
                                     {React.cloneElement(lang.flag as React.ReactElement, { 
                                         className: "w-full h-full",
                                         preserveAspectRatio: "xMidYMid slice"
-                                    })}
+                                    } as any)}
                                 </div>
                             </button>
                         ))}
@@ -142,3 +187,4 @@ export function LanguageSwitcher({ className, dropUp = false, alignCenter = fals
         </div>
     );
 }
+

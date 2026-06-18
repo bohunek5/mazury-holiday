@@ -170,6 +170,23 @@ export const translations = {
       "bookingDesc": "Wybierz daty i sprawdź dostępność.",
       "items": {
         "stranda": {
+      "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAC ZABAW",
+        "sauna": "SAUNA",
+        "beach": "PLAŻA",
+        "scooters": "WYPOŻYCZALNIA",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAWERNA",
+        "shop": "SKLEPIK"
+      },
+      "features": {
+        "studio": "Studio",
+        "oneBedroom": "1 Sypialnia",
+        "twoBedrooms": "2 Sypialnie",
+        "jacuzzi": "Jacuzzi",
+        "sauna": "Sauna"
+      },
           "title": "Apartamenty Stranda Residence",
           "location": "Giżycko, jezioro Kisajno",
           "description": "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence..."
@@ -292,6 +309,7 @@ export const translations = {
         "roomSalon": "Salon",
         "roomKitchen": "Kuchnia",
         "roomBedroom": "Sypialnia",
+          "roomBedroom2": "Sypialnia 2",
         "roomBathroom": "Łazienka",
         "salonFeatures": "TV, sofa 2os., stół, krzesła, klimatyzacja, wifi",
         "kitchenFeatures": "płyta indukcyjna, lodówka, zmywarka, mikrofalówka, komplet naczyń i sztućców",
@@ -463,7 +481,9 @@ export const translations = {
       "C304": "Apartament C304 Studio znajduje się na drugim piętrze budynku C, posiada miejsce noclegowe z łóżkiem podwójnym, rozkładaną sofę 2os., salon z aneksem kuchennym, łazienkę z prysznicem i taras z widokiem na zatokę Tracz i port Stranda. C304 Studio (maksymalna ilość osób 4).",
       "C_1_sypialnia": "Apartament w budynku C z 1 sypialnią, oferujący komfortowy wypoczynek dla maksymalnie 4 osób.",
       "C_Studio": "Studio w budynku C, to doskonałe miejsce na wypoczynek z widokiem na Zatokę Tracz.",
-      "C_2_sypialnie": "Przestronny apartament w budynku C z 2 sypialniami, idealny dla rodzin."
+      "C_2_sypialnie": "Przestronny apartament w budynku C z 2 sypialniami, idealny dla rodzin.",
+      "c": "Przestronny apartament w budynku C z 2 sypialniami, idealny dla rodzin.",
+      "c_title": "Apartament C z 2 sypialniami",
     },
     "kisajnoPage": {
       "title": "Apartamenty Kisajno",
@@ -983,6 +1003,23 @@ export const translations = {
       "bookingDesc": "Wählen Sie Daten aus und prüfen Sie die Verfügbarkeit.",
       "items": {
         "stranda": {
+        "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAC ZABAW",
+        "sauna": "SAUNA",
+        "beach": "PLAŻA",
+        "scooters": "WYPOŻYCZALNIA",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAWERNA",
+        "shop": "SKLEPIK"
+      },
+      "features": {
+          "studio": "Studio",
+          "oneBedroom": "1 Schlafzimmer",
+          "twoBedrooms": "2 Schlafzimmer",
+          "jacuzzi": "Whirlpool",
+          "sauna": "Sauna"
+        },
           "title": "Stranda Residence Apartments",
           "location": "Giżycko, Kisajno-See",
           "description": "Die Apartments befinden sich am Hafen von Stranda im Apartmentkomplex Stranda Residence..."
@@ -1105,6 +1142,7 @@ export const translations = {
         "roomSalon": "Wohnzimmer",
         "roomKitchen": "Küche",
         "roomBedroom": "Schlafzimmer",
+            "roomBedroom2": "Schlafzimmer 2",
         "roomBathroom": "Badezimmer",
         "salonFeatures": "TV, 2-Personen-Sofa, Tisch, Stühle, Klimaanlage, WLAN",
         "kitchenFeatures": "Induktionskochfeld, Kühlschrank, Geschirrspüler, Mikrowelle, Geschirr und Besteck",
@@ -1276,7 +1314,9 @@ export const translations = {
       "C304": "Das Studio-Apartment C304 befindet sich im zweiten Stock des Gebäudes C und verfügt über ein Doppelbett, ein Doppelschlafsofa, ein Wohnzimmer mit Kochnische, ein Badezimmer mit Dusche und eine Terrasse mit Blick auf die Bucht von Tracz und den Hafen von Stranda. C304 Studio (maximale Personenzahl 4).",
       "C_1_sypialnia": "Apartment im Gebäude C mit 1 Schlafzimmer, das komfortable Entspannung für bis zu 4 Personen bietet.",
       "C_Studio": "Das Studio im Gebäude C ist ein perfekter Ort zum Entspannen mit Blick auf die Tracz-Bucht.",
-      "C_2_sypialnie": "Geräumige Wohnung im Gebäude C mit 2 Schlafzimmern, ideal für Familien."
+      "C_2_sypialnie": "Geräumige Wohnung im Gebäude C mit 2 Schlafzimmern, ideal für Familien.",
+      "c": "Studio mit 2 Schlafzimmern im Gebäude C, jedes Schlafzimmer hat ein Doppelbett, Wohnzimmer mit Küchenzeile und Schlafsofa für 2 Personen, Badezimmer mit Dusche und Terrasse mit Blick auf die Tracz-Bucht und den Stranda-Hafen. Ausgelegt für maximal 6 Personen.",
+      "c_title": "Apartment C mit 2 Schlafzimmern",
     },
     "kisajnoPage": {
       "title": "Kisajno Apartments",
@@ -1796,6 +1836,23 @@ export const translations = {
       "bookingDesc": "Select dates and check availability.",
       "items": {
         "stranda": {
+        "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAC ZABAW",
+        "sauna": "SAUNA",
+        "beach": "PLAŻA",
+        "scooters": "WYPOŻYCZALNIA",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAWERNA",
+        "shop": "SKLEPIK"
+      },
+      "features": {
+          "studio": "Studio",
+          "oneBedroom": "1 Bedroom",
+          "twoBedrooms": "2 Bedrooms",
+          "jacuzzi": "Jacuzzi",
+          "sauna": "Sauna"
+        },
           "title": "Stranda Residence Apartments",
           "location": "Giżycko, Lake Kisajno",
           "description": "The apartments are located at the Stranda port in the Stranda Residence apartment complex..."
@@ -1918,6 +1975,7 @@ export const translations = {
         "roomSalon": "Living room",
         "roomKitchen": "Kitchen",
         "roomBedroom": "Bedroom",
+            "roomBedroom2": "Bedroom 2",
         "roomBathroom": "Bathroom",
         "salonFeatures": "TV, 2-person sofa, table, chairs, air conditioning, wifi",
         "kitchenFeatures": "induction hob, fridge, dishwasher, microwave, set of dishes and cutlery",
@@ -2089,7 +2147,9 @@ export const translations = {
       "C304": "The C304 Studio apartment is located on the second floor of building C, it has a bed with a double bed, a double sofa bed, a living room with a kitchenette, a bathroom with a shower and a terrace overlooking the Tracz Bay and the Stranda port. C304 Studio (maximum number of people 4).",
       "C_1_sypialnia": "Apartment in building C with 1 bedroom, offering comfortable relaxation for up to 4 people.",
       "C_Studio": "The studio in building C is a perfect place to relax with a view of the Tracz Bay.",
-      "C_2_sypialnie": "Spacious apartment in building C with 2 bedrooms, ideal for families."
+      "C_2_sypialnie": "Spacious apartment in building C with 2 bedrooms, ideal for families.",
+      "c": "Studio with 2 bedrooms located in building C, each bedroom has a double bed, living room with kitchenette and sofa bed for 2 people, bathroom with shower and terrace overlooking Tracz bay and Stranda port. Designed for a maximum of 6 people.",
+      "c_title": "Apartment C with 2 bedrooms",
     },
     "kisajnoPage": {
       "title": "Kisajno Apartments",
@@ -2609,6 +2669,23 @@ export const translations = {
       "bookingDesc": "Pasirinkite datas ir patikrinkite prieinamumą.",
       "items": {
         "stranda": {
+        "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAC ZABAW",
+        "sauna": "SAUNA",
+        "beach": "PLAŻA",
+        "scooters": "WYPOŻYCZALNIA",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAWERNA",
+        "shop": "SKLEPIK"
+      },
+      "features": {
+          "studio": "Studija",
+          "oneBedroom": "1 Miegamasis",
+          "twoBedrooms": "2 Miegamieji",
+          "jacuzzi": "Sūkurinė vonia",
+          "sauna": "Pirtis"
+        },
           "title": "Stranda Residence apartamentai",
           "location": "Gižyckas, Kisajno ežeras",
           "description": "Apartamentai yra Stranda uoste, Stranda Residence apartamentų komplekse..."
@@ -2731,6 +2808,7 @@ export const translations = {
         "roomSalon": "Svetainė",
         "roomKitchen": "Virtuvė",
         "roomBedroom": "Miegamasis",
+            "roomBedroom2": "Miegamasis 2",
         "roomBathroom": "Vonios kambarys",
         "salonFeatures": "TV, 2 vietų sofa, stalas, kėdės, oro kondicionierius, wifi",
         "kitchenFeatures": "indukcinė kaitlentė, šaldytuvas, indaplovė, mikrobangų krosnelė, indų ir stalo įrankių rinkinys",
@@ -2902,7 +2980,9 @@ export const translations = {
       "C304": "C304 Studio butas yra antrame C korpuso aukšte, jame yra lova su dvigule lova, dvigulė miegamoji sofa, svetainė su virtuvėle, vonios kambarys su dušu ir terasa su vaizdu į Tracz įlanką ir Stranda uostą. C304 Studio (maksimalus žmonių skaičius 4).",
       "C_1_sypialnia": "Butas C korpuse su 1 miegamuoju, kuriame patogiai ilsisi iki 4 žmonių.",
       "C_Studio": "Studija C pastate yra puiki vieta atsipalaiduoti su vaizdu į Tracz įlanką.",
-      "C_2_sypialnie": "Erdvūs apartamentai C pastate su 2 miegamaisiais, puikiai tinkantys šeimoms."
+      "C_2_sypialnie": "Erdvūs apartamentai C pastate su 2 miegamaisiais, puikiai tinkantys šeimoms.",
+      "c": "Studija su 2 miegamaisiais pastate C, kiekviename miegamajame yra dvigulė lova, svetainė su virtuvėle ir miegamoji sofa 2 asmenims, vonios kambarys su dušu ir terasa su vaizdu į Tracz įlanką ir Stranda uostą. Skirta ne daugiau kaip 6 asmenims.",
+      "c_title": "Apartamentas C su 2 miegamaisiais",
     },
     "kisajnoPage": {
       "title": "Kisajno apartamentai",
@@ -3459,7 +3539,9 @@ export const translations = {
           "C304": "Apartamentai C304 Studio yra antrame C korpuso aukšte, juose yra dvigulė lova, dvigulė miegamoji sofa, svetainė su virtuvėle, vonios kambarys su dušu ir terasa, iš kurios atsiveria Tracz įlankos ir Stranda uosto vaizdai. Studija C304 (daugiausia 4 žmonės).",
           "C_1_sypialnia": "Butas C korpuse su 1 miegamuoju, kuriame patogiai gali apsistoti iki 4 žmonių.",
           "C_Studio": "Studija C pastate yra puiki vieta atsipalaiduoti su vaizdu į Tracz įlanką.",
-          "C_2_sypialnie": "Erdvūs apartamentai C pastate su 2 miegamaisiais, puikiai tinkantys šeimoms."
+          "C_2_sypialnie": "Erdvūs apartamentai C pastate su 2 miegamaisiais, puikiai tinkantys šeimoms.",
+      "c": "Studija su 2 miegamaisiais pastate C, kiekviename miegamajame yra dvigulė lova, svetainė su virtuvėle ir miegamoji sofa 2 asmenims, vonios kambarys su dušu ir terasa su vaizdu į Tracz įlanką ir Stranda uostą. Skirta ne daugiau kaip 6 asmenims.",
+      "c_title": "Apartamentas C su 2 miegamaisiais",
         },
         "kisajnoPage": {
           "title": "Kisajno apartamentai",
@@ -4482,7 +4564,9 @@ export const translations = {
       "C304": "Studio C304 se nachází ve druhém patře budovy C, má postel s manželskou postelí, rozkládací pohovku pro dva, obývací pokoj s kuchyňským koutem, koupelnu se sprchou a terasu s výhledem na záliv Tracz a přístav Stranda. C304 Studio (maximální počet osob 4).",
       "C_1_sypialnia": "Apartmán v budově C s 1 ložnicí, nabízí pohodlnou relaxaci až pro 4 osoby.",
       "C_Studio": "Studio v budově C je ideálním místem k odpočinku s výhledem na záliv Tracz.",
-      "C_2_sypialnie": "Prostorný byt v budově C se 2 ložnicemi, ideální pro rodiny."
+      "C_2_sypialnie": "Prostorný byt v budově C se 2 ložnicemi, ideální pro rodiny.",
+      "c": "Studio se 2 ložnicemi v budově C, každá ložnice má manželskou postel, obývací pokoj s kuchyňským koutem a rozkládací pohovkou pro 2 osoby, koupelnu se sprchou a terasu s výhledem na záliv Tracz a přístav Stranda. Určeno pro maximálně 6 osob.",
+      "c_title": "Apartmán C se 2 ložnicemi",
     },
     "kisajnoPage": {
       "title": "Apartmány Kisajno",
@@ -5039,7 +5123,9 @@ export const translations = {
           "C304": "Apartmán C304 Studio se nachází ve druhém patře budovy C, nabízí ubytování s manželskou postelí, rozkládací pohovkou pro dva, obývacím pokojem s kuchyňským koutem, koupelnou se sprchovým koutem a terasou s výhledem na záliv Tracz a přístav Stranda. C304 Studio (maximální kapacita 4 osoby).",
           "C_1_sypialnia": "Apartmán v budově C s 1 ložnicí, nabízí pohodlný pobyt až pro 4 osoby.",
           "C_Studio": "Studio v budově C je ideálním místem k odpočinku s výhledem na záliv Tracz.",
-          "C_2_sypialnie": "Prostorný byt v budově C se 2 ložnicemi, ideální pro rodiny."
+          "C_2_sypialnie": "Prostorný byt v budově C se 2 ložnicemi, ideální pro rodiny.",
+      "c": "Studio se 2 ložnicemi v budově C, každá ložnice má manželskou postel, obývací pokoj s kuchyňským koutem a rozkládací pohovkou pro 2 osoby, koupelnu se sprchou a terasu s výhledem na záliv Tracz a přístav Stranda. Určeno pro maximálně 6 osob.",
+      "c_title": "Apartmán C se 2 ložnicemi",
         },
         "kisajnoPage": {
           "title": "Apartmány Kisajno",

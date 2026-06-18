@@ -1,17 +1,6 @@
 import ftplib
 import os
 import sys
-import ssl
-
-class MyFTP_TLS(ftplib.FTP_TLS):
-    """Explicit FTPS, with shared TLS session"""
-    def ntransfercmd(self, cmd, rest=None):
-        conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
-        if self._prot_p:
-            conn = self.context.wrap_socket(conn,
-                                            server_hostname=self.host,
-                                            session=self.sock.session)
-        return conn, size
 
 FTP_HOST = 'serwer194525.lh.pl'
 FTP_USER = 'serwer194525'
@@ -42,7 +31,7 @@ def upload_dir(ftp, local_path, remote_path):
             ftp.cwd('..') # Go back up
 
 print("Connecting to FTP...")
-ftp = MyFTP_TLS(FTP_HOST)
+ftp = ftplib.FTP_TLS(FTP_HOST)
 ftp.login(FTP_USER, FTP_PASS)
 ftp.prot_p()
 

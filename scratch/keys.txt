@@ -1,0 +1,20 @@
+    pl
+        skorupki
+            aboutTitle
+              O domkach
+    en
+        skorupki
+            aboutTitle
+              About the cottages
+    de
+    es
+        skorupki
+            aboutTitle
+              Über die Ferienhäuser
+    it
+        skorupki
+    cs
+        skorupki
+            aboutTitle
+              O chatách
+    lt

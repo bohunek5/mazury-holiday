@@ -11,8 +11,8 @@ const publicBase = isGithubPages
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
+        qualities: [50, 75, 95, 100],
         unoptimized: true,
-        qualities: [25, 50, 75, 95, 100],
         remotePatterns: [
             {
                 protocol: "https",
@@ -20,7 +20,7 @@ const nextConfig = {
             },
         ],
     },
-    output: process.env.NODE_ENV === "development" ? undefined : "export",
+    output: "export",
     trailingSlash: true,
     basePath: isGithubPages ? publicBase : undefined,
     assetPrefix: publicBase || undefined,

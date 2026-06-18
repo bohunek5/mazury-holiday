@@ -156,7 +156,72 @@ export const translationsLegal = {
         "readyDesc": "Contact us to discuss the potential of your property in Masuria.",
         "letsTalk": "Let's talk"
     }
-}
+},
+    cs: {
+        termsPage: {
+              "title": "Podmínky služby",
+              "intro": "Následující podmínky stanovují pravidla pro využívání služeb pronájmu apartmánů, chat a charterových služeb nabízených Mazury.Holiday. Provedení rezervace znamená seznámení se a přijetí ustanovení těchto podmínek.",
+              "sections": [
+                {
+                  "title": "§1. Obecná ustanovení",
+                  "list": [
+                    "Poskytovatelem služeb a správcem objektu je společnost RAD'LIGHT, ul. Myśliwska 3, 11-500 Giżycko.",
+                    "Tyto podmínky se vztahují na všechny rezervace provedené prostřednictvím webové stránky mazury.holiday, telefonicky a e-mailem.",
+                    "Hotelový den začíná v 15:00 v den příjezdu a končí v 11:00 v den odjezdu."
+                  ]
+                },
+                {
+                  "title": "§2. Rezervace a platby",
+                  "list": [
+                    "Rezervace lze provádět prostřednictvím rezervačního systému, telefonicky nebo e-mailem.",
+                    "Rezervace získá status zaručené po zaplacení zálohy ve výši 30 % hodnoty celého pobytu ve lhůtě stanovené poskytovatelem služeb.",
+                    "Nezaplacení zálohy ve stanovené lhůtě se rovná zrušení rezervace.",
+                    "Zbývající částka za pobyt se vybírá nejpozději v den příjezdu při předávání klíčů.",
+                    "V případě zrušení pobytu se zaplacená záloha nevrací. Zkrácení pobytu nezavazuje poskytovatele služeb k vrácení poplatků za nevyužité dny."
+                  ]
+                },
+                {
+                  "title": "§3. Pravidla pobytu",
+                  "list": [
+                    "Host je povinen předložit při přihlášení průkaz totožnosti s fotografií.",
+                    "Počet osob ubytovaných v objektu nesmí překročit počet uvedený v rezervaci. Nehlášené osoby mohou v objektu pobývat pouze v době od 8:00 do 22:00 se souhlasem poskytovatele služeb.",
+                    "V apartmánech a chatách platí přísný zákaz kouření tabákových výrobků a e-cigaret. Kouření je povoleno pouze venku na vyhrazených místech.",
+                    "Host nese plnou finanční odpovědnost za jakékoli poškození nebo zničení vybavení a technických zařízení způsobené jeho zaviněním nebo zaviněním jím pozvaných osob.",
+                    "V objektech platí noční klid od 22:00 do 7:00 následujícího dne."
+                  ]
+                },
+                {
+                  "title": "§4. Pobyt se zvířaty",
+                  "list": [
+                    "Pobyt s domácími mazlíčky je možný pouze po předchozím ohlášení a schválení poskytovatelem služeb při rezervaci.",
+                    "Za pobyt zvířete může být účtován dodatečný poplatek v souladu s platným ceníkem.",
+                    "Majitel zvířete nese plnou finanční a právní odpovědnost za jakékoli škody způsobené zvířetem v objektu.",
+                    "Zvířata nesmí zůstat sama v apartmánu nebo chatě bez dozoru. Psi musí být ve společných prostorách vedeni na vodítku."
+                  ]
+                },
+                {
+                  "title": "§5. Závěrečná ustanovení",
+                  "list": [
+                    "Poskytovatel služeb nenese odpovědnost za majetek hostů ponechaný v objektu.",
+                    "Poskytovatel služeb si vyhrazuje právo odmítnout přijmout hosta, který během předchozího pobytu hrubě porušil podmínky nebo způsobil škodu na majetku objektu nebo ostatních hostů.",
+                    "V případě porušení ustanovení podmínek má poskytovatel služeb právo okamžitě ukončit pobyt hosta bez vrácení poplatků."
+                  ]
+                }
+              ]
+            },
+        gdprPage: {
+              "title": "Informační doložka (GDPR)",
+              "intro": "V souladu s čl. 13 obecného nařízení o ochraně osobních údajů ze dne 27. dubna 2016 (Úř. věst. EU L 119 ze dne 4. 5. 2016) vás informuji, že:",
+              "list": [
+                "<strong>Správcem vašich osobních údajů je:</strong> RAD'LIGHT, Myśliwska 3, 11-500 Giżycko.",
+                "<strong>Kontakt na správce osobních údajů:</strong> rezerwacje@mazury.holiday",
+                "Vaše osobní údaje budou zpracovávány za účelem poskytování služeb na základě čl. 6 odst. 1 písm. a) obecného nařízení o ochraně osobních údajů ze dne 27. dubna 2016.",
+                "Vaše osobní údaje budou uchovávány do doby odvolání souhlasu.",
+                "Máte právo požadovat od správce přístup k osobním údajům, právo na jejich opravu, výmaz nebo omezení zpracování, právo odvolat souhlas a právo na přenositelnost údajů.",
+                "Poskytnutí osobních údajů je dobrovolné, avšak neposkytnutí údajů může mít za následek nemožnost vás kontaktovat za účelem poskytnutí služby. Současně v souladu s čl. 6 odst. 1 písm. a) obecného nařízení o ochraně osobních údajů ze dne 27. dubna 2016 souhlasím se zpracováním mých osobních údajů za účelem telefonického nebo e-mailového kontaktu týkajícího se sjednání poskytnutí služby."
+              ]
+            }
+    }
 };
 
 // Map EN translations to all other languages

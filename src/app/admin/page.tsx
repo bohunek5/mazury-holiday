@@ -21,6 +21,11 @@ const quickLinks = [
         href: "/admin/translations",
         title: "Edytor Tłumaczeń",
         description: "Edycja PL i EN obok siebie."
+    },
+    {
+        href: "/admin/kalendarze",
+        title: "Zestawienie Kalendarzy (IdoBooking)",
+        description: "Lista wszystkich apartamentów z przypisanym ID i linkami do rezerwacji."
     }
 ];
 
