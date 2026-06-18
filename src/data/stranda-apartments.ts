@@ -581,6 +581,9 @@ export const strandaApartments: Record<string, Apartment> = {
         gallery: {
             "heroImage": getAssetPath("/images/stranda/A306/nowe_2026/0T1A8788_1.webp"),
             "images": [
+                getAssetPath("/images/stranda/A306/nowe_2026/0T1A8788_1.webp"),
+                getAssetPath("/images/stranda/A306/nowe_2026/A306_balkon_2.webp"),
+                getAssetPath("/images/stranda/A306/nowe_2026/A306_balkon1_3.webp"),
                 getAssetPath("/images/stranda/A306/nowe_2026/A306_kuchnia_4.webp"),
                 getAssetPath("/images/stranda/A306/nowe_2026/A306_kuchnia1_5.webp"),
                 getAssetPath("/images/stranda/A306/nowe_2026/A306_salon_6.webp"),

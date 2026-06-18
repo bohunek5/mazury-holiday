@@ -240,6 +240,23 @@ export const translations = {
       "boatType": "Luksusowy Houseboat bez patentu"
     },
     "stranda": {
+      "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAC ZABAW",
+        "sauna": "SAUNA",
+        "beach": "PLAŻA",
+        "scooters": "WYPOŻYCZALNIA",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAWERNA",
+        "shop": "SKLEPIK"
+      },
+      "features": {
+        "studio": "Studio",
+        "oneBedroom": "1 Sypialnia",
+        "twoBedrooms": "2 Sypialnie",
+        "jacuzzi": "Jacuzzi",
+        "sauna": "Sauna"
+      },
       "subtitle": "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno",
       "description": "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.",
       "building": "Budynek",
@@ -1073,6 +1090,23 @@ export const translations = {
       "boatType": "Luxuriöses Hausboot ohne Patent"
     },
     "stranda": {
+      "mapLabels": {
+        "parking": "PARKPLATZ",
+        "playground": "SPIELPLATZ",
+        "sauna": "SAUNA",
+        "beach": "STRAND",
+        "scooters": "VERLEIH",
+        "beachbar": "STRANDBAR",
+        "tavern": "TAVERNE",
+        "shop": "GESCHÄFT"
+      },
+      "features": {
+        "studio": "Studio",
+        "oneBedroom": "1 Schlafzimmer",
+        "twoBedrooms": "2 Schlafzimmer",
+        "jacuzzi": "Whirlpool",
+        "sauna": "Sauna"
+      },
       "subtitle": "Wir laden Sie zu Luxusapartments in Giżycko am Kisajno-See ein",
       "description": "Die Apartments befinden sich am Hafen Stranda im Apartmentkomplex Stranda Residence in Giżycko. Die Nähe des Sees und das Angebot des Hafens (Verleih von Wasserausrüstung, Taverne, Shanty- und Rockkonzerte in der Sommersaison) sowie des Zentrums von Giżycko sorgen für viele Formen der aktiven Erholung entlang der Route der Großen Masurischen Seen.",
       "building": "Gebäude",
@@ -1906,6 +1940,23 @@ export const translations = {
       "boatType": "Luxurious houseboat without a patent"
     },
     "stranda": {
+      "mapLabels": {
+        "parking": "PARKING",
+        "playground": "PLAYGROUND",
+        "sauna": "SAUNA",
+        "beach": "BEACH",
+        "scooters": "RENTALS",
+        "beachbar": "BEACH BAR",
+        "tavern": "TAVERN",
+        "shop": "SHOP"
+      },
+      "features": {
+        "studio": "Studio",
+        "oneBedroom": "1 Bedroom",
+        "twoBedrooms": "2 Bedrooms",
+        "jacuzzi": "Jacuzzi",
+        "sauna": "Sauna"
+      },
       "subtitle": "We invite you to luxury apartments in Giżycko on Lake Kisajno",
       "description": "The apartments are located at the Stranda port in the Stranda Residence apartment complex in Giżycko. The proximity of the lake and the port's offer (water equipment rental, tavern, shanty and rock concerts in the summer), as well as the center of Giżycko, ensures many forms of active recreation along the Great Masurian Lakes Trail.",
       "building": "Building",
@@ -2739,6 +2790,23 @@ export const translations = {
       "boatType": "Prabangus namelis be patento"
     },
     "stranda": {
+      "mapLabels": {
+        "parking": "AIKŠTELĖ",
+        "playground": "ŽAIDIMŲ AIKŠTELĖ",
+        "sauna": "PIRTIS",
+        "beach": "PAPLŪDIMYS",
+        "scooters": "NUOMA",
+        "beachbar": "PAPLŪDIMIO BARAS",
+        "tavern": "SMUKLĖ",
+        "shop": "PARDUOTUVĖ"
+      },
+      "features": {
+        "studio": "Studija",
+        "oneBedroom": "1 Miegamasis",
+        "twoBedrooms": "2 Miegamieji",
+        "jacuzzi": "Sūkurinė vonia",
+        "sauna": "Pirtis"
+      },
       "subtitle": "Kviečiame į prabangius apartamentus Gižycke prie Kisajno ežero",
       "description": "Apartamentai yra Stranda uoste, Stranda Residence apartamentų komplekse Gižycke. Ežero artumas ir uosto pasiūla (vandens įrangos nuoma, taverna, lūšnynų ir roko koncertai vasaros sezonu), taip pat Gižycko centras užtikrina daugybę aktyvaus poilsio formų Didžiųjų Mozūrų ežerų taku.",
       "building": "Pastatas",
@@ -4324,6 +4392,23 @@ export const translations = {
       "boatType": "Luxusní hausbót bez patentu"
     },
     "stranda": {
+      "mapLabels": {
+        "parking": "PARKOVIŠTĚ",
+        "playground": "HŘIŠTĚ",
+        "sauna": "SAUNA",
+        "beach": "PLÁŽ",
+        "scooters": "PŮJČOVNA",
+        "beachbar": "PLÁŽOVÝ BAR",
+        "tavern": "TAVERNA",
+        "shop": "OBCHOD"
+      },
+      "features": {
+        "studio": "Studio",
+        "oneBedroom": "1 Ložnice",
+        "twoBedrooms": "2 Ložnice",
+        "jacuzzi": "Vířivka",
+        "sauna": "Sauna"
+      },
       "subtitle": "Zveme vás do luxusních apartmánů v Giżycku u jezera Kisajno",
       "description": "Apartmány se nacházejí v přístavu Stranda v apartmánovém komplexu Stranda Residence v Giżycku. Blízkost jezera a nabídka přístavu (půjčovna vodního vybavení, taverna, chatrče a rockové koncerty v letní sezóně), stejně jako centrum Giżycka, zajišťuje mnoho forem aktivního odpočinku na Stezce Velkých Mazurských jezer.",
       "building": "Budova",
