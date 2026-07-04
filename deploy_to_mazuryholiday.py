@@ -14,8 +14,13 @@ HTTP_URL = "https://mazuryholiday.pl/unzip.php"
 print(f"📦 Zipping {OUT_DIR} to {ZIP_PATH}...")
 with zipfile.ZipFile(ZIP_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:
     for root, dirs, files in os.walk(OUT_DIR):
-        if '/images' in root or '/icons' in root:
+        # Exclude everything in images/ except stranda_new
+        if '/images' in root:
+            if '/images/apartments/stranda_new' not in root:
+                continue
+        if '/icons' in root:
             continue
+            
         for file in files:
             file_path = os.path.join(root, file)
             arcname = os.path.relpath(file_path, OUT_DIR)
@@ -31,6 +36,8 @@ $files = new RecursiveIteratorIterator(
 );
 foreach ($files as $fileinfo) {
     if ($fileinfo->getFilename() === 'unzip.php' || $fileinfo->getFilename() === 'deploy_lhpl.zip') continue;
+    
+    // Protect images and icons from being deleted
     $path = $fileinfo->getRealPath();
     if (strpos($path, $dir . DIRECTORY_SEPARATOR . 'images') === 0) continue;
     if (strpos($path, $dir . DIRECTORY_SEPARATOR . 'icons') === 0) continue;
@@ -70,12 +77,13 @@ print(f"🚀 Triggering extraction at {HTTP_URL}...")
 try:
     r = requests.get(HTTP_URL, timeout=120)
     print(f"Response ({r.status_code}): {r.text}")
-    if r.status_code == 200 and "ok" in r.text:
+    if r.status_code == 200 and "ok" in r.text.strip():
         print("✅ Deployment finished successfully!")
     else:
-        print("❌ Deployment failed.")
+        print("❌ Deployment might have failed.")
 except Exception as e:
     print(f"❌ Error triggering unzip: {e}")
 
+# Cleanup
 os.remove("unzip.php")
 os.remove(ZIP_PATH)

@@ -77,9 +77,9 @@ export default function Navbar() {
                     : "bg-transparent py-8"
             )}
         >
-            <div className="max-w-[1920px] w-full mx-auto px-4 md:px-12 flex justify-between xl:justify-between items-center relative z-[10000]">
+            <div className="max-w-[1920px] w-full mx-auto pl-2 pr-4 md:px-12 flex justify-between xl:justify-between items-center relative z-[10000]">
                 {/* Logo */}
-                <Link href="/" className="relative h-[60px] w-[200px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
+                <Link href="/" className="relative h-[48px] w-[180px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -169,7 +169,7 @@ export default function Navbar() {
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
-                        <div className="flex flex-col items-center w-full px-6 gap-2 mt-20 md:mt-28">
+                        <div className="flex flex-col items-center w-full px-6 gap-0 mt-20 md:mt-28">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -181,7 +181,7 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "block text-2xl md:text-3xl font-semibold py-2 w-full text-center transition-colors",
+                                            "block text-2xl md:text-3xl font-semibold py-1.5 w-full text-center transition-colors",
                                             mobileLinkClass
                                         )}
                                         onClick={() => setIsMobileMenuOpen(false)}

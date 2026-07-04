@@ -1,62 +1,68 @@
 import os
-import zipfile
 import ftplib
-import requests
+import time
 
-OUT_DIR = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/out"
-ZIP_PATH = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/images.zip"
 FTP_HOST = "serwer194525.lh.pl"
 FTP_USER = "serwer194525"
 FTP_PASS = "KochamAntygravity2026$"
-REMOTE_DIR = "public_html/autoinstalator/serwer194525.lh.pl/wordpress162339"
-HTTP_URL = "https://mazuryholiday.pl/unzip_images.php"
+REMOTE_BASE = "public_html/autoinstalator/serwer194525.lh.pl/wordpress162339"
+LOCAL_BASE = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/out/images/apartments/stranda_new"
 
-print(f"📦 Zipping images to {ZIP_PATH}...")
-os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images")
-print("✅ Zipped.")
+def create_ftp_dir(ftp, path):
+    parts = path.split('/')
+    ftp.cwd("/" + REMOTE_BASE)
+    for part in parts:
+        if not part: continue
+        try:
+            ftp.cwd(part)
+        except ftplib.error_perm:
+            ftp.mkd(part)
+            ftp.cwd(part)
+    ftp.cwd("/" + REMOTE_BASE)
 
-print("📝 Creating unzip_images.php...")
-with open("unzip_images.php", "w") as f:
-    f.write("""<?php
-$dir = __DIR__;
-$zip = new ZipArchive;
-if ($zip->open('images.zip') === TRUE) {
-    $zip->extractTo($dir);
-    $zip->close();
-    echo "ok";
-} else {
-    echo "failed";
-}
-@unlink('images.zip');
-@unlink('unzip_images.php');
-?>""")
-
-print(f"📡 Connecting to FTP: {FTP_HOST}...")
+print("Connecting to FTP...")
 ftp = ftplib.FTP(FTP_HOST)
 ftp.login(FTP_USER, FTP_PASS)
-ftp.cwd(REMOTE_DIR)
+ftp.cwd("/" + REMOTE_BASE)
 
-print("📤 Uploading unzip_images.php...")
-with open("unzip_images.php", "rb") as f:
-    ftp.storbinary("STOR unzip_images.php", f)
+uploaded_count = 0
+for root, _, files in os.walk(LOCAL_BASE):
+    for f in files:
+        if f == '.DS_Store': continue
+        
+        local_path = os.path.join(root, f)
+        rel_path = os.path.relpath(local_path, LOCAL_BASE)
+        remote_path = f"images/apartments/stranda_new/{rel_path}"
+        remote_dir = os.path.dirname(remote_path)
+        
+        create_ftp_dir(ftp, remote_dir)
+        
+        try:
+            remote_size = ftp.size(remote_path)
+            local_size = os.path.getsize(local_path)
+            if remote_size == local_size:
+                continue
+        except Exception:
+            pass
 
-print(f"📤 Uploading {ZIP_PATH} (this might take a few minutes)...")
-with open(ZIP_PATH, "rb") as f:
-    ftp.storbinary("STOR images.zip", f)
-
+        print(f"Uploading {remote_path}...")
+        retries = 3
+        while retries > 0:
+            try:
+                with open(local_path, 'rb') as file_obj:
+                    ftp.storbinary(f"STOR {remote_path}", file_obj)
+                break
+            except Exception as e:
+                print(f"  Retry {remote_path} ({e})")
+                retries -= 1
+                try:
+                    ftp.quit()
+                except: pass
+                time.sleep(2)
+                ftp = ftplib.FTP(FTP_HOST)
+                ftp.login(FTP_USER, FTP_PASS)
+                ftp.cwd("/" + REMOTE_BASE)
+        uploaded_count += 1
+        
+print(f"✅ Uploaded {uploaded_count} images successfully!")
 ftp.quit()
-
-print(f"🚀 Triggering extraction at {HTTP_URL}...")
-try:
-    r = requests.get(HTTP_URL, timeout=120)
-    print(f"Response ({r.status_code}): {r.text}")
-    if r.status_code == 200 and r.text.strip() == "ok":
-        print("✅ Images deployment finished successfully!")
-    else:
-        print("❌ Deployment might have failed.")
-except Exception as e:
-    print(f"❌ Error triggering unzip: {e}")
-
-# Cleanup
-os.remove("unzip_images.php")
-os.remove(ZIP_PATH)

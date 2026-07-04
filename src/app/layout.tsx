@@ -53,6 +53,33 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LodgingBusiness",
+              "name": "Mazury.Holiday",
+              "image": "https://mazuryholiday.pl/icon.svg",
+              "description": "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach.",
+              "url": "https://mazuryholiday.pl",
+              "telephone": "+48 730 067 027",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Myśliwska 3",
+                "addressLocality": "Giżycko",
+                "postalCode": "11-500",
+                "addressRegion": "warmińsko-mazurskie",
+                "addressCountry": "PL"
+              },
+              "brand": {
+                "@type": "Brand",
+                "name": "Ralight.pl - Zarządzanie Najmem",
+                "url": "https://ralight.pl"
+              }
+            })
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${lato.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}

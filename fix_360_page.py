@@ -1,14 +1,13 @@
-'use client';
+with open('src/app/360-viewer/page.tsx', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+new_content = """'use client';
 
 import React, { Suspense, useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
+// @ts-ignore
+import { Pannellum } from 'pannellum-react';
 import { strandaApartments } from '@/data/stranda-apartments';
-
-const Pannellum = dynamic(
-  () => import('pannellum-react').then((mod) => mod.Pannellum),
-  { ssr: false }
-);
 
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { getAssetPath } from '@/utils/assetPath';
@@ -55,11 +54,11 @@ function ViewerContent() {
   };
 
   return (
-    <div className="w-full h-[100dvh] relative bg-black">
+    <div className="w-full h-screen relative bg-black">
       {/* Top Bar with Back Button and Title */}
       <div className="absolute top-0 left-0 w-full p-4 z-50 flex justify-between items-center bg-gradient-to-b from-black/70 to-transparent">
         <button 
-          onClick={() => router.back()}
+          onClick={() => router.push(`/apartments/${id}`)}
           className="bg-white/10 hover:bg-white/20 text-white border-white/20 backdrop-blur-md px-4 py-2 rounded-md flex items-center transition-colors"
         >
           <ChevronLeft className="mr-2 h-4 w-4" />
@@ -86,7 +85,7 @@ function ViewerContent() {
 
       {/* Bottom Bar for Room Selection if multiple images exist */}
       {images.length > 1 && (
-        <div className="absolute bottom-12 md:bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/20">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/20">
           <button 
             onClick={handlePrev}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
@@ -122,3 +121,7 @@ export default function VirtualTourPage() {
     </Suspense>
   );
 }
+"""
+
+with open('src/app/360-viewer/page.tsx', 'w', encoding='utf-8') as f:
+    f.write(new_content)
