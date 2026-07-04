@@ -16,8 +16,8 @@ export default function DomkiPage() {
         subtitle: t("apartments", "items.domkiSkorupki.location") || "Skorupki, jezioro Tałty",
         description: `${t('skorupki', 'descriptionPart1')}\n\n${t('skorupki', 'descriptionPart2')}\n\n${t('skorupki', 'descriptionPart3')}\n\n${t('skorupki', 'descriptionPart4')}`,
         mainImage: skorupkiData.gallery.heroImage,
-        customAboutTitle: t('skorupki', 'aboutTitle') || skorupkiData.customAboutTitle,
-        customAmenitiesTitle: t('skorupki', 'amenitiesTitle') || skorupkiData.customAmenitiesTitle,
+        customAboutTitle: (t('skorupki', 'aboutTitle') !== 'aboutTitle' && t('skorupki', 'aboutTitle') !== '') ? t('skorupki', 'aboutTitle') : (skorupkiData.customAboutTitle || 'O domku'),
+        customAmenitiesTitle: (t('skorupki', 'amenitiesTitle') !== 'amenitiesTitle' && t('skorupki', 'amenitiesTitle') !== '') ? t('skorupki', 'amenitiesTitle') : skorupkiData.customAmenitiesTitle,
         amenities: {
             living: [
                 t('details', 'items.ac') || "Klimatyzacja",

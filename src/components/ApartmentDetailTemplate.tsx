@@ -32,6 +32,7 @@ export interface ApartmentTemplateData {
     customBookingUrl?: string;
     customAboutTitle?: string;
     customAmenitiesTitle?: string;
+    virtualTourUrl?: string;
 }
 
 interface ApartmentDetailTemplateProps {
@@ -131,9 +132,9 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                                 src={img}
                                                 alt={`${apartment.title} view ${idx + 1}`}
                                                 fill
-                                                quality={95}
+                                                quality={60}
                                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                loading="eager"
+                                                loading="lazy"
                                                 sizes="(max-width: 768px) 100vw, 33vw"
                                             />
                                         </div>
@@ -141,16 +142,29 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 </div>
 
                                 {/* Remaining images - collapsible */}
-                                {apartment.gallery.length > 3 && (
+                                {(apartment.gallery.length > 3 || data.virtualTourUrl) && (
                                     <div className="mt-6">
-                                        <button
-                                            onClick={() => setGalleryExpanded(!galleryExpanded)}
-                                            className="w-full mb-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
-                                        >
-                                            {galleryExpanded ? `▲ ${t("details", "collapseGallery") || "Zwiń galerię"}` : `▼ ${t("details", "seeMorePhotos") || "Zobacz więcej zdjęć"}`}
-                                        </button>
+                                        <div className="flex flex-row gap-2 mb-2">
+                                            {apartment.gallery.length > 3 && (
+                                                <button
+                                                    onClick={() => setGalleryExpanded(!galleryExpanded)}
+                                                    className={`px-2 py-3 sm:px-6 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-1 sm:gap-2 text-sm sm:text-base ${data.virtualTourUrl ? 'w-1/2' : 'w-full'}`}
+                                                >
+                                                    {galleryExpanded ? `▲ ${t("details", "collapseGallery") || "Zwiń"}` : `▼ ${t("details", "seeMorePhotos") || "Więcej zdjęć"}`}
+                                                </button>
+                                            )}
+                                            
+                                            {data.virtualTourUrl && (
+                                                <a
+                                                    href={data.virtualTourUrl}
+                                                    className={`px-2 py-3 sm:px-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex justify-center items-center gap-1 sm:gap-2 text-sm sm:text-base ${apartment.gallery.length > 3 ? 'w-1/2' : 'w-full'}`}
+                                                >
+                                                    <span>Zdjęcia 360°</span>
+                                                </a>
+                                            )}
+                                        </div>
 
-                                        {galleryExpanded && (
+                                        {apartment.gallery.length > 3 && galleryExpanded && (
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeIn">
                                                 {apartment.gallery.slice(3).map((img: string, idx: number) => (
                                                     <div
@@ -165,7 +179,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                                             src={img}
                                                             alt={`${apartment.title} view ${idx + 4}`}
                                                             fill
-                                                            quality={95}
+                                                            quality={60}
                                                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                             loading="lazy"
                                                             sizes="(max-width: 768px) 100vw, 33vw"
@@ -309,6 +323,8 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                     />
                                 </div>
                             )}
+
+
                         </div>
                     </div>
 

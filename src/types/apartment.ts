@@ -25,5 +25,7 @@ export type Apartment = {
     additionalInfo?: string[];
     idoBookingId?: string;
     icalUrl?: string;
+    virtualTourUrl?: string;
+    virtualTourImage?: string;
     gallery: ApartmentGallery;
 };

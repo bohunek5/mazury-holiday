@@ -162,15 +162,17 @@ export default function FuledaPage() {
                                         <span className="inline-block text-amber-500 text-sm font-bold uppercase tracking-widest group-hover:text-amber-400 transition-colors pointer-events-none">
                                             Zobacz szczegóły &rarr;
                                         </span>
-                                        <a
-                                            href={`https://engine37851.idobooking.com/index.php?ob[${apartment.id === 'parter' ? '29' : '30'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95"
-                                            onClick={(e) => e.stopPropagation()}
+                                        <div
+                                            role="button"
+                                            className="bg-[#00c853] hover:bg-[#00e676] text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-colors relative z-30 pointer-events-auto uppercase tracking-wider active:scale-95 text-center"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                window.open(`https://engine37851.idobooking.com/index.php?ob[${apartment.id === 'parter' ? '29' : '30'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`, '_blank', 'noopener,noreferrer');
+                                            }}
                                         >
                                             {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             </Link>

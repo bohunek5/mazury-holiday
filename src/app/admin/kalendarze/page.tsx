@@ -12,7 +12,7 @@ export default function KalendarzePage() {
         ...Object.entries(strandaApartments).map(([id, data]) => ({
             lokalizacja: "Stranda",
             kod: id,
-            nazwa: data.title?.pl || id,
+            nazwa: typeof data.title === 'string' ? data.title : data.id,
             ido: data.idoBookingId,
             icalUrl: data.icalUrl,
             url: data.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null
@@ -20,7 +20,7 @@ export default function KalendarzePage() {
         ...Object.entries(fuledaApartments).map(([id, data]) => ({
             lokalizacja: "Fuleda (Domki)",
             kod: id,
-            nazwa: data.title?.pl || id,
+            nazwa: id,
             ido: data.idoBookingId,
             icalUrl: data.icalUrl,
             url: data.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null

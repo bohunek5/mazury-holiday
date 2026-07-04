@@ -33,7 +33,8 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
                 mainImage: data.gallery.heroImage,
                 gallery: data.gallery.images,
                 idoBookingId: data.idoBookingId,
-                icalUrl: data.icalUrl
+                icalUrl: data.icalUrl,
+                virtualTourUrl: data.virtualTourUrl
             }} 
             backUrl="/apartamenty/stranda"
         />

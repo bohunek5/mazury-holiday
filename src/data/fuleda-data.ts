@@ -24,6 +24,7 @@ export const fuledaApartments: Record<string, FuledaApartment> = {
     'parter': {
         id: 'parter',
         type: 'Parter',
+        customAboutTitle: 'O domku',
         price: 250,
         guests: '2+2',
         idoBookingId: '26',
@@ -123,6 +124,7 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży g
     'pietro': {
         id: 'pietro',
         type: 'Piętro',
+        customAboutTitle: 'O domku',
         price: 200,
         guests: '2+1',
         idoBookingId: '27',

@@ -258,7 +258,9 @@ export default function StrandaPage() {
                                                                 src={unit.image}
                                                                 alt={`Apartament ${unit.id}`}
                                                                 fill
-                                                                quality={95}
+                                                                quality={60}
+                                                                loading="lazy"
+                                                                sizes="(max-width: 768px) 100vw, 33vw"
                                                                 className="object-cover group-hover:scale-110 transition-transform duration-700"
                                                             />
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
