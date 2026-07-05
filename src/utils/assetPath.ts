@@ -16,3 +16,17 @@ export const getAssetPath = (path: string): string => {
 
     return `${prefix}${normalizedPath}`;
 };
+
+/**
+ * Transforms an image path into its thumbnail equivalent (_thumb.webp)
+ */
+export const getThumbPath = (path: string): string => {
+    if (!path) return '';
+    const fullPath = getAssetPath(path);
+    if (fullPath.endsWith('.svg') || fullPath.endsWith('_thumb.webp')) return fullPath;
+    
+    const lastDotIndex = fullPath.lastIndexOf('.');
+    if (lastDotIndex === -1) return fullPath;
+    
+    return `${fullPath.substring(0, lastDotIndex)}_thumb.webp`;
+};

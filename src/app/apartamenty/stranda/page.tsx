@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { strandaApartments } from "@/data/stranda-apartments";
-import { getAssetPath } from "@/utils/assetPath";
+import { getAssetPath, getThumbPath } from "@/utils/assetPath";
 import StrandaMap from "@/components/StrandaMap";
 
 // Update buildings data structure to include images from strandaApartments data
@@ -124,6 +124,7 @@ export default function StrandaPage() {
 
     const filtersLabels = (t("stranda", "filters") as any) || {};
     const featuresLabels = (t("stranda", "features") as any) || {};
+    console.log("featuresLabels:", language, featuresLabels);
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -255,7 +256,7 @@ export default function StrandaPage() {
                                                     >
                                                         <div className="relative h-64 w-full overflow-hidden">
                                                             <Image
-                                                                src={unit.image}
+                                                                src={getThumbPath(unit.image)}
                                                                 alt={`Apartament ${unit.id}`}
                                                                 fill
                                                                 quality={60}

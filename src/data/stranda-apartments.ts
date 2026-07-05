@@ -736,10 +736,10 @@ export const strandaApartments: Record<string, Apartment> = {
             terrace: ['dwa leżaki', 'stolik']
         },
         gallery: {
-            "heroImage": getAssetPath("/images/apartments/stranda_new/B404/0 (1).jpg"),
+            "heroImage": getAssetPath("/images/apartments/stranda_new/B404/0 (2).jpg"),
             "images": [
-                getAssetPath("/images/apartments/stranda_new/B404/0 (1).jpg"),
                 getAssetPath("/images/apartments/stranda_new/B404/0 (2).jpg"),
+                getAssetPath("/images/apartments/stranda_new/B404/0 (1).jpg"),
                 getAssetPath("/images/apartments/stranda_new/B404/0 (3).jpg"),
                 getAssetPath("/images/apartments/stranda_new/B404/0 (4).jpg"),
                 getAssetPath("/images/apartments/stranda_new/B404/0 (5).jpg"),

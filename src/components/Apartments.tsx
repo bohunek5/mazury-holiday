@@ -126,7 +126,7 @@ export default function Apartments() {
                                 className="group relative h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
-                                    src={apt.image}
+                                    src={getThumbPath(apt.image)}
                                     alt={apt.title}
                                     fill
                                     quality={95}
@@ -181,7 +181,7 @@ export default function Apartments() {
                                 className="group relative h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
-                                    src={apt.image}
+                                    src={getThumbPath(apt.image)}
                                     alt={apt.title}
                                     fill
                                     quality={95}

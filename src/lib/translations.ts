@@ -1,5 +1,25 @@
 export const translations = {
   "pl": {
+    "apartmentNames": {
+      "Z 1 sypialnią i jacuzzi na dachu": "Z 1 sypialnią i jacuzzi na dachu",
+      "Z 2 sypialniami i jacuzzi na dachu": "Z 2 sypialniami i jacuzzi na dachu",
+      "Z 2 sypialniami jacuzzi i sauną": "Z 2 sypialniami jacuzzi i sauną",
+      "Z dwoma sypialniami": "Z dwoma sypialniami",
+      "Z dwoma sypialniami(A306)": "Z dwoma sypialniami",
+      "Z dwoma sypialniami i jacuzzi": "Z dwoma sypialniami i jacuzzi",
+      "Z jacuzzi na tarasie": "Z jacuzzi na tarasie",
+      "Z jedną sypialnią": "Z jedną sypialnią",
+      "Z jedną sypialnią i jacuzzi": "Z jedną sypialnią i jacuzzi",
+      "Studio z jacuzzi na dachu": "Studio z jacuzzi na dachu",
+      "Studio": "Studio",
+      "Apartament C z 2 sypialniami": "Apartament C z 2 sypialniami",
+      "B106 z dwoma sypialniami": "B106 z dwoma sypialniami",
+      "C304 Studio": "C304 Studio",
+      "Mikołajki - Apartament Gigu z 1 sypialnią": "Mikołajki - Apartament Gigu z 1 sypialnią",
+      "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)": "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)",
+      "Stillo 30 VIP": "Stillo 30 VIP",
+      "Domki Skorupki": "Domki Skorupki"
+    },
     "termsPage": {
       "title": "Regulamin serwisu",
       "intro": "Poniższy Regulamin określa zasady korzystania z usług wynajmu apartamentów, domków oraz usług czarterowych oferowanych przez Mazury.Holiday. Dokonanie rezerwacji jest jednoznaczne z zapoznaniem się i akceptacją postanowień Regulaminu.",
@@ -850,6 +870,26 @@ export const translations = {
     }
   },
   "de": {
+    "apartmentNames": {
+      "Z 1 sypialnią i jacuzzi na dachu": "1 Schlafzimmer & Dach-Whirlpool",
+      "Z 2 sypialniami i jacuzzi na dachu": "2 Schlafzimmer & Dach-Whirlpool",
+      "Z 2 sypialniami jacuzzi i sauną": "2 Schlafzimmer, Whirlpool & Sauna",
+      "Z dwoma sypialniami": "2 Schlafzimmer",
+      "Z dwoma sypialniami(A306)": "2 Schlafzimmer",
+      "Z dwoma sypialniami i jacuzzi": "2 Schlafzimmer & Whirlpool",
+      "Z jacuzzi na tarasie": "Whirlpool auf der Terrasse",
+      "Z jedną sypialnią": "1 Schlafzimmer",
+      "Z jedną sypialnią i jacuzzi": "1 Schlafzimmer & Whirlpool",
+      "Studio z jacuzzi na dachu": "Studio & Dach-Whirlpool",
+      "Studio": "Studio",
+      "Apartament C z 2 sypialniami": "Apartment C mit 2 Schlafzimmern",
+      "B106 z dwoma sypialniami": "B106 mit 2 Schlafzimmern",
+      "C304 Studio": "C304 Studio",
+      "Mikołajki - Apartament Gigu z 1 sypialnią": "Mikołajki - Gigu 1-Zimmer-Apartment",
+      "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)": "Giżycko Kisajno - 2-Zimmer-Apartment (nr15)",
+      "Stillo 30 VIP": "Stillo 30 VIP",
+      "Domki Skorupki": "Skorupki Ferienhäuser"
+    },
     "termsPage": {
       "title": "Website-Bestimmungen",
       "intro": "Die folgenden Bestimmungen legen die Regeln für die Nutzung der von Mazury.Holiday angebotenen Mietdienstleistungen für Apartments, Ferienhäuser und Charterdienstleistungen fest. Eine Reservierung ist gleichbedeutend mit dem Lesen und Akzeptieren der Bestimmungen der Geschäftsordnung.",
@@ -1700,6 +1740,26 @@ export const translations = {
     }
   },
   "en": {
+    "apartmentNames": {
+      "Z 1 sypialnią i jacuzzi na dachu": "1 Bedroom & Rooftop Jacuzzi",
+      "Z 2 sypialniami i jacuzzi na dachu": "2 Bedrooms & Rooftop Jacuzzi",
+      "Z 2 sypialniami jacuzzi i sauną": "2 Bedrooms, Jacuzzi & Sauna",
+      "Z dwoma sypialniami": "2 Bedrooms",
+      "Z dwoma sypialniami(A306)": "2 Bedrooms",
+      "Z dwoma sypialniami i jacuzzi": "2 Bedrooms & Jacuzzi",
+      "Z jacuzzi na tarasie": "Jacuzzi on Terrace",
+      "Z jedną sypialnią": "1 Bedroom",
+      "Z jedną sypialnią i jacuzzi": "1 Bedroom & Jacuzzi",
+      "Studio z jacuzzi na dachu": "Studio & Rooftop Jacuzzi",
+      "Studio": "Studio",
+      "Apartament C z 2 sypialniami": "Apartment C with 2 Bedrooms",
+      "B106 z dwoma sypialniami": "B106 with 2 Bedrooms",
+      "C304 Studio": "C304 Studio",
+      "Mikołajki - Apartament Gigu z 1 sypialnią": "Mikołajki - Gigu 1 Bedroom Apartment",
+      "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)": "Giżycko Kisajno - 2 Bedroom Apartment (nr15)",
+      "Stillo 30 VIP": "Stillo 30 VIP",
+      "Domki Skorupki": "Skorupki Cottages"
+    },
     "termsPage": {
       "title": "Website regulations",
       "intro": "The following Regulations define the rules for using the rental services of apartments, cottages and charter services offered by Mazury.Holiday. Making a reservation is tantamount to reading and accepting the provisions of the Regulations.",
@@ -2550,6 +2610,26 @@ export const translations = {
     }
   },
   "lt": {
+    "apartmentNames": {
+      "Z 1 sypialnią i jacuzzi na dachu": "1 miegamasis ir sūkurinė vonia ant stogo",
+      "Z 2 sypialniami i jacuzzi na dachu": "2 miegamieji ir sūkurinė vonia ant stogo",
+      "Z 2 sypialniami jacuzzi i sauną": "2 miegamieji, sūkurinė vonia ir pirtis",
+      "Z dwoma sypialniami": "2 miegamieji",
+      "Z dwoma sypialniami(A306)": "2 miegamieji",
+      "Z dwoma sypialniami i jacuzzi": "2 miegamieji ir sūkurinė vonia",
+      "Z jacuzzi na tarasie": "Sūkurinė vonia terasoje",
+      "Z jedną sypialnią": "1 miegamasis",
+      "Z jedną sypialnią i jacuzzi": "1 miegamasis ir sūkurinė vonia",
+      "Studio z jacuzzi na dachu": "Studija ir sūkurinė vonia ant stogo",
+      "Studio": "Studija",
+      "Apartament C z 2 sypialniami": "C apartamentas su 2 miegamaisiais",
+      "B106 z dwoma sypialniami": "B106 su 2 miegamaisiais",
+      "C304 Studio": "C304 studija",
+      "Mikołajki - Apartament Gigu z 1 sypialnią": "Mikołajki - Gigu 1 miegamojo apartamentas",
+      "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)": "Giżycko Kisajno - 2 miegamųjų apartamentas (nr15)",
+      "Stillo 30 VIP": "Stillo 30 VIP",
+      "Domki Skorupki": "Skorupki nameliai"
+    },
     "termsPage": {
       "title": "Svetainės nuostatai",
       "intro": "Šiose Taisyklėse apibrėžiamos naudojimosi Mazury.Holiday butų, kotedžų nuomos paslaugomis ir užsakomųjų reisų paslaugomis taisyklės. Rezervacijos atlikimas prilygsta taisyklių nuostatoms perskaityti ir su jomis sutikti.",
@@ -4169,6 +4249,26 @@ export const translations = {
     }
   },
   "cs": {
+    "apartmentNames": {
+      "Z 1 sypialnią i jacuzzi na dachu": "1 ložnice a střešní vířivka",
+      "Z 2 sypialniami i jacuzzi na dachu": "2 ložnice a střešní vířivka",
+      "Z 2 sypialniami jacuzzi i sauną": "2 ložnice, vířivka a sauna",
+      "Z dwoma sypialniami": "2 ložnice",
+      "Z dwoma sypialniami(A306)": "2 ložnice",
+      "Z dwoma sypialniami i jacuzzi": "2 ložnice a vířivka",
+      "Z jacuzzi na tarasie": "Vířivka na terase",
+      "Z jedną sypialnią": "1 ložnice",
+      "Z jedną sypialnią i jacuzzi": "1 ložnice a vířivka",
+      "Studio z jacuzzi na dachu": "Studio a střešní vířivka",
+      "Studio": "Studio",
+      "Apartament C z 2 sypialniami": "Apartmán C se 2 ložnicemi",
+      "B106 z dwoma sypialniami": "B106 se 2 ložnicemi",
+      "C304 Studio": "Studio C304",
+      "Mikołajki - Apartament Gigu z 1 sypialnią": "Mikołajki - Apartmán Gigu s 1 ložnicí",
+      "Giżycko Kisajno - Apartament z dwoma sypialniami (nr15)": "Giżycko Kisajno - Apartmán se 2 ložnicemi (nr15)",
+      "Stillo 30 VIP": "Stillo 30 VIP",
+      "Domki Skorupki": "Chaty Skorupki"
+    },
     "termsPage": {
       "title": "Pravidla webových stránek",
       "intro": "Následující Pravidla definují pravidla pro využívání služeb pronájmu apartmánů, chat a charterových služeb nabízených Mazury.Holiday. Provedení rezervace se rovná přečtení a přijetí ustanovení Pravidel.",

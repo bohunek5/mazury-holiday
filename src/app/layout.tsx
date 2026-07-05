@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -16,16 +16,58 @@ const lato = Lato({
   subsets: ["latin", "latin-ext"],
 });
 
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#020617" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  title: "Mazury.Holiday - Apartamenty - Domki - Pokoje i Czarter na Mazurach",
-  description: "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
+  metadataBase: new URL("https://mazuryholiday.pl"),
+  title: {
+    default: "Mazury.Holiday - Apartamenty, Domki, Pokoje i Czarter na Mazurach",
+    template: "%s | Mazury.Holiday"
+  },
+  description: "Luksusowe apartamenty w Giżycku (Stranda, Kisajno), domki w Skorupkach, pokoje w Fuledzie oraz czarter jachtów na Mazurach. Sprawdź i zarezerwuj online.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Mazury.Holiday - Apartamenty - Domki - Pokoje i Czarter na Mazurach",
-    description: "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach. Sprawdź naszą ofertę.",
-    url: "https://mazury.holiday",
+    title: "Mazury.Holiday - Noclegi i Czarter na Mazurach",
+    description: "Luksusowe apartamenty w Giżycku (Stranda, Kisajno), domki w Skorupkach, pokoje w Fuledzie oraz czarter jachtów na Mazurach.",
+    url: "https://mazuryholiday.pl",
     siteName: "Mazury.Holiday",
     locale: "pl_PL",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg", // We assume a default OG image exists or will be added
+        width: 1200,
+        height: 630,
+        alt: "Mazury.Holiday - Wypoczynek na Mazurach",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mazury.Holiday - Noclegi i Czarter na Mazurach",
+    description: "Luksusowe apartamenty w Giżycku, domki w Skorupkach i czarter jachtów.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -33,6 +75,7 @@ import { ChatProvider } from "@/contexts/ChatContext";
 import { AiAssistant } from "@/components/AiAssistant";
 import { CookieConsent } from "@/components/CookieConsent";
 import { PromoPopup } from "@/components/PromoPopup";
+import { StructuredData } from "@/components/StructuredData";
 
 // ... imports
 
@@ -53,33 +96,49 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LodgingBusiness",
-              "name": "Mazury.Holiday",
-              "image": "https://mazuryholiday.pl/icon.svg",
-              "description": "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach.",
-              "url": "https://mazuryholiday.pl",
+        <StructuredData data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mazury.Holiday",
+            "url": "https://mazuryholiday.pl",
+            "logo": "https://mazuryholiday.pl/icon.svg",
+            "contactPoint": {
+              "@type": "ContactPoint",
               "telephone": "+48 730 067 027",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Myśliwska 3",
-                "addressLocality": "Giżycko",
-                "postalCode": "11-500",
-                "addressRegion": "warmińsko-mazurskie",
-                "addressCountry": "PL"
-              },
-              "brand": {
-                "@type": "Brand",
-                "name": "Ralight.pl - Zarządzanie Najmem",
-                "url": "https://ralight.pl"
-              }
-            })
-          }}
-        />
+              "contactType": "customer service"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://mazuryholiday.pl",
+            "name": "Mazury.Holiday",
+            "description": "Luksusowe apartamenty, domki i czarter jachtów na Mazurach."
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "LodgingBusiness",
+            "name": "Mazury.Holiday",
+            "image": "https://mazuryholiday.pl/icon.svg",
+            "description": "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach.",
+            "url": "https://mazuryholiday.pl",
+            "telephone": "+48 730 067 027",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Myśliwska 3",
+              "addressLocality": "Giżycko",
+              "postalCode": "11-500",
+              "addressRegion": "warmińsko-mazurskie",
+              "addressCountry": "PL"
+            },
+            "brand": {
+              "@type": "Brand",
+              "name": "Ralight.pl - Zarządzanie Najmem",
+              "url": "https://ralight.pl"
+            }
+          }
+        ]} />
       </head>
       <body
         className={`${inter.variable} ${lato.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}

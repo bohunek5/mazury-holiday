@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { getAssetPath } from "@/utils/assetPath";
+import { getAssetPath, getThumbPath } from "@/utils/assetPath";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -43,6 +43,29 @@ interface ApartmentDetailTemplateProps {
 
 export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath }: ApartmentDetailTemplateProps) {
     const { t } = useLanguage();
+    
+    const parseTitle = (title: string) => {
+        if (!title) return title;
+        // @ts-ignore
+        const exactMatch = t("apartmentNames", title);
+        console.log("parseTitle:", { title, exactMatch });
+        if (exactMatch && exactMatch !== title) return exactMatch;
+        
+        const match = title.match(/^(.*?)\s*\(\s*(.*?)\s*\)$/);
+        console.log("parseTitle match:", match);
+        if (match) {
+            const baseTitle = match[1].trim();
+            const id = match[2].trim();
+            // @ts-ignore
+            const translatedBase = t("apartmentNames", baseTitle);
+            console.log("parseTitle translatedBase:", { baseTitle, id, translatedBase });
+            if (translatedBase && translatedBase !== baseTitle) {
+                return `${translatedBase} (${id})`;
+            }
+        }
+        return title;
+    };
+    
     const router = useRouter();
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -85,7 +108,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                         {data.subtitle && (
                             <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{data.subtitle}</div>
                         )}
-                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{apartment.title}</h1>
+                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{parseTitle(apartment.title)}</h1>
                     </div>
                 </div>
             </section>
@@ -129,7 +152,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                             }}
                                         >
                                             <Image
-                                                src={img}
+                                                src={getThumbPath(img)}
                                                 alt={`${apartment.title} view ${idx + 1}`}
                                                 fill
                                                 quality={60}
@@ -176,7 +199,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                                         }}
                                                     >
                                                         <Image
-                                                            src={img}
+                                                            src={getThumbPath(img)}
                                                             alt={`${apartment.title} view ${idx + 4}`}
                                                             fill
                                                             quality={60}
@@ -319,7 +342,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                     <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
                                     <ICalCalendar
                                         icalUrl={data.icalUrl}
-                                        apartmentId={data.title || data.id || "1"}
+                                        apartmentId={data.id || "1"}
                                     />
                                 </div>
                             )}

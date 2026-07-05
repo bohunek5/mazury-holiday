@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fuledaApartments } from "@/data/fuleda-data";
 
-import { getAssetPath } from "@/utils/assetPath";
+import { getAssetPath, getThumbPath } from "@/utils/assetPath";
 
 export default function FuledaPage() {
     const { t } = useLanguage();
@@ -88,7 +88,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src={getAssetPath("/images/fuleda/Front Apartamenty.webp")} alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src={getThumbPath("/images/fuleda/Front Apartamenty.webp")} alt="Front Apartamentów Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                             <div
                                 className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mt-12 cursor-pointer group"
@@ -97,7 +97,7 @@ export default function FuledaPage() {
                                     setLightboxOpen(true);
                                 }}
                             >
-                                <Image src={getAssetPath("/images/fuleda/jeziorko.webp")} alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
+                                <Image src={getThumbPath("/images/fuleda/jeziorko.webp")} alt="Jeziorko Fuleda" fill className="object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ export default function FuledaPage() {
                                 className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
-                                    src={apartment.image}
+                                    src={getThumbPath(apartment.image)}
                                     alt={apartment.title}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
