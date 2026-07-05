@@ -124,7 +124,7 @@ export default function StrandaPage() {
 
     const filtersLabels = (t("stranda", "filters") as any) || {};
     const featuresLabels = (t("stranda", "features") as any) || {};
-    console.log("featuresLabels:", language, featuresLabels);
+    
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">

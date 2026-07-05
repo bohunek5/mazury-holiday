@@ -8,7 +8,7 @@ import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
 import { kisajnoData } from "@/data/kisajno-data";
 import { skorupkiData } from "@/data/skorupki-data";
-import { getAssetPath } from "@/utils/assetPath";
+import { getAssetPath, getThumbPath } from "@/utils/assetPath";
 
 const lowestStrandaPrice = Math.min(...Object.values(strandaApartments).map((apartment) => apartment.price));
 const lowestFuledaPrice = Math.min(...Object.values(fuledaApartments).map((apartment) => apartment.price));
