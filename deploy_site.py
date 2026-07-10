@@ -14,7 +14,7 @@ HTTP_URL = "https://mazuryholiday.pl/unzip.php"
 # but including the specific C apartments we touched and hero images
 print("Zipping...")
 os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} . -x 'images/*'")
-os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images/stranda/*/hero_1.webp images/stranda/C* images/koncerty.jpg images/stranda.webp images/skorupki/* images/fuleda/*")
+os.system(f"cd {OUT_DIR} && zip -q -r {ZIP_PATH} images/stranda/*/hero_1.webp images/stranda/C* images/stranda/c* images/koncerty.jpg images/stranda.webp images/*map*.webp images/skorupki/* images/fuleda/* images/pokoje_fuleda/* images/apartments/*/*/*_thumb.webp images/czarter/*")
 print("Zipped!")
 
 with open("unzip.php", "w") as f:

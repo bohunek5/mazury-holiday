@@ -16,7 +16,7 @@ with zipfile.ZipFile(ZIP_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:
     for root, dirs, files in os.walk(OUT_DIR):
         # Exclude everything in images/ except stranda_new
         if '/images' in root:
-            if '/images/apartments/stranda_new' not in root:
+            if '/images/apartments/stranda_new' not in root and '/images/czarter' not in root:
                 continue
         if '/icons' in root:
             continue

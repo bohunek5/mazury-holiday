@@ -12,7 +12,8 @@ DEPLOY_SECRET = "mazury-deploy-2026-v6"
 OUT_DIR = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/out"
 TARGET_DIRS = [
     os.path.join(OUT_DIR, "images/stranda"),
-    os.path.join(OUT_DIR, "images/pokoje_fuleda")
+    os.path.join(OUT_DIR, "images/pokoje_fuleda"),
+    os.path.join(OUT_DIR, "images/czarter")
 ]
 ZIP_PATH = "/Users/karolbohdanowicz/my-ai-agents/mazury-holiday/deploy_all_missing_images.zip"
 
