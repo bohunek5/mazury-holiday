@@ -31,7 +31,7 @@ export default function FuledaPage() {
             id: 'parter',
             title: `Apartament Fuleda ${fuledaApartments.parter.type}`,
             image: fuledaApartments.parter.gallery.heroImage,
-            location: "Fuleda, Jezioro Dobskie",
+            location: t("apartments", "items.fuleda.location") as string || "Fuleda, Jezioro Dobskie",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,
@@ -43,7 +43,7 @@ export default function FuledaPage() {
             id: 'pietro',
             title: `Apartament Fuleda ${fuledaApartments.pietro.type}`,
             image: fuledaApartments.pietro.gallery.heroImage,
-            location: "Fuleda, Jezioro Dobskie",
+            location: t("apartments", "items.fuleda.location") as string || "Fuleda, Jezioro Dobskie",
             icons: [
                 <div key="wifi" title="WiFi" className="flex items-center justify-center"><Wifi size={18} /></div>,
                 <div key="trees" title="Las" className="flex items-center justify-center"><Trees size={18} /></div>,

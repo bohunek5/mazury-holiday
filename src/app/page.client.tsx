@@ -24,7 +24,7 @@ export default function Home() {
       {/* Intro Section */}
       <motion.section 
         id="about" 
-        className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300"
+        className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 scroll-mt-20 md:scroll-mt-24"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}

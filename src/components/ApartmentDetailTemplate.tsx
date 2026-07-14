@@ -14,6 +14,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 export interface ApartmentTemplateData {
     id?: string;
     title: string;
+    shortTitle?: string;
     subtitle?: string;
     description: string;
     amenities: {
@@ -108,7 +109,10 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                         {data.subtitle && (
                             <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{data.subtitle}</div>
                         )}
-                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{parseTitle(apartment.title)}</h1>
+                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{parseTitle(apartment.shortTitle || apartment.title)}</h1>
+                        {apartment.shortTitle && (
+                            <p className="text-xl md:text-2xl font-light opacity-90 max-w-2xl">{parseTitle(apartment.title)}</p>
+                        )}
                     </div>
                 </div>
             </section>
@@ -342,7 +346,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                     <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
                                     <ICalCalendar
                                         icalUrl={data.icalUrl}
-                                        apartmentId={data.id || "1"}
+                                        apartmentId={data.shortTitle || data.id || "1"}
                                     />
                                 </div>
                             )}

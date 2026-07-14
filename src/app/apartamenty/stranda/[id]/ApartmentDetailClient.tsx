@@ -23,10 +23,16 @@ export default function ApartmentDetailClient({ id }: ApartmentDetailClientProps
         );
     }
 
+    const shortName = normalizedId.toLowerCase() === 'c' ? 'C' : 
+                      normalizedId.toLowerCase() === 'studio' ? 'Studio' : 
+                      normalizedId.toUpperCase();
+    const shortTitle = `${t("stranda", "apartment")} ${shortName}`;
+
     return (
         <ApartmentDetailTemplate 
             data={{
                 id: id,
+                shortTitle: shortTitle,
                 title: language === "pl" ? data.title : ((t("strandaDescriptions", `${normalizedId}_title` as any) as any) !== `${normalizedId}_title` ? t("strandaDescriptions", `${normalizedId}_title` as any) : (data.title || `${t("stranda", "apartment")} ${normalizedId} ${t("strandaTypes", data.type as any) || data.type}`)),
                 description: language === "pl" ? data.description : (t("strandaDescriptions", normalizedId as any) !== normalizedId ? t("strandaDescriptions", normalizedId as any) : data.description),
                 amenities: data.amenities,

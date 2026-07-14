@@ -35,15 +35,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-900/40" /> {/* Overlay */}
       </div>
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center text-white mt-0 md:-mt-12 flex flex-col items-center justify-center">
-        <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4 [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)] min-h-[120px] sm:min-h-[1.2em] flex items-center justify-center w-full">
-          <TypewriterTitle phrases={phrases} speed={50} />
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center text-white -mt-8 md:-mt-16 flex flex-col items-center justify-center">
+        <h1 className="text-4xl md:text-7xl font-sans mb-0 [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)] min-h-[80px] sm:min-h-[1.2em] flex items-center justify-center w-full">
+          <span className="sr-only">{phrases[0]}</span>
+          <TypewriterTitle phrases={phrases} speed={50} aria-hidden="true" />
         </h1>
 
-        <div className="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-4 rounded-full shadow-lg" />
+        <div className="w-24 h-1 bg-amber-500 mx-auto mt-0 mb-2 rounded-full shadow-lg" />
 
-        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-8 text-white uppercase [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
-          {subtitle !== "subtitle" ? subtitle : "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE"}
+        <p className="text-base md:text-lg lg:text-xl font-black tracking-[0.15em] mb-8 text-white [text-shadow:_0_4px_16px_rgba(0,0,0,1),_0_2px_4px_rgba(0,0,0,1),_0_0_8px_rgba(0,0,0,0.8)] leading-relaxed">
+          {subtitle !== "subtitle" ? subtitle : "Sprawdź jak możesz spędzić wyjątkowe i niezapomniane chwile"}
         </p>
 
         <div className="flex flex-col items-center gap-4 w-full mb-8">

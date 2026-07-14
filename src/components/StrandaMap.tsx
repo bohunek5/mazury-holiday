@@ -39,7 +39,7 @@ export default function StrandaMap() {
                 {/* Inner container holds the actual map image and scales/pans on mobile */}
                 <div className="absolute md:relative w-[170%] sm:w-[150%] md:w-full left-[-30%] sm:left-[-20%] md:left-0 top-[0%] md:top-0 aspect-[1024/457]">
                     <Image 
-                        src="/images/stranda_map_crop.png" 
+                        src="/images/stranda_map_crop.webp" 
                         alt="Mapa lokalizacji budynków Stranda" 
                         fill
                         className="object-cover"

@@ -169,19 +169,19 @@ export default function Navbar() {
                         {/* Background Pattern or Gradient could be added here for 'rich aesthetics' */}
                         <div className="absolute inset-0 bg-transparent opacity-5 pointer-events-none" />
 
-                        <div className="flex flex-col items-center w-full px-6 gap-0 mt-20 md:mt-28">
+                        <div className="flex flex-col items-center w-full px-8 mt-28 md:mt-32 flex-1 justify-start">
                             {navLinks.map((link, index) => (
                                 <motion.div
                                     key={link.name}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 + 0.1 }}
-                                    className="w-full"
+                                    className="w-full border-b border-slate-200/50 dark:border-slate-700/50 last:border-0"
                                 >
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "block text-2xl md:text-3xl font-semibold py-1.5 w-full text-center transition-colors",
+                                            "block text-xl md:text-2xl font-medium py-4 w-full text-center transition-colors",
                                             mobileLinkClass
                                         )}
                                         onClick={() => setIsMobileMenuOpen(false)}

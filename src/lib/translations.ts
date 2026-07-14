@@ -90,9 +90,9 @@ export const translations = {
     },
     "coopExtra": {
       "heroTitle": "Współpraca B2B",
-      "heroSubtitle": "TWÓJ OBIEKT W NAJLEPSZYCH RĘKACH NA MAZURACH",
+      "heroSubtitle": "Twój obiekt w najlepszych rękach na Mazurach",
       "securityTitle": "Bezpieczeństwo",
-      "securityDesc": "Weryfikacja gości oraz ubezpieczenia na wypadek szkód gwarantują bezpieczeństwo Twojej inwestycji.",
+      "securityDesc": "Weryfikacja gości oraz ubezpieczenia od zniszczeń gwarantują bezpieczeństwo Twojej inwestycji.",
       "readyTitle": "Gotowy na wyższe zyski?",
       "readyDesc": "Skontaktuj się z nami i sprawdź, ile może zarabiać Twój apartament lub domek na Mazurach.",
       "letsTalk": "Porozmawiajmy"
@@ -136,7 +136,7 @@ export const translations = {
     },
     "hero": {
       "title": "Wakacje na Mazurach",
-      "subtitle": "SPRAWDŹ JAK MOŻESZ SPĘDZIĆ WYJĄTKOWE I NIEZAPOMNIANE CHWILE",
+      "subtitle": "Sprawdź jak możesz spędzić wyjątkowe i niezapomniane chwile",
       "typewriterDesc": "Sprawdź naszą ofertę",
       "apartmentsBtn": "Nasze Apartamenty",
       "charterBtn": "730 067 027",
@@ -667,31 +667,49 @@ export const translations = {
         "desc": "Pokazowa zagroda żubrów w Wolisku. Szansa na obserwację królów puszczy z platformy widokowej w ich naturalnym środowisku."
       }
     },
+    "coopModels": {
+      "title": "Modele współpracy",
+      "full_title": "Zarządzanie Pełne",
+      "full_desc": "Oddajesz nam klucze, my robimy resztę. Obsługa rezerwacji, sprzątanie, konserwacja.",
+      "marketing_title": "Wsparcie Marketingowe",
+      "marketing_desc": "Prowadzimy działania promocyjne, zdobywamy gości, Ty zajmujesz się obiektem."
+    },
+    "coopSteps": {
+      "title": "Jak to działa?",
+      "step1_title": "Kontakt",
+      "step1_desc": "Napisz do nas lub zadzwoń, abyśmy mogli poznać Twój obiekt.",
+      "step2_title": "Analiza",
+      "step2_desc": "Oceniamy potencjał i proponujemy najlepszy model współpracy.",
+      "step3_title": "Umowa",
+      "step3_desc": "Podpisujemy przejrzystą umowę zabezpieczającą obie strony.",
+      "step4_title": "Zarabianie",
+      "step4_desc": "Twój apartament zaczyna przyjmować gości i generować zysk."
+    },
     "cooperationPage": {
       "title": "Współpraca",
       "subtitle": "Twój obiekt w najlepszych rękach na Mazurach",
       "services": {
-        "title": "Profesjonalne Zarządzanie Najmem",
-        "desc": "Szukasz zaufanego partnera do opieki nad Twoją nieruchomością? Mazury.Holiday to zespół ekspertów, który zdejmie z Twoich barków wszelkie obowiązki związane z wynajmem krótkoterminowym. Zwiększamy zyski właścicieli przy jednoczesnym zachowaniu najwyższego standardu obsługi gości."
+        "title": "Profesjonalne zarządzanie najmem",
+        "desc": "Szukasz zaufanego partnera, który zaopiekuje się Twoją nieruchomością? Mazury.Holiday to zespół ekspertów, który zdejmie z Twoich barków wszystkie obowiązki związane z wynajmem krótkoterminowym. Zwiększamy zyski właścicieli przy zachowaniu najwyższego standardu obsługi gości."
       },
       "marketing": {
-        "title": "Mocny Marketing Premium",
-        "desc": "Twoja posiadłość trafi na czołowe miejsca w portalach takich jak Booking.com, Airbnb oraz naszą autorską platformę Mazury.Holiday. Wykonujemy sesje zdjęciowe i filmy z drona."
+        "title": "Silny marketing Premium",
+        "desc": "Twój obiekt trafi na najwyższe pozycje na portalach takich jak Booking.com i Airbnb oraz na naszą autorską platformę Mazury.Holiday. Wykonujemy sesje zdjęciowe oraz wideo z drona."
       },
       "guests": {
-        "title": "Bezobsługowy Wynajem",
-        "desc": "Zajmujemy się pełnym cyklem: od rezerwacji i płatności, przez profesjonalne powitanie gości, aż po wsparcie w trakcie ich pobytu 24/7."
+        "title": "Bezobsługowy wynajem",
+        "desc": "Dopilnujemy pełnego cyklu: od rezerwacji i płatności, przez profesjonalne powitanie gości, po pomoc w trakcie ich pobytu 24/7."
       },
       "maintenance": {
-        "title": "Standard 5-Gwiazdkowy",
-        "desc": "Nasz zespół sprzątający i techniczny dba o każdy detal. Twoja nieruchomość zawsze lśni i jest w idealnym stanie technicznym przed przyjazdem każdego gościa."
+        "title": "Standard 5-gwiazdkowy",
+        "desc": "Nasza ekipa sprzątająca i techniczna dba o każdy detal. Twój obiekt zawsze lśni i jest w idealnym stanie technicznym przed przyjazdem każdego gościa."
       },
       "whyUs": {
         "title": "Dlaczego warto z nami współpracować?",
         "point1": "Lokalne doświadczenie i znajomość rynku mazurskiego",
-        "point2": "Transparentny system rozliczeń i panel właściciela",
+        "point2": "Przejrzysty system rozliczeń i panel właściciela",
         "point3": "Stała opieka techniczna i konserwacyjna",
-        "point4": "Optymalizacja cen (Revenue Management)"
+        "point4": "Optymalizacja cenowa (Revenue Management)"
       }
     },
     "contactForm": {
@@ -959,12 +977,12 @@ export const translations = {
       "mapLabel": "Lageplan:"
     },
     "coopExtra": {
-      "heroTitle": "B2B-Kooperation",
-      "heroSubtitle": "IHRE IMMOBILIE IST IN MASUREN IN DEN BESTEN HÄNDEN",
+      "heroTitle": "B2B Zusammenarbeit",
+      "heroSubtitle": "Ihr objekt in den besten händen in masuren",
       "securityTitle": "Sicherheit",
-      "securityDesc": "Gästeverifizierung und Schadensversicherung garantieren die Sicherheit Ihrer Investition.",
+      "securityDesc": "Die Überprüfung der Gäste und die Schadensversicherung garantieren die Sicherheit Ihrer Investition.",
       "readyTitle": "Bereit für höhere Gewinne?",
-      "readyDesc": "Kontaktieren Sie uns und prüfen Sie, wie viel Sie mit Ihrer Wohnung oder Ihrem Haus in Masuren verdienen können.",
+      "readyDesc": "Kontaktieren Sie uns und finden Sie heraus, wie viel Ihr Apartment oder Ferienhaus in Masuren verdienen kann.",
       "letsTalk": "Lass uns reden"
     },
     "amenityNames": {
@@ -1537,30 +1555,48 @@ export const translations = {
         "desc": "Ein Demonstrations-Wisentgehege in Wolisko. Eine Gelegenheit, die 'Könige des Waldes' von einer Aussichtsplattform in ihrer natürlichen Umgebung zu beobachten."
       }
     },
+    "coopModels": {
+      "title": "Kooperationsmodelle",
+      "full_title": "Vollständige Verwaltung",
+      "full_desc": "Sie geben uns die Schlüssel, wir erledigen den Rest. Buchungsbetreuung, Reinigung, Wartung.",
+      "marketing_title": "Marketingunterstützung",
+      "marketing_desc": "Wir führen Werbemaßnahmen durch und gewinnen Gäste, Sie kümmern sich um das Objekt."
+    },
+    "coopSteps": {
+      "title": "Wie es funktioniert?",
+      "step1_title": "Kontakt",
+      "step1_desc": "Schreiben Sie uns oder rufen Sie uns an, damit wir Ihr Objekt kennenlernen können.",
+      "step2_title": "Analyse",
+      "step2_desc": "Wir bewerten das Potenzial und schlagen das beste Kooperationsmodell vor.",
+      "step3_title": "Vertrag",
+      "step3_desc": "Wir schließen einen transparenten Vertrag, der beide Parteien schützt.",
+      "step4_title": "Verdienen",
+      "step4_desc": "Ihr Apartment beginnt, Gäste aufzunehmen und Gewinn zu erzielen."
+    },
     "cooperationPage": {
       "title": "Zusammenarbeit",
-      "subtitle": "Ihre Anlage ist in Masuren in den besten Händen",
+      "subtitle": "Ihr Objekt in den besten Händen in Masuren",
       "services": {
-        "title": "Professionelles Mietmanagement",
-        "desc": "Sie suchen einen vertrauenswürdigen Partner für die Betreuung Ihrer Immobilie? Mazury.Holiday ist ein Expertenteam, das Ihnen die gesamte Verantwortung im Zusammenhang mit der Kurzzeitmiete abnimmt. Wir steigern den Gewinn der Eigentümer und sorgen gleichzeitig für den höchsten Standard des Gästeservices."
+        "title": "Professionelle Mietverwaltung",
+        "desc": "Suchen Sie einen vertrauenswürdigen Partner für die Betreuung Ihrer Immobilie? Mazury.Holiday ist ein Expertenteam, das Ihnen alle Pflichten rund um die Kurzzeitvermietung abnimmt. Wir steigern den Gewinn der Eigentümer unter Beibehaltung höchster Standards im Gästeservice."
       },
       "marketing": {
         "title": "Starkes Premium-Marketing",
-        "desc": "Ihre Unterkunft wird auf Portalen wie Booking.com, Airbnb und unserer proprietären Plattform Mazury.Holiday an erster Stelle gerankt. Wir machen Fotosessions und Videos mit einer Drohne."
+        "desc": "Ihre Immobilie wird auf führenden Portalen wie Booking.com und Airbnb sowie auf unserer eigenen Plattform Mazury.Holiday ganz oben platziert. Wir führen Fotoshootings und Drohnenvideos durch."
       },
       "guests": {
         "title": "Wartungsfreie Vermietung",
-        "desc": "Wir kümmern uns um den gesamten Zyklus: von der Reservierung und Zahlung über die professionelle Begrüßung der Gäste bis hin zur Betreuung während ihres Aufenthalts rund um die Uhr."
+        "desc": "Wir kümmern uns um den gesamten Ablauf: von der Reservierung und Bezahlung über die professionelle Begrüßung der Gäste bis hin zur 24/7-Betreuung während ihres Aufenthalts."
       },
       "maintenance": {
         "title": "5-Sterne-Standard",
-        "desc": "Unser Reinigungs- und Technikteam kümmert sich um jedes Detail. Ihre Immobilie erstrahlt immer in perfektem Zustand, bevor jeder Gast eintrifft."
+        "desc": "Unser Reinigungs- und Technikteam achtet auf jedes Detail. Ihre Immobilie glänzt immer und ist vor der Ankunft jedes Gastes in perfektem technischem Zustand."
       },
       "whyUs": {
-        "title": "Warum lohnt es sich, mit uns zusammenzuarbeiten?",
+        "title": "Warum sollten Sie mit uns zusammenarbeiten?",
         "point1": "Lokale Erfahrung und Kenntnis des masurischen Marktes",
-        "point2": "Transparentes Abrechnungssystem und Eigentümerpanel",
-        "point3": "Kontinuierliche technische und wartungstechnische Betreuung",
+        "point2": "Transparentes Abrechnungssystem und Eigentümer-Panel",
+        "point3": "Ständige technische Betreuung und Wartung",
         "point4": "Preisoptimierung (Revenue Management)"
       }
     },
@@ -1829,12 +1865,12 @@ export const translations = {
       "mapLabel": "Location map:"
     },
     "coopExtra": {
-      "heroTitle": "B2B cooperation",
-      "heroSubtitle": "YOUR PROPERTY IS IN THE BEST HANDS IN MAZURY",
+      "heroTitle": "B2B Cooperation",
+      "heroSubtitle": "Your property in the best hands in masuria",
       "securityTitle": "Security",
-      "securityDesc": "Guest verification and damage insurance guarantee the safety of your investment.",
+      "securityDesc": "Guest verification and damage insurance guarantee the security of your investment.",
       "readyTitle": "Ready for higher profits?",
-      "readyDesc": "Contact us and check how much your apartment or house in Masuria can earn.",
+      "readyDesc": "Contact us and find out how much your apartment or cottage in Masuria can earn.",
       "letsTalk": "Let's talk"
     },
     "amenityNames": {
@@ -2407,30 +2443,48 @@ export const translations = {
         "desc": "A demonstration bison enclosure in Wolisko. An opportunity to observe the 'kings of the forest' from a viewing platform in their natural environment."
       }
     },
+    "coopModels": {
+      "title": "Cooperation Models",
+      "full_title": "Full Management",
+      "full_desc": "You hand us the keys, we do the rest. Booking support, cleaning, maintenance.",
+      "marketing_title": "Marketing Support",
+      "marketing_desc": "We carry out promotional activities, acquire guests, you take care of the facility."
+    },
+    "coopSteps": {
+      "title": "How it works?",
+      "step1_title": "Contact",
+      "step1_desc": "Write to us or call us so we can get to know your property.",
+      "step2_title": "Analysis",
+      "step2_desc": "We evaluate the potential and propose the best cooperation model.",
+      "step3_title": "Contract",
+      "step3_desc": "We sign a transparent contract that protects both parties.",
+      "step4_title": "Earning",
+      "step4_desc": "Your apartment starts receiving guests and generating profit."
+    },
     "cooperationPage": {
       "title": "Cooperation",
-      "subtitle": "Your facility is in the best hands in Masuria",
+      "subtitle": "Your property in the best hands in Masuria",
       "services": {
         "title": "Professional Rental Management",
         "desc": "Are you looking for a trusted partner to take care of your property? Mazury.Holiday is a team of experts who will take all the responsibilities related to short-term rental off your shoulders. We increase owners' profits while maintaining the highest standard of guest service."
       },
       "marketing": {
         "title": "Strong Premium Marketing",
-        "desc": "Your property will be ranked top on portals such as Booking.com, Airbnb and our proprietary platform Mazury.Holiday. We do photo sessions and videos from a drone."
+        "desc": "Your property will reach top positions on portals such as Booking.com and Airbnb and on our proprietary Mazury.Holiday platform. We perform photo sessions and drone videos."
       },
       "guests": {
-        "title": "Maintenance Free Rental",
-        "desc": "We deal with the full cycle: from reservation and payment, through professional welcome of guests, to support during their stay 24/7."
+        "title": "Maintenance-free Rental",
+        "desc": "We take care of the full cycle: from booking and payment, through professional greeting of guests, to support during their stay 24/7."
       },
       "maintenance": {
-        "title": "5-Star standard",
-        "desc": "Our cleaning and technical team takes care of every detail. Your property is always sparkling and in perfect condition before each guest arrives."
+        "title": "5-Star Standard",
+        "desc": "Our cleaning and technical team takes care of every detail. Your property always shines and is in perfect technical condition before each guest's arrival."
       },
       "whyUs": {
-        "title": "Why is it worth working with us?",
+        "title": "Why is it worth cooperating with us?",
         "point1": "Local experience and knowledge of the Masurian market",
-        "point2": "Transparent billing system and owner panel",
-        "point3": "Continuous technical and maintenance care",
+        "point2": "Transparent billing system and owner's panel",
+        "point3": "Constant technical care and maintenance",
         "point4": "Price optimization (Revenue Management)"
       }
     },
@@ -2700,11 +2754,11 @@ export const translations = {
     },
     "coopExtra": {
       "heroTitle": "B2B bendradarbiavimas",
-      "heroSubtitle": "JŪSŲ NUOSAVYBĖ YRA GERIAUSIOSE RANKOSE MAZURYJE",
+      "heroSubtitle": "Jūsų turtas geriausiose rankose mozūrijoje",
       "securityTitle": "Saugumas",
-      "securityDesc": "Svečių patikrinimas ir žalos draudimas garantuoja jūsų investicijos saugumą.",
+      "securityDesc": "Svečių tikrinimas ir draudimas nuo žalos garantuoja jūsų investicijos saugumą.",
       "readyTitle": "Pasiruošę didesniam pelnui?",
-      "readyDesc": "Susisiekite su mumis ir patikrinkite, kiek jūsų butas ar namas Mozūrijoje gali uždirbti.",
+      "readyDesc": "Susisiekite su mumis ir sužinokite, kiek gali uždirbti jūsų apartamentas ar namelis Mozūrijoje.",
       "letsTalk": "Pasikalbėkime"
     },
     "amenityNames": {
@@ -3815,33 +3869,51 @@ export const translations = {
             "desc": "Parodomasis bizonų aptvaras Volisko mieste. Galimybė stebėti „miško karalius“ nuo apžvalgos aikštelės jų natūralioje aplinkoje."
           }
         },
+        "coopModels": {
+      "title": "Bendradarbiavimo modeliai",
+      "full_title": "Pilnas valdymas",
+      "full_desc": "Jūs atiduodate mums raktus, mes padarome visa kita. Užsakymų palaikymas, valymas, priežiūra.",
+      "marketing_title": "Rinkodaros palaikymas",
+      "marketing_desc": "Mes vykdome reklaminę veiklą, pritraukiame svečius, jūs rūpinatės objektu."
+    },
+        "coopSteps": {
+      "title": "Kaip tai veikia?",
+      "step1_title": "Kontaktas",
+      "step1_desc": "Parašykite arba paskambinkite mums, kad galėtume susipažinti su jūsų turtu.",
+      "step2_title": "Analizė",
+      "step2_desc": "Įvertiname potencialą ir pasiūlome geriausią bendradarbiavimo modelį.",
+      "step3_title": "Sutartis",
+      "step3_desc": "Pasirašome skaidrią sutartį, saugančią abi šalis.",
+      "step4_title": "Uždarbis",
+      "step4_desc": "Jūsų apartamentas pradeda priimti svečius ir generuoti pelną."
+    },
         "cooperationPage": {
-          "title": "Bendradarbiavimas",
-          "subtitle": "Jūsų turtas geriausiose rankose Mozūrijoje",
-          "services": {
-            "title": "Profesionalus nuomos valdymas",
-            "desc": "Ieškote patikimo partnerio, kuris pasirūpintų jūsų turtu? Mazury.Holiday – tai ekspertų komanda, kuri nuims nuo jūsų pečių visas trumpalaikės nuomos pareigas. Didiname savininkų pelną išlaikant aukščiausią svečių aptarnavimo standartą."
-          },
-          "marketing": {
-            "title": "Stipri Premium rinkodara",
-            "desc": "Jūsų nuosavybė pasieks aukščiausias pozicijas tokiuose portaluose kaip Booking.com, Airbnb ir mūsų patentuotoje platformoje Mazury.Holiday. Atliekame fotosesijas ir dronų vaizdo įrašus."
-          },
-          "guests": {
-            "title": "Nuoma be rūpesčių",
-            "desc": "Tvarkome visą ciklą: nuo rezervacijų ir apmokėjimų iki profesionalaus svečių priėmimo iki pagalbos visą parą, 7 dienas per savaitę."
-          },
-          "maintenance": {
-            "title": "5 žvaigždučių standartas",
-            "desc": "Mūsų valymo ir techninė komanda pasirūpina kiekviena smulkmena. Jūsų turtas visada spindi ir yra nepriekaištingos techninės būklės prieš atvykstant kiekvienam svečiui."
-          },
-          "whyUs": {
-            "title": "Kodėl dirbti su mumis?",
-            "point1": "Vietos patirtis ir Mozūrijos rinkos išmanymas",
-            "point2": "Skaidri atsiskaitymo sistema ir savininko skydelis",
-            "point3": "Nuolatinė techninė priežiūra ir priežiūra",
-            "point4": "Kainų optimizavimas (pajamų valdymas)"
-          }
-        },
+      "title": "Bendradarbiavimas",
+      "subtitle": "Jūsų turtas geriausiose rankose Mozūrijoje",
+      "services": {
+        "title": "Profesionalus nuomos valdymas",
+        "desc": "Ieškote patikimo partnerio, kuris pasirūpintų jūsų turtu? Mazury.Holiday – tai ekspertų komanda, kuri nuo jūsų pečių nuims visas su trumpalaike nuoma susijusias pareigas. Didiname savininkų pelną, išlaikydami aukščiausią svečių aptarnavimo standartą."
+      },
+      "marketing": {
+        "title": "Stipri Premium rinkodara",
+        "desc": "Jūsų turtas užims aukščiausias pozicijas tokiuose portaluose kaip Booking.com ir Airbnb bei mūsų nuosavoje Mazury.Holiday platformoje. Vykdome fotosesijas ir dronų vaizdo įrašus."
+      },
+      "guests": {
+        "title": "Nuoma be rūpesčių",
+        "desc": "Rūpinamės visu ciklu: nuo užsakymo ir apmokėjimo, per profesionalų svečių pasitikimą, iki palaikymo jų viešnagės metu 24/7."
+      },
+      "maintenance": {
+        "title": "5 žvaigždučių standartas",
+        "desc": "Mūsų valymo ir techninė komanda pasirūpina kiekviena detale. Jūsų turtas visada spindi ir yra puikios techninės būklės prieš atvykstant kiekvienam svečiui."
+      },
+      "whyUs": {
+        "title": "Kodėl verta su mumis bendradarbiauti?",
+        "point1": "Vietinė patirtis ir Mozūrijos rinkos išmanymas",
+        "point2": "Skaidri atsiskaitymo sistema ir savininko skydelis",
+        "point3": "Nuolatinė techninė priežiūra",
+        "point4": "Kainų optimizavimas (Pajamų valdymas)"
+      }
+    },
         "contactForm": {
           "title": "Susisiekite su mumis",
           "subtitle": "Ar turite klausimų? Ar norite užsisakyti viešnagę? Naudokite žemiau esančią formą.",
@@ -4339,11 +4411,11 @@ export const translations = {
     },
     "coopExtra": {
       "heroTitle": "B2B spolupráce",
-      "heroSubtitle": "VAŠE MAJETEK JE V NEJLEPŠÍCH RUKOU MAZURY",
-      "securityTitle": "Zabezpečení",
-      "securityDesc": "Ověření hostů a pojištění škod zaručí bezpečnost vaší investice.",
-      "readyTitle": "Jste připraveni na vyšší zisky?",
-      "readyDesc": "Kontaktujte nás a zjistěte, kolik může váš byt nebo dům na Mazurách vydělat.",
+      "heroSubtitle": "VAŠE ZAŘÍZENÍ V NEJLEPŠÍCH RUKOU NA MAZURÁCH",
+      "securityTitle": "Bezpečnost",
+      "securityDesc": "Ověřování hostů a pojištění škod zaručují bezpečnost vaší investice.",
+      "readyTitle": "Připraveni na vyšší zisky?",
+      "readyDesc": "Kontaktujte nás a zjistěte, kolik může vydělat váš apartmán nebo chata na Mazurách.",
       "letsTalk": "Pojďme si promluvit"
     },
     "amenityNames": {
@@ -5436,33 +5508,51 @@ export const translations = {
             "desc": "Ukázkový výběh bizonů ve Wolisku. Možnost pozorovat „krále lesa“ z vyhlídkové plošiny v jejich přirozeném prostředí."
           }
         },
+        "coopModels": {
+      "title": "Modely spolupráce",
+      "full_title": "Plná správa",
+      "full_desc": "Předáte nám klíče, my uděláme zbytek. Podpora rezervací, úklid, údržba.",
+      "marketing_title": "Marketingová podpora",
+      "marketing_desc": "Provádíme propagační aktivity, získáváme hosty, vy se staráte o objekt."
+    },
+        "coopSteps": {
+      "title": "Jak to funguje?",
+      "step1_title": "Kontakt",
+      "step1_desc": "Napište nám nebo zavolejte, abychom se s vaším objektem seznámili.",
+      "step2_title": "Analýza",
+      "step2_desc": "Vyhodnotíme potenciál a navrhneme nejlepší model spolupráce.",
+      "step3_title": "Smlouva",
+      "step3_desc": "Podepíšeme transparentní smlouvu, která chrání obě strany.",
+      "step4_title": "Vydělávání",
+      "step4_desc": "Váš apartmán začíná přijímat hosty a generovat zisk."
+    },
         "cooperationPage": {
-          "title": "Spolupráce",
-          "subtitle": "Váš majetek v nejlepších rukou na Mazurách",
-          "services": {
-            "title": "Profesionální správa pronájmu",
-            "desc": "Hledáte spolehlivého partnera, který se postará o vaši nemovitost? Mazury.Holiday je tým odborníků, kteří z vašich beder vezmou veškerou odpovědnost za krátkodobý pronájem. Zvyšujeme zisk majitelů při zachování nejvyššího standardu služeb pro hosty."
-          },
-          "marketing": {
-            "title": "Silný prémiový marketing",
-            "desc": "Vaše nemovitost se dostane na přední pozice na portálech, jako je Booking.com, Airbnb a naše vlastní platforma Mazury.Holiday. Provádíme focení a natáčení dronů."
-          },
-          "guests": {
-            "title": "Bezproblémová půjčovna",
-            "desc": "Postaráme se o celý cyklus: od rezervací a plateb, přes profesionální přivítání hostů až po nepřetržitou podporu během pobytu."
-          },
-          "maintenance": {
-            "title": "5hvězdičkový standard",
-            "desc": "Náš úklidový a technický tým se postará o každý detail. Vaše nemovitost vždy září a je v perfektním technickém stavu před příjezdem každého hosta."
-          },
-          "whyUs": {
-            "title": "Proč pracovat s námi?",
-            "point1": "Místní zkušenosti a znalost mazurského trhu",
-            "point2": "Transparentní fakturační systém a panel vlastníka",
-            "point3": "Neustálá technická a servisní péče",
-            "point4": "Optimalizace cen (Revenue Management)"
-          }
-        },
+      "title": "Spolupráce",
+      "subtitle": "Váš majetek v nejlepších rukou na Mazurách",
+      "services": {
+        "title": "Profesionální správa pronájmu",
+        "desc": "Hledáte spolehlivého partnera, který se postará o vaši nemovitost? Mazury.Holiday je tým odborníků, který z vašich beder sejme veškeré povinnosti spojené s krátkodobým pronájmem. Zvyšujeme zisky majitelů při zachování nejvyššího standardu služeb hostům."
+      },
+      "marketing": {
+        "title": "Silný prémiový marketing",
+        "desc": "Vaše nemovitost se dostane na přední pozice na portálech jako Booking.com a Airbnb a na naší vlastní platformě Mazury.Holiday. Provádíme focení a videa z dronu."
+      },
+      "guests": {
+        "title": "Bezúdržbový pronájem",
+        "desc": "Zajišťujeme celý cyklus: od rezervace a platby, přes profesionální přivítání hostů, až po podporu během jejich pobytu 24/7."
+      },
+      "maintenance": {
+        "title": "5hvězdičkový standard",
+        "desc": "Náš úklidový a technický tým dbá na každý detail. Vaše nemovitost vždy září a před příjezdem každého hosta je v perfektním technickém stavu."
+      },
+      "whyUs": {
+        "title": "Proč se s námi vyplatí spolupracovat?",
+        "point1": "Místní zkušenosti a znalost mazurského trhu",
+        "point2": "Transparentní systém účtování a panel vlastníka",
+        "point3": "Stálá technická péče a údržba",
+        "point4": "Optimalizace cen (Revenue Management)"
+      }
+    },
         "contactForm": {
           "title": "Kontaktujte nás",
           "subtitle": "Máte otázky? Chcete si rezervovat pobyt? Použijte níže uvedený formulář.",

@@ -1146,7 +1146,7 @@ export const strandaApartments: Record<string, Apartment> = {
         id: 'C404',
         title: "Studio z jacuzzi na dachu (C404)",
         shortTitle: "Studio z jacuzzi na dachu (C404)",
-        description: "Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób",
+        description: "Apartament C404 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejsce sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneksem kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób",
         building: 'C',
         type: 'jacuzzi',
         price: 300,
@@ -1156,7 +1156,7 @@ export const strandaApartments: Record<string, Apartment> = {
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
             bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
-            terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
+            terrace: ['komplet mebli ogrodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
         },
         gallery: {
             "heroImage": getAssetPath("/images/apartments/stranda_new/C404/0,1 (2).JPG"),
@@ -1326,7 +1326,7 @@ export const strandaApartments: Record<string, Apartment> = {
         id: 'C402',
         title: "Studio z jacuzzi na dachu (C402)",
         shortTitle: "Studio z jacuzzi na dachu (C402)",
-        description: "Apartament C402 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejscem sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneks kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz\nJacuzzi jest czynne przez cały rok.\nC404 Studio przeznaczone jest dla maksymalnie 4 osób",
+        description: "Apartament C402 typu Studio leży na najwyższym 3 piętrze budynku C, posiada wydzielone miejsce sypialniane z jednym łóżkiem podwójnym, salon z rozkładaną sofą, aneksem kuchennym oraz łazienkę z prysznicem. Apartament posiada także taras dolny z meblami oraz taras na dachu z prywatnym jacuzzi z widokiem na port Stranda i zatokę Tracz.\nJacuzzi jest czynne przez cały rok.\nC402 Studio przeznaczone jest dla maksymalnie 4 osób",
         building: 'C',
         type: 'jacuzzi',
         price: 300,
@@ -1336,7 +1336,7 @@ export const strandaApartments: Record<string, Apartment> = {
             kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'lodówka', 'zmywarka', 'piekarnik', 'pralka', 'komplet naczyń i sztućców'],
             bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
             bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
-            terrace: ['komplet mebli ogodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
+            terrace: ['komplet mebli ogrodowych', 'stolik', 'prywatne jacuzzi czynne przez cały rok']
         },
         gallery: {
             "heroImage": getAssetPath("/images/apartments/stranda_new/C402/0 (1).jpg"),
@@ -1381,7 +1381,7 @@ export const strandaApartments: Record<string, Apartment> = {
         id: 'B304',
         title: "Z jedną sypialnią (B304)",
         shortTitle: "Z jedną sypialnią (B304)",
-        description: "Apartamenty z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.\nB304 Z jedną sypialnią (maksymalna ilość osób 4)",
+        description: "Apartamenty z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.\nB304 Z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'B',
         type: 'oneBedroom',
         price: 300,
@@ -1430,7 +1430,7 @@ export const strandaApartments: Record<string, Apartment> = {
         id: 'B305',
         title: "Z jedną sypialnią (B305)",
         shortTitle: "Z jedną sypialnią (B305)",
-        description: "Apartamenty z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rokładaną sofą dla 2 osoób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.\nB305 Z jedną sypialnią (maksymalna ilość osób 4)",
+        description: "Apartamenty z 1 sypialnią znajdują się w budynku B, w sypialni łóżko podwójne, salon z aneksem kuchennym z rozkładaną sofą dla 2 osób, łazienka z prysznicem i tarasem z widokiem na zatokę Tracz i port Stranda.\nB305 Z jedną sypialnią (maksymalna ilość osób 4)",
         building: 'B',
         type: 'oneBedroom',
         price: 300,

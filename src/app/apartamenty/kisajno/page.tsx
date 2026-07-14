@@ -8,13 +8,14 @@ export default function KisajnoPage() {
     const { t } = useLanguage();
 
     const title = t("kisajnoPage", "title") || kisajnoData.title;
-    const subtitle = t("kisajnoPage", "subtitle") || "Giżycko, Jezioro Kisajno";
+    const subtitle = t("apartments", "items.kisajno.location") as string || "Giżycko, Jezioro Kisajno";
     const description = t("kisajnoPage", "description") || kisajnoData.description;
 
     return (
         <ApartmentDetailTemplate 
             data={{
                 id: "kisajno",
+                shortTitle: `${t("stranda", "apartment")} Kisajno`,
                 title: title,
                 subtitle: subtitle,
                 description: description,

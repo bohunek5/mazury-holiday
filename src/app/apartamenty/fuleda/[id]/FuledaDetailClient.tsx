@@ -26,8 +26,9 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
         <ApartmentDetailTemplate 
             data={{
                 id: `fuleda-${id}`,
+                shortTitle: `${t("stranda", "apartment")} Fuleda ${id === 'parter' ? 'Parter' : 'Piętro'}`,
                 title: title,
-                subtitle: "Fuleda, Jezioro Dobskie",
+                subtitle: t("apartments", "items.fuleda.location") as string || "Fuleda, Jezioro Dobskie",
                 description: data.description,
                 amenities: data.amenities,
                 mainImage: data.gallery.heroImage,
