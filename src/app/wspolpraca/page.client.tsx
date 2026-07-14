@@ -52,9 +52,9 @@ export default function CooperationPage() {
                     priority
                     quality={60}
                 />
-                <div className="relative z-20 text-center text-white p-4">
-                    <h1 className="text-4xl md:text-7xl font-sans mb-4 drop-shadow-lg">{t("coopExtra", "heroTitle")}</h1>
-                    <p className="text-xl md:text-3xl font-light mb-12 text-white/95 max-w-4xl mx-auto drop-shadow-md leading-relaxed">{t("coopExtra", "heroSubtitle")}</p>
+                <div className="relative z-20 text-center text-white p-4 mt-16 md:mt-0">
+                    <h1 className="text-4xl md:text-7xl font-sans font-bold mb-6 drop-shadow-lg">{t("coopExtra", "heroTitle")}</h1>
+                    <p className="text-sm md:text-base lg:text-lg font-sans font-light tracking-[0.2em] uppercase mb-12 text-white/95 max-w-4xl mx-auto drop-shadow-md leading-relaxed">{t("coopExtra", "heroSubtitle")}</p>
                 </div>
             </section>
 

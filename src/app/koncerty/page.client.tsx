@@ -28,7 +28,7 @@ export default function KoncertyPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[45vh] md:h-[60vh] flex items-center justify-center overflow-hidden pt-20 md:pt-0">
                 <div className="absolute inset-0 bg-slate-900/60 z-10" />
                 <Image
                     src={getAssetPath("/images/stranda.webp")}
@@ -38,7 +38,7 @@ export default function KoncertyPage() {
                     priority
                     quality={80}
                 />
-                <div className="relative z-20 text-center text-white p-4 max-w-4xl mx-auto mt-16 md:mt-0">
+                <div className="relative z-20 text-center text-white p-4 max-w-4xl mx-auto mt-8 md:mt-0">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
