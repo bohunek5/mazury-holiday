@@ -27,13 +27,12 @@ export const mikolajkiData: MikolajkiData = {
     title: "Mikołajki - Apartament Gigu z 1 sypialnią",
     price: 350,
     guests: "4",
-    description: `Nowoczesny i komfortowy apartament położony w samym sercu Mikołajek, przy Placu Wolności – idealna lokalizacja dla osób, które chcą mieć wszystko „pod ręką”. Apartament przeznaczony jest dla maksymalnie 4 osób i składa się z przytulnej sypialni z wygodnym łóżkiem podwójnym, salonu z rozkładaną sofą (dodatkowe miejsca do spania), w pełni wyposażonego aneksu kuchennego oraz nowoczesnej łazienki.`,
+    description: `Apartament znajduje się w centrum Mikołajek, przy Placu Wolności. Jest przeznaczony dla maksymalnie czterech osób i składa się z sypialni, aneksu kuchennego oraz łazienki. Obiekt nie ma osobnego salonu ani tarasu.`,
     amenities: {
-        living: ["Rozkładana sofa", "TV", "Szybkie, bezpłatne WiFi"],
-        kitchen: ["W pełni wyposażony aneks kuchenny ze zmywarką", "Zestaw startowy (woda, kawa, herbata)"],
-        bedroom: ["Wygodne łoże małżeńskie (180x200)", "Komplet świeżej pościeli i ręczników"],
-        bathroom: ["Nowoczesna łazienka z kabiną prysznicową"],
-        general: ["Centrum Mikołajek - Plac Wolności", "Prywatne wejście i widok na dziedziniec", "Dla maksymalnie 4 osób (2+2)"]
+        bedroom: ["łóżko 160x200", "świeża pościel i ręczniki", "rozkładana sofa", "TV", "szybkie, bezpłatne WiFi"],
+        kitchen: ["ekspres do kawy", "płyta indukcyjna", "lodówka", "zmywarka", "komplet naczyń i sztućców", "zestaw startowy: woda, kawa i herbata"],
+        bathroom: ["prysznic", "pralka", "suszarka do włosów", "ręczniki", "żel pod prysznic", "balsam do ciała"],
+        general: ["centrum Mikołajek — Plac Wolności", "dla maksymalnie 4 osób"]
     },
     gallery: {
         heroImage: getAssetPath("/images/mikolajki/hero.webp"),

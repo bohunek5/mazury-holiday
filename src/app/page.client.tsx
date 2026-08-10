@@ -24,7 +24,7 @@ export default function Home() {
       {/* Intro Section */}
       <motion.section 
         id="about" 
-        className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 scroll-mt-20 md:scroll-mt-24"
+        className="py-16 md:py-18 bg-white dark:bg-slate-900 transition-colors duration-300 scroll-mt-20 md:scroll-mt-24"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -35,7 +35,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-sans text-slate-900 dark:text-white mb-6 transition-colors">
             {t("intro", "title")} <span className="text-amber-500">{t("intro", "titleHighlight")}</span>
           </h2>
-          <div className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed transition-colors space-y-4">
+          <div className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-[1.5] transition-colors space-y-3">
             <p>{t("intro", "p1")}</p>
             <p>{t("intro", "p2")}</p>
           </div>

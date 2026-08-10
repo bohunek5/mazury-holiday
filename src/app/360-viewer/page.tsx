@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { strandaApartments } from '@/data/stranda-apartments';
@@ -10,7 +10,7 @@ const Pannellum = dynamic(
   { ssr: false }
 );
 
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAssetPath } from '@/utils/assetPath';
 
 function ViewerContent() {
@@ -37,11 +37,12 @@ function ViewerContent() {
   }
 
   const currentImage = images[currentIndex];
+  const localImage = currentImage.replace(/\.(jpe?g|png)$/i, '.webp');
   
   // Format the name nicely from the path
   const formatRoomName = (path: string) => {
     const filename = path.split('/').pop() || '';
-    let name = filename.replace('.JPG', '').replace('.jpg', '').replace('.png', '').replace('.PNG', '');
+    let name = filename.replace(/\.(jpe?g|png|webp)$/i, '');
     if (name.includes('PIC_')) return `Widok ${currentIndex + 1}`;
     return name;
   };
@@ -75,10 +76,10 @@ function ViewerContent() {
         key={currentImage} // Force re-render on image change
         width="100%"
         height="100%"
-        image={getAssetPath(currentImage)}
-        pitch={10}
-        yaw={180}
-        hfov={110}
+        image={getAssetPath(localImage)}
+        pitch={0}
+        yaw={0}
+        hfov={115}
         autoLoad
         showZoomCtrl={true}
         showFullscreenCtrl={true}

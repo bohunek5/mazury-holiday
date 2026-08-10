@@ -31,11 +31,13 @@ export default function FuledaDetailClient({ id }: FuledaDetailClientProps) {
                 subtitle: t("apartments", "items.fuleda.location") as string || "Fuleda, Jezioro Dobskie",
                 description: data.description,
                 amenities: data.amenities,
+                sectionLabels: data.sectionLabels,
                 mainImage: data.gallery.heroImage,
                 gallery: data.gallery.images,
                 idoBookingId: data.idoBookingId,
                 icalUrl: data.icalUrl,
-                customAboutTitle: t("details", "about") === "O apartamencie" ? "O domku" : t("details", "about")
+                customAboutTitle: t("details", "about") === "O apartamencie" ? "O domku" : t("details", "about"),
+                highlights: [id === 'parter' ? 'Parter' : '1. piętro', '1 sypialnia', 'Widok na jezioro Dobskie'],
             }}
             backUrl="/apartamenty/fuleda"
         />

@@ -1,6 +1,6 @@
 import { getAssetPath } from '@/utils/assetPath';
 import { Apartment } from '@/types/apartment';
-export const strandaApartments: Record<string, Apartment> = {
+const baseStrandaApartments: Record<string, Apartment> = {
     'A204': {
         id: 'A204',
         title: "Z jedną sypialnią (A204)",
@@ -210,7 +210,6 @@ export const strandaApartments: Record<string, Apartment> = {
         },
         additionalInfo: ['Widok na jezioro'],
         idoBookingId: '1',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/1/key/da39a3ee5e6b4b0d3255bfef95601890afd80709',
         gallery: {
             "heroImage": getAssetPath("/images/apartments/stranda_new/A103/1.JPG"),
             "images": [
@@ -1424,7 +1423,6 @@ export const strandaApartments: Record<string, Apartment> = {
                 getAssetPath("/images/apartments/stranda_new/B304/P1014658.jpg")
             ]
         },
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
     'B305': {
         id: 'B305',
@@ -1480,8 +1478,6 @@ export const strandaApartments: Record<string, Apartment> = {
                 getAssetPath("/images/apartments/stranda_new/B305/P1014675.jpg")
             ]
         },
-        
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/44/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
     'studio': {
         id: 'studio',
@@ -1532,7 +1528,6 @@ export const strandaApartments: Record<string, Apartment> = {
             ]
         },
         idoBookingId: '32',
-        icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/32/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
     'c': {
         id: 'c',
@@ -1573,3 +1568,183 @@ export const strandaApartments: Record<string, Apartment> = {
         icalUrl: 'https://client37851.idosell.com/panel/offer/icalexport/itemid/43/key/da39a3ee5e6b4b0d3255bfef95601890afd80709'
     },
 };
+
+type FeedbackOverride = Partial<Omit<Apartment, 'amenities' | 'gallery'>> & {
+    amenities?: Partial<Apartment['amenities']>;
+    gallery?: Partial<Apartment['gallery']>;
+};
+
+const feedbackOverrides: Record<string, FeedbackOverride> = {
+    A302: {
+        amenities: { terrace: ['meble tarasowe', 'stolik', 'jeden leżak', 'widok na jezioro'] },
+    },
+    A306: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'chłodziarka do wina', 'komplet naczyń i sztućców'],
+            bedroom2: ['łóżko 180x200', 'komplet pościeli', 'klimatyzacja'],
+        },
+    },
+    A403: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'chłodziarka do wina', 'komplet naczyń i sztućców'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['komplet mebli wypoczynkowych'],
+            terrace2: ['komplet mebli wypoczynkowych', 'dwa leżaki', 'stolik', 'prywatne jacuzzi'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+        gallery: { heroImage: getAssetPath('/images/stranda/A403/nowe_2026/A403_taras_dach_8.webp') },
+    },
+    B102: {
+        amenities: {
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'szlafroki', 'balsam do ciała'],
+            terrace: ['zadaszony taras', 'prywatne jacuzzi', 'komplet mebli wypoczynkowych', 'leżak', 'stolik'],
+        },
+    },
+    B103: {
+        amenities: { kitchen: ['płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'] },
+    },
+    B106: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa', 'suszarka na ubrania', 'żelazko'],
+            bedroom2: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            terrace: ['komplet mebli wypoczynkowych', 'dwa leżaki', 'duży trawnik'],
+        },
+        gallery: {
+            images: Array.from({ length: 14 }, (_, index) => getAssetPath(`/images/stranda/B106/nowe_2026/${[
+                '5S5A6711_1', '5S5A6714_2', '5S5A6715_3', '5S5A6716_4', '5S5A6718_5', '5S5A6719_6', '5S5A6728_7',
+                '5S5A6730_8', '5S5A6734_9', '5S5A6735_10', '5S5A6742_11', '5S5A6743_12', '5S5A6744_13', '5S5A6746_14',
+            ][index]}.webp`)),
+        },
+    },
+    B201: {
+        amenities: {
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            bedroom2: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            bathroom: ['prysznic', 'ręczniki', 'suszarka do włosów', 'zestaw kosmetyków'],
+            bathroom2: ['wanna', 'ręczniki', 'suszarka do włosów', 'zestaw kosmetyków'],
+            terrace: ['zadaszony taras', 'prywatne jacuzzi', 'dwa leżaki', 'komplet mebli wypoczynkowych'],
+        },
+        gallery: {
+            heroImage: getAssetPath('/images/stranda/B201/nowe_2026/5S5A0445_03295944488_5.webp'),
+            images: [
+                '5S5A0445_03295944488_5', '5S5A0446_03311645113_6', '5S5A0447_03320045474_7', '5S5A0448_03331746097_8',
+                '0T1A3677_1', '0T1A3687_2', '0T1A3689_3', '0T1A3690_4', 'Kuchnia1_10', 'Kuchnia2_11', 'Salon3_12', 'Salon4_13',
+                'Sypialnia1a_14', 'Sypialnia2b_15', 'Taras2_16', '_azienka1_17', '_azienka1a_18', '_azienka2_19', '_azienka2a_20',
+            ].map(name => getAssetPath(`/images/stranda/B201/nowe_2026/${name}.webp`)),
+        },
+    },
+    B202: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'mikrofalówka', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            bedroom2: ['rozkładana sofa dwuosobowa', 'komplet pościeli'],
+            terrace: ['zadaszony taras', 'przesuwne szklane szyby chroniące przed wiatrem', 'prywatne jacuzzi', 'komplet mebli wypoczynkowych'],
+        },
+    },
+    B304: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['dwa łóżka pojedyncze z możliwością połączenia w łóżko dwuosobowe', 'komplet pościeli', 'klimatyzacja'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['stół', 'krzesła', 'dwa leżaki'],
+        },
+    },
+    B305: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['dwa łóżka pojedyncze z możliwością połączenia w łóżko dwuosobowe', 'komplet pościeli', 'klimatyzacja'],
+            bathroom: ['prysznic', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['stół', 'krzesła', 'dwa leżaki'],
+        },
+    },
+    B401: {
+        amenities: {
+            bedroom2: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            terrace: ['komplet mebli wypoczynkowych', 'dwa leżaki'],
+            terrace2: ['zadaszony taras', 'prywatne jacuzzi', 'komplet mebli wypoczynkowych', 'leżak'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+        gallery: { heroImage: getAssetPath('/images/stranda/B401/nowe_2026/P1014598_67.webp') },
+    },
+    B402: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            terrace: ['komplet mebli wypoczynkowych', 'dwa leżaki'],
+            terrace2: ['zadaszony taras', 'prywatne jacuzzi', 'komplet mebli wypoczynkowych', 'leżak'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+        gallery: { heroImage: getAssetPath('/images/stranda/B402/nowe_2026/B402_taras_dach1_20.webp') },
+    },
+    B404: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            terrace: ['komplet mebli wypoczynkowych', 'dwa leżaki'],
+            terrace2: ['zadaszony taras', 'prywatne jacuzzi', 'komplet mebli wypoczynkowych', 'leżak'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+        gallery: { heroImage: getAssetPath('/images/stranda/B404/nowe_2026/B404_taras_dach3_25.webp') },
+    },
+    studio: {
+        amenities: { terrace: ['dwa krzesła', 'stolik', 'dwa leżaki'] },
+    },
+    c: {
+        amenities: {
+            bedroom2: ['łóżko 180x200', 'komplet pościeli'],
+            terrace: ['dwa krzesła', 'stolik', 'dwa leżaki'],
+        },
+    },
+    C301: {
+        amenities: {
+            kitchen: ['ekspres do kawy', 'płyta indukcyjna', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['łóżko małżeńskie', 'komplet pościeli', 'szafa'],
+            bedroom2: ['łóżko piętrowe dla dwóch osób', 'komplet pościeli'],
+            terrace: ['zadaszony taras', 'komplet mebli wypoczynkowych'],
+        },
+    },
+    C304: {
+        amenities: {
+            kitchen: ['płyta indukcyjna', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            terrace: ['komplet mebli wypoczynkowych', 'jeden leżak'],
+        },
+    },
+    C402: {
+        amenities: {
+            terrace: ['mały stolik', 'dwa krzesła'],
+            terrace2: ['komplet mebli ogrodowych', 'stół', 'prywatne jacuzzi czynne przez cały rok'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+    },
+    C404: {
+        amenities: {
+            terrace: ['fotel'],
+            terrace2: ['komplet mebli ogrodowych', 'stół', 'prywatne jacuzzi czynne przez cały rok'],
+        },
+        sectionLabels: { terrace: 'Taras dolny', terrace2: 'Taras dachowy' },
+    },
+};
+
+const useWebpImage = (path: string) => path.startsWith('/')
+    ? path.replace(/\.(jpe?g|png)$/i, '.webp')
+    : path;
+
+export const strandaApartments: Record<string, Apartment> = Object.fromEntries(
+    Object.entries(baseStrandaApartments).map(([id, apartment]) => {
+        const override = feedbackOverrides[id];
+        const mergedApartment = override ? {
+            ...apartment,
+            ...override,
+            amenities: { ...apartment.amenities, ...override.amenities },
+            gallery: { ...apartment.gallery, ...override.gallery },
+        } : apartment;
+
+        return [id, {
+            ...mergedApartment,
+            gallery: {
+                ...mergedApartment.gallery,
+                heroImage: useWebpImage(mergedApartment.gallery.heroImage),
+                images: mergedApartment.gallery.images.map(useWebpImage),
+            },
+        }];
+    }),
+);

@@ -12,7 +12,34 @@ import { Handshake, TrendingUp, ShieldCheck, Sparkles, MessageCircle } from "luc
 import { getAssetPath } from "@/utils/assetPath";
 
 export default function CooperationPage() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const fullManagementScope = [
+        {
+            title: "Oferta i sprzedaż",
+            description: "Przygotowujemy prezentację obiektu, aktualizujemy ofertę i dbamy o jej widoczność w kanałach sprzedaży."
+        },
+        {
+            title: "Rezerwacje i kalendarz",
+            description: "Obsługujemy zapytania, rezerwacje, dostępność oraz bieżący kontakt związany z pobytem."
+        },
+        {
+            title: "Obsługa gości",
+            description: "Prowadzimy komunikację przed przyjazdem, podczas pobytu i po wyjeździe gości."
+        },
+        {
+            title: "Sprzątanie i przygotowanie",
+            description: "Koordynujemy sprzątanie i przygotowanie obiektu przed przyjazdem kolejnych gości."
+        },
+        {
+            title: "Opieka techniczna",
+            description: "Kontrolujemy stan obiektu, reagujemy na bieżące usterki i organizujemy potrzebny serwis."
+        },
+        {
+            title: "Bezpieczeństwo obiektu",
+            description: "Weryfikujemy gości i pilnujemy zasad pobytu, aby ograniczyć ryzyko szkód."
+        }
+    ];
 
     const benefits = [
         {
@@ -113,31 +140,33 @@ export default function CooperationPage() {
                     <h3 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white mb-12 text-center">
                         {t("coopModels", "title")}
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="mx-auto max-w-5xl">
                         {/* Model 1 */}
-                        <div className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all hover:border-amber-500/30 group">
+                        <div className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all hover:border-amber-500/30 group">
                             <div className="w-16 h-16 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                 <ShieldCheck className="w-8 h-8 text-amber-500" />
                             </div>
                             <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
                                 {t("coopModels", "full_title")}
                             </h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p className="max-w-3xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {t("coopModels", "full_desc")}
                             </p>
-                        </div>
-                        
-                        {/* Model 2 */}
-                        <div className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all hover:border-amber-500/30 group">
-                            <div className="w-16 h-16 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                                <TrendingUp className="w-8 h-8 text-amber-500" />
-                            </div>
-                            <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                                {t("coopModels", "marketing_title")}
-                            </h4>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {t("coopModels", "marketing_desc")}
-                            </p>
+                            {language === "pl" && (
+                                <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+                                    {fullManagementScope.map(item => (
+                                        <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                                            <div className="mb-3 flex items-center gap-3">
+                                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-amber-500">
+                                                    <ShieldCheck className="h-4 w-4" />
+                                                </div>
+                                                <h5 className="font-bold text-slate-900 dark:text-white">{item.title}</h5>
+                                            </div>
+                                            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </motion.div>

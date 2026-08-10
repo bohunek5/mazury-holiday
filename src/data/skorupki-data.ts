@@ -6,6 +6,9 @@ export type SkorupkiData = {
     price: number;
     guests: string;
     unitsCount: number;
+    idoBookingId?: string;
+    icalUrl?: string;
+    customBookingUrl?: string;
     description: string;
     gallery: {
         heroImage: string;
@@ -21,6 +24,9 @@ export const skorupkiData: SkorupkiData = {
     price: 600,
     guests: "6",
     unitsCount: 10,
+    idoBookingId: "47",
+    icalUrl: "https://client37851.idosell.com/panel/offer/icalexport/itemid/47/key/da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    customBookingUrl: "https://client37851.idobooking.com/book-now/index.php?ob[47]=&showOtherOffers=true&currency=0&language=0&from_own_button=1",
     description: `Domki Skorupki to kameralna osada eleganckich domków wypoczynkowych w spokojnej części Mazur. Oferta łączy prywatność, wysoki standard, bliskość jeziora i dopracowane wnętrza przygotowane zarówno na rodzinny wypoczynek, jak i dłuższy pobyt.`,
     customAboutTitle: "O domkach",
     customAmenitiesTitle: "Udogodnienia w domkach",

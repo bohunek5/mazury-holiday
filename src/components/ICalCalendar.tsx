@@ -21,7 +21,7 @@ const localeMap: Record<string, string> = {
     es: 'es-ES'
 };
 
-const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUrl: string; apartmentId?: string; forceLanguage?: string }) => {
+const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage, bookingUrl }: { icalUrl: string; apartmentId?: string; forceLanguage?: string; bookingUrl?: string }) => {
     const { language: contextLanguage } = useLanguage();
     const language = forceLanguage || contextLanguage;
     const [events, setEvents] = useState<CalendarEvent[]>([]);
@@ -63,12 +63,9 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUr
         const y = parseInt(v.substring(0, 4));
         const m = parseInt(v.substring(4, 6)) - 1;
         const d = parseInt(v.substring(6, 8));
-        if (v.includes('T')) {
-            const h = parseInt(v.substring(9, 11));
-            const min = parseInt(v.substring(11, 13));
-            const s = parseInt(v.substring(13, 15));
-            return new Date(Date.UTC(y, m, d, h, min, s));
-        }
+
+        // Always return local date at midnight, ignoring timezone differences
+        // so that check-in and check-out days don't shift for foreign visitors.
         return new Date(y, m, d);
     }, []);
 
@@ -139,8 +136,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUr
             }
 
             const fetchWithRetry = async (url: string) => {
-                // Fix idosell.com redirect issues by using idobooking.com directly
-                const cleanUrl = url.replace('.idosell.com', '.idobooking.com');
+                const cleanUrl = url;
 
                 // 1. Try local PHP proxy (works on production)
                 try {
@@ -277,12 +273,20 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUr
             </div>
 
             <div className="p-6">
-                {error && (
-                    <div className="mb-6 p-4 bg-amber-50 dark:bg-slate-800 border-l-4 border-amber-500 rounded-r-lg flex gap-3 text-sm text-amber-800 dark:text-amber-200">
+                {error ? (
+                    <div className="p-4 bg-amber-50 dark:bg-slate-800 border-l-4 border-amber-500 rounded-r-lg text-sm text-amber-900 dark:text-amber-100">
+                        <div className="flex gap-3">
                         <AlertCircle className="w-5 h-5 shrink-0" />
-                        <p>{error}</p>
+                        <p>Aktualna dostępność jest prowadzona w systemie rezerwacji. Sprawdź wybrany termin online.</p>
+                        </div>
+                        {bookingUrl && (
+                            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="mt-4 flex w-full items-center justify-center rounded-lg bg-amber-500 px-4 py-3 font-semibold text-white transition-colors hover:bg-amber-600">
+                                Sprawdź dostępność
+                            </a>
+                        )}
                     </div>
-                )}
+                ) : (
+                <>
 
                 <div className="flex items-center justify-between mb-6">
                     <h4 className="font-semibold text-slate-800 dark:text-white">{capitalizedMonth}</h4>
@@ -358,6 +362,8 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage }: { icalUr
                         <span className="text-slate-500">{t.legend.available}</span>
                     </div>
                 </div>
+                </>
+                )}
             </div>
         </div>
     );

@@ -9,7 +9,15 @@ import { motion } from "framer-motion";
 
 import { getAssetPath } from "@/utils/assetPath";
 
-const locations = [
+type ContactLocation = {
+    title: string;
+    address: string;
+    mapQuery: string;
+    mapLink: string;
+    mapEmbedUrl?: string;
+};
+
+const locations: ContactLocation[] = [
     {
         title: "Apartamenty Stranda Residence & Czarter",
         address: "Pierkunowo 36, 11-500 Giżycko",
@@ -33,6 +41,13 @@ const locations = [
         address: "Skorupki 213",
         mapQuery: "MazuryHoliday+Skorupki",
         mapLink: "https://maps.app.goo.gl/cHNSDLUssEN8sjts9"
+    },
+    {
+        title: "Domek Fuledzkie Zacisze",
+        address: "Fuleda, 11-500 Giżycko",
+        mapQuery: "54.0900704,21.6551523",
+        mapLink: "https://maps.app.goo.gl/fypwQUVXuUWJFaMr5",
+        mapEmbedUrl: "https://maps.google.com/maps?q=54.0900704,21.6551523&z=17&output=embed"
     },
     {
         title: "Apartament Mikołajki",
@@ -131,7 +146,7 @@ export default function ContactPage() {
                                     className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-white rounded-xl text-sm font-semibold transition-colors shrink-0"
                                 >
                                     <MapPin className="w-4 h-4" />
-                                    Nawiguj
+                                    Otwórz w Mapach
                                 </a>
                             </div>
                             <div className="h-80 w-full relative bg-slate-200">
@@ -139,7 +154,7 @@ export default function ContactPage() {
                                     width="100%"
                                     height="100%"
                                     title={`${t("contactExtra", "mapLabel")} ${loc.title}`}
-                                    src={`https://maps.google.com/maps?q=${loc.mapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                                    src={loc.mapEmbedUrl || `https://maps.google.com/maps?q=${loc.mapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                                     frameBorder="0"
                                     scrolling="no"
                                     loading="lazy"

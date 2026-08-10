@@ -24,7 +24,7 @@ const getBuildingsData = () => {
         if (buildings[b]) {
             buildings[b].push({
                 id: apt.id,
-                image: apt.gallery.heroImage || apt.gallery.images[0] || getAssetPath("/images/stranda/stranda_hero_jacuzzi.jpg"),
+                image: apt.gallery.heroImage || apt.gallery.images[0] || getAssetPath("/images/stranda/stranda_hero_jacuzzi.webp"),
             });
         }
     });
@@ -135,7 +135,7 @@ export default function StrandaPage() {
                 <div className="absolute inset-0 bg-slate-900/50 z-10" />
                 <div
                     className="absolute inset-0 bg-cover bg-[center_30%]"
-                    style={{ backgroundImage: `url('${getAssetPath('/images/stranda/stranda_hero_jacuzzi.jpg')}')` }}
+                    style={{ backgroundImage: `url('${getAssetPath('/images/stranda/stranda_hero_jacuzzi.webp')}')` }}
                 />
                 <div className="relative z-20 text-center text-white p-4">
                     <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{t("apartments", "items.stranda.location") as string || "Giżycko, Jezioro Kisajno"}</div>
@@ -268,7 +268,7 @@ export default function StrandaPage() {
 
                                                             {/* Yellow badge top left */}
                                                             <div className="absolute top-4 left-4 bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg">
-                                                                {unit.id === 'studio' ? 'C STUDIO' : unit.id.toUpperCase().replace(/-/g, ' ')}
+                                                                {unit.id === 'studio' ? 'C STUDIO' : unit.id === 'c' ? 'C APARTAMENT' : unit.id.toUpperCase().replace(/-/g, ' ')}
                                                             </div>
 
                                                             {/* Features bottom */}

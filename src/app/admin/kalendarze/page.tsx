@@ -1,9 +1,11 @@
 import { strandaApartments } from "@/data/stranda-apartments";
 import { fuledaApartments } from "@/data/fuleda-data";
-import { kisajnoData } from "@/data/kisajno-data";
+import { kisajnoApartments } from "@/data/kisajno-data";
 import { mikolajkiData } from "@/data/mikolajki-data";
 import { pokojeFuledaData } from "@/data/pokoje-fuleda-data";
 import { czarterData } from "@/data/czarter-data";
+import { fuledzkieZaciszeData } from "@/data/fuledzkie-zacisze-data";
+import { skorupkiData } from "@/data/skorupki-data";
 import ICalCalendar from "@/components/ICalCalendar";
 
 export default function KalendarzePage() {
@@ -25,14 +27,14 @@ export default function KalendarzePage() {
             icalUrl: data.icalUrl,
             url: data.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null
         })),
-        {
+        ...Object.entries(kisajnoApartments).map(([id, data]) => ({
             lokalizacja: "Kisajno",
-            kod: "kisajno",
-            nazwa: typeof kisajnoData.title === 'string' ? kisajnoData.title : (kisajnoData.title as any)?.pl || "Willa Kisajno",
-            ido: kisajnoData.idoBookingId,
-            icalUrl: kisajnoData.icalUrl,
-            url: kisajnoData.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${kisajnoData.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null
-        },
+            kod: id,
+            nazwa: data.title,
+            ido: data.idoBookingId,
+            icalUrl: data.icalUrl,
+            url: data.customBookingUrl || (data.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null)
+        })),
         {
             lokalizacja: "Mikołajki",
             kod: "mikolajki",
@@ -56,6 +58,22 @@ export default function KalendarzePage() {
             ido: czarterData.idoBookingId,
             icalUrl: czarterData.icalUrl,
             url: czarterData.idoBookingId ? `https://client37851.idobooking.com/book-now/index.php?ob[${czarterData.idoBookingId}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1` : null
+        },
+        {
+            lokalizacja: "Fuleda",
+            kod: "fuledzkie-zacisze",
+            nazwa: fuledzkieZaciszeData.title,
+            ido: fuledzkieZaciszeData.idoBookingId,
+            icalUrl: fuledzkieZaciszeData.icalUrl,
+            url: fuledzkieZaciszeData.customBookingUrl
+        },
+        {
+            lokalizacja: "Skorupki",
+            kod: "skorupki",
+            nazwa: skorupkiData.title,
+            ido: skorupkiData.idoBookingId,
+            icalUrl: skorupkiData.icalUrl,
+            url: skorupkiData.customBookingUrl
         }
     ].filter(i => i.ido || i.icalUrl);
 
@@ -104,7 +122,11 @@ export default function KalendarzePage() {
                             <div className="p-4 flex-1 flex flex-col bg-slate-950/50">
                                 {item.icalUrl ? (
                                     <div className="scale-90 origin-top w-[111%] -mb-[10%]">
-                                        <ICalCalendar icalUrl={item.icalUrl} apartmentId={item.kod} />
+                                        <ICalCalendar
+                                            icalUrl={item.icalUrl}
+                                            apartmentId={item.kod}
+                                            bookingUrl={item.url || undefined}
+                                        />
                                     </div>
                                 ) : (
                                     <div className="flex h-40 items-center justify-center rounded-xl border border-dashed border-white/10 bg-white/5 text-sm text-slate-400">

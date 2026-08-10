@@ -7,6 +7,18 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getAssetPath } from "@/utils/assetPath";
 
+const browserCookieLinks = [
+    { label: "Chrome", href: "https://support.google.com/accounts/answer/61416?hl=pl" },
+    { label: "Safari", href: "https://support.apple.com/pl-pl/guide/safari/sfri11471/mac" },
+    { label: "Firefox", href: "https://support.mozilla.org/pl/kb/ciasteczka" },
+    { label: "Opera", href: "https://help.opera.com/pl/latest/web-preferences/#cookies" },
+];
+
+const mobileCookieLinks = [
+    { label: "Android (Chrome)", href: "https://support.google.com/chrome/answer/95647?hl=pl&co=GENIE.Platform%3DAndroid" },
+    { label: "Safari (iOS)", href: "https://support.apple.com/pl-pl/105082" },
+];
+
 export default function PrivacyPolicyPage() {
     const { t } = useLanguage();
     const sections = t("privacyPolicy", "sections");
@@ -101,16 +113,20 @@ export default function PrivacyPolicyPage() {
                     )}
 
                     {t("privacyPolicy", "manageCookies") && (
-                        <div className="mt-8">
+                        <div className="mt-8 pt-2">
                             <p className="mb-6">{t("privacyPolicy", "manageCookies")}</p>
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 not-prose">
-                                {['Chrome', 'Safari', 'Firefox', 'Opera'].map(browser => (
-                                    <div key={browser} className="flex flex-col items-center justify-center p-4 bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-amber-500/50 hover:bg-amber-50/50 dark:hover:bg-amber-950/20 transition-all group cursor-default">
-                                        <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                            <ExternalLink className="w-4 h-4 text-amber-500" />
-                                        </div>
-                                        <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{browser}</span>
-                                    </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose">
+                                {browserCookieLinks.map(browser => (
+                                    <a
+                                        key={browser.label}
+                                        href={browser.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-between gap-4 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-amber-950/20 transition-colors group"
+                                    >
+                                        <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Instrukcja dla {browser.label}</span>
+                                        <ExternalLink className="w-4 h-4 text-amber-500 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                    </a>
                                 ))}
                             </div>
                         </div>
@@ -119,14 +135,18 @@ export default function PrivacyPolicyPage() {
                     {t("privacyPolicy", "mobileDevices") && (
                         <div className="mt-8">
                             <p className="font-bold text-slate-800 dark:text-slate-200 mb-4">{t("privacyPolicy", "mobileDevices")}</p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-                                {['Android', 'Safari (iOS)'].map(system => (
-                                    <div key={system} className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-amber-500/50 transition-all group cursor-default">
-                                        <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
-                                            <ExternalLink className="w-4 h-4 text-amber-500" />
-                                        </div>
-                                        <span className="font-semibold text-slate-700 dark:text-slate-300">{system}</span>
-                                    </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 not-prose">
+                                {mobileCookieLinks.map(system => (
+                                    <a
+                                        key={system.label}
+                                        href={system.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-between gap-4 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-amber-950/20 transition-colors group"
+                                    >
+                                        <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Instrukcja dla {system.label}</span>
+                                        <ExternalLink className="w-4 h-4 text-amber-500 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                    </a>
                                 ))}
                             </div>
                         </div>

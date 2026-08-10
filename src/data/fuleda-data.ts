@@ -5,13 +5,17 @@ export type FuledaApartment = {
     price: number;
     guests: string;
     description: string;
+    customAboutTitle?: string;
     amenities: {
-        living: string[];
-        kitchen: string[];
-        bedroom: string[];
-        bathroom: string[];
-        terrace: string[];
+        living?: string[];
+        kitchen?: string[];
+        bedroom?: string[];
+        bathroom?: string[];
+        terrace?: string[];
+        terrace2?: string[];
+        general?: string[];
     };
+    sectionLabels?: Partial<Record<'living' | 'kitchen' | 'bedroom' | 'bathroom' | 'terrace' | 'terrace2' | 'general', string>>;
     gallery: {
         heroImage: string;
         images: string[];
@@ -20,7 +24,7 @@ export type FuledaApartment = {
     icalUrl?: string;
 };
 
-export const fuledaApartments: Record<string, FuledaApartment> = {
+const baseFuledaApartments: Record<string, FuledaApartment> = {
     'parter': {
         id: 'parter',
         type: 'Parter',
@@ -151,7 +155,7 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży g
             terrace: ['Meble wypoczynkowe', 'Prywatne zejście do jeziora', 'Miejsce na grilla', 'Miejsce na ognisko']
         },
         gallery: {
-            heroImage: getAssetPath("/images/fuleda/ido_pietro_27_1.jpg"),
+            heroImage: getAssetPath("/images/fuleda/ido_pietro_27_1.webp"),
             images: [
                 getAssetPath("/images/fuleda/nowe_2026/Fuleda_pietro_kuchnia_13.webp"),
                 getAssetPath("/images/fuleda/nowe_2026/Fuleda_pietro_salon_14.webp"),
@@ -221,4 +225,32 @@ Fuleda położona jest około 10km od Giżycka, 20km od Kętrzyna i Gierłoży g
     }
 };
 
-
+export const fuledaApartments: Record<string, FuledaApartment> = {
+    parter: {
+        ...baseFuledaApartments.parter,
+        description: 'Całoroczny apartament na parterze w Fuledzie, nad jeziorem Dobskim. Do dyspozycji gości są salon, kuchnia, sypialnia, łazienka, dwa tarasy oraz prywatny dostęp do jeziora nr 2.',
+        amenities: {
+            living: ['TV', 'kominek', 'rozkładana sofa dwuosobowa', 'stół', 'krzesła', 'odkurzacz', 'żelazko', 'deska do prasowania', 'klimatyzacja', 'suszarka na ubrania', 'szafa'],
+            kitchen: ['kapsułkowy ekspres do kawy', 'kuchenka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 160x200', 'dwie szafki nocne', 'komplet pościeli', 'szafa'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['komplet mebli wypoczynkowych', 'stół', 'wiszący kokon'],
+            terrace2: ['komplet mebli tarasowych', 'grill'],
+            general: ['zadaszona i oświetlona wiata', 'grill', 'hamak', 'dwa leżaki', 'komplet mebli wypoczynkowych', 'internet', 'WiFi'],
+        },
+        sectionLabels: { terrace: 'Taras przedni', terrace2: 'Taras tylny', general: 'Prywatny dostęp do jeziora nr 2' },
+    },
+    pietro: {
+        ...baseFuledaApartments.pietro,
+        description: 'Całoroczny apartament na piętrze w Fuledzie, nad jeziorem Dobskim. Do dyspozycji gości są salon, kuchnia, sypialnia, łazienka, taras oraz prywatny dostęp do jeziora nr 3.',
+        amenities: {
+            living: ['TV', 'kominek', 'rozkładana sofa dwuosobowa', 'stół', 'krzesła', 'odkurzacz', 'żelazko', 'deska do prasowania', 'klimatyzacja', 'suszarka na ubrania', 'szafa'],
+            kitchen: ['kapsułkowy ekspres do kawy', 'kuchenka', 'piekarnik', 'lodówka', 'zmywarka', 'komplet naczyń i sztućców'],
+            bedroom: ['TV', 'łóżko 160x200', 'komplet pościeli', 'szafa'],
+            bathroom: ['prysznic', 'pralka', 'suszarka do włosów', 'ręczniki', 'żel pod prysznic', 'mydło', 'balsam do ciała'],
+            terrace: ['komplet mebli wypoczynkowych', 'stół', 'dwa leżaki', 'markiza'],
+            general: ['miejsce na ognisko', 'grill', 'dwa leżaki', 'komplet mebli wypoczynkowych', 'internet', 'WiFi'],
+        },
+        sectionLabels: { terrace: 'Taras przedni', general: 'Prywatny dostęp do jeziora nr 3' },
+    },
+};

@@ -8,7 +8,8 @@ import { skorupkiData } from '@/data/skorupki-data';
 import { mikolajkiData } from '@/data/mikolajki-data';
 import { pokojeFuledaData } from '@/data/pokoje-fuleda-data';
 import { fuledaApartments } from '@/data/fuleda-data';
-import { kisajnoData } from '@/data/kisajno-data';
+import { fuledzkieZaciszeData } from '@/data/fuledzkie-zacisze-data';
+import { kisajnoApartments } from '@/data/kisajno-data';
 import { cottagesData } from '@/data/cottages-data';
 import { czarterData } from '@/data/czarter-data';
 import ICalCalendar from '@/components/ICalCalendar';
@@ -69,7 +70,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 id: `Stranda-${apt.id}`,
                 name: apt.title,
                 location: 'Stranda',
-                heroImage: apt.gallery?.heroImage || apt.gallery?.images?.[0] || apt.images?.[0] || '/images/hero_1.webp',
+                heroImage: apt.gallery?.heroImage || apt.gallery?.images?.[0] || apt.images?.[0] || '/images/hero-mazury-holiday-final.webp',
                 images: apt.gallery?.images || apt.images || [],
                 photoCount: apt.gallery?.images?.length || apt.images?.length || 0,
                 guests: apt.guests || 'Brak',
@@ -84,14 +85,33 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             });
         });
 
-        // 2. Skorupki (poszczególne domki)
+        // 2. Skorupki — IdoBooking prowadzi dostępność dla całej lokalizacji.
+        items.push({
+            id: 'Skorupki-grupa',
+            name: skorupkiData.title,
+            location: 'Skorupki',
+            heroImage: skorupkiData.gallery.heroImage,
+            images: skorupkiData.gallery.images,
+            photoCount: skorupkiData.gallery.images.length,
+            guests: skorupkiData.guests,
+            price: skorupkiData.price,
+            calendarLinks: [
+                ...(skorupkiData.customBookingUrl ? [{ name: 'IdoBooking', url: skorupkiData.customBookingUrl }] : []),
+                ...(skorupkiData.icalUrl ? [{ name: 'iCal', url: skorupkiData.icalUrl }] : [])
+            ],
+            amenities: [],
+            icalUrl: skorupkiData.icalUrl,
+            idoBookingId: skorupkiData.idoBookingId
+        });
+
+        // Poszczególne domki służą do przeglądania zdjęć; nie mają osobnych
+        // eksportów iCal w IdoBooking.
         cottagesData.forEach((cottage: any, index: number) => {
             const nextCottage = cottagesData[index + 1];
             const endIdx = nextCottage ? nextCottage.galleryStart : skorupkiData.gallery?.images?.length || 0;
             const cottageImages = skorupkiData.gallery?.images?.slice(cottage.galleryStart, endIdx) || [];
             const allCottageImages = cottage.heroImage ? [cottage.heroImage, ...cottageImages] : cottageImages;
             
-            const sData: any = skorupkiData;
             items.push({
                 id: `Skorupki-${cottage.id}`,
                 name: cottage.name || `Domek Skorupki ${index + 1}`,
@@ -99,15 +119,10 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 heroImage: cottage.heroImage || cottageImages[0] || '/images/skorupki/skorupki_1.webp',
                 images: allCottageImages,
                 photoCount: allCottageImages.length,
-                guests: cottage.guests?.toString() || sData.guests || '6',
-                price: cottage.price?.toString() || sData.price || 'Brak',
-                calendarLinks: [
-                    ...(sData.idoBookingId ? [{ name: 'IdoBooking', url: `https://panel.idobooking.com/reservation.php?apartment_id=${sData.idoBookingId}` }] : []),
-                    ...(sData.icalUrl ? [{ name: 'iCal', url: sData.icalUrl }] : [])
-                ],
+                guests: cottage.guests?.toString() || skorupkiData.guests || '6',
+                price: cottage.price?.toString() || skorupkiData.price || 'Brak',
+                calendarLinks: [],
                 amenities: flattenAmenities(cottage.amenities),
-                icalUrl: sData.icalUrl,
-                idoBookingId: sData.idoBookingId
             });
         });
 
@@ -135,7 +150,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             id: `PokojeFuleda-${pokojeFuledaData.id}`,
             name: pokojeFuledaData.title,
             location: 'Pokoje Fuleda',
-            heroImage: pokojeFuledaData.gallery?.heroImage || pokojeFuledaData.gallery?.images?.[0] || '/images/pokoje_fuleda/fuleda_pokoj_1.webp',
+            heroImage: pokojeFuledaData.gallery?.heroImage || pokojeFuledaData.gallery?.images?.[0] || '/images/pokoje_fuleda/fuleda_pokoje_hero.webp',
             images: pokojeFuledaData.gallery?.images || [],
             photoCount: pokojeFuledaData.gallery?.images?.length || 0,
             guests: pokojeFuledaData.guests || 'Brak',
@@ -171,9 +186,26 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             });
         });
 
+        items.push({
+            id: `FuledzkieZacisze-${fuledzkieZaciszeData.id}`,
+            name: fuledzkieZaciszeData.title,
+            location: 'Fuleda',
+            heroImage: fuledzkieZaciszeData.gallery.heroImage,
+            images: fuledzkieZaciszeData.gallery.images,
+            photoCount: fuledzkieZaciszeData.gallery.images.length,
+            guests: '6',
+            price: 'Brak',
+            calendarLinks: [
+                { name: 'IdoBooking', url: fuledzkieZaciszeData.customBookingUrl },
+                { name: 'iCal', url: fuledzkieZaciszeData.icalUrl }
+            ],
+            amenities: flattenAmenities(fuledzkieZaciszeData.amenities),
+            icalUrl: fuledzkieZaciszeData.icalUrl,
+            idoBookingId: fuledzkieZaciszeData.idoBookingId
+        });
+
         // 6. Kisajno
-        if (kisajnoData) {
-            const kData: any = kisajnoData;
+        Object.values(kisajnoApartments).forEach((kData: any) => {
             items.push({
                 id: `Kisajno-${kData.id}`,
                 name: kData.title,
@@ -191,7 +223,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                 icalUrl: kData.icalUrl,
                 idoBookingId: kData.idoBookingId
             });
-        }
+        });
 
         // 7. Czarter
         if (czarterData) {

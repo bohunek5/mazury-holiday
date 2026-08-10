@@ -116,7 +116,7 @@ export default function KoncertyPage() {
                     >
                         <div className="relative w-full flex justify-center items-center">
                             <img
-                                src={getAssetPath("/images/koncerty.jpg")}
+                                src={getAssetPath("/images/koncerty.webp")}
                                 alt="Plakat Koncertowy"
                                 className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                             />
@@ -165,7 +165,7 @@ export default function KoncertyPage() {
                             onClick={(e) => e.stopPropagation()} 
                         >
                             <img
-                                src={getAssetPath("/images/koncerty.jpg")}
+                                src={getAssetPath("/images/koncerty.webp")}
                                 alt="Plakat Koncertowy (Pełny Rozmiar)"
                                 className="max-w-full max-h-[95vh] w-auto h-auto object-contain rounded-xl shadow-2xl"
                             />

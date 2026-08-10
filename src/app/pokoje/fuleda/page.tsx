@@ -27,13 +27,22 @@ export default function PokojeFuledaPage() {
             bathroom: data.amenities.bathroom,
             kitchen: data.amenities.kitchen,
             terrace: data.amenities.terrace,
+            general: data.amenities.general,
+        },
+        sectionLabels: {
+            bedroom: 'Sypialnia 1',
+            bedroom2: 'Sypialnia 2',
+            general: 'Prywatny dostęp do jeziora',
         },
         gallery: data.gallery.images,
         mainImage: data.gallery.heroImage,
         idoBookingId: data.idoBookingId,
         icalUrl: data.icalUrl,
         customAboutTitle: language === 'pl' ? "O obiekcie" : "About property",
-        customAmenitiesTitle: language === 'pl' ? "Udogodnienia" : "Amenities"
+        customAmenitiesTitle: language === 'pl' ? "Udogodnienia" : "Amenities",
+        highlights: language === 'pl'
+            ? ['2 sypialnie', 'Prywatny dostęp do jeziora', 'Brak ogrzewania']
+            : ['2 bedrooms', 'Private lake access', 'No heating'],
     };
 
     return <ApartmentDetailTemplate 

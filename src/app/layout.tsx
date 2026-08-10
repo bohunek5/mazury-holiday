@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Lato } from "next/font/google";
+import { Inter, Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -10,9 +10,13 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
-  weight: ["300", "400", "700", "900"],
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin", "latin-ext"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair-source",
   subsets: ["latin", "latin-ext"],
 });
 
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg", // We assume a default OG image exists or will be added
+        url: "/images/hero-mazury-holiday-final.webp",
         width: 1200,
         height: 630,
         alt: "Mazury.Holiday - Wypoczynek na Mazurach",
@@ -141,7 +145,7 @@ export default function RootLayout({
         ]} />
       </head>
       <body
-        className={`${inter.variable} ${lato.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}
+        className={`${inter.variable} ${openSans.variable} ${playfair.variable} antialiased bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300`}
       >
         <ThemeProvider
           attribute="class"

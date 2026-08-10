@@ -22,7 +22,8 @@ export default function MikolajkiPage() {
                 mainImage: mikolajkiData.gallery.heroImage,
                 gallery: mikolajkiData.gallery.images,
                 idoBookingId: mikolajkiData.idoBookingId || "31",
-                icalUrl: mikolajkiData.icalUrl
+                icalUrl: mikolajkiData.icalUrl,
+                highlights: ["1 sypialnia", "Centrum Mikołajek"],
             }}
             backUrl="/apartamenty"
         />

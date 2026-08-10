@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import ICalCalendar from "@/components/ICalCalendar";
 import { useRouter } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BedDouble, Building2, CalendarDays, MapPin, Waves } from "lucide-react";
 import ImageLightbox from "@/components/ImageLightbox";
 
 export interface ApartmentTemplateData {
@@ -22,10 +22,13 @@ export interface ApartmentTemplateData {
         bedroom?: string[];
         bedroom2?: string[];
         bathroom?: string[];
+        bathroom2?: string[];
         kitchen?: string[];
         terrace?: string[];
+        terrace2?: string[];
         general?: string[];
     };
+    sectionLabels?: Partial<Record<"living" | "kitchen" | "bedroom" | "bedroom2" | "bathroom" | "bathroom2" | "terrace" | "terrace2" | "general", string>>;
     mainImage: string;
     gallery: string[];
     idoBookingId?: string;
@@ -34,6 +37,7 @@ export interface ApartmentTemplateData {
     customAboutTitle?: string;
     customAmenitiesTitle?: string;
     virtualTourUrl?: string;
+    highlights?: string[];
 }
 
 interface ApartmentDetailTemplateProps {
@@ -85,17 +89,33 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
 
     const apartment = {
         title: data.title,
+        shortTitle: data.shortTitle,
         description: data.description,
-        mainImage: data.mainImage,
+        mainImage: data.mainImage.startsWith('/')
+            ? data.mainImage.replace(/\.(jpe?g|png)$/i, '.webp')
+            : data.mainImage,
         gallery: data.gallery
     };
+
+    const amenitySections = [
+        { key: "living", label: t("details", "items.roomSalon") || "Salon", icon: "/images/icons/SOFA.svg" },
+        { key: "kitchen", label: t("details", "items.roomKitchen") || "Kuchnia", icon: "/images/icons/KITCHEN.svg" },
+        { key: "bedroom", label: data.amenities.bedroom2 ? "Sypialnia 1" : (t("details", "items.roomBedroom") || "Sypialnia"), icon: "/images/icons/BED.svg" },
+        { key: "bedroom2", label: "Sypialnia 2", icon: "/images/icons/BED.svg" },
+        { key: "bathroom", label: data.amenities.bathroom2 ? "Łazienka 1" : (t("details", "items.roomBathroom") || "Łazienka"), icon: "/images/icons/SHOWER.svg" },
+        { key: "bathroom2", label: "Łazienka 2", icon: "/images/icons/SHOWER.svg" },
+        { key: "terrace", label: data.amenities.terrace2 ? "Taras dolny" : "Taras", icon: "/images/icons/TERRACE.svg" },
+        { key: "terrace2", label: "Taras dachowy", icon: "/images/icons/TERRACE.svg" },
+        { key: "general", label: "Pozostałe", icon: "/images/icons/TERRACE.svg" },
+    ] as const;
+    const bookingUrl = data.customBookingUrl || `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`;
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 pb-24 lg:pb-0">
             <Navbar />
 
-            {/* Hero / Header Image */}
-            <section className="relative h-[60vh] w-full">
+            {/* Hero image without text overlays */}
+            <section className="relative w-full h-[clamp(260px,70vw,390px)] md:h-[clamp(320px,37.5vw,560px)]">
                 <Image
                     src={apartment.mainImage}
                     alt={apartment.title}
@@ -103,22 +123,10 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white p-4">
-                        {data.subtitle && (
-                            <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{data.subtitle}</div>
-                        )}
-                        <h1 className="text-5xl md:text-7xl font-sans mb-2">{parseTitle(apartment.shortTitle || apartment.title)}</h1>
-                        {apartment.shortTitle && (
-                            <p className="text-xl md:text-2xl font-light opacity-90 max-w-2xl">{parseTitle(apartment.title)}</p>
-                        )}
-                    </div>
-                </div>
             </section>
 
             {/* Content Section */}
-            <section className="py-12 px-4 max-w-7xl mx-auto">
+            <section className="py-8 md:py-10 px-4 max-w-7xl mx-auto">
                 <button
                     onClick={() => backUrl ? router.push(backUrl) : router.back()}
                     className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-amber-500 transition-colors mb-8 group"
@@ -127,14 +135,54 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                     <span>{t("details", "backToList") || "Powrót"}</span>
                 </button>
 
+                <div className="mb-10 max-w-5xl">
+                    {data.subtitle && (
+                        <div className="flex items-center gap-2 mb-3 text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+                            <MapPin className="w-4 h-4" />
+                            <span>{data.subtitle}</span>
+                        </div>
+                    )}
+                    <h1 className="text-4xl md:text-5xl text-slate-900 dark:text-white mb-3">
+                        {parseTitle(apartment.shortTitle || apartment.title)}
+                    </h1>
+                    {apartment.shortTitle && (
+                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-snug">
+                            {parseTitle(apartment.title)}
+                        </p>
+                    )}
+                    {!!data.highlights?.length && (
+                        <div className="flex flex-wrap gap-3 mt-6" aria-label="Najważniejsze cechy obiektu">
+                            {data.highlights.map((highlight) => {
+                                const normalized = highlight.toLowerCase();
+                                const Icon = normalized.includes("sypial") || normalized.includes("studio")
+                                    ? BedDouble
+                                    : normalized.includes("jacuzzi")
+                                        ? Waves
+                                        : normalized.includes("piętro") || normalized.includes("parter")
+                                            ? Building2
+                                            : MapPin;
+                                return (
+                                    <div
+                                        key={highlight}
+                                        className="inline-flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200"
+                                    >
+                                        <Icon className="w-4 h-4 text-amber-500 shrink-0" />
+                                        <span>{highlight}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
                     {/* Main Content */}
-                    <div className="lg:col-span-2 space-y-12">
+                    <div className="lg:col-span-2 space-y-10">
                         {/* Description */}
                         <div className="text-center md:text-left">
                             <h2 className="text-3xl font-sans mb-6 text-slate-900 dark:text-white">{data.customAboutTitle || t("details", "about")}</h2>
-                            <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed whitespace-pre-line">
+                            <p className="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-[1.5] whitespace-pre-line">
                                 {apartment.description}
                             </p>
                         </div>
@@ -225,83 +273,22 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                             <h3 className="text-3xl font-sans mb-12 text-center text-slate-900 dark:text-white">{data.customAmenitiesTitle || t("details", "amenities") || "Udogodnienia w apartamencie"}</h3>
 
                             <div className="flex flex-wrap gap-4">
-                                {/* Living Room */}
-                                {data.amenities.living && data.amenities.living.length > 0 && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
+                                {amenitySections.map(({ key, label, icon }) => {
+                                    const items = data.amenities[key];
+                                    if (!items?.length) return null;
+                                    const sectionLabel = data.sectionLabels?.[key] || label;
+                                    return (
+                                    <div key={key} className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
                                         <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SOFA.svg")} alt={t("details", "items.roomSalon") || "Salon"} fill className="object-contain dark:invert opacity-80" />
+                                            <Image src={getAssetPath(icon)} alt={sectionLabel} fill className="object-contain dark:invert opacity-80" />
                                         </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomSalon") || "Salon"}</h4>
+                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{sectionLabel}</h4>
                                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.living.map((item: string) => t("amenityNames", item) || item).join(", ")}
+                                            {items.map((item: string) => t("amenityNames", item) || item).join(", ")}
                                         </p>
                                     </div>
-                                )}
-
-                                {/* Kitchen */}
-                                {data.amenities.kitchen && data.amenities.kitchen.length > 0 && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/KITCHEN.svg")} alt={t("details", "items.roomKitchen") || "Kuchnia"} fill className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomKitchen") || "Kuchnia"}</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.kitchen.map((item: string) => t("amenityNames", item) || item).join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* Bedroom */}
-                                {data.amenities.bedroom && data.amenities.bedroom.length > 0 && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt={t("details", "items.roomBedroom") || "Sypialnia"} fill className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomBedroom") || "Sypialnia"}</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.bedroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* Bedroom 2 */}
-                                {data.amenities.bedroom2 && data.amenities.bedroom2.length > 0 && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/BED.svg")} alt="Sypialnia 2" fill className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">Sypialnia 2</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.bedroom2.map((item: string) => t("amenityNames", item) || item).join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* Bathroom */}
-                                {data.amenities.bathroom && data.amenities.bathroom.length > 0 && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-8 h-8 mx-auto mb-2">
-                                            <Image src={getAssetPath("/images/icons/SHOWER.svg")} alt={t("details", "items.roomBathroom") || "Łazienka"} fill className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.roomBathroom") || "Łazienka"}</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {data.amenities.bathroom.map((item: string) => t("amenityNames", item) || item).join(", ")}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {/* Terrace & General Combined */}
-                                {( (data.amenities.terrace && data.amenities.terrace.length > 0) || (data.amenities.general && data.amenities.general.length > 0) ) && (
-                                    <div className="flex-1 min-w-[calc(50%-1rem)] md:min-w-[calc(33.333%-1rem)] p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="relative w-8 h-8 mx-auto mb-2 flex justify-center gap-2">
-                                            <Image src={getAssetPath("/images/icons/TERRACE.svg")} alt={t("details", "items.terraceAndOther") || "Taras i Pozostałe"} width={32} height={32} className="object-contain dark:invert opacity-80" />
-                                        </div>
-                                        <h4 className="text-base font-sans mb-1 text-slate-900 dark:text-white">{t("details", "items.terraceAndOther") || "Taras i Pozostałe"}</h4>
-                                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            {[...(data.amenities.terrace || []), ...(data.amenities.general || [])].map((item: string) => t("amenityNames", item) || item).join(", ")}
-                                        </p>
-                                    </div>
-                                )}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -320,7 +307,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                             </div>
 
                             <a
-                                href={data.customBookingUrl || `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                                href={bookingUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full px-6 py-4 bg-[#00c853] hover:bg-[#00e676] text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex justify-center items-center gap-2"
@@ -341,15 +328,34 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                                 </a>
                             </div>
 
-                            {data.icalUrl && (
-                                <div className="mt-8">
-                                    <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
+                            <div className="mt-8">
+                                <h3 className="text-lg font-sans mb-4 text-slate-900 dark:text-white">{t("details", "availability") || "Dostępność"}</h3>
+                                {data.icalUrl ? (
                                     <ICalCalendar
                                         icalUrl={data.icalUrl}
                                         apartmentId={data.shortTitle || data.id || "1"}
+                                        bookingUrl={bookingUrl}
                                     />
-                                </div>
-                            )}
+                                ) : (
+                                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-800/50">
+                                        <div className="mb-3 flex items-center gap-2 text-slate-800 dark:text-white">
+                                            <CalendarDays className="h-5 w-5 text-amber-500" />
+                                            <p className="font-semibold">Aktualne terminy online</p>
+                                        </div>
+                                        <p className="mb-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                                            Dostępność tego obiektu jest prowadzona bezpośrednio w systemie rezerwacji.
+                                        </p>
+                                        <a
+                                            href={bookingUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex w-full items-center justify-center rounded-xl bg-amber-500 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-amber-600"
+                                        >
+                                            Sprawdź dostępność
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
 
 
                         </div>
@@ -361,7 +367,7 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
             {/* Mobile Floating Booking Button */}
             <div className="fixed bottom-0 left-0 right-0 p-3 pb-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden flex gap-4 border-t border-slate-200 dark:border-slate-800">
                 <a
-                    href={data.customBookingUrl || `https://client37851.idobooking.com/book-now/index.php?ob[${data.idoBookingId || '1'}]=&showOtherOffers=true&currency=0&language=0&from_own_button=1`}
+                    href={bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center bg-[#00c853] hover:bg-[#00e676] text-white font-bold py-4 px-4 rounded-2xl transition-all shadow-lg text-sm uppercase tracking-wider active:scale-95"
