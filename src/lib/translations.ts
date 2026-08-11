@@ -181,6 +181,8 @@ export const translations = {
     "apartments": {
       "title": "Nasze Apartamenty",
       "description": "Wybierz idealne miejsce na swój wypoczynek.",
+      "regionLabel": "Mazury, Kraina Wielkich Jezior",
+      "comingSoon": "Wkrótce",
       "details": "Szczegóły",
       "seeCottage": "Zobacz domki",
       "seeRooms": "Zobacz pokoje",
@@ -237,8 +239,20 @@ export const translations = {
           "title": "Apartament Mikołajki",
           "location": "Mikołajki, jezioro Mikołajskie",
           "description": "Nowoczesny apartament w samym centrum Mikołajek."
+        },
+        "zeglarska": {
+          "title": "Apartamenty Żeglarska Giżycko",
+          "location": "Jezioro Niegocin",
+          "description": "Nowa lokalizacja w Giżycku — szczegóły wkrótce."
         }
       }
+    },
+    "kisajnoHub": {
+      "title": "Apartamenty Kisajno",
+      "subtitle": "Wypoczynek w Giżycku nad jeziorem Kisajno",
+      "chooseTitle": "Wybierz apartament",
+      "apartmentLabel": "Apartament",
+      "upToGuests": "Do {count} osób"
     },
     "cottagesAndRooms": {
       "title": "Nasze domki i pokoje",
@@ -1119,6 +1133,8 @@ export const translations = {
     "apartments": {
       "title": "Unsere Wohnungen",
       "description": "Wählen Sie den perfekten Ort für Ihren Urlaub.",
+      "regionLabel": "Masuren, Land der Großen Seen",
+      "comingSoon": "Demnächst",
       "details": "Details",
       "seeCottage": "Ferienhäuser ansehen",
       "seeRooms": "Zimmer ansehen",
@@ -1175,8 +1191,20 @@ export const translations = {
           "title": "Mikołajki-Wohnung",
           "location": "Mikołajki, Mikołajskie-See",
           "description": "Eine moderne Wohnung im Zentrum von Mikołajki."
+        },
+        "zeglarska": {
+          "title": "Apartments Żeglarska in Giżycko",
+          "location": "Niegocin-See",
+          "description": "Ein neuer Standort in Giżycko — Details folgen in Kürze."
         }
       }
+    },
+    "kisajnoHub": {
+      "title": "Apartments Kisajno",
+      "subtitle": "Urlaub in Giżycko am Kisajno-See",
+      "chooseTitle": "Apartment auswählen",
+      "apartmentLabel": "Apartment",
+      "upToGuests": "Für bis zu {count} Personen"
     },
     "cottagesAndRooms": {
       "title": "Unsere Ferienhäuser und Zimmer",
@@ -2057,6 +2085,8 @@ export const translations = {
     "apartments": {
       "title": "Our Apartments",
       "description": "Choose the perfect place for your holiday.",
+      "regionLabel": "Masuria, Land of the Great Lakes",
+      "comingSoon": "Coming soon",
       "details": "Details",
       "seeCottage": "See cottages",
       "seeRooms": "See rooms",
@@ -2113,8 +2143,20 @@ export const translations = {
           "title": "Mikołajki Apartment",
           "location": "Mikołajki, Mikołajskie Lake",
           "description": "A modern apartment in the very center of Mikołajki."
+        },
+        "zeglarska": {
+          "title": "Żeglarska Apartments, Giżycko",
+          "location": "Lake Niegocin",
+          "description": "A new location in Giżycko — more details coming soon."
         }
       }
+    },
+    "kisajnoHub": {
+      "title": "Kisajno Apartments",
+      "subtitle": "Stay in Giżycko by Lake Kisajno",
+      "chooseTitle": "Choose an apartment",
+      "apartmentLabel": "Apartment",
+      "upToGuests": "Up to {count} guests"
     },
     "cottagesAndRooms": {
       "title": "Our cottages and rooms",
@@ -2995,6 +3037,8 @@ export const translations = {
     "apartments": {
       "title": "Mūsų apartamentai",
       "description": "Pasirinkite idealią vietą savo atostogoms.",
+      "regionLabel": "Mozūrija, Didžiųjų ežerų kraštas",
+      "comingSoon": "Netrukus",
       "details": "Detalės",
       "seeCottage": "Žiūrėti namelius",
       "seeRooms": "Žiūrėti kambarius",
@@ -3051,8 +3095,20 @@ export const translations = {
           "title": "Mikolaikų butas",
           "location": "Mikolaikiai, Mikolaikio ežeras",
           "description": "Modernus butas pačiame Mikolaikių centre."
+        },
+        "zeglarska": {
+          "title": "Żeglarska apartamentai Gižycke",
+          "location": "Niegocin ežeras",
+          "description": "Nauja vieta Gižycke — daugiau informacijos netrukus."
         }
       }
+    },
+    "kisajnoHub": {
+      "title": "Kisajno apartamentai",
+      "subtitle": "Poilsis Gižycke prie Kisajno ežero",
+      "chooseTitle": "Pasirinkite apartamentą",
+      "apartmentLabel": "Apartamentas",
+      "upToGuests": "Iki {count} svečių"
     },
     "cottagesAndRooms": {
       "title": "Mūsų kotedžai ir kambariai",
@@ -4702,6 +4758,8 @@ export const translations = {
     "apartments": {
       "title": "Naše apartmány",
       "description": "Vyberte si ideální místo pro vaši dovolenou.",
+      "regionLabel": "Mazursko, země Velkých jezer",
+      "comingSoon": "Již brzy",
       "details": "Podrobnosti",
       "seeCottage": "Zobrazit chaty",
       "seeRooms": "Zobrazit pokoje",
@@ -4741,8 +4799,20 @@ export const translations = {
           "title": "Apartmán Mikołajki",
           "location": "Mikołajki, Mikołajskie jezero",
           "description": "Moderní byt v samém centru Mikołajki."
+        },
+        "zeglarska": {
+          "title": "Apartmány Żeglarska v Giżycku",
+          "location": "Jezero Niegocin",
+          "description": "Nová lokalita v Giżycku — podrobnosti již brzy."
         }
       }
+    },
+    "kisajnoHub": {
+      "title": "Apartmány Kisajno",
+      "subtitle": "Pobyt v Giżycku u jezera Kisajno",
+      "chooseTitle": "Vyberte si apartmán",
+      "apartmentLabel": "Apartmán",
+      "upToGuests": "Až pro {count} hostů"
     },
     "cottagesAndRooms": {
       "title": "Naše chaty a pokoje",

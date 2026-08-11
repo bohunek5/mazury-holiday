@@ -162,7 +162,7 @@ export default function Navbar() {
                         exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
                         transition={{ duration: 0.3 }}
                         className={cn(
-                            "fixed inset-0 z-[9998] flex flex-col items-center justify-start pt-6 gap-2 lg:hidden overflow-y-auto",
+                            "fixed inset-0 z-[9998] flex flex-col items-center justify-start pt-6 gap-2 xl:hidden overflow-y-auto",
                             mobileMenuBgClass
                         )}
                     >
@@ -226,4 +226,3 @@ export default function Navbar() {
         </nav>
     );
 }
-

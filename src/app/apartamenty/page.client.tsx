@@ -57,6 +57,14 @@ export default function ApartmentsHub() {
             price: `${lowestFuledaPrice} zł`,
             icons: [<Wifi key="wifi" size={18} />, <Trees key="trees" size={18} />, <Waves key="waves" size={18} />, <Car key="car" size={18} />]
         },
+        {
+            id: "zeglarska",
+            title: t("apartments", "items.zeglarska.title"),
+            image: getAssetPath("/images/attractions/gizycko-hero.webp"),
+            location: t("apartments", "items.zeglarska.location"),
+            comingSoon: true,
+            icons: [<Waves key="waves" size={18} />, <Wifi key="wifi" size={18} />, <Car key="car" size={18} />]
+        },
     ];
 
     return (
@@ -76,14 +84,14 @@ export default function ApartmentsHub() {
                     />
                 </div>
                 <div className="relative z-20 text-center text-white p-4">
-                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">Mazury, Kraina Wielkich Jezior</div>
+                    <div className="inline-block bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg mb-4">{t("apartments", "regionLabel")}</div>
                     <h1 className="text-4xl md:text-7xl font-sans mb-2">{t("apartments", "title")}</h1>
                     <p className="text-xl md:text-3xl font-light">{t("apartments", "description")}</p>
                 </div>
             </section>
 
             <section className="py-24 px-4 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {apartments.map((apt, index) => (
                         <motion.div
                             key={apt.id}
@@ -91,8 +99,44 @@ export default function ApartmentsHub() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                         >
+                            {apt.comingSoon ? (
+                            <article className="group relative block h-[450px] overflow-hidden rounded-2xl border border-amber-400/40 shadow-lg">
+                                <Image
+                                    src={getAssetPath(apt.image)}
+                                    alt={apt.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                                    {apt.location}
+                                </div>
+
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-amber-400 px-8 py-5 text-center shadow-2xl ring-1 ring-white/30">
+                                    <span className="block text-sm font-bold uppercase tracking-[0.22em] text-slate-950">
+                                        {t("apartments", "comingSoon")}
+                                    </span>
+                                </div>
+
+                                <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
+
+                                    <h2 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
+                                        {apt.title}
+                                    </h2>
+                                    <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        {apt.icons.map((icon, index) => (
+                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                                {icon}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </article>
+                            ) : (
                             <Link
-                                href={apt.link}
+                                href={apt.link!}
                                 className="group relative block h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
                                 <Image
@@ -109,13 +153,12 @@ export default function ApartmentsHub() {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 p-8 w-full transform group-hover:translate-y-[-10px] transition-transform duration-300">
-
-                                    <h1 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
+                                    <h2 className="text-2xl font-sans font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">
                                         {apt.title}
-                                    </h1>
+                                    </h2>
                                     <div className="flex gap-4 text-white/80 mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
-                                        {apt.icons.map((icon, index) => (
-                                            <div key={index} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
+                                        {apt.icons.map((icon, iconIndex) => (
+                                            <div key={iconIndex} className="bg-white/10 p-2 rounded-full backdrop-blur-sm border border-white/20">
                                                 {icon}
                                             </div>
                                         ))}
@@ -127,6 +170,7 @@ export default function ApartmentsHub() {
                                     </div>
                                 </div>
                             </Link>
+                            )}
                         </motion.div>
                     ))}
                 </div>
