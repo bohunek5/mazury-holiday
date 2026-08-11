@@ -16,11 +16,30 @@ export default function DomkiPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950">
             <Navbar />
-            <section className="px-4 pb-20 pt-32">
+
+            <section className="relative flex h-[60vh] min-h-[430px] items-center justify-center overflow-hidden">
+                <Image
+                    src={skorupkiData.gallery.heroImage}
+                    alt="Domki na Mazurach"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-slate-950/50" />
+                <div className="relative z-10 px-4 text-center text-white">
+                    <p className="mb-4 font-semibold uppercase tracking-[0.2em] text-amber-400">Mazury Holiday</p>
+                    <h1 className="text-4xl md:text-7xl">Domki na Mazurach</h1>
+                    <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90 md:text-2xl">
+                        Wypoczynek blisko jezior, natury i mazurskich atrakcji
+                    </p>
+                </div>
+            </section>
+
+            <section className="px-4 py-20">
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-10 text-center">
-                        <p className="mb-3 font-semibold uppercase tracking-[0.2em] text-amber-500">Mazury Holiday</p>
-                        <h1 className="text-4xl text-slate-900 dark:text-white md:text-6xl">Wybierz domek</h1>
+                        <h2 className="text-4xl text-slate-900 dark:text-white md:text-6xl">Wybierz domek</h2>
                     </div>
                     <div className="grid gap-6 md:grid-cols-2">
                         {cottages.map(cottage => (
