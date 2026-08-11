@@ -262,6 +262,7 @@ export const translations = {
         "aboutTitle": "O domku",
         "amenitiesTitle": "Udogodnienia w domku",
         "gardenTitle": "Ogród i otoczenie",
+        "openInMaps": "Otwórz w Mapach",
         "sectionLabels": {"living": "Salon", "kitchen": "Kuchnia", "bedroom": "Sypialnia 1", "bedroom2": "Sypialnia 2", "bathroom": "Łazienka", "terrace": "Taras", "general": "Ogród i otoczenie"},
         "highlights": ["2 sypialnie", "Publiczna plaża 400 m"],
         "amenities": {
@@ -1199,6 +1200,7 @@ export const translations = {
         "aboutTitle": "Über das Ferienhaus",
         "amenitiesTitle": "Ausstattung des Ferienhauses",
         "gardenTitle": "Garten und Umgebung",
+        "openInMaps": "In Google Maps öffnen",
         "sectionLabels": {"living": "Wohnzimmer", "kitchen": "Küche", "bedroom": "Schlafzimmer 1", "bedroom2": "Schlafzimmer 2", "bathroom": "Badezimmer", "terrace": "Terrasse", "general": "Garten und Umgebung"},
         "highlights": ["2 Schlafzimmer", "Öffentlicher Strand 400 m"],
         "amenities": {
@@ -2136,6 +2138,7 @@ export const translations = {
         "aboutTitle": "About the cottage",
         "amenitiesTitle": "Cottage amenities",
         "gardenTitle": "Garden and surroundings",
+        "openInMaps": "Open in Google Maps",
         "sectionLabels": {"living": "Living room", "kitchen": "Kitchen", "bedroom": "Bedroom 1", "bedroom2": "Bedroom 2", "bathroom": "Bathroom", "terrace": "Terrace", "general": "Garden and surroundings"},
         "highlights": ["2 bedrooms", "Public beach 400 m"],
         "amenities": {
@@ -3073,6 +3076,7 @@ export const translations = {
         "aboutTitle": "Apie namelį",
         "amenitiesTitle": "Namelio patogumai",
         "gardenTitle": "Sodas ir aplinka",
+        "openInMaps": "Atidaryti „Google Maps“",
         "sectionLabels": {"living": "Svetainė", "kitchen": "Virtuvė", "bedroom": "Miegamasis 1", "bedroom2": "Miegamasis 2", "bathroom": "Vonios kambarys", "terrace": "Terasa", "general": "Sodas ir aplinka"},
         "highlights": ["2 miegamieji", "Viešasis paplūdimys už 400 m"],
         "amenities": {
@@ -4762,6 +4766,7 @@ export const translations = {
         "aboutTitle": "O chatě",
         "amenitiesTitle": "Vybavení chaty",
         "gardenTitle": "Zahrada a okolí",
+        "openInMaps": "Otevřít v Mapách Google",
         "sectionLabels": {"living": "Obývací pokoj", "kitchen": "Kuchyně", "bedroom": "Ložnice 1", "bedroom2": "Ložnice 2", "bathroom": "Koupelna", "terrace": "Terasa", "general": "Zahrada a okolí"},
         "highlights": ["2 ložnice", "Veřejná pláž 400 m"],
         "amenities": {

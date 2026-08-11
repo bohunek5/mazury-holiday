@@ -34,6 +34,8 @@ export interface ApartmentTemplateData {
     idoBookingId?: string;
     icalUrl?: string;
     customBookingUrl?: string;
+    navigationUrl?: string;
+    navigationLabel?: string;
     customAboutTitle?: string;
     customAmenitiesTitle?: string;
     virtualTourUrl?: string;
@@ -314,6 +316,18 @@ export default function ApartmentDetailTemplate({ data, backUrl, breadcrumbPath 
                             >
                                 {(t("apartments", "bookBtn") as string) || "ZAREZERWUJ GO"}
                             </a>
+
+                            {data.navigationUrl && (
+                                <a
+                                    href={data.navigationUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border border-amber-500/60 bg-amber-500/10 px-6 py-3 font-semibold text-amber-600 transition-colors hover:bg-amber-500 hover:text-white dark:text-amber-400"
+                                >
+                                    <MapPin className="h-5 w-5" />
+                                    {data.navigationLabel || "Otwórz w Mapach"}
+                                </a>
+                            )}
 
                             {/* Contact Box */}
                             <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">

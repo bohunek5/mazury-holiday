@@ -13,6 +13,7 @@ export default function FuledzkieZaciszePage() {
         aboutTitle: string;
         amenitiesTitle: string;
         gardenTitle: string;
+        openInMaps: string;
         sectionLabels: Record<string, string>;
         highlights: string[];
         amenities: typeof cottage.amenities;
@@ -35,6 +36,8 @@ export default function FuledzkieZaciszePage() {
                 customAboutTitle: property.aboutTitle,
                 customAmenitiesTitle: property.amenitiesTitle,
                 customBookingUrl: cottage.customBookingUrl,
+                navigationUrl: 'https://www.google.com/maps/search/?api=1&query=54.0900704%2C21.6551523',
+                navigationLabel: property.openInMaps,
                 highlights: property.highlights,
             }}
             backUrl="/domki"
