@@ -152,7 +152,7 @@ const ICalCalendar = ({ icalUrl, apartmentId = "A103", forceLanguage, bookingUrl
 
                 // 2. Try live production PHP proxy (works on localhost during dev)
                 try {
-                    const phpUrl = `https://mazuryholiday.pl/calendar.php?url=${encodeURIComponent(cleanUrl)}&t=${Date.now()}`;
+                    const phpUrl = `https://mazury.holiday/calendar.php?url=${encodeURIComponent(cleanUrl)}&t=${Date.now()}`;
                     const response = await fetch(phpUrl, { cache: 'no-store' });
                     if (response.ok) {
                         const text = await response.text();

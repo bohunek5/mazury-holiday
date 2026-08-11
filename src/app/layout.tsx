@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mazuryholiday.pl"),
+  metadataBase: new URL("https://mazury.holiday"),
   title: {
     default: "Mazury.Holiday - Apartamenty, Domki, Pokoje i Czarter na Mazurach",
     template: "%s | Mazury.Holiday"
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mazury.Holiday - Noclegi i Czarter na Mazurach",
     description: "Luksusowe apartamenty w Giżycku (Stranda, Kisajno), domki w Skorupkach, pokoje w Fuledzie oraz czarter jachtów na Mazurach.",
-    url: "https://mazuryholiday.pl",
+    url: "https://mazury.holiday",
     siteName: "Mazury.Holiday",
     locale: "pl_PL",
     type: "website",
@@ -105,8 +105,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Mazury.Holiday",
-            "url": "https://mazuryholiday.pl",
-            "logo": "https://mazuryholiday.pl/icon.svg",
+            "url": "https://mazury.holiday",
+            "logo": "https://mazury.holiday/icon.svg",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+48 730 067 027",
@@ -116,7 +116,7 @@ export default function RootLayout({
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "url": "https://mazuryholiday.pl",
+            "url": "https://mazury.holiday",
             "name": "Mazury.Holiday",
             "description": "Luksusowe apartamenty, domki i czarter jachtów na Mazurach."
           },
@@ -124,9 +124,9 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "LodgingBusiness",
             "name": "Mazury.Holiday",
-            "image": "https://mazuryholiday.pl/icon.svg",
+            "image": "https://mazury.holiday/icon.svg",
             "description": "Luksusowe apartamenty w Giżycku i Fuledzie, domki w Skorupkach oraz czarter jachtów na Mazurach.",
-            "url": "https://mazuryholiday.pl",
+            "url": "https://mazury.holiday",
             "telephone": "+48 730 067 027",
             "address": {
               "@type": "PostalAddress",

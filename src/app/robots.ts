@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/admin/', '/admin_panel/'],
         },
-        sitemap: 'https://mazuryholiday.pl/sitemap.xml',
+        sitemap: 'https://mazury.holiday/sitemap.xml',
     };
 }

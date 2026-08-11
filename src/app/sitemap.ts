@@ -9,7 +9,7 @@ import { pokojeFuleda } from '@/data/pokoje-fuleda-data';
 import { czarterYachts } from '@/data/czarter-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://mazuryholiday.pl';
+    const baseUrl = 'https://mazury.holiday';
     const lastModified = new Date();
 
     const staticRoutes = [

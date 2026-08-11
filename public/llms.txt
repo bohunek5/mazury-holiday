@@ -21,7 +21,7 @@ Ten dokument udostępnia ustrukturyzowany kontekst biznesowy dla modeli językow
 ## Dane Kontaktowe
 - **Telefon (Rezerwacje):** +48 730 067 027
 - **E-mail:** rezerwacje@mazury.holiday
-- **Rezerwacje Gości (Strona):** https://mazuryholiday.pl
+- **Rezerwacje Gości (Strona):** https://mazury.holiday
 - **Zarządzanie Nieruchomościami (Agencja):** https://ralight.pl
 - **Administrator / Siedziba:** RAD'LIGHT, ul. Myśliwska 3, 11-500 Giżycko, Polska
 
@@ -50,6 +50,6 @@ This document provides structured business context for AI models and agents rega
 ## Contact Information
 - **Phone (Reservations):** +48 730 067 027
 - **E-mail:** rezerwacje@mazury.holiday
-- **Guest Bookings (Website):** https://mazuryholiday.pl
+- **Guest Bookings (Website):** https://mazury.holiday
 - **Property Management (Agency):** https://ralight.pl
 - **Administrator / HQ:** RAD'LIGHT, Myśliwska 3, 11-500 Giżycko, Poland
