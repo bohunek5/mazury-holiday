@@ -6,13 +6,16 @@ import { skorupkiData } from '@/data/skorupki-data';
 import { fuledzkieZaciszeData } from '@/data/fuledzkie-zacisze-data';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const cottages = [
-    { id: 'skorupki', title: 'Domki Skorupki', location: 'Skorupki, jezioro Tałty', image: skorupkiData.gallery.heroImage },
-    { id: 'fuledzkie-zacisze', title: fuledzkieZaciszeData.title, location: 'Fuleda', image: fuledzkieZaciszeData.gallery.heroImage },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function DomkiPage() {
+    const { t } = useLanguage();
+    const hub = t('cottagePages', 'hub') as Record<string, string>;
+    const cottages = [
+        { id: 'skorupki', title: hub.skorupkiTitle, location: hub.skorupkiLocation, image: skorupkiData.gallery.heroImage },
+        { id: 'fuledzkie-zacisze', title: hub.fuledzkieTitle, location: hub.fuledzkieLocation, image: fuledzkieZaciszeData.gallery.heroImage },
+    ];
+
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950">
             <Navbar />
@@ -20,7 +23,7 @@ export default function DomkiPage() {
             <section className="relative flex h-[60vh] min-h-[430px] items-center justify-center overflow-hidden">
                 <Image
                     src={skorupkiData.gallery.heroImage}
-                    alt="Domki na Mazurach"
+                    alt={hub.title}
                     fill
                     priority
                     className="object-cover"
@@ -28,10 +31,10 @@ export default function DomkiPage() {
                 />
                 <div className="absolute inset-0 bg-slate-950/50" />
                 <div className="relative z-10 px-4 text-center text-white">
-                    <p className="mb-4 font-semibold uppercase tracking-[0.2em] text-amber-400">Mazury Holiday</p>
-                    <h1 className="text-4xl md:text-7xl">Domki na Mazurach</h1>
+                    <p className="mb-4 font-semibold uppercase tracking-[0.2em] text-amber-400">{hub.eyebrow}</p>
+                    <h1 className="text-4xl md:text-7xl">{hub.title}</h1>
                     <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90 md:text-2xl">
-                        Wypoczynek blisko jezior, natury i mazurskich atrakcji
+                        {hub.description}
                     </p>
                 </div>
             </section>
@@ -39,7 +42,7 @@ export default function DomkiPage() {
             <section className="px-4 py-20">
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-10 text-center">
-                        <h2 className="text-4xl text-slate-900 dark:text-white md:text-6xl">Wybierz domek</h2>
+                        <h2 className="text-4xl text-slate-900 dark:text-white md:text-6xl">{hub.chooseTitle}</h2>
                     </div>
                     <div className="grid gap-6 md:grid-cols-2">
                         {cottages.map(cottage => (

@@ -244,6 +244,52 @@ export const translations = {
       "title": "Nasze domki i pokoje",
       "description": "Poczuj bliskość natury w komfortowych warunkach."
     },
+    "cottagePages": {
+      "hub": {
+        "eyebrow": "Mazury Holiday",
+        "title": "Domki na Mazurach",
+        "description": "Wypoczynek blisko jezior, natury i mazurskich atrakcji",
+        "chooseTitle": "Wybierz domek",
+        "skorupkiTitle": "Domki Skorupki",
+        "skorupkiLocation": "Skorupki, jezioro Tałty",
+        "fuledzkieTitle": "Domek Fuledzkie Zacisze",
+        "fuledzkieLocation": "Fuleda"
+      },
+      "fuledzkie": {
+        "title": "Domek Fuledzkie Zacisze",
+        "location": "Fuleda, Mazury",
+        "description": "Domek w Fuledzie dla rodzin i grup szukających spokojnego wypoczynku. Ma dwie sypialnie, salon z kominkiem, wyposażoną kuchnię, łazienkę, taras oraz duży ogród. Publiczna plaża gminna znajduje się około 400 metrów od obiektu.",
+        "aboutTitle": "O domku",
+        "amenitiesTitle": "Udogodnienia w domku",
+        "gardenTitle": "Ogród i otoczenie",
+        "sectionLabels": {"living": "Salon", "kitchen": "Kuchnia", "bedroom": "Sypialnia 1", "bedroom2": "Sypialnia 2", "bathroom": "Łazienka", "terrace": "Taras", "general": "Ogród i otoczenie"},
+        "highlights": ["2 sypialnie", "Publiczna plaża 400 m"],
+        "amenities": {
+          "living": ["TV", "stół", "krzesła", "rozkładana sofa", "kominek"],
+          "kitchen": ["płyta indukcyjna", "lodówka", "zmywarka", "mikrofalówka", "komplet naczyń i sztućców", "zestaw startowy"],
+          "bedroom": ["łóżko dwuosobowe", "łóżko pojedyncze", "komoda"],
+          "bedroom2": ["łóżko dwuosobowe", "łóżko pojedyncze"],
+          "bathroom": ["prysznic", "suszarka do włosów", "mydło", "żel pod prysznic", "balsam do ciała", "ręczniki"],
+          "terrace": ["stół", "ławki", "grill gazowy"],
+          "general": ["plac zabaw", "trampolina", "sad", "parking", "miejsce na ognisko", "publiczna plaża gminna 400 m"]
+        }
+      },
+      "skorupki": {
+        "title": "Domki Skorupki",
+        "location": "Skorupki, jezioro Tałty",
+        "aboutTitle": "O domkach",
+        "amenitiesTitle": "Udogodnienia w domkach",
+        "sectionLabels": {"living": "Salon", "kitchen": "Kuchnia", "bedroom": "Sypialnie", "bathroom": "Łazienka", "terrace": "Taras i otoczenie"},
+        "highlights": ["Dostęp do jeziora", "Prywatny taras"],
+        "amenities": {
+          "living": ["klimatyzacja", "WiFi", "Smart TV"],
+          "kitchen": ["wyposażony aneks kuchenny", "zmywarka", "płyta indukcyjna"],
+          "bedroom": ["łóżka małżeńskie i pojedyncze", "pościel"],
+          "bathroom": ["prysznic", "ręczniki"],
+          "terrace": ["prywatny taras z grillem", "miejsce na ognisko", "dostęp do jeziora", "miejsce parkingowe"]
+        }
+      }
+    },
     "charter": {
       "tag": "Bez patentu",
       "title": "Czarter Jachtu Motorowego",
@@ -279,6 +325,7 @@ export const translations = {
         "jacuzzi": "Jacuzzi",
         "sauna": "Sauna"
       },
+      "mapTitle": "Lokalizacja budynków Stranda",
       "subtitle": "Zapraszamy do luksusowych apartamentów w Giżycku nad jeziorem Kisajno",
       "description": "Apartamenty znajdują się przy porcie Stranda na terenie kompleksu apartamentowców Stranda Residence w Giżycku. Bliskość jeziora i oferty portu (wypożyczalnia sprzętu wodnego, tawerna, w sezonie letnim koncerty szantowo - rockowe), a także centrum Giżycka zapewnia wiele form aktywnego wypoczynku przy Szlaku Wielkich Jezior Mazurskich.",
       "building": "Budynek",
@@ -1134,6 +1181,52 @@ export const translations = {
       "title": "Unsere Ferienhäuser und Zimmer",
       "description": "Fühlen Sie sich in komfortablen Bedingungen der Natur nahe."
     },
+    "cottagePages": {
+      "hub": {
+        "eyebrow": "Mazury Holiday",
+        "title": "Ferienhäuser in Masuren",
+        "description": "Urlaub nahe an Seen, Natur und den schönsten Zielen Masurens",
+        "chooseTitle": "Ferienhaus auswählen",
+        "skorupkiTitle": "Ferienhäuser Skorupki",
+        "skorupkiLocation": "Skorupki, Tałty-See",
+        "fuledzkieTitle": "Ferienhaus Fuledzkie Zacisze",
+        "fuledzkieLocation": "Fuleda"
+      },
+      "fuledzkie": {
+        "title": "Ferienhaus Fuledzkie Zacisze",
+        "location": "Fuleda, Masuren",
+        "description": "Ein Ferienhaus in Fuleda für Familien und Gruppen, die Ruhe suchen. Es verfügt über zwei Schlafzimmer, ein Wohnzimmer mit Kamin, eine ausgestattete Küche, ein Bad, eine Terrasse und einen großen Garten. Der öffentliche Gemeindestrand liegt etwa 400 Meter entfernt.",
+        "aboutTitle": "Über das Ferienhaus",
+        "amenitiesTitle": "Ausstattung des Ferienhauses",
+        "gardenTitle": "Garten und Umgebung",
+        "sectionLabels": {"living": "Wohnzimmer", "kitchen": "Küche", "bedroom": "Schlafzimmer 1", "bedroom2": "Schlafzimmer 2", "bathroom": "Badezimmer", "terrace": "Terrasse", "general": "Garten und Umgebung"},
+        "highlights": ["2 Schlafzimmer", "Öffentlicher Strand 400 m"],
+        "amenities": {
+          "living": ["TV", "Tisch", "Stühle", "Schlafsofa", "Kamin"],
+          "kitchen": ["Induktionskochfeld", "Kühlschrank", "Geschirrspüler", "Mikrowelle", "Geschirr und Besteck", "Starterset"],
+          "bedroom": ["Doppelbett", "Einzelbett", "Kommode"],
+          "bedroom2": ["Doppelbett", "Einzelbett"],
+          "bathroom": ["Dusche", "Haartrockner", "Seife", "Duschgel", "Körperlotion", "Handtücher"],
+          "terrace": ["Tisch", "Bänke", "Gasgrill"],
+          "general": ["Spielplatz", "Trampolin", "Obstgarten", "Parkplatz", "Feuerstelle", "öffentlicher Gemeindestrand 400 m"]
+        }
+      },
+      "skorupki": {
+        "title": "Ferienhäuser Skorupki",
+        "location": "Skorupki, Tałty-See",
+        "aboutTitle": "Über die Ferienhäuser",
+        "amenitiesTitle": "Ausstattung der Ferienhäuser",
+        "sectionLabels": {"living": "Wohnzimmer", "kitchen": "Küche", "bedroom": "Schlafzimmer", "bathroom": "Badezimmer", "terrace": "Terrasse und Umgebung"},
+        "highlights": ["Zugang zum See", "Private Terrasse"],
+        "amenities": {
+          "living": ["Klimaanlage", "WLAN", "Smart-TV"],
+          "kitchen": ["ausgestattete Küchenzeile", "Geschirrspüler", "Induktionskochfeld"],
+          "bedroom": ["Doppel- und Einzelbetten", "Bettwäsche"],
+          "bathroom": ["Dusche", "Handtücher"],
+          "terrace": ["private Terrasse mit Grill", "Feuerstelle", "Zugang zum See", "Parkplatz"]
+        }
+      }
+    },
     "charter": {
       "tag": "Kein Patent",
       "title": "Motoryacht-Charter",
@@ -1169,6 +1262,7 @@ export const translations = {
         "jacuzzi": "Whirlpool",
         "sauna": "Sauna"
       },
+      "mapTitle": "Lage der Stranda-Gebäude",
       "subtitle": "Wir laden Sie zu Luxusapartments in Giżycko am Kisajno-See ein",
       "description": "Die Apartments befinden sich am Hafen Stranda im Apartmentkomplex Stranda Residence in Giżycko. Die Nähe des Sees und das Angebot des Hafens (Verleih von Wasserausrüstung, Taverne, Shanty- und Rockkonzerte in der Sommersaison) sowie des Zentrums von Giżycko sorgen für viele Formen der aktiven Erholung entlang der Route der Großen Masurischen Seen.",
       "building": "Gebäude",
@@ -2024,6 +2118,52 @@ export const translations = {
       "title": "Our cottages and rooms",
       "description": "Feel close to nature in comfortable conditions."
     },
+    "cottagePages": {
+      "hub": {
+        "eyebrow": "Mazury Holiday",
+        "title": "Cottages in Masuria",
+        "description": "Stay close to the lakes, nature and Masuria's attractions",
+        "chooseTitle": "Choose a cottage",
+        "skorupkiTitle": "Skorupki Cottages",
+        "skorupkiLocation": "Skorupki, Lake Tałty",
+        "fuledzkieTitle": "Fuledzkie Zacisze Cottage",
+        "fuledzkieLocation": "Fuleda"
+      },
+      "fuledzkie": {
+        "title": "Fuledzkie Zacisze Cottage",
+        "location": "Fuleda, Masuria",
+        "description": "A cottage in Fuleda for families and groups looking for a peaceful stay. It has two bedrooms, a living room with a fireplace, an equipped kitchen, a bathroom, a terrace and a large garden. The public municipal beach is about 400 metres away.",
+        "aboutTitle": "About the cottage",
+        "amenitiesTitle": "Cottage amenities",
+        "gardenTitle": "Garden and surroundings",
+        "sectionLabels": {"living": "Living room", "kitchen": "Kitchen", "bedroom": "Bedroom 1", "bedroom2": "Bedroom 2", "bathroom": "Bathroom", "terrace": "Terrace", "general": "Garden and surroundings"},
+        "highlights": ["2 bedrooms", "Public beach 400 m"],
+        "amenities": {
+          "living": ["TV", "table", "chairs", "sofa bed", "fireplace"],
+          "kitchen": ["induction hob", "fridge", "dishwasher", "microwave", "crockery and cutlery", "welcome set"],
+          "bedroom": ["double bed", "single bed", "chest of drawers"],
+          "bedroom2": ["double bed", "single bed"],
+          "bathroom": ["shower", "hair dryer", "soap", "shower gel", "body lotion", "towels"],
+          "terrace": ["table", "benches", "gas barbecue"],
+          "general": ["playground", "trampoline", "orchard", "parking", "fire pit", "public municipal beach 400 m"]
+        }
+      },
+      "skorupki": {
+        "title": "Skorupki Cottages",
+        "location": "Skorupki, Lake Tałty",
+        "aboutTitle": "About the cottages",
+        "amenitiesTitle": "Cottage amenities",
+        "sectionLabels": {"living": "Living room", "kitchen": "Kitchen", "bedroom": "Bedrooms", "bathroom": "Bathroom", "terrace": "Terrace and surroundings"},
+        "highlights": ["Lake access", "Private terrace"],
+        "amenities": {
+          "living": ["air conditioning", "WiFi", "Smart TV"],
+          "kitchen": ["equipped kitchenette", "dishwasher", "induction hob"],
+          "bedroom": ["double and single beds", "bed linen"],
+          "bathroom": ["shower", "towels"],
+          "terrace": ["private terrace with barbecue", "fire pit", "lake access", "parking space"]
+        }
+      }
+    },
     "charter": {
       "tag": "No patent",
       "title": "Motor Yacht Charter",
@@ -2059,6 +2199,7 @@ export const translations = {
         "jacuzzi": "Jacuzzi",
         "sauna": "Sauna"
       },
+      "mapTitle": "Location of the Stranda buildings",
       "subtitle": "We invite you to luxury apartments in Giżycko on Lake Kisajno",
       "description": "The apartments are located at the Stranda port in the Stranda Residence apartment complex in Giżycko. The proximity of the lake and the port's offer (water equipment rental, tavern, shanty and rock concerts in the summer), as well as the center of Giżycko, ensures many forms of active recreation along the Great Masurian Lakes Trail.",
       "building": "Building",
@@ -2914,6 +3055,52 @@ export const translations = {
       "title": "Mūsų kotedžai ir kambariai",
       "description": "Jauskitės šalia gamtos patogiomis sąlygomis."
     },
+    "cottagePages": {
+      "hub": {
+        "eyebrow": "Mazury Holiday",
+        "title": "Poilsio nameliai Mozūrijoje",
+        "description": "Poilsis šalia ežerų, gamtos ir Mozūrijos lankytinų vietų",
+        "chooseTitle": "Pasirinkite namelį",
+        "skorupkiTitle": "Skorupki nameliai",
+        "skorupkiLocation": "Skorupki, Tałty ežeras",
+        "fuledzkieTitle": "Fuledzkie Zacisze namelis",
+        "fuledzkieLocation": "Fuleda"
+      },
+      "fuledzkie": {
+        "title": "Fuledzkie Zacisze namelis",
+        "location": "Fuleda, Mozūrija",
+        "description": "Poilsio namelis Fuledoje šeimoms ir grupėms, ieškančioms ramybės. Jame yra du miegamieji, svetainė su židiniu, įrengta virtuvė, vonios kambarys, terasa ir didelis sodas. Viešasis savivaldybės paplūdimys yra maždaug už 400 metrų.",
+        "aboutTitle": "Apie namelį",
+        "amenitiesTitle": "Namelio patogumai",
+        "gardenTitle": "Sodas ir aplinka",
+        "sectionLabels": {"living": "Svetainė", "kitchen": "Virtuvė", "bedroom": "Miegamasis 1", "bedroom2": "Miegamasis 2", "bathroom": "Vonios kambarys", "terrace": "Terasa", "general": "Sodas ir aplinka"},
+        "highlights": ["2 miegamieji", "Viešasis paplūdimys už 400 m"],
+        "amenities": {
+          "living": ["televizorius", "stalas", "kėdės", "miegamoji sofa", "židinys"],
+          "kitchen": ["indukcinė kaitlentė", "šaldytuvas", "indaplovė", "mikrobangų krosnelė", "indai ir stalo įrankiai", "pradinis rinkinys"],
+          "bedroom": ["dvigulė lova", "viengulė lova", "komoda"],
+          "bedroom2": ["dvigulė lova", "viengulė lova"],
+          "bathroom": ["dušas", "plaukų džiovintuvas", "muilas", "dušo želė", "kūno losjonas", "rankšluosčiai"],
+          "terrace": ["stalas", "suolai", "dujinis grilis"],
+          "general": ["žaidimų aikštelė", "batutas", "vaismedžių sodas", "automobilių stovėjimo vieta", "laužavietė", "viešasis savivaldybės paplūdimys už 400 m"]
+        }
+      },
+      "skorupki": {
+        "title": "Skorupki nameliai",
+        "location": "Skorupki, Tałty ežeras",
+        "aboutTitle": "Apie namelius",
+        "amenitiesTitle": "Namelių patogumai",
+        "sectionLabels": {"living": "Svetainė", "kitchen": "Virtuvė", "bedroom": "Miegamieji", "bathroom": "Vonios kambarys", "terrace": "Terasa ir aplinka"},
+        "highlights": ["Priėjimas prie ežero", "Privati terasa"],
+        "amenities": {
+          "living": ["oro kondicionierius", "WiFi", "išmanusis televizorius"],
+          "kitchen": ["įrengta virtuvėlė", "indaplovė", "indukcinė kaitlentė"],
+          "bedroom": ["dvigulės ir viengulės lovos", "patalynė"],
+          "bathroom": ["dušas", "rankšluosčiai"],
+          "terrace": ["privati terasa su griliu", "laužavietė", "priėjimas prie ežero", "automobilių stovėjimo vieta"]
+        }
+      }
+    },
     "charter": {
       "tag": "Nėra patento",
       "title": "Motorinių jachtų nuoma",
@@ -2949,6 +3136,7 @@ export const translations = {
         "jacuzzi": "Sūkurinė vonia",
         "sauna": "Pirtis"
       },
+      "mapTitle": "Stranda pastatų vieta",
       "subtitle": "Kviečiame į prabangius apartamentus Gižycke prie Kisajno ežero",
       "description": "Apartamentai yra Stranda uoste, Stranda Residence apartamentų komplekse Gižycke. Ežero artumas ir uosto pasiūla (vandens įrangos nuoma, taverna, lūšnynų ir roko koncertai vasaros sezonu), taip pat Gižycko centras užtikrina daugybę aktyvaus poilsio formų Didžiųjų Mozūrų ežerų taku.",
       "building": "Pastatas",
@@ -4556,6 +4744,52 @@ export const translations = {
       "title": "Naše chaty a pokoje",
       "description": "Cítit se blízko přírody v pohodlných podmínkách."
     },
+    "cottagePages": {
+      "hub": {
+        "eyebrow": "Mazury Holiday",
+        "title": "Chaty v Mazursku",
+        "description": "Pobyt u jezer, v přírodě a poblíž mazurských atrakcí",
+        "chooseTitle": "Vyberte si chatu",
+        "skorupkiTitle": "Chaty Skorupki",
+        "skorupkiLocation": "Skorupki, jezero Tałty",
+        "fuledzkieTitle": "Chata Fuledzkie Zacisze",
+        "fuledzkieLocation": "Fuleda"
+      },
+      "fuledzkie": {
+        "title": "Chata Fuledzkie Zacisze",
+        "location": "Fuleda, Mazursko",
+        "description": "Chata ve Fuledě pro rodiny a skupiny, které hledají klidný pobyt. Má dvě ložnice, obývací pokoj s krbem, vybavenou kuchyň, koupelnu, terasu a velkou zahradu. Veřejná obecní pláž je vzdálená přibližně 400 metrů.",
+        "aboutTitle": "O chatě",
+        "amenitiesTitle": "Vybavení chaty",
+        "gardenTitle": "Zahrada a okolí",
+        "sectionLabels": {"living": "Obývací pokoj", "kitchen": "Kuchyně", "bedroom": "Ložnice 1", "bedroom2": "Ložnice 2", "bathroom": "Koupelna", "terrace": "Terasa", "general": "Zahrada a okolí"},
+        "highlights": ["2 ložnice", "Veřejná pláž 400 m"],
+        "amenities": {
+          "living": ["televize", "stůl", "židle", "rozkládací pohovka", "krb"],
+          "kitchen": ["indukční varná deska", "lednice", "myčka", "mikrovlnná trouba", "nádobí a příbory", "uvítací sada"],
+          "bedroom": ["dvoulůžko", "jednolůžko", "komoda"],
+          "bedroom2": ["dvoulůžko", "jednolůžko"],
+          "bathroom": ["sprcha", "fén", "mýdlo", "sprchový gel", "tělové mléko", "ručníky"],
+          "terrace": ["stůl", "lavice", "plynový gril"],
+          "general": ["dětské hřiště", "trampolína", "sad", "parkování", "ohniště", "veřejná obecní pláž 400 m"]
+        }
+      },
+      "skorupki": {
+        "title": "Chaty Skorupki",
+        "location": "Skorupki, jezero Tałty",
+        "aboutTitle": "O chatách",
+        "amenitiesTitle": "Vybavení chat",
+        "sectionLabels": {"living": "Obývací pokoj", "kitchen": "Kuchyně", "bedroom": "Ložnice", "bathroom": "Koupelna", "terrace": "Terasa a okolí"},
+        "highlights": ["Přístup k jezeru", "Soukromá terasa"],
+        "amenities": {
+          "living": ["klimatizace", "WiFi", "Smart TV"],
+          "kitchen": ["vybavený kuchyňský kout", "myčka", "indukční varná deska"],
+          "bedroom": ["dvoulůžka a jednolůžka", "ložní prádlo"],
+          "bathroom": ["sprcha", "ručníky"],
+          "terrace": ["soukromá terasa s grilem", "ohniště", "přístup k jezeru", "parkovací místo"]
+        }
+      }
+    },
     "charter": {
       "tag": "Žádný patent",
       "title": "Charta motorových jachet",
@@ -4591,6 +4825,7 @@ export const translations = {
         "jacuzzi": "Vířivka",
         "sauna": "Sauna"
       },
+      "mapTitle": "Umístění budov Stranda",
       "subtitle": "Zveme vás do luxusních apartmánů v Giżycku u jezera Kisajno",
       "description": "Apartmány se nacházejí v přístavu Stranda v apartmánovém komplexu Stranda Residence v Giżycku. Blízkost jezera a nabídka přístavu (půjčovna vodního vybavení, taverna, chatrče a rockové koncerty v letní sezóně), stejně jako centrum Giżycka, zajišťuje mnoho forem aktivního odpočinku na Stezce Velkých Mazurských jezer.",
       "building": "Budova",

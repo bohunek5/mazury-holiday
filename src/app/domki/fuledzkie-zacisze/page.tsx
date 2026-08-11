@@ -2,26 +2,40 @@
 
 import ApartmentDetailTemplate from '@/components/ApartmentDetailTemplate';
 import { fuledzkieZaciszeData as cottage } from '@/data/fuledzkie-zacisze-data';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function FuledzkieZaciszePage() {
+    const { t } = useLanguage();
+    const property = t('cottagePages', 'fuledzkie') as {
+        title: string;
+        location: string;
+        description: string;
+        aboutTitle: string;
+        amenitiesTitle: string;
+        gardenTitle: string;
+        sectionLabels: Record<string, string>;
+        highlights: string[];
+        amenities: typeof cottage.amenities;
+    };
+
     return (
         <ApartmentDetailTemplate
             data={{
                 id: cottage.id,
-                shortTitle: cottage.title,
-                title: cottage.title,
-                subtitle: 'Fuleda, Mazury',
-                description: cottage.description,
-                amenities: cottage.amenities,
-                sectionLabels: { general: 'Ogród i otoczenie' },
+                shortTitle: property.title,
+                title: property.title,
+                subtitle: property.location,
+                description: property.description,
+                amenities: property.amenities,
+                sectionLabels: property.sectionLabels,
                 mainImage: cottage.gallery.heroImage,
                 gallery: cottage.gallery.images,
                 idoBookingId: cottage.idoBookingId,
                 icalUrl: cottage.icalUrl,
-                customAboutTitle: 'O domku',
-                customAmenitiesTitle: 'Udogodnienia w domku',
+                customAboutTitle: property.aboutTitle,
+                customAmenitiesTitle: property.amenitiesTitle,
                 customBookingUrl: cottage.customBookingUrl,
-                highlights: ['2 sypialnie', 'Publiczna plaża 400 m'],
+                highlights: property.highlights,
             }}
             backUrl="/domki"
         />
