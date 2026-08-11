@@ -124,7 +124,10 @@ export default function StrandaPage() {
 
     const filtersLabels = (t("stranda", "filters") as any) || {};
     const featuresLabels = (t("stranda", "features") as any) || {};
-    
+    const translatedMapTitle = t("stranda", "mapTitle");
+    const mapTitle = translatedMapTitle === "mapTitle"
+        ? "Lokalizacja budynków Stranda"
+        : translatedMapTitle;
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -217,7 +220,7 @@ export default function StrandaPage() {
 
                 {/* Interactive Map */}
                 <div className="mb-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm text-center max-w-4xl mx-auto">
-                    <h2 className="text-xl font-bold uppercase tracking-widest text-slate-700 dark:text-slate-300 mb-6">{t("stranda", "mapTitle") as string || "Lokalizacja budynków"}</h2>
+                    <h2 className="text-xl font-bold uppercase tracking-widest text-slate-700 dark:text-slate-300 mb-6">{mapTitle}</h2>
                     <StrandaMap />
                 </div>
 

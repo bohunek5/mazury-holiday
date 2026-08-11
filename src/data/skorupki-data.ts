@@ -31,7 +31,7 @@ export const skorupkiData: SkorupkiData = {
     customAboutTitle: "O domkach",
     customAmenitiesTitle: "Udogodnienia w domkach",
     gallery: {
-        heroImage: getAssetPath("/images/skorupki/skorupki_6.webp"),
+        heroImage: getAssetPath("/images/skorupki/skorupki_21.webp"),
         images: [
             getAssetPath("/images/skorupki/skorupki_1.webp"),
             getAssetPath("/images/skorupki/skorupki_2.webp"),
