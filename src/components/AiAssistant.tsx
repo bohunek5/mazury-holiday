@@ -7,15 +7,30 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
+import {
+    assistantUi,
+    createAssistantContext,
+    getAssistantGreeting,
+    getAssistantResponse,
+    type AssistantContext,
+} from "@/utils/aiAssistantEngine";
+
+type ChatMessage = { role: "user" | "assistant"; content: string };
 
 export function AiAssistant() {
     const { isOpen, closeChat, toggleChat } = useChat();
+    const { language } = useLanguage();
+    const ui = assistantUi[language];
     const [input, setInput] = useState("");
-    const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([
-        { role: "assistant", content: "Cześć! Jestem Twoim wirtualnym asystentem Mazury Holiday. Chętnie opowiem Ci o naszych apartamentach (Stranda, Kisajno), strefie ciszy w Fuledzie, domkach Skorupki czy czarterze luksusowych jachtów. W czym mogę pomóc?" }
+    const [messages, setMessages] = useState<ChatMessage[]>([
+        { role: "assistant", content: getAssistantGreeting(language) }
     ]);
+    const [assistantContext, setAssistantContext] = useState<AssistantContext>(createAssistantContext());
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const previousLanguageRef = useRef(language);
+    const hasUserMessagesRef = useRef(false);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,22 +40,30 @@ export function AiAssistant() {
         scrollToBottom();
     }, [messages]);
 
-    const handleSend = async () => {
-        if (!input.trim()) return;
+    useEffect(() => {
+        if (previousLanguageRef.current === language) return;
+        previousLanguageRef.current = language;
+        if (!hasUserMessagesRef.current) {
+            setAssistantContext(createAssistantContext());
+            setMessages([{ role: "assistant", content: getAssistantGreeting(language) }]);
+        }
+    }, [language]);
 
-        const userMessage = input.trim();
+    const handleSend = (suggestedMessage?: string) => {
+        const userMessage = (suggestedMessage ?? input).trim();
+        if (!userMessage || isTyping) return;
+
         setInput("");
+        hasUserMessagesRef.current = true;
         setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
         setIsTyping(true);
 
-        const { getAssistantResponse } = await import("@/utils/aiAssistantEngine");
-
-        // Simulate a slight delay for realistic feel
         setTimeout(() => {
-            const response = getAssistantResponse(userMessage);
-            setMessages((prev) => [...prev, { role: "assistant", content: response }]);
+            const result = getAssistantResponse(userMessage, language, assistantContext);
+            setMessages((prev) => [...prev, { role: "assistant", content: result.answer }]);
+            setAssistantContext(result.context);
             setIsTyping(false);
-        }, 1000);
+        }, 350);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -93,17 +116,17 @@ export function AiAssistant() {
                                     <Sparkles size={18} fill="currentColor" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-sm">Mazury Holiday Asystent</h3>
+                                    <h3 className="font-bold text-sm">{ui.title}</h3>
                                     <p className="text-xs text-amber-100 flex items-center gap-1">
                                         <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-                                        Online
+                                        {ui.online}
                                     </p>
                                 </div>
                             </div>
                             <button
                                 onClick={closeChat}
                                 className="p-1 hover:bg-white/20 rounded-full transition-colors"
-                                aria-label="Zamknij czat"
+                                aria-label={ui.close}
                             >
                                 <X size={20} />
                             </button>
@@ -121,10 +144,10 @@ export function AiAssistant() {
                                 >
                                     <div
                                         className={cn(
-                                            "max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm prose prose-slate dark:prose-invert prose-p:leading-relaxed prose-a:text-white prose-a:underline hover:prose-a:text-slate-100",
+                                            "max-w-[86%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm prose prose-slate dark:prose-invert prose-p:leading-relaxed prose-ul:my-2 prose-li:my-1",
                                             msg.role === "user"
                                                 ? "bg-amber-500 text-white rounded-tr-none"
-                                                : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-tl-none border border-slate-100 dark:border-slate-700"
+                                                : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-tl-none border border-slate-100 dark:border-slate-700 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:underline hover:prose-a:text-amber-700 dark:hover:prose-a:text-amber-300"
                                         )}
                                     >
                                         {msg.role === "assistant" ? (
@@ -132,16 +155,12 @@ export function AiAssistant() {
                                                 <div className="assistant-markdown">
                                                     <Markdown
                                                         components={{
-                                                            a: ({ ...props }) => (
-                                                                <Link
-                                                                    href={props.href || "#"}
-                                                                    className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 transition-opacity"
-                                                                    onClick={() => {
-                                                                        if (props.href?.startsWith('/')) {
-                                                                            // Optional: closeChat(); 
-                                                                        }
-                                                                    }}
-                                                                >
+                                                            a: ({ ...props }) => props.href?.startsWith("http") ? (
+                                                                <a href={props.href} target="_blank" rel="noopener noreferrer" className="font-bold underline decoration-2 underline-offset-2">
+                                                                    {props.children}
+                                                                </a>
+                                                            ) : (
+                                                                <Link href={props.href || "#"} className="font-bold underline decoration-2 underline-offset-2">
                                                                     {props.children}
                                                                 </Link>
                                                             ),
@@ -173,20 +192,33 @@ export function AiAssistant() {
 
                         {/* Input */}
                         <div className="p-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shrink-0">
+                            <div className="mb-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                                {ui.quickQuestions.map((question) => (
+                                    <button
+                                        key={question}
+                                        type="button"
+                                        onClick={() => handleSend(question)}
+                                        disabled={isTyping}
+                                        className="shrink-0 rounded-full border border-amber-300/70 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-800 transition hover:border-amber-500 hover:bg-amber-100 disabled:opacity-50 dark:border-amber-700/70 dark:bg-amber-950/40 dark:text-amber-200 dark:hover:bg-amber-900/50"
+                                    >
+                                        {question}
+                                    </button>
+                                ))}
+                            </div>
                             <div className="relative flex items-center">
                                 <textarea
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
-                                    placeholder="Zapytaj o cennik, atrakcje..."
+                                    placeholder={ui.placeholder}
                                     className="w-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl py-3 pl-4 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 resize-none h-[46px] max-h-[100px]"
                                     rows={1}
                                 />
                                 <button
-                                    onClick={handleSend}
+                                    onClick={() => handleSend()}
                                     disabled={!input.trim() || isTyping}
                                     className="absolute right-2 p-1.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 disabled:opacity-50 disabled:hover:bg-amber-500 transition-colors"
-                                    aria-label="Wyślij wiadomość"
+                                    aria-label={ui.send}
                                 >
                                     <Send size={16} />
                                 </button>
