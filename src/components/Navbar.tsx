@@ -32,6 +32,7 @@ export default function Navbar() {
         { name: t("nav", "cottages"), href: "/domki" },
         { name: t("nav", "rooms"), href: "/pokoje" },
         { name: t("nav", "charter"), href: "/czarter" },
+        { name: t("nav", "tavern"), href: "/tawerna" },
         { name: t("nav", "concerts"), href: "/koncerty" },
         { name: t("nav", "attractions"), href: "/atrakcje" },
         { name: t("nav", "cooperation"), href: "/wspolpraca" },
@@ -57,7 +58,7 @@ export default function Navbar() {
     }, [isMobileMenuOpen]);
 
     const buttonClass = cn(
-        "transition-all duration-300 px-4 py-2 rounded-full border text-sm font-medium uppercase tracking-wide",
+        "transition-all duration-300 px-2 2xl:px-3 py-2 rounded-full border text-[11px] 2xl:text-xs font-medium uppercase tracking-[0.04em]",
         isScrolled || !isHomePage
             ? "border-amber-500 text-slate-900 dark:text-white hover:bg-amber-500 hover:text-white"
             : "border-white/50 text-white hover:border-white hover:bg-white/10"
@@ -77,9 +78,9 @@ export default function Navbar() {
                     : "bg-transparent py-8"
             )}
         >
-            <div className="max-w-[1920px] w-full mx-auto pl-2 pr-4 md:px-12 flex justify-between xl:justify-between items-center relative z-[10000]">
+            <div className="max-w-[1920px] w-full mx-auto pl-2 pr-4 md:px-12 xl:px-6 2xl:px-10 flex justify-between items-center gap-3 relative z-[10000]">
                 {/* Logo */}
-                <Link href="/" className="relative h-[48px] w-[180px] md:h-[115px] md:w-[460px] flex items-center z-50 shrink-0">
+                <Link href="/" className="relative h-[48px] w-[180px] md:h-[115px] md:w-[460px] xl:h-[70px] xl:w-[220px] 2xl:w-[280px] flex items-center z-50 shrink-0">
                     <Image
                         src={logoPoziom}
                         alt="Mazury.Holiday"
@@ -90,7 +91,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden xl:flex items-center gap-4">
+                <div className="hidden xl:flex items-center gap-1 2xl:gap-2">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -103,9 +104,9 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop & Mobile Actions (Right) */}
-                <div className="flex items-center gap-4 z-[10000] shrink-0">
+                <div className="flex items-center gap-2 2xl:gap-3 z-[10000] shrink-0">
                     {/* Desktop Controls */}
-                    <div className="hidden xl:flex items-center gap-4">
+                    <div className="hidden xl:flex items-center gap-2 2xl:gap-3">
                         {/* EU Flag */}
                         <Link href="/projekty-unijne">
                             <div className="w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">

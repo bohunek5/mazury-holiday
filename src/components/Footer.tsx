@@ -83,6 +83,7 @@ export default function Footer() {
                             { id: "rooms", href: "/pokoje", label: t("nav", "rooms") },
                             { id: "cottages", href: "/domki", label: t("nav", "cottages") },
                             { id: "charter", href: "/czarter", label: t("nav", "charter") },
+                            { id: "tavern", href: "/tawerna", label: t("nav", "tavern") },
                             { id: "concerts", href: "/koncerty", label: t("nav", "concerts") },
                             { id: "attractions", href: "/atrakcje", label: t("nav", "attractions") },
                             { id: "contact", href: "/kontakt", label: t("nav", "contact") },
