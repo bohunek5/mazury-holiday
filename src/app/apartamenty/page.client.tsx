@@ -60,7 +60,7 @@ export default function ApartmentsHub() {
         {
             id: "zeglarska",
             title: t("apartments", "items.zeglarska.title"),
-            image: getAssetPath("/images/attractions/gizycko-hero.webp"),
+            image: getAssetPath("/images/zeglarska/zeglarska-niegocin.jpg"),
             location: t("apartments", "items.zeglarska.location"),
             comingSoon: true,
             icons: [<Waves key="waves" size={18} />, <Wifi key="wifi" size={18} />, <Car key="car" size={18} />]

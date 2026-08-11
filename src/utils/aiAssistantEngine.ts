@@ -268,7 +268,7 @@ const featureTerms: Record<AssistantFeature, string[]> = {
 };
 
 const locationTerms: Record<LocationKey, string[]> = {
-    stranda: ["stranda", "port stranda", "marina stranda"],
+    stranda: ["stranda", "port stranda", "marina stranda", "pierkunowo 36", "zatoka tracz", "tracz bay"],
     kisajno: ["kisajno", "k11", "k15", "port neptun", "neptun"],
     fuleda: ["fuleda", "fuledzie", "fuledy", "fuledzkie zacisze", "dobskie"],
     skorupki: ["skorupki", "domek skorupki", "domki skorupki"],
@@ -288,8 +288,9 @@ const intentTerms = {
     greeting: ["czesc", "hej", "dzien dobry", "witam", "hello", "hi", "good morning", "hallo", "guten tag", "labas", "sveiki", "ahoj", "dobry den"],
     pets: ["zwierze", "pies", "psa", "kot", "pet", "dog", "cat", "haustier", "hund", "katze", "augintin", "suo", "kocka", "pes"],
     checkIn: ["zameldowanie", "wymeldowanie", "doba", "przyjazd", "wyjazd", "check in", "check out", "ankunft", "abreise", "atvyk", "isvyk", "prijezd", "odjezd"],
-    tavern: ["tawerna", "restauracja", "jedzenie", "menu", "sniadanie", "tavern", "restaurant", "food", "breakfast", "essen", "fruhstuck", "maistas", "pusryciai", "jidlo", "snidane"],
-    concerts: ["koncert", "muzyka", "concert", "music", "konzert", "musik", "muzika", "koncerty", "hudba"],
+    tavern: ["tawerna", "restauracja", "jedzenie", "menu", "sniadanie", "piwo", "browar", "tavern", "restaurant", "food", "breakfast", "beer", "essen", "fruhstuck", "bier", "brauerei", "maistas", "pusryciai", "alus", "jidlo", "snidane", "pivo"],
+    concerts: ["koncert", "muzyka", "szanty", "rock", "concert", "music", "konzert", "musik", "muzika", "koncerty", "hudba"],
+    joke: ["zart", "dowcip", "rozsmiesz", "umiesz zartowac", "joke", "funny", "make me laugh", "witz", "lustig", "pokstas", "juokinga", "vtip", "legrace"],
 };
 
 const locale = {
@@ -315,9 +316,9 @@ const locale = {
         pets: "Zasady dotyczące zwierząt zależą od obiektu. Nie chcę podawać niepewnej informacji — przed rezerwacją potwierdź konkretny obiekt pod numerem 730 067 027.",
         allOffers: "Oferta Mazury.Holiday obejmuje apartamenty w Giżycku przy jeziorze Kisajno, Fuledę nad jeziorem Dobskim, apartament w centrum Mikołajek, Domki Skorupki, Domek Fuledzkie Zacisze oraz czarter Stillo 30 VIP. Apartamenty Żeglarska nad Niegocinem są oznaczone jako „wkrótce”.",
         followUp: "Mogę zawęzić wybór po liczbie osób, cenie orientacyjnej albo udogodnieniach.",
-        charter: "Stillo 30 VIP to jacht motorowy dla maksymalnie 8 osób, z trzema zamykanymi kabinami, ogrzewaniem Webasto i wyposażeniem turystycznym. Zgodnie z informacją w ofercie można nim pływać bez patentu po przeszkoleniu.",
-        tavern: "Tawerna Stranda działa przy marinie w Giżycku. Na stronie znajdziesz opis śniadań, dań sezonowych, pizzy i napojów. Aktualne menu oraz godziny warto potwierdzić bezpośrednio w Tawernie.",
-        concerts: "Koncerty odbywają się w sezonie przy Strandzie. Bieżący program i plakat są na podstronie koncertowej.",
+        charter: "Stillo 30 VIP stacjonuje w Porcie Stranda. To jacht motorowy dla maksymalnie 8 osób, z trzema zamykanymi kabinami, ogrzewaniem Webasto i wyposażeniem turystycznym. Zgodnie z informacją w ofercie można nim pływać bez patentu po przeszkoleniu.",
+        tavern: "Tawerna Stranda jest częścią Portu Stranda nad jeziorem Kisajno, pod adresem Pierkunowo 36 w Giżycku. Serwuje śniadania, dania sezonowe, pizzę z pieca i piwo z Browaru Stranda. Karta oraz godziny zmieniają się sezonowo, więc aktualne informacje warto potwierdzić bezpośrednio w Tawernie.",
+        concerts: "Koncerty szantowo-rockowe odbywają się w sezonie letnim przy Tawernie w Porcie Stranda nad Kisajnem. Bieżący program i plakat są na podstronie koncertowej.",
     },
     en: {
         hello: "Hello! I can match accommodation to your group size, preferred location and amenities. I can also compare properties and direct you to the live IdoBooking calendar.",
@@ -333,9 +334,9 @@ const locale = {
         pets: "Pet rules vary by property. To avoid giving you uncertain information, please confirm the specific property before booking at +48 730 067 027.",
         allOffers: "Mazury.Holiday offers apartments in Giżycko by Lake Kisajno, stays in Fuleda by Lake Dobskie, an apartment in central Mikołajki, Skorupki cottages, Fuledzkie Zacisze cottage and a Stillo 30 VIP charter. Żeglarska apartments by Lake Niegocin are marked as coming soon.",
         followUp: "I can narrow the list by group size, indicative price or amenities.",
-        charter: "Stillo 30 VIP is a motor yacht for up to 8 guests, with three lockable cabins, Webasto heating and touring equipment. According to the offer, it can be operated without a licence after training.",
-        tavern: "Tawerna Stranda is located by the marina in Giżycko. The page covers breakfast, seasonal dishes, pizza and drinks. Please confirm the current menu and opening hours directly with the tavern.",
-        concerts: "Concerts take place seasonally at Stranda. The current programme and poster are available on the concert page.",
+        charter: "Stillo 30 VIP is based at Port Stranda. It is a motor yacht for up to 8 guests, with three lockable cabins, Webasto heating and touring equipment. According to the offer, it can be operated without a licence after training.",
+        tavern: "Tawerna Stranda is part of Port Stranda on Lake Kisajno, at Pierkunowo 36 in Giżycko. It serves breakfast, seasonal dishes, wood-fired pizza and beer from Stranda Brewery. The menu and opening hours vary by season, so please confirm current details directly with the tavern.",
+        concerts: "Shanty and rock concerts take place in summer by the tavern at Port Stranda on Lake Kisajno. The current programme and poster are available on the concert page.",
     },
     de: {
         hello: "Hallo! Ich finde eine Unterkunft passend zur Personenzahl, Lage und Ausstattung. Ich kann Objekte vergleichen und zum aktuellen IdoBooking-Kalender führen.",
@@ -351,9 +352,9 @@ const locale = {
         pets: "Die Regeln für Haustiere unterscheiden sich je nach Objekt. Bitte bestätigen Sie das konkrete Objekt vor der Buchung unter +48 730 067 027.",
         allOffers: "Mazury.Holiday bietet Apartments in Giżycko am Kisajno-See, Unterkünfte in Fuleda am Dobskie-See, ein Apartment im Zentrum von Mikołajki, die Ferienhäuser Skorupki, das Haus Fuledzkie Zacisze und die Yacht Stillo 30 VIP. Die Apartments Żeglarska am Niegocin-See sind als „demnächst“ markiert.",
         followUp: "Ich kann die Auswahl nach Personenzahl, Richtpreis oder Ausstattung eingrenzen.",
-        charter: "Die Stillo 30 VIP ist eine Motoryacht für bis zu 8 Personen, mit drei abschließbaren Kabinen, Webasto-Heizung und Reiseausstattung. Laut Angebot darf sie nach einer Einweisung ohne Führerschein gefahren werden.",
-        tavern: "Die Tawerna Stranda liegt an der Marina in Giżycko. Auf der Seite finden Sie Frühstück, saisonale Gerichte, Pizza und Getränke. Aktuelle Karte und Öffnungszeiten bitte direkt bei der Tawerna bestätigen.",
-        concerts: "In der Saison finden Konzerte bei Stranda statt. Das aktuelle Programm und Plakat stehen auf der Konzertseite.",
+        charter: "Die Stillo 30 VIP liegt im Port Stranda. Sie ist eine Motoryacht für bis zu 8 Personen, mit drei abschließbaren Kabinen, Webasto-Heizung und Reiseausstattung. Laut Angebot darf sie nach einer Einweisung ohne Führerschein gefahren werden.",
+        tavern: "Die Tawerna Stranda gehört zum Port Stranda am Kisajno-See, Pierkunowo 36 in Giżycko. Angeboten werden Frühstück, saisonale Gerichte, Holzofenpizza und Bier aus der Stranda-Brauerei. Karte und Öffnungszeiten ändern sich saisonal; aktuelle Angaben bitte direkt bestätigen.",
+        concerts: "Im Sommer finden Shanty- und Rockkonzerte bei der Tawerna im Port Stranda am Kisajno-See statt. Das aktuelle Programm und Plakat stehen auf der Konzertseite.",
     },
     lt: {
         hello: "Sveiki! Galiu parinkti nakvynę pagal žmonių skaičių, vietą ir patogumus, palyginti objektus ir nukreipti į aktualų „IdoBooking“ kalendorių.",
@@ -369,9 +370,9 @@ const locale = {
         pets: "Gyvūnų taisyklės priklauso nuo objekto. Prieš rezervuodami konkretų objektą patvirtinkite telefonu +48 730 067 027.",
         allOffers: "„Mazury.Holiday“ siūlo apartamentus Gižycke prie Kisajno ežero, Fuledoje prie Dobskie ežero, apartamentą Mikolaikų centre, Skorupki namelius, Fuledzkie Zacisze namą ir „Stillo 30 VIP“ nuomą. Żeglarska apartamentai prie Niegocin ežero pažymėti „netrukus“.",
         followUp: "Galiu susiaurinti pasirinkimą pagal žmonių skaičių, orientacinę kainą arba patogumus.",
-        charter: "„Stillo 30 VIP“ yra motorinė jachta iki 8 žmonių, su trimis uždaromomis kajutėmis, „Webasto“ šildymu ir turistine įranga. Pagal pasiūlymą po instruktažo ją galima valdyti be licencijos.",
-        tavern: "„Tawerna Stranda“ yra prie Gižycko marinos. Puslapyje rasite informaciją apie pusryčius, sezoninius patiekalus, picą ir gėrimus. Dabartinį meniu ir darbo laiką patvirtinkite tiesiogiai tavernoje.",
-        concerts: "Sezono metu „Stranda“ vyksta koncertai. Dabartinė programa ir plakatas pateikti koncertų puslapyje.",
+        charter: "„Stillo 30 VIP“ laikoma Port Stranda. Tai motorinė jachta iki 8 žmonių, su trimis uždaromomis kajutėmis, „Webasto“ šildymu ir turistine įranga. Pagal pasiūlymą po instruktažo ją galima valdyti be licencijos.",
+        tavern: "„Tawerna Stranda“ yra Port Stranda dalis prie Kisajno ežero, adresu Pierkunowo 36, Gižyckas. Čia siūlomi pusryčiai, sezoniniai patiekalai, krosnyje kepta pica ir Stranda alaus daryklos alus. Meniu ir darbo laikas keičiasi sezoniškai, todėl juos patvirtinkite tiesiogiai.",
+        concerts: "Vasarą prie Port Stranda tavernos, šalia Kisajno ežero, vyksta šantų ir roko koncertai. Dabartinė programa ir plakatas pateikti koncertų puslapyje.",
     },
     cs: {
         hello: "Dobrý den! Vyberu ubytování podle počtu osob, lokality a vybavení, porovnám objekty a nasměruji vás na aktuální kalendář IdoBooking.",
@@ -387,11 +388,65 @@ const locale = {
         pets: "Pravidla pro zvířata se liší podle objektu. Konkrétní objekt před rezervací potvrďte na +48 730 067 027.",
         allOffers: "Mazury.Holiday nabízí apartmány v Giżycku u jezera Kisajno, ubytování ve Fuledě u jezera Dobskie, apartmán v centru Mikołajek, chaty Skorupki, dům Fuledzkie Zacisze a pronájem Stillo 30 VIP. Apartmány Żeglarska u jezera Niegocin jsou označeny „již brzy“.",
         followUp: "Výběr mohu zúžit podle počtu osob, orientační ceny nebo vybavení.",
-        charter: "Stillo 30 VIP je motorová jachta až pro 8 osob se třemi uzamykatelnými kajutami, topením Webasto a turistickým vybavením. Podle nabídky ji lze po zaškolení řídit bez průkazu.",
-        tavern: "Tawerna Stranda se nachází u mariny v Giżycku. Stránka popisuje snídaně, sezónní jídla, pizzu a nápoje. Aktuální menu a otevírací dobu potvrďte přímo v taverně.",
-        concerts: "V sezóně se u Strandy konají koncerty. Aktuální program a plakát najdete na stránce koncertů.",
+        charter: "Stillo 30 VIP kotví v Portu Stranda. Je to motorová jachta až pro 8 osob se třemi uzamykatelnými kajutami, topením Webasto a turistickým vybavením. Podle nabídky ji lze po zaškolení řídit bez průkazu.",
+        tavern: "Tawerna Stranda je součástí Portu Stranda u jezera Kisajno, Pierkunowo 36 v Giżycku. Nabízí snídaně, sezónní jídla, pizzu z pece a pivo z pivovaru Stranda. Menu a otevírací doba se mění podle sezóny, proto je potvrďte přímo v taverně.",
+        concerts: "V létě se u taverny v Portu Stranda na jezeře Kisajno konají šantové a rockové koncerty. Aktuální program a plakát najdete na stránce koncertů.",
     },
 } satisfies Record<Language, Record<string, unknown>>;
+
+const strandaKnowledge: Record<Language, string> = {
+    pl: "**Stranda** to nie jeden apartament, lecz port i kompleks Stranda Residence w Giżycku, nad jeziorem Kisajno i zatoką Tracz. Apartamenty Mazury.Holiday znajdują się w budynkach A, B i C. W porcie działają marina, wypożyczalnia sprzętu wodnego i Tawerna Stranda, a latem odbywają się koncerty szantowo-rockowe. Stąd dostępny jest też czarter Stillo 30 VIP. Część apartamentów ma prywatne jacuzzi; B202 ma również saunę. Adres Tawerny i portu: Pierkunowo 36, 11-500 Giżycko.\n\nApartamenty Kisajno K11 i K15 leżą nad tym samym jeziorem, ale w osobnej lokalizacji — przy Porcie Neptun. To częsta pomyłka, więc pilnuję jej za Ciebie.\n\n[Zobacz apartamenty Stranda](/apartamenty/stranda) · [Tawerna](/tawerna) · [Koncerty](/koncerty) · [Czarter](/czarter)",
+    en: "**Stranda** is not one apartment but a marina and the Stranda Residence complex in Giżycko, on Lake Kisajno and Tracz Bay. Mazury.Holiday apartments are located in buildings A, B and C. The port includes a marina, water-equipment rental and Tawerna Stranda, with shanty and rock concerts in summer. Stillo 30 VIP charter is also based here. Selected apartments have a private hot tub; B202 also has a sauna. The port and tavern address is Pierkunowo 36, 11-500 Giżycko.\n\nKisajno apartments K11 and K15 are on the same lake but at a separate location, Port Neptun. It is an easy mix-up, so I keep the distinction clear.\n\n[Stranda apartments](/apartamenty/stranda) · [Tavern](/tawerna) · [Concerts](/koncerty) · [Charter](/czarter)",
+    de: "**Stranda** ist nicht ein einzelnes Apartment, sondern ein Hafen und der Komplex Stranda Residence in Giżycko am Kisajno-See und an der Tracz-Bucht. Die Apartments von Mazury.Holiday liegen in den Gebäuden A, B und C. Zum Hafen gehören Marina, Wassersportverleih und Tawerna Stranda; im Sommer gibt es Shanty- und Rockkonzerte. Auch die Stillo 30 VIP liegt hier. Ausgewählte Apartments haben einen privaten Whirlpool, B202 zusätzlich eine Sauna. Adresse von Hafen und Taverne: Pierkunowo 36, 11-500 Giżycko.\n\nDie Kisajno-Apartments K11 und K15 liegen am selben See, aber an einem anderen Ort — Port Neptun. Diese Standorte werden leicht verwechselt; ich trenne sie sauber.\n\n[Stranda Apartments](/apartamenty/stranda) · [Taverne](/tawerna) · [Konzerte](/koncerty) · [Charter](/czarter)",
+    lt: "**Stranda** – tai ne vieni apartamentai, o uostas ir „Stranda Residence“ kompleksas Gižycke, prie Kisajno ežero ir Tracz įlankos. „Mazury.Holiday“ apartamentai yra A, B ir C pastatuose. Uoste veikia marina, vandens įrangos nuoma ir „Tawerna Stranda“, o vasarą vyksta šantų bei roko koncertai. Čia laikoma ir „Stillo 30 VIP“. Kai kuriuose apartamentuose yra privati sūkurinė vonia, B202 – dar ir sauna. Adresas: Pierkunowo 36, 11-500 Giżycko.\n\nKisajno K11 ir K15 yra prie to paties ežero, tačiau kitoje vietoje — Port Neptun. Šias vietas lengva supainioti, todėl jas aiškiai atskiriu.\n\n[Stranda apartamentai](/apartamenty/stranda) · [Taverna](/tawerna) · [Koncertai](/koncerty) · [Jachtos nuoma](/czarter)",
+    cs: "**Stranda** není jeden apartmán, ale přístav a komplex Stranda Residence v Giżycku u jezera Kisajno a zátoky Tracz. Apartmány Mazury.Holiday jsou v budovách A, B a C. V přístavu je marina, půjčovna vodního vybavení a Tawerna Stranda; v létě se zde konají šantové a rockové koncerty. Kotví zde také Stillo 30 VIP. Vybrané apartmány mají soukromou vířivku, B202 navíc saunu. Adresa přístavu a taverny: Pierkunowo 36, 11-500 Giżycko.\n\nApartmány Kisajno K11 a K15 leží u stejného jezera, ale na jiném místě — v Portu Neptun. Tyto lokality se snadno pletou, proto je rozlišuji.\n\n[Apartmány Stranda](/apartamenty/stranda) · [Taverna](/tawerna) · [Koncerty](/koncerty) · [Pronájem jachty](/czarter)",
+};
+
+const jokes: Record<Language, Record<"stranda" | "fuleda" | "jacuzzi" | "charter" | "general", string>> = {
+    pl: {
+        stranda: "W Strandzie plan dnia jest prosty: rano jezioro, potem Tawerna, wieczorem koncert. Najtrudniejsza decyzja? Czy wracać do apartamentu przed bisem.",
+        fuleda: "Fuleda jest tak cicha, że nawet powiadomienia w telefonie zaczynają szeptać.",
+        jacuzzi: "Apartament z jacuzzi to jedyne miejsce, gdzie zdanie „mam dziś dużo bąbelków” brzmi jak bardzo dobry plan.",
+        charter: "Dlaczego jacht nie wdaje się w kłótnie? Bo woli płynąć z nurtem. Stillo ma tylko jedną uwagę: nie zapomnij szkolenia przed rejsem.",
+        general: "Na Mazurach są dwa rodzaje pogody: dobra na jezioro i dobra na Tawernę. Prognoza zawsze się zgadza.",
+    },
+    en: {
+        stranda: "A day at Stranda is simple: lake in the morning, tavern later, concert at night. The hard part is deciding whether to leave before the encore.",
+        fuleda: "Fuleda is so quiet that even phone notifications start to whisper.",
+        jacuzzi: "A hot-tub apartment is the one place where saying ‘I need more bubbles today’ sounds like an excellent plan.",
+        charter: "Why does the yacht avoid arguments? It prefers to go with the flow. Stillo only insists on one thing: training before departure.",
+        general: "Masuria has two kinds of weather: good for the lake and good for the tavern. The forecast is always right.",
+    },
+    de: {
+        stranda: "Der Tagesplan in Stranda ist einfach: morgens See, später Taverne, abends Konzert. Schwierig wird nur die Frage, ob man vor der Zugabe ins Apartment zurückgeht.",
+        fuleda: "In Fuleda ist es so ruhig, dass sogar Handy-Benachrichtigungen anfangen zu flüstern.",
+        jacuzzi: "Ein Apartment mit Whirlpool ist der einzige Ort, an dem ‘Ich brauche heute mehr Blasen’ nach einem ausgezeichneten Plan klingt.",
+        charter: "Warum streitet die Yacht nicht? Sie fährt lieber mit der Strömung. Stillo besteht nur auf der Einweisung vor der Abfahrt.",
+        general: "In Masuren gibt es zwei Wetterlagen: gut für den See oder gut für die Taverne. Die Vorhersage stimmt immer.",
+    },
+    lt: {
+        stranda: "Diena Strandoje paprasta: ryte ežeras, vėliau taverna, vakare koncertas. Sunkiausia nuspręsti, ar grįžti į apartamentus prieš bisą.",
+        fuleda: "Fuledoje taip tylu, kad net telefono pranešimai pradeda šnabždėti.",
+        jacuzzi: "Apartamentai su sūkurine vonia – vienintelė vieta, kur „šiandien noriu daugiau burbuliukų“ skamba kaip puikus planas.",
+        charter: "Kodėl jachta nesiginčija? Ji mieliau plaukia pasroviui. „Stillo“ primena tik viena: prieš kelionę būtinas instruktažas.",
+        general: "Mozūrijoje būna dvejopas oras: tinkamas ežerui arba tinkamas tavernai. Prognozė visada teisinga.",
+    },
+    cs: {
+        stranda: "Den ve Strandě je jednoduchý: ráno jezero, potom taverna, večer koncert. Nejtěžší je rozhodnout se, zda odejít do apartmánu před přídavkem.",
+        fuleda: "Ve Fuledě je takové ticho, že i oznámení v telefonu začnou šeptat.",
+        jacuzzi: "Apartmán s vířivkou je jediné místo, kde věta „dnes potřebuji více bublinek“ zní jako výborný plán.",
+        charter: "Proč se jachta nehádá? Raději pluje s proudem. Stillo připomíná jen jedno: před plavbou je nutné zaškolení.",
+        general: "V Mazursku jsou dva druhy počasí: vhodné k jezeru a vhodné do taverny. Předpověď vždy vyjde.",
+    },
+};
+
+const recommendationQuips: Record<Language, Partial<Record<AssistantFeature, string>>> = {
+    pl: { jacuzzi: "Bąbelki są, pozostaje wybrać widok.", sauna: "Tu relaks ma własny termostat.", quiet: "Cisza w pakiecie, budzika nie polecam." },
+    en: { jacuzzi: "The bubbles are sorted; now choose the view.", sauna: "Here, relaxation has its own thermostat.", quiet: "Peace and quiet included; alarm clock not recommended." },
+    de: { jacuzzi: "Die Blasen sind geklärt; jetzt fehlt nur noch der Ausblick.", sauna: "Hier hat Entspannung ihr eigenes Thermostat.", quiet: "Ruhe inklusive; Wecker nicht empfohlen." },
+    lt: { jacuzzi: "Burbuliukai paruošti – belieka išsirinkti vaizdą.", sauna: "Čia poilsis turi savo termostatą.", quiet: "Ramybė įskaičiuota, žadintuvas nerekomenduojamas." },
+    cs: { jacuzzi: "Bublinky jsou vyřešené, zbývá vybrat výhled.", sauna: "Tady má odpočinek vlastní termostat.", quiet: "Klid je v ceně, budík nedoporučuji." },
+};
 
 const featureLabels: Record<Language, Record<AssistantFeature, string>> = {
     pl: { jacuzzi: "prywatne jacuzzi", sauna: "prywatna sauna", lakeView: "widok na jezioro", lakeAccess: "dostęp do jeziora", wifi: "Wi-Fi", airConditioning: "klimatyzacja", fireplace: "kominek", washingMachine: "pralka", dishwasher: "zmywarka", parking: "parking", quiet: "spokojna okolica", cityCenter: "centrum miasta" },
@@ -477,6 +532,19 @@ const hasAny = (message: string, terms: string[]) => {
         if (term.includes(" ")) return false;
         return words.some((word) => fuzzyWord(word, term));
     });
+};
+
+const jokeResponse = (message: string, language: Language) => {
+    if (hasAny(message, locationTerms.stranda)) return jokes[language].stranda;
+    if (hasAny(message, locationTerms.fuleda)) return jokes[language].fuleda;
+    if (hasAny(message, featureTerms.jacuzzi)) return jokes[language].jacuzzi;
+    if (hasAny(message, locationTerms.charter)) return jokes[language].charter;
+    return jokes[language].general;
+};
+
+const recommendationQuip = (language: Language, features: AssistantFeature[]) => {
+    const feature = features.find((item) => recommendationQuips[language][item]);
+    return feature ? recommendationQuips[language][feature] : undefined;
 };
 
 const detectedFeatures = (message: string) =>
@@ -633,11 +701,11 @@ export const createAssistantContext = (): AssistantContext => ({ lastOfferIds: [
 export const getAssistantGreeting = (language: Language) => locale[language].hello;
 
 export const assistantUi: Record<Language, { placeholder: string; send: string; close: string; title: string; online: string; quickQuestions: string[] }> = {
-    pl: { placeholder: "Np. 4 osoby, jacuzzi, Giżycko…", send: "Wyślij wiadomość", close: "Zamknij czat", title: "Doradca Mazury Holiday", online: "Online", quickQuestions: ["Nocleg dla 4 osób", "Apartament z jacuzzi", "Porównaj Strandę i Fuledę", "Sprawdź dostępność"] },
-    en: { placeholder: "E.g. 4 guests, hot tub, Giżycko…", send: "Send message", close: "Close chat", title: "Mazury Holiday adviser", online: "Online", quickQuestions: ["Stay for 4 guests", "Apartment with a hot tub", "Compare Stranda and Fuleda", "Check availability"] },
-    de: { placeholder: "Z. B. 4 Personen, Whirlpool, Giżycko…", send: "Nachricht senden", close: "Chat schließen", title: "Mazury Holiday Beratung", online: "Online", quickQuestions: ["Unterkunft für 4 Personen", "Apartment mit Whirlpool", "Stranda und Fuleda vergleichen", "Verfügbarkeit prüfen"] },
-    lt: { placeholder: "Pvz., 4 žmonės, sūkurinė vonia…", send: "Siųsti žinutę", close: "Uždaryti pokalbį", title: "Mazury Holiday konsultantas", online: "Prisijungęs", quickQuestions: ["Nakvynė 4 žmonėms", "Apartamentai su sūkurine vonia", "Palygink Stranda ir Fuleda", "Tikrinti laisvas datas"] },
-    cs: { placeholder: "Např. 4 osoby, vířivka, Giżycko…", send: "Odeslat zprávu", close: "Zavřít chat", title: "Poradce Mazury Holiday", online: "Online", quickQuestions: ["Ubytování pro 4 osoby", "Apartmán s vířivkou", "Porovnej Stranda a Fuleda", "Ověřit dostupnost"] },
+    pl: { placeholder: "Np. 4 osoby, jacuzzi, Giżycko…", send: "Wyślij wiadomość", close: "Zamknij czat", title: "Doradca Mazury Holiday", online: "Online", quickQuestions: ["Nocleg dla 4 osób", "Apartament z jacuzzi", "Co to jest Stranda?", "Sprawdź dostępność", "Opowiedz mazurski żart"] },
+    en: { placeholder: "E.g. 4 guests, hot tub, Giżycko…", send: "Send message", close: "Close chat", title: "Mazury Holiday adviser", online: "Online", quickQuestions: ["Stay for 4 guests", "Apartment with a hot tub", "What is Stranda?", "Check availability", "Tell me a Masurian joke"] },
+    de: { placeholder: "Z. B. 4 Personen, Whirlpool, Giżycko…", send: "Nachricht senden", close: "Chat schließen", title: "Mazury Holiday Beratung", online: "Online", quickQuestions: ["Unterkunft für 4 Personen", "Apartment mit Whirlpool", "Was ist Stranda?", "Verfügbarkeit prüfen", "Erzähl einen Masuren-Witz"] },
+    lt: { placeholder: "Pvz., 4 žmonės, sūkurinė vonia…", send: "Siųsti žinutę", close: "Uždaryti pokalbį", title: "Mazury Holiday konsultantas", online: "Prisijungęs", quickQuestions: ["Nakvynė 4 žmonėms", "Apartamentai su sūkurine vonia", "Kas yra Stranda?", "Tikrinti laisvas datas", "Papasakok Mozūrijos pokštą"] },
+    cs: { placeholder: "Např. 4 osoby, vířivka, Giżycko…", send: "Odeslat zprávu", close: "Zavřít chat", title: "Poradce Mazury Holiday", online: "Online", quickQuestions: ["Ubytování pro 4 osoby", "Apartmán s vířivkou", "Co je Stranda?", "Ověřit dostupnost", "Řekni mazurský vtip"] },
 };
 
 export function getAssistantResponse(
@@ -666,6 +734,7 @@ export function getAssistantResponse(
     if (hasAny(message, intentTerms.greeting) && normalize(message).split(" ").length <= 5) {
         return { answer: `${copy.hello}\n\n${copy.ask}`, context: createAssistantContext() };
     }
+    if (hasAny(message, intentTerms.joke)) return { answer: jokeResponse(message, language), context: nextContext };
     if (hasAny(message, intentTerms.contact)) return { answer: copy.contact, context: nextContext };
     if (hasAny(message, intentTerms.checkIn)) return { answer: copy.checkIn, context: nextContext };
     if (hasAny(message, intentTerms.pets)) return { answer: copy.pets, context: nextContext };
@@ -703,12 +772,17 @@ export function getAssistantResponse(
         return { answer: detailResponse(selected[0], language), context: { ...nextContext, lastOfferIds: [selected[0].id] } };
     }
 
+    if (locations.length === 1 && locations[0] === "stranda" && !guests && !features.length) {
+        return { answer: strandaKnowledge[language], context: { ...nextContext, lastLocation: "stranda" } };
+    }
+
     const shouldRecommend = Boolean(guests || features.length || locations.length);
     if (shouldRecommend) {
         const result = recommendations(guests, features, locations);
         if (!result.length) return { answer: `${copy.noMatch}\n\n${copy.ask}`, context: nextContext };
+        const quip = recommendationQuip(language, features);
         return {
-            answer: `${copy.found(result.length)}\n\n${result.map((offer) => formatOffer(offer, language)).join("\n")}\n\n${copy.indicative}`,
+            answer: `${copy.found(result.length)}\n\n${result.map((offer) => formatOffer(offer, language)).join("\n")}\n\n${copy.indicative}${quip ? `\n\n${quip}` : ""}`,
             context: { ...nextContext, lastOfferIds: result.map((offer) => offer.id) },
         };
     }
