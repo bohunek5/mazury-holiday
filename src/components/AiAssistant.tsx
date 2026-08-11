@@ -10,9 +10,12 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
     assistantUi,
+    completeAvailabilityResponse,
     createAssistantContext,
+    getAvailabilityFallback,
     getAssistantGreeting,
     getAssistantResponse,
+    type AvailabilityApiResult,
     type AssistantContext,
 } from "@/utils/aiAssistantEngine";
 
@@ -26,7 +29,7 @@ export function AiAssistant() {
     const [messages, setMessages] = useState<ChatMessage[]>([
         { role: "assistant", content: getAssistantGreeting(language) }
     ]);
-    const [assistantContext, setAssistantContext] = useState<AssistantContext>(createAssistantContext());
+    const assistantContextRef = useRef<AssistantContext>(createAssistantContext());
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const previousLanguageRef = useRef(language);
@@ -44,7 +47,8 @@ export function AiAssistant() {
         if (previousLanguageRef.current === language) return;
         previousLanguageRef.current = language;
         if (!hasUserMessagesRef.current) {
-            setAssistantContext(createAssistantContext());
+            const freshContext = createAssistantContext();
+            assistantContextRef.current = freshContext;
             setMessages([{ role: "assistant", content: getAssistantGreeting(language) }]);
         }
     }, [language]);
@@ -58,10 +62,30 @@ export function AiAssistant() {
         setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
         setIsTyping(true);
 
-        setTimeout(() => {
-            const result = getAssistantResponse(userMessage, language, assistantContext);
-            setMessages((prev) => [...prev, { role: "assistant", content: result.answer }]);
-            setAssistantContext(result.context);
+        setTimeout(async () => {
+            const result = getAssistantResponse(userMessage, language, assistantContextRef.current);
+            let answer = result.answer;
+            if (result.availabilityQuery) {
+                try {
+                    const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+                    const response = await fetch(`${assetPrefix}/api/idobooking-availability.php`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            from: result.availabilityQuery.from,
+                            to: result.availabilityQuery.to,
+                            ids: result.availabilityQuery.idoBookingIds,
+                        }),
+                    });
+                    if (!response.ok) throw new Error(`Availability request failed: ${response.status}`);
+                    const apiResult = await response.json() as AvailabilityApiResult;
+                    answer = completeAvailabilityResponse(result.availabilityQuery, apiResult);
+                } catch {
+                    answer = getAvailabilityFallback(result.availabilityQuery);
+                }
+            }
+            setMessages((prev) => [...prev, { role: "assistant", content: answer }]);
+            assistantContextRef.current = result.context;
             setIsTyping(false);
         }, 350);
     };

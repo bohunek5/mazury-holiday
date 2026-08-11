@@ -26,11 +26,39 @@ export type AssistantContext = {
     lastLocation?: string;
     guests?: number;
     features: AssistantFeature[];
+    arrival?: string;
+    departure?: string;
+    bookingFlow?: boolean;
+    awaiting?: "dates" | "guests" | "preferences";
+    turn: number;
+};
+
+export type AvailabilityQuery = {
+    from: string;
+    to: string;
+    guests: number;
+    language: Language;
+    offerIds: string[];
+    idoBookingIds: string[];
+};
+
+export type AvailabilityApiResult = {
+    ok: boolean;
+    from?: string;
+    to?: string;
+    nights?: number;
+    results?: Array<{
+        id: string;
+        available: boolean;
+        reason?: string;
+    }>;
+    error?: string;
 };
 
 export type AssistantResult = {
     answer: string;
     context: AssistantContext;
+    availabilityQuery?: AvailabilityQuery;
 };
 
 type Offer = {
@@ -305,7 +333,16 @@ const locale = {
         details: "Szczegóły",
         booking: "Sprawdź termin i cenę w IdoBooking",
         unavailable: "Ta lokalizacja jest oznaczona jako „wkrótce” i nie ma jeszcze aktywnego kalendarza rezerwacji.",
-        availability: "Nie odczytuję wolnych terminów bezpośrednio w czacie, dlatego nie będę zgadywać. Poniżej masz właściwy kalendarz IdoBooking z aktualną dostępnością:",
+        availability: "Podaj termin oraz liczbę osób, a sprawdzę kalendarze obiektów w IdoBooking.",
+        askDates: "Podaj dokładny termin przyjazdu i wyjazdu, np. **15–18 sierpnia** albo **15.08–18.08.2026**.",
+        askGuests: "Termin mam zapisany. Dla ilu osób mam szukać?",
+        dateError: "Nie udało mi się jednoznacznie odczytać terminu. Wpisz proszę dwie daty: przyjazd i wyjazd, np. **15.08–18.08.2026**.",
+        pastDate: "Ten termin już minął. Podaj proszę przyszłą datę przyjazdu i wyjazdu.",
+        longStay: "Jednorazowo sprawdzam pobyty do 28 nocy. Podaj krótszy zakres albo skontaktuj się z rezerwacją: 730 067 027.",
+        checking: "Sprawdzam kalendarze IdoBooking dla podanego terminu…",
+        liveFound: (count: number, range: string) => `Sprawdziłem IdoBooking dla terminu **${range}**. Wolne obiekty (${count}):`,
+        liveNone: (range: string) => `Sprawdziłem IdoBooking dla terminu **${range}** — wśród dopasowanych obiektów nie znalazłem wolnego. Możesz zmienić daty albo poluzować jedno wymaganie.`,
+        liveError: "Nie udało się teraz pobrać kalendarza IdoBooking. Poniżej podaję bezpośrednie linki do dopasowanych obiektów, żeby można było sprawdzić je ręcznie:",
         compare: "Porównanie",
         location: "Lokalizacja",
         lake: "Jezioro",
@@ -327,7 +364,16 @@ const locale = {
         found: (count: number) => `Best matches (${count}):`,
         guests: "max. guests", from: "from", indicative: "The listed price is indicative. IdoBooking will show the current total for your dates.",
         details: "Details", booking: "Check dates and price in IdoBooking", unavailable: "This location is marked as coming soon and does not have an active booking calendar yet.",
-        availability: "I cannot read live vacancies inside the chat, so I will not guess. Use the correct IdoBooking calendar below for current availability:",
+        availability: "Tell me your dates and group size, and I will check the property calendars in IdoBooking.",
+        askDates: "Enter exact arrival and departure dates, for example **15–18 August** or **15/08–18/08/2026**.",
+        askGuests: "I have saved the dates. How many guests should I search for?",
+        dateError: "I could not read the dates unambiguously. Please enter both arrival and departure, for example **15/08–18/08/2026**.",
+        pastDate: "Those dates have already passed. Please enter a future arrival and departure date.",
+        longStay: "I can check stays of up to 28 nights at once. Enter a shorter range or contact reservations at +48 730 067 027.",
+        checking: "Checking the IdoBooking calendars for your dates…",
+        liveFound: (count: number, range: string) => `I checked IdoBooking for **${range}**. Available properties (${count}):`,
+        liveNone: (range: string) => `I checked IdoBooking for **${range}** and found no availability among the matching properties. Try different dates or relax one requirement.`,
+        liveError: "I could not retrieve the IdoBooking calendar just now. Here are direct links to the matching properties for a manual check:",
         compare: "Comparison", location: "Location", lake: "Lake", features: "Key features", price: "Price from",
         contact: "Reservations: **+48 730 067 027** or **rezerwacje@mazury.holiday**.",
         checkIn: "Standard check-in starts at 15:00 and check-out is by 11:00. Please confirm any different arrangement before arrival at +48 730 067 027.",
@@ -345,7 +391,16 @@ const locale = {
         found: (count: number) => `Beste Treffer (${count}):`,
         guests: "max. Gäste", from: "ab", indicative: "Der angezeigte Preis ist ein Richtwert. Den aktuellen Gesamtpreis für Ihren Termin zeigt IdoBooking.",
         details: "Details", booking: "Termin und Preis in IdoBooking prüfen", unavailable: "Dieser Standort ist als „demnächst“ markiert und hat noch keinen aktiven Buchungskalender.",
-        availability: "Ich kann freie Termine nicht live im Chat lesen und werde daher nicht raten. Der passende IdoBooking-Kalender zeigt die aktuelle Verfügbarkeit:",
+        availability: "Nennen Sie Reisedaten und Personenzahl; ich prüfe dann die Objektkalender in IdoBooking.",
+        askDates: "Bitte nennen Sie Anreise und Abreise, zum Beispiel **15.–18. August** oder **15.08.–18.08.2026**.",
+        askGuests: "Die Reisedaten sind gespeichert. Für wie viele Personen soll ich suchen?",
+        dateError: "Ich konnte den Zeitraum nicht eindeutig erkennen. Bitte geben Sie Anreise und Abreise ein, zum Beispiel **15.08.–18.08.2026**.",
+        pastDate: "Dieser Zeitraum liegt bereits in der Vergangenheit. Bitte geben Sie zukünftige Reisedaten ein.",
+        longStay: "Ich prüfe Aufenthalte bis 28 Nächte. Bitte wählen Sie einen kürzeren Zeitraum oder rufen Sie +48 730 067 027 an.",
+        checking: "Ich prüfe die IdoBooking-Kalender für den gewünschten Zeitraum…",
+        liveFound: (count: number, range: string) => `Ich habe IdoBooking für **${range}** geprüft. Verfügbare Objekte (${count}):`,
+        liveNone: (range: string) => `Ich habe IdoBooking für **${range}** geprüft und unter den passenden Objekten nichts Freies gefunden. Ändern Sie den Zeitraum oder lockern Sie eine Bedingung.`,
+        liveError: "Der IdoBooking-Kalender konnte gerade nicht geladen werden. Hier sind direkte Links zu den passenden Objekten für eine manuelle Prüfung:",
         compare: "Vergleich", location: "Lage", lake: "See", features: "Wichtigste Merkmale", price: "Preis ab",
         contact: "Reservierung: **+48 730 067 027** oder **rezerwacje@mazury.holiday**.",
         checkIn: "Der Check-in beginnt normalerweise um 15:00 Uhr, der Check-out ist bis 11:00 Uhr. Abweichende Zeiten bitte vor der Anreise unter +48 730 067 027 bestätigen.",
@@ -363,7 +418,16 @@ const locale = {
         found: (count: number) => `Tinkamiausi variantai (${count}):`,
         guests: "daug. svečių", from: "nuo", indicative: "Nurodyta kaina yra orientacinė. Dabartinę kainą pasirinktoms datoms parodys „IdoBooking“.",
         details: "Išsamiau", booking: "Tikrinti datas ir kainą „IdoBooking“", unavailable: "Ši vieta pažymėta „netrukus“ ir dar neturi aktyvaus rezervavimo kalendoriaus.",
-        availability: "Pokalbyje nematau laisvų datų realiuoju laiku, todėl nespėliosiu. Aktualią informaciją rasite šiame „IdoBooking“ kalendoriuje:",
+        availability: "Nurodykite datas ir žmonių skaičių, o aš patikrinsiu objektų kalendorius „IdoBooking“.",
+        askDates: "Nurodykite tikslias atvykimo ir išvykimo datas, pvz., **rugpjūčio 15–18 d.** arba **2026-08-15–2026-08-18**.",
+        askGuests: "Datas išsaugojau. Keliems žmonėms ieškoti?",
+        dateError: "Nepavyko vienareikšmiškai suprasti datų. Įrašykite atvykimą ir išvykimą, pvz., **2026-08-15–2026-08-18**.",
+        pastDate: "Šios datos jau praėjo. Nurodykite būsimas atvykimo ir išvykimo datas.",
+        longStay: "Vienu metu tikrinu iki 28 naktų. Nurodykite trumpesnį laikotarpį arba skambinkite +48 730 067 027.",
+        checking: "Tikrinami „IdoBooking“ kalendoriai pagal jūsų datas…",
+        liveFound: (count: number, range: string) => `Patikrinau „IdoBooking“ laikotarpiui **${range}**. Laisvi objektai (${count}):`,
+        liveNone: (range: string) => `Patikrinau „IdoBooking“ laikotarpiui **${range}**, tačiau tarp tinkamų objektų laisvų vietų neradau. Pakeiskite datas arba vieną reikalavimą.`,
+        liveError: "Šiuo metu nepavyko gauti „IdoBooking“ kalendoriaus. Pateikiu tiesiogines tinkamų objektų nuorodas rankiniam patikrinimui:",
         compare: "Palyginimas", location: "Vieta", lake: "Ežeras", features: "Svarbiausi patogumai", price: "Kaina nuo",
         contact: "Rezervacija: **+48 730 067 027** arba **rezerwacje@mazury.holiday**.",
         checkIn: "Įprastai atvykimas nuo 15:00, išvykimas iki 11:00. Kitą laiką prieš atvykstant patvirtinkite telefonu +48 730 067 027.",
@@ -381,7 +445,16 @@ const locale = {
         found: (count: number) => `Nejvhodnější možnosti (${count}):`,
         guests: "max. osob", from: "od", indicative: "Uvedená cena je orientační. Aktuální cenu pro váš termín zobrazí IdoBooking.",
         details: "Podrobnosti", booking: "Ověřit termín a cenu v IdoBooking", unavailable: "Tato lokalita je označena jako „již brzy“ a zatím nemá aktivní rezervační kalendář.",
-        availability: "V chatu nevidím volné termíny živě, proto nebudu hádat. Aktuální dostupnost ukazuje příslušný kalendář IdoBooking:",
+        availability: "Napište termín a počet osob; zkontroluji kalendáře objektů v IdoBooking.",
+        askDates: "Zadejte přesný příjezd a odjezd, například **15.–18. srpna** nebo **15.08.–18.08.2026**.",
+        askGuests: "Termín mám uložený. Pro kolik osob mám hledat?",
+        dateError: "Termín se mi nepodařilo jednoznačně přečíst. Zadejte příjezd i odjezd, například **15.08.–18.08.2026**.",
+        pastDate: "Tento termín už uplynul. Zadejte budoucí datum příjezdu a odjezdu.",
+        longStay: "Najednou kontroluji pobyty do 28 nocí. Zadejte kratší období nebo volejte +48 730 067 027.",
+        checking: "Kontroluji kalendáře IdoBooking pro zadaný termín…",
+        liveFound: (count: number, range: string) => `Zkontroloval jsem IdoBooking pro **${range}**. Volné objekty (${count}):`,
+        liveNone: (range: string) => `Zkontroloval jsem IdoBooking pro **${range}**, ale mezi odpovídajícími objekty není nic volného. Změňte termín nebo zmírněte jeden požadavek.`,
+        liveError: "Kalendář IdoBooking se nyní nepodařilo načíst. Zde jsou přímé odkazy na odpovídající objekty pro ruční kontrolu:",
         compare: "Porovnání", location: "Lokalita", lake: "Jezero", features: "Hlavní vlastnosti", price: "Cena od",
         contact: "Rezervace: **+48 730 067 027** nebo **rezerwacje@mazury.holiday**.",
         checkIn: "Standardní příjezd je od 15:00 a odjezd do 11:00. Jiný čas potvrďte před příjezdem na +48 730 067 027.",
@@ -393,6 +466,51 @@ const locale = {
         concerts: "V létě se u taverny v Portu Stranda na jezeře Kisajno konají šantové a rockové koncerty. Aktuální program a plakát najdete na stránce koncertů.",
     },
 } satisfies Record<Language, Record<string, unknown>>;
+
+const dialogueVariants: Record<Language, { dates: string[]; guests: string[]; general: string[] }> = {
+    pl: {
+        dates: [
+            "Podaj dokładny termin przyjazdu i wyjazdu, np. **15–18 sierpnia**.",
+            "Najpierw termin: od kiedy do kiedy chcesz przyjechać? Możesz wpisać np. **15.08–18.08.2026**.",
+            "Żebym uruchomił sprawdzanie kalendarzy, potrzebuję dwóch dat: przyjazdu i wyjazdu.",
+        ],
+        guests: [
+            "Termin zapisany. Ile osób przyjeżdża?",
+            "Daty mam. Teraz podaj liczbę gości.",
+            "Dla ilu osób mam sprawdzić wolne obiekty?",
+        ],
+        general: [
+            "Ile osób przyjeżdża i co jest najważniejsze: jezioro, cisza, centrum, jacuzzi czy sauna?",
+            "Podaj liczbę gości oraz jedno lub dwa wymagania, a zawężę ofertę.",
+            "Szukamy apartamentu, domku czy pokoju? Dopisz liczbę osób i ważne udogodnienia.",
+        ],
+    },
+    en: {
+        dates: ["Enter arrival and departure dates, for example **15–18 August**.", "What dates should I check? You can type **15/08–18/08/2026**.", "I need both arrival and departure to check the calendars."],
+        guests: ["Dates saved. How many guests are coming?", "I have the dates; now enter the group size.", "How many guests should I search for?"],
+        general: ["How many guests are coming, and what matters most: lake, quiet, centre, hot tub or sauna?", "Enter your group size and one or two requirements, and I will narrow the list.", "Apartment, cottage or room? Add the number of guests and the amenities you need."],
+    },
+    de: {
+        dates: ["Bitte Anreise und Abreise eingeben, zum Beispiel **15.–18. August**.", "Welchen Zeitraum soll ich prüfen? Zum Beispiel **15.08.–18.08.2026**.", "Für die Kalenderprüfung brauche ich Anreise und Abreise."],
+        guests: ["Zeitraum gespeichert. Wie viele Personen kommen?", "Die Daten habe ich; jetzt fehlt die Personenzahl.", "Für wie viele Personen soll ich freie Objekte suchen?"],
+        general: ["Wie viele Personen kommen, und was ist wichtig: See, Ruhe, Zentrum, Whirlpool oder Sauna?", "Nennen Sie Personenzahl und ein oder zwei Wünsche; ich grenze die Auswahl ein.", "Apartment, Ferienhaus oder Zimmer? Bitte Personenzahl und gewünschte Ausstattung ergänzen."],
+    },
+    lt: {
+        dates: ["Nurodykite atvykimo ir išvykimo datas, pvz., **2026-08-15–2026-08-18**.", "Kokį laikotarpį patikrinti? Reikia atvykimo ir išvykimo datų.", "Kalendoriams patikrinti įrašykite abi datas."],
+        guests: ["Datos išsaugotos. Kiek žmonių atvyks?", "Datas turiu; dabar nurodykite žmonių skaičių.", "Keliems žmonėms ieškoti laisvų objektų?"],
+        general: ["Kiek žmonių atvyks ir kas svarbiausia: ežeras, ramybė, centras, sūkurinė vonia ar sauna?", "Nurodykite žmonių skaičių ir vieną ar du reikalavimus.", "Apartamentai, namelis ar kambarys? Pridėkite žmonių skaičių ir patogumus."],
+    },
+    cs: {
+        dates: ["Zadejte příjezd a odjezd, například **15.–18. srpna**.", "Jaký termín mám zkontrolovat? Můžete napsat **15.08.–18.08.2026**.", "Pro kontrolu kalendářů potřebuji datum příjezdu i odjezdu."],
+        guests: ["Termín uložen. Kolik osob přijede?", "Data mám; nyní zadejte počet osob.", "Pro kolik osob mám hledat volné objekty?"],
+        general: ["Kolik osob přijede a co je důležité: jezero, klid, centrum, vířivka nebo sauna?", "Zadejte počet osob a jeden nebo dva požadavky; zúžím nabídku.", "Apartmán, chata nebo pokoj? Přidejte počet osob a požadované vybavení."],
+    },
+};
+
+const dialoguePrompt = (language: Language, kind: keyof (typeof dialogueVariants)[Language], turn: number) => {
+    const variants = dialogueVariants[language][kind];
+    return variants[turn % variants.length];
+};
 
 const strandaKnowledge: Record<Language, string> = {
     pl: "**Stranda** to nie jeden apartament, lecz port i kompleks Stranda Residence w Giżycku, nad jeziorem Kisajno i zatoką Tracz. Apartamenty Mazury.Holiday znajdują się w budynkach A, B i C. W porcie działają marina, wypożyczalnia sprzętu wodnego i Tawerna Stranda, a latem odbywają się koncerty szantowo-rockowe. Stąd dostępny jest też czarter Stillo 30 VIP. Część apartamentów ma prywatne jacuzzi; B202 ma również saunę. Adres Tawerny i portu: Pierkunowo 36, 11-500 Giżycko.\n\nApartamenty Kisajno K11 i K15 leżą nad tym samym jeziorem, ale w osobnej lokalizacji — przy Porcie Neptun. To częsta pomyłka, więc pilnuję jej za Ciebie.\n\n[Zobacz apartamenty Stranda](/apartamenty/stranda) · [Tawerna](/tawerna) · [Koncerty](/koncerty) · [Czarter](/czarter)",
@@ -570,6 +688,120 @@ const detectGuests = (message: string) => {
     return count > 0 && count <= 30 ? count : undefined;
 };
 
+type StayDateResult = {
+    arrival?: string;
+    departure?: string;
+    error?: "invalid" | "past" | "tooLong";
+};
+
+const monthAliases: Array<[number, string[]]> = [
+    [1, ["styczen", "stycznia", "january", "jan", "januar", "sausis", "sausio", "leden", "ledna"]],
+    [2, ["luty", "lutego", "february", "feb", "februar", "vasaris", "vasario", "unor", "unora"]],
+    [3, ["marzec", "marca", "march", "mar", "marz", "kovas", "kovo", "brezen", "brezna"]],
+    [4, ["kwiecien", "kwietnia", "april", "apr", "balandis", "balandzio", "duben", "dubna"]],
+    [5, ["maj", "maja", "may", "mai", "geguze", "geguzes", "kveten", "kvetna"]],
+    [6, ["czerwiec", "czerwca", "june", "jun", "juni", "birzelis", "birzelio", "cerven", "cervna"]],
+    [7, ["lipiec", "lipca", "july", "jul", "juli", "liepa", "liepos", "cervenec", "cervence"]],
+    [8, ["sierpien", "sierpnia", "august", "aug", "rugpjutis", "rugpjucio", "srpen", "srpna"]],
+    [9, ["wrzesien", "wrzesnia", "september", "sep", "sept", "rugsejis", "rugsejo", "zari"]],
+    [10, ["pazdziernik", "pazdziernika", "october", "oct", "oktober", "spalis", "spalio", "rijen", "rijna"]],
+    [11, ["listopad", "listopada", "november", "nov", "lapkritis", "lapkricio", "listopadu"]],
+    [12, ["grudzien", "grudnia", "december", "dec", "dezember", "gruodis", "gruodzio", "prosinec", "prosince"]],
+];
+
+const monthByAlias = new Map(monthAliases.flatMap(([month, aliases]) => aliases.map((alias) => [alias, month] as const)));
+const monthPattern = Array.from(monthByAlias.keys()).sort((left, right) => right.length - left.length).join("|");
+
+const padDate = (value: number) => String(value).padStart(2, "0");
+const toIsoDate = (year: number, month: number, day: number) => `${year}-${padDate(month)}-${padDate(day)}`;
+const isoToUtc = (value: string) => {
+    const [year, month, day] = value.split("-").map(Number);
+    return new Date(Date.UTC(year, month - 1, day));
+};
+const addUtcDays = (value: string, days: number) => {
+    const date = isoToUtc(value);
+    date.setUTCDate(date.getUTCDate() + days);
+    return toIsoDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
+};
+
+const validIsoParts = (year: number, month: number, day: number) => {
+    const date = new Date(Date.UTC(year, month - 1, day));
+    return date.getUTCFullYear() === year && date.getUTCMonth() + 1 === month && date.getUTCDate() === day;
+};
+
+const inferredYear = (month: number, day: number, explicitYear: number | undefined, today: Date) => {
+    if (explicitYear) return explicitYear < 100 ? 2000 + explicitYear : explicitYear;
+    const currentYear = today.getFullYear();
+    const candidate = new Date(Date.UTC(currentYear, month - 1, day));
+    const todayUtc = new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
+    return candidate < todayUtc ? currentYear + 1 : currentYear;
+};
+
+const detectStayDates = (message: string, today = new Date()): StayDateResult => {
+    const dateText = message
+        .toLocaleLowerCase("pl")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/ł/g, "l");
+    const found: Array<{ index: number; iso: string }> = [];
+    const addDate = (index: number, day: number, month: number, year?: number) => {
+        const resolvedYear = inferredYear(month, day, year, today);
+        if (validIsoParts(resolvedYear, month, day)) found.push({ index, iso: toIsoDate(resolvedYear, month, day) });
+    };
+
+    const sameMonth = new RegExp(`(\\d{1,2})\\s*(?:-|–|—|do|to|bis|iki|az)\\s*(\\d{1,2})\\s*(?:d\\.?\\s*)?(${monthPattern})(?:\\s+(\\d{4}))?`, "i").exec(dateText);
+    if (sameMonth) {
+        const month = monthByAlias.get(sameMonth[3]);
+        if (month) {
+            addDate(sameMonth.index, Number(sameMonth[1]), month, sameMonth[4] ? Number(sameMonth[4]) : undefined);
+            addDate(sameMonth.index + sameMonth[0].length, Number(sameMonth[2]), month, sameMonth[4] ? Number(sameMonth[4]) : undefined);
+        }
+    }
+
+    if (!found.length) {
+        const isoRegex = /(?<!\d)(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})(?!\d)/g;
+        for (const match of dateText.matchAll(isoRegex)) addDate(match.index || 0, Number(match[3]), Number(match[2]), Number(match[1]));
+
+        const numericRegex = /(?<!\d)(\d{1,2})[./](\d{1,2})(?:[./](\d{2,4}))?(?!\d)/g;
+        for (const match of dateText.matchAll(numericRegex)) addDate(match.index || 0, Number(match[1]), Number(match[2]), match[3] ? Number(match[3]) : undefined);
+
+        const dashedRegex = /(?<!\d)(\d{1,2})-(\d{1,2})-(\d{2,4})(?!\d)/g;
+        for (const match of dateText.matchAll(dashedRegex)) addDate(match.index || 0, Number(match[1]), Number(match[2]), Number(match[3]));
+
+        const namedRegex = new RegExp(`(\\d{1,2})\\s*(?:d\\.?\\s*)?(${monthPattern})(?:\\s+(\\d{4}))?`, "gi");
+        for (const match of dateText.matchAll(namedRegex)) {
+            const month = monthByAlias.get(match[2]);
+            if (month) addDate(match.index || 0, Number(match[1]), month, match[3] ? Number(match[3]) : undefined);
+        }
+    }
+
+    const unique = Array.from(new Map(found.sort((left, right) => left.index - right.index).map((item) => [item.iso, item])).values());
+    if (!unique.length) {
+        const relativeStart = hasAny(message, ["jutro", "tomorrow", "morgen", "rytoj", "zitra"])
+            ? addUtcDays(toIsoDate(today.getFullYear(), today.getMonth() + 1, today.getDate()), 1)
+            : undefined;
+        const nights = Number(normalize(message).match(/(\d{1,2})\s*(?:noc|nocy|noce|night|nights|nachte|nakvyn|noci)/)?.[1] || 0);
+        if (relativeStart && nights > 0) return { arrival: relativeStart, departure: addUtcDays(relativeStart, nights) };
+        return {};
+    }
+
+    const arrival = unique[0]?.iso;
+    let departure = unique[1]?.iso;
+    if (arrival && !departure) {
+        const nights = Number(normalize(message).match(/(\d{1,2})\s*(?:noc|nocy|noce|night|nights|nachte|nakvyn|noci)/)?.[1] || 0);
+        if (nights > 0) departure = addUtcDays(arrival, nights);
+    }
+    if (!arrival || !departure) return { arrival, error: "invalid" };
+
+    const arrivalTime = isoToUtc(arrival).getTime();
+    const departureTime = isoToUtc(departure).getTime();
+    const todayTime = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+    if (arrivalTime < todayTime) return { error: "past" };
+    if (departureTime <= arrivalTime) return { error: "invalid" };
+    if ((departureTime - arrivalTime) / 86_400_000 > 28) return { error: "tooLong" };
+    return { arrival, departure };
+};
+
 const mentionedUnitIds = (message: string) => {
     const normalizedMessage = message.toUpperCase().replace(/\s+/g, "");
     const ids = new Set<string>();
@@ -660,24 +892,12 @@ const locationComparison = (locations: LocationKey[], language: Language) => {
     ].join("\n");
 };
 
-const availabilityResponse = (selected: Offer[], language: Language) => {
-    const copy = locale[language];
-    if (!selected.length) return `${copy.availability}\n\n${copy.ask}`;
-    const active = selected.filter((offer) => offer.availableForBooking && offer.bookingUrl).slice(0, 5);
-    const upcoming = selected.filter((offer) => !offer.availableForBooking);
-    return [
-        copy.availability,
-        ...active.map((offer) => `- **${offer.name}** — [${copy.booking}](${offer.bookingUrl})`),
-        ...upcoming.map((offer) => `- **${offer.name}** — ${copy.unavailable}`),
-    ].join("\n");
-};
-
 const matchesFeature = (offer: Offer, feature: AssistantFeature) => {
     if (feature === "lakeAccess") return Boolean(offer.lake) || offer.features.includes("lakeAccess");
     return offer.features.includes(feature);
 };
 
-const recommendations = (guests: number | undefined, features: AssistantFeature[], locations: LocationKey[]) => {
+const recommendations = (guests: number | undefined, features: AssistantFeature[], locations: LocationKey[], limit = 6) => {
     const eligibleLocations = locations.filter((location): location is Exclude<LocationKey, "charter"> => location !== "charter");
     return offers
         .filter((offer) => offer.category !== "upcoming")
@@ -693,10 +913,64 @@ const recommendations = (guests: number | undefined, features: AssistantFeature[
         }))
         .sort((left, right) => right.score - left.score || (left.offer.price || 99999) - (right.offer.price || 99999))
         .map(({ offer }) => offer)
-        .slice(0, 6);
+        .slice(0, limit);
 };
 
-export const createAssistantContext = (): AssistantContext => ({ lastOfferIds: [], features: [] });
+const languageLocales: Record<Language, string> = {
+    pl: "pl-PL",
+    en: "en-GB",
+    de: "de-DE",
+    lt: "lt-LT",
+    cs: "cs-CZ",
+};
+
+const formatDateRange = (from: string, to: string, language: Language) => {
+    const formatter = new Intl.DateTimeFormat(languageLocales[language], {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+    });
+    return `${formatter.format(isoToUtc(from))} – ${formatter.format(isoToUtc(to))}`;
+};
+
+const offersForAvailabilityQuery = (query: AvailabilityQuery) =>
+    query.offerIds
+        .map((id) => offersById.get(id.toUpperCase()))
+        .filter((offer): offer is Offer => Boolean(offer?.idoBookingId && offer.availableForBooking));
+
+export const getAvailabilityFallback = (query: AvailabilityQuery) => {
+    const copy = locale[query.language];
+    const candidates = offersForAvailabilityQuery(query).slice(0, 6);
+    return [
+        copy.liveError,
+        ...candidates.map((offer) => `- **${offer.name}** — [${copy.booking}](${offer.bookingUrl})`),
+    ].join("\n");
+};
+
+export const completeAvailabilityResponse = (query: AvailabilityQuery, apiResult: AvailabilityApiResult) => {
+    if (!apiResult.ok || !apiResult.results) return getAvailabilityFallback(query);
+    const copy = locale[query.language];
+    const availableIds = new Set(apiResult.results.filter((result) => result.available).map((result) => result.id));
+    const candidates = offersForAvailabilityQuery(query);
+    const available = candidates.filter((offer) => offer.idoBookingId && availableIds.has(offer.idoBookingId)).slice(0, 6);
+    const range = formatDateRange(query.from, query.to, query.language);
+    if (!available.length) return `${copy.liveNone(range)}\n\n${copy.contact}`;
+
+    return [
+        copy.liveFound(available.length, range),
+        ...available.map((offer) => {
+            const facts = [
+                offer.maxGuests ? `${copy.guests}: ${offer.maxGuests}` : undefined,
+                formatFeatures(offer, query.language, 3) !== "—" ? formatFeatures(offer, query.language, 3) : undefined,
+            ].filter(Boolean).join(" · ");
+            return `- **${offer.name}** — ${facts}\n  [${copy.details}](${offer.route}) · [${copy.booking}](${offer.bookingUrl})`;
+        }),
+        `_${copy.indicative}_`,
+    ].join("\n");
+};
+
+export const createAssistantContext = (): AssistantContext => ({ lastOfferIds: [], features: [], turn: 0 });
 
 export const getAssistantGreeting = (language: Language) => locale[language].hello;
 
@@ -715,20 +989,40 @@ export function getAssistantResponse(
 ): AssistantResult {
     const language = responseLanguage(message, preferredLanguage);
     const copy = locale[language];
+    const resetRequested = hasAny(message, ["od nowa", "zacznij od nowa", "wyczysc", "reset", "start over", "von vorne", "neu starten", "is naujo", "znovu"]);
+    if (resetRequested) return { answer: `${copy.hello}\n\n${copy.ask}`, context: createAssistantContext() };
+
     const locations = detectedLocations(message);
-    const features = detectedFeatures(message);
-    const guests = detectGuests(message) ?? previousContext.guests;
+    const messageFeatures = detectedFeatures(message);
+    const detectedDates = detectStayDates(message);
+    const bookingIntent = hasAny(message, intentTerms.availability);
+    const continuingBooking = Boolean(previousContext.bookingFlow || previousContext.awaiting === "dates" || previousContext.awaiting === "guests");
+    const bookingRequested = bookingIntent || continuingBooking || Boolean(detectedDates.arrival || detectedDates.departure);
+    const features = bookingRequested
+        ? Array.from(new Set<AssistantFeature>([...previousContext.features, ...messageFeatures]))
+        : messageFeatures;
+    const shortGuestReply = previousContext.awaiting === "guests" && /^\s*\d{1,2}\s*$/.test(message)
+        ? Number.parseInt(message.trim(), 10)
+        : undefined;
+    const guests = detectGuests(message) ?? (shortGuestReply && shortGuestReply <= 30 ? shortGuestReply : undefined) ?? previousContext.guests;
     const units = mentionedUnitIds(message);
     const isFollowUp = hasAny(message, ["ten", "ta", "to", "one", "je", "wiecej", "szczegoly", "it", "this", "them", "these", "dieser", "diese", "mehr", "sis", "sitas", "daugiau", "tenhle", "tyto"]);
-    const contextualOffers = isFollowUp
+    const contextualOffers = (isFollowUp || continuingBooking || bookingIntent)
         ? previousContext.lastOfferIds.map((id) => offersById.get(id.toUpperCase())).filter((offer): offer is Offer => Boolean(offer))
         : [];
     const selected = units.length ? units : contextualOffers;
+    const arrival = detectedDates.arrival || previousContext.arrival;
+    const departure = detectedDates.departure || previousContext.departure;
     const nextContext: AssistantContext = {
         lastOfferIds: selected.map((offer) => offer.id),
         lastLocation: locations.find((location) => location !== "charter") || previousContext.lastLocation,
         guests,
         features: features.length ? features : previousContext.features,
+        arrival,
+        departure,
+        bookingFlow: bookingRequested,
+        awaiting: previousContext.awaiting,
+        turn: previousContext.turn + 1,
     };
 
     if (hasAny(message, intentTerms.greeting) && normalize(message).split(" ").length <= 5) {
@@ -755,16 +1049,73 @@ export function getAssistantResponse(
         return { answer: locationComparison(locations, language), context: nextContext };
     }
 
-    if (hasAny(message, intentTerms.availability)) {
-        let availabilityOffers = selected.length
-            ? selected
-            : previousContext.lastOfferIds.map((id) => offersById.get(id.toUpperCase())).filter((offer): offer is Offer => Boolean(offer));
-        if (!availabilityOffers.length && locations.length) {
-            availabilityOffers = offers.filter((offer) => locations.includes(offer.locationKey)).slice(0, 6);
+    if (bookingRequested) {
+        if (locations.length === 1 && locations[0] === "zeglarska") {
+            return {
+                answer: `**Apartamenty Żeglarska** — ${copy.unavailable}`,
+                context: { ...nextContext, lastOfferIds: ["zeglarska"], bookingFlow: false, awaiting: undefined },
+            };
         }
+        if (detectedDates.error) {
+            const errorCopy = detectedDates.error === "past"
+                ? copy.pastDate
+                : detectedDates.error === "tooLong"
+                    ? copy.longStay
+                    : copy.dateError;
+            return {
+                answer: errorCopy,
+                context: { ...nextContext, arrival: undefined, departure: undefined, bookingFlow: true, awaiting: "dates" },
+            };
+        }
+        if (!arrival || !departure) {
+            return {
+                answer: dialoguePrompt(language, "dates", nextContext.turn),
+                context: { ...nextContext, bookingFlow: true, awaiting: "dates" },
+            };
+        }
+        if (!guests) {
+            return {
+                answer: dialoguePrompt(language, "guests", nextContext.turn),
+                context: { ...nextContext, bookingFlow: true, awaiting: "guests" },
+            };
+        }
+
+        const effectiveLocations = locations.length
+            ? locations
+            : previousContext.lastLocation
+                ? [previousContext.lastLocation as LocationKey]
+                : [];
+        let availabilityOffers = units.length
+            ? units
+            : contextualOffers.length && !locations.length && !messageFeatures.length
+                ? contextualOffers
+                : recommendations(guests, features, effectiveLocations, 40);
+        availabilityOffers = availabilityOffers.filter((offer) => offer.availableForBooking && Boolean(offer.idoBookingId));
+        if (!availabilityOffers.length) {
+            return {
+                answer: `${copy.noMatch}\n\n${copy.contact}`,
+                context: { ...nextContext, bookingFlow: true, awaiting: "preferences" },
+            };
+        }
+
+        const idoBookingIds = Array.from(new Set(availabilityOffers.map((offer) => offer.idoBookingId).filter((id): id is string => Boolean(id))));
+        const availabilityQuery: AvailabilityQuery = {
+            from: arrival,
+            to: departure,
+            guests,
+            language,
+            offerIds: availabilityOffers.map((offer) => offer.id),
+            idoBookingIds,
+        };
         return {
-            answer: availabilityResponse(availabilityOffers, language),
-            context: { ...nextContext, lastOfferIds: availabilityOffers.map((offer) => offer.id) },
+            answer: copy.checking,
+            context: {
+                ...nextContext,
+                lastOfferIds: availabilityOffers.map((offer) => offer.id),
+                bookingFlow: true,
+                awaiting: "preferences",
+            },
+            availabilityQuery,
         };
     }
 
@@ -794,5 +1145,5 @@ export function getAssistantResponse(
         };
     }
 
-    return { answer: `${copy.ask}\n\n${copy.followUp}`, context: nextContext };
+    return { answer: `${dialoguePrompt(language, "general", nextContext.turn)}\n\n${copy.followUp}`, context: nextContext };
 }
