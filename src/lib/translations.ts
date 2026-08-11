@@ -241,8 +241,8 @@ export const translations = {
           "description": "Nowoczesny apartament w samym centrum Mikołajek."
         },
         "zeglarska": {
-          "title": "Apartamenty Żeglarska Giżycko",
-          "location": "Jezioro Niegocin",
+          "title": "Apartamenty Żeglarska",
+          "location": "Giżycko, jezioro Niegocin",
           "description": "Nowa lokalizacja w Giżycku — szczegóły wkrótce."
         }
       }
@@ -1193,8 +1193,8 @@ export const translations = {
           "description": "Eine moderne Wohnung im Zentrum von Mikołajki."
         },
         "zeglarska": {
-          "title": "Apartments Żeglarska in Giżycko",
-          "location": "Niegocin-See",
+          "title": "Apartments Żeglarska",
+          "location": "Giżycko, Niegocin-See",
           "description": "Ein neuer Standort in Giżycko — Details folgen in Kürze."
         }
       }
@@ -2145,8 +2145,8 @@ export const translations = {
           "description": "A modern apartment in the very center of Mikołajki."
         },
         "zeglarska": {
-          "title": "Żeglarska Apartments, Giżycko",
-          "location": "Lake Niegocin",
+          "title": "Żeglarska Apartments",
+          "location": "Giżycko, Lake Niegocin",
           "description": "A new location in Giżycko — more details coming soon."
         }
       }
@@ -3097,8 +3097,8 @@ export const translations = {
           "description": "Modernus butas pačiame Mikolaikių centre."
         },
         "zeglarska": {
-          "title": "Żeglarska apartamentai Gižycke",
-          "location": "Niegocin ežeras",
+          "title": "Żeglarska apartamentai",
+          "location": "Gižyckas, Niegocin ežeras",
           "description": "Nauja vieta Gižycke — daugiau informacijos netrukus."
         }
       }
@@ -4801,8 +4801,8 @@ export const translations = {
           "description": "Moderní byt v samém centru Mikołajki."
         },
         "zeglarska": {
-          "title": "Apartmány Żeglarska v Giżycku",
-          "location": "Jezero Niegocin",
+          "title": "Apartmány Żeglarska",
+          "location": "Giżycko, jezero Niegocin",
           "description": "Nová lokalita v Giżycku — podrobnosti již brzy."
         }
       }
